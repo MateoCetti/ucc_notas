@@ -1,0 +1,460 @@
+\documentclass[11pt]{article}
+
+\usepackage{sectsty}
+\usepackage{amsmath}
+\usepackage{graphicx}
+
+% Margins
+\topmargin=-0.45in
+\evensidemargin=0in
+\oddsidemargin=0in
+\textwidth=6.5in
+\textheight=9.0in
+\headsep=0.25in
+
+\title{ Resumen Analisis matematico II 2$^{do}$ parcial}
+\author{ Mateo P. Cetti }
+\date{\today}
+
+\begin{document}
+\maketitle	
+\pagebreak
+
+% Optional TOC
+% \tableofcontents
+% \pagebreak
+
+%--Paper--
+
+\section{Integrales dobles}
+\paragraph{Integral definida de una sola variable}
+La integral definida de $f$ entre $a$ y $b$: $y = \int_{a}^{b} f(x) \cdot dx$ es el limite de las sumas por izquierda o por derecha, con $n$ subdivisiones, a medida que n se hace arbitrariamente grande. Esto es:
+\begin{equation*}
+	\int_{a}^{b}f(x) \cdot dx = \lim_{n \rightarrow \infty}(suma por izquierda)
+	 = \lim_{n \rightarrow \infty}\left( \sum_{i=0}^{n-1} f(x_i)\Delta x \right) 
+\end{equation*}\\
+\begin{equation*}
+	\int_{a}^{b}f(x) \cdot dx = \lim_{n \rightarrow \infty}(suma por derecha)
+	 = \lim_{n \rightarrow \infty}\left( \sum_{i=0}^{n} f(x_i)\Delta x \right) 
+\end{equation*}
+cada una de estas sumas se llama suma de riemann, $f$ se llama integrando y $a$ y $b$ se llaman llimites de integracion\\
+\paragraph{Integrales dobles y volumen de una region solida}
+La integral definida utiliza un proceso de \textbf{limite} para asignar una medida a cantidades como el area, volumen, longitud de arco, masa, etc.\\
+\linebreak
+En \textbf{integrales dobles}, el objetivo es hallar el \textbf{volumen} de una \textbf{region solida} comprendida entre la superficie dada por una funcion y el plano \textbf{xy}.\\
+\linebreak
+Para empezar, se sobrepone una \textbf{cuadricula rectangular} sobre la region. Los rectangulos que se encuentran completamente dentro de R forman una \textbf{particion interior} $\Delta$, cuya norma $||\Delta||$ es la longitud de la \textbf{diagonal mas larga} de los $n$ rectangulos. El volumen de la region solida se puede aproximar por la \textbf{suma de Riemann} de los volumenes de todos los $n$ prismas
+\paragraph{Definicion de integral doble}
+si $f$ esta definida en una region \textbf{cerrada} y \textbf{acotada} \textbf{R} del plano $xy$, entonces la \textbf{integral doble} de $f$ sobre R esta dada por:
+\begin{equation*}
+	\int_R \int f(x,y) \cdot dA = \lim_{||\Delta||\rightarrow0}^n \sum_{i=1}^n f(x_i, y_i) \cdot \Delta A_i
+\end{equation*}
+Siempre que el limite exista. Si existe el limite entonces f es \textbf{integrable} sobre R
+\paragraph{Volumen de una region solida}
+Si $f$ es integrable sobre una region plana R y $f(x, y) \geq 0$ para todo $(x, y)$ en R, entonces el volumen de la region solida que se encuentra sobre R y bajo la grafica de $f$ se define como:
+\begin{equation*}
+	V = \int_R \int f(x, y) \cdot dA
+\end{equation*}
+\paragraph{Propiedades de las integrales dobles}
+\begin{enumerate}
+	\item $\int_R \int cf(x, y) \cdot dA = c\int_R \int f(x, y) \cdot dA$
+	\item $\int_R \int [f(x, y) \pm g(x, y)] \cdot dA = \int_R \int f(x, y) \cdot dA \pm \int_R \int g(x, y) \cdot dA$
+	\item $\int_R \int f(x, y) \cdot dA \geq 0 $ \textbf{si} $f(x, y) \geq 0$
+	\item $\int_R \int f(x, y) \cdot dA \geq \int_R \int g(x, y) \cdot dA$ \textbf{si} $f(x, y) \geq g(x,y)$
+	\item $\int_R \int f(x, y) \cdot dA = \int_{R_1} \int f(x, y) \cdot dA + \int_{R_2} \int f(x, y) \cdot dA$ donde R es la union de dos subregiones R$_1$ y R$_2$ que \textbf{no se sobreponen}
+\end{enumerate}
+\paragraph{Calculo de integrales dobles}
+Las integrales dobles se pueden resolver mediante \textbf{integrales iteradas} (siempre y cuando la funcion sea integrable en el rectangulo R)
+\paragraph{Integrales iteradas}
+Integral iterada extendida en el recinto rectangular R = $[a, b]x[c, d]$
+\begin{equation*}
+	I_R = \int_{a}^{b} \left[\int_{c}^{d} f(x, y)\cdot dy \right] \cdot dx
+\end{equation*}
+Donde \textbf{primero} se resuelve la integral \textbf{entre corchetes}, integrando con respecto a "$y$" (entre $c$ y $d$ y considerando a "$x$" como constante) y luego con respecto a "$x$" (entre $a$ y $b$). Tambien se puede alrevez:
+\begin{equation*}
+	I_R = \int_{c}^{d} \left[\int_{a}^{b} f(x, y)\cdot dx \right] \cdot dy
+\end{equation*}
+Si la funcion a integrar es \textbf{continua} en el \textbf{dominio} de integracion, y este es un \textbf{RECTANGULO} $R = [a, b]x[c, d]$ el resultado es \textbf{independiente} del \textbf{orden de integracion}.\\
+\linebreak
+Aunque $f(x, y) \geq 0$, esto es igualmente valido para cuando $f(x, y) \leq 0$, solo que la integral doble \textbf{NO representa} el \textbf{volumen} por debajo de la curva.\\
+\linebreak
+Cuando la funcion $Z = f(x, y)$ toma valores tanto \textbf{positivos} como \textbf{negativos} en el dominio de integracion, la integral es una diferenca entre volumenes $(V_a - V_d)$, siendo $V_a$ el volumen que esta \textbf{arriba} de R y debajo de $Z = f(x, y)$, y $V_d$ el que esta \textbf{debajo} de R y arriba de $Z = f(x, y)$
+\paragraph{Integrales dobles en DOMINIOS GENERALES}
+Se puede integrar no solo sobre dominios que sean rectangulares, sino tambien sobre otros dominios D que tienen una forma mas general.\\
+sea tener que resolver la integral doble de la funcion $f(x, y)$ extendida sobre el dominio D, tomamos un rectangulo R que contenga a este dominio y consideramos definida en este rectangulo la funcion $g(x, y)$ tal que:
+\begin{itemize}
+	\item $g(x, y) = f(x, y)$ dentro del dominio D
+	\item $g(x, y) = 0$ dentro del rectangulo R pero \textbf{fuera del dominio D}
+\end{itemize}
+entonces:
+\begin{equation*}
+	\int \int_D f(x, y)dxdy = \int \int_R g(x, y)dxdy
+\end{equation*}
+Si se cumple que $f(x, y) \geq 0$ en todo el dominio D entonces esta integral nos da el \textbf{volumen} del cuerpo definido entre la superficie $z = f(x, y)$ y el dominio D\\
+\linebreak
+La integral doble extendida en el rectángulo R se resuelve:
+\begin{equation*}
+	\int \int_R g(x, y)dxdy = \int_{x_1}^{x_2} \int_{y_1}^{y_2} g(x, y)dxdy
+\end{equation*}
+Pero fuera del dominio D es decir para $y < \varphi_1(x)$ y para $y > \varphi_2(x)$ la funcion es $g(x, y) = 0$, y dentro del dominio es $g(x, y) = f(x, y)$ por lo tanto:
+\begin{equation*}
+	\int \int_R g(x, y)dxdy = \int_{x_1}^{x_2} dx \int_{\varphi_1}^{\varphi_2} g(x, y)dy = \int_{x_1}^{x_2} dx \int_{\varphi_1}^{\varphi_2} f(x, y)dy
+\end{equation*}
+Si la funcion $f(x, y)$ es \textbf{continua} en el dominio de integracion, \textbf{cualquiera} sea el \textbf{orden de integracion} obtendremos el \textbf{mismo resultado}
+\paragraph{Propiedades de las integrales dobles sobre dominios generales}
+\begin{enumerate}
+	\item $\int \int_D [f_1 (x,y) + f_2(x,y)]dxdy = \int \int_D f_1(x,y)dxdy + \int \int_D f_2(x,y)dxdy$
+	\item $\int \int_D c.f(x,y)dxdy =  c. \int \int_D f(x,y)dxdy$
+	\item $\int \int_D f(x,y)dxdy = \int \int_{D_1} f(x,y)dxdy + \int \int_{D_2} f(x,y)dxdy$
+	\item $\int \int_D f_1(x,y)dxdy \geq \int \int_D f_2(x,y)dxdy$ si $f_1(x,y) \geq f_2(x,y)$
+	\item Si $f(x,y) = 1$ en todo el dominio D, entonces la integral doble de la funcion extendida en el dominio D nos da el area de dicho domino.
+	$A_D = \int \int_D 1dxdy$ (siendo A$_D$ el area del dominio D)
+	\item si $C_1 \leq f(x,y) \leq C_2$ entonces:
+	$C_1 \cdot A_D \leq \int \int_D f(x,y)dxdy \leq C_2 \cdot A_D$
+\end{enumerate}
+\section{Integral triple}
+Nuestro objetivo es definir la integral triple en una caja $B = [a,b]\cdot[c,d]\cdot[p,q]$ de una funcion $f(x,y,z)$\\
+\linebreak
+Sea $f$ una funcion acotada de tres variables definida en B.(\textbf{Esta parte esta asperasa}) llamamos a S \textbf{integral triple} de $f$ en B y la denotamos por:
+\begin{equation*}
+	\int \int \int_B f dV, \int \int \int_B f(x,y,z)dV o \int\int\int_B f(x,y,z) dxdydz
+\end{equation*}
+\paragraph{Propiedades de las integrales triples}
+Las propiedades basicas para integrales dobles se cumplen para integrales triples. Especialmente importante la reduccion a integrales iteradas.
+\paragraph{Reduccion a integrales iteradas} Sea f(x,y,z) una funcion integrable en la caja $B = [a,b]\cdot[c,d]\cdot[p,q]$. Cualquier integral iterada es igual a la integral triple:
+\begin{equation*}
+	\int \int \int_B f(x,y,z)dxdydz = \int_p^q \int_c^d \int_a^b f(x,y,z)dxdydz
+\end{equation*}
+\begin{equation*}
+	= \int_p^q \int_a^b \int_c^d f(x,y,z)dydxdz
+\end{equation*}
+\begin{equation*}
+	= \int_a^b \int_p^q \int_c^d f(x,y,z)dydzdx
+\end{equation*}
+etc.
+\paragraph{Regiones elementales}
+Una \textbf{region elemental} en el espacio tridimencional es aquella en la que una de las variables esta ,\textbf{entre dos funciones} de las otras dos variables, siendo los dominios de estas funciones una region elemental (x-simple y-simple) en el plano.
+\paragraph{Integrales sobre regiones elementales}
+Una funcion de 3 variables que sea \textbf{continua} en una \textbf{region elemental} es \textbf{integrable} en esa region. Una integral triple sobre una region elemental se puede escribir como una \textbf{integral iterada} en la que los limites de integracion son \textbf{funciones}.
+\begin{equation*}
+	\int\int\int_w f(x,y,z)dxdydz = \int_a^b \int_{\phi_1(x)}^{\phi_2(x)}\int_{\gamma_1(x,y)}^{\gamma_2(x,y)}f(x,y,z)dzdydx
+\end{equation*}
+Si $F = 1$, obtenemos la integral $\int\int\int_W dxdydz$ que es el \textbf{volumen} de la region W\\
+\linebreak
+Ojo con las \textbf{regiones elementales SIMETRICAS}
+\section{Cambio de variables en integrales multiples}
+Es util para evaluar integrales multiples en coordenadas polares, cilindricas y esfericas.
+\paragraph{Cambio de variables en coordenadas polares}
+\begin{equation*}
+	\int\int_D f(x,y)dxdy = \int\int_{D^*}f(rcos\theta, rsen\theta)rdrd\theta
+\end{equation*}
+\paragraph{Coordenads cilindricas}
+\begin{equation*}
+	\int\int_D f(x,y)dxdy = \int\int_{D^*}f(rcos\theta, rsen\theta,z)rdrd\theta dz
+\end{equation*}
+\paragraph{Coordenads esfericas}
+\begin{equation*}
+	\int\int_D f(x,y)dxdy = \int\int_{D^*}f(psen\phi cos\theta, psen\theta cos\phi,pcos\phi)p^2 sen\phi dpd\theta d\phi
+\end{equation*}
+\section{Curvas}
+Una curva \textbf{C} en un espacio \textbf{n-dimensional} es una transformacion de ${\rm I\!R}$ a ${\rm I\!R}^n$
+\paragraph{Traza o trayectoria de C:}conjunto de todos los puntos que estan sobre la curva.
+Varias curvas distintas pueden tener la misma trayectoria.\\
+\linebreak
+Todas las funciones vectoriales cuyo recorrido es la \textbf{misma curva} en \textbf{igual direccion} se llaman \textbf{parametrizaciones equivalentes}. Si tienen \textbf{direcciones opuestas} se denominan \textbf{opuestamente equivalentes}.\\
+\linebreak
+Si una curva C esta definida por el intervalo $a \leq t \leq b$ por medio de $r(t)$ entonces los puntos finales de c son $r(a)$ y $r(b)$.\\
+\linebreak
+Se dice que una curva es \textbf{cerrada} si sus puntos finales \textbf{coinciden}, es decir $r(a) = r(b)$.\\
+\linebreak
+Un punto \textbf{P} que esta sobre la curva es un punto \textbf{multiplo} si hay mas de un valor de \textbf{t} para el cual $r(t) = p$.\\
+\linebreak
+Si la curva \textbf{NO} tiene puntos multiples se denomina simple o \textbf{inyectiva}.\\
+\linebreak
+\paragraph{Curva de jordan:} Una curva continua cerrada es simple si sus puntos \textbf{multiples} son los puntos \textbf{finales}.\\
+\linebreak
+Si la curva es de clase $C^1$ y su derivada es continua en L y no se anula en ningun punto de dicho intervalo, la curva se denomina \textbf{suave}.
+\paragraph{Longitud de arco:} La formula para la longitud de arco para curvas parametricas en el espacio es:
+\begin{equation*}
+	\int_a^b ||r'_{(t)}||dt
+\end{equation*}
+\paragraph{Vector normal, tangente y binormal - Formulas de frenet-serret}
+Son vectores asociados a la curva de suma importancia.\\
+\paragraph{Vector tangente}
+\begin{equation*}
+	T(t_0) = \dfrac{r'(t_0)}{||r'(t_0)||}
+\end{equation*}
+Este vector tiene una longitud constante e igual a 1 para cualquier valor de $t$
+\paragraph{Versor normal}
+Es un vector unitario que tiene direccion y sentido de $T'$ en cada valor de $t$ y se denota:
+\begin{equation*}
+	N(t_0) = \dfrac{T'(t_0)}{||t'(t_0)||}
+\end{equation*}
+\paragraph{Versor binormal}
+\begin{equation*}
+	B(t_0) = T(t_0) X N(t_0)
+\end{equation*}
+En cada punto de la curva, los versores definidos forman un conjunto de vectores \textbf{mutuamente ortogonales}, llamado \textbf{triedro de Frenet}. Estos versores determinan los siguientes planos:
+\begin{itemize}
+	\item \textbf{Plano osculador} Determinado por el versor tangente y normal. Perpendicular al binormal.\\
+	$A(x-x_0)+B(y-y_0)+C(z-z_0)$
+	\item \textbf{Plano normal} Determinado por el versor normal y binormal. Perpendicular al tangente.\\
+	$\overrightarrow{x'}(x-x_0)+\overrightarrow{y'}(y-y_0)+\overrightarrow{z'}(z-z_0)$
+	\item \textbf{Plano rectificante} Determinado por el versor tangente y binormal. perpendicular al normal.\\
+	$\overrightarrow{x''}(x-x_0)+\overrightarrow{y''}(y-y_0)+\overrightarrow{z''}(z-z_0)$
+\end{itemize}
+Al vector tangente se lo denomina \textbf{VELOCIDAD}\\
+Su norma es la \textbf{RAPIDEZ}\\
+La derivada segunda de $r$ se la suele denominar \textbf{ACELERACION}\\
+\paragraph{Curvatura de flexion}
+Indica cuan curvada o flexada esta la curva.\\
+\begin{equation*}
+\kappa(t) = \dfrac{||\overrightarrow{T(t)}||}{||\overrightarrow{r'(t)}||}
+\end{equation*}
+\paragraph{Curvatura de torsion}
+La curvatura de torsion indica cuan torcida esta la curva.
+\begin{equation*}
+	\tau = \left\Vert\dfrac{D\overrightarrow{B}}{ds} \right\Vert
+\end{equation*}
+\paragraph{Ecuaciones de Frenet}
+Los vectores Normal, Tangente y binormal forman un \textbf{triedro trirectangulo}.\\
+Las formulas de Frenet-Serret son:
+\begin{equation*}
+	\overrightarrow{T'} = \kappa.\overrightarrow{N}
+\end{equation*}
+\begin{equation*}
+	\overrightarrow{N'} = -\kappa.\overrightarrow{T} - \tau.\overrightarrow{B}
+\end{equation*}
+\begin{equation*}
+	\overrightarrow{B'} = \tau.\overrightarrow{N}
+\end{equation*}
+\section{Integrales de linea}
+Se integra sobre una curva $C$ suave a trozos., conciderese la \textbf{masa} de un cable de longitud finita dado por una curva $C$ en el espacio.
+\begin{equation*}
+	\int_C f(x,y)ds = \lim_{||\Delta|| \rightarrow 0} \sum_{i=1}^n f(x_i, y_i)\Delta s_i
+\end{equation*}
+o
+\begin{equation*}
+	\int_C f(x,y,z)ds = \lim_{||\Delta|| \rightarrow 0} \sum_{i=1}^n f(x_i, y_i, z_i)\Delta s_i
+\end{equation*}
+como integral definida:
+\begin{equation*}
+	\int_C f(x,y)ds = \int_a^b f(x(t), y(t) \sqrt[]{[x'(t)]^2+[y'(t)]^2})dt
+\end{equation*}
+\begin{equation*}
+	\int_C f(x,y,z)ds = \int_a^b f(x(t), y(t) \sqrt[]{[x'(t)]^2+[y'(t)]^2+ [z'(t)]^2})dt
+\end{equation*}
+\paragraph{Longitud de arco de la curva C}
+Si $f(x,y,z) = 1$, la integral de linea proporciona la longitud de arco de la curva C. Es decir:
+\begin{equation*}
+	\int_C 1 ds = \int_a^b ||r'(t)||dt = longitud de arco de la curva C
+\end{equation*}
+\paragraph{Integrales  de linea de campos vectoriales}
+Una de las aplicaciones físicas mas importantes de las integrales de linea es la de hallar el \textbf{trabajo} realizado sobre un objeto que se mueve en un campo de fuerzas.
+\begin{equation*}
+	\int_C F \cdot dr = \int_C F \cdot T ds = \int_a^b F(x(t), y(t), z(t)) \cdot r'(t)dt
+\end{equation*}
+\section{campos vectoriales}
+Asignan un vector a un punto del plano o del espacio. Son utiles para representar varios tipos de campos de fuerza y campos de velocidades.\\
+\linebreak
+Un campo vectorial sobre una region plana R es una funcion F que asigna un vector $F(x,y)$ a cada punto en R.\\
+\linebreak
+Un campo vectorial sobre una region solida Q en el espacio es una funcion F que asigna un vector $F(x,y,z)$ a cada punto en Q.\\
+\linebreak
+Un campo vectorial es continuo en un punto si y solo si cada una de sus \textbf{funciones componentes} es \textbf{continua} en ese punto.\\
+\linebreak
+Algunos ejemplos fisicos comunes de los campos vectoriales son los campos de velocidades, los gravitatorios y los de fuerzas electricas.\\
+\linebreak
+Un campo de velocidades describe el movimiento de un sistema de particulas en el plano o en el espacio.\\
+\linebreak
+Los campos gravitatorios los define la ley de gravitacion de Newton, que establece que la fuerza de atraccion ejercida en una particula de masa m$_1$ localizada en ($x, y, z$) por una particula de masa m$_2$ localizada en (0,0,0) esta dada por:
+\begin{equation*}
+	F(x,y,z) = \dfrac{-Gm_1m_2}{x^2+y^2+z^2}u
+\end{equation*}
+Donde $G$ es la constante gravitatoria y $u$ es el vector unitario en la diraccion del origen a ($x,y,z$). Cuando un campo gravitatorio tiene las propiedades que todo vector $F(x,y,z)$ apunta hacia el origen, y que la magnitud de $F(x,y,z)$ es la misma en todos los puntos equidistantes del origen, se lo denomina \textbf{Campo de fuerzas central}\\
+\linebreak
+Los campos de fuerzas electricas se definen por la ley de Coulomb, que establece que la fuerza ejercida en una particula con carga electrica $q_1$ localizada en (x,y,z) por una particula con carga $q_2$ localizada en (0,0,0) esta dada por:
+\begin{equation*}
+	F(x,y,z) = \dfrac{cq_1q_2}{||r||^2}u
+\end{equation*}
+Notese que un campo de fuerzas electricas tiene la misma forma que un campo gravitatorio:
+\begin{equation*}
+F(x,y,z) = \dfrac{k}{||r||^2}u
+\end{equation*}
+Tal campo es un \textbf{campo cuadratico inverso}
+\paragraph{Definicion de campo cuadratico inverso}
+Sea $r(t) = x(t)i + y(t)j + z(t)k$ un vector posicion, el campo vectorial F es un campo cuadratico inverso si:
+\begin{equation*}
+	F(x,y,z) = \dfrac{k}{||r||^2}u
+\end{equation*}
+Donde k es un numero real y u = $r/||r||$ es un vector unitario en la direccion de r.
+\paragraph{Campos vectoriales conservativos}
+Un campo vectorial F se llama \textbf{conservativo} si existe una funcion diferenciable $f$ tal que F = $\Delta f$. la funcion $f$ se llama \textbf{funcion potencial} de F\\
+Todo \textbf{campo cuadratico inverso} es un campo vectorial \textbf{conservativo}\\
+\paragraph{"Conservativo"} La suma de la energia cinetica y la potencial de una particula que se mueve en un campo de fuerzas conservativo es constante.
+\paragraph{Criterio para campos vectoriales conservativos en el plano}
+Sea M y N dos funciones con derivadas parciales continuas en un disco abierto R, el campo vectorial dado por $F(x,y) = Mi + Nj$ es conservativo si y solo si:
+\begin{equation*}
+	\dfrac{aN}{aX} = \dfrac{aM}{aY}
+\end{equation*}
+Este teorema solo es valido para dominios \textbf{simplemente conexos}. Una region plana R es simplemente conexa si cada curva cerrada simple en R encierra solo puntos que estan en R
+\paragraph{Criterio para campos vectoriales conservativos en el espacio} Suponer que M N y P tienen primeras derivadas parciales continuas en una esfera abierta Q en el espacio. El campo vectorial dado por F(x,y,z) = Mi + Nj + Pk es conservativo si y solo si:
+\begin{equation*}
+	\dfrac{aP}{ay} = \dfrac{aN}{az}, \dfrac{aP}{ax} = \dfrac{aM}{az}, \dfrac{aN}{ax} = \dfrac{aM}{aY}
+\end{equation*}
+\section{Independencia de trayectoria}
+si F es un campo vectorial continuo cuyo dominio es D, la integral de linea $\int_C F \cdot dr$ es independiente de la trayectoria si $\int_{C_1} F \cdot dr = \int_{C_2} F \cdot dr$ para cualquier trayectorias $C_1$ y $C_2$ en D que tienen los mismos puntos iniciales y finales.\\
+\linebreak
+\textbf{Las integrales de linea de campos vectoriales conservativos son independientes de la trayectoria}
+\paragraph{Curva cerrada}Una curva es \textbf{cerrada} si su punto final coincide con su punto inicial. $r(b) = r(a)$
+
+\paragraph{teoremita} $\int_C F \cdot dr$ es independiente de la trayectoria en D si y solo si $\int_C F \cdot dr = 0$ para toda trayectoria \textbf{cerrada} C en D
+\section{Teorema de Green}
+Una curva C dada por $r(t) = x(t)i + y(t)j$ donde $a<t<b$ es \textbf{simple} si no se corta a si misma.\\
+\linebreak
+Una region plana R es \textbf{simplemente conexa} si cada curva cerrada simple en R encierra solo puntos que estan en R.\\
+\linebreak
+El teorema de Green establece que el valor de una integral doble sobre una region simplemente conexa R esta determinado por una integral de linea a lo largo de la frontera R.
+\paragraph{Teorema de Green} Sea R una region simplemente conexa cuya frontera es una curva C suave a trozos, orientada	en sentido antihorario. Si M y N tienen derivadas parciales continuas en una region abierta que contiene a R, entonces:
+\begin{equation*}
+	\int_C M dx + N dy = \int_R\int \left(\dfrac{aN}{ax} - \dfrac{aM}{ay} \right) dA
+\end{equation*}
+\paragraph{Integral de linea para el area} Si R es una region plana limitada o acotada por una curva simple C, cerrada y suave a trozos, orientada en sentido antihorario, entonces el area de R esta dada por:
+\begin{equation*}
+	A = \frac{1}{2} \int_C xdy-ydx
+\end{equation*}
+Se puede mostrar que un campo vectorial F es conservativo usando Green:
+\begin{equation*}
+	\int_C F \cdot dr = \int_C M dx + n dy
+\end{equation*}
+\begin{equation*}
+	\int_R\int \left( \dfrac{aN}{ax} - \dfrac{aM}{ay} \right)dA
+\end{equation*}
+\begin{center}
+	$ = 0$
+\end{center}
+\paragraph{Formas alternativas del teorema de Green}
+\paragraph{Teorema de Strokes} Extencion del teorema de Green a superficies en el espacio
+\begin{equation*}
+	\int_R\int (rot F) \cdot k dA
+\end{equation*}
+\paragraph{Teorema de la divergencia}
+\begin{equation*}
+	\int_C F \cdot N ds = \int_R\int div F dA
+\end{equation*}
+\section{Ecuaciones diferenciales}
+Ecuaciones donde las incognitas son funciones escalares o vectoriales de una o mas variables y en las cuales figuran sus derivadas y/o diferenciales. Ejemplo:
+\begin{equation*}
+	\dfrac{dx}{dt} = -K.x
+\end{equation*}
+Ecuacion diferencial \textbf{ordinaria} es cuando la ecuacion (ya sea escalar o vectorial) depende de una sola variable independiente.\\
+\linebreak
+Ecuacion diferencial \textbf{a derivadas parciales} es cuando la ecuacion (ya sea escalar o vectorial) depende de dos o mas variables.\\
+\linebreak
+El \textbf{orden} de una ecuacion diferencial es el orden de la derivada de mayor orden que figura en la ecuacion.
+\begin{equation*}
+	\dfrac{a^3f}{ax_3} + 4 \dfrac{a^2f}{axay} - x \dfrac{af}{ay} = \sin x
+\end{equation*}
+\paragraph{Ecuaciones diferenciales ordinarias}
+\begin{equation*}
+	F(x, y, y', y'', y^n) = 0
+\end{equation*}
+Se llama \textbf{grado} de una ecuacion diferencial \textbf{ordinaria} al exponente del coeficiente diferencial de mayor orden que contiene la ecuacion.
+\begin{equation*}
+	(y^{IV})^3 - 3x^3y''+5x^2y' = e^x
+\end{equation*}
+Ecuacion diferencial \textbf{ordinaria} de \textbf{cuarto orden} y \textbf{tercer grado}\\
+\linebreak
+Si en una ecuacion diferencial, la funcion incognita y sus derivadas aparecen de forma \textbf{lineal} (no existen terminos que contienen \textbf{productos entre} las distintas \textbf{derivadas} de la \textbf{funcion incognita}), entonces se dice que la ecuacion diferencial es \textbf{lineal}.  Toda ecuacion diferencial lineal es de primer grado, pero no toda ecuacion de primer grado es lineal.\\
+\linebreak
+\paragraph{Solucion de una ecuacion diferencial}
+Es una \textbf{funcion} tal que \textbf{reemplazandola} en la \textbf{funcion incongita} y a sus derivadas transforma a la ecuacion en una \textbf{identidad}.\\
+Una \textbf{solucion general} es aquella en la que las constantes $C_1, C_2, C_n$ aparecen durante el proceso de calculo.\\
+Cuando estas constantes asumen valores particulares, la solucion es \textbf{particular}.\\
+Para determinar esta solucion, se deben aplicar ciertas condiciones llamadas \textbf{Condiciones iniciales y/o de contorno}\\
+\linebreak
+\textbf{Curvas integrales:} funcion implicita que representa una familia de curvas en el plano. cada curva es una solucion particular.\\
+\linebreak
+\paragraph{Soluciones singulares:} Soluciones obtenidas mediante algunn razonamiento analitico especial
+\paragraph{soluciones suprimidas:} Soluciones de la ecuacion perdidas durante el proceso de calculo
+\paragraph{Procesos para determinar la solucion de una ecuacion diferencial}
+\begin{itemize}
+	\item \textbf{Analiticos}
+	\begin{itemize}
+		\item \textbf{Integracion por cuadratura:} Integraciones analiticas sucesivas
+		\item \textbf{Desarrollo en serie:} Determinado desarrollo en serie, donde figuran coeficientes a determinar mediante igualacion.
+	\end{itemize}
+	\item \textbf{Graficos}
+	\item \textbf{Por aproximacion numerica}
+\end{itemize}
+\paragraph{Ecuaciones diferenciales de primer orden}
+\textbf{Forma normal:} $y' = f(x,y)$
+\paragraph{Teorema de la existencia y unicidad de la solucion}
+Si en la ecuacion normal se cumple que $f$ y $\frac{df}{dx}$ son continuas en una region D del plano xy y ademas $(x_0,y_0)$ es un punto de esa region, entonces existe una \textbf{unica solucion} $y = y(x)$ tal que $y(x_0) = y_0$
+\paragraph{curvas integrales} A partir de la forma normal de la ecuacion diferencial se puede conocer el valor de la pendiente de la curva integral sin necesidad de conocer la curva integral.
+\paragraph{Ecuaciones diferenciales a variables separables}-\\
+Se presenta como: $M(x)dx+N(y)dy = 0$\\
+Su solucion general es: $\int M(x)dx + \int N(y)dy = C$
+\paragraph{Funciones diferenciales homogeneas}
+Una \textbf{funcion} es \textbf{homogenea} de grado $n$ si se cumple que $f(\lambda x, \lambda y) = \lambda^n f(x,y)$\\
+Una ecuacion diferencial homogenea puede transformarse a una ecuacion diferencial a variables separables proponiendo un cambio de variables.
+\paragraph{Ecuaciones diferenciales exactas}
+$w = M(x,y)dx + N(x,y)dy$ es un diferencial esacto si existe $F(x,y)$ llamada \textbf{funcion potencial} tal que $dF = m(x,y) + N(x,y)dy$ y $M(x,y) = \frac{aF}{ax} ; N(x,y) = \dfrac{aF}{aY}$ $\dfrac{aM}{aY} = \dfrac{aN}{ax}$
+\paragraph{Factor integrante}
+Si una ecuacion de la forma $M(x,y)dx + N(x,y)dy = 0$ no es exacta, si se multiplica por una fucnion adecuada llamada factor integrante, se la puede transformar en exacta
+\paragraph{Ecuacion diferencial lineal}
+Forma normal:
+\begin{equation*}
+	y' + P(x)y = Q(x)
+\end{equation*}
+Si $Q(x)=0$ la ecuacion es \textbf{homogenea}.\\
+Si $Q(x) \neq 0$ es completa.\\
+\linebreak
+Para hallar la solucion de esta ecuacion se suele usar un \textbf{factor integrante}:
+\begin{equation*}
+	\mu (x) = e^{\int P(x)dx}
+\end{equation*} 
+\paragraph{solucion general de la ecuacion diferencial de primer orden lineal:}
+\begin{equation*}
+	y = e^{- \int P(x)dx} \left[ \int_{0}^{x} Q(x) e^{\int P(x)dx}+C \right]
+\end{equation*}
+\paragraph{Ecuacion de bernoulli}
+Esta es una ecuacion diferencial no lineal que mediante un cambio de variables se puede llevar a la forma lineal
+\paragraph{Ecuaciones diferenciales de segundo orden}
+\begin{equation*}
+	y'' + P(x)y' + Q(x)y = R(x)
+\end{equation*}
+Estas ecuaciones son importantes para las \textbf{vibraciones mecanicas} y teoria de \textbf{circuitos electricos}
+\paragraph{Teorema de la existencia y unicidad de la solucion}
+Sean P(x), Q(x) y R(x) funciones continuas en un intervalo cerrado [a,b]. Si $x_0$ es cualquier punto de dicho intervalo y si $y_0$ e $y'_0$ son numeros arbitrarios, la ecuacion anterior tiene una solucion $y(x)$ sobre el intervalo completo tal que:
+\begin{equation*}
+y(x_0) = y_0; y'(x_0) = y'_0
+\end{equation*}
+\begin{itemize}
+	\item \textbf{condicion inicial} Condiciones sobre el valor de la funcion y su derivada en un punto fijo
+	\item \textbf{Condicion de contorno} Permiten dar la solucion de una ecuacion diferencial de segundo orden
+\end{itemize}
+\paragraph{Segundo miembro de la ecuacion diferencial} = $R(x)$
+\begin{itemize}
+	\item $y'' + P(x)y' + Q(x)y = 0 \rightarrow$ homogenea
+	\item $y'' + P(x)y' + Q(x)y = R(x) \rightarrow$ Completa
+\end{itemize}
+\paragraph{Solucion general de la ecuacion diferencial de segundo orden homogenea}
+\textbf{Funciones linearmente dependientes} Si una funcion es multiplo constante de la otra.\\
+\textbf{Funciones linearmente independientes} una funcion es multiplo no constante de la otra.\\
+\paragraph{Teorema}
+Sean $y_1(x)$ e $y_2(x)$ soluciones linearmente independientes entonces:
+\begin{equation*}
+	C_1y_1(x) + C_2y_2(x)
+\end{equation*}
+es solucion de una ecuacion diferencial de segundo orden homogenea en un intervalo [a,b]
+\paragraph{Wronskiano} 
+$W(y_1,y_2) = y_1y'_2 - y_2y'_1$\\
+\linebreak
+...
+\linebreak
+...
+\linebreak
+\paragraph{Ecuacion diferencial de segundo orden homogenea a coeficientes constantes}
+
+\end{document}

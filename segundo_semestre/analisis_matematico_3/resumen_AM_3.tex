@@ -1,0 +1,129 @@
+\title{Resumen de analisis matematico III}
+\author{
+        Mateo P. Cetti \\
+        Estudiante - Universdad Catolica de Cordoba\\
+        Ing Ambrosio Taravella, 6240, \underline{Cordoba, Argentina}
+}
+\date{\today}
+
+\documentclass[10pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\begin{document} 
+\maketitle
+
+\section{Introduccion [03/08/20]}
+En esta meteria vamos a ver funciones como en AM2 solo que esta vez la entrada y salida esta acompañada de \textbf{numeros complejos}
+\begin{itemize}
+	\item \textbf{Libro:} Variable compleja y sus aplicaciones (Churchil algo)
+\end{itemize}
+
+\section{Numeros complejos}
+El conjunto $\mathbb C$ de los numeros complejos esta dado como:
+\begin{equation*}
+	\left\lbrace \mathbb{C}=a+bi   |    a,b    \epsilon \mathbb{R} y i = -1\right\rbrace
+\end{equation*}
+
+El simbolo $i$ con la propiedad de que $i^2 = -1$ se denomina unidad \textbf{imaginaria}
+
+Suma y multiplicacion en $\mathbb{C}$:
+\begin{itemize}
+	\item \textbf{Suma} $(a+bi) + (c+di) = (a+c) + (b+d)i$
+	\item \textbf{Multiplicacion} $(a+bi)(c+di) = (ac- bd) + (ad+bc)i$ (menos porque queda $i^2$)
+\end{itemize}
+
+Con estas operaciones, el conjunto $\mathbb{C}$ es un \textbf{Conjunto algebraico.}\\
+
+si $z = a+bi$
+
+\begin{itemize}
+	\item \textbf{Parte real de z:} a (Notacion: Re[z])
+	\item \textbf{Parte imaginaria de z:} b (Notacion: Im[z])
+\end{itemize}
+
+\paragraph{Conjugado de un numero complejo (z)}
+Dado el numero complejo $z = a+bi$, el numero complejo $x- bi$ se denomina conjugado de $z$ y se denota $\overline{z}$\\
+
+Dado el numero complejo $z = a+bi$, le podemos asignar el par ordenado $(x,y)$, y reciprocamente, dado el par ordenado $(x,y)$, le podemos asignar el numero complejo $z = a+bi$, de modo que existe una \textbf{relacion biunivoca} entre $\mathbb{C}$ y $\mathbb{R}^2$\\
+
+Mirando el plano cartesiano, el eje horizontal se denomina \textbf{eje real} y el eje vertical se denomina \textbf{eje imaginario}. Este plano se denomina \textbf{plano complejo}.\\
+
+\paragraph{Observacion: }Si $a+bi$ = $c+di$ entonces $a=c$ y $b=d$
+
+\paragraph{Modulo de z: } Dado el numero complejo $z = a+bi$, el modulo de $z$ que denotamos $|z|$ esta dado por:
+
+\begin{equation*}
+	|z| = \sqrt[2]{a^2+b^2}
+\end{equation*}
+
+\begin{center}
+	\textbf{Propiedades}
+\end{center}
+\begin{enumerate}
+	\item $|z_1 z_2| = |z_1||z_2|$
+	\item $\left|\dfrac{z_1}{z_2}\right| = \dfrac{|z_1|}{|z_2|}$
+	\item $|z_1 + z_2| \leq |z_1|+|z_2|$
+	\item $z\overline{z} = |z|^2$
+	\item $|z_1 - z_2| \geq |z_1|-|z_2|$ 
+\end{enumerate}
+
+\begin{center}
+\textbf{Una aplicacion de las propiedades de los $\mathbb{C}$}
+\end{center}
+
+\begin{equation*}
+	\dfrac{1}{a+bi} = \dfrac{a-bi}{(a+bi)(a-bi} = \dfrac{a-bi}{a^2+b^2} = \dfrac{a}{a^2+b^2} + \dfrac{bi}{a^2+b^2}
+\end{equation*}
+\begin{equation*}
+	Re \left[\frac{1}{z}\right] = \dfrac{a}{|z|^2}	
+\end{equation*}
+\begin{equation*}
+	Im \left[\frac{1}{z}\right] = \dfrac{bi}{|z|^2}
+\end{equation*}
+
+\paragraph{Forma polar o trigonometrica de un $\mathbb{C}$}
+
+\begin{itemize}
+	\item $a = |z|.cos \theta$
+	\item $b = |z|.sen \theta$
+\end{itemize}
+
+\begin{equation*}
+	z = |z|.cos\theta + |z|.i.sen\theta = |z|.(cos\theta+isen\theta) 
+\end{equation*}
+
+El Angulo $\theta$ se denomina \textbf{argumento} del numero complejo.\\
+
+\paragraph{Formula de Moivre: }
+
+Si $z = |z|.(cos\theta+isen\theta$ entonces:
+
+\begin{equation*}
+	z^n = |z|^n.(cos(n\theta)+isen(n\theta))
+\end{equation*}
+
+\paragraph{Funciones complejas}
+
+Sea $f:\mathbb{C}\rightarrow\mathbb{C}$ dada por:
+
+\begin{equation*}
+	f(z) = z^2
+\end{equation*}
+
+Esto es,
+
+\begin{equation*}
+	f(a+bi) = (a+bi)^2 = a^2+b^2+2abi
+\end{equation*}
+
+En general:
+
+\begin{center}
+	$f(a+bi) = u(a,b)+ iv(a,b)$ Donde $u,v: \mathbb{R}^2 \rightarrow \mathbb{R}$ 
+\end{center}
+
+
+
+\end{document}

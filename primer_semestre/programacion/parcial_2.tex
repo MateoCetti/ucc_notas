@@ -1,0 +1,183 @@
+\documentclass[11pt]{article}
+
+\usepackage{sectsty}
+\usepackage{amsmath}
+\usepackage{graphicx}
+
+% Margins
+\topmargin=-0.45in
+\evensidemargin=0in
+\oddsidemargin=0in
+\textwidth=6.5in
+\textheight=9.0in
+\headsep=0.25in
+
+\title{ Resumen programación 2$^{do}$ parcial}
+\author{ Mateo P. Cetti }
+\date{\today}
+
+\begin{document}
+\maketitle	
+\pagebreak
+
+% Optional TOC
+% \tableofcontents
+% \pagebreak
+
+%--Paper--
+
+\section{Paradigmas y lenguajes de programacion}
+\paragraph{Lenguaje de programacion}
+Cualquier lenguaje artificial que pueda utilizarse para definir una secuencia de instrucciones para su procesamiento
+en un ordenador\\
+\textbf{Caracteristicas}
+\begin{enumerate}
+	\item Define un proceso que se ejecuta en un ordenador
+	\item Es de alto nivel, cercano a los problemas q se quieren resolver
+	\item Permite construir nuevas abstracciones que se adapten al dominio que se programa
+\end{enumerate}
+\textbf{Elementos}
+\begin{enumerate}
+	\item Expreciones primitivas que representan las entidades mas simples del lenguaje
+	\item Mecanismos de combinacion con los que se construyen elementos compuestos a partir de elementos mas simples
+	\item Mecanismos de abstraccion con los que dar nombre a los elementos compuestos y manipularlos como unidades.
+\end{enumerate}
+\paragraph{Paradigmas de programacion}
+Define un conjunto de reglas, patrones y estilos de programacion que son usados por un grupo de lenguajes de programacion
+\begin{enumerate}
+	\item \textbf{Paradigma funcional} El concepto de estado o \textbf{variable} no existe. se basa en el concepto de funcion
+		que describe una relacion entre una entrada y una salida.\\
+		Ejemplos: Haskell, Scala.
+		\item \textbf{Paradigma logico} Los problemas se modelan usando la logica formal llegando a una conclucion por medio de 			hechos y reglas\\
+		Ejemplos: Prolog, mercury.
+		\item \textbf{Paradigma imperativo} La computacion se realiza cambiando el estado del programa por medio de sentencias 			que definen pasos de ejecucion.\\
+		Ejemplos: C, Basic, js.
+		\item \textbf{Paradigma orientado a objetos} Se basa en la idea natural de un mundo lleno de objetos
+				y la resolucion de problemas se realiza mediante el modelado de esos objetos.
+		\textbf{Caracteristicas:}		
+		\begin{itemize}
+			\item Definicion de clases y herencia
+			\item Objetos como abstraccion de datos y procedimientos
+			\item Polimorfismo y chequeo de tipos en tiempo de ejecucion.
+		\end{itemize}
+		Ejemplos: C++, Java, PhP.
+\end{enumerate}
+\paragraph{Interpretes} Dado un programa fuente, en un lenguaje de alto nivel, realiza la traduccion y ejecucion (de forma simultanea) instruccion a instruccion.\\
+Ejemplos: Python, Ruby, PHP.
+\paragraph{Compiladores} Dado un programa fuente en un lenguaje de alto nivel, se realiza la traduccion \textbf{completa} generando un programa objeto, convertido en otro lenguaje.\\
+Ejemplos: C, C++\\
+\textbf{Etapas de la compilacion}
+\begin{enumerate}
+	\item \textbf{Edicion} Se escribe el programa. (Se obtiene el codigo fuente)
+	\item \textbf{Compilacion} Se traduce el codigo fuente a codigo maquina
+	\begin{itemize}
+		\item Si no se produce ningun error se obtiene el codigo objeto
+		\item Si se encuentra un error la traduccion no se realiza y se informa el error
+	\end{itemize}
+	\item \textbf{Linkeo} Se une el codigo objeto a las librerias del lenguaje (se obtiene el programa ejecutable).\\
+	Existen 2 tipos de linkeo:
+	\begin{itemize}
+		\item \textbf{Linkeo dinamico} El codigo objeto de las librerias se añaden al codigo objeto del programa generando el archivo ejecutable.
+		\item \textbf{Linkeo estatico} El código objeto de las librerías no se añade al código objeto del programa, se cargan y se ligan en el momento en que se necesiten.
+	\end{itemize}
+\end{enumerate}
+\section{Punteros} Variables que almacenan \textbf{direcciones de memoria} de un tipo de variable determinado (int, double, etc).
+\paragraph{Declaracion de punteros} int *p\\
+\textbf{acceder al valor de un puntero} \&p \\
+\textbf{Memoria dinamica} \\
+int *v;\\
+v = new int[100];\\
+\section{Programacion orientada a objetos}
+\paragraph{}Facilita la creacion de software de calidad.\\
+Sus caracteristicas potencian la:\\
+\begin{itemize}
+	\item Mantencion
+	\item Reutilizacion
+	\item extencion
+\end{itemize}
+del software.
+\paragraph{Abstraccion} El modelo define una \textbf{perspectiva abstracta} del problema, con \textbf{Datos} y \textbf{operaciones}
+\paragraph{Conceptos de POO}
+\begin{enumerate}
+	\item \textbf{Clase} Posee 2 categorias de datos: \textbf{Atributos} y \textbf{Metodos}
+	\item \textbf{Instancias/objetos} es una ocurrencia de una clase especifica. Al momento de crear un objeto se produce la \textbf{instanciacion}
+	\item \textbf{Atributos} Datos que caracterizan al objeto y definen su estado
+	\item \textbf{Metodos} Representan acciones que se pueden realizar sobre un objeto. son \textbf{funciones}.
+\end{enumerate}
+\paragraph{Principios del POO}
+Principalmente $\rightarrow$ codigo reutilizable 
+\paragraph{Encapsulamiento:}proceso por el cual se \textbf{ocultan} las estructuras de datos y los detalles de la implementacion. los atributos y metodos estan encapsulados (contenidos) dentro de la clase.
+\paragraph{Herencia}
+\paragraph{Polimorfismo}
+\paragraph{Objetos}
+Los objetos constan de:
+\begin{itemize}
+	\item \textbf{Tiempo de vida} duracion definida de un objeto en un programa
+	\item \textbf{Estado} Queda definido por sus atributos
+	\item \textbf{Comportamiento} Queda definido por sus metodos
+\end{itemize}
+\paragraph{Clase} son \textbf{abstracciones} que representan a un conjunto de objetos
+\paragraph{Mensaje} Mecanismo por el cual se solicita una accion sobre el objeto\\
+la interaccion entre objetos se basa en \textbf{mensajes} de modo que el emisor le pide al receptor la ejecucion de un metodo.
+\paragraph{Interfaz} Mecanismo mediante el cual un objeto puede comunicarse con el medio. Se materializa mediante los metodos publicos de una clase
+\paragraph{constructores} Tienen el mismo nombre de la clase, no returnean nada, pueden ser sobrecargados.
+\paragraph{Destructores}
+\begin{itemize}
+	\item libera los recursos solicitados por el constructor
+	\item No se requiere utilizar si no se utiliza almacenamiento dinamico
+	\item Se invocan implicitamente cuando finaliza el bloque en el que fue declarado el objeto
+\end{itemize}
+\section{Sobrecarga de operadores}
+Es posible \textbf{redefinir} algunos \textbf{OPERADORES} para los objetos de una clase para simplificar el codigo al maximo.\\
+se pueden sobrecargar casi todos los operadores unitarios (cardinalidad 1) o binarios (cardinalidad 2) y el operador llamado a funcion \textbf{()}\\
+Se puede modificar la \textbf{definicion} de un operador pero no su \textbf{gramatica} (numero de operandos, precedencia y asociatividad) ni la \textbf{cardinalidad}.
+\section{Herencia}
+\begin{itemize}
+	\item Definir una nueva clase \textbf{hija} a partir de una clase \textbf{padre}.
+	\item los ejemplares de la subclase pueden acceder a los miembros (Atributos, metodos) de la superclase.
+	\item Herencia es transitiva
+	\item Una subclase tiene todas las propiedades de la superclase y otras más (extensión)
+	\item Una subclase constituye una especialización de la superclase (reducción)
+	\item Un método de superclase es anulado por un método con el mismo nombre definido en la subclase
+	\item Un constructor de subclase siempre invoca primero al constructor de su superclase 
+	\item Un destructor de subclase se ejecuta antes que el destructor de su superclase
+	\item No se necesita reescribir el código del comportamiento heredado
+	\item las relaciones de herencia forman una jerarquia entre clases
+	\item \textbf{Herencia múltiple} class CuentaEmpresarial: public Cuenta, public Empresa
+	\item Hay algunos elementos de la clase base que no pueden ser heredados:
+	\begin{itemize}
+		\item Constructores
+		\item Destructores
+		\item Funciones y datos estáticos de la clase
+		\item Operador de asignación (=) sobrecargado
+	\end{itemize}
+\end{itemize}
+\section{Polimorfismo}
+\paragraph{Funciones virtuales} son funciones distintas con el mismo nombre. declaradas \textit{virtual} en la clase base
+\paragraph{Funciones virtuales puras} La funcion de la clase base debe declararse, aunque no hace falta definirla. no se pueden instanciar objetos de esa clase pero si punteros. si una clase tiene una o mas funciones virtuales puras, esta se convierte en una \textbf{clase abstracta}\\
+Si una clase derivada no define una funcion virtual pura, la hereda como pura y por lo tanto tambien sera abstracta.\\
+Una clase que define todas las funciones virtuales es una clase \textbf{concreta}
+\section{Composicion de clases}
+\begin{itemize}
+	\item Consiste en declarar objetos de una clase A como \textbf{atributos} de una clase B. 
+	\item El constructor de la case B llamara a los constructores de la clase A.
+	\item Un constructor \textbf{por defecto} de una clase llamara implicitamente a los constructores por defecto de los 				objetos declarados como atributos.
+\end{itemize}
+\section{Templates}
+Una plantilla (\textbf{Template}) es un patron para crear funciones y clases. Esto sirve para evitar escribir multiples versiones de la misma funcion para llevar a cabo la misma operacion sobre datos de \textbf{DISTINTO TIPO}\\
+\paragraph{funciones template}
+Las funciones template pueden tener 1 o mas parametros. para declarar la funcion template se utiliza el parametro T, que indica el \textbf{tipo de dato} que sera suministrado cuando se llame la funcion.\\
+\paragraph{clases template}
+Las plantillas de clases permiten crear nuevas clases con tipos de datos no definidos.
+\section{Manejo de excepciones}
+\paragraph{Excepcion} Errores que se producen durante la ejecucion.\\
+Si se producen y no se manejan adecuadamente, el programa terminara abruptamente.\\
+Si se implementa manejo de excepciones, la calidad de los programas aumentara conciderablemente.\\
+Este manejo consiste en transferir la ejecucion del programa desde un punto donde se produce la excepcion a un manipulador que \textbf{coincida} con el motivo de la excepcion.\\
+\textbf{Pasos:}
+\begin{enumerate}
+	\item se \textbf{intenta} ejecutar un bloque de codigo y se decide que hacer si se produce un error.
+	\item se produce o se \textbf{lanza} ese error
+	\item La ejecucion del programa es \textbf{desviada} a un sitio especifico donde la excepcion es \textbf{capturada} y se decide que hacer al respecto.
+\end{enumerate}
+\end{document}

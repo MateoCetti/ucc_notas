@@ -1,0 +1,49 @@
+\title{Resumen de programacion}
+
+\date{\today}
+
+\documentclass[10pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\begin{document} 
+\maketitle
+
+\section{Recursion}
+
+\paragraph{definición inductiva: } obtener conceptos nuevos empleando el 
+mismo concepto que intenta describir.\\
+
+Una \textbf{definición recursiva} dice cómo obtener conceptos
+nuevos empleando el mismo concepto que intenta definir\\
+
+Un razonamiento recursivo tiene \textbf{dos partes:} 
+\begin{itemize}
+	\item  La base, que no es recursiva y es el punto tanto de partida como de terminación de la definición. ( son los elementos del conjunto se especifican explícitamente y aseguren el final o corte)
+	\item regla recursiva de construcción. Los elementos del conjunto que se definen en términos
+de los elementos ya definidos
+\end{itemize}
+
+\paragraph{Recursividad de cola: } Cuando una llamada recursiva es la última posición ejecutada
+del procedimiento
+
+\paragraph{Recursion directa: }Cuando un procedimiento incluye una llamada a si mismo
+
+\paragraph{Recursion indirecta: }Cuando un procedimiento llama a otro procedimiento y este
+causa que el procedimiento original sea invocado
+
+Es menos peligrosa una recursión infinita que un ciclo infinito,
+ya que una recursividad infinita pronto \textbf{se queda sin espacio} (para cada llamada se 
+crean copias independientes de las variables declaradas en el procedimiento) y termina el
+programa, mientras que la iteración infinita puede continuar mientras no se termine en forma manual.\\
+\textbf{el cálculo recursivo es mucho más caro que el iterativo.}\\
+\linebreak
+\paragraph{Pasos de la recursion:}
+\begin{enumerate}
+	\item El procedimiento se llama a si mismo
+	\item El problema se resuelve, resolviendo el mismo problema pero de tamaño menor
+	\item La manera en la cual el tamaño del problema disminuye asegura que el caso base eventualmente se alcanzará
+\end{enumerate}
+
+\end{document}

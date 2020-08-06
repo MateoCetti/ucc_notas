@@ -1,0 +1,91 @@
+\documentclass[11pt]{article}
+
+\usepackage{sectsty}
+\usepackage{amsmath}
+\usepackage{graphicx}
+
+% Margins
+\topmargin=-0.45in
+\evensidemargin=0in
+\oddsidemargin=0in
+\textwidth=6.5in
+\textheight=9.0in
+\headsep=0.25in
+
+\title{ Resumen Analisis matematico 2$^{do}$ parcial}
+\author{ Mateo P. Cetti }
+\date{\today}
+
+\begin{document}
+\maketitle	
+\pagebreak
+
+% Optional TOC
+% \tableofcontents
+% \pagebreak
+
+%--Paper--
+
+\section{Derivadas}
+Funcion \textbf{continua: }No presenta saltos / cortes\\
+Funcion \textbf{derivable: } No presenta picos / cambios bruscos
+\textbf{Derivada}
+\begin{itemize}
+	\item Tasa de cambio \textbf{instantanea} de una magnitud
+	\item \textbf{Pendiente} de la \textbf{recta tangente} a la grafica en un \textbf{punto}
+\end{itemize}
+\section{Funciones crecientes y decrecientes}
+Siempre que $f(x)$ sea \textbf{continua} en un intervalo [a, b], esta sera:
+\begin{enumerate}
+	\item \textbf{Creciente: }si a \textbf{mayores} valores de la variable hay \textbf{mayores} valores de la funcion
+	\item \textbf{Decreciente: }si a \textbf{mayores} valores de la variable hay \textbf{menores} valores de la funcion
+\end{enumerate}
+La funcion \textbf{EN UN PUNTO} tambien puede ser:
+\begin{enumerate}
+	\item \textbf{Creciente: }si la derivada de la funcion valuada en ese punto es  \textbf{mayor} a 0
+	\item \textbf{Decreciente: }si la derivada de la funcion valuada en ese punto es \textbf{menor} a 0
+	\item \textbf{Puntos estacionarios: }si la derivada de la funcion valuada en ese punto es 0
+\end{enumerate}
+\section{Rolle}
+Sea $f(x)$ continua en un intervalo \textbf{cerrado} [a, b] y derivable en \textbf{todos} sus puntos, y tambien $sea f(a) = f(b)$ \textbf{entonces} existe un punto c tal que $x=c$ y $f'(c) = 0$
+\section{Lagrange}
+sea $f(x)$ continua y derivable en [a, b], existe un punto c tal que $a < c < b$ donde:
+\begin{equation}
+	f(b)-f(a) = f'(c).(b-a)
+\end{equation}
+\begin{equation}
+	\dfrac{f(b)-f(a)}{b-a} = f'(c)
+\end{equation}
+\section{Extremos}
+\paragraph{Absolutos: } sea $f(x)$ continua en [a ,b] habra un punto $x_1$ y $x_2$ tal que $f(x_1) > f(x)$ y $f(x_2) < f(x)$ siendo x un punto \textbf{CUALQUIERA} de la funcion en el intervalo.\\
+Esto no siempre funciona en intervalos \textbf{abiertos}
+\paragraph{Teorema: }Sea $f(x)$ continua en [a,b] y a y b tienen distinto signo, hay un punto $a < c < b$ en donde $f(c) = 0$
+\paragraph{Extremos relativos} sea $f(x)$ continua en un entorno abierto (a, b), habra:
+\begin{itemize}
+	\item \textbf{Maximo relativo:} si $f(x_1-\bigtriangleup x)<f(x_1)> f(x_1+\bigtriangleup x)$
+	\item \textbf{Minimo relativo:} si $f(x_2-\bigtriangleup x)>f(x_2)< f(x_2+\bigtriangleup x)$
+\end{itemize}
+Siendo $\bigtriangleup x$ un valor arbitrariamente pequeño.
+\paragraph{Condicion necesaria}para la existencia de extremos relativos (pero no \textbf{SUFICIENTE})\\
+Habra un extremo en $x_1$ si $f'(x_1) = 0$. Este punto se denomina \textbf{PUNTO CRITICO}
+\paragraph{Condicion suficiente} para la existencia de extremos relativos\\
+Se puede obtener mediante 2 metodos (En ambos se tiene que cumplor la condicion \textbf{necesaria}):
+\begin{itemize}
+	\item \textbf{Derivada primera} (Ya lo sabes $>:V$)
+	\item \textbf{Derivada segunda} (Este tambien $>:V$)
+\end{itemize}
+\section{Concavidad}
+$f''(x)$ es la razon de cambio de la \textbf{pendiente} de $f(x)$\\
+si $f(x)$ es continua y derivable hasta el segundo orden en [a, b]:
+\begin{itemize}
+	\item Habra concavidad \textbf{positiva} si $f''(x) > 0$ en todo [a, b]
+	\item Habra concavidad \textbf{Negativa} si $f''(x) < 0$ en todo [a, b]
+\end{itemize}
+\paragraph{Puntos de INFLEXION} Punto en una curva donde cambia el el signo de concavidad.\\
+si $f(x)$ es continua y derivable hasta el orden 2 en [a, b]
+\begin{itemize}
+	\item Habra un punto de inflexion si $f''(x) = 0$
+	\item si $f'(x) = 0$ entonces es un  punto de inflexion a \textbf{TANGENTE HORIZONTAL}
+	\item Si $f''(x)$ no existe, pero a valores muy pequeños por izq y por derecha $f''(x)$ cambia de signo, entonces el punto de inflexion \textbf{SI EXISTE}
+\end{itemize}
+\end{document}

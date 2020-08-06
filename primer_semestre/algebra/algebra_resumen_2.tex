@@ -1,0 +1,479 @@
+\documentclass[11pt]{article}
+
+\usepackage{sectsty}
+\usepackage{amsmath}
+\usepackage{graphicx}
+
+% Margins
+\topmargin=-0.45in
+\evensidemargin=0in
+\oddsidemargin=0in
+\textwidth=6.5in
+\textheight=9.0in
+\headsep=0.25in
+
+\title{ Resumen Algebra 2$^{do}$ parcial}
+\author{ Mateo P. Cetti }
+\date{\today}
+
+\begin{document}
+\maketitle	
+\pagebreak
+
+% Optional TOC
+% \tableofcontents
+% \pagebreak
+
+%--Paper--
+
+\section{Sistemas de coordenadas}
+
+\paragraph{Sistema de coordenadas}
+Es una correspondencia entre los puntos de una recta y los numero reales. El numero "X" asociado a un punto en particular se llama \textbf{coordenada} en ese punto.
+
+\paragraph{}
+para formar un sistema de coordenadas, se necesita un par de rectas equipadas con sus escalas y construidas de manera tal que se corten (coordenada 0)
+
+\paragraph*{}
+Un sistema de coordenadas establece una \textbf{correspondencia biunívoca} entre los puntos del plano y los pares ordenados de números reales. Esta correspondencia permite identificar los puntos con los pares ordenados correspondientes
+Los puntos sobre el primer eje tienen segunda coordenada nula, puntos sobre el segundo eje tienen primera coordenada nula.
+
+\paragraph{Recta numerica}
+Recta \emph{equipada} con un sistema de coordenadas.
+
+\paragraph{Sistema de ejes cartesianos}
+Sistema de coordenadas con ejes \textbf{Perpendiculares} y una misma unidad de medida en c/eje
+
+\paragraph{Sistema de ejes en el espacio}
+Se nececita de 3 ejes o rectas \textbf{no coplanares} que se intersecten en un punto. Este establece una \textbf{correspondencia biunivoca} entre los puntos del espacio y las ternas ordenadas de numeros reales
+
+\paragraph{}
+Las 2 primeras coordenadas (x,y) nos determinan la "sombra del punto".
+
+\section{Vectores}
+
+\paragraph{Segmento de recta}
+Esta determinado por los puntos P (inicial) y Q (final), y esta representado por una flecha que une ambos puntos, con inicio en P y final en Q.
+\paragraph{Vector}
+Sean sus puntos P y Q, un vector se denota como $\overrightarrow{PQ}$ o con una letra minuscula (EJ: \emph{v}).
+\paragraph{Elementos}
+\begin{enumerate}
+	\item \textbf{Modulo: } Longitud del segmento.
+	\item \textbf{Triseccion: } (Inclinacion)Angulo que forma la recta que contiene el vector con el semieje \textbf{positivo} de las X.
+	\item \textbf{Sentido: } Dado por la flecha (De P a Q, o de Q a P).
+\end{enumerate}
+
+\paragraph{Vectores equipolentes}
+Vectores que tienen la misma longitud, direccion y sentido (Vectores cuyos elementos son iguales.)
+
+\pagebreak
+
+\paragraph{Vectores libres}
+ Vector con origen en un punto X, determinado por sus \textbf{componentes} o numeros de direccion.
+\begin{itemize}
+	\item En R$^2$: (V$_x$, V$_y$)
+	\item En R$^3$: (V$_x$, V$_y$, V$_z$)
+\end{itemize}
+\paragraph{}
+Todos los vectores libres con mismos componentes son \textbf{equipolentes}, sin importar el punto origen X.
+
+\paragraph{Correspondencia entre puntos y vectores}
+Un par ordenado (a, b) representa:
+\begin{enumerate}
+	\item Un punto "P" de coordenadas (a,b).
+	\item Un vector libre "v" de componentes (a,b) y origen en (0, 0).
+\end{enumerate}
+
+\paragraph{Operaciones con vectores libres}
+\begin{enumerate}
+	\item \textbf{Suma entre vectores:} Se suman los componentes \textbf{homologos} de los vectores sumandos.
+	\textbf{Propiedades:}
+	\begin{itemize}
+		\item \textbf{Asociativa: } (a + b) + c = a + (b + c)
+		\item \textbf{Conmutativa: } a + b = b + a
+		\item \textbf{Elemento neutro: } a + (0,0) = a
+		\item \textbf{Opuesto: } a+(-a) = 0 
+	\end{itemize}
+	\item \textbf{Producto de un vector por un escalar:} Se multiplica cada componente del vector por un escalar. k.a = (k.a$_x		$, k.a$_y$)\\
+	\textbf{Propiedades:}
+	\begin{itemize}
+		\item \textbf{Distributiva (respecto a la suma de vectores): } k.(a + b) = k.a + k.b 
+		\item \textbf{Distributiva (Respecto a la suma de escalares): } (k + k').a = k.a + k'.a
+		\item \textbf{Asociativa: } (k.k').a = k.(k'.a) = k'.(k.a)
+		\item \textbf{Elemento neutro: } 1.a = a
+	\end{itemize}
+\end{enumerate}
+
+\paragraph{Vectores libres paralelos}
+Dos vectores son paralelos si y solo si uno es multiplo escalar de otro. (a // b si y solo si b = k.a). \textbf{Nota:} El Vector nulo es paralelo a \textbf{TODO} vector.
+
+\pagebreak
+
+\section{Recta en R$^2$ y sus ecuaciones cartesianas}
+
+\paragraph{Ecuación vectorial: }
+Representa la resolucion de un sistema de ecuaciones compatibles \textbf{indeterminado}.\\ 
+Esta determinada por dos puntos distintos.\\
+Ej: (x, y) = (x$_1$, y$_1$) + t.(v$_x$, v$_y$)
+\begin{itemize}
+	\item (x, y) = Punto generico
+	\item (x$_1$, y$_1$) = Punto que pertenece a la recta
+	\item t = parametro
+	\item (v$_x$, v$_y$) = Vector direccional
+\end{itemize}
+
+\paragraph{Ecuaciones parametricas}
+\begin{equation*}
+  \left\{
+    \begin{array}{@{} l c @{}}
+      x = x_1 +t.v_x \\
+      y = y_1 +t.v_y
+    \end{array}\right.
+  \label{eq4}
+\end{equation*}
+
+\paragraph{Ecuacion simetrica} Esta ecuacion se puede obtener siempre y cuando v$_x$ y v$_y$ no sean 0. Se igualan los parametros t en cada ecuacion de las ecuaciones parametricas y se igualan
+
+\begin{equation*}
+	\frac{x-x_1}{v_x} = \frac{y-y_1}{v_y}
+\end{equation*}
+
+\paragraph{Ecuacion implicita}
+\begin{equation*}
+	\frac{x-x_1}{v_x} = \frac{y-y_1}{v_y}
+\end{equation*}
+
+\begin{equation*}
+	(x-x_1)*v_y = (y-y_1) * v_x
+\end{equation*}
+
+\begin{equation*}
+	x*v_y-x_1*v_y = y*v_x-y_1*v_x
+\end{equation*}
+
+\begin{equation*}
+	x*v_y - y*v_x + (-x_1*v_y +y_1*v_x)= 0
+\end{equation*}
+
+\begin{equation*}
+	Ax + By + C = 0
+\end{equation*}
+
+\paragraph{Ecuacion explicita}
+
+\begin{equation*}
+	Ax + By + C = 0 => -By = Ax+C
+\end{equation*}
+
+\begin{equation*}
+	y = -\frac{A}{B} x- \frac{C}{B}
+\end{equation*}
+
+\begin{equation*}
+	y = mx + b
+\end{equation*}
+
+\begin{itemize}
+	\item \textbf{m:} inclinacion de la recta
+	\item \textbf{b:} punto en que la recta intercepta al eje de coordenadas
+\end{itemize}
+
+\paragraph{Ecuacion segmentaria}
+Se obtiene desde la ecuacion implicita
+
+\begin{equation}
+	Ax + By + C = 0 \rightarrow Ax + By + C - C = - C
+\end{equation}
+
+\begin{equation}
+	- \dfrac{A}{C} x - \dfrac{B}{C} y  = 1
+\end{equation}
+
+\begin{equation}
+	- \dfrac{\frac{x}{1}}{\frac{C}{A}} - \dfrac{\frac{y}{1}}{\frac{C}{B}}  = 1
+\end{equation}
+
+\begin{equation}
+	\dfrac{x}{a} + \dfrac{x}{b}  = 1
+\end{equation}
+
+donde:
+
+\begin{itemize}
+	\item \textbf{a} = corte de la funcion con el eje x
+	\item \textbf{b} = corte de la funcion con el eje y
+\end{itemize}
+
+La unica forma \textbf{CARTESIANA} de representar \textbf{CUALQUIER} recta en el plano es mediante la ecuacion implicita, ya que:
+
+\begin{itemize}
+	\item Si la recta es paralela al eje \textbf{X}, no se puede representar mediante la ecuacion \textbf{simetrica} ni mediante la ecuacion \textbf{segmentaria}.
+	\item Si la recta es paralela al eje \textbf{Y}, no se puede representar mediante la ecuacion \textbf{simetrica}, \textbf{explicita}, ni tampoco la \textbf{segmentaria}.
+\end{itemize}
+
+\paragraph{Paralelismo e interseccion de rectas en R$^2$}
+
+\begin{itemize}
+	\item \textbf{Rectas paralelas: } Siempre que sus vectores sean paralelos ($r1 // r2 \Leftrightarrow v // u \Leftrightarrow v = k.u $)
+	\begin{itemize}
+		\item \textbf{No coincidentes: }no tienen ningun punto en comun (sistema incompatible [Ecuaciones parametricas])
+		\item \textbf{Coincidentes: }comparten todos sus puntos (Sistema compatible indeterminado)
+	\end{itemize}
+	\item \textbf{Rectas concurrentes} Tienen solo un punto en comun (Sistema compatible determinado).
+\end{itemize}
+
+\section{Rectas en el espacio R$^3$}
+\begin{itemize}
+	\item Representa un conjunto solucion de un sistema de ecuaciones lineales compatible indeterminado.\\
+	\item En R$^3$ no se puede definir la recta de forma \textbf{explicita} ni \textbf{segmentaria}\\
+	\item Una recta en R$^3$ es la interseccion entre 2 planos.\\
+\end{itemize}
+
+\paragraph{Ecuacion vectorial}
+\begin{equation*}
+	(x, y, z) = (x_1, y_1, z_1) + t(v_x, v_y, v_z)
+\end{equation*}
+
+\paragraph{Ecuaciones parametricas}
+
+\begin{equation*}
+  \left\{
+    \begin{array}{@{} l c @{}}
+      x = x_1 +t.v_x \\
+      y = y_1 +t.v_y \\
+      z = z_1 +t.v_z
+    \end{array}\right.
+  \label{eq4}
+\end{equation*}
+
+\paragraph{Ecuaciones simetricas}
+
+\begin{equation*}
+	\dfrac{x-x_1}{v_x} = \dfrac{y-y_1}{v_y} = \dfrac{z-z_1}{v_z}
+\end{equation*}
+
+\paragraph{Ecuacion general o implicita}
+
+\begin{equation*}
+  \left\{
+    \begin{array}{@{} l c @{}}
+      A_1x + B_1y + C_1z = 0 \\
+	A_2x + B-2y + C_2z = 0	
+    \end{array}\right.
+\end{equation*}
+
+\paragraph{Paralelismo e interseccion entre rectas en R$^3$}
+Se presentan los siguientes casos:
+\begin{itemize}
+	\item \textbf{Rectas paralelas}
+	\begin{itemize}
+		\item \textbf{Rectas coincidentes: } Sistema compatible indeterminado
+		\item \textbf{Rectas no coincidentes: } Sistema incompatible
+	\end{itemize}
+	\item \textbf{Rectas NO paralelas}
+	\begin{itemize}
+		\item \textbf{Rectas concurrentes: }Sistema compatible determinado
+		\item \textbf{Rectas alabeadas: }Sistema incopatible
+	\end{itemize}
+\end{itemize}
+\paragraph{Rectas paralelas a los ejes coordenados}
+Una recta es paralelas a un eje coordenado si su vector direccion tiene 2 componentes nulas.
+\begin{itemize}
+	\item \textbf{paralela al eje x:} v = (v$_x$, 0, 0)
+	\item \textbf{paralela al eje y:} v = (0, v$_y$, 0)
+	\item \textbf{paralela al eje z:} v = (0, 0, v$_z$)
+\end{itemize}
+\section{Plano}
+Esta determinado por 3 puntos \textbf{NO COLINEALES}
+\paragraph{Ecuacion vectorial del plano}
+\begin{equation*}
+	(x, y, z) = (x_1, x_1, x_1) + \alpha(u_x, u_y, u_z) + \beta(v_x, v_y, v_z)
+\end{equation*}
+\begin{itemize}
+	\item $\alpha > 0$ y $\beta > 0 \rightarrow$ \textbf{Primer cuadrante}
+	\item $\alpha < 0$ y $\beta > 0 \rightarrow$ \textbf{Segundo cuadrante}
+	\item $\alpha > 0$ y $\beta < 0 \rightarrow$ \textbf{Tercer cuadrante}
+	\item $\alpha < 0$ y $\beta < 0 \rightarrow$ \textbf{Cuarto cuadrante}
+\end{itemize}
+\paragraph{Ecuaciones parametricas}
+\begin{equation*}
+  \left\{
+    \begin{array}{@{} l c @{}}
+    x = x_1 + \alpha u_x + \beta v_x \\
+    y = y_1 + \alpha u_y + \beta v_y\\
+    z = z_1 + \alpha u_z + \beta v_z
+    \end{array}\right.
+\end{equation*}
+\paragraph{Ecuacion cartesiana}
+Se obtiene determinando la condicion que deben cumplir  X, Y y Z para que el sistema
+de ecuaciones parametricas , cuyas incognitas son $\alpha$ y $\beta$ sea COMPATIBLE
+\begin{equation*}
+  \left\{
+    \begin{array}{@{} l c @{}}
+    x = x_1 + \alpha u_x + \beta v_x \\
+    y = y_1 + \alpha u_y + \beta v_y\\
+    z = z_1 + \alpha u_z + \beta v_z
+    \end{array}\right.
+\end{equation*}
+\begin{equation*}
+  \left\{
+    \begin{array}{@{} l c @{}}
+    x - x_1 = \alpha u_x + \beta v_x \\
+    y - y_1 = \alpha u_y + \beta v_y\\
+    z - z_1 = \alpha u_z + \beta v_z
+    \end{array}\right.
+\end{equation*}
+\begin{equation*}
+\begin{bmatrix}
+	{u_x} & {v_x} & {\vert} &  {x - x_1}\\
+	{u_y} & {v_y} & {\vert} &  {y - y_1}\\
+	{u_z} & {v_z} & {\vert} &  {z - z_1}
+\end{bmatrix}
+\end{equation*}
+\begin{equation*}
+\begin{bmatrix}
+	{1} & {0} & {\vert} &  {*}\\
+	{0} & {1} & {\vert} &  {*}\\
+	{0} & {0} & {\vert} &  {Ax + By + Cz + D}
+\end{bmatrix}
+\end{equation*}\\
+\begin{equation*}
+	Ax + By + Cz + D = 0
+\end{equation*}
+\paragraph{Paralelismo e interseccion entre planos}
+2 planos pueden ser:
+\begin{itemize}
+	\item \textbf{Paralelos:}
+	\begin{itemize}
+		\item \textbf{Coincidentes} Tienen \textbf{TODOS} sus puntos en comun
+		\item \textbf{No coincidentes} No tienen \textbf{NINGUN} punto en comun	
+	\end{itemize}
+	\item \textbf{No paralelos: } (Se intersectan) Tienen en comun los puntos de la recta r
+		(interseccion entre ambos.)
+\end{itemize}
+\paragraph{Condicion de paralelismo de planos}
+siendo:
+\begin{itemize}
+	\item plano1 ($\pi_1$) = P + $\alpha$u + $\beta$v
+	\item plano2 ($\pi_2$) = P' + $\alpha$u' + $\beta$v'
+\end{itemize}
+Los vectores u y v son combinacion lineal de u' y v'.
+\begin{equation*}
+	u' = k_1.u + k_2.v
+\end{equation*}
+\begin{equation*}
+	v' = k_3.u + k_4.v
+\end{equation*}
+\paragraph{Si usamos la ecuacion CARTESIANA}
+$\pi_1 = A_1x + B_1y + C_1z + D_1 $ \\
+$ \pi_2 = A_2x + B_2y + C_2z + D_2$ \\
+$(A_1, B_1, C_1) = k(A_2, B_2, C_2)$
+\pagebreak
+\section{Plano y Recta en R$^3$}
+\paragraph{Pociciones relativas de una recta con respecto a un plano}
+\begin{itemize}
+	\item \textbf{Paralelos}
+	\begin{itemize}
+		\item \textbf{La recta esta incluida en el plano} Sistema compatible indeterminado
+		\item \textbf{La recta esta en incluida en un plano paralelo al plano} Sistema incompatible
+	\end{itemize}
+	\item \textbf{No paralelos} La recta corta al plano (Tienen un punto en comun)sistema compatible determinado.
+\end{itemize}
+\paragraph{Condicion de paralelismo entre recta y plano}
+Siendo:
+\begin{itemize}
+	\item \textbf{recta r: } $(x, y , z) = (x_1, y_1, z_1) + t.(v_x, v_y, v_z)$
+	\item \textbf{Plano $\pi$: }$(x, y, z) = (x_1, y_1, z_1) + \alpha(u_x, u_y, u_z) + \beta(w_x, w_y, w_z)$ 
+\end{itemize}
+
+r es paralelo a $\pi$ siempre que v sea una \textbf{combinacion lineal} de u y w.
+
+\begin{equation*}
+	(v_x, v_y, v_z) = k_1 (u_x, u_y, u_z) + k_2 (w_x, w_y, w_z)
+\end{equation*}
+\section{Problemas metricos en R$^2$ y R$^3$}
+
+\paragraph{Longitud (Modulo o norma) de un vector libre}
+Longitud de uno de los segmentos que representa al vector libre.\\
+Siempre es positivo y se denota como $|| u ||$\\
+Es la distancia entre el origen del sistema de coordenadas al extremo del segmento dirigido\\
+Siendo $u = (u_x, u_y)$
+\begin{equation*}
+	||u|| = \sqrt[2]{(u_x)^2+(u_y)^2}
+\end{equation*}
+En R$^3$:
+$v = (v_x, v_y, v_z)$
+\begin{equation*}
+	||u|| = \sqrt[2]{(v_x)^2+(v_y)^2 + (v_z)^2}
+\end{equation*}
+\paragraph{Angulo entre vectores}
+Siendo u y v 2 vectores NO nulos en R$^2$ o R$^3$, el angulo definido entre ellos ($\theta$) siempre va a tener valores entre 0 y $\pi$
+\begin{center}
+	$0 \leq \theta \leq \pi$
+\end{center}
+\paragraph{Producto punto, producto interior  o producto escalar entre vectores.}
+El resultado es un numero real que se obtiene de la siguiente formula:
+\begin{equation*}
+	u \cdot v = ||u||.||v||.cos \theta
+\end{equation*}
+Aunque usando el \textbf{Teorema del coseno} se obtiene:
+\begin{itemize}
+	\item en R$^2$
+	\begin{equation*}
+		u \cdot v = u_x . v_x + u_y . v_y
+	\end{equation*}
+	\item en R$^3$
+	\begin{equation*}
+		u \cdot v = u_x . v_x + u_y . v_y + u_z . v_z
+	\end{equation*}
+\end{itemize}
+\paragraph{Propiedades del producto punto entre vectores}
+\begin{enumerate}
+	\item \textbf{Conmutativa} $u \cdot v = v \cdot u$
+	\item \textbf{Distributiva respecto a la suma de vectores} $u \cdot (v + w) = u \cdot b + u \cdot w$
+	\item \textbf{Asociativa} $k (u \cdot v) = (k.u) \cdot v = u \cdot (k.v)$
+	\item $ u \cdot u = ||u||^2 $
+	\item $||u|| = \sqrt[2]{u \cdot u}$
+	\item \textbf{Positividad:} El modulo de un vector es un numero real positivo o nulo
+\end{enumerate}
+\paragraph{Distancia entre 2 puntos} 
+Dos puntos P y Q definen un segmento de recta y un vector libre $u = Q - P$. la distancia
+entre estos puntos (d(P,Q)) es igual a la longitud del vector u.
+\begin{equation*}
+	||u|| = d(P,Q)
+\end{equation*}
+(Esto se utiliza por ejemplo, para hallar la distancia entre un punto y un plano)
+\paragraph{Propiedad sin nombre xD}
+sea u el vector $u = (u_x, u_y, u_z)$ y c un escalar cualquiera,
+\begin{equation*}
+	||c.u|| = |c| . ||u||
+\end{equation*}
+\paragraph{Vectores unitarios}
+Un vector es unitario cuando su modulo vale 1. Para transformar un vector cualquiera a unitario hacemos:
+\begin{equation*}
+	\dfrac{v}{||v||}
+\end{equation*}
+\paragraph{Angulo entre vectores}
+\begin{equation*}
+	u \cdot v = ||u||.||v||.cos \theta
+\end{equation*}
+\begin{equation*}
+	cos \theta = \dfrac{u \cdot v}{||u||.||v||}
+\end{equation*}
+\begin{equation*}
+	\theta = \arccos (\dfrac{u \cdot v}{||u||.||v||})
+\end{equation*}
+\begin{enumerate}
+	\item Si $u \cdot v > 0$, entonces $0 \leq \cos \theta < \frac{\pi}{2}$ y por lo tanto $\theta$ va a ser un \textbf{Angulo agudo}
+	\item si $u \cdot v < 0$, $\frac{\pi}{2} \leq \cos \theta < \pi$ y por lo tanto $\theta$ va a ser un \textbf{Angulo obtuso}
+	\item Si $u \cdot v = 0$, entonces $\cos \theta = 0$ y por lo tanto $\theta$ va a ser un angulo \textbf{Recto}.
+	En este caso decimos que los vectores son \textbf{Ortogonales} ($\perp$) o perpendiculares entre si.
+\end{enumerate}
+\paragraph{Condicion de perpendicularidad entre vectores}
+Siendo u y v vectores no nulos, estos seran perpendiculares (ortogonales entre si) siempre y cuando.
+\begin{equation*}
+	u \cdot v = 0
+\end{equation*}
+%--/Paper--
+
+\end{document}
