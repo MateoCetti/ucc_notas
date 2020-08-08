@@ -1,0 +1,66 @@
+\title{Resumen de algebra (segundo semestre)}
+
+\author{Mateo P. Cetti}
+
+\documentclass[10pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\begin{document} 
+\maketitle
+
+\section{Espacios vectoriales}
+
+cualquier conjunto que posea operaciones de \textbf{suma} y 
+\textbf{producto por un escalar}, cumpliendo todas las siguientes \textbf{propiedades:}\\
+
+\linebreak
+
+\paragraph{Suma: }
+
+\begin{enumerate}
+    \item \textbf{Asociativa} $(u+w) + v = u (w+v) = (u+v) + w$
+    \item \textbf{Conmutativa} $u + v = v + u $
+    \item \textbf{Elemento neutro} tal que $u + 0 = u$ 
+    \item Para cada vector $u$ existe un elemento opuesto $(-u)$ tal que $u+(-u)=0$.
+    
+\end{enumerate}
+
+\textbf{Multiplicacion: }
+
+\begin{enumerate}
+    \item \textbf{Asociativa} $(k*k')*u=k*(k'*u)=(k*u)*k'  k,k' e \mathbb{K}$
+    \item \textbf{Distributiva}
+    \begin{itemize}
+        \item Respecto a la suma de vectores  $k*(u+v) = k*u+k*v$
+        \item Respecto a la suma de escalares  $(k_1+k_2) *u = k_1*u + k_2 *u$   
+    
+    \end{itemize}
+    \item \textbf{Elemento neutro} $k$=1, tal que $1*u = u$
+    
+\end{enumerate}
+
+Sea $\mathbb{K}$ un cuerpo, y $V$ un conjunto de dos operaciones definimos:
+
+\paragraph{Operacion interna}llamada adición, que asigna a cada par 
+$u,v$ de elementos de V, un elemento de V denotado $u+v$
+
+\paragraph{Operacion externa}llamada multiplicación por un escalar que 
+asigna a cada par formado por un elemento $ke\mathbb{K}$ y un elemento $veV$, un elemento de V denotado por $kv$
+
+\paragraph{Subespacios vectoriales}
+
+Un subconjunto no vacio W de un espacio vectorial V se denomina subespacio vectorial
+de V, si W es en si mismo un espacio vectorial bajo las operaciones de suma y Multiplicacion
+por escalar definidas en V. Ademas debe cumplir:
+
+\begin{itemize}
+    \item La suma de 2 vectores de W pertenecen a W
+    $u,v \mathbb{e} W => u + v \mathbb{e} W$
+    \item El producto de un vector de W por un escalar cualquiera K pertenece a W
+    $u \mathbb{e} W, k \mathbb{e} \mathbb{K} => k.u  \mathbb{e} W$
+    \item El vector nulo pertenece a W 
+\end{itemize}
+
+\end{document}
