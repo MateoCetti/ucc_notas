@@ -10,6 +10,235 @@
 \begin{document} 
 \maketitle
 
-\section{Introduccion [03/08/20]}
+\section{Movimiento ondulatorio}
+
+El mundo está lleno de \textbf{ondas}, los dos tipos principales son las ondas \textbf{mecánicas} 
+(Tirar una piedra al agua) y las ondas \textbf{electromagnéticas} (las ondas de radio). En el caso de las 
+ondas mecánicas, algunos medios físicos se perturban. Las ondas
+electromagnéticas no requieren un medio para propagarse.\\
+La caracteristica principal del movimiento ondulatorio es que la \textbf{energía} se 
+transfiere a través de una distancia, perola \textbf{materia} no.
+
+\paragraph{Ondas mecanicas}
+
+Todas las ondas mecánicas requieren:
+
+\begin{enumerate}
+    \item alguna fuente de perturbación
+    \item un medio que contenga elementos que sean factibles de perturbación
+    \item algún mecanismo físico a partir del cual los elementos del medio puedan influirse mutuamente.
+\end{enumerate}
+
+\paragraph{Tipos de ondas: }
+
+\begin{itemize}
+    \item \textbf{onda transversal} Una onda viajera o pulso que hace que los elementos 
+    del medio perturbado se muevan \textbf{perpendiculares} a la dirección de propagación.
+    \item \textbf{onda longitudinal} Una onda viajera o pulso que mueve a los elementos del medio en \textbf{paralelo}
+    a la dirección de propagación
+\end{itemize}
+
+\paragraph{Funcion de onda}
+\begin{itemize}
+    \item $y(x, t) y(x-vt, 0)$ (Si el pulso viaja hacia la \textbf{derecha} en X)
+    \item $y(x, t) y(x+vt, 0)$ (Si el pulso viaja hacia la \textbf{izquierda} en X)
+\end{itemize}
+
+La función de onda y(x, t) representa la coordenada y, la posición transversal,
+de cualquier \textbf{elemento} ubicado en la posición x en cualquier tiempo t.\\
+\linebreak
+Ademas, si t es fijo (como en el caso de tomar una instantánea del pulso), la función 
+de onda y(x), a veces llamada \textbf{forma de onda}, define una curva que representa la 
+\textbf{forma} geométrica del \textbf{pulso} en dicho tiempo.
+
+\paragraph{El modelo de onda progresiva}
+
+Primero, la forma de onda completa se mueve hacia la derecha de modo que la curva 
+se mueve hacia la derecha y al final llega a la posición de la curva azul. Este es el \textbf{movimiento 
+de la onda}. Si se concentra en un elemento del medio, como el elemento en x = 0, observará que cada
+elemento se mueve hacia arriba y hacia abajo a lo largo del eje y en movimiento armónico
+simple. Este es el \textbf{movimiento de los elementos del medio}. Es importante \textbf{diferenciar} entre el
+movimiento de la onda y el movimiento de los elementos del medio.
+
+\paragraph{modelo de onda}
+
+Un punto en la figura en que el desplazamiento del elemento de su 
+posición normal está más alto se llama \textbf{cresta} de la onda.\\
+
+El punto más bajo se llama \textbf{valle}.\\
+
+la longitud de onda ($\lambda$) es la \textbf{distancia mínima} entre dos puntos
+cualesquiera en ondas adyacentes\\
+
+\textbf{periodo} T de las ondas es el intervalo de tiempo requerido 
+para que dos puntos idénticos de ondas adyacentes pasen por un punto.\\
+
+\textbf{frecuencia} $f$ de una onda periódica es el número de crestas (o
+valles o cualquier otro punto en la onda) que pasa un punto determinado en un intervalo
+de tiempo \textbf{unitario}.\\
+
+\begin{equation*}
+    f = \dfrac{1}{T}
+\end{equation*}
+
+La \textbf{máxima posición} de un elemento del medio relativo a su \textbf{posición de equilibrio} se
+llama \textbf{amplitud} A de la onda.\\
+
+Las ondas viajan con una \textbf{rapidez} específica, y esta rapidez depende de las \textbf{propiedades
+del medio perturbado}.\\
+
+\paragraph{Formas de la funcion de onda:}
+Forma 1:
+\begin{equation*}
+    y(x, t) =  A sen \left[ \frac{2\pi}{\lambda} (x-vt) \right] 
+\end{equation*}
+
+$v = \dfrac{\lambda}{T}$. Sustituyendo esto en la ecuacion anterior:
+
+\begin{equation*}
+    y = Asen \left[ 2\pi \left( \frac{x}{\lambda} - \frac{t}{T} \right) \right] 
+\end{equation*}
+
+Para abreviar la formula definimos:\\
+\linebreak
+
+\textbf{número de onda angular: }$k = \dfrac{2\pi}{\lambda}$
+
+\textbf{frecuencia angular: }$w = \dfrac{2\pi}{T} = 2\pi f$\\
+\linebreak
+Entonces la funcion queda:
+
+\begin{equation*}
+    y = Asen(kx-wt)
+\end{equation*}
+
+Ademas, $v$ se puede definir alternativamente como: $v = \frac{w}{f} = \lambda f$\\
+\linebreak
+La función de onda conocida en la ecuación supone que la posición vertical y de
+un elemento del medio es cero en $x=0$ y $t=0$. Este no necesita ser el caso. Si no lo es, la
+función de onda por lo general se expresa en la forma:\\
+$y = Asen(kx-wt + \phi)$\\
+donde $\phi$ es la \textbf{constante de fase}
+
+\paragraph{Ondas sinusoiodales en cuerdas}
+
+Se puede usar esta expresión para describir el movimiento de cualquier elemento de la
+cuerda. Un elemento en el punto P se mueve sólo verticalmente, y de este modo su coordenada x 
+permanece constante. Por lo tanto, la rapidez transversal $v_y$ (no confundir con la 
+rapidez de onda v) y la aceleración transversal $a_y$ de los \textbf{elementos} de la cuerda son
+
+\begin{equation*}
+    v_y = -wA cos(kx-wt)
+\end{equation*}
+
+\begin{equation*}
+    a_y = -w^2 A sen(kx-wt)
+\end{equation*}
+
+Los valores \textbf{máximos} de la rapidez transversal y la
+aceleración transversal son simplemente los valores absolutos de los coeficientes de las
+funciones coseno y seno:
+
+\begin{equation*}
+    v_y max = wA
+\end{equation*}
+
+\begin{equation*}
+    a_y max = w^2 A
+\end{equation*}
+
+La \textbf{rapidez transversal} y la \textbf{aceleración transversal} de los elementos de la cuerda no llegan
+\textbf{simultáneamente} a sus valores máximos. La rapidez transversal llega a su valor máximo
+($wA$) cuando $y=0$, mientras que la magnitud de la aceleración transversal llega a su valor
+máximo ($w^2A$) cuando $y= \pm A$
+
+\paragraph{La rapidez de ondas en cuerdas}
+
+En esta sección se determina la rapidez de un pulso transversal que viaja en una cuerda
+tensa. Primero cabe mencionar que se espera que la \textbf{rapidez} de la onda \textbf{aumente} con una
+\textbf{tensión creciente} y debe disminuir a medida que \textbf{aumente} la \textbf{masa por unidad de longitud} 
+de la cuerda.\\
+\linebreak
+Si la tensión en la cuerda es $T$ y su masa por unidad
+de longitud es $\mu$, la rapidez de onda es:
+
+\begin{equation*}
+    \sqrt{\dfrac{T}{\mu}}
+\end{equation*}
+
+\paragraph{Reflexión y transmisión}
+
+El modelo de onda progresiva describe ondas que viajan a través de un medio uniforme sin
+interactuar con algo más en el camino. Ahora se considerará cómo una onda progresiva
+es afectada cuando \textbf{encuentra un cambio} en el medio\\
+\linebreak
+considere un pulso que viaja en una cuerda que está rígidamente unida a un soporte en un extremo, como en
+la figura. Cuando el pulso alcanza el soporte, se presenta un cambio severo en el medio: la
+cuerda termina. Como resultado, el pulso experimenta reflexión; es decir, el pulso se
+mueve de regreso a lo largo de la cuerda en la dirección opuesta.Note que el pulso reflejado está invertido.\\
+\linebreak
+Ahora considere otro caso. Esta vez, el pulso llega al final de una cuerda que es libre
+de moverse verticalmente, como en la figura 16.14. La tensión en el extremo libre se mantiene porque la cuerda está amarrada a un anillo de masa despreciable que tiene libertad
+para deslizarse verticalmente sobre un poste uniforme sin fricción. De nuevo, el pulso
+se refleja, pero esta vez no se invierte. \\
+\linebreak
+Para finalizar, considere una situación en la que la frontera es intermedia entre estos
+dos extremos. En este caso, parte de la energía en el pulso incidente se refleja y parte se
+somete a transmisión; es decir: parte de la energía pasa a través de la frontera. Por ejemplo, 
+suponga que una cuerda ligera se une a una cuerda más pesada,
+
+\paragraph{Rapidez de transferencia de energía mediante ondas sinusoidales
+en cuerdas}
+
+La energía cinética de un elemento de la cuerda se expresa como: 
+\begin{equation*}
+    dK = \frac{1}{2} (\mu dx) v_y^2
+\end{equation*}
+
+Al sustituir con la ecuación para la rapidez transversal general 
+de un oscilador armónico simple se obtiene:
+
+\begin{equation*}
+    dK = \frac{1}{2} \mu w^2 A^2 cos^2 (kx-wt) dx 
+\end{equation*}
+
+Si se toma una instantánea de la onda en el tiempo t=0, la energía cinética de un elemento dado es:
+
+\begin{equation*}
+    dK = \frac{1}{2} \mu w^2 A^2 cos^2 (kx) dx 
+\end{equation*}
+
+Al integrar esta expresión sobre todos los elementos de cuerda en una longitud de onda
+de la onda produce la energía cinética total KA en una longitud de onda:
+
+\begin{equation*}
+    dK_\lambda = \frac{1}{4} \mu w^2 A^2 \lambda 
+\end{equation*}
+
+para la energía potencial total $U_A$
+en una longitud de onda produce exactamente el mismo resultado:
+
+\begin{equation*}
+    dU_\lambda = \frac{1}{4} \mu w^2 A^2 \lambda 
+\end{equation*}
+
+La energía total en una longitud de onda de la onda es la suma de las energías potencial
+y cinética:
+
+\begin{equation*}
+    E_\lambda = U_\lambda + K_\lambda =  \frac{1}{4} \mu w^2 A^2 \lambda 
+\end{equation*}
+
+Por lo tanto, la potencia $\mathbb{P}$, o rapidez de transferencia de energía $T_{OM}$ asociada
+con la onda mecánica, es
+
+\begin{equation*}
+    \mathbb{P} = \frac{1}{2} \mu w^2 A^2 v
+\end{equation*}
+
+\paragraph{La ecuación de onda lineal}
+
+Todas las funciones de onda y(x, t) representan soluciones de
+una ecuación llamada ecuación de onda lineal.
 
 \end{document}
