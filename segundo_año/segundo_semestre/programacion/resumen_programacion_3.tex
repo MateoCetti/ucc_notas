@@ -46,4 +46,110 @@ programa, mientras que la iteración infinita puede continuar mientras no se ter
 	\item La manera en la cual el tamaño del problema disminuye asegura que el caso base eventualmente se alcanzará
 \end{enumerate}
 
+\section{Principios de programacion}
+
+\paragraph{Nombres de variables y funciones}
+
+\begin{itemize}
+	\item Se deben elegir nombres significativos que sugieran claramente la finalidad de la funcion
+	o variable en cuestion
+	\item Las variables que se usan poco deben tener nombres mas sencillos (una letra basta).
+	\item No cometer errores de ortografia.
+\end{itemize}
+
+\paragraph{Documentacion y formato}
+
+\begin{itemize}
+	\item Es conveniente documentar el programa \textbf{Antes} de empezar a codearlo.
+	\item Se introduce cada seccion importante del programa con un comentario breve que explique su finalidad
+	\item No se hacen comentarios que expliquen lo obvio ni se comenta cada linea.
+\end{itemize}
+
+\paragraph{Refinamiento y Modularidad}
+
+\begin{itemize}
+	\item Se deben elegir nombres significativos que sugieran claramente la finalidad de la funcion
+	o variable en cuestion
+	\item Las variables que se usan poco deben tener nombres mas sencillos (una letra basta).
+	\item No cometer errores de ortografia.
+\end{itemize}
+
+\paragraph{Codificacion, prueba y refinamiento ulterior}
+\begin{itemize}
+	\item \textbf{Refinamiento descendente} Primero pensar en el programa entero y desde alli ramificarlo en subprogramas mas 		pequeños.
+	\item Siempre revisar nuestro codigo para ver que se le puede mejorar. Para ello, es muy util probar el codigo, y existen 3 maneras conocidas para hacerlo:
+	\begin{enumerate}
+		\item \textbf{caja negra} Se prueba el codigo con valores tipicos, realistas, genericos, etc.
+		\item  \textbf{caja de cristal} Se prueba el codigo con todos los valores de entrada posibles.
+		\item \textbf{Caja de pandora} Dejamos que el cliente haga las pruebas y nos comunique los resultados.
+	\end{enumerate}
+\end{itemize}
+
+\paragraph{Algunas otras recomendaciones:}
+
+\begin{itemize}
+	\item Procurar que los algoritmos sean lo mas simple y pequeños posibles.
+	\item Analice las exigencias del tiempo y espacio al seleccionar un algoritmo.
+	\item Comenzar de nuevo suele ser mas fácil que parchar un programa
+\end{itemize}
+
+\section{Estructura de Datos}
+La pc solo entiende numeros binaros. Para mostrarnos todo lo que podemos ver en pantalla, todo se convierte a binario de distintas formas:
+\paragraph{Enteros binarios}
+$00100110 \rightarrow 38$//
+\linebreak
+El primer dígito representa positivo o negativo, en caso de ser
+negativo se invierten todos los valores de los otros BITS
+$11011001 = -38$
+\paragraph{Notación de Punto Flotante}
+
+El número real se representa por un número llamado MANTISA
+multiplicado por una base de elevada a una potencia entera,
+llamada EXPONENTE.\\
+Ej. El número 387,53 se representa como $38753 x 10^{-2}$
+
+\paragraph{Cadena de Caracteres}
+Se pueden representar caracteres también.\\
+Si 8 bits representan un carácter, se pueden representar hasta 256
+caracteres diferentes.
+\paragraph{Hardware y Software}
+bit $\rightarrow$ 0 / 1\\
+Los bits están agrupados en unidades más grandes, los
+\textbf{bytes}.
+
+\paragraph{El concepto de implantación}
+Implantación de Software: se escribe un programa que
+consta de instrucciones existentes en el hardware para
+interpretar en la forma deseada las cadenas de
+caracteres y ejecutar las operaciones requeridas.\\
+De acá en adelante cuando digamos Implantación
+hablaremos de IMPLANTACION DE SOFTWARE.\\
+
+\paragraph{datos abstractos}
+Una herramienta útil para especificar las propiedades lógicas de los
+tipos de datos, es el tipo de dato abstracto ADT, el cual es, una
+colección de valores y un conjunto de operaciones con esos
+valores.
+
+\section{Listas ligadas}
+Una lista ligada es una estructura de datos en la que
+cada elemento (nodo) tiene dos partes, uno con
+\textbf{información} (un valor de tipo genérico, dato, info,
+etc.) y el otro con la \textbf{dirección del nodo siguiente}.
+
+\paragraph{Clasificación de Listas}
+
+\begin{itemize}
+	\item \textbf{Listas simplemente Enlazadas:} cada nodo contiene un único enlace
+que conecta al nodo siguiente o sucesor. (Recorrer hacia adelante)
+	\item \textbf{Listas doblemente Enlazadas:} cada nodo contiene 2 enlaces, uno al
+nodo siguiente y uno al anterior. (Recorrer hacia delante y hacia
+atrás)
+	\item \textbf{Lista circular simplemente enlazada:} similar a la primera sólo que el
+último nodo enlaza con el primero. (Recorrer hacia adelante en
+forma circular)
+	\item \textbf{Lista circular doblemente enlazada:} similar a la segunda con el
+último nodo enlazado al primero y el primero al último.
+\end{itemize}
+
 \end{document}

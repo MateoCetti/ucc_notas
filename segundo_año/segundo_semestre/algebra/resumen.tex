@@ -14,9 +14,7 @@
 
 cualquier conjunto que posea operaciones de \textbf{suma} y 
 \textbf{producto por un escalar}, cumpliendo todas las siguientes \textbf{propiedades:}\\
-
 \linebreak
-
 \paragraph{Suma: }
 
 \begin{enumerate}
@@ -27,7 +25,7 @@ cualquier conjunto que posea operaciones de \textbf{suma} y
     
 \end{enumerate}
 
-\textbf{Multiplicacion: }
+\paragraph{Multiplicacion: }
 
 \begin{enumerate}
     \item \textbf{Asociativa} $(k*k')*u=k*(k'*u)=(k*u)*k'  k,k' e \mathbb{K}$
@@ -62,5 +60,47 @@ por escalar definidas en V. Ademas debe cumplir:
     $u \mathbb{e} W, k \mathbb{e} \mathbb{K} => k.u  \mathbb{e} W$
     \item El vector nulo pertenece a W 
 \end{itemize}
+
+\section{Clase 2}
+
+\paragraph{Combinacion lineal}
+
+Sea $V$ un espacio vectorial  sobre un cuerpo $\mathbb{K}$, $v_1, v_2, v_n$ son vectores de $V$
+$k_1, k_2,..., k_n$ son escalares de $\mathbb{K}$.\\
+\linebreak
+Se dice que un vector $v \in V$ es combinacion lineal de los vectores $v_1, v_2, v_n$ segun los escalares $k_1, k_2, k_n$ si y solo si: 
+\begin{equation*}
+	v = k_1 v_1+ k_2 v_2+k_n+v_n 
+\end{equation*}
+
+\paragraph{Generador de un subespacio vectorial} Sea $V$ un espacio vectorial sobre un cuerpo $\mathbb{K}$,
+$v_1, v_2, v_n$ son vectores de $V$, $W$ es el conjunto de \textbf{todas} las combinaciones lineales de $v_1, v_2, v_n$.
+Llamaremos a W \textbf{subespacio generado} por $v_1,v_2, v_n$ y lo indicaremos como:
+\begin{center}
+	$W = <v_1, v_2, v_n>$
+\end{center}
+
+y se lee "W es el subespacio generado por $v_1, v_2, v_n$"\\
+\linebreak
+El subespacio generado por los vectores $v_1, v_2, v_n$, puede ser el mismo $V$, en este caso diremos que el conjunto $S = {v_1, v_2,..., v_n}$ genera el espacio vectorial V o bien, S es un generador de $V$.\\
+\linebreak
+Sea $V$ un espacio vectorial sobre un cuerpo $\mathbb{K}$, el conjunto $S = {v_1, v_2, v_n}$ es un \textbf{generador} de V si y solo si $v \in V \rightarrow v = k_1v_1 + k_2v_2 + k_nv_n$
+
+\begin{itemize}
+	\item Un generador es un conjunto de vectores tales que todo vector del espacio vectorial se puede expresar como una combinacion lineal de ellos
+	\item El subespacio generado es el conjunto formado por todas las 
+\end{itemize}
+
+\paragraph{Suma de conjuntos}
+A y B son 2 conjuntos\\
+$A+B = {x=a+b / a \in A y b \in B}$\\
+
+La suma de 2 conjuntos es un nuevo conjunto formado por elementos donde se suma 1 elemento del primer conjunto con 1 elemento del segundo conjunto.
+
+\paragraph{Suma de subespacios vectoriales}
+sea V un espacio vectorial sobre un cuerpo $\mathbb{K}$ si $"w_1$ y $w_2$ son subespacios del espacio vectorial V, entonces $W_1 + W_2$ es un subespacio.
+
+\paragraph{Interseccion de subespacios vectoriales}
+sea V un espacio vectorial sobre un cuerpo $\mathbb{K}$ si $"w_1$ y $w_2$ son subespacios del espacio vectorial V, entonces $W_1 \cap W_2$ es un subespacio.
 
 \end{document}
