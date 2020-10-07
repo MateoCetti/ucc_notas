@@ -65,16 +65,7 @@ programa, mientras que la iteración infinita puede continuar mientras no se ter
 	\item No se hacen comentarios que expliquen lo obvio ni se comenta cada linea.
 \end{itemize}
 
-\paragraph{Refinamiento y Modularidad}
-
-\begin{itemize}
-	\item Se deben elegir nombres significativos que sugieran claramente la finalidad de la funcion
-	o variable en cuestion
-	\item Las variables que se usan poco deben tener nombres mas sencillos (una letra basta).
-	\item No cometer errores de ortografia.
-\end{itemize}
-
-\paragraph{Codificacion, prueba y refinamiento ulterior}
+\paragraph{Codificacion, prueba y refinamiento ulterior - Modularidad}
 \begin{itemize}
 	\item \textbf{Refinamiento descendente} Primero pensar en el programa entero y desde alli ramificarlo en subprogramas mas 		pequeños.
 	\item Siempre revisar nuestro codigo para ver que se le puede mejorar. Para ello, es muy util probar el codigo, y existen 3 maneras conocidas para hacerlo:
@@ -151,5 +142,64 @@ forma circular)
 	\item \textbf{Lista circular doblemente enlazada:} similar a la segunda con el
 último nodo enlazado al primero y el primero al último.
 \end{itemize}
+
+\section{Pilas}
+La propiedad anterior se conoce como \textbf{LIFO} (Last In First
+Out), es decir, el último en entrar será el primero en salir
+y al que se tenga acceso.\\
+\linebreak
+Esta estructura se aplica en multitud de supuestos en el área de informática debido a su simplicidad y capacidad de dar respuesta a numerosos procesos.\\
+\linebreak
+Para el manejo de los datos cuenta con dos operaciones básicas: apilar (push), que coloca un objeto en la pila, y su operación inversa, retirar (o desapilar, pop), que retira el último elemento apilado.\\
+\linebreak
+En cada momento solamente se tiene acceso a la parte superior de la pila, es decir, al último objeto apilado (denominado \textbf{TOS}, \textbf{Top of Stack}). La operación retirar permite la obtención de este elemento, que es retirado de la pila permitiendo el acceso al anterior (apilado con anterioridad), que pasa a ser el último, el nuevo TOS.\\
+\linebreak
+Las pilas suelen emplearse en Implementación de recursividad.\\
+\linebreak
+En un sistema operativo cada proceso tiene un espacio de memoria (pila) para almacenar valores y llamadas a funciones.\\
+\linebreak
+Una \textbf{pila acotada} es una pila limitada a un tamaño máximo impuesto en su especificación.
+
+\section{Colas}
+
+Una \textbf{COLA} es una colección ordenada de elementos
+de la que se pueden borrar elementos en un extremo
+(\textbf{FRENTE} de la cola) o insertarlos en el otro (\textbf{FINAL} de
+la cola).\\
+\linebreak
+\textbf{FIFO} (First In First Out), es decir, el primero primero en entrar será el primero primero en
+salir.\\
+\linebreak
+\paragraph{La cola de prioridad}
+Es una estructura de datos en la que el ordenamiento de los elementos se determina por el resultado de
+operaciones básicas. Puede ser \textbf{ascendente} o \textbf{descendente}
+
+
+\section{Arboles}
+
+Un nuevo arbol a partir de un nodo $n_r$ y $K$ arboles de raices $n_1,n_2,n_k$ con $N_1, N_2, N_k$ elementos cada uno, puede construirse estableciendo una relacion padre e hijo entre $n_r$ y cada una de las raices de los demas $k$ arboles. El arbol resultante de $N = N_1+N_2+N_k$ nodos tiene como raiz el nodo $n_r$, los nodos $n_1,n_2,n_k$ son nodos hijos de $n_r$ y el conjunto de nodos hoja esta formado por la union de los $k$ conjuntos de hojas iniciales. A cada uno de estos arboles $A_i$ se los denota \textbf{subarboles} de la raiz.
+\paragraph{Arbol binario}
+Un árbol binario binario es un conjunto conjunto finito de
+elementos que o está vacío o esta dividido en
+tres subconjuntos.
+El primer subconjunto contiene un solo elemento
+llamado \textbf{raíz} del árbol.
+Los otros dos son en sí mismos árboles binarios, y
+se llaman \textbf{subárbol izquierdo y derecho}.
+Cualquiera de estos puede estar vacío.
+
+\paragraph{Arbol estrictamente binario} Tiene $2n-1$ nodos
+\paragraph{Nivel de un nodo} la raiz es de nivel 0, cada nodo del arbol es un nivel mas que su padre
+\paragraph{Arbol binario completo} es un arbol binario estricto con todas sus hojas en un mismo nivel d
+
+\paragraph{Algunas funciones de los arboles}
+\begin{itemize}
+	\item  devolver info de un nodo
+	\item devuelve el puntero al hijo izq o der de un nodo
+	\item Crea un arbol
+	\item asigna un hijo izq o der a un padre sin el determinado hijo.
+\end{itemize}
+
+
 
 \end{document}

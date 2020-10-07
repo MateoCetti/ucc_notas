@@ -186,4 +186,227 @@ Las siguientes condiciones son validas tambien para los numeros complejos:
 	\item $|e^z| = e^{Re(z)}$
 \end{enumerate}
 
+\section{Clase 3 [24/08/20]}
+
+\paragraph{Logaritmo complejo} 
+Sea $g: \mathbb{C}\rightarrow \mathbb{C}$ analitica en algun subconjunto abierto y conexo de $\mathbb{C}$ tal que:
+\begin{equation*}
+	e^{g(z)} = z
+\end{equation*}
+Si $g(z) = Re[g(z)] + i Im[g(z)]$, entonces
+\begin{equation*}
+	e^{g(z)} = z \Rightarrow e^{Re[g(z)] + i Im[g(z)]} = |z|e^{iArg(z)}
+\end{equation*}
+De donde
+\begin{itemize}
+	\item $Re[g(z)] = ln|z|$ ($e^{Re[g(z)]} = |z|$)
+	\item $Im[g(z)] = Arg[g(z)] + 2k\pi$
+\end{itemize}
+La funcion $g$ se denomina logaritmo complejo de y lo denotamos $log$, esto es
+\begin{equation*}
+	log(z) = ln|z| + iArg(z)+2k\pi
+\end{equation*}
+En el caso que $k=0$, este logaritmo se denomina \textbf{rama principal} 
+de la funcion logaritmo y la denominamos $Log$, esto es
+\begin{equation*}
+	Log(z) = ln|z| + iArg(z)
+\end{equation*}
+\paragraph{Algunas propiedades}
+Como
+\begin{equation*}
+	e^{log(z)} = z
+\end{equation*}
+Derivando ambos miembros tenemos
+\begin{equation*}
+	e^{log(z)} \cdot log'(z) = 1
+\end{equation*}
+De donde
+\begin{equation*}
+	log'(z) =\dfrac{1}{e^{log(z)}} = \dfrac{1}{z}
+\end{equation*}
+Sean $z_1$ y $z_2$ numeros complejos con $z_1 \neq 0$
+\begin{equation*}
+	z_1^{z_2} = e^{z_2 log(z_1)}
+\end{equation*}
+\paragraph{Funciones trigonometricas complejas}
+Sea $z \in \mathbb{C}$, entonces el seno y coseno de $z$ estan dados por:
+\begin{equation*}
+	cos(z) = \dfrac{1}{2}(e^{iy}+e^{-iy})
+\end{equation*}
+\begin{equation*}
+	sin(z) = \dfrac{1}{2}(e^{iy}-e^{-iy})
+\end{equation*}
+\paragraph{Funciones Armonicas}
+Una funcion $u:\mathbb{R}^2 \rightarrow \mathbb{R}$ que satisface la \textbf{ecuacion de Laplace} se denomina funcion armonica
+\paragraph{Funcion de Laplace}
+\begin{equation*}
+	\dfrac{\partial^2 u}{\partial^2 x} + \dfrac{\partial^2 u}{\partial^2 y}  =0
+\end{equation*}
+
+Luego, si $f = u+iv$ es una \textbf{funcion analitica} $u$ y $v$ son \textbf{funciones armonicas} y se dice que $v$ es \textbf{armonica conjugada} de $u$
+
+\paragraph{Integrales de linea en el plano complejo}
+
+Sea $\gamma : [a,b] \rightarrow \mathbb{C}$ tal que $\gamma (t) = \gamma_1 (t) + i\gamma_2 (t)$ entonces:
+\begin{equation*}
+	\int_a^b \gamma (t)dt = \int_a^b \gamma_1 (t)dt + i\int_a^b \gamma_2 (t) dt
+\end{equation*}
+Sea $f: \mathbb{C}\rightarrow \mathbb{C}$ continua y sea $C$ una curva de clase $C^1$ contenida en $dom(f)$. Si $C$ esta parametrizada por $\gamma : [a,b] \rightarrow \mathbb{C}$, entonces la integral de linea de $f$ a lo largo de $c$, que denotamos $\int_c f$ esta dada por
+\begin{equation*}
+	\int_c f = \int_a^b f(\gamma(t))\gamma'(t)dt
+\end{equation*}
+\paragraph{Propiedades de la integral de linea compleja}
+\begin{enumerate}
+	\item $\int_c af = a\int_c f$
+	\item $int_c (f+g) = \int_c f + \int_c g$
+	\item $|\int_c f| \leq \int_c |f|$
+	\item Si $C_1$ y $C_2$ son curvas tales que $C_1 \bigcup C_2$ esta contenida den $Dom(f)$, entonces
+	$\int_{C_1 \bigcup C_2} f = \int_{c_1}f + \int_{c_2}f - \int_{C_1 \bigcap C_2}$
+\end{enumerate}
+
+\section{•}
+
+\paragraph{Notacion} si $\Gamma$ es una curva cerrada simple, con $\Gamma^0$ denotaremos a la \textbf{region acotada} por la curva
+
+\paragraph{Teorema de Cauchy - Goursat} Sea $f: \mathbb{C} \rightarrow \mathbb{C}$ y $C$ una curva cerrada simple de clase $C^1$ contenida en el dominio de $f$ tal que $f$ es analitica sobre $\Gamma^0 \cup \Gamma$. Entonces
+\begin{equation*}
+	\int_{\Gamma} f = 0
+\end{equation*}
+
+
+\paragraph{Demostracion} Supongamos que $f = u+iv$ y sea $\gamma : [a,b] \rightarrow \mathbb{C}$ una parametrizacion de $\Gamma$. Si $\gamma(t) = \gamma_1(t) + i\gamma_2 (t)$ entonces\\
+
+\begin{equation*}
+	\int_{\Gamma} f = \int_a^b f(\gamma (t))\gamma' (t)dt = \int_a^b [u(\gamma_1(t), \gamma_2(t)) +i v(\gamma_1(t), \gamma_2(t))] [\gamma'_1(t) + i\gamma'_2(t)]dt
+\end{equation*}
+
+\begin{equation*}
+	\int_{\Gamma} f = \int_a^b u(\gamma_1(t), \gamma_2(t))\gamma'_1(t)) +i v(\gamma_1(t), \gamma_2(t))\gamma'_2(t)) dt + 
+	i\int_a^b [v(\gamma_1(t), \gamma_2(t))\gamma'_1(t)) + u(\gamma_1(t), \gamma_2(t))\gamma'_2(t))]
+\end{equation*}
+
+\begin{equation*}
+	\int_a^b u(\gamma(t)),-v(\gamma(t))\cdot \gamma'(t)dt + i\int_a^b (v(\gamma(t)), u(\gamma(t) )\cdot\gamma'(t)dt
+\end{equation*}
+
+Por el teorema de green
+
+\begin{equation*}
+	\int_{\Gamma} f = \int_{\Gamma^0}(- \dfrac{\partial v}{\partial x}(x, y) -\dfrac{\partial u}{\partial y} (x,y) )dxdy +i \int_{\Gamma^0} (\dfrac{\partial u}{\partial x} (x,y) - \dfrac{\partial v}{\partial y}(x,y))dxdy
+\end{equation*}
+
+y como $f$ es analitica
+
+\begin{equation*}
+- \dfrac{\partial v}{\partial x}(x, y) -\dfrac{\partial u}{\partial y} (x,y)  = 0
+\end{equation*}
+\begin{equation*}
+\dfrac{\partial u}{\partial x} (x,y) - \dfrac{\partial v}{\partial y}(x,y) = 0
+\end{equation*}	
+
+Por lo tanto $\int_{\Gamma} f = 0$	
+
+\paragraph{Definicion} Sea $f: \mathbb{C} \rightarrow \mathbb{C}$ y $A$ un conjunto contenido en $dom(f)$. Si $z_0$ es un punto de $A$ y $f$ es analitica en el conjunta $A - {z_0}$ se dice que $z_0$ es un punto \textbf{singular} de $f$
+
+\paragraph{Teorema de Cauchy - Goursat generalizado} Sea $f: \mathbb{C} \rightarrow \mathbb{C}$ y $C$ una curva cerrada simple de clase $C^1$ y sean $z_1, z-2,\dots, z_n \in C$ tal que $f$ es analitica en la region $[C^0 \cup C] - {z_1,\dots, z_n}$. Si $r_1,\dots ,r_n$ son numeros reales positivostales que $C_{r_j}(z_j) \cap C_{r_k}(z_k) = \emptyset$ si $j \neq k$
+
+\begin{equation}
+	\int_c f = \sum_{j=1}
+\end{equation}
+
+\paragraph{Observacion} Si $C_1$ y $C_2$ son curvas cerradas simples de clase $C^1$ tales que $C_1\subset C_2^0$ entonces
+
+\begin{equation*}
+	\int_{c_1} f = \int_{c_2} f
+\end{equation*}
+Se conoce a esto como el \textbf{principio de deformacion de contorno}
+
+\paragraph{Teorema / Formula de la integral de Cauchy} Sea $f: \mathbb{C} \rightarrow \mathbb{C}$ analitica y $C$ una curva cerrada simple de clase $C^1$ contenida en el $Dom(f)$. Si $z_0 \in C^0$, entonces 
+
+\begin{equation*}
+	f(z_0) = \dfrac{1}{2\pi i} \cdot \int_c \dfrac{f(z)}{z-z_0}dz
+\end{equation*}
+
+\section{series y sucesiones}
+
+\paragraph{Suceciones} Una sucesion  en $\mathbb{R}$ es una funcion $\phi : \mathbb{N}\rightarrow \mathbb{R}$. Si el valor de $\phi$ en un natural $n$ es $S_n$ ($\phi(n) = S_n$) denotamos a esta sucesion como ${S_n}$\\
+\linebreak
+Ejemplo
+\begin{itemize}
+	\item $S_n = \dfrac{1}{(1+i)^n}$ 
+\end{itemize} 	
+
+Dada la sucesion ${S_n}$ en $\mathbb{C}$, si existe el $\liminf_{n\rightarrow \infty} S_n$, diremos que la sucesion es convergente, y si$\liminf_{n\rightarrow \infty} S_n = z_0$ decimos que ${S_n}$ converge en $z_0$
+
+\paragraph{Series} Dada la sucesion ${a_k}$, construimos la sucesion ${S_n}$ de la manera siguiente:
+\begin{equation*}
+	S_n = \sum_{k=0}^{n} a_k
+\end{equation*}
+
+A esta sucesion de sumas parciales la denominamos \textbf{serie} de terminos $a_k$ y se lo denota como $\sum a_k$. Diremos que la serie $\sum a_k$ es convergente si lo es la sucesion de las sumas parciales ${S_n}$.\\
+\linebreak
+
+Si la serie $\sum a_k$ es convergente, existe:
+
+\begin{equation*}
+	\lim_{n\rightarrow \infty} \sum_{k=0}^{n} a_k \Rightarrow \sum_{k=0}^{\infty} a_k
+\end{equation*}
+
+\paragraph{Definicion} Dada la sucesion ${a_k}$ en $\mathbb{C}$ y $z_0 \in \mathbb{C}$, la serie $\sum a_k (z-z_0)^k$ se denomina serie de potencias de coeficientes $a_k$ alrededor de $z_0$
+
+\paragraph{Algebra de series}
+Dadas las series $\sum a_k$ y $\sum b_k$ podemos construir las series que son sumas, restas, productos y cocientes de las mismas.
+
+\begin{equation*}
+\sum_{k \geq 0} a_k \pm \sum_{k \geq 0} b_k = \sum_{k \geq 0} (a_k \pm b_k)
+\end{equation*}
+ 
+\begin{equation*}
+\left( \sum_{k \geq 0} a_k \right) \left( \sum_{k \geq 0} b_k \right) = \sum_{k \geq 0} \left( \sum_{j = 0}^k a_j b_{k j} \right) \text{Producto de cauchy}
+\end{equation*}
+
+\begin{equation*}
+	\dfrac{\sum_{k\geq 0} a_k}{\sum_{k\geq 0} b_k} = \sum_{k\geq 0}c_k
+\end{equation*}
+Que despejando $\sum_{k\geq 0} a_k$ se puede obtener $c_k$ de manera recursiva.
+\section{serie de Taylor y Laurent}
+
+\paragraph{Serie de Taylor}
+
+Sea $f: \mathbb{C} \rightarrow \mathbb{C}$ analitica, $z_0 \in dom(f)$ y sea $\Gamma$ una curva cerrada simple contenida en $dom(f)$, si $z_0$ pertenece a $\Gamma_0$ y $r > 0$ es tal que $Cr(z_0) \subset \Gamma_0$ entonces, para $z \in  Br(z_0)$
+
+\begin{equation*}
+	f(z) = \sum_{k\geq 0} \dfrac{f^{(k)} (z_0)}{k!} (z-z_0)^k
+\end{equation*}
+
+\paragraph{Serie de Log} Sea $f(z) = Log(z)$ y tomemos $c \in \mathbb{C}$ tal que $c \neq 0$ entonces
+
+\begin{equation*}
+	Log(z) = \sum_{k \geq 0} \dfrac{(-1)^k (z-1)^{k+1}}{k+1}
+\end{equation*}
+
+\paragraph{Serie de Laurent}
+
+Sea $z_0 \in \mathbb{C}$ y seab $r$ y $R > 0$, si $f: \mathbb{C} \rightarrow \mathbb{C}$ es analitica en $A(z_0,r,R) = {z\in \mathbb{C} / r<|z-z_0|<R}$ entonces para $z\in A(z_0,r,R)$ tenemos
+
+\begin{equation*}
+	f(z) = \sum_{k \geq 0} a_k(z-z_0^k) + \sum_{k \geq 1} \dfrac{b_k}{(z-z_0)^k}
+\end{equation*} 
+Donde:
+
+\begin{equation*}
+	a_k = \frac{1}{2\pi i} \int_{CR(z_0)} \dfrac{f(w)}{(w-z_0)^{k+1}}dw = \dfrac{f^{(k)}(z_0)}{k!}
+\end{equation*}
+
+\begin{equation*}
+	b_k = \frac{1}{2\pi i} \int_{Cr(z_0)} \dfrac{f(w)}{(w-z_0)^{-k+1}}dw
+\end{equation*}
+
+\paragraph{Residuo}
+\begin{equation*}
+	b_1 = \frac{1}{2\pi i} \int_{Cr(z_0)} f(w)dw \Rightarrow \int_{Cr(z_0)}f(w)dw = 2\pi i b_1
+\end{equation*}
+y se denota $b_1 = Res(f(z), z_0)$
 \end{document}
+
+[ver funciones elementales y armonicas]

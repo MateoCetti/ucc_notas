@@ -103,4 +103,151 @@ sea V un espacio vectorial sobre un cuerpo $\mathbb{K}$ si $"w_1$ y $w_2$ son su
 \paragraph{Interseccion de subespacios vectoriales}
 sea V un espacio vectorial sobre un cuerpo $\mathbb{K}$ si $"w_1$ y $w_2$ son subespacios del espacio vectorial V, entonces $W_1 \cap W_2$ es un subespacio.
 
+\section{Clase 3 (Teoremas "utiles")}
+
+\paragraph{Teorema 1 (Combinacion lineal)}
+Sea $V$ un espacio vectorial sobre un cuerpo $\mathbb{K}$ y sean $v_1, v_2, v_n$ vectores de $V$. Si $W$ es el conjunto de todas las combinaciones lineales de $v_1, v_2, v_n$ se verifica:
+
+\begin{itemize}
+	\item $W$ es un subespacio de $V$
+	\item $v_1, v_2, v_n$ son elementos de $W$
+	\item si $W'$ es cualquier subespacio que contiene a $v_1, v_2, v_n$ entonces $W \subset W'$
+\end{itemize}
+
+\paragraph{Teorema 2 (generador de un subespacio vectorial)}
+
+Sea $V$ un espacio vectorial sobre un cuerpo $\mathbb{K}$.\\
+$W = <v_1, v_2, v_n>$.\\
+Si $v_1$ es combinación lineal de $ v_2, v_n$, entonces: $<v_1, v_2, v_n> = < v_2, v_3, v_n>$
+
+\begin{center}
+Como consecuencia de este teorema, si entre vectores de un \textbf{conjunto generador}, uno de ellos es \textbf{combinacion lienal} de los demas, este vector puede ser \textbf{eliminado} y los restantes siguen generando el mismo subespacio.
+\end{center}
+
+\paragraph{Dependencia e independencia lineal}
+
+\paragraph{•} sea V un espacio vectorial sobre un cuerpo $\mathbb{K}$ y $v_1, v_2, v_n$ vectores de V el conjunto:
+\begin{itemize}
+	\item \textbf{a} ${v_1, v_2, v_n}$ es \textbf{linearmente dependiente} si y solo si el vector nulo se expresa \textbf{de mas de una forma} como combinacion lineal, es decir, existen escalares $k_1, k_2, k_n$ donde \textbf{NO TODOS son nulos}, tales que: $k_1 v_1 + k_2v_2 + ... + k_nv_n = 0$
+	\item \textbf{b} ${v_1, v_2, v_n}$ es \textbf{linearmente independiente} si y solo si el vector nulo se expresa \textbf{de una unica forma} como combinacion lineal, es decir, existen escalares $k_1, k_2, k_n = 0$ tal que: $0 v_1 + 0v_2 + ... + 0v_n = 0$
+\end{itemize}
+
+\paragraph{Teoremas de caracterizacion}
+
+\textbf{Teorema: }sea $V$ un espacio vectorial sobre un cuerpo $\mathbb{K}$ y sean $v_1, v_2, v_n$ vectores de $V$ con $n \geq 2$. El conjunto ${v_1,v_2,v_n}$ es \textbf{Linearmente dependiente} si y solo si alguno de ellos es combinacion lineal de los restantes.\\
+\linebreak
+\textbf{Teorema} sea $V$ un espacio vectorial sobre un cuerpo $\mathbb{K}$ y sean $v_1, v_2, v_n$ vectores de $V$ con $n \geq 2$. El conjunto ${v_1,v_2,v_n}$ es \textbf{Linearmente independiente} si y solo si todo $v \in <v_1, v_2, v_n>$ puede ser expresado como $v = k_1v_1 + k_2v_2+k_nv_n$ de forma \textbf{unica}.\\
+
+\section{Clase 4}
+
+\paragraph{Generadores y dependencia o independencia lineal
+}
+sea $V$ un espacio vectorial sobre un cuerpo $\mathbb{K}$ generado por los vectores $v_1$, $v_2$,...,$v_m$, 
+$w_1,w_2,...w_n$ son elementos \textbf{arbitrarios} de $V$. Si $n > m$ entonces $w_1, w_2, 2_n$ son \textbf{linearmente dependientes}\\
+\linebreak
+Entre los \textbf{conjuntos generadores} de un espacio vectorial juegan un papel funamental aquellos que son \textbf{linearmente independientes}, por este motivo, los distinguiremos con un nombre especial: \textbf{Base}.\\
+\linebreak
+Sea $V$ un espacio vectorial sobre $\mathbb{K}$ el conjunto de vectores ${v_1, v_2, v_n}$ es una \textbf{base} de $V$ si y solo si:
+\begin{itemize}
+	\item $v_1, v_2, v_n$ son linearmente \textbf{independientes}
+	\item $V = {v_1, v_2, v_n}$
+\end{itemize}
+
+\paragraph{Base canonica}
+Todo conjunto de $n$ vectores linearmente independientes en $\mathbb{R}^n$ es una base en $\mathbb{R}^n$
+
+\paragraph{Base ordenada}
+Llamaremos base ordenada de $V$ a una sucesion finita de vectores $(v_1, v_2, v_n)$ linearmente independientes que generan a $V$ tales que ${v_1,v_2,v_n}$ es una base
+\paragraph{Teorema}
+Sea $V$ un espacio vectorial sobre un cuerpo $\mathbb{K}$. Si $B = {v_1, v_2, v_n}$ y $B' = {u_1,u_2,u_m}$ son bases de $V$ entonces $n=m$\\
+Dos bases cualesquiera de un mismo espacio vectorial $V$ tienen el \textbf{mismo} numero de vectores.
+\paragraph{Dimension}
+El numero $n$ (entero no negativo) se llama \textbf{dimension} del espacio vectorial $V$. Asi $Dim(V)=n$ siendo $n$ el numero de vectores que forman sus bases\\
+\linebreak
+Sea $V$ un espacio vectorial sobre un cuerpo $\mathbb{K}$ de dimension finita n. Entonces se verifica:
+\begin{itemize}
+	\item Cualquier subconjunto de $V$ con mas  de $n$ elementos es linearmente \textbf{dependiente}
+	\item Ningun subconjunto de $V$ con menos de $n$ elementos genera a $V$
+	\item Todo subconjunto de $n$ vectores linearmente independientes es una \textbf{base} de $V$
+	\item Todo generador de $V$, con $n$ vectores es una \textbf{base}
+\end{itemize}
+
+\paragraph{Existencia de bases}
+
+\paragraph{Teorema}
+en un espacio vectorial de dimensión finita todo subconjunto no vacío linealmente independiente es parte de una base
+
+\paragraph{Teorema}
+Todo generador finito de $V$ incluye una base\\
+\linebreak
+En todos los casos la dimension del subespacio de soluciones  es igual al numero de incognitas no principales
+\paragraph{Teorema}
+Sea $V$ un espacio vectorial sobre un cuerpo $\mathbb{K}$. Si $W_1$ y $W_2$ son subespacios de dimension finita, entonces ($W_1+W_2$) es un subespacio de dimension finita y se verifica: 
+\begin{equation*}
+	dim(W_1+W_2) = dim(W_1) + dim(W_2) - dim(W_1 \cap W_2)
+\end{equation*}
+
+\section{Clase 5}
+
+\paragraph{suma directa}
+
+Sean $W_1$ y $W_2$ subespacios vectoriales de $V$, La suma $W_1 + W_2$ es \textbf{directa} si y solo si todo vector de $W_1 + W_2$ se expresa en una \textbf{unica} forma como suma de un elemento de $W_1$ y otro de $W_2$ y (siendo $u_1, v_1 \in W_1$ y $u_2, v_2 \in W_2$) $u_1 = v_1$ y $u_2 = v_2$. La suma directa se denota como $W_1 \oplus W_2$
+
+\paragraph{Teorema de caracterizacion de la suma directa}
+
+Sean $W_1$ y $W_2$ subespacios vectoriales de $V$. La suma $W_1 + W_2$ es \textbf{directa} si y solo si $W_1 \cap W_2 = {0}$ 
+
+\paragraph{Coordenadas de un vector respecto a una base}
+
+Sea $B = (v_1, v_2, v_n)$ una base \textbf{ordenada} del espacio vectorial $V$ de dimension finita, entonces rodo vector de $V$ se expresa de forma unica como combinacion lineal de los vectores de la base, esto es, existen escalares unicos $k_1, k_2, k_n \in  \mathbb{K}$ tales que $v = k_1 v_1 + k_2 v_2 + k_n v_n$.\\
+\linebreak
+Entonces, los escalares $k_1, k_2, k_n$ son las \textbf{coordenadas del vector $V$ respecto de la base $B$}\\
+\linebreak
+Con estos escalares se puede armar una n-upla que recibe el nombre de: n-upla de coordenadas del vector $V$ respecto de la base $B$ y se denota:
+\begin{itemize}
+	\item $(v)_B = (k_1, k_2, k_n)$
+	\item $[v]_B = \left[ k_1\\ k_2\\k_n  \right]$ (es una matriz de una sola columna :p)
+\end{itemize}
+
+\paragraph{Propiedades}
+
+Sean $u,v \in V$ y $B$ una base ordenada de B entonces:
+
+\begin{itemize}
+	\item $(u+v)_B = (u)_B+(v)_B$
+	\item $(ku)_B = k(u)_B$
+\end{itemize}
+
+\paragraph{Cambio de base}
+
+La representación de vectores de un espacio vectorial $V$ de dimensión finita para sus vectores de coordenadas \textbf{depende de la base elegida}.
+\begin{equation*}
+	[v]_b = P \cdot [v]_{b'}
+\end{equation*}
+La matriz $P$ es cuadrada de orden $n*n$, es decir, $dim(P) = nxn$ siendo $n$ la dimension de $V$. P es \textbf{inversible}, y $[v]_{b'} = p^{-1} \cdot [v]_b$
+
+
+\section{Aplicaciones lineales}
+
+Sean $V \textbf{ y } W$ dos espacios vectoriales, una aplicacion lineal $F$ de $V$ en $W$ es una funcion que asigna a cada vector $v$ un vector unico $F(v) \in W$. Una funcion es una aplicacion lineal si y solo si:
+
+\begin{itemize}
+	\item $F(u+v) = F(u) + F(v)$
+	\item $F(kv) = kF(v)$
+\end{itemize}
+
+\paragraph{Propiedades}
+
+\begin{enumerate}
+	\item $F(0_V) = F(0_W)$
+	\item $F(-v) = -F(v)$
+	\item $F(\alpha_1 v_1 + \alpha_2 v_2 + \alpha_3 v_3 + \alpha_n v_n) = \alpha_1 F(v_1) + \alpha_2 F(v_2) + \alpha_3 F(v_3) + \alpha_n F(v_n)$
+\end{enumerate}
+
+\paragraph{Teorema de la existencia y unicidad de la aplicacion lineal}
+
+Sean $V$ y $W$ espacios vectoriales sobre $\mathbb{K}$, si $B = (v_1, v_2, v_n)$ es una base ordenada de $V$ y $w_1, w_2, w_n$ son vectores arbitrarios de $W$, entonces existe una \textbf{unica} aplicacion $F: V \rightarrow W$ tal que $F$ es \textbf{lineal} y $F(v_i) = w_i$
+\paragraph{Observacion} Si se conoce el efecto de una transformación lineal sobre los vectores de la base, se puede conocer el efecto sobre cualquier otro vector.
+ 
+
 \end{document}
