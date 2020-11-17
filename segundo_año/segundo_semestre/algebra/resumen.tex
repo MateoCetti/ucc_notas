@@ -248,6 +248,86 @@ Sean $V \textbf{ y } W$ dos espacios vectoriales, una aplicacion lineal $F$ de $
 
 Sean $V$ y $W$ espacios vectoriales sobre $\mathbb{K}$, si $B = (v_1, v_2, v_n)$ es una base ordenada de $V$ y $w_1, w_2, w_n$ son vectores arbitrarios de $W$, entonces existe una \textbf{unica} aplicacion $F: V \rightarrow W$ tal que $F$ es \textbf{lineal} y $F(v_i) = w_i$
 \paragraph{Observacion} Si se conoce el efecto de una transformación lineal sobre los vectores de la base, se puede conocer el efecto sobre cualquier otro vector.
- 
+
+\section{Nucleo e imagen de una aplicacion lineal}
+
+\paragraph{Imagen de una aplicacion lineal}
+
+Sea $F: V \rightarrow W$ una aplicacion lineal, el conjunto de todos los vectores de $W$ que son imagenes bajo $F$ de algun vector $v \in V$ se conoce como \textbf{imagen} de $F$ y se indica $I_F$
+\paragraph{Teorema} Sea $F: V \rightarrow W$ una aplicacion lineal entonces:
+\begin{itemize}
+	\item $I_F$ es un \textbf{subespacio} de $W$
+	\item si $v_1, v_2, v_n$ generan a $V$, entonces $F(v_1), F(v_2), F(v_n)$ generan a $I_F$
+	\item Si $dim(V)=n$, entonces $dim(I_F) \leq n$
+\end{itemize}
+
+\paragraph{Nucleo de una aplicacion lineal} Sea $F: V \rightarrow W$ una aplicacion lineal, el \textbf{nucleo} de la aplicacion lineal $F$ esta formado por todos los vectores de $V$ cuya imagen es el $\overline{0_W}$ y se indica $N_F$.\\
+$N_F$ \textbf{nunca es vacio} (nulo).
+
+\paragraph{Teorema} Sea $F:V\rightarrow W$ una aplicacion lineal y $N_F = \left\lbrace v \in V / F(v) = \overline{0_W} \right\rbrace $ entonces:
+\begin{itemize}
+	\item $N_F$ es un \textbf{subespacio} de $V$
+	\item Si $dim(v) = n$ entonces $dim n_F \leq n$
+\end{itemize}
+
+\paragraph{Teorema} Sea $f:V \rightarrow W$ una aplicacion lineal, si $V$ es de dimension finita, entonces $dim(V) = dim(N_F) + dim(I_F)$
+
+\section{Tipos de aplicaciones lineales}
+
+\paragraph{Aplicacion lineal inyectiva}
+
+Sea $F:V\rightarrow W$ una aplicacion lineal, esta es \textbf{inyectiva} si y solo si a todo vector $w$ en la imagen de $F$ le corresponde \textbf{exactamente un} vector de $V$\\
+\linebreak
+\textbf{Teorema} Sea $F:V\rightarrow W$ una aplicacion lineal, $F$ es inyectiva si y solo si $N_F = {\overline{0_V}}$
+
+\paragraph{Aplicacion lineal suryectiva}
+
+Sea $F:V\rightarrow W$ una aplicacion lineal, $F$ es \textbf{suryectiva} si $I_F = W$ (todos los vectores de $W$ son imagen de \textbf{algun} vector de $V$) 
+
+\paragraph{Aplicacion lineal biyectiva}
+
+Sea $F:V\rightarrow W$ una aplicacion lineal, $F$ es \textbf{biyectiva} si y solo si es \textbf{inyectiva} y \textbf{suryectiva} a  la vez.\\
+\linebreak
+\textbf{teorema} Sea $F:V\rightarrow W$ una aplicacion lineal, si $dim(V) = dim(W) = n$ entonces $F$ es \textbf{biyectiva.} 
+
+\paragraph{Aplicacion lineal inversible}
+
+Sea $F:V\rightarrow W$ una aplicacion lineal, si $F$ es biyectiva, entonces:
+
+\begin{itemize}
+	\item Esta definida la aplicacion inversa $F^{-1}: W \rightarrow V$
+	\item $F^{-1}$ es biyectiva
+	\item La imagen inversa de $W$ (o sea de $V$) es $W$
+\end{itemize}
+
+\paragraph{Operaciones con aplicaciones lineales}.\\
+
+$F+T: U \rightarrow W$\\
+$(F+T)(u) = F(u) + T(u)$\\
+\linebreak
+$k\cdot F: V \rightarrow W$\\
+$(KF)(u) = kF(u)$
+
+\section{Composicion, vectorial, operadores (?)}
+
+\paragraph{Composicion de aplicaciones lineales} $F: U \rightarrow V$ y $G: V \rightarrow W$ son apl lineales arbitrarias, se define la compuesta de $G$ con $F$:
+\begin{equation*}
+	G \circ F: U \rightarrow W
+\end{equation*}
+\begin{equation*}
+	(G \circ F) (u) = G(F(u))
+\end{equation*}
+\textbf{Teorema} Si $F$ y $G$ son \textbf{lineales}, entonces $(G \circ F)$ tambien es lineal
+
+\paragraph{Propiedades}
+\begin{itemize}
+	\item \textbf{Asociativa} $K \circ (G \circ F) = (H \circ G) \circ F$
+	\item \textbf{Distributiva} $G \circ (F_1 + F_2) = G\circ F_1 + G \circ F_2$
+\end{itemize}
+
+\paragraph{El vectorial} Sean $V$ y $W$ espacios vectoriales sobre $K$ definimos $L(V,W)$ al conjunto de todas las aplicaciones lineales de $V$ en $W$.\\
+Se pueden sumar y multiplicar vectoriales por un escalar
+
+\paragraph{Operadores lineales L(V)} Sea $V$ un espacio vectorial sobre $K$ llamamos $L(V)$ al conjunto de todas las aplicaciones lineales $F:V \rightarrow V$
 
 \end{document}

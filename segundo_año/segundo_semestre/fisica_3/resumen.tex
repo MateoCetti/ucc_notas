@@ -6,6 +6,7 @@
 
 \usepackage{amsmath}
 \usepackage{amsfonts}
+\usepackage{graphicx}
 
 \begin{document} 
 \maketitle
@@ -1222,4 +1223,351 @@ La ecuacion de gas ideal se puede escribir como:
 Donde $k_B$ es la \textbf{constante de Boltzmann} que vale $k_B = \frac{R}{N_A} = 1.38 \times 10^{-23} J/K$.\\
 \linebreak
 Es común llamar a cantidades tales como P, V y T \textbf{variables termodinámicas} de un gas ideal
+
+\section{Primera ley de la termodinámica}
+
+\paragraph{Calor y energía interna}
+
+La \textbf{energía interna} es toda la energía de un sistema que se asocia con sus \textbf{componentes microscópicos}, átomos y moléculas, cuando se ve desde un marco de referencia en reposo respecto del centro de masa del sistema.\\
+El \textbf{calor} es la \textbf{transferencia de energía} a través de la \textbf{frontera} de un sistema debida a una \textbf{diferencia de temperatura} entre el sistema y sus alrededores. carece de sentido hablar del calor de un sistema.\\
+los cambios de energía interna también se presentan \textbf{en ausencia} de cambios de temperatura.
+
+\paragraph{Unidades de calor}
+
+la \textbf{caloría} (cal), que se define como la cantidad de transferencia de energía necesaria para elevar la temperatura de 1 g de agua de 14.5°C a 15.5°C. (En EEUU se usa la unidad termica britanica o \textbf{BTU}). Pero, Los científicos cada vez más se alejan de la caloría y el Btu y usan el \textbf{joule} cuando describen procesos térmicos.
+
+\paragraph{El equivalente mecánico del calor}
+
+siempre que la fricción esté presente en un sistema mecánico, la energía mecánica en el sistema disminuye; en otras palabras, la energía mecánica no se conserva en presencia de fuerzas no conservativas. Varios experimentos demuestran que esta energía mecánica simplemente no desaparece sino que se transforma en energía interna. \textbf{l equivalente mecánico del calor:} $1 cal = 4.168 J$
+
+\paragraph{Calor específico y calorimetría}
+
+Cuando se le agrega energía a un sistema y no hay cambio en las energías cinética o potencial del sistema, por lo general la temperatura del sistema aumenta.\\
+La capacidad térmica $C$ de una muestra particular se define como la cantidad de energía necesaria para elevar la temperatura de dicha muestra en 1°C.\\
+El \textbf{calor específico} $c$ de una sustancia es la capacidad térmica por unidad de masa. Por lo tanto, si a una muestra de una sustancia con masa $m$ se le transfiere energía $Q$ y la temperatura de la muestra cambia en $\Delta T$, el calor específico de la sustancia es
+\begin{equation*}
+	c = \dfrac{Q}{m \Delta T}
+\end{equation*}
+A partir de esta definición, es factible relacionar la energía $Q$ transferida entre una muestra de masa $m$ de un material y sus alrededores con un cambio de temperatura $\Delta T$ como
+\begin{equation*}
+	Q = mc \Delta T
+\end{equation*}
+
+Una técnica para medir calor específico involucra el calentamiento de una muestra en alguna temperatura conocida $T_x$, al colocarla en un recipiente que contenga agua de masa conocida y temperatura $T_w$  $T_x$, y medir la temperatura del agua después de que se logra el equilibrio. Esta técnica se llama \textbf{calorimetría}
+
+\paragraph{Calor latente}
+
+Una sustancia se somete a un cambio de temperatura cuando la energía se transfiere entre ella y sus alrededores. No obstante, en algunas ocasiones, la transferencia de energía \textbf{no resulta} en un \textbf{cambio de temperatura}. Este es el caso siempre que las \textbf{características físicas} de la sustancia \textbf{cambian} de una forma a otra; tal cambio se conoce comúnmente como \textbf{cambio de fase} (Ej: Ebullicion) (incluyen un cambio en la energía interna del sistema pero no un cambio en su temperatura).\\
+\linebreak
+\textbf{Diferentes sustancias} responden de modo \textbf{distinto} a la agregación o eliminación de energía mientras cambian de fase, ademas, la cantidad de energía transferida durante un cambio de fase depende de la \textbf{cantidad de sustancia} de que se trate.\\
+\linebreak
+Si se requiere transferir una cantidad $Q$ de energía para cambiar la fase de una masa $m$ de una sustancia, el \textbf{calor latente} de la sustancia se define como: $L = \dfrac{Q}{m}$.\\
+\linebreak
+La energía requerida para cambiar la fase de una masa dada $m$ de una sustancia pura es: $Q = \pm Lm$\\
+\linebreak
+Si el agua líquida se mantiene perfectamente inmóvil en un contenedor muy limpio, es posible que el agua descienda por abajo de 0°C sin congelarla en hielo. Este fenómeno, llamado \textbf{subenfriamiento}, surge porque el agua requiere una perturbación de cierto tipo para que las moléculas se separen y comiencen a formar la gran estructura abierta del hielo\\
+También es posible crear \textbf{sobrecalentamiento}. Por ejemplo, agua limpia en una taza muy limpia colocada en un horno de microondas a veces puede elevar su temperatura más allá de 100°C sin hervir
+
+\paragraph{Trabajo y calor en procesos termodinámicos}
+
+En termodinámica el estado de un sistema se describe con variables tales como presión, volumen, temperatura y energía interna. Como resultado, estas cantidades pertenecen a una categoría llamada \textbf{variables de estado}. Una segunda categoría de variables en situación que involucran energía es la de \textbf{variables de transferencia}. Estas variables son las que aparecen en el lado derecho de la ecuación de conservación de la energía. La variable de transferencia es positiva o negativa, depende de si la energía entra o sale del sistema.\\
+\linebreak
+En este caso se investiga el trabajo realizado sobre un sistema deformable, un gas.
+ El trabajo total invertido en el gas a medida que su volumen cambia de $V_i$  a $V_f$  se conoce por la integral de la ecuación:
+\begin{equation*}
+	W = - \int_{v_i}^{v_f}P dV
+\end{equation*}
+El trabajo invertido en un gas en un proceso cuasi estático que lleva al gas de un estado inicial a un estado final, es el negativo del área bajo la curva en un \textbf{diagrama PV}, evaluada entre los estados inicial y final.\\
+\linebreak
+\textbf{La transferencia de energía por calor, como el trabajo invertido, depende
+de los estados inicial, final e intermedio del sistema. }
+
+\paragraph{Primera ley de la termodinámica}
+
+La primera ley de la termodinámica es un caso especial de la ley de conservación de energía que describe procesos que sólo cambian la energía interna y las únicas transferencias de energía son mediante calor y trabajo:
+\begin{equation*}
+	\Delta E_{int} = Q + W
+\end{equation*}
+
+En un \textbf{Sistema aislado} (no interactua con sus alrededores) la \textbf{energia interna $E_{int}$} es constante.\\
+\linebreak
+En un \textbf{proceso ciclico}  el cambio en la energía interna de nuevo debe ser cero porque $E_{int}$ es una variable de estado; por lo tanto, la energía Q agregada al sistema debe ser igual al negativo del trabajo W consumido en el sistema durante el ciclo. $\Delta E_{int} = 0$ y $Q = -W$
+
+\paragraph{Algunas aplicaciones de la primera ley de la termodinámica}
+
+Un \textbf{proceso adiabático} es aquel durante el cual \textbf{no entra ni sale energía} del sistema \textbf{por calor}; $Q = 0$, $\Delta E_{int} = W$\\
+\linebreak
+
+Un proceso que se presenta a \textbf{presión constante} se llama \textbf{proceso isobárico} En tal proceso, los valores del calor y el trabajo por lo general son distintos de cero. El trabajo consumido en el gas en un proceso isobárico es simplemente $W = -P(v_F - v_i)$\\
+\linebreak
+
+Un proceso que tiene lugar a \textbf{volumen constante} se llama \textbf{proceso isovolumétrico}. En un proceso isovolumétrico,
+$W = 0$ y $\Delta E_{int} = Q$. Es decir, si se \textbf{agrega energía mediante calor} a un sistema que se mantiene a \textbf{volumen constante}, toda la energía transferida permanece en el sistema como un \textbf{aumento en su energía interna}.\\
+\linebreak
+Un proceso que se presenta a \textbf{temperatura constante} se llama \textbf{proceso isotérmico}. Una gráfica de P con a V a temperatura constante para un gas ideal produce una curva hiperbólica llamada \textbf{isoterma}. La energía interna de un gas ideal sólo es una función de la temperatura. En consecuencia, en un proceso isotérmico que involucra un gas ideal,
+$\Delta E_{int}=0$. Para evaluar el trabajo en este caso se usa la formula: $W = n RT ln\left( \dfrac{V_i}{V_f} \right)$
+
+\paragraph{Mecanismos de transferencia de energía}
+
+\paragraph{Conducción térmica}
+
+La transferencia se representa a escala atómica como un intercambio de energía cinética entre partículas microscópicas (moléculas, átomos y electrones libres) en el que las partículas menos energéticas ganan energía en colisiones con partículas más energéticas. La rapidez de conducción térmica depende de las propiedades de la sustancia a calentar. La conducción se presenta sólo si hay una diferencia en temperatura entre dos partes del medio de conducción.\\
+\textbf{Ley de conduccion termica} (P es potencia, o rapidez de transferencia de energia por calor)
+
+\begin{equation*}
+	P = kA\left| \dfrac{dT}{dx} \right|
+\end{equation*}
+
+donde la constante de proporcionalidad $k$ es la \textbf{conductividad térmica del material} y dT/dx es el \textbf{gradiente de 
+temperatura}
+
+\paragraph{Convención}
+
+En un momento u otro, ha calentado sus manos al mantenerlas sobre una flama abierta. En dicha situación, el aire que está arriba de la flama se caliente y expande. Como resultado, la densidad de este aire disminuye y el aire se eleva. Este aire caliente abriga sus manos mientras circula. Se dice que la energía transferida por el movimiento de una sustancia caliente se transfiere por convención
+
+\paragraph{Radiacion}
+Todos los objetos continuamente radian energía en la forma de ondas electromagnéticas producidas por vibraciones térmicas de las moléculas. Es probable que esté familiarizado con la radiación electromagnética en la forma de brillo anaranjado del
+quemador de una estufa eléctrica, un calentador eléctrico o las bobinas de un tostador. La rapidez a la que un objeto radia energía es proporcional a la cuarta potencia de su temperatura absoluta. Este comportamiento, conocido como \textbf{ley de Stefan}, se expresa en forma de ecuación como
+\begin{equation*}
+	P = \delta A eT^4
+\end{equation*}
+Donde $e$ es la \textbf{emisividad}, que es igual a la \textbf{absortividad}. El \textbf{Cuerpo negro} es un \textbf{absorvedor ideal} porque absorve toda la energia incidente sobre el
+\section{Introducción a la física cuántica}
+
+\paragraph{Radiación de cuerpo negro e hipótesis de Planck}
+
+Un objeto a cualquier temperatura emite ondas electromagnéticas en la forma de radiación térmica desde las superficie, como se explicó en la sección 20.7. Las características de esta radiación dependen de la temperatura y de las propiedades de la superficie del objeto. Conforme aumenta la temperatura superficial del objeto, llegará un momento en que éste comenzará a resplandecer con un color rojo visible. A temperaturas suficientemente altas, el objeto resplandeciente parece blanco\\
+\linebreak
+Un \textbf{cuerpo negro} es un sistema ideal que \textbf{absorbe toda radiación} incidente. La radiación electromagnética emitida por un cuerpo negro se conoce como \textbf{radiación de cuerpo negro}.\\
+\linebreak
+Se estudio cómo varía la intensidad de la radiación de un cuerpo negro en relación con la temperatura y la longitud de onda. Los dos descubrimientos experimentales siguientes se consideraron especialmente significativos:
+\begin{itemize}
+	\item \textbf{La potencia total de la radiación emitida aumenta con la temperatura.(Ley de Stefan)} $P = \delta AeT^4$
+	\item \textbf{El pico de la distribución de la longitud de onda se desplaza hacia longitudes de onda más cortas conforme aumenta la temperatura (Ley de desplazamiento de Wien)} $\lambda_{max} T = 2.898 \times 10^{-3} m\cdot K$ (Donde $\lambda_{max}$ es la longitud de onda en la que el máximo de la curva y $T$ es la temperatura absoluta de la superficie del objeto que emite la radiación.)
+\end{itemize}
+
+Una teoría adecuada para la radiación de cuerpo negro debe predecir la forma de las curvas de la figura, la dependencia con la temperatura expresada en la ley de Stefan y el corrimiento del pico en función de la temperatura descrito por la ley de desplazamiento de Wien. Considere uno de estos primeros intentos la ley de Rayleigh-Jeans :
+\begin{equation*}
+	I(\lambda, T) = \dfrac{2\pi ck_BT}{\lambda^4}
+\end{equation*}
+donde $k_B$  es la constante de Boltzmann. En el caso de longitudes de onda largas, la ley de Rayleigh-Jeans coincide razonablemente con la información experimental, pero en longitudes de onda cortas la diferencia es apreciable (catastrofe ultravioleta). En el año 1900, Max Planck desarrolló una teoría para la radiación de un cuerpo negro que conduce a una ecuación para I(l, T ) que está en total acuerdo con los resultados experimentales a todas las longitudes de onda. Planck formuló dos atrevidas y controvertidas hipótesis respecto a la naturaleza de los osciladores en las paredes de la cavidad:
+
+\begin{itemize}
+	\item La energía de un oscilador sólo puede tener ciertos valores discretos (La energia esta \textbf{cuantizada}, \textbf{estados cuanticos}) $E_n = nhf$ donde $n$ es un entero positivo conocido como \textbf{número cuántico}, $f$ es la frecuencia de la oscilación y $h$ es un parámetro introducido por Planck y que hoy se conoce como la \textbf{constante de Planck}.
+	\item Los osciladores emiten o absorben energía cuando realizan una transición de un estado cuántico a otro. ($E = hf$)
+\end{itemize}
+
+Un oscilador emite o absorbe energía sólo cuando cambia de estado cuántico. Si permanece en un mismo estado cuántico, no existe emisión o absorción de energía. Un \textbf{diagrama de nivel de energía} muestra los niveles cuantizados de energía y las transiciones posibles, según la propuesta de Planck. Utilizando este procedimiento, Planck generó una expresión teórica para la distribución de la longitud de onda que coincide notablemente con las curvas experimentales
+
+\begin{equation*}
+	I(\lambda, T) = \dfrac{2\pi hc^2}{\lambda^5 (e^{hc/\lambda k_B T}-1)}
+\end{equation*}
+
+Esta función incluye el parámetro $h$ que Planck ajustó de manera que su curva coincidiera con la información experimental en todas las longitudes de onda. Se determinó que este parámetro es independiente del material con el cual está hecho el cuerpo negro e independiente de la temperatura; se trata de una constante fundamental de la naturaleza. El valor de h, la constante de Planck es:
+\begin{equation*}
+		h = 6.626 \times 10^{-34} J \cdot s
+\end{equation*}
+
+\paragraph{Efecto fotoeléctrico}
+
+una luz incidente sobre ciertas superficies metálicas provoca la \textbf{emisión de electrones} de esas superficies. Este fenómeno se conoce como \textbf{efecto fotoeléctrico}, y los electrones emitidos se conocen como \textbf{fotoelectrones}\\
+\linebreak
+Un tubo de vidrio o de cuarzo al vacío contiene una placa metálica E (emisor) conectada a la terminal negativa de una batería, y otra placa metálica C (colector) conectada a la terminal positiva de la batería. Cuando el tubo se conserva en la oscuridad, el amperímetro lee cero, lo que indica que no hay corriente en el circuito. Sin embargo, cuando se ilumina la placa E mediante luz con una longitud de onda apropiada, el amperímetro detecta una corriente, lo cual indica que existe un flujo de cargas a través del espacio entre las placas E y C. Esta corriente surge a causa de los fotoelectrones emitidos por la placa E y recolectados en la placa C.
+
+\includegraphics[width = 100px]{corriente_fotoe.png}\\
+
+\includegraphics[width = 300px]{corriente_fotoe_explicacion.png}\\
+
+El efecto fotoelectrico tiene 4 caracteristicas que los resultados experimtales no podian explicar:
+\begin{itemize}
+	\item Dependencia de la energía cinética del fotoelectrón en relación con la intensidad de la luz
+	\item Intervalo de tiempo entre la incidencia de la luz y la expulsión de los fotoelectrones.
+	\item Dependencia de expulsión de electrones en relación con la frecuencia de la luz.
+	\item Dependencia de la energía cinética del fotoelectrón en relación con la frecuencia de la luz.
+\end{itemize}
+
+En 1905 Einstein aportó una explicación exitosa del efecto fotoeléctrico y amplió el concepto de cuantización de Planck a las ondas electromagnéticas. Supuso que la luz (o cualquier otra onda electromagnética) de frecuencia ƒ se puede considerar un flujo de cuantos, independientemente de la fuente de la radiación. Hoy en día a esos cuantos les llamamos \textbf{fotones}\\
+
+En el modelo de Einstein del efecto fotoeléctrico, un fotón de la luz incidente transfiere toda su energía hƒ a un electrón particular en el metal. Debido a eso, la absorción de energía por parte de los electrones no es un proceso de absorción continuo, como se asumía en el modelo ondulatorio, sino un proceso discontinuo en el cual la energía es entregada a los electrones en paquetes discretos.\\
+Los electrones expulsados de la superficie del metal y que no entran en colisión con otros átomos del metal antes de escapar tienen una energía cinética máxima $K_{max}$. De acuerdo con Einstein, la energía cinética máxima de estos electrones liberados es igual a $K_{max} = hf- \phi$ donde $\phi$  se llama la función trabajo del metal. La función trabajo representa la energía mínima con la cual un electrón está unido en el metal.\\
+Con el modelo fotónico de la luz es posible explicar las características observadas del efecto fotoeléctrico que no eran posibles de comprender a partir de los conceptos clásicos.\\
+
+El modelo de Einstein anticipa una correspondencia lineal entre la energía cinética máxima del electrón $K_{max}$ y la frecuencia de la luz $f$.  Se observa dicha correspondencia lineal, como se bosqueja en la figura 40.11, donde la pendiente de las líneas de dicha gráfica $h$ es la constante de Planck. La intersección con el eje horizontal representa la \textbf{frecuencia de corte} por debajo de la cual \textbf{no se emiten electrones}. La frecuencia de corte está relacionada con la función trabajo según la correspondencia $ƒ_c=  \phi/h$. La frecuencia de corte corresponde a la longitud de onda de corte $\lambda_c$ , donde $\lambda_c = \frac{hc}{\phi}$
+
+
+\paragraph{Efecto Compton}
+
+la teoría ondulatoria clásica de la luz no podía explicar la \textbf{dispersión de los rayos X} a causa los electrones.
+
+Dado que cada electrón se mueve a una rapidez diferente después de la interacción, dependiendo de la cantidad de energía absorbida a causa de las ondas electromagnéticas, la frecuencia de la onda dispersa en un ángulo determinado en relación con la radiación de llegada debe mostrar una distribución de valores con corrimiento Doppler. Contrariamente a esta predicción, los experimentos de Compton demostraron que, en un \textbf{ángulo determinado}, sólo se observa \textbf{una frecuencia de radiación}. Compton y sus colegas se dieron cuenta de que podían explicar estos experimentos si trataban los fotones no como ondas, sino más bien como partículas puntuales de energía $hf$ y con una cantidad de movimiento $hf/c$, y suponiendo que se conserva tanto la energía como la cantidad de movimiento en el sistema aislado del par fotón-electrón en colisión. Compton adoptó un modelo de partícula para algo que era bien conocido como una onda, y hoy por hoy este fenómeno de dispersión es conocido como \textbf{efecto Compton}\\
+\linebreak
+\textbf{Ecuación de desplazamiento Compton}
+\begin{equation*}
+	\lambda' - \lambda_0 = \lambda_C(1-cos\theta) \rightarrow \lambda_C = \dfrac{h}{m_e c} = 0.00243nm
+\end{equation*}
+
+\textbf{Deducción de la ecuación de desplazamiento Compton}
+Es posible deducir la ecuación de corrimiento de Compton si supone que el fotón se comporta como una partícula y entra en colisión elástica con un electrón inicialmente en reposo. Se aplica un modelo de \textbf{sistema aislado} al fotón y al electrón. En el proceso de dispersión, la totalidad de la \textbf{energía} y la \textbf{cantidad de movimiento lineal} del sistema deben \textbf{conservarse}. 
+
+
+\paragraph{Fotones y ondas electromagnéticas}
+
+La luz se describe en términos de \textbf{fotones} con cierta energía y cantidad de movimiento. También, por otra parte, la luz y otras ondas electromagnéticas exhiben efectos de interferencia y de difracción, que son entendibles sólo mediante una interpretación \textbf{ondulatoria}. ¿Cuál de los modelos es el correcto? La respuesta dependerá del fenómeno que se esté observando.  El resultado final es que necesita aceptar \textbf{ambos modelos} y admitir que no es posible describir la naturaleza verdadera de la luz en función de ninguna concepción clásica única. En otras palabras, el modelo de partícula y el modelo ondulatorio de la luz \textbf{se complementan}.
+
+\paragraph{Propiedades ondulatorias de las partículas}
+
+Louis de \textbf{Broglie} postuló que ya que los fotones tienen a la vez características ondulatorias y de partículas, es posible que \textbf{todas las formas de la materia tengan ambas propiedades}. Según De Broglie, los electrones, justo igual que la luz, tienen una \textbf{naturaleza dual partícula-onda}.\\
+\linebreak
+\textbf{Longitud de onda de Broglie}
+\begin{equation*}
+	\lambda = \dfrac{h}{p} = \dfrac{h}{mu}
+\end{equation*}
+
+Además, en analogía con los fotones, De Broglie postuló que las partículas obedecen la relación de Einstein E  hƒ, donde E es la energía total de la partícula. En tal caso, la frecuencia de una partícula es
+
+\paragraph{Revisión del experimento de doble rejilla}
+
+un experimento en el que se disparan \textbf{electrones} hacia una \textbf{doble rejilla}. se halla un \textbf{patrón de interferencia} de ondas representativo respecto al conteo por cada minuto, es decir, a la probabilidad de llegada de los electrones. Este patrón de interferencia no debería esperarse si los electrones se comportaran como si fueran partículas clásicas, proporcionando una evidencia clara de que los electrones están interferidos, un comportamiento distinto parecido a la onda. (Sólo se observa el patrón de interferencia si el intervalo de tiempo para la medición es \textbf{suficientemente grande} para que muchos electrones lleguen a la pantalla del detector)\\
+\linebreak
+Los electrones se detectan como partículas en una mancha localizada sobre la pantalla del detector en algún instante de tiempo, pero la probabilidad de llegada a dicha mancha se determina al encontrar la intensidad de dos ondas que interfieren.\\
+\linebreak
+sólo se puede decir que el electrón \textbf{pasa a través de ambas rendijas} Sin embargo, a partir del modelo de partícula cuántica, la partícula se puede considerar construida por ondas que existen en \textbf{todo el espacio}. Debido a eso, las componentes ondulatorias del electrón están presentes en ambas rendijas al mismo tiempo, y este modelo conduce a una interpretación más cómoda de este experimento.
+
+\paragraph{El principio de incertidumbre}
+Según la mecánica clásica, no existe una barrera básica que impida un refinamiento adicional de los aparatos o de los procedimientos experimentales de medición.Sin embargo, la teoría cuántica dice que básicamente es \textbf{imposible medir}, simultáneas, la \textbf{posición} y la \textbf{cantidad de movimiento} de una partícula con una \textbf{precisión infinita}.\\
+\linebreak
+\textbf{principio de incertidumbre de Heisenberg} Si se hace una medición con una incertidumbre $\Delta x$ de la posición de una partícula y de manera simultánea se hace una medición con una incertidumbre $\Delta x_p$ de su componente en x de la cantidad de movimiento, el producto de ambas incertidumbres no puede ser nunca menor de
+
+\begin{equation*}
+	\Delta x \Delta p_x \geq \dfrac{h}{2}
+\end{equation*}
+
+Es decir, físicamente es \textbf{imposible} medir de manera simultánea la \textbf{posición} exacta y la \textbf{cantidad de movimiento} exacto de una partícula. Estas incertidumbres se presentan debido a la \textbf{estructura cuántica} de la materia.\\
+\linebreak
+Otra forma de expresar este principio es:
+
+\begin{equation*}
+	\Delta E \Delta t \geq \dfrac{h}{2}
+\end{equation*}
+
+\section{Física atómica}
+
+\paragraph{Espectros atómicos de los gases}
+
+los objetos emiten una radiación térmica, caracterizada por una distribución continua de longitudes de onda. En marcado contraste con este espectro de distribución continua, está el \textbf{espectro de línea} discreto que se observa cuando un gas a \textbf{baja presión} se somete a una \textbf{descarga eléctrica}. La observación y el análisis de estas líneas espectrales se conoce como \textbf{espectroscopia de emisión}. El espectro de línea más \textbf{simple}, que se describe con detalle, es el del átomo de \textbf{hidrógeno}.\\
+\linebreak
+Otra forma de la espectroscopia, muy útil para analizar sustancias, es la \textbf{espectroscopia de absorción}. Un espectro de absorción se obtiene al pasar una luz blanca de una fuente continua a través de un gas o una solución diluida del elemento que se está analizando.\\
+\linebreak
+\textbf{Balmer}, descubrió una ecuación empírica que \textbf{predecía} correctamente las \textbf{longitudes de onda} de \textbf{cuatro líneas} de emisión visibles del \textbf{hidrógeno}. Estas eran rojo, azul-verde, azul violeta, y violeta.\\
+\linebreak
+\textbf{Serie de Balmer}
+\begin{equation*}
+	\dfrac{1}{\lambda} = R_H \left( \dfrac{1}{2^2}- \dfrac{1}{n^2}  \right) \rightarrow n = 3,4,5,\dots
+\end{equation*}
+
+Donde $R_H$ es la \textbf{ constante de Rydberg} con un valor de $1.097 373 2 \times 10^7  m^{-1}$\\
+El límite de la serie es la longitud de onda más corta en la serie y corresponde a $n \rightarrow \infty$
+
+\paragraph{Los primeros modelos del átomo}
+En 1911, Ernest Rutherford realizó un experimento que demostró que el modelo de Thomson podría no ser correcto. Rutherford explicó sus sorprendentes resultados al desarrollar un nuevo modelo atómico, que suponía que la carga positiva en el átomo estaba concentrada en una región reducida en comparación con el tamaño de éste. Rutherford llamó a esta concentración de carga positiva el \textbf{núcleo} del átomo. todos los electrones pertenecientes al átomo se encuentran en un \textbf{volumen relativamente grande fuera del núcleo}. Para explicar la razón por la cual los electrones \textbf{no son atraídos hacia el núcleo } debido a la fuerza de atracción eléctrica, Rutherford los representó \textbf{moviéndose en órbitas alrededor del núcleo} de la misma forma en que los planetas giran alrededor del Sol
+
+\paragraph{Modelo de Bohr del átomo de hidrógeno}
+
+presentara un nuevo modelo del átomo de hidrógeno que evita las difi cultades del modelo planetario de Rutherford. Bohr combinó las ideas de la teoría cuántica original de Planck, el concepto de Einstein del fotón, el modelo planetario de Rutherford del átomo y la mecánica newtoniana para llegar a un modelo semiclásico en términos de algunos postulados revolucionarios.  Las ideas básicas de la teoría de Bohr, según se aplican al átomo de hidrógeno, son las que siguen
+\begin{enumerate}
+	\item El electrón se mueve en órbitas circulares alrededor del protón bajo la influencia de fuerza eléctrica de atracción
+	\item Sólo ciertas órbitas del electrón son \textbf{estables}. Cuando está en alguno de estos estados \textbf{estacionarios}, como los llamaba Bohr, el electrón \textbf{no emite energía en forma de radiación}. En consecuencia, la energía total del átomo permanece constante y puede utilizarse la mecánica clásica para describir el movimiento del electrón. El modelo de Bohr afirma que el electrón acelerado de manera centrípeta no emite radiación continua, \textbf{perdiendo energía} y finalmente \textbf{girando en los núcleos}
+	\item La radiación es emitida por el átomo cuando el electrón hace una \textbf{transición} de una órbita inicial más energética a una órbita de menor energía.  La frecuencia de la radiación emitida se determina por la expresión de la conservación de energía \begin{equation*}
+		E_i -E_f = hf
+	\end{equation*}
+	\item  El tamaño de la órbita permitida del electrón queda determinado por una condición impuesta sobre la cantidad de movimiento angular orbital del electrón: las órbitas permitidas son aquellas para las cuales la cantidad de movimiento angular
+orbital del electrón en relación con el núcleo se cuantiza y es igual a un múltiplo entero de $h' = h/2\pi$
+\end{enumerate}
+
+La expresión general para el \textbf{radio} de \textbf{cualquier órbita en el átomo de hidrógeno} es:
+
+\begin{equation*}
+	r_n = n^2 a_0 = n^2 \cdot (0.052 9 \text{ nm})
+\end{equation*}
+
+Siendo $a_0$ el \textbf{radio de Bohr}
+
+La cuantización de los radios de la órbita conduce a la cuantización de la energía. Las energías permitidas del
+átomo de hidrógeno de Bohr son:
+
+\begin{equation*}
+	E_n = - \dfrac{13.606 \text{ eV}}{n^2} \rightarrow n=1,2,3,\dots
+\end{equation*}
+
+las energías del átomo de hidrógeno varían inversamente con $n_2$ , de modo que su \textbf{separación en energía} se vuelve más \textbf{pequeña} conforme $n$ \textbf{aumenta}\\
+\linebreak
+Las ecuaciones anteriores pueden utilizarse para calcular la \textbf{frecuencia} del fotón emitido cuando el electrón hace una transición de una órbita exterior a una interior.
+
+\begin{equation*}
+	f = \dfrac{E_i - E_f}{h} = 
+\end{equation*}
+
+Resulta conveniente expresar la ecuación en función de la longitud de onda:
+
+\begin{equation*}
+	\dfrac{1}{\lambda} = \dfrac{f}{c} = R_H\left( \dfrac{1}{n_f^2} - \dfrac{1}{n_i^2}\right)
+\end{equation*}
+
+\paragraph{Principio de correspondencia de Bohr???}
+La física cuántica está de acuerdo con la física clásica cuando la diferencia entre los niveles cuantizados se desvanecen. Este principio, establecido por primera vez por Bohr, se llama principio de correspondencia
+
+
+\paragraph{Modelo cuántico del átomo de hidrógeno ???}
+
+El número cuántico orbital, simbolizado como , resulta de la ecuación diferencial para f($\theta$) y se asocia con el movimiento angular orbital del electrón. El número cuántico orbital magnético m resulta de la ecuación diferencial para g(f). Tanto  como m son enteros. En la sección 42.6 se amplía el análisis de estos dos números cuánticos y también se presenta un cuarto número cuántico (no entero), resultado de un tratamiento relativístico del átomo de hidrógeno. La aplicación de las condiciones frontera de las tres partes de una función ondulatoria completa lleva a correspondencias importantes entre los tres números cuánticos, como también a ciertas restricciones respecto a sus valores:
+
+\begin{itemize}
+	\item Los valores de n son enteros que pueden ir de 1 a $\infty$
+	\item Los valores de $l$ son enteros que pueden ir de 0 a $n = -1$
+	\item Los valores de $m$ son enteros que pueden ir de $-l $ a $l$
+\end{itemize}
+
+\paragraph{Espectros atómicos: Visible y Rayos X}.\\
+
+Recordemos que un átomo \textbf{emite} radiación electromagnética si un electrón en un \textbf{estarlo excitado} hace una transición hacia un estado de \textbf{menor energía}. El conjunto de longitudes de onda observado cuando una especie específica experimenta este tipo de procesos se denomina \textbf{espectro de emisión} para esas especies. De igual modo, los átomos con electrones en la configuración del \textbf{estado base} también pueden \textbf{absorber} radiación electromagnética en longitudes de onda específicas, lo que produce un \textbf{espectro de absorción}. Estos espectros pueden utilizarse para identificar elementos. Cada vez que un electrón efectúa una transición de un estado de energía \textbf{mayor a
+uno menor}, se \textbf{emite un fotón} de luz. La frecuencia de este fotón es $f = \Delta E/h$ , donde $\Delta E$ es la diferencia de energía entre los dos niveles. y h es la constante dc Planck. Las reglas de selección para las transiciones permitidas son
+\begin{equation*}
+	\Delta l = \pm 1
+\end{equation*}
+
+Los rayos X se emiten cuando un blanco metálico es \textbf{bombardeado con electrones} de alta energía o cualquier otra partícula cargada. El espectro de rayos X consiste por lo común en una amplia banda continua y en una serie de líneas definidas que dependen del material utilizado para el blanco. Estas líneas se conocen como \textbf{líneas características}
+
+\paragraph{Transiciones atómicas}
+
+Cuando incide radiación sobre un átomo, sólo aquellos fotones cuya energía $hf$ es igual a la energía de separacíon $\Delta E$ entre dos niveles de energía pueden ser absorbidos por el átomo. Este proceso es conocido como \textbf{absorción estimulada} porque el fotón estimula al átomo para realizar la transición hacia un nivel superior.\\
+\linebreak
+Una vez que el átomo se encuentra en estado excitado, éste puede realizar la transición \textbf{de regreso} hacia un nivel de energía más bajo, \textbf{emitiendo un fotón} en el proceso. Este proceso es conocido como \textbf{emisión espontánea}, porque
+sucede naturalmente, sin requerir de un evento que produzca dicha transición. Por lo general, un átomo permanece en un estado excitado durante sólo $10^{-8}$s.\\
+\linebreak
+Además de la emisión espontánea, también se presenta la \textbf{emisión estimulada} (Durante un atomo en estado exitado \textbf{metaestable} se le incide un foton con una energia  $\Delta E = hf$). después de la emisión estimulada, existen \textbf{dos fotones con energía idéntica} el fotón incidente y el fotón emitido. Los dos están \textbf{en fase} y viajan en la \textbf{misma dirección}
+
+\paragraph{Láser}
+Las propiedades principales del láser que lo hacen tan útil para las aplicaciones tecnológicas, son las siguientes
+\begin{itemize}
+	\item La luz de láser es \textbf{coherente}. Los rayos individuales de luz en un haz láser conservan una correspondencia de fase fija entre sí.
+ 	\item La luz de láser es \textbf{monocromática}. La luz de un haz láser tiene un intervalo muy limitado de longitudes de onda.
+	\item La luz de láser tiene un \textbf{pequeño ángulo de divergencia}. El haz se dispersa muy poco, incluso en grandes distancias.
+\end{itemize}
+
+A fi n de que la emisión estimulada dé como resultado una luz láser, debe tener una acumulación de fotones en el sistema. Las tres condiciones siguientes deben ser satisfechas para lograr esta acumulación
+
+\begin{itemize}
+	\item El sistema debe estar en un estado de \textbf{inversión de población} (más átomos en un estado
+excitado que en el estado base, osea que hay una emision neta de fotones, en vez de una absorsion neta).
+	\item El estado excitado del sistema debe ser un estado metaestable, lo que significa que su tiempo
+de vida debe ser grande comparado con los usuales tiempos de vida cortos de los estados
+excitados. Cuando éste es el caso, la emisión estimulada ocurre antes que la emisión
+espontánea.
+	\item Los fotones emitidos deben estar confinados en el sistema suficiente tiempo para
+permitirles estimular la emisión adicional de otros átomos excitados. 
+\end{itemize}
+
+Una de las más inusuales e interesantes aplicaciones del láser es la producción de imágenes
+tridimensionales en un proceso llamado \textbf{holografía}.
+
 \end{document}
