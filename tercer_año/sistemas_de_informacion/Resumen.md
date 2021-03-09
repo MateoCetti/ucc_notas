@@ -9,6 +9,7 @@
       - [Elementos de un sistema](#elementos-de-un-sistema)
       - [Clasificacion de los sistemas](#clasificacion-de-los-sistemas)
       - [Principios generales de un sistema](#principios-generales-de-un-sistema)
+    - [TGS (?)](#tgs-)
 
 ## UNIDAD 1: Teoria general de sistemas (TGS)
 
@@ -156,3 +157,5 @@ de un **fin u objetivo**
 **HOMEOSTASIS**
 
 Tendencia a **adaptarse** con el fin de alcanzar un **equilibrio interno** frente a los **cambios externos** del medio ambiente.
+
+### TGS (?)
