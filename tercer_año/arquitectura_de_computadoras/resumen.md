@@ -9,6 +9,9 @@
     - [Logica con Boole (Tablas de verdades)](#logica-con-boole-tablas-de-verdades)
     - [Teoremas](#teoremas)
     - [Funcion en Boole](#funcion-en-boole)
+  - [Simplificacion por Karnaugh](#simplificacion-por-karnaugh)
+    - [Adyacencia logica](#adyacencia-logica)
+    - [Mapa de Karnaugh](#mapa-de-karnaugh)
 
 ## Algebra de Boole
 
@@ -35,13 +38,13 @@ El algebra de Boole es todo conjunto de elementos que solo pueden tomar los valo
    - a.<span style="text-decoration:overline">a</span> = 0
 
 **Ejemplos con llaves**
-![circuitos](./img/circuitos.png)
+![circuitos](./img/boole/circuitos.png)
 **Postulados con llaves**
 
-1. ![1_llaves](./img/1_llaves.png)
-2. ![2_llaves](./img/2_llaves.png)
-3. ![3_llaves](./img/3_llaves.png)
-4. ![4_llaves](./img/4_llaves.png)
+1. ![1_llaves](./img/boole/1_llaves.png)
+2. ![2_llaves](./img/boole/2_llaves.png)
+3. ![3_llaves](./img/boole/3_llaves.png)
+4. ![4_llaves](./img/boole/4_llaves.png)
 
 ### Logica con Boole (Tablas de verdades)
 
@@ -60,7 +63,7 @@ El algebra de Boole es todo conjunto de elementos que solo pueden tomar los valo
 
 **Compuertas**: materializar operaciones logicas (?)
 
-![compuertas](./img/compuertas.png)
+![compuertas](./img/boole/compuertas.png)
 
 ### Teoremas
 
@@ -73,7 +76,7 @@ Se demuestra por la **simetría** de los postulados
 
 > a+a.b = a
 
-![compuertas](./img/absorcion.png)
+![compuertas](./img/boole/absorcion.png)
 
 **Teorena del concenso**
 
@@ -99,7 +102,7 @@ Se demuestra por la **simetría** de los postulados
 
 **Tablas de verdades para verificar Morgan**
 
-![Morgan](./img/morgan.png)
+![Morgan](./img/boole/morgan.png)
 
 ### Funcion en Boole
 (Desde ahora <span style="text-decoration:overline">x</span> = /x)
@@ -123,3 +126,53 @@ En una función expresada como **suma de productos canónicos**, cada producto c
 En una función expresada como **producto de sumas canónicas**, cada **suma canónica** representa un **cero** de la función. Basta que **uno** de los **términos** sea **cero** para que la **función valga cero**.
 
 Tanto la suma de productos como el producto de sumas constituyen la **representación algebraica de la función**. 
+
+**Respresentacion de la funcion con tablas de verdad**
+
+![f_tablas](./img/boole/funciones_tablas.png)
+
+- **Suma de productos**: Usamos los 1 (miniterminos)
+- **Producto de sumas**: Usamos los 0 (maxterminos)
+
+**Representacion esquematica de la funcion**
+
+![Funcion esquematica](img/boole/funcion_esquematica.png)
+
+## Simplificacion por Karnaugh
+
+**¿Por que simplificar?**
+
+- Los esquemas de las funciones tendrian **menos** compuertas y entradas
+- Las funciones de Boole pueden tener **mas** de una minima expresion
+- El metodo de Karnaugh ofrece una forma mas **simple** que la algebraica para simplificar funciones (para suma de productos)
+
+### Adyacencia logica
+
+Los términos son adyacentes lógicamente cuando **difieren** solamente en el **estado** de **una variable**. (Ej: a./b.c + a.b.c Difieren en la variable b.) 
+
+### Mapa de Karnaugh
+
+cada casilla del mapa es ADYACENTE físicamente y lógicamente con la que tiene al lado.
+- Los elementos de los bordes son adyacentes logicamente con los de los bordes del otro extremo
+- Los elementos de las esquinas son adyacentes logicamente con los elementos de las esquinas "paralelas" (L)
+
+![mapa](img/simplificacion/karnaugh.png)
+
+**Agrupando**
+
+1. Se agrupan los unos del mapa con la **menor cantidad de agrupamientos** posibles y con la **mayor cantidad** posibles **de unos por agrupamiento**.
+2. Los agrupamientos de los unos pueden ser hechos de a uno, dos, cuatro, ocho, etc.
+
+![Agrupando](img/simplificacion/agrupando.png)
+
+**Extrayendo la funcion simplificada**
+
+- Habrá tantos **términos** en la función como **agrupamientos** haya en el mapa.
+- La variables adoptarán la forma **directa o negada** de acuerdo a si en el mapa valen **uno o cero**.
+- Las variables que **cambian** dentro del agrupamiento **desaparecen**.
+
+![Simplificando](img/simplificacion/simplificando.png)
+
+**Resultado en el esquema**
+
+![Nuevo esquema](img/simplificacion/esquema.png)
