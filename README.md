@@ -23,3 +23,7 @@ La mayoria de resumenes de 2° año estan echos en **LaTeX** ya que las operacio
 - [Tercer año](./tercer_año)
   - [base de datos 1](./tercer_año/bases_de_datos_1/resumen.md)
   - [Sistemas de informacion](./tercer_año/sistemas_de_informacion/Resumen.md)
+  - [Arquitectura de computadoras](tercer_año/arquitectura_de_computadoras/resumen.md)
+  - [Arquitectura de software](tercer_año/arquitectura_de_software/resumen.md)
+  - [Gestion ambiental](./tercer_año/gestion_ambiental/resumen.md)
+  - [Lenguajes formales y automatas](./tercer_año/lenguajes_f_a/resumen.md)

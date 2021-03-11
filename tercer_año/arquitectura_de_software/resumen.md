@@ -1,9 +1,11 @@
-# Principios de diseño
+# Resumen Arquitectura de software
 
-- [Principios de diseño](#principios-de-diseño)
+- [Resumen Arquitectura de software](#resumen-arquitectura-de-software)
   - [Introduccion](#introduccion)
     - [Repaso de POO](#repaso-de-poo)
     - [SOLID](#solid)
+  - [Principio de responsabilidad simple](#principio-de-responsabilidad-simple)
+    - [Cuando aplicar este principio](#cuando-aplicar-este-principio)
 
 ## Introduccion
 
@@ -26,9 +28,10 @@ Pilares:
 3. Polimorfismo
 4. Abstraccion
 
-Buenas practicas de POO:
-- Poco acoplamiento (relacion entre modulos del sistema y su interdependencia. Si hay poca dependencia, hay mayor reusabilidad en otros sistemas)
-- Mucha cohesion (1 modulo tiene 1 responsabilidad)
+**Buenas practicas** de POO:
+
+- Poco **acoplamiento**: relacion entre modulos del sistema y su interdependencia. Si hay poca dependencia, hay mayor reusabilidad en otros sistemas
+- Mucha **cohesion**: 1 modulo tiene 1 responsabilidad
 
 **Design smells**:
 Decimos que el codigo "Huele" cuando este funciona, pero tenemos una intuicion de que algo no esta bien y puede ser mejorado. Algunos smells son:
@@ -45,6 +48,7 @@ Decimos que el codigo "Huele" cuando este funciona, pero tenemos una intuicion d
 - **DRY** (Dont Repeat Yourself)
 - **KISS** (Keep it simple stupid)
 - **YAGNI** (You Are Gonna Need It)
+- **SOLID**
 
 ### SOLID
 
@@ -53,3 +57,27 @@ Decimos que el codigo "Huele" cuando este funciona, pero tenemos una intuicion d
 * Liskov substitution
 * Interface segregation
 * Dependency inversion
+
+## Principio de responsabilidad simple 
+
+Una clase debe tener una y solo una razon de cambio / responsabilidad
+
+### Cuando aplicar este principio
+- Clase muy larga (+300 lineas Aprox.)
+- Metodo muy largo (+40 lineas Aprox.)
+- Muchas dependencias a otros objetos (+20 Aprox)
+- Baja cohesion
+- nombres muy genericos
+- uso del antipatron [Spaghetti code](https://es.wikipedia.org/wiki/C%C3%B3digo_espagueti)
+
+**Sobre que elementos aplicar este principio**
+
+  - Metodos
+  - Clases
+  - Bibliotecas
+  - Modulos
+  - Sistemas
+
+**Contras del principio**
+- Genera muchas clases
+- Codigo mas complicado de leer (no siempre)
