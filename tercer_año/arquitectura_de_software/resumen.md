@@ -6,6 +6,10 @@
     - [SOLID](#solid)
   - [Principio de responsabilidad simple](#principio-de-responsabilidad-simple)
     - [Cuando aplicar este principio](#cuando-aplicar-este-principio)
+  - [Principio abierto / cerrado](#principio-abierto--cerrado)
+  - [Sustitucion de Liskov](#sustitucion-de-liskov)
+  - [Segreegacion de la interfaz](#segreegacion-de-la-interfaz)
+  - [Inversion de dependencia](#inversion-de-dependencia)
 
 ## Introduccion
 
@@ -81,3 +85,95 @@ Una clase debe tener una y solo una razon de cambio / responsabilidad
 **Contras del principio**
 - Genera muchas clases
 - Codigo mas complicado de leer (no siempre)
+
+## Principio abierto / cerrado
+
+Todas las entidades de software deben ser abiertas a la **extension**, pero cerradas a la **modificacion**.
+
+Debemosser capaces de **extender** el comportamiento del codigo sin tener que **modificar** su contenido.
+
+**¿Sobre que elementos?**
+
+- Funciones
+- Clases
+- Modulos
+
+**Beneficios**
+
+- Menus bugs
+- bajo acoplamiento
+- Flexibilidad
+- Facil mantenimiento
+
+**¿Cuando aplicar?**
+
+- Case sujeta a un posible futuro cambio/s
+- Extender una libreria de terceros
+
+**Contras**
+
+- Esfuerzo para diseñar
+- mayor experiencia
+
+## Sustitucion de Liskov
+
+- Una clase **derivada** puede ser **reemplazada** por cualquier otra que use la **misma** clase **base** sin alterar su correcto funcionamiento
+
+Este principio soplo afecta a **clases**
+
+**Beneficios**
+
+- Flexibilidad
+- Facil mantenimiento
+
+**¿Cuando aplicar?**
+
+- para extender la funcionalidad del codigo usando clases derivadas sin tocar la base
+- Existan clases que compartan comportamiento
+- Al aplicar el principio open/closed
+
+## Segreegacion de la interfaz
+
+- La clase hijo no debe ser forzado a implementar **interfaces** que no necesite
+- Interfaces pequeñas que resuelvan problemas especificos
+
+**Se aplica a**
+- Clases
+- Interfaces
+
+**Beneficios**
+- Bajo acoplamiento
+- Alta cohesion
+- Codigo facil de mantener
+
+**Cuando aplicar**
+- Clases con metodos vacios o que devuelvan valores por defecto
+- Clases con metodos que devuelvan excepciones
+- Clase hijo solo usa algunos metodos de la padre
+
+## Inversion de dependencia
+
+Los modulos de alto nivel no deben depender de los de bajo nivel. Ambos deben depender de **abstracciones**.
+
+Las abstracciones no deben depender de los detalles, sino mas bien los detalles deben depender de las abstracciones
+
+**Se aplica a**
+
+- Clases
+- Modulos
+
+**Beneficios**
+
+- Bajo acoplamiento
+- Testeabilidad
+- Flexibilidad
+
+**Cuando aplicar**
+
+- Nivel de acoplamiento alto
+
+**Desventajas**
+
+- Mucha experiencia
+- Mas esfuerzo para diseñar
+- Muchas interfaces
