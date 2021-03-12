@@ -5,6 +5,14 @@
     - [Modelos de datos:](#modelos-de-datos)
     - [Usuarios de bases de datos:](#usuarios-de-bases-de-datos)
     - [Estructura general del sistema](#estructura-general-del-sistema)
+    - [Historia de las DB](#historia-de-las-db)
+  - [Modelo entidad-relacion](#modelo-entidad-relacion)
+    - [Proceso de diseño](#proceso-de-diseño)
+    - [Modelado](#modelado)
+    - [Conjunto de relaciones](#conjunto-de-relaciones)
+    - [Atributos](#atributos)
+    - [Restricciones](#restricciones)
+      - [Correspondencia de cardinales](#correspondencia-de-cardinales)
 
 ## SGBD
 
@@ -166,3 +174,81 @@ Coordina todas las actividades del sistema de la base de datos; posee buenos con
 ### Estructura general del sistema
 
 ![estructura db](./img/estructura_db.png "estructura db")
+
+### Historia de las DB
+
+- 50/60 's
+  - Cintas magneticas (Solo acceso secuencial)
+  - Tarjetas perforadas
+- Finales de 60/70 's
+  - Discos duros con acceso directo a datos
+  - Modelos de datos jerárquicos y en red en amplio uso (?)
+  - Modelo de datos **relacional**
+- 80's  
+  - Los **prototipos relacionales** de investigación evolucionan a **sistemas comerciales** (SQL estandar)
+- 90's
+  - Grandes almacenes de datos multi-terabyte
+- 2000
+  - Estándares XML XQuery
+  - Administración automatizada de bases de datos
+
+## Modelo entidad-relacion
+
+### Proceso de diseño
+
+El diseñador de la base de datos debe hablar con el cliente para asi identificar los **requisitos** y desarrollar una base de datos acorde a allos.
+
+**Fases del diseño**
+- **Inicial**: Hablar con los expertos del dominio y identificar los requerimientos
+- **Diseño conceptual**: **Traducir** los requerimientos a un **esquema conceptual** usando algun **modelo**
+- **Requisitos funcionales**: Los usuarios especifican las operaciones que se llevaran a cabo con estos datos.
+- **Modelado fisico**: Se traduce el esquema conceptual al modelo de datos de la implementacion del sistema, y luego se pasa al modelo fisico en el que se especifican caracteristicas fisicas, archivos y estructuras internas.
+
+En este proceso se debe evitar la **redundancia** e **Incompletitud**.
+
+### Modelado
+
+Una DB se puede pensar como una coleccion/ **relacion** de entidades.
+
+Una **entidad** es un objeto distingible de los demas. Estas entidades tienen atributos (Nombre, edad, etc.)
+
+Un **conjunto de entidades** se da cuando estas son del mismo tipo y comparten atributos.
+
+### Conjunto de relaciones
+
+Una **relacion** es una asociacion entre varias entidades
+
+**Un conjunto de relaciones** es una relación matemática entre 2 o mas entidades, cada una de ellas tomadas de los conjuntos de entidades
+
+Una **relación** puede tener atributos denominados **atributos descriptivos**, que pueden ser también **propiedad** de un **conjunto de relaciones**.
+
+**Grado de un conjunto de relaciones**: Numero de entidades que participan en un conjunto de relaciones
+
+Los conjuntos de relaciones que implican a dos conjuntos de entidades se denominan **binarios** (Estos son la mayoria). Las relaciones entre más de dos conjuntos de entidades no son muy
+comunes.
+
+### Atributos
+
+Una entidad se representa mediante un conjunto de **atributos**, que describen **propiedades** que posee cada miembro de un conjunto de entidades.
+
+El **dominio** es el **conjunto de valores permitidos** para cada atributo
+
+Tipos de atributos:
+- Simples / compuestos
+![a_compuestos](img/a_compuestos.png)
+- Monovalorados/Multivalorados
+- Derivados (edad -> fecha de nacimiento)
+
+### Restricciones
+
+El modelo E-R define ciertas restricciones:
+
+#### Correspondencia de cardinales
+
+Expresa el **número de entidades** a las que se **puede asociar** otra entidad a través de un conjunto de relaciones.
+
+Para un conjunto de relaciones **binario**, la correspondencia de cardinalidades debe ser de uno de los tipos siguientes:
+- 1 a 1
+- 1 a N
+- N a 1
+- N a N
