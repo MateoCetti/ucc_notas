@@ -27,3 +27,4 @@ La mayoria de resumenes de 2° año estan echos en **LaTeX** ya que las operacio
   - [Arquitectura de software](tercer_año/arquitectura_de_software/resumen.md)
   - [Gestion ambiental](./tercer_año/gestion_ambiental/resumen.md)
   - [Lenguajes formales y automatas](./tercer_año/lenguajes_f_a/resumen.md)
+  - [Pensamiento teologico](tercer_año/pensamiento_teologico/resumen.md)
