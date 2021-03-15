@@ -1,15 +1,21 @@
 # Resumen Arquitectura de software
 
+## Indice
 - [Resumen Arquitectura de software](#resumen-arquitectura-de-software)
+  - [Indice](#indice)
   - [Introduccion](#introduccion)
     - [Repaso de POO](#repaso-de-poo)
     - [SOLID](#solid)
-  - [Principio de responsabilidad simple](#principio-de-responsabilidad-simple)
-    - [Cuando aplicar este principio](#cuando-aplicar-este-principio)
-  - [Principio abierto / cerrado](#principio-abierto--cerrado)
-  - [Sustitucion de Liskov](#sustitucion-de-liskov)
-  - [Segreegacion de la interfaz](#segreegacion-de-la-interfaz)
-  - [Inversion de dependencia](#inversion-de-dependencia)
+  - [Principios SOLID](#principios-solid)
+    - [Principio de responsabilidad simple](#principio-de-responsabilidad-simple)
+    - [Principio abierto / cerrado](#principio-abierto--cerrado)
+    - [Sustitucion de Liskov](#sustitucion-de-liskov)
+    - [Segreegacion de la interfaz](#segreegacion-de-la-interfaz)
+    - [Inversion de dependencia](#inversion-de-dependencia)
+  - [Patrones de diseño](#patrones-de-diseño)
+    - [Introduccion](#introduccion-1)
+    - [Clasificacion](#clasificacion)
+    - [Patron builder](#patron-builder)
 
 ## Introduccion
 
@@ -62,11 +68,13 @@ Decimos que el codigo "Huele" cuando este funciona, pero tenemos una intuicion d
 * Interface segregation
 * Dependency inversion
 
-## Principio de responsabilidad simple 
+## Principios SOLID
+
+### Principio de responsabilidad simple 
 
 Una clase debe tener una y solo una razon de cambio / responsabilidad
 
-### Cuando aplicar este principio
+**Cuando aplicar este principio**
 - Clase muy larga (+300 lineas Aprox.)
 - Metodo muy largo (+40 lineas Aprox.)
 - Muchas dependencias a otros objetos (+20 Aprox)
@@ -86,7 +94,7 @@ Una clase debe tener una y solo una razon de cambio / responsabilidad
 - Genera muchas clases
 - Codigo mas complicado de leer (no siempre)
 
-## Principio abierto / cerrado
+### Principio abierto / cerrado
 
 Todas las entidades de software deben ser abiertas a la **extension**, pero cerradas a la **modificacion**.
 
@@ -115,7 +123,7 @@ Debemosser capaces de **extender** el comportamiento del codigo sin tener que **
 - Esfuerzo para diseñar
 - mayor experiencia
 
-## Sustitucion de Liskov
+### Sustitucion de Liskov
 
 - Una clase **derivada** puede ser **reemplazada** por cualquier otra que use la **misma** clase **base** sin alterar su correcto funcionamiento
 
@@ -132,7 +140,7 @@ Este principio soplo afecta a **clases**
 - Existan clases que compartan comportamiento
 - Al aplicar el principio open/closed
 
-## Segreegacion de la interfaz
+### Segreegacion de la interfaz
 
 - La clase hijo no debe ser forzado a implementar **interfaces** que no necesite
 - Interfaces pequeñas que resuelvan problemas especificos
@@ -151,7 +159,7 @@ Este principio soplo afecta a **clases**
 - Clases con metodos que devuelvan excepciones
 - Clase hijo solo usa algunos metodos de la padre
 
-## Inversion de dependencia
+### Inversion de dependencia
 
 Los modulos de alto nivel no deben depender de los de bajo nivel. Ambos deben depender de **abstracciones**.
 
@@ -177,3 +185,78 @@ Las abstracciones no deben depender de los detalles, sino mas bien los detalles 
 - Mucha experiencia
 - Mas esfuerzo para diseñar
 - Muchas interfaces
+
+## Patrones de diseño
+
+### Introduccion
+
+Los patrones de diseño son **soluciones habituales** a problemas que ocurren con **frecuencia** en el diseño de software. Son como planos prefabricados que se pueden personalizar para resolver un problema de diseño recurrente en tu código (El código del mismo patrón aplicado a dos programas distintos puede ser diferente).
+
+**¿En qué consiste el patrón?**
+
+Los patrones se definen de manera formal, y constan de:
+
+- El **propósito** del patrón explica brevemente el problema y la solución.
+- La **motivación** explica en más detalle el problema y la solución que brinda el patrón.
+- La **estructura** de las clases muestra cada una de las partes del patrón y el modo en que se relacionan.
+- El **ejemplo de código** en uno de los lenguajes de programación populares facilita la asimilación de la idea que se esconde tras el patrón.
+
+**Historia de los patrones**
+
+La idea fue recogida por cuatro autores: Erich Gamma, John Vlissides, Ralph Johnson y Richard Helm. En 1995, publicaron **Patrones de diseño**, en el que aplicaron el concepto de los patrones de diseño a la **programación**. El libro presentaba **23 patrones** que resolvían varios problemas del diseño orientado a objetos y se convirtió en un éxito de ventas con rapidez. Al tener un título tan largo en inglés, la gente empezó a llamarlo “el libro de la ‘**gang of four’**
+
+**Beneficios de usar patrones**
+
+- Te enseña a resolver **todo tipo** de **problemas** utilizando principios del diseño orientado a objetos.
+- Los patrones de diseño definen un **lenguaje común** que puedes utilizar con tus compañeros de equipo para **comunicaros** de forma más **eficiente**.
+
+**Criticas**
+
+1 Normalmente, la necesidad por los patrones surge cuando la gente elige un lenguaje de programación o una tecnología que **carece** del **nivel necesario de abstracción**. En este caso, los patrones se convierten en una chapuza que otorga al lenguaje unas súper habilidades muy necesitadas.
+
+Por ejemplo, el patrón **Strategy** puede implementarse con una simple función anónima (**lambda**) en la mayoría de lenguajes de programación modernos.
+
+2 Los patrones intentan sistematizar soluciones cuyo uso ya es generalizado. Esta unificación es vista por muchos como un dogma, e implementan los patrones “al pie de la letra”, **sin adaptarlos** al contexto del proyecto particular.
+
+3 "Si lo único que tienes es un martillo, todo te parecerá un clavo." Este es el problema que persigue a muchos **principiantes** que acaban de familiarizarse con los patrones. Una vez que aprenden sobre patrones, intentan aplicarlos en **todas partes**, incluso en situaciones en las que un código más simple funcionaría perfectamente bien.
+
+### Clasificacion
+
+Los patrones más básicos y de más bajo nivel suelen llamarse **idioms**. Normalmente se aplican a un **único lenguaje** de programación.
+
+Los patrones más universales y de más alto nivel son los **patrones de arquitectura**. Los desarrolladores pueden implementar estos patrones prácticamente en **cualquier lenguaje**. Al contrario que otros patrones, pueden utilizarse para diseñar la arquitectura de una **aplicación completa**.
+
+Además, todos los patrones pueden clasificarse por su **propósito**. Este libro cubre tres grupos generales de patrones:
+
+- Los patrones **creacionales** proporcionan mecanismos de **creación de objetos** que incrementan la **flexibilidad** y la **reutilización** de código existente.
+- Los patrones **estructurales** explican cómo **ensamblar objetos** y clases en estructuras más grandes a la vez que se mantiene la flexibilidad y eficiencia de la estructura.
+- Los patrones de **comportamiento** se encargan de una **comunicación efectiva** y la asignación de responsabilidades **entre objetos**.
+
+Ahora vemos algunos de los patrones que son mas utilizados.
+
+### Patron builder
+
+**Proposito**
+
+Es un patrón de diseño **creacional** que nos permite construir objetos complejos **paso a paso**. El patrón nos permite producir distintos tipos y representaciones de un objeto empleando el mismo código de construcción.
+
+**Problema**
+
+Se usa para instanciar objetos provenientes de clases con **muchos atributos**.
+
+Imagina un **objeto complejo** que requiere una inicialización laboriosa, paso a paso, de **muchos campos y objetos anidados**. Normalmente, este código de inicialización está sepultado dentro de un **¡¡¡MONSTRUOSO CONSTRUCTOR!!!** con una gran cantidad de parámetros. O, peor aún: disperso por todo el código cliente en forma de muchisimas **subclases**.
+
+![gConstructor](img/p_builder/giant_constructor.png)
+![subClasses](img/p_builder/subclasses.png)
+
+**Solucion**
+
+El patrón Builder sugiere que saques el código de construcción del objeto de su propia clase y lo coloques dentro de **objetos independientes** llamados constructores.
+
+![](img/p_builder/constructor.png)
+
+Podemos crear **varias clases constructoras** distintas que implementen la misma serie de pasos de construcción, pero de forma diferente. Entonces podemos utilizar estos constructores en el proceso de construcción (por ejemplo, una serie ordenada de llamadas a los pasos de construcción) **para producir distintos tipos de objetos**.
+
+Puedes ir más lejos y extraer una serie de llamadas a los pasos del constructor que utilizas para construir un producto y ponerlas en una clase independiente llamada directora. La **clase directora** define el orden en el que se deben ejecutar los pasos de construcción, mientras que el constructor proporciona la implementación de dichos pasos.
+
+![](img/p_builder/UML.png)
