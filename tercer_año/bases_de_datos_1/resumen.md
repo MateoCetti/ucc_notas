@@ -13,6 +13,20 @@
     - [Atributos](#atributos)
     - [Restricciones](#restricciones)
       - [Correspondencia de cardinales](#correspondencia-de-cardinales)
+      - [Claves](#claves)
+      - [Conjunto de entidades](#conjunto-de-entidades)
+      - [Conjunto de relaciones](#conjunto-de-relaciones-1)
+      - [Restricciones de participacion](#restricciones-de-participacion)
+    - [Diagrama E-R](#diagrama-e-r)
+      - [Papeles](#papeles)
+      - [Restricciones de cardinalidad](#restricciones-de-cardinalidad)
+      - [Participacion](#participacion)
+    - [Cuestiones de diseño](#cuestiones-de-diseño)
+      - [Relaciones binarias frente a no binarias](#relaciones-binarias-frente-a-no-binarias)
+      - [Conjuntos de entidades débiles](#conjuntos-de-entidades-débiles)
+      - [Especialización](#especialización)
+      - [Generalizacion](#generalizacion)
+      - [Restricciones de especialización/generalización](#restricciones-de-especializacióngeneralización)
 
 ## SGBD
 
@@ -252,3 +266,121 @@ Para un conjunto de relaciones **binario**, la correspondencia de cardinalidades
 - 1 a N
 - N a 1
 - N a N
+
+#### Claves
+
+**Superclave**: conjunto de **uno o más atributos** cuyos valores permiten identificar **unívocamente** una entidad determinada.
+
+**Clave candidata**: superclave mínima (?)
+
+Aunque pueden existir varias claves candidatas, una de ellas se elige como la **clave primaria**. Esta es una decisión del diseñador de la base de datos. La clave primaria se debe elegir de manera que sus atributos, nunca o casi **nunca cambien**.
+
+#### Conjunto de entidades
+
+Dos entidades de un conjunto de entidades **no** pueden tener el **mismo valor** en su **clave**
+
+#### Conjunto de relaciones
+
+Las relaciones tienen **superclaves**, y estas son las claves primarias de las entidades que relacionan, mas algunos atributos de las mismas de ser posible.
+
+#### Restricciones de participacion
+
+Se dice que la participación de un conjunto de entidades E en un conjunto de relaciones R es **total** si **cada entidad** de E **participa** al menos en **una relación** de R.
+
+Si sólo algunas entidades E participa en relaciones de R, se dice que la participación es **parcial**.
+
+Se puede esperar que cada entidad préstamo este relacionada al menos con un cliente(participación total). 
+
+Un individuo puede ser cliente de un banco aunque no tenga concedido ningún préstamo. (participación parcial).
+
+### Diagrama E-R
+
+![ej_er](img/ej_er.png)
+
+- Rectangulos: entidades
+  - Rectangulos dobles: entidades debiles
+- Rombos: relaciones
+- Elipses: atributos
+  - Elipses dobles: atributos multivalorados 
+  - Elipses discontinuas: atributos derivados
+  - Subrayado: atributos primarios 
+
+#### Papeles
+
+Los papeles se indican en diagramas E-R **etiquetando** las **líneas** que **conectan rombos con rectángulos**.Las etiquetas de papeles son **opcionales** y se utilizan para **aclarar** la **semántica de la relación**.
+
+![papeles](img/papeles.png)
+
+#### Restricciones de cardinalidad
+
+Las restricciones de cardinalidad se expresan o bien dibujando una línea directa (-->), cuyo significado es ―uno,o bien con una línea indirecta (—), cuyo significado es ―varios, entre el conjunto de relaciones y el conjunto de entidades.
+
+Ejemplo 1 a varios:
+
+![](img/1av.png)
+
+#### Participacion
+
+- Participación **total** (indicada con **doble línea**):cada préstamo debe tener un cliente asociado a él a través de prestatario
+- Participación **parcial**: puede ser que algunas entidades no participen en ninguna relación del conjunto de relaciones
+
+![](img/participacion.png)
+
+### Cuestiones de diseño
+
+#### Relaciones binarias frente a no binarias
+
+Algunas relaciones que parecía que eran no binarias se pueden representar mejor utilizando relaciones binarias
+![](img/binario.png)
+
+#### Conjuntos de entidades débiles
+
+A los conjuntos de entidades que **no tienen** una **clave primaria** se denominan conjuntos de **entidades débiles**.  La existencia de un conjunto de entidades débiles **depende** de la existencia de un conjunto de **identidades identificadoras**. Se debe asociar al conjunto de entidades identificadoras a través de
+un conjunto de relaciones uno a varios total desde la identificadora al conjunto de entidades débiles.
+
+La relación identificadora se representa utilizando un **rombo doble**
+
+El **discriminador** (o clave parcial) de un conjunto de entidades débil es el **conjunto** de **atributos** que lo **distinguen** entre todas las entidades de un conjunto de entidades débiles.
+
+La **clave primaria** de un conjunto de entidades débiles se forma con la **clave primaria** del conjunto de entidades fuertes del que depende la
+existencia del conjunto de entidades débiles, más el **discriminador** de dicho conjunto de entidades débiles.
+
+Un conjunto de entidades débiles se representa por medio de **rectángulos dobles**.
+
+El **discriminador** de un conjunto de entidades débiles se subraya con una **línea discontinua**.
+
+![](img/debiles.png)
+
+#### Especialización
+
+se designan **subgrupos** **dentro** de un **conjunto** de entidades que se diferencian de alguna forma del resto de las entidades del conjunto.
+
+Se representan por medio de un componente **triángulo** que contiene el nombre del conjunto de entidades
+
+un conjunto de entidades de nivel más bajo **hereda** todos los atributos y la participación en las relaciones del conjunto de entidades de nivel superior al cuál está enlazado.
+
+![](img/especializacion.png)
+
+#### Generalizacion
+
+**combina** un determinado número de conjuntos de entidades que comparten las mismas características en un conjunto de entidades de nivel superior.
+
+La especialización y la generalización son **inversiones** simples una de la otra y se **representan** en un diagrama E-R **del mismo
+modo**.
+
+Ambos términos, especialización y generalización, son **perfectamente intercambiables**.
+
+#### Restricciones de especialización/generalización
+
+1. Restringe si las **entidades** pueden ser **miembros** de un conjunto dado de entidades de **nivel inferior**.
+- definido por condición
+- definido por el usuario
+
+2. Restringe si las entidades pueden o no pertenecer a **uno** **o más** conjuntos de entidades de nivel inferior dentro de una generalización simple
+
+- Disjunto: Solo 1 unico subconjunto
+- Solapado: Solo mas de 1 subconjunto
+
+3. **Restricción de completitud**: especifica si **una entidad** del conjunto de entidades de **nivel superior** debe pertenecer o no **al menos a uno** de los conjuntos de entidades del nivel inferior en una generalización.
+- **total**: una entidad **sólo** puede pertenecer a **uno** de los conjuntos de entidades de nivel inferior
+- **parcial**: una entidad **no necesita** pertenecer a uno de los conjuntos de entidades de nivel inferior
