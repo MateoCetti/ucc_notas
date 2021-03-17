@@ -19,6 +19,7 @@
     - [Patron singleton](#patron-singleton)
     - [Patron abstract factory](#patron-abstract-factory)
     - [Patron factory method](#patron-factory-method)
+    - [Patron Prototype](#patron-prototype)
 
 ## Introduccion
 
@@ -380,3 +381,38 @@ Utiliza el Factory Method cuando quieras ofrecer a los usuarios de tu biblioteca
 **Contras**
 
 * Puede ser que el **código se complique**, ya que debes incorporar una multitud de nuevas subclases para implementar el patrón. La situación ideal sería introducir el patrón en una jerarquía existente de clases creadoras.
+
+### Patron Prototype
+
+**Proposito**
+
+Prototype es un patrón de **diseño creacional** que nos permite **copiar objetos existentes** sin que el código dependa de sus clases.
+
+**Problema**
+
+Digamos que tienes un objeto y quieres crear una copia exacta de él. ¿Cómo lo harías? En primer lugar, debes **crear un nuevo objeto** de la misma clase. Después debes **recorrer todos los campos** del objeto original y **copiar sus valores** en el nuevo objeto (no todos los objetos se pueden copiar de este modo, porque algunos de los campos del objeto pueden ser **privados e invisibles** desde fuera del propio objeto.).
+
+Hay otro problema con el enfoque directo. Dado que debes conocer la clase del objeto para crear un duplicado, el **código** se vuelve **dependiente** de esa clase. 
+
+**Solución**
+
+El patrón Prototype **delega** el proceso de **clonación** a los **propios objetos** que están siendo clonados. El patrón declara una **interfaz común** para todos los **objetos** que **soportan la clonación**. Esta interfaz nos permite clonar un objeto sin acoplar el código a la clase de ese objeto. Normalmente, dicha interfaz contiene un **único método clonar**.
+
+![](img/p_prototype/uml.png)
+
+**Aplicabilidad**
+
+* Utiliza el patrón Prototype cuando tu código no deba **depender** de las **clases concretas** de **objetos** que **necesites copiar**.
+
+Utiliza el patrón cuando quieras **reducir** la **cantidad de subclases** que solo se **diferencian** en la forma en que **inicializan** sus respectivos **objetos**. Puede ser que alguien haya creado estas subclases para poder crear objetos con una configuración específica.
+
+**Pros**
+
+* Puedes **clonar objetos sin acoplarlos** a sus clases concretas.
+* Puedes **evitar** un código de **inicialización repetido** clonando prototipos prefabricados.
+* Puedes **crear objetos complejos** con más **facilidad**.
+* Obtienes una **alternativa** a la **herencia** al tratar con preajustes de configuración para objetos complejos.
+
+**Contras**
+
+* Clonar objetos complejos con referencias circulares puede **resultar complicado**.
