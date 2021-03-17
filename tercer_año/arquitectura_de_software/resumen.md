@@ -16,6 +16,7 @@
     - [Introduccion](#introduccion-1)
     - [Clasificacion](#clasificacion)
     - [Patron builder](#patron-builder)
+    - [Patron singleton](#patron-singleton)
 
 ## Introduccion
 
@@ -260,3 +261,12 @@ Podemos crear **varias clases constructoras** distintas que implementen la misma
 Puedes ir más lejos y extraer una serie de llamadas a los pasos del constructor que utilizas para construir un producto y ponerlas en una clase independiente llamada directora. La **clase directora** define el orden en el que se deben ejecutar los pasos de construcción, mientras que el constructor proporciona la implementación de dichos pasos.
 
 ![](img/p_builder/UML.png)
+
+### Patron singleton
+
+Singleton es un patrón de diseño **creacional** que nos permite asegurarnos de que una clase tenga una **única instancia**, a la vez que proporciona un **punto de acceso global** a dicha instancia.
+
+**Solucion**
+
+1. Hacer **privado el constructor** por defecto para evitar que otros objetos utilicen el operador new con la clase Singleton.
+2. Crear un método de **creación estático** que actúe como constructor. Tras bambalinas, este método invoca al constructor privado para crear un objeto y lo guarda en un **campo estático**. Las siguientes llamadas a este método devuelven el objeto almacenado en caché.

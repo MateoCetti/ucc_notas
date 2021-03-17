@@ -96,9 +96,9 @@ Se demuestra por la **simetría** de los postulados
 
 **Teorema de Morgan**
 
-><span style="text-decoration:overline">(x+y)</span> = <span style="text-decoration:overline">x</span> . <span style="text-decoration:overline">y</span>
+><span style="text-decoration:overline">/(x+y)</span> = <span style="text-decoration:overline">/x</span> . <span style="text-decoration:overline">/y</span>
 > 
-> <span style="text-decoration:overline">(x.y)</span> = <span style="text-decoration:overline">x</span> + <span style="text-decoration:overline">y</span>
+> <span style="text-decoration:overline">/(x.y)</span> = <span style="text-decoration:overline">/x</span> + <span style="text-decoration:overline">/y</span>
 
 **Tablas de verdades para verificar Morgan**
 
