@@ -15,11 +15,14 @@
   - [Patrones de diseño](#patrones-de-diseño)
     - [Introduccion](#introduccion-1)
     - [Clasificacion](#clasificacion)
+  - [Patrones Creacionales](#patrones-creacionales)
     - [Patron builder](#patron-builder)
     - [Patron singleton](#patron-singleton)
     - [Patron abstract factory](#patron-abstract-factory)
     - [Patron factory method](#patron-factory-method)
     - [Patron Prototype](#patron-prototype)
+  - [Patrones estructurales](#patrones-estructurales)
+    - [Patron Adapter](#patron-adapter)
 
 ## Introduccion
 
@@ -238,6 +241,8 @@ Además, todos los patrones pueden clasificarse por su **propósito**. Este libr
 
 Ahora vemos algunos de los patrones que son mas utilizados.
 
+## Patrones Creacionales
+
 ### Patron builder
 
 **Proposito**
@@ -416,3 +421,45 @@ Utiliza el patrón cuando quieras **reducir** la **cantidad de subclases** que s
 **Contras**
 
 * Clonar objetos complejos con referencias circulares puede **resultar complicado**.
+
+## Patrones estructurales
+
+### Patron Adapter
+
+**Propósito**
+
+Adapter es un patrón de diseño **estructural** que permite la **colaboración** entre objetos con **interfaces incompatibles**.
+
+**Problema**
+
+Imagina que estás creando una aplicación de monitoreo del mercado de valores. La aplicación descarga la información de bolsa desde varias fuentes en **formato XML** para presentarla al usuario con bonitos gráficos y diagramas.
+
+En cierto momento, decides mejorar la aplicación integrando una inteligente biblioteca de análisis de una tercera persona. Pero hay una trampa: la biblioteca de análisis solo funciona con datos en **formato JSON**.
+
+**Solución**
+
+Puedes crear un **adaptador**. Se trata de un objeto especial que **convierte** la interfaz de un objeto, de forma que otro objeto pueda comprenderla.
+
+Los adaptadores no solo convierten datos a varios formatos, sino que también **ayudan** a objetos con **distintas interfaces** a colaborar. Funciona así:
+
+1. El adaptador obtiene una **interfaz compatible** con uno de los objetos existentes.
+2. Utilizando esta interfaz, el objeto existente puede **invocar** con seguridad los **métodos del adaptador**.
+3. Al recibir una llamada, el adaptador pasa la solicitud al segundo objeto, pero en un **formato y orden** que ese segundo objeto espera.
+
+**Estructura**
+
+![](img/p_adapter/uml.png)
+
+**Aplicabilidad**
+
+- Utiliza la clase adaptadora cuando quieras usar una clase existente, pero cuya interfaz no sea compatible con el resto del código.
+- Utiliza el patrón cuando quieras reutilizar varias subclases existentes que carezcan de alguna funcionalidad común que no pueda añadirse a la superclase.
+
+**Pros**
+
+- Principio de **responsabilidad única**. Puedes separar la interfaz o el código de conversión de datos de la lógica de negocio primaria del programa.
+- Principio de **abierto/cerrado**. Puedes introducir nuevos tipos de adaptadores al programa sin descomponer el código cliente existente, siempre y cuando trabajen con los adaptadores a través de la interfaz con el cliente.
+
+**Contras**
+
+- La complejidad general del código aumenta, ya que debes introducir un grupo de nuevas interfaces y clases. En ocasiones resulta más sencillo cambiar la clase de servicio de modo que coincida con el resto de tu código.
