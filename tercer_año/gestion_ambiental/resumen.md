@@ -2,6 +2,9 @@
 
 - [Resumen Gestion Ambiental](#resumen-gestion-ambiental)
   - [Introduccion](#introduccion)
+    - [ISO 14001](#iso-14001)
+    - [Implantar un SGA en una empresa](#implantar-un-sga-en-una-empresa)
+  - [Politica ambiental](#politica-ambiental)
 
 ## Introduccion
 
@@ -40,6 +43,8 @@ Se desarrolla un SGA **propio** para la empresa, pero se sigue siempre una norma
 - **Impacto**: Cambio de las **condiciones normales** actuales de un sistema (Ej: Cambiar el PH del rio)
 - **Efecto**: Consecuencia que puede llegar a tener este cambio en el ambiente.
 
+### ISO 14001
+
 **Ventajas de implantar ISO 14001**
 
 - Permite consumir **menos recursos** (depende del proceso) y **mejorar** la cuenta de **resultados**
@@ -69,6 +74,8 @@ Nota: La norma dice que debemos hacer, pero el como lo hacemos lo define la empr
 
 Nota: Economia circular-> estrategia que tiene por objetivo reducir tanto la entrada de los materiales vírgenes como la producción de desechos, cerrando los «bucles» o flujos económicos y ecológicos de los recursos.​
 
+### Implantar un SGA en una empresa
+
 **Recomendaciones para implantar un SGA**
 
 - Tener en claro el **objetivo final** del proyecto
@@ -85,7 +92,7 @@ Los lideres de la organizacion se **comprometen** a realizar la implementacion/c
 
 ![revision](./img/revision.png)
 
-**Politica ambiental**
+## Politica ambiental
 
 La politica ambiental son **compromisos** con el medio ambiente preparados por la **direccion** de la empresa en un **documento publico**. Esta politica asegura que:
 
@@ -96,6 +103,8 @@ La politica ambiental son **compromisos** con el medio ambiente preparados por l
 - Asume el **cumplimiento** de **requisitos legales** y reglamentarios.
 - Está a **disposición del público**.
 
+A continuacion especificamos los requisitos que la norma pide para poder certificar la empresa (No especifica como se deben cumplir).
+
 **Identificacion de aspectos medioambientales**
 
 ![aspectos](img/aspectos.png)
@@ -105,3 +114,116 @@ La politica ambiental son **compromisos** con el medio ambiente preparados por l
 Una vez identificados los aspectos e impactos, priorizamos los impactos ambientales que necesariamente se deben gestionar a la brevedad. Se suele usar esta herramienta (matriz) para calificar dichos impactos (La empresa decide cual es la probabilidad y severidad de cada impacto)
 
 ![impactos](img/impactos.png)
+
+La evaluacion ambiental inical se plantea como una radiografia del estado actual de la empresa. En esta evaluacion se incluye:
+- Identificacion de los impactos
+- Practicas y procedimientos de gestion de la contaminacion
+- Incidentes ocurridos
+- Evaluacion de los aspectos ambientales para identificar los mas significativos
+- Tener en cuenta la legislacion ambiental y la ley ISO 14001
+
+![](img/legislacion.png)
+
+(?)
+
+**Caracteristicas de los objetivos**
+
+Los objetivos planteados en funcion de los compromisos asumidos en la politica ambiental deben tener ciertas caracteristicas:
+
+- Deben conseguir una **mejora real** en la **actuación ambiental**
+- Deben ser **consecuentes** con la **Política
+Ambiental**
+- Deben ser **realistas y razonables**
+- Deben estar establecidos de acuerdo a los aspectos ambientales **significativos** de la actividad
+
+**Posibles objetivos**
+
+- **Reducción** de **residuos** y del **consumo de recursos**
+- Reducción o **eliminación** de **emisiones contaminantes**
+- **Rediseño** de **productos** para minimizar su impacto ambiental
+- **Promoción** de la **concienciación** de los empleados y de la comunicación exterior
+
+**Ejemplo de gestion de un objetivo**
+
+Este es un **programa** para la gestion de producto.
+![](img/g_objetivo.png)
+
+**Programa ambiental**
+
+(Cuadro de arriba) Descripción documentada de las **responsabilidades** y los **medios** que la empresa destina a lograr los **objetivos** y **metas** medioambientales definidas en un **plazo establecido**. Dentro de esta descripcion se encuentra:
+- ¿Quien?¿que?¿como?¿con que?¿cuando?
+- Objetivos ambientales
+- Metas
+- Funciones y Responsabilidades
+- Cronograma
+- Medios necesarios
+- Indicadores (si es posible)
+
+**Estructura y responsabilidades**
+
+La norma establece como requisito que se tiene que definir la estructura de la empresa (La norma no especifica como se define).  Ej:
+
+![](img/estructura.png)
+
+Cada sector tiene sus propias responsabilidades (Ver en power point).
+
+**Documentacion del sistema**
+
+Los procesos de documentacion son tan burocraticos como la empresa decida. Pero la norma pide que haya documentacion. Esta debe/ puede constar de
+
+- **Manual de Gestión Ambiental** donde se plasma la política ambiental, se definen las responsabilidades y los objetivos, metas y programas.
+- **Procedimientos e Instrucciones** Técnicas donde se describen cómo se realizan las distintas actividades de la empresa.
+- **Otros documentos** como son los Planes de Auditorías, Planes de Formación, Programas, Normativa, etc.
+- **Registros de incidentes**, quejas, etc.
+
+Esta puede estar hecha sobre papel, o en formatos **word/pdf**.
+
+Esta documentacion debe pasar por un proceso regular de **control**, actualizandose de ser necesario.
+
+**Control operacional**
+
+Gracias la documentacion identificamos y controlamos las operaciones y actividades de la empresa y nos focalizamos en los impactos ambientales mas significativos para trabajarlos. 
+
+Esto lo hacemos tambien para prevenir situaciones de emergencia. Para esto se suele establecer un **programa de prevencion de riesgos** (Esto lo establece la norma)
+
+**Seguimiento y medicion**
+
+El proceso que llevamos a cabo para cumplir las metas ambientales propuestas por la propia empresa debe ser periodicamente revisado para verificar que estemos por el camino correcto.
+
+Estos seguimientos constan de:
+
+- Control y medición de las características clave de las operaciones y actividades con impacto significativo en el ambiente.
+- Calibración y mantenimiento de equipos de inspección.
+- Evaluación del cumplimiento de la legislación y reglamentación ambiental aplicable.
+- Establecimiento y actualización de los procedimientos y registros pertinentes.
+
+**Mal funcionamiento**
+
+Luego de los seguimientos, puede que haya deficiencias en el sistema. estas pueden ser debido a deficiencias en el diseño, deficiencias en la implantación, deficiencias o fallos en la propia instalación, deficiencias o fallos en los equipos principales o auxiliares, errores humanos, etc.
+
+En funcion de estas deficiencias tomamos acciones **preventivas** (prevenir que no pase de nuevo) y/o **correctoras**(Moderar los efectos negativos)
+
+**Registros**
+
+Los seguimientos junto con sus resultados deben estar registrados de manera precisa, legible e identificada con la actividad, producto o servicio implicado
+
+**Auditoria**
+
+Las auditorias son inspecciones, verificaciones realizadas por un auditor con el fin de comprobar si se cumple con lo esperado. Estas pueden ser: 
+
+- Internas: Yo mismo verifico si todo anda bien
+- Externas: Llamo a un auditor para verificar si todo anda bien, o para obtener/mantener/renovar la **certificacion**.
+
+**Revision por direccion**
+
+Luego de todo esto, la direccion realiza una revision final y en base a eso toma decisiones.
+
+**Resumen**
+![](img/revision.png)
+**Proceso de certificacion**
+
+![](img/certificacion.png)
+
+La empresa decide certificarse y solicita dicha certificacion. Junto con la solicitud, la empresa manda documentacion, que se estudia y se realiza una visita previa. Luego, se realiza una auditoria y en base a esta, la empresa realiza un plan de acciones correctivas. Si este plan cumple con los requisitos y es aprobado, se otorga la certificacion.
+
+Esta certificacion dura 3 años, pero debe ser mantenida mediante un seguimiento anual.
