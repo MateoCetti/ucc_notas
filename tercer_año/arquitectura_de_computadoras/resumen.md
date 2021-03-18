@@ -12,6 +12,9 @@
   - [Simplificacion por Karnaugh](#simplificacion-por-karnaugh)
     - [Adyacencia logica](#adyacencia-logica)
     - [Mapa de Karnaugh](#mapa-de-karnaugh)
+  - [Sistemas combinacionales](#sistemas-combinacionales)
+    - [Condiciones sin cuidado (no importa)](#condiciones-sin-cuidado-no-importa)
+  - [Aplicaciones del algebra de Boole](#aplicaciones-del-algebra-de-boole)
 
 ## Algebra de Boole
 
@@ -176,3 +179,26 @@ cada casilla del mapa es ADYACENTE físicamente y lógicamente con la que tiene 
 **Resultado en el esquema**
 
 ![Nuevo esquema](img/simplificacion/esquema.png)
+
+## Sistemas combinacionales
+
+Es un sistema donde las salidas dependen puramente del valor de las entradas.
+
+![](img/s_combinacional/s_combinacional.png)
+
+(Es como una fucnion con **n salidas**)
+
+### Condiciones sin cuidado (no importa)
+
+Hay aplicaciones donde la funcion **no se especifica** para ciertas combinaciones de las variables.
+
+![](img/s_combinacional/sin_cuidado.png)
+
+Estas condiciones se pueden aprovechar para **simplificar** aun mas la funcion con **Karnaugh**.
+
+![](img/s_combinacional/simplificado.png)
+
+## Aplicaciones del algebra de Boole
+
+- Sistema de alarmas
+- Sistema de votacion
