@@ -24,6 +24,7 @@
   - [Patrones estructurales](#patrones-estructurales)
     - [Patron Adapter](#patron-adapter)
     - [Patron bridge](#patron-bridge)
+    - [Patron composite](#patron-composite)
 
 ## Introduccion
 
@@ -504,3 +505,41 @@ El **patrón Bridge** intenta resolver este problema pasando de la herencia a la
 **Contras**
 
 - Puede ser que el código se complique si aplicas el patrón a una **clase muy cohesionada**.
+
+### Patron composite
+
+**Propósito**
+
+Composite es un **patrón de diseño estructural** que te permite componer objetos en **estructuras de árbol** y trabajar con esas estructuras como si fueran **objetos individuales**.
+
+**Problema**
+
+Imagina que tienes dos tipos de objetos: `Productos` y `Cajas`. Una Caja puede contener varios Productos así como cierto número de Cajas más pequeñas. Estas Cajas pequeñas también pueden contener algunos Productos o incluso Cajas más pequeñas, y así sucesivamente.
+
+Digamos que decides crear un sistema de pedidos que utiliza estas clases. Los pedidos pueden contener productos sencillos sin envolver, así como cajas llenas de productos... y otras cajas. ¿Cómo determinarás el precio total de ese pedido?
+
+Tienes que **conocer** de antemano las **clases** de Productos y Cajas a iterar, el **nivel de anidación** de las cajas y otros detalles desagradables.
+
+**Solución**
+
+El patrón Composite sugiere que trabajes con Productos y Cajas a través de una **interfaz común** que declara un método para calcular el precio total.
+
+La gran ventaja de esta solución es que no tienes que preocuparte por las **clases concretas** de los objetos que componen el árbol. No tienes que saber si un objeto es un producto simple o una sofisticada caja. Puedes tratarlos a todos por igual a través de la **interfaz común**. Cuando invocas un método, los propios objetos pasan la solicitud a lo largo del árbol.
+
+**Estructura**
+
+![](img/p_composite/uml.png)
+
+**Aplicabilidad**
+
+- Utiliza el patrón Composite cuando tengas que implementar una **estructura de objetos** con **forma de árbol**.
+- Utiliza el patrón cuando quieras que el código cliente trate elementos **simples** y **complejos** de la **misma forma**.
+
+**Pros**
+
+- Puedes trabajar con estructuras de árbol complejas con mayor **comodidad**: utiliza el polimorfismo y la recursión en tu favor.
+- **Principio de abierto/cerrado**. Puedes introducir nuevos tipos de elemento en la aplicación sin descomponer el código existente, que ahora funciona con el árbol de objetos.
+
+**Contras**
+
+- Puede resultar **difícil** proporcionar una **interfaz común** para **clases** cuya **funcionalidad difiere** demasiado. En algunos casos, tendrás que **generalizar en exceso** la interfaz componente, provocando que sea más **difícil de comprender**.
