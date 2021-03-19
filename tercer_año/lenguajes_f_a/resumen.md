@@ -14,6 +14,7 @@
     - [Gramaticas tipo 1 (Dependientes del contexto)](#gramaticas-tipo-1-dependientes-del-contexto)
     - [Gramaticas tipo 2 (Dependientes del contexto)](#gramaticas-tipo-2-dependientes-del-contexto)
     - [Gramaticas tipo 3 (Regulares)](#gramaticas-tipo-3-regulares)
+  - [Arbol de derivacion](#arbol-de-derivacion)
 
 ## Lenguajes gramaticales y formales
 
@@ -129,3 +130,7 @@ Sus reglas de producción **comienzan** por un **símbolo terminal**, que puede 
 siendo 
 - A,B ∈ VN 
 - α ∈ VT.
+
+## Arbol de derivacion
+
+![](img/arbol.png)

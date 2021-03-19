@@ -23,6 +23,7 @@
     - [Patron Prototype](#patron-prototype)
   - [Patrones estructurales](#patrones-estructurales)
     - [Patron Adapter](#patron-adapter)
+    - [Patron bridge](#patron-bridge)
 
 ## Introduccion
 
@@ -463,3 +464,43 @@ Los adaptadores no solo convierten datos a varios formatos, sino que también **
 **Contras**
 
 - La complejidad general del código aumenta, ya que debes introducir un grupo de nuevas interfaces y clases. En ocasiones resulta más sencillo cambiar la clase de servicio de modo que coincida con el resto de tu código.
+
+### Patron bridge
+
+**Proposito**
+
+Bridge es un patrón de **diseño estructural** que te permite **dividir** una **clase grande**, o un **grupo de clases** estrechamente relacionadas, en **dos jerarquías separadas** (abstracción e implementación) que pueden **desarrollarse independientemente** la una de la otra.
+
+Digamos que tienes una `clase geométrica` Forma con un par de subclases: `Círculo` y `Cuadrado`. Deseas extender esta jerarquía de clase para que incorpore **colores**, por lo que planeas crear las subclases de forma `Rojo` y `Azul`. Sin embargo, como ya tienes dos subclases, tienes que crear **cuatro combinaciones** de clase, como `CírculoAzul` y `CuadradoRojo`. Añadir nuevos tipos de forma y color a la jerarquía hará que ésta **crezca exponencialmente**. 
+
+![](img/p_bridge/geometricas.png)
+
+**Solucion**
+
+El **patrón Bridge** intenta resolver este problema pasando de la herencia a la **composición del objeto**. Esto quiere decir que se **extrae** una de las **dimensiones** a una **jerarquía** de **clases separada**, de modo que las clases originales **referencian** un **objeto** de la nueva jerarquía, en lugar de tener todo su estado y sus funcionalidades dentro de una clase.
+
+![](img/p_bridge/colores_figuras.png)
+
+**Estructura**
+
+![](img/p_adapter/uml.png)
+
+**Aplicabilidad**
+
+- Utiliza el patrón Bridge cuando quieras **dividir** y organizar una **clase monolítica** que tenga muchas variantes de una sola funcionalidad (por ejemplo, si la clase puede trabajar con diversos servidores de bases de datos).
+
+- Utiliza el patrón cuando necesites **extender** una clase en varias **dimensiones ortogonales** (independientes).
+
+- Utiliza el patrón Bridge cuando necesites poder **cambiar implementaciones** durante el **tiempo de ejecución**.
+
+
+**Pros**
+
+- Puedes **crear clases** y aplicaciones **independientes de plataforma**.
+- El **código cliente** funciona con abstracciones de alto nivel. **No está expuesto** a los **detalles de la plataforma**.
+- **Principio de abierto/cerrado**. Puedes introducir nuevas abstracciones e implementaciones independientes entre sí.
+- **Principio de responsabilidad única**. Puedes centrarte en la lógica de alto nivel en la abstracción y en detalles de la plataforma en la implementación.
+
+**Contras**
+
+- Puede ser que el código se complique si aplicas el patrón a una **clase muy cohesionada**.
