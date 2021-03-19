@@ -26,6 +26,7 @@
     - [Patron bridge](#patron-bridge)
     - [Patron composite](#patron-composite)
     - [Patron decorator](#patron-decorator)
+    - [Patron facade](#patron-facade)
 
 ## Introduccion
 
@@ -578,4 +579,60 @@ puedes sustituir fácilmente el objeto “ayudante” vinculado por otro, cambia
 
 “**Wrapper**” (envoltorio, en inglés) es el sobrenombre alternativo del patrón Decorator, que expresa claramente su idea principal. Un wrapper es un objeto que puede **vincularse con** un objeto **objetivo**. El wrapper contiene el mismo grupo de métodos que el objetivo y le delega todas las solicitudes que recibe. No obstante, el wrapper puede **alterar** el **resultado** haciendo algo **antes o después** de pasar la solicitud al objetivo.
 
-Los wrapper implementan la misma interfaz que el objeto envuelto. Éste es el motivo por el que, desde la perspectiva del cliente, estos objetos son idénticos. Haz que el campo de referencia del wrapper acepte cualquier objeto que siga esa interfaz. Esto te permitirá envolver un objeto en varios wrappers, añadiéndole el comportamiento combinado de todos ellos.
+Los **wrapper** implementan la misma **interfaz** que el **objeto envuelto**. Éste es el motivo por el que, desde la perspectiva del cliente, estos objetos son **idénticos**. Haz que el campo de referencia del wrapper acepte cualquier objeto que siga esa interfaz. Esto te permitirá **envolver** un objeto en **varios wrappers**, añadiéndole el comportamiento combinado de todos ellos.
+
+**Estructura**
+
+![](img/p_decorator/uml.png)
+
+**Aplicabilidad**
+
+- Utiliza el patrón Decorator cuando necesites **asignar funcionalidades** adicionales a objetos durante el **tiempo de ejecución** sin descomponer el código que utiliza esos objetos.
+- Utiliza el patrón cuando resulte extraño o no sea posible **extender** el **comportamiento** de un objeto **utilizando** la **herencia**.
+
+**Pros**
+
+- Puedes **extender el comportamiento** de un objeto **sin crear una nueva subclase**.
+- Puedes añadir o eliminar responsabilidades de un objeto durante el **tiempo de ejecución**.
+- Puedes **combinar** varios **comportamientos** **envolviendo** un objeto con **varios decoradores**.
+- **Principio de responsabilidad única**. Puedes dividir una clase monolítica que implementa muchas variantes posibles de comportamiento, en varias clases más pequeñas.
+
+**Contras**
+
+- Resulta difícil **eliminar** un **wrapper específico** de la pila de wrappers.
+- Es difícil implementar un decorador de tal forma que su comportamiento no dependa del orden en la pila de decoradores.
+- El código de configuración inicial de las capas pueden tener un aspecto desagradable.
+
+### Patron facade
+
+**Propósito**
+
+Facade es un **patrón de diseño estructural** que proporciona una **interfaz simplificada** a una **biblioteca**, un **framework** o cualquier otro grupo complejo de clases.
+
+**Problema**
+
+Imagina que debes lograr que tu código trabaje con un amplio grupo de objetos que pertenecen a una sofisticada biblioteca o framework. Normalmente, debes inicializar todos esos objetos, llevar un registro de las dependencias, ejecutar los métodos en el orden correcto y así sucesivamente.
+
+Como resultado, la lógica de negocio de tus clases se vería estrechamente acoplada a los detalles de implementación de las clases de terceros, haciéndola difícil de comprender y mantener.
+
+**Solución**
+
+Una fachada es una clase que proporciona una **interfaz simple** a un subsistema complejo que contiene muchas partes móviles. Una fachada puede proporcionar una **funcionalidad limitada** en comparación con trabajar directamente con el subsistema. Sin embargo, tan solo incluye las **funciones** realmente **importantes** para los clientes.
+
+**Estructura**
+
+![](img/p_facade/uml.png)
+
+**Aplicabilidad**
+
+- Utiliza el patrón Facade cuando necesites una interfaz limitada pero directa a un subsistema complejo.
+- Utiliza el patrón Facade cuando quieras estructurar un subsistema en capas.
+
+**Pros**
+
+- Puedes aislar tu código de la complejidad de un subsistema.
+
+**Contras**
+
+- Una fachada puede convertirse en un [objeto todopoderoso](https://es.wikipedia.org/wiki/Objeto_todopoderoso) acoplado a todas las clases de una aplicación.
+
