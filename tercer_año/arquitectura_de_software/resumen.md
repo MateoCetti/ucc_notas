@@ -27,6 +27,7 @@
     - [Patron composite](#patron-composite)
     - [Patron decorator](#patron-decorator)
     - [Patron facade](#patron-facade)
+    - [Patron FlyWeight](#patron-flyweight)
 
 ## Introduccion
 
@@ -635,4 +636,32 @@ Una fachada es una clase que proporciona una **interfaz simple** a un subsistema
 **Contras**
 
 - Una fachada puede convertirse en un [objeto todopoderoso](https://es.wikipedia.org/wiki/Objeto_todopoderoso) acoplado a todas las clases de una aplicación.
+
+### Patron FlyWeight
+
+**Propósito**
+
+Flyweight es un patrón de diseño estructural que te permite **mantener más objetos** dentro de la **cantidad disponible de RAM** **compartiendo** las **partes comunes** del estado entre varios objetos en lugar de mantener toda la información en cada objeto.
+
+**Problema**
+
+Creas un sencillo videojuego con **grandes cantidades** de balas, misiles y metralla de las que explosiones volarán por todo el mapa, ofreciendo una apasionante experiencia al jugador.
+
+Al terminarlo se lo envias a un amigo para una partida de prueba. Aunque el juego funcionaba sin problemas en tu máquina, tu amigo no logró jugar durante mucho tiempo. En su computadora el juego se paraba a los pocos minutos de empezar. Descubres que el juego se paraba debido a una cantidad insuficiente de RAM. Resulta que el equipo de tu amigo es mucho menos potente que tu computadora.
+
+El problema estaba relacionado con tu sistema de partículas. Cada partícula, como una bala, un misil o un trozo de metralla, estaba representada por un objeto separado que contenía gran cantidad de datos. En cierto momento, cuando la masacre alcanzaba su punto culminante en la pantalla del jugador, las partículas recién creadas ya no cabían en el resto de RAM, provocando que el programa fallara.
+
+**Solución**
+
+La información constante de un objeto suele denominarse su **estado intrínseco**. Existe dentro del objeto y otros objetos únicamente pueden leerla, no cambiarla. El resto del estado del objeto, a menudo alterado “desde el exterior” por otros objetos, se denomina el **estado extrínseco**.
+
+El patrón Flyweight sugiere que dejemos de **almacenar** el **estado extrínseco** dentro del objeto. En lugar de eso, debes **pasar este estado** a **métodos específicos** que **dependen de él**. Tan solo el estado intrínseco se mantiene dentro del objeto, permitiendo que lo reutilices en distintos contextos. Como resultado, necesitarás menos de estos objetos, ya que sólo se diferencian en el estado intrínseco, que cuenta con muchas menos variaciones que el extrínseco.
+
+**Almacenamiento del estado extrínseco**
+
+crear una clase de contexto separada que almacene el estado extrínseco junto con la referencia al objeto flyweight. 
+
+**Fabrica FlyWeight**
+
+Para un acceso más cómodo a varios objetos flyweight, puedes crear un método fábrica que gestione un grupo de objetos flyweight existentes. El método acepta el estado intrínseco del flyweight deseado por un cliente, busca un objeto flyweight existente que coincida con este estado y lo devuelve si lo encuentra. Si no, crea un nuevo objeto flyweight y lo añade al grupo.
 
