@@ -25,6 +25,7 @@
     - [Patron Adapter](#patron-adapter)
     - [Patron bridge](#patron-bridge)
     - [Patron composite](#patron-composite)
+    - [Patron decorator](#patron-decorator)
 
 ## Introduccion
 
@@ -543,3 +544,38 @@ La gran ventaja de esta solución es que no tienes que preocuparte por las **cla
 **Contras**
 
 - Puede resultar **difícil** proporcionar una **interfaz común** para **clases** cuya **funcionalidad difiere** demasiado. En algunos casos, tendrás que **generalizar en exceso** la interfaz componente, provocando que sea más **difícil de comprender**.
+
+### Patron decorator
+
+**Propósito**
+
+Decorator es un **patrón de diseño estructural** que te permite **añadir funcionalidades** a objetos **colocando** estos objetos dentro de **objetos encapsuladores** especiales que contienen estas funcionalidades.
+
+**Problema**
+
+Imagina que estás trabajando en una **biblioteca de notificaciones** que permite a otros programas notificar a sus usuarios acerca de eventos importantes.
+
+La versión inicial de la biblioteca se basaba en la clase Notificador que solo contaba con unos cuantos campos, un constructor y un único método **send**. El método podía aceptar un argumento de mensaje de un cliente y enviar el mensaje a una lista de **correos electrónicos** que se pasaban a la clase notificadora a través de su constructor. 
+
+
+A muchos de los usuarios les gustaría recibir mensajes **SMS**, otros por **Facebook** y por **Slack**.
+
+Para ello Extendemos la clase Notificador y metemos los métodos adicionales de notificación dentro de nuevas subclases.
+
+Pero entonces alguien te hace una pregunta razonable: “**¿Por qué no se pueden utilizar varios tipos de notificación al mismo tiempo?**“
+
+Intentaste solucionar ese problema creando **subclases** especiales que **combinaban** varios **métodos** de notificación dentro de una clase. Sin embargo, enseguida resultó evidente que esta solución **inflaría** el código en gran medida, no sólo el de la biblioteca, sino también el código cliente.
+
+![](img/p_decorator/notifications.png)
+
+**Solución**
+
+Como vimos anteriormente, la herencia tiene varias **limitaciones** importantes de las que debes ser consciente.
+
+Una de las formas de superar estas limitaciones es empleando la Agregación o la **Composición**
+
+puedes sustituir fácilmente el objeto “ayudante” vinculado por otro, cambiando el comportamiento del contenedor durante el **tiempo de ejecución**.
+
+“**Wrapper**” (envoltorio, en inglés) es el sobrenombre alternativo del patrón Decorator, que expresa claramente su idea principal. Un wrapper es un objeto que puede **vincularse con** un objeto **objetivo**. El wrapper contiene el mismo grupo de métodos que el objetivo y le delega todas las solicitudes que recibe. No obstante, el wrapper puede **alterar** el **resultado** haciendo algo **antes o después** de pasar la solicitud al objetivo.
+
+Los wrapper implementan la misma interfaz que el objeto envuelto. Éste es el motivo por el que, desde la perspectiva del cliente, estos objetos son idénticos. Haz que el campo de referencia del wrapper acepte cualquier objeto que siga esa interfaz. Esto te permitirá envolver un objeto en varios wrappers, añadiéndole el comportamiento combinado de todos ellos.
