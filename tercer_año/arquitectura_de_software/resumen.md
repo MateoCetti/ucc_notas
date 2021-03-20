@@ -28,6 +28,8 @@
     - [Patron decorator](#patron-decorator)
     - [Patron facade](#patron-facade)
     - [Patron FlyWeight](#patron-flyweight)
+  - [Patrones de comportamiento](#patrones-de-comportamiento)
+    - [patron strategy](#patron-strategy)
 
 ## Introduccion
 
@@ -664,4 +666,69 @@ crear una clase de contexto separada que almacene el estado extrínseco junto co
 **Fabrica FlyWeight**
 
 Para un acceso más cómodo a varios objetos flyweight, puedes crear un método fábrica que gestione un grupo de objetos flyweight existentes. El método acepta el estado intrínseco del flyweight deseado por un cliente, busca un objeto flyweight existente que coincida con este estado y lo devuelve si lo encuentra. Si no, crea un nuevo objeto flyweight y lo añade al grupo.
+
+**Estructura**
+
+![](img/p_flyWeight/uml.png)
+
+**Aplicabilidad**
+
+Utiliza el patrón Flyweight únicamente cuando tu programa deba soportar una **enorme cantidad de objetos** que apenas quepan en la RAM disponible.
+
+**Pros**
+
+- Puedes **ahorrar mucha RAM**, siempre que tu programa tenga toneladas de objetos similares.
+
+**Contras**
+
+- Puede que estés cambiando **RAM por ciclos CPU** cuando deba calcularse de nuevo parte de la información de contexto cada vez que alguien invoque un método flyweight.
+- El código se **complica mucho**. Los nuevos miembros del equipo siempre estarán preguntándose por qué el estado de una entidad se separó de tal manera.
+
+## Patrones de comportamiento
+
+### patron strategy
+
+Strategy es un **patrón de diseño de comportamiento** que te permite definir una **familia de algoritmos**, colocar cada uno de ellos en una **clase separada** y hacer sus **objetos intercambiables**.
+
+**Problema**
+
+Creas una aplicación de navegación para viajeros ocasionales. La aplicación giraba alrededor de un bonito mapa que ayudaba a los usuarios a orientarse rápidamente en cualquier ciudad.
+
+Una de las funciones más solicitadas para la aplicación era la planificación automática de rutas. Un usuario debía poder introducir una dirección y ver la ruta más rápida a ese destino mostrado en el mapa.
+
+La primera versión de la aplicación sólo podía generar las rutas sobre carreteras. Despues añadiste una opción para crear rutas a pie. Después, añadiste otra opción para permitir a las personas utilizar el transporte público en sus rutas. Más tarde planeaste añadir la generación de rutas para ciclistas, y más tarde, otra opción para trazar rutas por todas las atracciones turísticas de una ciudad.
+
+Cada vez que añadías un nuevo algoritmo de enrutamiento, la clase principal del navegador doblaba su tamaño. En cierto momento, la bestia se volvió demasiado difícil de mantener.
+
+**Solución**
+
+El patrón Strategy sugiere que tomes esa clase que hace algo específico de muchas formas diferentes y **extraigas** todos esos **algoritmos** para colocarlos en **clases separadas** llamadas **estrategias**.
+
+La clase original, llamada **contexto**, debe tener un campo para **almacenar** una **referencia** a una de las estrategias. El contexto delega el trabajo a un objeto de estrategia vinculado en lugar de ejecutarlo por su cuenta.
+
+La clase contexto funciona con **todas las estrategias** a través de la misma **interfaz genérica**, que sólo expone un único método para disparar el algoritmo encapsulado dentro de la estrategia seleccionada.
+
+**Estructura**
+
+![](img/p_strategy/uml.png)
+
+**Aplicabilidad**
+
+- Utiliza el patrón Strategy cuando quieras utiliza **distintas variantes** de un algoritmo dentro de un objeto y poder **cambiar** de un algoritmo a otro durante el **tiempo de ejecución**.
+- Utiliza el patrón Strategy cuando tengas muchas **clases similares** que sólo se diferencien en la **forma** en que **ejecutan** cierto **comportamiento**.
+-  Utiliza el patrón para aislar la lógica de negocio de una clase, de los detalles de implementación de algoritmos que pueden no ser tan importantes en el contexto de esa lógica.
+-  Utiliza el patrón cuando tu clase tenga un **enorme operador condicional** que cambie entre distintas variantes del mismo algoritmo.
+
+**Pros**
+
+- Puedes **intercambiar algoritmos** usados dentro de un objeto durante el **tiempo de ejecución**.
+- Puedes **aislar** los **detalles** de **implementación** de un algoritmo del código que lo utiliza.
+- Puedes sustituir la herencia por composición.
+- **Principio de abierto/cerrado**. Puedes introducir nuevas estrategias sin tener que cambiar el contexto.
+
+**Contras**
+
+- Si sólo tienes un par de algoritmos que raramente cambian, no hay una razón real para complicar el programa en exceso con nuevas clases e interfaces que vengan con el patrón.
+- Los clientes deben **conocer las diferencias entre estrategias** para poder seleccionar la adecuada.
+- Muchos lenguajes de programación modernos tienen un soporte de tipo funcional que te permite implementar distintas versiones de un algoritmo dentro de un grupo de funciones anónimas. Entonces puedes utilizar estas funciones exactamente como habrías utilizado los objetos de estrategia, pero sin saturar tu código con clases e interfaces adicionales.
 
