@@ -30,6 +30,7 @@
     - [Patron FlyWeight](#patron-flyweight)
   - [Patrones de comportamiento](#patrones-de-comportamiento)
     - [patron strategy](#patron-strategy)
+    - [Patron observer](#patron-observer)
 
 ## Introduccion
 
@@ -732,3 +733,44 @@ La clase contexto funciona con **todas las estrategias** a través de la misma *
 - Los clientes deben **conocer las diferencias entre estrategias** para poder seleccionar la adecuada.
 - Muchos lenguajes de programación modernos tienen un soporte de tipo funcional que te permite implementar distintas versiones de un algoritmo dentro de un grupo de funciones anónimas. Entonces puedes utilizar estas funciones exactamente como habrías utilizado los objetos de estrategia, pero sin saturar tu código con clases e interfaces adicionales.
 
+### Patron observer
+
+**Propósito**
+
+Observer es un **patrón de diseño de comportamiento** que te permite definir un **mecanismo de suscripción** para **notificar** a varios **objetos** sobre cualquier **evento** que le suceda al objeto que están observando.
+
+**Problema**
+
+Imagina que tienes dos tipos de objetos: un objeto `Cliente` y un objeto `Tienda`. El cliente está muy interesado en una marca particular de producto (digamos, un nuevo modelo de iPhone) que estará disponible en la tienda muy pronto.
+
+El cliente puede **visitar** la tienda cada día para comprobar la disponibilidad del producto. Pero, mientras el producto está en camino, la mayoría de estos viajes serán en vano.
+
+Por otro lado, la tienda podría enviar cientos de correos (lo cual se podría considerar **spam**) a todos los clientes cada vez que hay un nuevo producto disponible. Esto ahorraría a los clientes los interminables viajes a la tienda, pero, al mismo tiempo, molestaría a otros clientes que no están interesados en los nuevos productos.
+
+**Solución**
+
+El objeto que tiene un estado interesante le llamaremos **notificador**. El resto de los objetos que quieren conocer los cambios en el estado del notificador, se denominan **suscriptores**.
+
+Este mecanismo consiste en: 1) un campo matriz para almacenar una lista de **referencias a objetos suscriptores** y 2) varios métodos públicos que permiten **añadir suscriptores** y **eliminarlos** de esa lista.
+
+Ahora, cuando le sucede un evento importante al notificador, **recorre sus suscriptores** y llama al método de **notificación** específico de sus objetos.
+
+Es fundamental que todos los suscriptores implementen la **misma interfaz** y que el notificador únicamente se comunique con ellos a través de esa interfaz. Esta interfaz debe declarar el **método de notificación** junto con un grupo de parámetros que el notificador puede utilizar para pasar cierta información contextual con la notificación.
+
+**Estructura**
+
+![](img/p_observer/uml.png)
+
+**Aplicabilidad**
+
+- Utiliza el patrón Observer cuando los cambios en el estado de un objeto puedan necesitar **cambiar otros objetos** y el grupo de objetos sea desconocido de antemano o **cambie dinámicamente**.
+- tiliza el patrón cuando algunos objetos de tu aplicación **deban observar** a otros, pero sólo durante un tiempo limitado o en casos específicos.
+
+**Pros**
+
+- **Principio de abierto/cerrado**. Puedes introducir nuevas clases suscriptoras sin tener que cambiar el código de la notificadora (y viceversa si hay una interfaz notificadora).
+- Puedes **establecer relaciones** entre objetos durante el **tiempo de ejecución**.
+
+**Contras**
+
+-  Los suscriptores son notificados en un orden aleatorio.
