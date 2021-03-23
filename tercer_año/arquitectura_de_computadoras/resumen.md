@@ -17,7 +17,10 @@
   - [Aplicaciones del algebra de Boole](#aplicaciones-del-algebra-de-boole)
   - [Operaciones en un CPU](#operaciones-en-un-cpu)
     - [Complemento a la base y a la base-1](#complemento-a-la-base-y-a-la-base-1)
-  - [Suma](#suma)
+    - [XOR](#xor)
+    - [Suma y resta](#suma-y-resta)
+    - [Multiplicacion](#multiplicacion)
+    - [Decodificador](#decodificador)
 
 ## Algebra de Boole
 
@@ -216,13 +219,9 @@ el complemento a (β-1) de N se define como: (β^n -1)-N Y el complemento a β d
 
 Para obtener el complemento en base 2 (binario) simplemente cambiamos los 0's por 1's y al resultado final le sumamos 1.
 
-## Suma
+### XOR
 
-Para poder hacer operaciones de **suma** y **resta** en un CPU, se  usa el **sumador paralelo binario** (en este ejemplo es de 4 bits).
-
-![](img/s_combinacional_2/sumador_paralelo_binario.png)
-
-Donde esta compuerta es un **Xor**:
+Esta compuerta es un **Xor**:
 
 ![](img/s_combinacional_2/xor.png)
 
@@ -234,8 +233,53 @@ Y se denota asi:
 
 ![](img/s_combinacional_2/xor_d.png)
 
+### Suma y resta
+
+Para poder hacer operaciones de **suma** y **resta** en un CPU, se  usa el **sumador paralelo binario** (en este ejemplo es de 4 bits).
+
+![](img/s_combinacional_2/sumador_paralelo_binario.png)
+
+Donde FA = FULL ADDITION y su tabla es
+
+![](img/s_combinacional_2/fa/fa_1.png)
+
+En forma algebraica:
+
+![](img/s_combinacional_2/fa/fa_2_1.png)
+![](img/s_combinacional_2/fa/fa_2_2.png)
+
+En forma de compuertas
+
+![](img/s_combinacional_2/fa/fa_3.png)
+
+
 Donde los parametros de entrada son A_n, B_n y S.
 
 A_n y B_n son los numeros a sumar/ restar.
 
 Si S es 0, entonces el sistema suma los 2 componentes A_n y B_n. Si en cambio es 1, el Xor se encarga de transformar B_n en el complemento en base 2, para asi efectuar una resta (En este caso, C_0 seria 1, y creeria yo que C_4 no se tomaria en el resultado final).
+
+### Multiplicacion
+
+La multiplicacion se diagrama asi:
+
+![](img/s_combinacional_2/multi/multi_1.png)
+
+Que es lo mismo que esto:
+
+![](img/s_combinacional_2/multi/multi_2.png)
+
+Donde HA es half addition y funciona asi:
+
+![](img/s_combinacional_2/multi/ha.png)
+
+### Decodificador
+
+El decodificador es un circuito combinatorio que convierte info binaria de n entradas a 2^n salidas:
+
+![](img/s_combinacional_2/deco.png)
+![](img/s_combinacional_2/deco_1.png)
+
+**Implementacion**
+
+![](img/s_combinacional_2/deco_2.png)
