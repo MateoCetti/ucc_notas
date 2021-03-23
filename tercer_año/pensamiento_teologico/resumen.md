@@ -5,6 +5,7 @@
   - [Indice](#indice)
   - [Email profe](#email-profe)
   - [Introduccion](#introduccion)
+  - [Las religiones](#las-religiones)
 
 ## Email profe
 
@@ -31,3 +32,37 @@ La rata (y por lo tanto las personas) esta en constante busqueda de la **felicid
 Que el ser humano esta codicado para buscar la felicidad constantemente. Mientras la sociedad impone a la felicidad como obtenible por medio del consumo, la religion la presenta como obtenible mediante el servicio y la atencion al projimo.
 
 Un sinonimo de felicidad es **plenitud** (estar completo / satisfecho / lleno).
+
+## Las religiones
+
+El `nihilismo` es una **corriente filosófica** que sostiene la **imposibilidad** del **conocimiento**, y niega la **existencia** y el **valor** de todas las cosas. (tambien **negación** de toda **creencia** o todo **principio moral**, **religioso**, **político** o **social**.)
+
+El origen etimologico de la palabra religion es:
+- **Re**: repeticion / vovler a
+- **Ligare**: atar/unir/enlazar
+
+Por lo tanto **religion** significa volver a unirse (con lo trascendental)
+
+Vemos un video (algun episodio del programa `religiones` del canal **encuentro**) y rescatamos:
+
+- **Definicion de religion**: 
+  - respuesta al origen de la vida
+  - **sistema de creencias** que busca **explicar** y **construir** el mundo.
+- Etapas de su **evolucion** en la historia:
+  -  Primero (primeras civilizaciones humanas) era una forma de **explicar lo desconocido** (el sol, rayos, etc.)
+  -  Luego, incumbia tambien una serie de **rituales** (antes de cazar, cosechar, enterrar un ser querido)
+  -  Mas tarde, se formaron un conjunto de **normas** que construyeron **sistemas sociales** enteros
+  -  Actualmente, son una parte practicamente inprescindible de la **cultura**, formando parte de nuestras **costumbres**, entre otras cosas
+- Nombrar distintos **tipos** de religiones
+  - **Religion monoteista**: un solo dios (cristianos)
+  - **Religion noteista**: sin dios (taoismo/confusianismo)
+  - **Religion politeista**: muchos dioses (antiguas civilizaciones egipcias/griegas)
+    - **esoteismo**: (?) (esoterismo?) 
+
+Las religiones estan compuestas por:
+- Credo / doctrina
+- Dimension etica/moral
+- ritual
+- comunicatoria
+- dimension orante
+
