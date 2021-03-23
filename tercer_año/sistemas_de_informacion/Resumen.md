@@ -9,7 +9,9 @@
       - [Elementos de un sistema](#elementos-de-un-sistema)
       - [Clasificacion de los sistemas](#clasificacion-de-los-sistemas)
       - [Principios generales de un sistema](#principios-generales-de-un-sistema)
-    - [TGS (?)](#tgs-)
+  - [Sistemas de informacion](#sistemas-de-informacion)
+    - [Clasificacion de los SI en 2 dimensiones](#clasificacion-de-los-si-en-2-dimensiones)
+  - [Sistemas ERP](#sistemas-erp)
 
 ## UNIDAD 1: Teoria general de sistemas (TGS)
 
@@ -158,4 +160,92 @@ de un **fin u objetivo**
 
 Tendencia a **adaptarse** con el fin de alcanzar un **equilibrio interno** frente a los **cambios externos** del medio ambiente.
 
-### TGS (?)
+## Sistemas de informacion
+
+`Informacion`: **Datos procesados** en forma **significativa** para el **receptor**, con valor real y perceptible para decisiones presentes y futuras.
+
+`Datos`: **conjunto de símbolos** que **representan**
+formalmente a **objetos**, **sujetos** y **acontecimientos**, así como a sus correspondientes **atributos** y
+**características** (registros)
+
+La informacion cumple **funciones**. algunas de estas son:
+- Agrega conocimiento
+- Evalúa y notifica
+- Reduce la incertidumbre
+- Estimula a la acción
+- Ayuda a la resolución de problemas y TD
+- Revela y filtra alternativas posibles
+
+**Atributos** de la informacion:
+
+- Completitud (cantidad)
+- Exactitud (precisión, detalle, error)
+- Relevancia
+- Confianza (calidad, presentación)
+- Oportunidad
+- Verificabilidad
+- Economicidad
+
+**Caracteristicas** de la informacion:
+
+![](img/caract_inf.png)
+
+**Ciclo de vida** de la informacion:
+
+![](img/vida_inf.png)
+
+`Conocimiento`: Mezcla de experiencia, valores, información que da un marco para la incorporación y evaluación de nuevas experiencias e información
+
+**Ciclo de vida** del `conocimiento`:
+
+![](img/vida_conocimiento.png)
+
+**Sistemas de informacion**:
+
+**Conjunto** formal de personas, equipos y procedimientos (extenso) Que en forma integrada y **coordinada**, **Operan** sobre un conjunto de **datos** estructurados Acorde con las **necesidades organizacionales** Capturan datos, los **transforman en información**, los almacenan y distribuyen, A fin de **apoyar** las **actividades** de la **organización** (operaciones  control, administración, decisión) Para desarrollar y **lograr** los **objetivos planteados**
+
+### Clasificacion de los SI en 2 dimensiones
+
+![](img/clasif_si.png)
+
+## Sistemas ERP
+
+El `sistema ERP` es un **sistema integrado** de SW de **gestión empresarial**, compuesto de **módulos funcionales** (Logística, Finanzas, RRHH, Producción, Ventas, Compras, etc) susceptibles de ser **adaptados** a las **necesidades** de cada cliente
+
+(**Soluciones integrales** que dan **respuesta** a diferentes **niveles organizacionales** en diferentes **areas funcionales**)
+
+Objetivo de los `ERP`: **Facilitar** la **gestión** de los **recursos de la empresa** integrando y coordinando la información de los distintas áreas funcionales.
+
+**Caracteristicas**:
+
+- Es el sistema de mayor nivel de **complejidad**
+- Orientado al **cliente** y resultados finales
+- Integración **VERTICAL** con
+  - Proveedores (incluye módulo SCM)
+  - Clientes (incluye módulo CRM)
+- Integración **HORIZONTAL**: f() internas
+- Alineado con la **VISION POR PROCESOS**
+  - **PROCESO**: conjunto estructurado y medible de actividades (IN/OUT) desarrolladas en una org., a fin de lograr un resultado concreto para un cliente / mercado específico (Hammer y Champy).
+  - CADENA DE VALOR
+
+`Porter`
+
+**Valor:** cantidad que los clientes estás dispuestos a pagar
+
+**Cadena de valor:** secuencia de actividades que generan valor para el cliente
+
+![](img/porter.png)
+
+**Estructura de los ERP**
+
+- Estructura modular por procesos
+  - Cada proveedor tiene una propia por razones comerciales y técnicas 
+- Implantación por etapas
+- Incluye:
+  - Aplicaciones técnicas
+  - Arquitectura o plataforma
+    - varias DB: Oracle, MS SQL Server, IBM DB2, Progress
+    - varios OS: MS NT Server, UNIX, OS 400
+    - lenguajes 4GL (aplicaciones y reportes a medida)
+  - Herramientas de auditoría del sistema y DB
+  - Soporte de tecnologías de internet: XML, JAVA
