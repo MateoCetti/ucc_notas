@@ -15,6 +15,9 @@
   - [Sistemas combinacionales](#sistemas-combinacionales)
     - [Condiciones sin cuidado (no importa)](#condiciones-sin-cuidado-no-importa)
   - [Aplicaciones del algebra de Boole](#aplicaciones-del-algebra-de-boole)
+  - [Operaciones en un CPU](#operaciones-en-un-cpu)
+    - [Complemento a la base y a la base-1](#complemento-a-la-base-y-a-la-base-1)
+  - [Suma](#suma)
 
 ## Algebra de Boole
 
@@ -202,3 +205,37 @@ Estas condiciones se pueden aprovechar para **simplificar** aun mas la funcion c
 
 - Sistema de alarmas
 - Sistema de votacion
+- Operaciones en una CPU
+
+## Operaciones en un CPU
+
+### Complemento a la base y a la base-1
+
+Dado un número N en base β que tiene n dígitos,
+el complemento a (β-1) de N se define como: (β^n -1)-N Y el complemento a β de N se define como:  β^n -N 
+
+Para obtener el complemento en base 2 (binario) simplemente cambiamos los 0's por 1's y al resultado final le sumamos 1.
+
+## Suma
+
+Para poder hacer operaciones de **suma** y **resta** en un CPU, se  usa el **sumador paralelo binario** (en este ejemplo es de 4 bits).
+
+![](img/s_combinacional_2/sumador_paralelo_binario.png)
+
+Donde esta compuerta es un **Xor**:
+
+![](img/s_combinacional_2/xor.png)
+
+Que tiene esta tabla de verdad:
+
+![](img/s_combinacional_2/xor_tabla.png)
+
+Y se denota asi:
+
+![](img/s_combinacional_2/xor_d.png)
+
+Donde los parametros de entrada son A_n, B_n y S.
+
+A_n y B_n son los numeros a sumar/ restar.
+
+Si S es 0, entonces el sistema suma los 2 componentes A_n y B_n. Si en cambio es 1, el Xor se encarga de transformar B_n en el complemento en base 2, para asi efectuar una resta (En este caso, C_0 seria 1, y creeria yo que C_4 no se tomaria en el resultado final).
