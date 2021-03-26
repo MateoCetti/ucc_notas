@@ -14,7 +14,12 @@
     - [Gramaticas tipo 1 (Dependientes del contexto)](#gramaticas-tipo-1-dependientes-del-contexto)
     - [Gramaticas tipo 2 (Dependientes del contexto)](#gramaticas-tipo-2-dependientes-del-contexto)
     - [Gramaticas tipo 3 (Regulares)](#gramaticas-tipo-3-regulares)
-  - [Arbol de derivacion](#arbol-de-derivacion)
+    - [Arbol de derivacion](#arbol-de-derivacion)
+  - [Gramáticas Regulares y Autómatas Finitos](#gramáticas-regulares-y-autómatas-finitos)
+    - [Maquinas Secuenciales](#maquinas-secuenciales)
+    - [Maquina de Mealy](#maquina-de-mealy)
+    - [Maquina de Moore](#maquina-de-moore)
+    - [Automatas finitos deterministas](#automatas-finitos-deterministas)
 
 ## Lenguajes gramaticales y formales
 
@@ -131,6 +136,79 @@ siendo
 - A,B ∈ VN 
 - α ∈ VT.
 
-## Arbol de derivacion
+### Arbol de derivacion
 
 ![](img/arbol.png)
+
+## Gramáticas Regulares y Autómatas Finitos
+
+`Nota`: Los simbolos terminales de los lenguajes de programacion (lenguajes formales) son las palabras reservadas (IF, WHILE, etc...)
+
+`Nota`: Las "gramaticas regulares" pueden ser verificadas por maquinas automatas
+
+### Maquinas Secuenciales
+
+Una maquina secuencial es un **automata** (Máquina automática programable capaz de realizar determinadas operaciones de manera autónoma) que dada una palabra de **entrada** puede generar alguna **salida**
+
+Toda maquina posee:
+
+- Alfabeto de **entrada**.
+- Conjunto finito de **estados**.
+- **Función de transición** entre estados.
+- Algún tipo especifico de **salida**
+
+**Estado**
+
+Identifica de forma única una **situación** del sistema.
+
+**Diagrama de estados**
+
+Es un diagrama de nodos y aristas (**Grafo**). Muestra como la máquina **evoluciona** a través de los estados. (JFLAP)
+
+**Transicion**
+
+Cambio de un estado al próximo.
+
+**Proximo estado**
+
+El estado al que irá la máquina mediante una transición.
+
+### Maquina de Mealy
+
+La salida depende de la **entrada** y del **estado actual** de la máquina.
+
+**Notacion**
+
+![](img/mealy.png)
+
+**Donde**:
+
+![](img/mealy_donde.png)
+
+### Maquina de Moore
+
+El **estado** y el **símbolo** de entrada **actual** deciden el **siguiente estado**. La **salida** depende solo del **estado actual** de la máquina. 
+
+**Notacion**
+
+![](img/moore.png)
+
+**Donde**
+
+![](img/moore_donde.png)
+
+### Automatas finitos deterministas
+
+Son máquinas secuenciales que se utilizan para **reconocer patrones**. El par (entrada, estado actual) define la transición al nuevo estado.
+
+`Nota`: No hay alfabeto de salida. El autómata acepta o no acepta la cadena de entrada
+
+Cuando la cadena de entrada se procesa con éxito y el autómata **alcanza** su **estado final** dicha **cadena** es **aceptada**, en caso contrario es **rechazada**.
+
+**Notacion**
+
+![](img/finito.png)
+
+**Donde**
+
+![](img/finito_donde.png)
