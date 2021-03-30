@@ -6,6 +6,7 @@
   - [Email profe](#email-profe)
   - [Introduccion](#introduccion)
   - [Las religiones](#las-religiones)
+  - [Religion en la actualidad](#religion-en-la-actualidad)
 
 ## Email profe
 
@@ -65,4 +66,12 @@ Las religiones estan compuestas por:
 - ritual
 - comunicatoria
 - dimension orante
+
+## Religion en la actualidad
+
+`Nota`: Entendemos por crisis a un proceso que separa elementos, y tambien a revolucion y posibilidad de que algo funcione de otra manera.
+
+En la actualidad estamos viviendo una subjetivizacion / desinstitucionalizacion de la experiencia religiosa. Quizas este fenomeno fue/ es impulsado por la sexualidad contemporanea.
+
+Ademas, la religion en algunos casos, o en algunas personas es entendida como solo una o unas cuantas de sus partes (credo/moral/ritual).
 
