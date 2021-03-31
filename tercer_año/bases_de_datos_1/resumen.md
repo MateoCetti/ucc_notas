@@ -27,6 +27,8 @@
       - [Especialización](#especialización)
       - [Generalizacion](#generalizacion)
       - [Restricciones de especialización/generalización](#restricciones-de-especializacióngeneralización)
+  - [Normalizacion](#normalizacion)
+    - [1FN](#1fn)
 
 ## SGBD
 
@@ -384,3 +386,30 @@ Ambos términos, especialización y generalización, son **perfectamente interca
 3. **Restricción de completitud**: especifica si **una entidad** del conjunto de entidades de **nivel superior** debe pertenecer o no **al menos a uno** de los conjuntos de entidades del nivel inferior en una generalización.
 - **total**: una entidad **sólo** puede pertenecer a **uno** de los conjuntos de entidades de nivel inferior
 - **parcial**: una entidad **no necesita** pertenecer a uno de los conjuntos de entidades de nivel inferior
+
+## Normalizacion
+
+En esta seccion veremos las caracteristicas de los buenos dieños relacionales, y como poder desarrollar dichos buenos diseños.
+
+En las bases de datos, se pueden descomponer y combinar las tablas. Pero no en todos los casos esto resulta conveniente. Ej:
+
+![](img/mal_1.png)
+![](img/mal_2.png)
+
+En estos ejemplos, se pierde informacion, o esta se vuelve de caracter ambiguo.
+
+Para evitar estos casos, se suelen diseñar las bases de datos siguiendo unas **formas normales**, que son "reglas" a seguir para lograr un **buen diseño** en practicamente cualquier base de datos.
+
+![](img/fn.png)
+
+### 1FN
+
+Una `tabla` está en **Primera Forma Normal** si:
+
+- Todos los **atributos** son **«atómicos»**. Por ejemplo, en el campo teléfono no tenemos varios teléfonos.
+- La tabla contiene una **clave primaria única**. Por ejemplo el NIF para personas, la matrícula para vehículos o un simple id autoincremental. Si no tiene clave, no es 1FN.
+- La clave primaria **no** contiene **atributos nulos**. No podemos tener filas para las que no haya clave (por ejemplo, personas sin NIF o vehículos sin matrícula).
+- **No** debe existir **variación** en el **número de columnas**. Si algunas filas tienen 8 columnas y otras 3, pues no estamos en 1FN.
+- Los campos **no clave** deben **identificarse** por la **clave**. Es decir, que los campos no clave **dependen funcionalmente** de la clave. Esto es prácticamente lo mismo que decir que **existe clave primaria**.
+  - Una dependencia funcional es **trivial** si la cumplen todos los ejemplares de una relacion. (Ej: nombre_cliente depende de número_préstamo y nombre_cliente)
+- Debe Existir una **independencia del orden** tanto de las **filas** como de las **columnas**, es decir, si los datos cambian de orden no deben cambiar sus significados. Por ejemplo, si en la columna 1 tenemos el primer apellido y en la columna 2 tenemos el segundo, pues no estamos en 1FN. Igualmente si en la tercera fila tenemos el tercer mejor expediente y en la quinta fila el quinto, no estamos en 1FN.
