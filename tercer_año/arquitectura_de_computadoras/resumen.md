@@ -15,12 +15,15 @@
   - [Sistemas combinacionales](#sistemas-combinacionales)
     - [Condiciones sin cuidado (no importa)](#condiciones-sin-cuidado-no-importa)
   - [Aplicaciones del algebra de Boole](#aplicaciones-del-algebra-de-boole)
-  - [Operaciones en un CPU](#operaciones-en-un-cpu)
+  - [Operaciones en un CPU (sistema combinacional)](#operaciones-en-un-cpu-sistema-combinacional)
     - [Complemento a la base y a la base-1](#complemento-a-la-base-y-a-la-base-1)
     - [XOR](#xor)
-    - [Suma y resta](#suma-y-resta)
-    - [Multiplicacion](#multiplicacion)
-    - [Decodificador](#decodificador)
+    - [Suma y resta (sistema combinacional)](#suma-y-resta-sistema-combinacional)
+    - [Multiplicacion (sistema combinacional)](#multiplicacion-sistema-combinacional)
+    - [Decodificador (sistema combinacional)](#decodificador-sistema-combinacional)
+    - [Codificador (sistema combinacional)](#codificador-sistema-combinacional)
+    - [Multiplexor (sistema combinacional)](#multiplexor-sistema-combinacional)
+  - [Sistemas secuenciales](#sistemas-secuenciales)
 
 ## Algebra de Boole
 
@@ -210,7 +213,7 @@ Estas condiciones se pueden aprovechar para **simplificar** aun mas la funcion c
 - Sistema de votacion
 - Operaciones en una CPU
 
-## Operaciones en un CPU
+## Operaciones en un CPU (sistema combinacional)
 
 ### Complemento a la base y a la base-1
 
@@ -233,7 +236,7 @@ Y se denota asi:
 
 ![](img/s_combinacional_2/xor_d.png)
 
-### Suma y resta
+### Suma y resta (sistema combinacional)
 
 Para poder hacer operaciones de **suma** y **resta** en un CPU, se  usa el **sumador paralelo binario** (en este ejemplo es de 4 bits).
 
@@ -259,7 +262,7 @@ A_n y B_n son los numeros a sumar/ restar.
 
 Si S es 0, entonces el sistema suma los 2 componentes A_n y B_n. Si en cambio es 1, el Xor se encarga de transformar B_n en el complemento en base 2, para asi efectuar una resta (En este caso, C_0 seria 1, y creeria yo que C_4 no se tomaria en el resultado final).
 
-### Multiplicacion
+### Multiplicacion (sistema combinacional)
 
 La multiplicacion se diagrama asi:
 
@@ -273,7 +276,7 @@ Donde HA es half addition y funciona asi:
 
 ![](img/s_combinacional_2/multi/ha.png)
 
-### Decodificador
+### Decodificador (sistema combinacional)
 
 El decodificador es un circuito combinatorio que convierte info binaria de n entradas a 2^n salidas:
 
@@ -283,3 +286,47 @@ El decodificador es un circuito combinatorio que convierte info binaria de n ent
 **Implementacion**
 
 ![](img/s_combinacional_2/deco_2.png)
+
+### Codificador (sistema combinacional)
+
+El codificador realiza la operación inversa de un decodificador.
+
+### Multiplexor (sistema combinacional)
+
+Un multiplexor es un circuito combinatorio que **selecciona** información binaria de una entre **muchas líneas de entrada** y la dirige a **una sola línea de salida**.
+
+![](img/multiplexor/multiplexor_1.png)
+
+**Implementacion de ejemplo**:
+
+Se puede implementar una función booleana de n variables con un multiplexor que tiene n-1 entradas de selección. Las primeras n-1 variables de la función se conectan a las entradas de selección del multiplexor. La variable que resta de la función se la utiliza para la entrada de datos.
+
+![](img/multiplexor/multiplexor_2.png)
+
+## Sistemas secuenciales
+
+En los sistemas secuenciales, a diferencia de los combinacionales, las salidas dependen no solo de las entradas, sino tambien de los **estados internos**.
+
+![](img/s_secuenciales/s_sec_1.png)
+
+Los estados internos dependen de la **memoria** y el **tiempo**.
+
+- Tiempo: onda periodica entre 0 y 1
+
+![](img/s_secuenciales/time.png)
+- Memoria: Flip-Flop (celda elemental de memoria de 1 bit, almacena valor posible 0 o 1)
+
+![](img/s_secuenciales/flip_flop.png)
+
+**Flip-Flop-D (Delay)** D_t = Q_(t+1) (?)
+
+**Caja negra**:
+
+![](img/s_secuenciales/black_box.png)
+
+**Diagrama de estados**
+
+![](img/s_secuenciales/d_estados.png)
+![](img/s_secuenciales/t_v.png)
+![](img/s_secuenciales/kar.png)
+![](img/s_secuenciales/xd.png)
