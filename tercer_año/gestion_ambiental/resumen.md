@@ -5,6 +5,7 @@
     - [ISO 14001](#iso-14001)
     - [Implantar un SGA en una empresa](#implantar-un-sga-en-una-empresa)
   - [Politica ambiental](#politica-ambiental)
+  - [Produccion Mas Limpia (PML)](#produccion-mas-limpia-pml)
 
 ## Introduccion
 
@@ -227,3 +228,62 @@ Luego de todo esto, la direccion realiza una revision final y en base a eso toma
 La empresa decide certificarse y solicita dicha certificacion. Junto con la solicitud, la empresa manda documentacion, que se estudia y se realiza una visita previa. Luego, se realiza una auditoria y en base a esta, la empresa realiza un plan de acciones correctivas. Si este plan cumple con los requisitos y es aprobado, se otorga la certificacion.
 
 Esta certificacion dura 3 años, pero debe ser mantenida mediante un seguimiento anual.
+
+## Produccion Mas Limpia (PML)
+
+La **producción más limpia** es la aplicación continua de una **estrategia ambiental** **preventiva e integral**, a los procesos productivos, productos y servicios para incrementar la **eficiencia global** y reducir riesgos para los seres humanos y el ambiente.
+
+La PML puede ser aplicada a los **procesos** empleados en **cualquier industria**, a los **productos** mismos y a los diferentes **servicios** prestados a la sociedad. 
+
+Para empezar a implementar la PML, primero debemos **Identificar** **opciones** para **prevenir o reducir** la **generación de residuos** en fuente.
+
+Para eso nos preguntamos:
+
+1. Qué **clase** y qué **cantidad** de residuos están siendo generados?
+2. Cuál es el **costo** relacionado con estos residuos?
+3. **Dónde** exactamente se generan estos residuos?
+4. **Por qué** se generan?
+5. **Cómo pueden evitarse**?
+
+La PML produce:
+
+- **En los procesos productivos**: la PML conduce al **ahorro** de materias primas, agua y/o energía; a la **eliminación** de materias primas **tóxicas y peligrosas**; y a la reducción, en la fuente, de la **cantidad** y toxicidad de todas las **emisiones y desechos**, durante el proceso de producción.
+- **En los productos**: la PML busca reducir los **impactos negativos** de los productos sobre el **ambiente**, la salud y la seguridad, durante todo su **ciclo de vida**, desde la extracción de las materias primas, pasando por la transformación y uso, hasta la disposición final del producto.
+  
+![](img/PML_piramide.png)
+
+Mientras mas nos enfoquemos en la prevencion de los procesos productivos, mejor sera la inversion y mayor sera el beneficio ambiental que generaremos.
+
+La PML se puede aplicar a cualquier tipo de organizacion. Ya sea a sus procesos, a los productos o a los servicios que esta brinde.
+
+`Nota`: Un **residuo** es todo lo generado (solido, liquido, gaseoso, sonoro, etc.) que no es aprovechado y por lo tanto desechado.
+
+**Beneficios para la empresa**
+
+- Cumplimiento con la legislación
+- Mejoras en la calidad del producto
+- Mejora el desempeño ambiental
+- Mejora la imagen de la empresa y producto 
+- Reducción costos ambientales
+- Nuevas oportunidades de mercado
+
+Para **implementar** el PML, primero recolectamos los datos de la empresa.
+
+![](img/pml_datos.png)
+
+Luego analizamos el **proceso productivo**. nos preguntamos cuanta cantidad de desechos se producen, donde, porque, etc.
+
+![](img/pml_proceso.png)
+
+Luego generamos las opciones segun este diagrama:
+
+![](img/pml_opciones.png)
+
+Se escogen las opciones mas viables y se implementan a travez del plan de accion ambiental.
+
+Para un correcto desempeño del PML se debe tener un seguimiento y control del mismo que consta de:
+
+- Control sistemático del cumplimiento del plan de acción ambiental.
+- Evaluación de los beneficios obtenidos por su implementación.
+- Análisis de los objetivos y metas ambientales.
+- Evaluación de la contribución al mejoramiento del desempeño ambiental de la organización.
