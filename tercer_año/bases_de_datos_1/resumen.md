@@ -29,6 +29,7 @@
       - [Restricciones de especialización/generalización](#restricciones-de-especializacióngeneralización)
   - [Normalizacion](#normalizacion)
     - [1FN](#1fn)
+    - [FNBC](#fnbc)
 
 ## SGBD
 
@@ -413,3 +414,19 @@ Una `tabla` está en **Primera Forma Normal** si:
 - Los campos **no clave** deben **identificarse** por la **clave**. Es decir, que los campos no clave **dependen funcionalmente** de la clave. Esto es prácticamente lo mismo que decir que **existe clave primaria**.
   - Una dependencia funcional es **trivial** si la cumplen todos los ejemplares de una relacion. (Ej: nombre_cliente depende de número_préstamo y nombre_cliente)
 - Debe Existir una **independencia del orden** tanto de las **filas** como de las **columnas**, es decir, si los datos cambian de orden no deben cambiar sus significados. Por ejemplo, si en la columna 1 tenemos el primer apellido y en la columna 2 tenemos el segundo, pues no estamos en 1FN. Igualmente si en la tercera fila tenemos el tercer mejor expediente y en la quinta fila el quinto, no estamos en 1FN.
+
+Segun lo visto en clase, la primera forma normal consiste en que los atributos deben de ser atomicos.
+
+Si no se cumple la 1FN, hay que **descomponer** los atributos en elementos mas pequeños.
+
+### FNBC
+
+La forma normal de **Boyle-Codd** consiste en que la unica dependencia funcional que debe exisitir en un esquema de relaciones es la de la **superclave** con los demas atributos. es decir, siendo `R` = `a` -> `b` un esquema relacional, dicho esquema esta en la forma normal de Boyle-Codd si:
+
+- `a` -> `b` es **trivial**
+- o `a` es una superclave.
+
+Si no se cumple esta forma, debemos de desarmar el esquema, quedandonos con dos tablas nuevas:
+
+- **tabla 1**: `a U b`
+- **tabla 2**: `R - (a-b)` (no deberia ser R-b?) 
