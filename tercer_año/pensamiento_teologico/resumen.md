@@ -7,6 +7,7 @@
   - [Introduccion](#introduccion)
   - [Las religiones](#las-religiones)
   - [Religion en la actualidad](#religion-en-la-actualidad)
+  - [Criticas a la religion](#criticas-a-la-religion)
 
 ## Email profe
 
@@ -75,3 +76,15 @@ En la actualidad estamos viviendo una subjetivizacion / desinstitucionalizacion 
 
 Ademas, la religion en algunos casos, o en algunas personas es entendida como solo una o unas cuantas de sus partes (credo/moral/ritual).
 
+## Criticas a la religion
+
+Las criticas a la religion mas conocidas son:
+
+
+**Crítica positivista**: Esta crítica propone que a lo largo del tiempo, la humanidad pasó por 3 etapas, la **etapa teológica**, donde se explicaban los fenómenos desconocidos mediante entidades divinas (Dioses, politeísmo, monoteísmo), la **etapa metafísica**, en donde se traducen los puntos de vista de las cosas de la religiones en ideas o principios de índole abstracto, y la **etapa positiva**, en donde se estudia mediante la ciencia las leyes de la naturaleza. Estando en la actual etapa positiva, la religión, así como todo, queda **sometido** al saber científico, en el sentido que este determina cuán “real” es dicha religión.
+
+**Crítica antropológica**: La crítica antropológica expresa que el hombre crea la religión para objetivizar sus deseos, temores y fantasías más íntimas. Dice, en términos generales, que el hombre creó a Dios a su imagen y semejanza
+
+**Crítica marxista**: Esta crítica dice que las religiones son una **herramienta** utilizada por los **sectores** más **poderosos** de la sociedad para **mantener** su **poder** y así explotar a los sectores menos poderosos de la población.
+
+**Crítica de la "muerte de Dios"**: Esta crítica  consiste en la idea de que en la historia llegó un determinado momento en la que las personas **no necesitaron** más darle una explicación a lo sagrado, divino, trascendente. Todo esto pierde valor, y la forma de encontrar sentido a la vida y a las cosas sería en el mundo inmanente, aquí y ahora
