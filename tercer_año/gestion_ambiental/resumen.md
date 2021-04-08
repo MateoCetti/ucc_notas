@@ -6,6 +6,7 @@
     - [Implantar un SGA en una empresa](#implantar-un-sga-en-una-empresa)
   - [Politica ambiental](#politica-ambiental)
   - [Produccion Mas Limpia (PML)](#produccion-mas-limpia-pml)
+  - [Estudio del impacto ambiental](#estudio-del-impacto-ambiental)
 
 ## Introduccion
 
@@ -287,3 +288,49 @@ Para un correcto desempeño del PML se debe tener un seguimiento y control del m
 - Evaluación de los beneficios obtenidos por su implementación.
 - Análisis de los objetivos y metas ambientales.
 - Evaluación de la contribución al mejoramiento del desempeño ambiental de la organización.
+
+## Estudio del impacto ambiental
+
+`EIA`: es un proceso de **análisis**, más o menos largo y complejo, encaminado a que los agentes implicados formen un **juicio previo**, lo más objetivo posible, sobre los **efectos ambientales** de una acción humana prevista (a la que se denomina **proyecto**) y sobre la posibilidad de **evitarlos**, **reducirlos** a niveles aceptables o **compensarlos**"
+
+La ley es la que definen en que proyectos es necesarios un `EIA`.
+
+Los impactos no necesariamente son ambientales (pueden ser culturales, quimicos, bioticos, socioeconomicos, etc) ni negativos.
+
+En otras palabras, la `EIA` es:
+
+- La `EIA` es un instrumento de **gestión pública**
+- Es un **procedimiento administrativo**
+- Como tal, trae implícita la capacidad de **establecer exigencias** y responsabilidades en los distintos niveles de gobierno
+- Y también, sobre todo, de los sectores privados en su accionar con respecto al medio ambiente
+
+A partir de estas conceptualizaciones se pone
+de manifiesto que **cualquier actividad humana**
+tiene **efectos** sobre el medio ambiente que
+podrán ser positivos o negativos. 
+
+Los problemas regionales que se generan a partir de estos impactos tienen repercusion con los problemas mundiales, y viceversa.
+
+![](img/global_regional.png)
+
+Al aplicar un `EIA` se debe estudiar:
+
+1. La modificación de las características del medio.
+2. La modificación de los valores o méritos, que hacen al mantenimiento o conservación de ese medio.
+3. El significado ambiental que dichas modificaciones tienen en relación con la calidad de vida.
+
+Este estudio se realiza analizando:
+
+1. Los **síntomas** con que se expresa el efecto sobre el medio (contaminación, degradación de suelos, riesgos ambientales, etc.)
+2. Las **causas** que originan el impacto (procesos productivos, irresponsabilidad de los actores sociales, insuficiente control, etc.)
+3. Los **efectos** o repercusiones de los **síntomas** detectados (en los ecosistemas, en otras actividades, personas, etc.)
+4. Los **agentes** implicados en las causas y los efectos.
+5. La **sensibilización** de los actores implicados (administradores, población) para la prevención o corrección de las consecuencias de la acción desencadenante.
+6. Las **capacidades** y **responsabilidades** de **intervención preventiva**, de control o compensatoria sobre causas y efectos.
+7. Los **objetivos** a alcanzar en el tratamiento preventivo o correctivo (cómo hacerlo, para quién hacerlo, con quién hacerlo).
+
+**Proceso de implementacion de un** `EIA`
+
+![](img/imple_eia.png)
+
+Mas profundidad en el PP
