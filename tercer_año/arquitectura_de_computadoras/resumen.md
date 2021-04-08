@@ -24,6 +24,7 @@
     - [Codificador (sistema combinacional)](#codificador-sistema-combinacional)
     - [Multiplexor (sistema combinacional)](#multiplexor-sistema-combinacional)
   - [Sistemas secuenciales](#sistemas-secuenciales)
+  - [Diseño de una CPU](#diseño-de-una-cpu)
 
 ## Algebra de Boole
 
@@ -330,3 +331,31 @@ Los estados internos dependen de la **memoria** y el **tiempo**.
 ![](img/s_secuenciales/t_v.png)
 ![](img/s_secuenciales/kar.png)
 ![](img/s_secuenciales/xd.png)
+
+## Diseño de una CPU
+
+Una CPU (unidad central de procesamiento) es un **gran sistema secuencial** formado por una `unidad procesadora` (que dentro contiene la unidad aritmetica y logica `ALU`) y la `unidad de control`.
+
+Todos los diseños de sistemas digitales son diseños **jerarquicos** y **modulares**.
+
+Podemos diagramar usando el diagrama de bloques o el de sincronizacion.
+
+![](img/CPU/diagramitas.png)
+
+R1 y R2 son registros. Un **registro** es un conjunto de n flip-flops D.
+
+Esta es una implementacion para un registro de 4 bits.
+
+![](img/CPU/registro_4.png)
+
+Aca vemos un diagrama de sincronizacion usando u contador y un decodificador.
+
+![](img/CPU/sincro.png)
+
+`Modulos`: Cajas negras
+
+`Primitivas`: bloques and/or/xor/etc.
+
+Implementacion de una **unidad procesadora**
+
+![](img/CPU/up.png)
