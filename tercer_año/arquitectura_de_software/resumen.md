@@ -31,6 +31,10 @@
   - [Patrones de comportamiento](#patrones-de-comportamiento)
     - [patron strategy](#patron-strategy)
     - [Patron observer](#patron-observer)
+  - [Antipatrones](#antipatrones)
+    - [Antipatrones de programacion](#antipatrones-de-programacion)
+    - [Antipatrones de metodologia](#antipatrones-de-metodologia)
+    - [Antipatrones de diseño](#antipatrones-de-diseño)
 
 ## Introduccion
 
@@ -774,3 +778,89 @@ Es fundamental que todos los suscriptores implementen la **misma interfaz** y qu
 **Contras**
 
 -  Los suscriptores son notificados en un orden aleatorio.
+
+## Antipatrones
+
+Un antipatron es un patron que invariablemente conduce a una mala solucion para un problema. Un buen programador procurará evitar los antipatrones siempre que sea posible, lo que requiere su reconocimiento e identificación tan pronto como sea posible, dentro del ciclo de vida del software.
+
+### Antipatrones de programacion
+
+**Accidental complexity**
+
+Agregar complejidad inecesaria al codigo
+
+**Cult programming**
+
+Usar patrones, metodos y/o metodologias sin saber porque
+
+**Spaghetti code**
+
+Construir sistemas cuya estructura es difícilmente comprensible, especialmente debido a la escasa utilización de estructuras de programación.
+
+**Hard code**
+
+Incluir constantes y variables **supuestas** al codigo
+
+**Soft code**
+
+La abstracción de demasiados valores y características puede introducir más problemas de complejidad y mantenimiento que los que se experimentarían al cambiar el código cuando sea necesario.
+
+**Lava flow**
+
+Mantener código viejo, malo o redundante
+
+**Boat anchor**
+
+Mantener parte del codigo que no se use mas
+
+**Magic numbers/strings**
+
+Incluir numeros o strings **pelados** en comparaciones o eventos.
+
+**Single function exit point**
+
+![](img/antipatrones/single_exit.png)
+
+**Guard class**
+
+![](img/antipatrones/guard_class.png)
+
+**Arrow**
+
+![](img/antipatrones/arrow.png)
+
+### Antipatrones de metodologia
+
+**Copy and paste programming**
+
+Copiar y pegar de stack overflow
+
+**Tester Driven Development**
+
+Probar, corregir, probar, corregir, probar, corregir
+
+**silver bullet**
+
+Asumir que nuestra solución técnica favorita puede resolver un problema mucho mayor.
+
+**Programing by permutati**
+
+Tratar de aproximarse a una solución modificando el código una y otra vez para ver si acaba por funcionar.
+
+### Antipatrones de diseño
+
+**Dependencias circulares**
+
+Una clase depende de otra y esta depende de la primera (?)
+
+**God Object**
+
+Concentrar demasiada funcionalidad en una única parte del diseño (clase).
+
+**Sequential Coupling**
+
+Construir una clase que necesita que sus métodos se invoquen en un orden determinado.
+
+**Base bean**
+
+Heredar funcionalidad de una clase utilidad en lugar de delegar en ella.
