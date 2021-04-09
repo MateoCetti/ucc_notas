@@ -20,6 +20,7 @@
     - [Maquina de Mealy](#maquina-de-mealy)
     - [Maquina de Moore](#maquina-de-moore)
     - [Automatas finitos deterministas](#automatas-finitos-deterministas)
+      - [Minimizacion de automatas](#minimizacion-de-automatas)
 
 ## Lenguajes gramaticales y formales
 
@@ -212,3 +213,49 @@ Cuando la cadena de entrada se procesa con éxito y el autómata **alcanza** su 
 **Donde**
 
 ![](img/finito_donde.png)
+
+El automata es **determinista** si:
+
+- para cada entrada/estado hay una unica transicion
+- Todas las transiciones estan definidas para c/estado
+- no hay transiciones `espontaneas` (?)
+
+**Accesibilidad entre estados**
+
+Dados dos estados **p** y **q**, se dice que q es **accesible** desde p, si  existe una **palabra** x formada por símbolos del alfabeto de entrada tal que **partiendo de p** y aplicando  la función de transición se **pueda llegar a q**
+
+![](img/accesibilidad.png)
+
+**Conjunto conexo**
+
+Es aquel en donde **todos sus estados** son **accesibles** desde el **estado inicial**. Si en un AFD existen estados **no conexos** (no accesibles desde el estado inicial), estos **pueden ser eliminados**.
+
+**Equivalencia de automatas**
+
+Dos automatas son equivalentes si reconocen el mismo lenguaje
+
+**Equivalencia de estados**
+
+Dos estados P y Q son equivalentes si:
+
+- Para toda cadena x que partiendo del estado p llega hasta un estado de aceptación, lo hace partiendo desde el estado q. 
+- Para toda otra cadena  y que partiendo del estado p no llega a un estado de aceptación, tampoco lo hace partiendo  desde el estado q.
+
+![](img/equiv_estados.png)
+
+**Equivalencia de estados de longitud n**
+
+Dos estados p y q serán equivalentes de longitud n si: cumplen la equivalencia anterior pero la longitud de las cadenas x e y es menor o igual a n.
+
+#### Minimizacion de automatas
+
+El objetivo es obtener un autómata equivalente al original, o sea que reconozca el mismo lenguaje,  con el **menor número posible de estados**.
+
+**Pasos**
+
+1. Encontrar el **autómata conexo**: todos sus estados accesibles desde el estado inicial. Si existiera algún estado que no cumpliera con esta condición se lo podrá **eliminar**, sin que se afecte el lenguaje aceptado por el autómata.
+![](img/paso_1.png)
+2. Determinar el **Conjunto cociente**: el **mínimo número de estados** con **diferente significado**.
+![](img/paso_2.png)
+3. **Construir** el **nuevo autómata** utilizando los estados determinados por las clases de equivalencia. 
+![](img/paso_3.png)
