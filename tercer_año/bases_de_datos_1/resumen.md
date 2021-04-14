@@ -30,6 +30,14 @@
   - [Normalizacion](#normalizacion)
     - [1FN](#1fn)
     - [FNBC](#fnbc)
+  - [Almacenamiento y estructura de archivos](#almacenamiento-y-estructura-de-archivos)
+    - [Clasificacion de medios fisicos](#clasificacion-de-medios-fisicos)
+    - [Medios fisicos de almacenamiento](#medios-fisicos-de-almacenamiento)
+    - [Discos magneticos](#discos-magneticos)
+    - [RAID](#raid)
+      - [Niveles de RAID](#niveles-de-raid)
+      - [Eleccion de RAIDS](#eleccion-de-raids)
+      - [Aspectos de hardware](#aspectos-de-hardware)
 
 ## SGBD
 
@@ -430,3 +438,150 @@ Si no se cumple esta forma, debemos de desarmar el esquema, quedandonos con dos 
 
 - **tabla 1**: `a U b`
 - **tabla 2**: `R - (a-b)` (no deberia ser R-b?) 
+
+## Almacenamiento y estructura de archivos
+
+### Clasificacion de medios fisicos
+
+Los medios fisicos de almacenamiento de informacion se pueden clasificar segun:
+
+- velocidad de acceso a datos
+- coste por unidad de dato
+- Fiabilidad (Perdida de datos por caidas)
+- **Tipo** de **almacenamiento**
+  - **Volatil**: Contenido se pierde al cortar el suministro electrico
+  - **No volatil**: El contenido se conserva.
+
+### Medios fisicos de almacenamiento
+
+**Cache**: Es la memoria mas **rapida** y **costosa**, es **volatil** y no es gestionada por los SGBD
+
+**Memoria principal** (RAM?): **Acceso rapido**, **pequeña** y **volatil**. El coste por unidad es caro
+
+**Memoria flash** (EEPROM, USB, SSD): datos **fiables**, **acceso veloz** y **coste** por unidad igual al de la memoria principal.
+
+**Disco magnetico** (Discos duros): **Acceso** a los datos un poco **lento**, se puede acceder a cualquier dato en **cualquier orden** (a diferencia de las cintas), **buen coste** por unidad y **sobrevive** a **fallos electricos**
+
+**Almacenamiento optico** (DVD, CD): **no volatil**, lecturas y escrituras **lentas**.
+
+**cintas magneticas** (VHS): **no volatil**, empleado para **copias de seguridad** (antes?), **acceso secuencial** (lentisimo), **coste** de almacenamiento muy **barato**, cintas son caras.
+
+La **jerarquia** de medios se presenta asi, siendo la cuspide el medio mas **rapido** y **caro**:
+
+![](img/jerarquia_medios.png)
+
+- Almacenamiento principal: Cache/principal
+- Almacenamiento secundario: flash/ disco magnetico
+- Almacenamiento terciario: disco optico / cintas
+
+### Discos magneticos
+
+![](img/discoRigido.png)
+
+`Nota`: Los discos rigidos no almacenan los datos uno al lado del otro, sino q los guardan segun como le quede comodo al disco para acceder a ellos de manera mas rapida
+
+Los cabezales lee la info de los distitnos platos, info que esta distribuida en pistas, y estas a su vez en sectores. Los platos giran continuamente.
+
+Podemos acceder a estos datos en la PC gracias a los controladores de disco que permiten comandos de alto nivel para manipular el disco, y en terminos generales aseguran la escritura satisfactoria (mediante distintos procesos)
+
+**Interfaces de discos**: SATA/ATA/SCSI
+
+**Medidas de rendimiento de discos**:
+
+- Tiempo de acceso
+  - Tiempo de busqueda
+  - Latencia rotacional
+- Velocidad de transferencia de datos
+- Tiempo medio entre fallos
+
+**Optimizacion del acceso a los bloques del disco**
+
+**Bloque**: secuencia contigua de sectores en una pista
+
+Fragmentacion / defragmentacion de archivos (?)
+
+RAM no volatil / disco de registro historico (?)
+
+### RAID
+
+(Arrays redundantes de discos independientes)
+
+Los RAIDS son tecnicas de organizacion de muchos discos para proveer alta capacidad, velocidad y confiabiliad del almacenamiento,
+
+"Se mejora la fiabilidad via redundancia"
+
+**Redundancia**: Informacion extra almacenada implementada para reconstruir datos rotos/perdidos
+
+"Se mejora el rendimiento via paralelismo"
+
+**Imagenes**/sombras (duplicar discos)
+
+**Paralelismo**: Dividir la info en varios discos
+Objetivos:
+- Equilibrar la carga en accesos pequeños
+- Paralelizar los accesos grandes
+
+Distribucion de la info a nivel de bit (no se usa mas)
+
+Distribucion de la info a nivel de bloque
+
+#### Niveles de RAID
+
+Tipos de RAID con distintos **costes**, **rendimientos** y **fiabilidades**:
+
+**Nivel 0** Distribucion de bloques sin redundancia
+
+Se usa en apps que requieren acceder rapidamente, pero no importa que se pierdan los datos
+
+**Nivel 1** Imagenes de discos con distribucion de bloques
+
+Se distribuye la info en bloques, y se generan copias/imagenes de los discos
+
+![](img/raid1.png)
+
+**Nivel 2** Organización de códigos de corrección de errores tipo memoria (ECC) con distribución de bit.
+
+**Nivel 3** Paridad con bits entrelazados
+
+Como el 2 pero **mas eficiente**, ya que con un solo bit se pueden regenerar los datos perdidos
+
+![](img/raid2y3.png)
+
+**Nivel 4** Paridad con bloques entrelazados
+
+Emplea distribución en el nivel de bloque y mantiene un bloque de paridad en un disco independiente para los correspondientes bloques de los otros N discos. (mejor que nivel 3)
+
+![](img/raid4.png)
+
+**Nivel 5** Paridad distribuida con bloques entrelazados
+
+Datos y paridad divididos entre N + 1 discos, en vez de almacenar los datos en N discos y la paridad en 1. Velocidades E/S mas altas que el nivel 4
+
+![](img/raid5.png)
+
+**Nivel 6** Esquema de redundancia P+Q
+
+**similar al nivel 5**, pero almacena información redundante para proteger contra fallos de los múltiples discos.
+
+Mayor **fiabilidad** que en nivel 5 a un **coste superior**
+
+#### Eleccion de RAIDS
+
+se tiene en cuenta:
+- **Coste economico**
+- **Rendimiento**
+- Rendimiento durante **fallos**
+- Rendimiento durante **reconstruccion**
+
+Los que se suelen usar son los 1 y 5
+
+El nivel 1 es **veloz** pero **caro**, el 5 es lento pero mas **barato**. Por lo tanto el nivel 5 se usa para aplicaciones con velocidades de actualizacion baja pero con **grandes cantidades de datos**. El nivel 1 se usa en todos los otros casos.
+
+#### Aspectos de hardware
+
+Las implantaciones RAID se pueden hacer puramente desde **software**, o con **hardware especial**. Algunos de estos hardwares son/tienen:
+- **RAM's no volatiles**
+- Dispositivos que implementen el **intercambio en caliente**
+- **Discos de recambio**
+- Fuentes de **alimentacion redundante**
+- Multiples **controladores** de drivers/conexion.
