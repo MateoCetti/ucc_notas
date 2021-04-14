@@ -8,6 +8,7 @@
   - [Las religiones](#las-religiones)
   - [Religion en la actualidad](#religion-en-la-actualidad)
   - [Criticas a la religion](#criticas-a-la-religion)
+  - [Diversidad religiosa](#diversidad-religiosa)
 
 ## Email profe
 
@@ -88,3 +89,17 @@ Las criticas a la religion mas conocidas son:
 **Crítica marxista**: Esta crítica dice que las religiones son una **herramienta** utilizada por los **sectores** más **poderosos** de la sociedad para **mantener** su **poder** y así explotar a los sectores menos poderosos de la población.
 
 **Crítica de la "muerte de Dios"**: Esta crítica  consiste en la idea de que en la historia llegó un determinado momento en la que las personas **no necesitaron** más darle una explicación a lo sagrado, divino, trascendente. Todo esto pierde valor, y la forma de encontrar sentido a la vida y a las cosas sería en el mundo inmanente, aquí y ahora
+
+## Diversidad religiosa
+
+Vemos un [video](https://www.youtube.com/watch?v=cABzA5otvi0&ab_channel=Televisi%C3%B3nP%C3%BAblica) en clase
+
+En el destacamos que la mayoria de los argentinos son catolicos en terminos de creencias, pero no suelen practicar la religion muy seguido.
+
+Pero tambien hay una gran cantidad de personas que deciden mediante un "peregrinaje" adquirir una religiosidad propia.
+
+En la Arg. hay libertad para elegir la religion que uno mas prefiera, estas religiones se pueden registrar en el **registro de cultos**, que en cierto modo **normaliza** las religones al requerir ciertos aspectos para poder ser registradas.
+
+La diversidad cultural es un hecho antiguo en la Arg. (new age)
+
+La palabra [secta](https://en.wikipedia.org/wiki/Sect) usualmente es usada con una cognotacion negativa. Pero una secta solo es un subgrupo separado de un sistema religioso.
