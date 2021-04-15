@@ -334,7 +334,7 @@ Los estados internos dependen de la **memoria** y el **tiempo**.
 
 ## Diseño de una CPU
 
-Una CPU (unidad central de procesamiento) es un **gran sistema secuencial** formado por una `unidad procesadora` (que dentro contiene la unidad aritmetica y logica `ALU`) y la `unidad de control`.
+Una CPU (unidad central de procesamiento) es un **gran sistema secuencial** formado por una `unidad procesadora` (que dentro contiene la unidad aritmetica y logica `ALU`) y la `unidad de control` (corrimiento?).
 
 Todos los diseños de sistemas digitales son diseños **jerarquicos** y **modulares**.
 
@@ -359,3 +359,37 @@ Aca vemos un diagrama de sincronizacion usando u contador y un decodificador.
 Implementacion de una **unidad procesadora**
 
 ![](img/CPU/up.png)
+
+Dicha unidad procesadora contiene 2 modulos "grandes" que vamos a ver a continuacion:
+
+El primero es el `ALU` (Aritmetic and logic unit). Este es un **sistema combinacional** que se encarga de realizar una operacion **aritmetica** o **logica** con los datos que reciba segun la **eleccion** que se escoja.
+
+El ALU esta a su vez compuesto por un modulo aritmetico y uno logico que realizan sus respectivas operaciones (segun la eleccion). Las operaciones aritmeticas que se pueden realizar son las siguietntes:
+
+![](img/CPU/aritmetica.png)
+
+Las operaciones del modulo logico son:
+
+![](img/CPU/logic.png)
+
+En el alu, los 2 modulos realizan sus respectivas operaciones, pero luego, en un multiplexor se decide cual de las 2 se dirige a la salida.
+
+![](img/CPU/alu.png)
+
+En general, las operaciones que se pueden realizar en un modulo ALU completo son:
+
+![](img/CPU/alu_t.png)
+
+El otro modulo perteneciente al CPU es la **unidad  de corrimiento**. Esta puede desplazar y rotar el dato ingresado x bits hacia la izq o der. En los desplazamientos, se pierde un bit por un lado, y por el otro se coloca un 0. En las rotaciones, el bit "perdido" se inserta al otro extremo de numero.
+
+Los desplazamientos a izquierda equivalen a la multiplicacion del numero por 2, y los desplazamientos a derecha equivalen a una divicion por 2.
+
+La unidad de corrimiento puede ser normal, o **tambor**.
+
+![](img/CPU/corrimiento.png)
+
+En un CPU, utilizando todas las entradas empleadas para realizar una operacion, se puede armar una palabra hexadecimal que represente dicha operacion. 
+
+![](img/CPU/hexa.png)
+![](img/CPU/hexa_2.png)
+![](img/CPU/hexa_3.png)
