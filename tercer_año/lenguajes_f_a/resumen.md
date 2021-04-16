@@ -21,6 +21,7 @@
     - [Maquina de Moore](#maquina-de-moore)
     - [Automatas finitos deterministas](#automatas-finitos-deterministas)
       - [Minimizacion de automatas](#minimizacion-de-automatas)
+    - [Automatas finitos no deterministas](#automatas-finitos-no-deterministas)
 
 ## Lenguajes gramaticales y formales
 
@@ -259,3 +260,15 @@ El objetivo es obtener un autómata equivalente al original, o sea que reconozca
 ![](img/paso_2.png)
 3. **Construir** el **nuevo autómata** utilizando los estados determinados por las clases de equivalencia. 
 ![](img/paso_3.png)
+
+### Automatas finitos no deterministas
+
+Se describen formalmente como:
+
+![](img/nodeter.png)
+
+Un automata es no determinista si no se cumple por lo menos una de los 3 requerimientos para que sea determinista.
+
+![](img/nodeter_ej.png)
+
+Se puede transformar un automata **no determinista** a uno **determinista** de tal manera que ambos aceptan el mismo lenguaje realizando un metodo anologo al de reducir un AFD a su minima exprecion (determinando conjuntos cocientes).
