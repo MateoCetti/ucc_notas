@@ -3,10 +3,19 @@
 - [Resumen Gestion Ambiental](#resumen-gestion-ambiental)
   - [Introduccion](#introduccion)
     - [ISO 14001](#iso-14001)
-    - [Implantar un SGA en una empresa](#implantar-un-sga-en-una-empresa)
+  - [Implantar un SGA en una empresa](#implantar-un-sga-en-una-empresa)
   - [Politica ambiental](#politica-ambiental)
   - [Produccion Mas Limpia (PML)](#produccion-mas-limpia-pml)
   - [Estudio del impacto ambiental](#estudio-del-impacto-ambiental)
+  - [Contaminacion ambiental](#contaminacion-ambiental)
+    - [Tipos de contaminaciones](#tipos-de-contaminaciones)
+    - [Efecto invernadero](#efecto-invernadero)
+    - [Agotamiento de la capa de ozono](#agotamiento-de-la-capa-de-ozono)
+    - [Lluvia acida](#lluvia-acida)
+    - [Efectos de la contaminacion del aire](#efectos-de-la-contaminacion-del-aire)
+    - [Efectos del ruido y vibraciones](#efectos-del-ruido-y-vibraciones)
+    - [Efectos de las radiaciones ionizantes](#efectos-de-las-radiaciones-ionizantes)
+    - [Contaminacion de los suelos](#contaminacion-de-los-suelos)
 
 ## Introduccion
 
@@ -76,7 +85,7 @@ Nota: La norma dice que debemos hacer, pero el como lo hacemos lo define la empr
 
 Nota: Economia circular-> estrategia que tiene por objetivo reducir tanto la entrada de los materiales vírgenes como la producción de desechos, cerrando los «bucles» o flujos económicos y ecológicos de los recursos.​
 
-### Implantar un SGA en una empresa
+## Implantar un SGA en una empresa
 
 **Recomendaciones para implantar un SGA**
 
@@ -334,3 +343,102 @@ Este estudio se realiza analizando:
 ![](img/imple_eia.png)
 
 Mas profundidad en el PP
+
+## Contaminacion ambiental
+
+Es la presencia en el ambiente de uno o mas **contaminantes** que perjudique factores en dicho ambiente.
+
+**Contaminante**: Sustancia quimica, biologica o radiologica en cualquier estado o forma que al encontrarse por encima de las concentraciones normales en algun elemento del medio ambiente, cambia su composicion natural.
+
+Los contaminantes pueden ser (segun su naturaleza):
+- Biologicos (microorganismos)
+- Quimicos (organicos e inorganicos)
+- Fisicos (Radiaciones, calor, solidos)
+
+Las **fuentes** de contaminacion son aquellas **instalaciones**, **procesos** o **actividades** que provocan contaminación ambiental.
+
+Estas pueden ser:
+- Puntuales
+- Difusas
+- Segun su origen
+  - Naturales
+  - tecnologicas
+  - agricolas
+  - pecuarias
+  - domesticas y municipales
+- estacionarias
+- moviles
+
+### Tipos de contaminaciones
+
+**Contaminacion del agua**
+
+Puede provocar  efectos
+adversos a la salud humana y a la calidad
+ambiental de los ecosistemas asociados. Puede ser tanto al nivel superficial como subterraneo
+
+**Contaminacion del aire**
+
+emisión de sustancias peligrosas al aire, en una tasa que excede la capacidad de los procesos naturales para diluirlas. Se puede contaminar mediante solidos, liquidos, gaseosos y/o energicos
+
+### Efecto invernadero
+
+Aumento de la temperatura de la tierra, producido por la liberación de determinados gases a la atmósfera
+
+Esto provoca:
+- Cambios del clima
+- Huracanes, inundaciones
+- Elevación del nivel del mar
+- Extinción de especies
+- Desertificación y sequía
+
+### Agotamiento de la capa de ozono
+
+Debido a la emisión de gases que contienen cloro. esto genera un incremento de radiación  ltravioleta
+
+### Lluvia acida
+
+Cualquier forma de precipitación  cuya acidez es alta, debido a la absorción de contaminantes presentes en el aire. Esto genera:
+- Disminución de pH en cuerpos de agua y suelos
+- Corrosión de estructuras y edificaciones
+- Desaparición de bosques
+- Afectación a organismos acuáticos y terrestres
+
+### Efectos de la contaminacion del aire
+
+La contaminacion del aire afecta tanto a las personas como a los animales y a las plantas de muchas maneras distintas
+
+### Efectos del ruido y vibraciones
+
+estres, perdida de audicion, iriitabilidad, alteraciones del sistema nervioso, anulacion de reflejos, etc.
+
+### Efectos de las radiaciones ionizantes
+
+- desórdenes funcionales;
+- inducción al cáncer;
+- acortamiento de la vida;
+- envejecimiento precoz;
+- taras genéticas.
+
+### Contaminacion de los suelos
+
+Deterioro de las propiedades físicas, químicas y biológicas que experimentan los suelos, como resultado de la incorporación en su seno de diversas sustancias contaminantes.
+
+Causas: 
+- Prácticas agrícolas inadecuadas (aplicación de agroquímicos);
+- Vertimientos de sustancias químicas;
+- Descargas de residuales líquidos;
+- Disposición de residuos sólidos;
+- Actividad pecuaria;
+- Fugas en nichos de confinamiento de desechos peligrosos.
+
+Efectos:
+
+-Pérdida de la capacidad productiva;
+-desvalorización de terrenos;
+- Afectaciones a la vegetación y a las poblaciones de microorganismos del suelo por la acumulación de contaminantes.
+- Modificación de sus propiedades;
+- acidificación;
+- Contaminación con gérmenes patógenos;
+- Afectaciones a la salud;
+- Degradación paisajística.
