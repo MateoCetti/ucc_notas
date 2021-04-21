@@ -38,6 +38,10 @@
       - [Niveles de RAID](#niveles-de-raid)
       - [Eleccion de RAIDS](#eleccion-de-raids)
       - [Aspectos de hardware](#aspectos-de-hardware)
+  - [Algebra relacional](#algebra-relacional)
+    - [Conceptos](#conceptos)
+    - [Ahora si, Algebra relacional](#ahora-si-algebra-relacional)
+    - [Composicion de operaciones](#composicion-de-operaciones)
 
 ## SGBD
 
@@ -585,3 +589,91 @@ Las implantaciones RAID se pueden hacer puramente desde **software**, o con **ha
 - **Discos de recambio**
 - Fuentes de **alimentacion redundante**
 - Multiples **controladores** de drivers/conexion.
+
+## Algebra relacional
+
+### Conceptos
+
+Dados los conjuntos D_1, D_2,... D_n, una **relacion** r es un subconjunto de:
+
+- D_1 X D_2 X ... X D_n
+
+Asi, una relacion es un conjunto de **tuplas** (v_1, v_2, ..., v_n) donde
+
+* v_n ∈ D_n
+
+Un **esquema de relacion** es el conjunto de atributos pertenecientes a la relacion
+
+A_1, A_2, A_n son atributos
+
+R = A_1, A_2, A_n (R es un esquema de relaicon con A_n atributos)
+
+r(R) es una relacion segun el esquema R
+
+Las **instancias de relacion** son las tablas
+
+El orden de las **tuplas** (registros) es irrelevante
+
+Una **base de datos** consta de multiples relaciones
+
+Una **clave primaria** es la clave candidata (superclave minima) que se ha elegido como medio principal de identificacion para las tuplas de una relacion.
+
+Una clave externa de un esquema r_1 es la clave primaria de otro esquema r_2 usada como referencia. r_1 es el esquema referenciante y r_2 el esquema referenciado
+
+**lenguajes de consulta**
+
+Lenguajes para solicitar info a la base de datos. Estos pueden ser:
+
+* **Procedimental** (Se indica una serie de operaciones)
+* **No procedimental** (Se hacen queries sin un orden especifico)
+* Lenguajes "**puros**" (Ej: algebra relacional, la base del SQL)
+
+### Ahora si, Algebra relacional
+
+Este es un lenguaje **procedimental** que consta de 6 operadores basicos. Estos operadores tienen como operandos una o dos relaciones y SIEMPRE producen una relacion (**recursividad**)
+
+**selección σ**
+
+Notacion: σ_p (r)
+
+P es el **predicado** de seleccion
+
+![](img/algebraR/seleccion_2.png)
+
+![](img/algebraR/seleccion.png)
+
+**proyección ∏**
+
+![](img/algebraR/proyeccion_2.png)
+
+![](img/algebraR/proyeccion_1.png)
+
+**unión: ∪**
+
+![](img/algebraR/union_2.png)
+
+![](img/algebraR/union_1.png)
+
+**diferencia de conjuntos –**
+
+![](img/algebraR/diferencia_2.png)
+
+![](img/algebraR/diferencia_1.png)
+
+**producto cartesiano x**
+
+![](img/algebraR/producto_2.png)
+
+![](img/algebraR/producto_1.png)
+
+**renombramiento ρ**
+
+![](img/algebraR/renombre_1.png)
+
+
+### Composicion de operaciones
+
+Gracias a la recursividad, se puede realizar composicion de operaciones.
+
+![](img/algebraR/composicion.png)
+
