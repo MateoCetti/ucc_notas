@@ -35,6 +35,12 @@
     - [Antipatrones de programacion](#antipatrones-de-programacion)
     - [Antipatrones de metodologia](#antipatrones-de-metodologia)
     - [Antipatrones de diseño](#antipatrones-de-diseño)
+  - [Concurrencia y paralelismo](#concurrencia-y-paralelismo)
+    - [Concurrencia VS. Paralelismo](#concurrencia-vs-paralelismo)
+    - [Aplicaciones](#aplicaciones)
+    - [Propiedades](#propiedades)
+    - [Arquitecturas concurrentes (?)](#arquitecturas-concurrentes-)
+    - [Nota](#nota)
 
 ## Introduccion
 
@@ -864,3 +870,43 @@ Construir una clase que necesita que sus métodos se invoquen en un orden determ
 **Base bean**
 
 Heredar funcionalidad de una clase utilidad en lugar de delegar en ella.
+
+## Concurrencia y paralelismo
+
+**Concurrencia** se refiere a la habilidad de distintas partes del programa de ser ejecutados en **desorden**.
+
+El **paralelismo** es la capacidad de realizar varios calculos **simultáneamente** basado en el principio de divide y triunfaras.
+
+El paralelismo solo funciona si tenemos mas de 1 procesador. Si tenemos **n procesadores**, podremos realizar **n procesos** simultaneamente.
+
+En un sistema **monoprocesador** se **intercalan** las operaciones de las tareas (multiplexado en el tiempo, **paralelismo lógico**)
+
+### Concurrencia VS. Paralelismo
+
+* La concurrencia es mas general que el paralelismo
+* Las soluciones en P. Concurrente son validas en paralelismo
+* Paralelismo es ejecución simultanea de procesos concurrentes
+* Paralelismo implica concurrencia, pero concurrencia no siempre implica paralelismo
+
+### Aplicaciones
+
+Se suele aplicar concurrencia en **GUI's reactivas**, en **servidores**, para mejorar el **rendimiento** (con respecto al tiempo) y para realizar **calculos complejos**.
+
+### Propiedades
+
+Los programas concurrentes deben ser:
+
+* Correctos (Hacen lo esperado)
+* Seguros (Sin errores)
+* Vivaces (Nunca apagados)
+* Equitativos (Todos los hilos hacen la misma cantidad de procesos)
+
+### Arquitecturas concurrentes (?)
+
+* SMP
+* NUMA
+* GPGPU
+
+### Nota
+
+Lo que denominamos como "tiempo real" depende de lo que se espera del sistema, TIEMPO REAL != PERFORMANCE!!!!
