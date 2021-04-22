@@ -16,6 +16,12 @@
     - [Efectos del ruido y vibraciones](#efectos-del-ruido-y-vibraciones)
     - [Efectos de las radiaciones ionizantes](#efectos-de-las-radiaciones-ionizantes)
     - [Contaminacion de los suelos](#contaminacion-de-los-suelos)
+  - [Desarrollo sostenible](#desarrollo-sostenible)
+    - [Dimension ambiental](#dimension-ambiental)
+    - [Dimension economica](#dimension-economica)
+    - [Dimension social](#dimension-social)
+    - [Interpretando](#interpretando)
+    - [Alternativas](#alternativas)
 
 ## Introduccion
 
@@ -442,3 +448,47 @@ Efectos:
 - Contaminación con gérmenes patógenos;
 - Afectaciones a la salud;
 - Degradación paisajística.
+
+
+## Desarrollo sostenible
+
+A partir de la revolucion industrial, se empezo a descubrir y plantear ciertos aspectos con respecto a la contaminacion ambiental. Nos empezamos a cuestionar el desarrollo que estaba teniendo la sociedad a nivel global y empezamos a tomar conciencia de los problemas ambientales a escala planetaria.
+
+El **desarrollo humano** no es lo mismo que **desarrollo economico**.
+
+En 1980 nos dimos cuenta que los recursos naturales eran limitados, y que era indispensable conservarlos para lograr un **desarrollo sostenible**
+
+El desarrollo sostenible consta de **proteger la naturaleza** y **luchar contra la pobreza**
+
+Segun la comision mundial del medio ambiente y desarrollo, el desarrollo sustentable es un desarrollo que satisface las necesidades del presente sin comprometer las necesidades de generaciones futuras.
+
+El informe de esta comision concluye con que es posible una nueva era de crecimiento economico que alivie la pobreza mientras se funden politicas que sostengan y amplien la base de recursos, con un menor consumo.
+
+El desarrollo sustentable abarca estos 3 aspectos (no solamente 1 de ellos):
+
+![](img/d_sus.png)
+
+### Dimension ambiental
+
+El consumo de recursos se deberia de limitar segun la capacidad de regeneracion de los mismos, y la generacion de residuos se deberia limitar a la capacidad de asimilacion del ecosistema.
+
+### Dimension economica
+
+La calidad de los servicios y la forma de producirlos deberia de ser la mejor.
+
+### Dimension social
+
+Se deberia:
+- Igualar los ingresos (0.o)
+- satisfacer las necesidades basicas
+- superar la pobreza
+- detener el sobre consumo
+- formar capital humano y social
+
+### Interpretando
+
+Hay distintas interpretaciones de este planteamiento, y cada pais tiene su postura con respecto al mismo. Sin embargo, no se debe rechazar esto de antemano y se deberia debatir para lograr comprender el problema.
+
+### Alternativas
+
+Se pueden construir alternativas con la premisa de mirar hacia el futuro, cuidar y compartir los recursos y moderar el consumo. Esto implica muchos **desafios**.
