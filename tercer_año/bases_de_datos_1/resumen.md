@@ -42,6 +42,12 @@
     - [Conceptos](#conceptos)
     - [Ahora si, Algebra relacional](#ahora-si-algebra-relacional)
     - [Composicion de operaciones](#composicion-de-operaciones)
+  - [SQL](#sql)
+    - [Historia](#historia)
+    - [DML y DDL](#dml-y-ddl)
+      - [DDL (Data Definition Language)](#ddl-data-definition-language)
+      - [DML (Data Manipulation Language)](#dml-data-manipulation-language)
+    - [Consultas (DML)](#consultas-dml)
 
 ## SGBD
 
@@ -677,3 +683,107 @@ Gracias a la recursividad, se puede realizar composicion de operaciones.
 
 ![](img/algebraR/composicion.png)
 
+
+## SQL
+
+### Historia
+
+Este lenguaje fue desarrollado en sus principios por IBM, y originalmente se llamaba SEQUEL. Esto se hizo famoso y varios desarrolladores empiezan a desarrollar algo similar para sus productos.
+
+En 1986 se lo renombra a SQL y se lo estandariza, actualizando dicho estandar varias veces.
+
+### DML y DDL
+
+Del SQL se derivan 2 "sub-lenguajes". Estos son:
+
+#### DDL (Data Definition Language)
+
+Lenguaje utilizado para **crear** las tablas y las bases de datos. (CREATE TABLE; ALTER TABLE; DROP TABLE; etc.)
+
+Especifica informacion sobre el **conjunto** de relaciones, esta informacion consta de:
+- Esquema de relacion
+- Dominio de cada atributo (char, int, float, etc)
+- Integridad de los datos (Reglas, ej: not null)
+- Informacion de seguridad
+- Estructura fisica en el disco
+
+Ejemplo:
+
+```SQL
+CREATE TABLE proveedor
+		(snum	integer,
+		snombre	char(30) not null,
+		situacion char(1),
+		ciudad	char(30),
+	  primary key (snum));
+```
+
+**Primary key**: Asegura q el atributo sea **not null** ya que esta sera la clave univoca que representara cada registro en el sistema.
+
+`DROP TABLE` elimina la tabla y toda su info de la base de datos
+
+`ALTER TABLE` es para modificarla (agregar/ quitar atributos `ALTER TALBE DROP ATTRIBUTE`)
+
+#### DML (Data Manipulation Language)
+
+Lenguaje utilizado para modificar las tablas y generar consultas (SELECT; UPDATE; DELETE; INSERT; etc.)
+
+### Consultas (DML)
+
+Las consultas son de la forma:
+
+```SQL
+select A1, A2, ..., An
+	from r1, r2, ..., rm
+	where P
+```
+
+Donde `Ai` son los atributos, `ri` las relaciones o tablas y `p` los predicados de seleccion.
+
+Esta sentencia es equivalente a la exprecion siguiente del algebra relacional:
+
+![](img/sql/ar.png)
+
+`Nota: `El resultado de una sentencia `SELECT` es otra relacion (recursividad, subqueries?)
+
+Sentencia **SELECT** completa:
+
+```SQL
+SELECT [distinct] elemento(s)
+FROM tabla(s)
+[WHERE condicion]
+[GROUP BY campo(s)]
+[HAVING condicion]
+[ORDER BY campo(s)]
+```
+Donde los componentes entre corchetes son opcionales.
+
+El `Distinct` significa que los elementos repetidos no se mostraran.
+
+Dentro de las clausulas `SELECT` se pueden poner operadores *-+/ y constantes/ variables para modificar los atributos mostrados:
+
+```SQL
+select snum, snombre, situacion * 100, ciudad
+                  from proveedores
+```
+
+La clausula `WHERE` especifica las condiciones que deben cumplir los resultados
+
+```SQL
+select *
+	from proveedores
+	where ciudad = ‘París’ and situacion > 20
+```
+Se puede usar AND, OR y NOT y BETWEEN
+
+La clausula `FROM` Especifica de que tablas se deben obtener los resultados
+
+```SQL
+select *
+		from proveedores, partes
+```
+Se pueden renombrar las relaciones y atributos con la clausula `AS`
+
+```SQL
+select snum as numero_proveedor, snombre,         situacion, ciudad from proveedores
+```
