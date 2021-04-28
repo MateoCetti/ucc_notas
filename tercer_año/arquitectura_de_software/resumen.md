@@ -41,6 +41,10 @@
     - [Propiedades](#propiedades)
     - [Arquitecturas concurrentes (?)](#arquitecturas-concurrentes-)
     - [Nota](#nota)
+    - [Problemas de la concurrencia](#problemas-de-la-concurrencia)
+      - [DeadLocks](#deadlocks)
+      - [Livelock](#livelock)
+      - [starvation](#starvation)
 
 ## Introduccion
 
@@ -910,3 +914,30 @@ Los programas concurrentes deben ser:
 ### Nota
 
 Lo que denominamos como "tiempo real" depende de lo que se espera del sistema, TIEMPO REAL != PERFORMANCE!!!!
+
+### Problemas de la concurrencia
+
+Si muchos hilos utilizan la misma variable, pueden surgir problemas. Esto se llama **seccion critica**
+
+Cuando el resultado depende del orden de entrada de las operaciones de c/hilo se llama **Condición de Carrera**
+
+Para evitar condiciones de carrera es preciso asegurar la **exclusión mutua** entre hilos en las regiones criticas.Cuando un hilo está en una región crítica, **ningún** otro **hilo** puedo **acceder** a los **mismos datos**. De esta forma se consiguen que las operaciones con variables compartidas sean **atómicas**.
+
+`Mutex`
+
+Forma para asegurar la exclucion mutua (lock, unlock)
+![](img/concurrencia/mutex.png)
+
+
+#### DeadLocks
+
+Situación en la que varios hilos están **suspendidos** esperando unos de otros y ninguno puedo avanzar. Se puede dar cuando se usan recursos de forma **exclusiva** y se asignan a **distintos hilos**.
+
+Los interbloqueos no se pueden detectar, pero si prevenir.
+
+#### Livelock
+
+Ninguno de los procesos conseguirá los recursos: bloqueo "vivo"
+
+#### starvation
+Uno de los procesos no conseguirá nunca los recursos: inanición
