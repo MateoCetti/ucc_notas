@@ -25,6 +25,8 @@
     - [Multiplexor (sistema combinacional)](#multiplexor-sistema-combinacional)
   - [Sistemas secuenciales](#sistemas-secuenciales)
   - [Diseño de una CPU](#diseño-de-una-cpu)
+  - [ARM](#arm)
+    - [Assembly](#assembly)
 
 ## Algebra de Boole
 
@@ -393,3 +395,55 @@ En un CPU, utilizando todas las entradas empleadas para realizar una operacion, 
 ![](img/CPU/hexa.png)
 ![](img/CPU/hexa_2.png)
 ![](img/CPU/hexa_3.png)
+
+## ARM
+
+El ARM es una arquitectura de los microprocesadores (no es obligatorio que los micros utilizen esta arquitectura, los celulares utilizan otra). Esta arquitectura obtuvo varias actualizaciones a lo largo de los años, siendo la mas actual la de 64 bits. Aqui solo estudiaremos la version de 32 bits.
+
+Que la arquitectura tenga 32 bits significa que los elementos con los que trabajara seran de maximo 32 bits.
+
+`Terminologia importante:`
+- **Byte** (8 bits)
+- **HalfWord** (16 bits, 2 bytes)
+- **Word** (32 bits, 4 bytes)
+- **Nipble** (4 bits)
+
+La arquitectura de un ARM es como la siguiente:
+
+![](img/arm/arm.png)
+
+Los ARM son capaces de trabajar con SO multitareas. Por lo tanto permiten distintos modos para operar el procesador. Estos son:
+
+- User: Sin privilegios
+- ...
+- Supervisor
+- ...
+- System: Con todos los privilegios.
+
+**Registros visibles para cada modo:**
+
+![](img/arm/modos.png)
+
+* Cada registro tiene 32 bits
+* 13: stack pointer
+* 14: Link register
+* 15: Program Counter
+* CPSR -> Current Program Status Register (N.Z.C.V)
+
+`PSR`
+
+![](img/arm/PSR.png)
+
+![](img/arm/PC.png)
+
+### Assembly
+
+Condicionales:
+
+![](img/arm/cond.png)
+
+Instrucciones:
+
+![](img/arm/ins_1.png)
+![](img/arm/ins_2.png)
+![](img/arm/ins_3.png)
