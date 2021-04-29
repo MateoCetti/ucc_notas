@@ -22,6 +22,8 @@
     - [Dimension social](#dimension-social)
     - [Interpretando](#interpretando)
     - [Alternativas](#alternativas)
+  - [Derecho ambiental](#derecho-ambiental)
+    - [Ley General del Ambiente](#ley-general-del-ambiente)
 
 ## Introduccion
 
@@ -492,3 +494,35 @@ Hay distintas interpretaciones de este planteamiento, y cada pais tiene su postu
 ### Alternativas
 
 Se pueden construir alternativas con la premisa de mirar hacia el futuro, cuidar y compartir los recursos y moderar el consumo. Esto implica muchos **desafios**.
+
+## Derecho ambiental
+
+El articulo 41 de la constitucion nacional dice que:
+
+Todos los habitantes gozan del derecho a un **ambiente sano**, equilibrado, apto para el desarrollo humano y para que las actividades productivas satisfagan las **necesidades presentes** sin comprometer las de las generaciones **futuras**; y tienen el deber de preservarlo. El **daño ambiental** generará prioritariamente la **obligación de recomponer**, según lo establezca la ley.
+
+Las autoridades proveerán a la **protección** de este derecho
+
+Corresponde a la Nación dictar las normas que contengan los presupuestos mínimos de protección, y a las provincias, las necesarias para complementarlas, sin que aquéllas alteren las jurisdicciones locales. (?)
+
+Se prohíbe el ingreso al territorio nacional de residuos actual o potencialmente **peligrosos**, y de los radiactivos.
+
+### Ley General del Ambiente
+
+En nuestro pais, la ley **general del ambiente** (**ley 25.675**) establece **diez principios** de política ambiental.
+
+1. **Principio de congruencia**:  La legislación provincial y municipal referida a lo ambiental deberá ser **adecuada** a los principios y normas fijadas en la presente ley; en caso de que así no fuere, éste prevalecerá sobre toda otra norma que se le oponga.
+2. **Principio de prevención**:  Las **causas** y las **fuentes** de los problemas ambientales se atenderán en forma **prioritaria** e **integrada**, tratando de prevenir los efectos negativos que sobre el ambiente se pueden producir.
+3. **Principio precautorio**:  Cuando haya peligro de **daño grave** o **irreversible** la **ausencia de información** o certeza científica no deberá utilizarse como **razón** para **postergar** la adopción de medidas eficaces, en función de los costos, para impedir la degradación del medio ambiente.
+4. **Principio de equidad intergeneracional**:  Los responsables de la protección ambiental deberán **velar** por el uso y goce apropiado del ambiente por parte de las **generaciones presentes** y **futuras**.
+5. **Principio de progresividad**: Los objetivos ambientales deberán ser logrados en forma **gradual**, a través de metas interinas y finales, proyectadas en un **cronograma temporal** que facilite la adecuación correspondiente a las actividades relacionadas con esos objetivos.
+6. **Principio de responsabilidad**:  El **generador** de **efectos degradantes** del ambiente, actuales o futuros, es **responsable** de los **costos** de las acciones **preventivas** y **correctivas** de **recomposición**, sin perjuicio de la vigencia de los sistemas de responsabilidad ambiental que correspondan.
+7. **Principio de subsidiariedad**: El Estado nacional, a través de las distintas instancias de la administración pública, tiene la **obligación** de **colaborar** y, de ser necesario, **participar** en forma complementaria en el accionar de los particulares en la **preservación** y **protección ambientales**.
+8. **Principio de sustentabilidad**:  El desarrollo económico y social y el aprovechamiento de los recursos naturales deberán realizarse a través de una **gestión apropiada** del ambiente, de manera tal, que **no comprometa** las posibilidades de las **generaciones presentes** y **futuras**.
+9. **Principio de solidaridad**: La Nación y los Estados provinciales serán responsables de la **prevención** y **mitigación** de los efectos ambientales **transfronterizos** adversos de su propio accionar, así como de la minimización de los riesgos ambientales sobre los **sistemas ecológicos compartidos**.
+10. **Principio de cooperación**:  Los recursos naturales y los sistemas ecológicos compartidos serán utilizados en forma **equitativa** y racional. El **tratamiento** y mitigación de las **emergencias ambientales** de efectos **transfronterizos** serán desarrollados en forma **conjunta**
+
+**Principio precautorio (otra perspectiva)**
+
+El “principio precautorio”, se traduce como la obligación de **suspender** o cancelar actividades que **amenacen** el **medio ambiente**, pese a que no existan pruebas científicas suficientes que vinculen tales actividades con el deterioro de aquél.
+
