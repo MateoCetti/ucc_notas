@@ -488,3 +488,12 @@ En donde el primer elemento, es un registro base, al que le podemos sumar o rest
 
 `NO ENTENDI: for haldword and signed halfword / byte, offset can be: ...`
 
+![](img/arm/pos_pre_index.png)
+
+La memoria tambien puede ser accedida mediante pre o pos index:
+
+En el pre index la constante es sumada al registro base (que servira como index para acceder a la memoria) antes de aceder a dicha memoria. El registro base se puede actualizar (sumar la constante, o el registro) utilizando el signo de exclamacion como lo muestra la imagen.
+
+En el pos index, primero se accede a la posicion de memoria indicada por el registro base, y luego este registro se lo actualiza sumando o restando la constante.
+
+En un registro de memoria se pueden guardar 8 bits (o un byte). al guardar datos mas pesados que estos en una direccion de mememoria se utiliza el metodo [little endian](https://es.wikipedia.org/wiki/Endianness)
