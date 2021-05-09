@@ -447,3 +447,44 @@ Instrucciones:
 ![](img/arm/ins_1.png)
 ![](img/arm/ins_2.png)
 ![](img/arm/ins_3.png)
+
+El sintaxis para las operaciones es:
+
+`<operation> {<conditional>} {s} Rd, Rn, Operand2`
+
+Donde los comparadores solo setean flags, Los movimientos de datos se guardan en Rd, y los shifteos se aplican sobre el operando 2.
+
+![](img/arm/barrel_shifter.png)
+
+Todas las instrucciones del ARM son de 32 bits, es decir que en 32 bits debemos indicar toda la operacion que el ARM tiene que realizar.
+
+Por defecto, el ARM de arquitectura de 32 bits tiene reservado 12 bits para el operando 2, de los cuales 8 son para el valor numerico, y 4 para indicar la rotacion.
+
+![](img/arm/operand_2_size.png)
+
+El ARM utiliza "trucos" como estos para hacer constantes mas grandes:
+
+![](img/arm/constantes_truco.png)
+
+Los registros pueden tener 32 bits de capacidad (?), pero las constantes no porque deben ser de 12 bits para poder ser rotadas. podemos hacer constantes mas grandes (al guardarlas en registros) mediante varios comandos, utilizando este "truco":
+
+![](img/arm/registros_grandes.png)
+
+Aunque la forma recomendada de cargar constantes mayores a 8 bits en un registro es esta (load register):
+
+![](img/arm/recomendacion_registros_grandes.png)
+
+Empezamos a tocar memoria.
+
+Si queremos pasar datos de la memoria al registro, usamos LDR, en cambio si queremos pasar datos del registro a la memoria, usamos STR:
+
+![](img/arm/memoria_1.png)
+
+Ya sea mediante STR o LDR, siempre que querramos acceder a una posicion en memoria lo tenemos que hacer mediante corchetes, y usando la siguiente sintaxis:
+
+![](img/arm/acceder_a_memoria.png)
+
+En donde el primer elemento, es un registro base, al que le podemos sumar o restar una constante o un registro (y este segundo registro lo podemos correr con LSR, LSL, etc. mediante el barrel shifter)
+
+`NO ENTENDI: for haldword and signed halfword / byte, offset can be: ...`
+
