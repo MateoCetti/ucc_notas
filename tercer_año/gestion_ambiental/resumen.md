@@ -24,6 +24,14 @@
     - [Alternativas](#alternativas)
   - [Derecho ambiental](#derecho-ambiental)
     - [Ley General del Ambiente](#ley-general-del-ambiente)
+  - [Higiene y seguridad](#higiene-y-seguridad)
+    - [Enfermedad laboral](#enfermedad-laboral)
+    - [Alcance de la higiene industrial](#alcance-de-la-higiene-industrial)
+    - [Contaminantes físicos](#contaminantes-físicos)
+    - [Iluminacion](#iluminacion)
+    - [Calor](#calor)
+    - [Contaminantes quimicos](#contaminantes-quimicos)
+    - [Contaminantes biologicos](#contaminantes-biologicos)
 
 ## Introduccion
 
@@ -526,3 +534,239 @@ En nuestro pais, la ley **general del ambiente** (**ley 25.675**) establece **di
 
 El “principio precautorio”, se traduce como la obligación de **suspender** o cancelar actividades que **amenacen** el **medio ambiente**, pese a que no existan pruebas científicas suficientes que vinculen tales actividades con el deterioro de aquél.
 
+## Higiene y seguridad
+
+La Higiene Industrial es una **técnica** no medica dedicada a **reconocer**, **evaluar** y **controlar** aquellos **factores** ambientales o tensiones emanadas o **provocadas** por el **lugar de trabajo** y que pueden ocasionar **enfermedades**, o la disminución de la salud de los **trabajadores**.
+
+### Enfermedad laboral
+
+La enfermedad profesional se distingue a toda **variación** en la **salud** del trabajador, y es un estado patológico derivado de la **acción continua** de una causa que tenga origen o motivo **en el trabajo** o en el **medio** en que el trabajador presta sus servicios y que le provoque una **incapacidad** o **perturbación** física, psíquica o funcional de forma permanente o transitoria.
+
+### Alcance de la higiene industrial
+
+**Contaminantes físicos**:
+- ruido, iluminación, temperatura, vibraciones.
+
+**Contaminantes químicos**:
+- gases, humos y neblinas, polvos, vapores.
+
+**Contaminantes biológicos**:
+- virus, hongos, bacterias.
+
+### Contaminantes físicos
+
+Son distintas formas de **energías** que generadas por **fuentes concretas**, pueden afectar a los trabajadores sometidos a ellas. Están energías pueden ser **mecánicas**, **térmicas** o **electromagnéticas**, provocando efectos muy distintos entre sí.
+
+Por ejemplo el **ruido**:
+
+Es un tipo de contaminante muy común en los diferentes sectores económicos, y se define como un **sonido no deseado**.
+
+Los altos niveles de presión sonora son ocasionados principalmente por:
+
+- Maquinas obsoletas
+- Inadecuado mantenimiento
+- Piezas mal empotradas / desajustadas
+
+El sonido puede generar estos daños:
+
+- Sordera temporal
+- Sordera permanente (Hipoacusia)
+- Interferencia de comunicación
+- Perdida auditiva por edad
+- Aumento de la frecuencia respiratoria
+- Afecciones en él estomago
+- Trastorno nervioso
+- Dificultad de la atención
+- Aumento del ritmo cardiaco
+- Constricción de los vasos sanguíneos
+- Aceleración del ritmo respiratorio
+- Disminución de la actividad de los órganos de
+- la digestión
+- Reducción de la actividad cerebral con la
+- consiguiente disminución de la atención.
+
+Tambien generan trastornos psicologicos:
+
+- Agresividad
+- Ansiedad
+- Disminución de la atención
+- Disminución de la memoria inmediata
+
+Los decibeles permitidos son:
+
+![](img/desibeles.png)
+
+Algunas medidas que se pueden tomar para reducir el ruido:
+
+Reducir el ruido en su origen:
+
+- Cambiar el equipo obsoleto por uno más moderno y menos ruidoso.
+- Implementar un adecuado programa de mantenimiento
+- Amortiguar los escapes de aire comprimido
+
+Reducir el ruido en el medio:
+
+- Encerrando las maquinas ruidosas en un recinto insonorizado de paredes rígidas recubiertas interiormente de un material poroso u absorbente del ruido, puerta de cierre hermético.
+- Realizar periódicamente mediciones de nivel sonoro de ruido para verificar la eficiencia de las medidas adoptadas.
+- Tratamiento acústico del local, colocando en el techo y / o paredes, paneles absorbentes de ruido
+
+### Iluminacion
+
+La iluminación es una necesidad en cualquier circunstancia de nuestra vida diaria. La iluminación es un **factor de calidad** en el trabajo; sin embargo muchas veces no le damos la importancia que tiene gracias a que nuestros ojos son capaces de adaptarse, al menos a corto plazo, a condiciones deficientes de iluminación.
+
+La mala iluminacion puede afectar a nuestra salud de estas maneras:
+
+Afectaciones Directas:
+
+- Irritación
+- Cansancio Ocular
+- Deslumbramiento
+
+Afectaciones no Oculares o Indirectas:
+
+- Dolor de Cabeza
+- Fatiga
+
+Para corregir la mala iluminacion podemos:
+
+- Que la iluminación que llegue al plano de trabajo sea la adecuada a la actividad que se realiza
+- No producir deslumbramientos: Que se produce cuando mira una luz más
+- fuerte que la que el ojo está adaptado a recibir en ese momento. Esto
+- ocurre cuando la iluminación está ubicada a baja altura y sin pantalla.
+- Que sé de un contraste suficiente entre los distintos objetos o partes de los mismos que se están observando
+- Planificar la iluminación en la superficie de trabajo orientada de manera correcta.
+- La luz debe dirigirse, primero a los materiales y objetos con los que trabajamos.
+- En puestos de trabajos individuales la fuente de luz debe ubicarse, por lo general oblicuamente detrás del hombro izquierdo en el caso de quien utilice su mano derecha.
+- Siempre que sea posible se empleará iluminación natural y si es insuficiente se empleará la artificial.
+
+![](img/lux.png)
+
+### Calor
+
+Estres termico por calor
+
+Es la **carga** neta de **calor** en el **cuerpo** como consecuencia de la contribución producida por el calor **metabólico** y de los factores **externos** como son: Temperatura ambiente, Cantidad de vapor de agua y el movimiento del aire, afectado a su vez por la ropa.
+• La temperatura media normal en el interior del organismo es de 37°C.
+• La temperatura media normal de la piel es de 35°C.
+• El cuerpo humano es considerado un depósito al que llega calor.
+
+Los mecanismos de intercambio de calor con el cuerpo son:
+
+- INTERCAMBIO DE CALOR POR EVAPORACIÓN DEL SUDOR.
+- INTERCAMBIO DE CALOR POR CONVECCIÓN.
+- INTERCAMBIO DE CALOR POR RADIACIÓN.
+
+La incidencia de calor se puede dar por:
+
+- Hacinamiento
+- Infraestructura metálica
+- Deficiente ventilación – climatización
+- Fuentes generadoras de vapor (planchas – secados y calderas)
+
+Los daños producidos por el calor son:
+- La exposición conlleva a la disminución de:
+  - De las posibilidades del trabajo físico.
+  - Las actividades psicomotoras.
+- Consecuencias fisiológicas.
+  - Aumento de la frecuencia cardíaca.
+  - Contracciones (dilatación de los vasos sanguíneos)
+  - Disminución de la tensión muscular.
+  - Incremento del ritmo respiratorio.
+  - Reacción sudorífica.
+  - Incremento de la temperatura corporal (> 37 grados centígrados).
+- Consecuencia de la Hipertemia.
+- Trastornos sistémicos:
+- Calambres por calor
+- Agotamiento por calor:
+  - Deficiencia circulatoria
+  - Deshidratación
+- Sincope por calor
+- Edema por calor
+- Golpe de calor (Hiperpirexia)
+  - Hipertemia severa con una temperatura interior del cuerpo superior a los 42°C
+  - Alteraciones del sistema nervioso central
+  - Piel caliente y seca con cese de la sudoración.
+
+![](img/ex_termico.png)
+
+Acciones correctivas:
+
+- actuar sobre la fuente de calor:
+-  apantallamiento de los focos de calor radiante (hornos, motores)
+- actuar sobre el ambiente térmico
+- Dotar al local de ventilación general que evite el calentamiento del aire, aumentando si fuese preciso la velocidad del aire.
+- Esta ventilación puede ser del tipo natural o forzada por medio de ventiladores – extractores (climatización)
+-  Utilizar sistemas de extracción localizada (en actividades en que se genere vapor de agua, con el fin de evitar el aumento de la humedad del aire).
+- actuar sobre el individuo
+- consiste en aislar al trabajador por medio de prendas de protección personal
+- rotación de personal
+- Modificaciones e métodos de trabajo.
+- Hidratación
+
+### Contaminantes quimicos
+
+![](img/vias_e.png)
+
+![](img/moleculas.png)
+
+Daños por contacto:
+
+- A través de la piel :
+  - dermatitis de contacto e imitativa
+  - dermatosis
+  - tiña
+- Inhalación de partículas:
+  - vapores orgánicos debido a la volatilidad de los distintos disolventes empleados:
+  - alergia
+  - trastornos respiratorios
+  - reacción alérgica a la pelusa de algodón
+
+![](img/efectos.png)
+
+![](img/medidas.png)
+
+Otras medidas correctivas son:
+
+- Realizar monitoreo ambiental para conocer la magnitud del contaminante
+- Sustituir los productos por otros menos tóxicos y cuya aplicación sea similar.
+- Separación mediante aislamiento del proceso para controlar el área de trabajo.
+- Ventilación, extracción localizada
+- PROTECCIÓN INDIVIDUAL
+- Reconocimiento médico periódico.
+- Protección individual.
+
+### Contaminantes biologicos
+
+Son seres vivos, **organismos** con un determinado ciclo de vida que al penetrar en el cuerpo ocasionan **enfermedades** de tipo **infeccioso** o **parasitario**.
+
+Medios de contaminacion biologica:
+
+- El hacinamiento propicia la transmisión de enfermedades comunes (tuberculosis, hepatitis) 
+- Ingerir alimentos deficientemente manipulados, o hacer uso de agua no apta para tomar o lavarse las manos
+- Malos hábitos higiénicos
+- Alta promiscuidad ( E. T. S – VIH/ SIDA)
+- Parasitosis
+- Infecciones digestivas.
+- Trabajos agrarios
+-  Actividades en las que existe contacto con animales y / o con productos de origen animal
+-  Asistencia sanitaria
+-  Eliminación de residuos
+-  Construcción : trabajo de perforación o excavación.
+
+Acciones correctivas:
+
+- Supervisión de la calidad en la elaboración de los alimentos
+- Adopción de la higiene personal
+- Controles médicos.
+
+Recomendaciones:
+
+- Concientizar a los empleadores a través de talleres impartidos, los beneficios que se obtienen al aplicar las técnicas de Higiene y Seguridad dentro de sus empresas.
+- Capacitar a los trabajadores a traves de los empleadores sobre las normas de higiene y seguridad , y el uso de los equipos de protección personal.
+- Estructurar un plan anual de higiene y seguridad dentro de cada una de las empresas.
+- Destinar un presupuesto anual para desarrollar las acciones contempladas en el plan anual de higiene y seguridad.
+- Diseñar un sistema de evaluación que nos permita visualizar, controlar el desarrollo del plan de higiene y seguridad.
+- Tomar en cuenta siempre al empleador y los trabajadores en conjunto ( estructurar la comisión mixta de higiene y seguridad)
+- Elaborar el reglamento técnico organizativo dentro de cada una de las empresas.
+- Tomar en cuenta las técnicas de control que se presentan en este documento para los diferentes tipos de riesgos y contaminantes existentes en los diferentes centros de trabajo.
+- Solicitar asesoria en higiene y seguridad a las instituciones que velan por el mejoramiento de las condiciones de trabajo.
