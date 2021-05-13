@@ -22,6 +22,12 @@
     - [Automatas finitos deterministas](#automatas-finitos-deterministas)
       - [Minimizacion de automatas](#minimizacion-de-automatas)
     - [Automatas finitos no deterministas](#automatas-finitos-no-deterministas)
+  - [Gramaticas de tipo 2 (independientes del contexto)](#gramaticas-de-tipo-2-independientes-del-contexto)
+    - [Gramatica limpia](#gramatica-limpia)
+    - [Gramatica bien formada](#gramatica-bien-formada)
+    - [Forma normal de Chomsky](#forma-normal-de-chomsky)
+    - [Forma normal de Greibach](#forma-normal-de-greibach)
+  - [Automatas de pila](#automatas-de-pila)
 
 ## Lenguajes gramaticales y formales
 
@@ -272,3 +278,85 @@ Un automata es no determinista si no se cumple por lo menos una de los 3 requeri
 ![](img/nodeter_ej.png)
 
 Se puede transformar un automata **no determinista** a uno **determinista** de tal manera que ambos aceptan el mismo lenguaje realizando un metodo anologo al de reducir un AFD a su minima exprecion (determinando conjuntos cocientes).
+
+## Gramaticas de tipo 2 (independientes del contexto)
+
+Estas gramaticas son de vital importancia en el mundo de la programacion ya que tienen el mismo funcionamiento que un compilador.
+
+Para que una gramatica tipo 2 sea reconocida por una maquina automata, primero hay que pasar por un procedimiento consistente de estos 3 pasos:
+
+- Gramatica limpia
+- Gramatica bien formada
+- Formas normales de Chomsky y Greinbach
+
+### Gramatica limpia
+
+Una gramatica limpia no tiene
+
+- **Reglas innecesarias**: son las que tienen la forma A::=A (un no terminal que deriva en si mismo).
+- **Reglas inaccesibles**: aquellos símbolos no terminales (A) que no pueden ser alcanzados por derivación desde el axioma de la gramática, S.
+- **Simbolos superfluos**:
+  - **No terminal**: es aquel del que **solo** se pueden derivar palabras en las que existe **al menos** un símbolo no terminal.
+  - **Terminal**: Es aquel que no puede ser alcanzado por derivación desde el axioma (no aparece en la parte derecha de ninguna producción).
+
+Para conseguir una gramatica limpia, se sigue el proceso explicado en el siguiente ejemplo:
+
+![](img/gramaticas_tipo_2/limpia_1.png)
+![](img/gramaticas_tipo_2/limpia_2.png)
+![](img/gramaticas_tipo_2/limpia_3.png)
+
+### Gramatica bien formada
+
+Una gramatica esta bien formada si
+- **Esta limpia**
+- **No tiene**:
+  - **Reglas no generativas**: Una regla es no generativa cuando en A::= λ , A **no es** el **axioma** (S)
+  - **Reglas de redefinicion**: Una regla es de redenominación cuando A::=B con A y B **no terminales**. 
+
+Para conseguir una gramatica bien formada, se sigue el procedimiento explicado en este ejemplo:
+
+![](img/gramaticas_tipo_2/bien_formada_1.png)
+![](img/gramaticas_tipo_2/bien_formada_2.png)
+
+### Forma normal de Chomsky
+
+Una gramatica esta en su forma normal de Chomsky si
+
+- Esta bien formada
+- Las producciones solo son de la forma P={(A::=BC) ó (S::=λ) ó (A::=a)}
+
+Destacamos de las gramaticas expresadas en esta forma normal que los árboles de derivación, salvo en las derivaciones correspondientes a las hojas, **son binarios**. 
+
+Para obtener una gramatica en su forma normal de Chomsky, seguimos el proceidimiento explicado en el siguiente ejemplo:
+
+![](img/gramaticas_tipo_2/chomsky.png)
+
+### Forma normal de Greibach
+
+Una gramatica esta en su forma normal de Greibach si:
+- Esta bien formada
+- Las producciones son de la forma: A →a ó A →aB1B2…Bk donde Bi son no terminales.
+
+En otras palabras, **no** puede **tener** producciones **recursivas por izquierda**, y cada produccion debe tener **UN** simbolo terminal del alfabeto
+
+Para obtener una gramatica en su forma normal de Greibach, se sigue el procedimiento explicado en el siguiente ejemplo:
+
+![](img/gramaticas_tipo_2/greibach_1.png)
+
+## Automatas de pila
+
+Los autómatas de Pila reconocen palabras de lenguajes generados por **gramáticas libres de contexto** 
+Un AP es básicamente un AF con una  pila, en donde se puede **almacenar y recordar** información. 
+Los AP solo pueden acceder a la información  almacenada en forma **LIFO**. 
+
+![](img/gramaticas_tipo_2/pila.png)
+
+En una **transición** el AP: 
+
+- Consume un símbolo de entrada.
+- Se va a un nuevo estado (que puede ser el mismo).
+- Se modifica el **tope** de la pila:
+ - Queda el mismo símbolo en el tope (no hace nada) 
+ - Hace pop (elimina lo que esta en el tope) 
+ - Cambia el tope por otro valor (reemplazo con pop/push)
+ - Hace push cambiando el tope
