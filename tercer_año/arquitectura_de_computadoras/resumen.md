@@ -497,3 +497,8 @@ En el pre index la constante es sumada al registro base (que servira como index 
 En el pos index, primero se accede a la posicion de memoria indicada por el registro base, y luego este registro se lo actualiza sumando o restando la constante.
 
 En un registro de memoria se pueden guardar 8 bits (o un byte). al guardar datos mas pesados que estos en una direccion de mememoria se utiliza el metodo [little endian](https://es.wikipedia.org/wiki/Endianness)
+
+Se pueden guardar o cargar multiples direcciones de memoria con multiples registros mediante el siguiente comando, usando sus respectivos modos de acceso:
+
+![](img/arm/multiple_add.png)
+
