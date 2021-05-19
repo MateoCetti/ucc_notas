@@ -1,6 +1,6 @@
 # Resumen base de datos 1
 
-- [Resumen de base de datos 1](#resumen-de-base-de-datos-1)
+- [Resumen base de datos 1](#resumen-base-de-datos-1)
   - [SGBD](#sgbd)
     - [Modelos de datos:](#modelos-de-datos)
     - [Usuarios de bases de datos:](#usuarios-de-bases-de-datos)
@@ -48,6 +48,8 @@
       - [DDL (Data Definition Language)](#ddl-data-definition-language)
       - [DML (Data Manipulation Language)](#dml-data-manipulation-language)
     - [Consultas (DML)](#consultas-dml)
+  - [indexacion](#indexacion)
+  - [Procesamiento de consultas](#procesamiento-de-consultas)
 
 ## SGBD
 
@@ -792,7 +794,7 @@ select snum as numero_proveedor, snombre,         situacion, ciudad from proveed
 
 Los indices son el concepto central que dan **agilidad** y **velocidad** al movimiento del motor de bases de datos. El motor de bases de datos (sin indices) funciona como una lista enlazada, y siempre que querramos buscar un registro, se verifica registro por registro si el especificado coincide con el actual. Al utilizar indices (que se aplican a **atributos**) generamos `tablas de hash` referenciadas entre si mediante mecanismos similares a un `arbol B` que mejoraran mucho la velocidad de busqueda de los datos.
 
-![](img/indices.png)
+![](img/indices_1.png)
 
 Hay distintas tecnicas de indexado, estas son:
 
@@ -810,4 +812,4 @@ El gestor de base de datos (al momento de ejecutar una consulta) se comporta de 
 2. Luego se pasa la consulta por el `optimizador` que vera (utilizando **estadisticas** de los datos obtenidas de anteriores consultas) si la sentencia que nosotros escribimos se puede **mejorar** (para mejorar la velocidad de respuesta)
 3. El motor de ejecucion de consultas toma un plan de evaluación de la consulta, ejecuta ese plan y devuelve las respuestas a la consulta.
 
-![](img/proceso_consulta)
+![](img/proceso_consulta.png)
