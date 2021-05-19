@@ -1,4 +1,4 @@
-# Resumen de base de datos 1
+# Resumen base de datos 1
 
 - [Resumen de base de datos 1](#resumen-de-base-de-datos-1)
   - [SGBD](#sgbd)
@@ -787,3 +787,27 @@ Se pueden renombrar las relaciones y atributos con la clausula `AS`
 ```SQL
 select snum as numero_proveedor, snombre,         situacion, ciudad from proveedores
 ```
+
+## indexacion
+
+Los indices son el concepto central que dan **agilidad** y **velocidad** al movimiento del motor de bases de datos. El motor de bases de datos (sin indices) funciona como una lista enlazada, y siempre que querramos buscar un registro, se verifica registro por registro si el especificado coincide con el actual. Al utilizar indices (que se aplican a **atributos**) generamos `tablas de hash` referenciadas entre si mediante mecanismos similares a un `arbol B` que mejoraran mucho la velocidad de busqueda de los datos.
+
+![](img/indices.png)
+
+Hay distintas tecnicas de indexado, estas son:
+
+  - indices densos
+  - indices dispersos
+  - indices multinivel
+
+Los indices consumen espacio, y su creacion consume tambien mucho tiempo, por lo que solamente se deben crear indices utlies, es decir sobre atributos que creamos **realmente necesarios**
+
+## Procesamiento de consultas
+
+El gestor de base de datos (al momento de ejecutar una consulta) se comporta de la siguiente manera:
+
+1. Primero analiza la **consulta** (se fija que la sintaxis este bien) y la **traduce** a una exprecion del **algebra relacional**
+2. Luego se pasa la consulta por el `optimizador` que vera (utilizando **estadisticas** de los datos obtenidas de anteriores consultas) si la sentencia que nosotros escribimos se puede **mejorar** (para mejorar la velocidad de respuesta)
+3. El motor de ejecucion de consultas toma un plan de evaluación de la consulta, ejecuta ese plan y devuelve las respuestas a la consulta.
+
+![](img/proceso_consulta)
