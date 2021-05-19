@@ -502,3 +502,39 @@ Se pueden guardar o cargar multiples direcciones de memoria con multiples regist
 
 ![](img/arm/multiple_add.png)
 
+El arm realiza la multiplicacion mediante la **mezcla** entre operaciones de **desplazamiento** y **suma**, optimizando asi la cantidad de ciclos de reloj necesarios para realizar dicha multiplicacion.
+
+Cuando usamos la multiplicacion es muy probable que lleguemos a un **desbordamiento**. En una arquitectura de 32 bits, para que no se produzca esto deberiamos de tener una capacidad el doble de grande que el de los dos numeros a multiplicar. Es decir que, si quisieramos multiplicar dos numeros de 32 bits, necesitariamos tener un numero con espacio para 64, y para poder multiplicar en una arquitectura de 32 bits, los numeros a multiplicar **no** deberian **sobrepasar** los **16 bits**.
+
+En terminos generales, la ARM no proporciona nemotecnicos de **division** y por ejemplo el lenguaje C utiliza corrimientos.
+
+**Branch**
+
+El registro numero 15 es el **program counter** (PC) que se encarga de referenciar a la siguiente linea de codigo que se debera ejecutar. Cuando nosotros hacemos un `branch <label>` lo que hacemos es cambiar el PC a la linea correspondiente al label indicado.
+
+El nemotecnico branch tiene un argumento que le podemos pasar que es `l`, quedando asi:
+
+`b<l><cond> <label>`
+
+Lo que hace este `l` es **actualizar** el registro 14 o **link register** (LR) con la direccion de la linea siguiente a la llamada a branch. Esto se hace con la funcion de cuando terminamos el "salto" **poder volver** al punto en donde saltamos (Seria como una **funcion** en un lenguaje de alto nivel).
+
+**Uso recomendado de los registros (en funciones ?).**
+
+![](img/arm/uso_registros.png)
+
+- Los registros que podemos modificar libremente son r0, r1, r2, r3 (argumentos y retornos)
+- Los registros del r4, al r11 se pueden usar pero sus **valores originales** deben ser **preservados** para que no se generen **conflictos** (Para eso haremos uso del registro numero 13 o **stack pointer** SP)
+- El r12 se puede usar (creo)
+- Los registros r13, r14 y r15 son generalmente  actualizados por la maquina en si.
+
+Para poder usar y preservar los valores de los registros del r4 al r11 hacemos uso del registro r13 y el stack (memoria libre para guardar x cantidad de registros)
+
+El procedimiento para realizar esto es el siguiente:
+
+![](img/arm/stack.png)
+
+![](img/arm/push_pop.png)
+
+Para poder hacer subrutinas anidadas (con branches) debemos de guardar en el stack los LR
+
+![](img/arm/subrutinas.png)
