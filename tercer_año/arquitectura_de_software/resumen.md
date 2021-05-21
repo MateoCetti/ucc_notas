@@ -45,6 +45,15 @@
       - [DeadLocks](#deadlocks)
       - [Livelock](#livelock)
       - [starvation](#starvation)
+  - [Telecomunicaciones](#telecomunicaciones)
+    - [Modelo OSI](#modelo-osi)
+    - [Protocolo IP](#protocolo-ip)
+    - [Protocolo TCP](#protocolo-tcp)
+    - [Protocolo HTTP](#protocolo-http)
+    - [Protocolo DNS](#protocolo-dns)
+  - [Patron Arquitectonico](#patron-arquitectonico)
+    - [Patron MVC](#patron-mvc)
+  - [ORM](#orm)
 
 ## Introduccion
 
@@ -941,3 +950,102 @@ Ninguno de los procesos conseguirá los recursos: bloqueo "vivo"
 
 #### starvation
 Uno de los procesos no conseguirá nunca los recursos: inanición
+
+## Telecomunicaciones
+
+### Modelo OSI
+
+![](img/osi/osi.jpg)
+
+Este es un **modelo** de **referencia** para los **protocolos** de la red. Está conformado por **7 capas** o niveles de abstracción. Cada uno de estos niveles tendrá sus propias **funciones** para que en conjunto sean capaces de poder alcanzar su objetivo final.
+
+![](img/osi/capas.png)
+
+### Protocolo IP
+
+Perteneciente a la **capa de red** (3) del modelo OSI, su función principal es el uso bidireccional en origen o destino de **comunicación** para **transmitir datos** mediante un protocolo no orientado a conexión que transfiere paquetes conmutados a través de distintas redes físicas previamente enlazadas según la norma OSI de enlace de datos.
+
+Mediante **IPv4**, Se nos otorgan **direcciones IP** que nos permiten identificarnos en la RED, ya sea direcciones **publicas** o **privadas** para identificarnos en las respectivas redes publicas o privadas.
+
+Estas direcciones son del tipo
+
+192.168.0.1
+
+Donde el numero maximo que puede tomar una seccion es 255.
+
+### Protocolo TCP
+
+Una vez conectado un dispositivo con otro mediante el protocolo IP, el dispositivo destino (que llamaremos servidor) gracias al protocolo TCP es capas de otorgar varios **servicios** al mismo tiempo mediante "puertos".
+
+Estos puertos son numeros que van desde el 0 al 64535 (2¹⁶) y se indican con : luego de la direccion IP: xxx.xxx.xxx.xxx:80
+
+Los puertos mas comunes son:
+(Destaco el SSH -> 21)
+
+![](img/osi/ports.png)
+
+### Protocolo HTTP
+
+HTTP, de sus siglas en inglés: "**Hypertext Transfer Protocol**", es el nombre de un protocolo el cual nos permite realizar una **petición de datos** y recursos, como pueden ser **documentos HTML**.
+
+Esta basado en Requests y Responses(req, res)
+
+Es imprescindible conocerlo para desarrollar sistemas web.
+
+### Protocolo DNS
+
+(Domain Name Service)Es un protocolo que sirve para **traducir** un "nombre" a una IP para no tener que acordarse de cada IP cuando queramos acceder a cada pagina/servicio web.
+
+Los dominios son **otorgados** por entidades mediante un sistema **jerarquico** en donde las organizaciones principales son ., .com, .net (USA), la organizacion . le otorga a argentina el .ar y argentina nos puede otorgar nuestro dominio .com.ar, etc.
+
+![](img/osi/dns_j.png)
+
+El protocolo HTTP utiliza URL's para identificar univocamente una pagina
+
+![](img/osi/url.png)
+
+El protocolo HTTP define una serie de metodos que un cliente puede usar para pedir/modificar los datos de un servidor. Los mas usados son:
+
+![](img/osi/HTTPMethods.jpg)
+
+El protocolo HTTP tambien contiene **HEADERS**. Los HTTP headers son la parte central de los HTTP **requests** y **responses**, y transmiten información acerca del navegador del cliente, de la página solicitada, del servidor, etc.
+
+Los **responses** pueden devolver headers con distintos **codigos**. Estos codigos son:
+
+![](img/osi/codes.jpeg)
+
+## Patron Arquitectonico
+
+Un patron arquitectonico es una solucion general y reutlizable a un problema comun en la arquitectura de software dentro de un contexto dado. Los patrones arquitectonicos son **similares** al **patron de diseño** de software pero tienen un **alcance mas amplio**.
+
+### Patron MVC
+
+MVC (Model-View-Controller) es un **patrón arquitectural**, un modelo o guía que expresa **cómo** organizar y **estructurar** los **componentes** de un sistema software, sus responsabilidades y las relaciones existentes entre cada uno de ellos.
+
+La arquitectura MVC propone, independientemente de las tecnologías o entornos en los que se base el sistema a desarrollar, la **separación** de los componentes de una aplicación en tres grupos (o capas) principales: el **modelo**, la **vista**, y el **controlador**, y describe cómo se relacionarán entre ellos para mantener una estructura organizada, limpia y con un **acoplamiento mínimo** entre las distintas capas.
+
+**Modelo**
+
+En la capa Modelo encontraremos siempre una **representación** de los **datos** del dominio, es decir, aquellas entidades que nos servirán para almacenar información del sistema que estamos desarrollando.
+
+El Modelo será también el encargado de **gestionar** el **almacenamiento** y recuperación de datos y entidades del dominio, es decir, incluirá **mecanismos** de **persistencia** o será capaz de **interactuar** con ellos. Dado que habitualmente la persistencia se delega a un motor de bases de datos, es muy frecuente encontrar en el Modelo la implementación de componentes tipo DAL (Data Access Layer, o Capa de Acceso a Datos) y **ORMs**.
+
+**Vista**
+
+Los componentes de la Vista son los responsables de generar la **interfaz** de nuestra aplicación, es decir, de componer las **pantallas**, **páginas**, o cualquier tipo de **resultado** utilizable por el usuario o **cliente** del sistema. De hecho, suele decirse que la Vista es una representación del estado del Modelo en un momento concreto y en el contexto de una acción determinada.
+
+**Controlador**
+
+La misión principal de los componentes incluidos en el Controlador es actuar como **intermediarios** entre el usuario y el sistema. Serán capaces de **capturar** las **acciones** de éste sobre la Vista, como puede ser la pulsación de un botón o la selección de una opción de menú, **interpretarlas** y **actuar** en **función** de ellas. Por ejemplo, retornando al usuario una nueva vista que represente el estado actual del sistema, o invocando a acciones definidas en el Modelo para consultar o actualizar información.
+
+Realizarán también tareas de **transformación** de **datos** para hacer que los componentes de la Vista y el Modelo se entiendan. Así, traducirán la información **enviada** **desde** la **interfaz**, por ejemplo los valores de campos de un formulario recibidos mediante el protocolo HTTP, a objetos que puedan ser comprendidos por el Modelo, como pueden las clases o las entidades del dominio.
+
+Y de la misma forma, el Controlador **tomará** la **información** procedente del **Modelo** y la **adaptará** a formatos o estructuras de datos que la **Vista** sea **capaz** de **manejar**.
+
+![](img/osi/mvc.png)
+
+## ORM
+
+Un ORM es un **modelo de programación** que permite **mapear** las **estructuras** de una **base de datos relacional** (SQL Server, Oracle, MySQL, etc.), a una **estructura lógica** de entidades con el objeto de **simplificar** y **acelerar** el **desarrollo** de nuestras **aplicaciones**.
+
+![](img/osi/ORM.png)
