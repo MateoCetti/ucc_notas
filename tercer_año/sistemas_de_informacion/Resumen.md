@@ -12,6 +12,7 @@
   - [Sistemas de informacion](#sistemas-de-informacion)
     - [Clasificacion de los SI en 2 dimensiones](#clasificacion-de-los-si-en-2-dimensiones)
   - [Sistemas ERP](#sistemas-erp)
+  - [Sistemas workflow](#sistemas-workflow)
 
 ## UNIDAD 1: Teoria general de sistemas (TGS)
 
@@ -249,3 +250,58 @@ Objetivo de los `ERP`: **Facilitar** la **gestión** de los **recursos de la emp
     - lenguajes 4GL (aplicaciones y reportes a medida)
   - Herramientas de auditoría del sistema y DB
   - Soporte de tecnologías de internet: XML, JAVA
+
+## Sistemas workflow
+
+Forma de llevar adelante el trabajo colaborativo.
+
+Es un subconjunto de los **groupware** (software colaborativo que ayuda a los usuarios en las tareas cotidianas como calendario / programación, libretas de direcciones, correo electrónico, foros, listas de correo, mensajería instantánea y más.)
+
+`Proceso de negocio`: Secuencia de actividades, controles, tomas de decisiones que se van encadenando de una determinada forma para facilitar el trabajo coordinado para el logro de un objetivo.
+
+`Sistema workflow`: Automatizacion de un proceso de negocio en el que la informacion llega al usuario adecuado en el momento adecuado siguiendo un conjunto de reglas que permiten que la mayoria del trabajo sea efectuado informaticamente, siendo las personas las encargadas solamente de las excepciones.
+
+`Workflow Managenemt System (WKMS)`: tambien conocidos como motor de workflow es un sistema que permite crear y administrar la ejecucion de workflows interpretando las tareas de los mismos
+
+
+Si queremos automatizar nuestro proceso de negocio debemos de analizar bien dicho proceso, teniendo en cuenta las `3 R` y los `tipos de informacion`:
+
+**3 R**:
+
+- **Rutas**: Secuencia de tareas
+- **Roles**: Participantes con distintas tareas a cargo
+- **Reglas**: Que definen que medidas se tomaran ante determinados eventos.
+
+**Tipos de info**:
+
+- **Documentos** (.xls, .doc, .pdf, etc.)
+- **Formularios** (Segun registros de la DB)
+- **Mensajes** (novedades, alertas)
+
+Algunas de las **funciones** que cumplen los sistemas workflow son las siguientes:
+
+- Asignacion de tareas al personal
+- Aviso de tareas pendientes
+- Permitir olaboracion en tareas comunes
+- Automatizacion de secuencias
+- Control y seguimiento de los procesos de negocio
+
+`NOTA:`Business Process Model and Notation (**BPMN**) es una notación gráfica estandarizada que permite el modelado de procesos de negocio, en un formato de flujo de trabajo (workflow).
+
+![](img/bpmn.png)
+
+Cuando desarrollamos un sistema workflow debemos de tener en cuenta **QUE** proceso se realizara, **QUIENES** lo haran y en DONDE o **CUAL** seran los recursos utilizados
+
+![](img/cubo_w.png)
+
+Para modelar los procesos de negocio de tal manera que sean interpretados por el motor de workflow se han desarrollado ciertos estandares listados a continuacion
+
+![](img/estandares_procesos.png)
+
+Un sistema workflow tiene 3 momentos determinados, el de **modelado y diseño**, el de la **ejecucion del usuario final** y el de la **administracion y supervicion**.
+
+Un flujo de trabajo debe ser flexible, es decir, debe de poder modificarse una vez puesto en marcha sin generar problemas adversos.
+
+
+Si tenemos muchos decisiones anidadas en nuestro BPMN, es mejor representar el flujo de trabajo mediante arboles de decision o tablas de desicion
+
