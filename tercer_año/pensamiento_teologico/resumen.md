@@ -9,6 +9,8 @@
   - [Religion en la actualidad](#religion-en-la-actualidad)
   - [Criticas a la religion](#criticas-a-la-religion)
   - [Diversidad religiosa](#diversidad-religiosa)
+  - [Metodo para leer la biblia](#metodo-para-leer-la-biblia)
+  - [Genesis](#genesis)
 
 ## Email profe
 
@@ -103,3 +105,22 @@ En la Arg. hay libertad para elegir la religion que uno mas prefiera, estas reli
 La diversidad cultural es un hecho antiguo en la Arg. (new age)
 
 La palabra [secta](https://en.wikipedia.org/wiki/Sect) usualmente es usada con una cognotacion negativa. Pero una secta solo es un subgrupo separado de un sistema religioso.
+
+## Metodo para leer la biblia
+
+1. pretexto
+2. contexto
+3. texto
+4. mensaje
+
+## Genesis
+
+Leemos Genesis Cap. 2 ver. 4 - Cap. 3 ver. algo
+
+Podemos destacar que el autor de este texto vivia en la mesopotamia, era agricultor y tenia mujer e hijos, entre otras cosas.
+
+Destacamos tambien que el relato esta estructurado de manera [triptica](https://es.wikipedia.org/wiki/Tr%C3%ADptico_(publicidad)), en donde la desnudez marca los engranajes de dicho triptico.
+
+El mensaje que nos deja este texto es:
+
+`Si no nos creemos dioses y confiamos en la palabra de dios, vamos a poder vivir en un paraiso, en donde vamos a poder vivir en paz entre nosotros, con dios y con la naturaleza.`
