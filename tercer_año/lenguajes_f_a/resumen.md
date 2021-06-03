@@ -28,6 +28,10 @@
     - [Forma normal de Chomsky](#forma-normal-de-chomsky)
     - [Forma normal de Greibach](#forma-normal-de-greibach)
   - [Automatas de pila](#automatas-de-pila)
+  - [Maquina de Turing](#maquina-de-turing)
+    - [operaciones](#operaciones)
+    - [Definicion formal](#definicion-formal)
+    - [Caracteristicas](#caracteristicas)
 
 ## Lenguajes gramaticales y formales
 
@@ -360,3 +364,34 @@ En una **transición** el AP:
  - Hace pop (elimina lo que esta en el tope) 
  - Cambia el tope por otro valor (reemplazo con pop/push)
  - Hace push cambiando el tope
+
+## Maquina de Turing
+
+Es un dispositivo hipotético capaz de **manipular símbolos** en una **cinta** considerando ciertas **reglas**.
+
+A pesar de su simplicidad, pueden **simular** la **lógica** de cualquier **algoritmo** de un computador. 
+Una MT está formado por: 
+- Una **cinta infinita** dividida en **celdas** 
+- Un **cabezal** de lectura/escritura capaz de moverse sobre dicha cinta. 
+
+### operaciones
+
+![](img/turing_o.png)
+
+### Definicion formal
+
+![](img/turing_def.png)
+
+### Caracteristicas
+
+- La cinta es infinta
+- La cinta tiene un numero finito de simbolos seguidos por infinitos blancos
+- La cabezera siempre empieza por el elemento mas a la izq de la palabra
+- la MT se puede representar en una tabla (como todo automata)
+- si la transicion no es posible la MT se detiene
+
+La MT tambien se puede representar como diagrama de estados en donde cada arco etiqueta:
+- Simbolo inicial
+- Simbolo que reescribe
+- Direccion de movimiento del cabezal
+
