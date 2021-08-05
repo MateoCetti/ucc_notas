@@ -2,9 +2,7 @@
 
 En este repositorio guardo la **mayoria** de los **resumenes** (o seguimientos de clase) que he desarrollado y utilizado para estudiar las distintas materias de la carrera **Ingenieria en sistemas** de la Universidad **Catolica de Cordoba**.
 
-Cabe destacar que primer año no esta en el repositorio ya que no lo curse debido al reconocimiento que tiene la facultad por los contenidos cursados en mi colegio secundario. Sin embargo, en la carpeta de **segundo año** se encuentran resumenes de las materias **Algebra**, **Analisis Matematico 1** y **Fisica 1**.
-
-La mayoria de resumenes de 2° año estan hechos en **LaTeX** ya que las operaciones matematicas abundan bastante. Pero en 3° año los resumenes estan desarrollados en **Markdown**.
+Cabe destacar que primer año no esta en el repositorio ya que no lo curse debido al reconocimiento que tiene la facultad por los contenidos cursados en mi colegio secundario. Sin embargo, en la carpeta de **segundo año** se pueden llegar a encontrar algunos contenidos de las materias **Algebra**, **Analisis Matematico 1** y **Fisica 1**.
 
 ## Indice
 
@@ -25,8 +23,9 @@ La mayoria de resumenes de 2° año estan hechos en **LaTeX** ya que las operaci
   - [Arquitectura de software II](tercer_año/arquitectura_de_software_II/resumen.md)
   - [base de datos I](./tercer_año/bases_de_datos_1/resumen.md)
   - [Gestion ambiental](./tercer_año/gestion_ambiental/resumen.md)
+  - [Ingenieria de software](./tercer_año/ingenieria_software/resumen.md)
   - [Lenguajes formales y automatas](./tercer_año/lenguajes_f_a/resumen.md)
-  - [Modelos y simulación](./tercer_año/modelos_y_simulacion/resumen.md)
+  - [Modelos y simulación](./tercer_año/modelos_y_simulacion/)
   - [Pensamiento teologico](tercer_año/pensamiento_teologico/resumen.md)
   - [Seminario de Blockchain](tercer_año/s_blockchain/resumen.md)
   - [Sistemas de informacion](./tercer_año/sistemas_de_informacion/Resumen.md)

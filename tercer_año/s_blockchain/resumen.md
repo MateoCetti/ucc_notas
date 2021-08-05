@@ -51,3 +51,44 @@ Bitcoin es:
 - Red p2p
 - Software
 
+## Blockchain
+
+
+**SHA 256 - Secure Hash Algorithm**: Huella digital de cualquier tipo de dato o informacion
+
+Caracteristicas de SHA 256:
+
+* **Unidireccional**: No se puede descifrar un contenido sifrado
+* **Equilibrio** entre **seguridad** y **costo computacional** adecuado, por lo que es el mas usado
+* La **longitud** del hash es **siempre igual**
+
+**Bloque**:
+
+Es como un elemento o como un nodo que tiene los campos 
+* Nonce: Numero que se busca obtener para que haya x cantidad de ceros al principio del hash. 
+* datos: Los datos del bloque
+* hash: La "firma"
+
+`Nota: Un hash que empieza con 4 ceros es admitido por la blockchain, significa que el bloque esta confirmado o firmado`
+
+Una blockchain es una cadena de bloques, cada bloque apunta al anterior.
+
+**Bloque genesis**: El primer bloque, no tiene antecesor.
+
+Si modificamos un bloque, todos los demas bloques d ela cadena que apuntan a dicho bloque, o a bloques q apuntan a este bloque se rompen
+
+**Blockchain Distribuida**
+
+Es una blockchain con x cantidad de copias de la misma (Peers). Si hay alguna copia distinta de las demas, esta se descarta.
+
+**Criptomoneda**: Sistema de intercambio de valor autosostenible
+
+**Token**: Medio para representar cosas del mundo real, no es autosostenible, depende de otro sistema para funcionar.
+
+**Criptomoneda != Token**
+
+**Coinbase transactions (?)**
+
+Cuando un minero resuelve la transaccion / termina de minar un bloque, recibe una cantidad de coins, estos coins son otorgados en base a la cantidad de bloques actulales y la "coinbase" 
+
+para 2140 no va a haber mas bitcoins nuevos.
