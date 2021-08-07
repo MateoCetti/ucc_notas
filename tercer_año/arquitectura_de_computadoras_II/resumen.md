@@ -92,3 +92,31 @@ Instrucciones tipo white immediate (Nos permite guardar un valor inmediato en un
 
 * MOVZ: Mueve el inmediato a la posicion indicada, dejando todas las demas en 0
 * MOVK: Mueve el inmediato a la posicion del registro indicada, dejando todas las demas tal como estaban en un principio.
+
+## Libro patterson
+
+La computacion avanza y mejora todo el tiempo. Mientras mas hardware se implanta, mas rapido andan los sistemas y aplicaciones mas complicadas se pueden ejecutar.
+
+**Ley de moore**: La cantidad de recursos de hardware (transistores) que se puede integrar en un chip se duplican cada 18 meses, por lo que se reducen los tamaños y nanometros necesarios para incrustar dichos recursos, estos van a ser mas pequeños y mas baratos.
+
+`Nota: Hoy en dia casi todo es un sistema computacional.`
+
+**La era postPC**: Hoy en dia las PC's no son relevantes en cuanto a cantidad de procesadores que se producen. La mayor cantidad de procesadores se fabrican para dispositivos IOT.
+
+![](./img/postpc.png)
+
+**Entendiendo performance**: Es muy importante tener en cuenta la performance, ya que un pequeño error o feature no optimizada puede generar ineficiencias abismales.
+
+**Las 8 grandes ideas**:
+* La ley de moore.
+* Uso de abstraccion para simplificar diseño.
+* Hacer el caso comun lo mas rapido posible.
+* Performance via paralelismo
+* Performance via pipeling
+* Performance via prediccion
+* Jerarquia de memorias
+* Confiabilidad via redundancia
+
+**Arquitecturas de 1 ciclo**: 1 instruccion se realiza en 1 ciclo
+
+`Revisar: Frecuencia / periodo / clock`

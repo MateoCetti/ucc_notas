@@ -10,6 +10,7 @@ Cabe destacar que primer año no esta en el repositorio ya que no lo curse debid
   - [Algebra](./segundo_año/algebra)
   - [Analisis matematico 1](/segundo_año/analisis_matematico_1)
   - [Analisis matematico 2](/segundo_año/analisis_matematico_2)
+  - [Analisis numerico](/segundo_año/analisis_numerico/)
   - [Programacion](/segundo_año/programacion_2)
   - [Algebra](./segundo_año/algebra/resumen.pdf)
   - [Analisis matematico 3](./segundo_año/analisis_matematico_3/resumen_AM_3.pdf)
