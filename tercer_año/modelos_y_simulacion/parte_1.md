@@ -61,12 +61,12 @@ En esta solucion grafica, el area verde indica los valores de las incognitas que
 * **Soluciones**
     * S. **factibles** (area verde)
         * S. factibles **basicas** (puntos extremos)
-            * S. f. **degeneradas** (TODO)
+            * S. f. **degeneradas** Tiene que ver con la cantidad de variables que son ceros
             * S. f. **no degeneradas** (TODO)
         * S. factibles basicas **optimas** (puntos extremos acordes a nuestros objetivos)
     * S. **no factibles** (no area verde)
 
-
+`Nota: **Variables de olgura** son las variables cuyos valores sobran en las soluciones optimas.`
 
 <!-- **Modelos**:
 

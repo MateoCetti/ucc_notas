@@ -43,13 +43,24 @@ Bitcoin es el internet del dinero, no el dinero de internet.
 * Bitcoin es dinero digital, se puede enviar a cualquier lugar del mundo de manera instantania con una comicion minuscula.
 * No es una compania ni una organizacion, sino un protocolo estandar. (regulada por una organizacion)
 
-`Nota: Blockchain es 1 de las 4 tecnologias de bitcoin`
+`Nota: Blockchain es 1 de las 4 tecnologias de bitcoin (Bitcoin protocol, blockchain, consensus rules, proof-of-work algorithm)`
+
 `Nota: Satoshi nakamoto, cypherpunks`
+
+Bitcoin soluciona: 
+* La necesidad de contar con un intermediario al realizar una transaccion
+* El problema del doble gasto
 
 Bitcoin es:
 - Unidad monetaria
 - Red p2p
 - Software
+
+**Red P2P**: Red de usuarios o pares en donde no hay un **servidor central**, sino que las partes actuan de manera autonoma respondiendo a un protocolo de comunicaciones y consenso comun. (Todos los usuarios conectados a la red p2p son usuarios y servidor al mismo tiempo, por lo que la velocidad de transferencia de archivos se mejora, como bittorrent)
+
+**Criptografia asimetrica**: Metodo criptografico que usa un **par** de claves para el envio de mensajes. Una publica y una privada (la privada es la que nos da propiedad sobre el bitcoin). El hasheo es de una sola direccion.
+
+**Firma digital**: A travez de ambas claves de la criptografia asimetrica se firma la transaccion (mensajes).
 
 ## Blockchain
 
