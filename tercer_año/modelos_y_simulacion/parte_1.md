@@ -68,9 +68,36 @@ En esta solucion grafica, el area verde indica los valores de las incognitas que
 
 `Nota: **Variables de olgura** son las variables cuyos valores sobran en las soluciones optimas.`
 
-<!-- **Modelos**:
+Las inecuaciones de las restricciones pueden transformarse a **ecuaciones** añadiendo nuevas **variables de holgura** segun corresponda (**Forma estandar**)
 
-* a
-*  
-* 
-*  -->
+![](./img/ecuaciones.png)
+
+Siempre las restricciones forman un **sistema** **compatible indeterminado**, por lo que hay infinitas soluciones (poligono solucion)
+
+Se pueden obtener la cantidad de **soluciones basicas** mediante este procedimiento:
+
+![](./img/sol_basicas.png)
+
+Donde `n` son las variables y `m` las ecuaciones.
+
+Todos los puntos de la siguiente imagen son **soluciones basicas**. solo que los azules son **factibles** y los rojos son **no factible**
+
+![](./img/sol_factibles.png)
+
+![](./img/sol_resumen.png)
+
+Formas de expresar los modelos (ademas de la forma estandar):
+
+![](./img/forma_canonica.png)
+![](./img/forma_vectorial.png)
+
+En los modelos de programacion lineal se deben cumplir los siguientes **supuestos**:
+* **Un solo objetivo**
+* Un **conjunto** de **restricciones**
+* **Proporcionalidad**
+* **Divisibilidad**
+* **Actividad**
+* **Certidumbre**
+* **No negatividad** de las variables
+
+Interpretacion de los resultados y analisis de sensibilidad.
