@@ -124,3 +124,15 @@ Destacamos tambien que el relato esta estructurado de manera [triptica](https://
 El mensaje que nos deja este texto es:
 
 `Si no nos creemos dioses y confiamos en la palabra de dios, vamos a poder vivir en un paraiso, en donde vamos a poder vivir en paz entre nosotros, con dios y con la naturaleza.`
+## Video de Jesus (Jesus Historico, Antonio Piñero ?)
+
+Se puede ver a Jesus desde 3 puntos de vista:
+* **Jesus real** (Imposible de recuperar la materialidad completa de su existencia real)
+* **Jesus historico**
+* **Jesus teologico**
+
+En este caso vamos a ver a **Jesus Historico**
+
+**¿Existio Jesus?**
+
+La biblia esta escrita de tal forma que no se puede contar sin asumir que jesus existio en carne y huseo
