@@ -119,4 +119,27 @@ La computacion avanza y mejora todo el tiempo. Mientras mas hardware se implanta
 
 **Arquitecturas de 1 ciclo**: 1 instruccion se realiza en 1 ciclo
 
-`Revisar: Frecuencia / periodo / clock`
+**Niveles de codigo programable:**
+* Codigo de alto nivel
+* Assembly
+* Representacion del hardware (binario)
+
+`Nota: El costo de elaborar un procesador depende mayormente del area del mismo`
+
+* **Tiempo de respuesta**: Cantidad de tiempo tomado para resolver una actividad
+* **Rendimiento**: Cantidad / Tasa de actividades realizadas por unidad de tiempo.
+* **Performance**: Calculo para comparar dos procesos y ver cual es mas performante. proceso_1 / proceso_2
+
+**CPU Clocking**: En un procesador de **un ciclo**, toda la instruccion se ejecuta en un solo ciclo. Un "Clock" es una señal de sincronismo.
+
+* **Periodo** de un clock: Duracion de un ciclo de reloj
+* **Frecuencia** de un clock: Ciclos por segundo
+
+Casi todos los sistemas se realizan sobre CMOS: El semiconductor complementario de óxido metálico (CMOS) es una pequeña cantidad de memoria en una placa base del equipo que almacena la configuración del Sistema básico de entrada/salida (BIOS).
+
+![](./img/power.png)
+
+**Arquitecturas no convencionales de CPU's**:
+* Intel x86
+* CISC (Intel)
+* RISC (ARM y todos los demas)
