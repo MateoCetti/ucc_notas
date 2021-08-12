@@ -40,3 +40,16 @@ Los resultados de esta matriz se suelen llamar
 Arbol de decision
 
 ![](./img/parte_2/arboles.png)
+
+
+# Universo incierto
+
+[](https://www.oocities.org/tcaspon/invop/indust/te_deci.htm)
+
+en esta situación nos encontramos cuando conociendo el conjunto X y el conjunto Y de estados de la naturaleza y las correspondientes compensaciones c(x,y) se desconocen las leyes de probabilidad que gobiernan el Universo de la decisión y por lo tanto no hay ninguna razón para darle mayores probabilidades a uno u otro
+
+![](./img/u_incierto.png)
+
+**Criterios de racionalidad limatada.**
+
+**Criterio MaxiMin** (pesimista, wald)

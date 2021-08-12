@@ -154,6 +154,8 @@ Punto de conexion fisico o virtual donde se puede crear, enviar y recibir toda c
 
 Cadena de bloques, un libro mayor de acontecimientos digitales que esta distribuido o compartido entre muchas partes diferentes. Solo puede ser actualizado a partir del ocnsenso de la mayoria de participantes del sistema y, una vez introducida, la info nunca puede ser borrada.
 
+Los bloques tienen mas o menos 2000 transacciones, que es el equivalente a 1 mega de informacion. Pero gracias a la blockchain, cada bloque tiene indirectamente todas las transacciones porque cada bloque apunta al bloque anterior, que contiene otras 2000 transacciones
+
 Pilares de las **blockchains publicas**
 
 * Son **revolucionarias** 
@@ -193,4 +195,16 @@ En bitcoin, una PC solo puede realizar 1 voto mediante la proof of work (Este fu
 * **Etapa 2**: Se resuelve el acertijo (mineria), cosa que conlleva el uso de mucha potencia de computacion.
 * **Etapa 3**: Una vez resuelta la terea computacional, el cliente comparte con la red para verificar los resultados. Si se cumplen los requisitos, se brinda el acceso a los recursos de la red.
 * **Etapa 4**: Con la confirmacion de la tarea, el cliente accede a los recursos de la red y recibe una ganancia por el trabajo computacional realizado.
+
+## Clase practica N°2
+
+Claves **publicas** y **privadas** / funcionamiento de las **firmas digitales**
+
+**Clave privada**: Numero largo y random, secreta y perteneciente a cada usuario.
+
+**Clave publica**: Es como el CBU o DNI, es decir que es publica y se comparte con todo el mundo. Teniendo una clave publica **no se puede obtener** la privada.
+
+Para **encriptar** un mensaje, se usa la **llave publica**, para **desencriptarlo** la **privada**.
+
+Para **firmar** un mensaje se utiliza la **clave privada**, para **verificar** la firma, se usa la **clave publica**.
 
