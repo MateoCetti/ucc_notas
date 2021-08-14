@@ -120,5 +120,104 @@ Se basa en la reutilizacion sistematica de codigo.
 
 Ahora se suele reutilizar mucho en la construccion de muchos tipos de sistemas.
 
-# TODO
-![](./img/TODO.png)
+## Especificaciones de software
+
+Poder determinar para que va a servir, cuales son las necesidades que este producto de software va a requerir.
+
+Es importante determinar no solamente las **funcionalidades** que debe **brindar** el sistema sino tambien sus **limites**.
+
+Esta etapa se llama **ingenieria** de **requisitos** o **requerimientos**. y tiene **subetapas**:
+
+* **Estudio de factibilidad**: Es factible construir el sistema? Tecnologica y financieramente es posible llevar a cabo el producto? es rentable?
+* **Requerimientos, obtención y análisis**: Especificar los servicios que el sistema debe proveer. ¿Que requieren los actores del sistema? (**OJO!** Preguntar a **TODOS** los actores involucrados en el sistema a desarrollar)
+* **Especificacion de requerimientos**
+* **Validacion de los requerimientos**
+
+## Diseño de software e implementacion
+
+En esta etapa se analizan cosas para llegar a producir el producto. En esta etapa no se genera el producto, pero se va yendo a cosas concretas, se van pensando mas cosas tecnicas.
+
+![](./img/diseño.png)
+
+## Validacion y verificacion
+
+Se ve si el sistema cumple con los requerimientos que el cliente pidio en un principio.
+
+**Revision**
+
+Se revisa cualquier cosa del proyecto.
+
+**Pruebas**
+
+* Pruebas de componentes
+* Pruebas del sistema
+* Pruebas de aceptacion
+
+## Evolucion del software
+
+Estar atento ante cualquier cambio en el ambiente en el que el producto de desarrolla. Un producto de software no termina al finalizar su desarrollo.
+
+## Problema de cambio
+
+El cambio es inevitable en todos los grandes proyecos de software. Esto conduce a requisitos nuevos y modificaciones. Las especificaciones del producto va cambiando.
+
+Para reducir los costos de estos cambios, se pueden tomar las siguientes alternativas:
+
+* **Evitar el cambio**: Anticiparse a posibles cambios para evitar el trabajo.
+* **Tolerancia al cambio**: Diseñar el software de tal manera de poder enfrentar posibles cambios con el menor costo posible
+
+## Software prototipado
+
+Version inicial de un sistema que se utiliza para demonstrar conceptos y probar opciones de diseño (Mockup). Esto acerca al cliente al producto a desarrollar y podemos obtener requisitos de manera mucho mas precisa.
+
+# Desarrollo Agil de software
+
+`Nota: Manifiesto agil, documento con el que se empezo a pensar procedimiento de desarrollo agiles`
+
+Este tipo de desarrollo tiene ciertos principios:
+
+* **Participacion del cliente**: el cliente debe ser parte del edsarrollo interviniendo estrechamente durante el proceso de desarrollo.
+* **Entrega incremental**: Se separa el proyecto en funcionalidades y se va entregando dichas funcionalidades periodicamente, agregando en cada iteracion nuevas funcionalidades.
+* **Personas no procesos**: Las personas cooperan y trabajan en conjunto para concretar un desarrollo. son un EQUIPO no un GRUPO. Cada persona tiene sus intereses y talentos, y hay que saber aprovechar estos al maximo.
+* **Adoptar el cambio**: Diseñar el sistema para adoptar los cambios. Ademas, dicho cambio sera tomado en cuenta como incremento del proyecto.
+* **Mantener la simplicidad**: Escribir codigo simple y refactorizado.
+
+Siguiendo estos principios y aplicando metodologias agiles, podriamos obtener proyectos de alta calidad en tiempos mucho mas cortos y con precios mas bajos.
+
+**Aplicabilidad del metodo agil**
+
+* Desarrollo de productos pequeños o medianos.
+* Desarrollo de sistemas a medida en donde hay u claro compromiso por parte del cliente para participar en el proceso de desarrollo.
+* Enfoque en pequeños equipos (?)
+
+**Problemas de las metodologias agiles**
+
+* Dificil mantener el interes de los clientes
+* Los miembros deben de estar comprometidos para participar de manera intensa
+* Priorizar cambios puede ser dificil donde hay multiples partes interesadas.
+* Mantener simplicidad requiere un trabajo extra
+* Contratos pueden ser un problema
+
+**Mantenimiento de software**
+
+Los metodos agiles se pueden implementar en la etapa de mantenimiento. Sin embargo se presentan un problema:
+
+Al hacer enfasis en la minimizacion de la documentacion puede resultar dificultoso el labor de mantenimiento
+
+**Plan VS. Agil**
+
+No son opuestos. Las empresas pueden implementar ambos en un proyecto. El uso de uno o el otro depende de muchos factores como el tamaño de los equipos, entre otras cosas.
+
+**Extreme programming**
+
+Ejemplo: **scrum**
+
+![](./img/xp.png)
+
+![](./img/p_xp.png)
+
+
+**Historia de usuario**:
+
+![](./img/hs.png)
+![](./img/tareas.png)

@@ -143,3 +143,77 @@ Casi todos los sistemas se realizan sobre CMOS: El semiconductor complementario 
 * Intel x86
 * CISC (Intel)
 * RISC (ARM y todos los demas)
+
+
+**Caracteristicas de los RISC**
+
+* Tiene como meta ejecutar **una instruccion por ciclo** (en un ciclo de sincronismo entra una instruccion nueva y en el mismo ciclo sale otra instruccion) o tiene un ciclo de instruccion **constante** (Conjunto de instrucciones que entran por clock).
+* Procesador orientado exclusivamente a **operaciones entre registros** (Porque el acceso a memoria es muy **lento**). Por lo que la cantidad de registros **aumenta** considerablemente.
+* Modo de **direccionamiento** (Distintas formas de hacer referencia a una direccion de memoria) muy **sencillo** (Idealmente solo 1).
+* **Formatos** de **instrucciones simples** (faclies de ver, entender y codificar)
+* **Set** de **instrucciones reducido**.
+
+**Implementaciones de ARM**
+
+![](./img/imp_arm.png)
+
+`Nota: En x86, una instruccion no se codifica con una cantidad fija de bits.`
+![](./img/x86_instrucciones.png)
+
+**"Falacias"**
+
+* Mediante instrucciones mas potentes obtengo mejor performance (Las instrucciones complejas son dificiles y caras de implementar).
+* Compatibilidad hacia atras no genera un cambio en el set de instrucciones (A medida que mejoran los procesadores, se van aumentando la cantidad de instrucciones)
+
+## Semiconductores y acceso / organizacion de memoria.
+
+Sistema de memoria: elemento capaz de **almacenar** y **retener** informacion. Estos sistemas siempre tienen un **medio fisico**. Los sistemas de memoria que veremos son los basados en **estructuras semiconductoras** (no los magneticos, ni los otpicos)
+
+Los sistemas semiconductores tienen una determinada interfaz
+
+![](./img/semiconductores_interfaz.png)
+
+No todas las memorias semiconductoras son **iguales**.
+
+![](./img/memorias.png)
+
+* Memorias de **lectura-escritura**
+    * Acceso **aleatoreo** 
+        * **static ram**: Los bits duran eternamente (Es mas cara, 6 transistores) 
+        * **dinamic ram**: Los bits duran microsegundos (Mhz --> frecuencia de refresco). Siempre se reescriben los bits.
+    * Acceso **no aleatoreo**
+* Memorias de lectura-escritura **no volatil**
+* Memorias de **solo lectura**
+
+**Algunas definiciones**:
+
+Una memoria es buena dependiendo de estos parametros
+
+**Tiempo de acceso**: Tiempo dado desde la request de un dato hasta la response del mismo (lectura o escritura, el tiempo de lectura es mas rapido que el de escritura).
+
+**Tiempo de ciclo**: Tiempo que debe transcurrir entre 2 operaciones iguales.
+
+![](./img/acceso_ciclo.png)
+
+**Organizacion de un sistema de memoria**
+
+Un sistema de memoria es un arrreglo o matriz de bits.
+
+![](./img/memory_org.png)
+
+Cada fila es una **palabra** (**Unidad de acceso** del sistema de memoria, 8 bits que entran en un sistema de E/S) Estas unidades de direccionan mediante direcciones de acceso de memoria.
+
+La **capacidad de memoria** se calcula mediante `cantidad de palabras * 8 bits`
+
+Ya que las memorias son muy grandes (Muchas palabras), para acceder a dichas palabras se utiliza decodificadores y multiplexores
+
+Al momento de implementar memorias, se debe de tener en cuenta el ancho y alto de las mismas, por lo que ordenan las palabras en matrices, y se usan los multiplexores y decodificadores para elegir la posicion deseada.
+
+![](./img/decodificador_memoria.png)
+
+![](./img/memoria_matrices.png)
+
+`Nota: Las memorias RAM pueden tener distintos layouts, es decir mas o menos bloques de memoria.` 
+
+Estas distintas memorias (o son los bloques?) se pueden incrustar en una PC para **agrandar** ya sea el ancho de las palabras (**conexion en paralelo**) o la cantidad de palabras (**Conexion en serie**) y asi hacer mas grande el **mapa de memoria**.
+
