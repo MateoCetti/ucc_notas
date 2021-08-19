@@ -43,3 +43,28 @@ Se pueden crear volumenes con nombres familiares para facilitar la gestion
 docker run: prende el contenedor y ejecuta el comando, luego lo apaga.
 
 docker exec: ejecuta un comando en un contenedor ya activado.
+
+## Federacion de mysql
+
+En dos servicios de MySQL, uno de ellos puede funcionar como cliente del otro reexponiendo rescources como por ejemplo tablas.
+
+## Eventos
+
+Objetos que contienen codigo que se pueden ejecutar de forma scheduled.
+
+## Triggers
+
+Es un objeto de la DB q esta asociado a una tabla y se activa cuando se ejecuta una accion sobre esa tabla (insert, update o delete).
+
+## Funciones
+
+Porcion de codigo que recibe parametros y devuelve elementos.
+
+## Procedimientos almacenados
+
+Ventajas:
+* Ahorran ancho de banda
+* Centralizan logica de negocios
+* Aumentan la performance y respuesta general
+
+![](./img/proc_alm.png)
