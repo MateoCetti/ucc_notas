@@ -102,7 +102,7 @@ Es una blockchain con x cantidad de copias de la misma (Peers). Si hay alguna co
 
 Cuando un minero resuelve la transaccion / termina de minar un bloque, recibe una cantidad de coins, estos coins son otorgados en base a la cantidad de bloques actulales y la "coinbase" 
 
-para 2140 no va a haber mas bitcoins nuevos.
+para 2140 no va a haber mas bitcoins nuevos (21 millones).
 
 **Tipos de redes**
 
@@ -208,3 +208,22 @@ Para **encriptar** un mensaje, se usa la **llave publica**, para **desencriptarl
 
 Para **firmar** un mensaje se utiliza la **clave privada**, para **verificar** la firma, se usa la **clave publica**.
 
+### Dash
+
+Dash es una moneda digital que aporta elementos propios llamados **nodos maestros**. Tiene una (DAO, organizacion autonoma descentralizada) y cuenta confucniones especificas opcionales para enviar transacciones (privateSend e instantSend). Para el año  va a haber  18.900.000 monedas como maximo, un bloque se genera cada 2.6 minutos y el halving es de 1 año y se reduce un %7.14 mas rapido que en bitcoin.
+
+Dash soluciona la privacidad y rapidez de bitcoin. (privacidad porque en bitcoin los registros son publicos, por lo que se pueden trackear las transacciones.)
+
+Los nodos maestros son como nodos completos de bitcoin pero con funcionalidades adicionales. Estos confirman transacciones sin que toda la red participe en el proceso, lo que reduce el tiempo y costo de las operaciones.
+
+El privateSend cruza nuestra operacion con la de otros usuarios, por lo que no se van a poder rastrear y asi se puede mejorar la privacidad.
+
+Los nodos maestros solo son usados al realizar operaciones instantaneas o privadas.
+
+## Transacciones
+
+Una transaccion esta formada por:
+- input: referencias de una transaccion pasada que no ha sido empleada en ninguna otra transaccion
+- output: Direccion a la cual se realiza la transferencia y la direccion de cambio o retorno
+- identificador(TXid): Direccion de hash que se genera a partir de las entradas y las salidas.
+- tarifa de comicion(fee): Pequeño pago que reciben los mienros por procesar una transaccion.
