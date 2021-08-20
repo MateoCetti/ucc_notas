@@ -217,3 +217,61 @@ Al momento de implementar memorias, se debe de tener en cuenta el ancho y alto d
 
 Estas distintas memorias (o son los bloques?) se pueden incrustar en una PC para **agrandar** ya sea el ancho de las palabras (**conexion en paralelo**) o la cantidad de palabras (**Conexion en serie**) y asi hacer mas grande el **mapa de memoria**.
 
+![](./img/paralelo.png)
+
+En ambos chips de memoria se accede utilzando la misma señal de address, asegurandonos que en ambos chips obtendremos fragmentos de la misma palabra.
+
+![](./img/serie.png)
+
+(A10 y A11 no van negados)
+
+(Se niega 2 veces desde el decodificador hasta el bloque de memoria por los ruidos electricos)
+
+`NOTA: ACTIVA POR BAJO`
+
+El limite de bits en el addres que puedo implementar me lo da el microprocesador.
+
+(Hasta aca vimos la logica de codificacion, señales de words)
+
+## Memoria en sistemas computacionales 
+
+**Principio de Localidad de las referencias**
+
+La **posibilidad** de acceso a una direccion de memoria **decrece** a medida que me voy alejando del acceso actual del procesador. 
+
+Permite determinar que los programas en realidad acceden a una **pequeña porcion** del mapa de direcciones de la memoria en un **momento determinado**.
+
+* **Localidad temporal**: como en los loops (**lazos**), las direcciones ya accedidas son muy probables a ser vueltas a acceder.
+* **Localidad espacial**: En un programa es muy probable acceder a direcciones de memoria cercanas a la actual
+
+Este principio nos permite: 
+* "adivinar" cual va a ser la siguiente direccion de memoria.
+* Guardar las direcciones de memoria mas probables a ser accedidas en sistemas de jerarquias altos (veloces y caros), muy cerca del procesador.
+
+![](./img/costos_memoria.png)
+
+**Aumentando el ancho de banda de una memoria (Ver de nuevo el fragmento la clase)**
+
+(Los procesadores salen mas caro porq aumentan el cache)
+
+![](./img/ancho_banda.png)
+
+**Memoria cache (Leer del libro)**
+
+Nivel / jerarquia superior de memoria, es el mas cercano al procesador.
+
+No es de acceso aleatoreo, es asociativo. Si no tiene una direccion de memoria se abre.
+
+Si se tiene el dato pedido, se devuelve un bloque (conjunto de palabras)
+
+La cache esta distribuida en lineas, referenciadas por tags. cada linea tiene un bloque (conjunto de x palabras). HAY MUCHOS MAS BLOQUES QUE LINEAS.
+
+![](./img/cache.png)
+
+**Criterio de correspondencia / tipo de cache**
+
+* **Cache de Mapeo directo**: Hay solo una forma de guardar los datos en cache con respecto a la memoria principal.
+
+![](./img/mapeo_directo.png)
+
+Para validar si hubo un acierto de cache o un error de cache, entre la linea y el tag hay un bit de validacion. si es 1, hubo un acierto, sino hubo un error.
