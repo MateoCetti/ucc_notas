@@ -1,7 +1,3 @@
-\title{Resumen de Analisis Numerico}
-
-\author{Mateo P. Cetti}
-
 \documentclass[10pt]{article}
 
 \usepackage{amsmath}
@@ -9,39 +5,138 @@
 \usepackage{graphicx}
 
 \begin{document} 
+\title{Resumen de Analisis Numerico}
+\author{
+        Mateo P. Cetti \\
+        Estudiante - Universdad Catolica de Cordoba\\
+        Ing Ambrosio Taravella, 6240, \underline{Cordoba, Argentina}
+}
+\date{\today}
+
 \maketitle
 
-\section{Equisde}
+\section{Introduccion}
 
-\paragraph{Equisde_1}
+\subsection{Objetivo del analisis numerico}
 
-Este texto es muy xd \textbf{doble xd} en algunos casos exhibe características de una \textbf{xd} y en otras de una \textbf{partícula} (onda electromagnetica sinusoidal o rayo de luz)\\
-El modelo de cuantización supone que la \textbf{energía} de una onda luminosa está presente en partículas llamadas \textbf{fotones}; por tanto, se dice que la energía está \textbf{cuantizada}. La energía de un fotón es proporcional a la frecuencia de la onda electromagnética. $E = hf \rightarrow h = 6.63 \times 10^{-34} J\cdot s$ donde $h$ es la \textbf{constante de Plank}.\\
+El objetivo del analisis numerico es el de enseñarle 
+a la computadora a realizar operaciones matematicas complejas.
+Se estudian metodos numericos que nos permiten interactuar con la computadora
 
-\paragraph{Diagramas de rayos para espejos}
-Para dibujar el diagrama de un rayo, es necesario conocer la posición del objeto y la localización del foco, así como el centro de curvatura del espejo. Después, dibuje tres rayos principales para localizar la imagen.\\
-En el caso de espejos cóncavos, trace los tres rayos principales siguientes
+Antiguamente los metodos numericos eran usados de manera muy limitada por el 
+tedioso trabajo de usarlos a mano. Ahora con el auge de las computadoras, 
+estos modelos son mas usados y generan mucho mejores resultados.
+
+\subsection{Problematicas}
+
+\begin{enumerate}
+	\item Las computadoras no trabajan en un universo \textbf{infinito} (Ojo con el acarreo del error). En nuestra mente
+	hay infinitos numeros, y entre dos numeros tambien hay infinitos numeros (Universo discreto y acotado).
+	\item Las computadoras trabajan internamente con el sistema \textbf{binario}, y los numeros
+	tienen un espacio "finito" de digitos. Utilizan la notacion de \textbf{mantisa} y \textbf{exponente}.
+	\item Como en el desarrollo de Taylor, los metodos numericos se basan en formulaciones 
+	teoricas \textbf{complejas} e \textbf{infinitas}.
+\end{enumerate}
+
+\pagebreak
+
+\section{Conceptos elementales}
+
 \begin{itemize}
-	\item El rayo 1, desde la parte superior del objeto, en paralelo al eje principal, y se refleja a través del foco F
-	\item El rayo 2, desde la parte superior del objeto a través del foco (o como si viniera del foco si $p < f$ ) y se refleja paralelo al eje principal.
-	\item El rayo 3, desde la parte superior del objeto a través del centro de curvatura C y se refleja de regreso sobre sí mismo.
-\end{itemize}
-En el caso de los espejos convexos, trace los tres rayos principales siguientes:
-\begin{itemize}
-	\item El rayo 1 se dibuja desde la parte superior del objeto paralelo al eje principal y se refleja alejándose del foco F.
-	\item El rayo 2 El rayo 2, se dibuja desde la parte superior del objeto hacia el foco en la cara posterior del espejo y se refleja paralelo al eje principal.
-	\item El rayo 3 se dibuja desde la parte superior del objeto hacia el centro de curvatura C en la cara posterior del espejo y se refleja de regreso sobre sí mismo.
+	\item \textbf{Digitio}: Unidad elemental en la representacion de un numero.
+	\item \textbf{Numero}: Conjunto de digitos que conforman un elemento.
+	\item \textbf{Cifras}: Cantidad de digitos.
+	\item \textbf{Cifras significativas}: Cantidad de digitos que poseen un valor confiable.
+	\item \textbf{Error}: Diferencia entre valor real y un valor proximo al real.
+	\item \textbf{Exactitud}:Aproximacion de un numero a su valor verdadero.
+	\item \textbf{Precisión}: Esta relacionada al grado de \textbf{dispersión} 
+	entre los \textbf{valores aproximados}.
+	
+	\includegraphics[width = 200px]{./img/tiro_al_blanco.png}
 \end{itemize}
 
-\includegraphics[width = 275px]{conservacion.png}\\
+\subsection{Errores}
 
-\begin{equation*}
-	E = \frac{1}{2}k A^2
-\end{equation*}
+Valor aproximado entre un valor \textbf{real} y uno \textbf{proximo}.
 
 \begin{equation}
-	T = \dfrac{2\pi}{\omega} = 2\pi \sqrt{\dfrac{L}{g}}
+	E = x_v - x_a
 \end{equation}
 
+Esto (1) se conoce como \textbf{error total}. En muchas ocaciones se trabaja
+con el \textbf{error relativo} (2):
+
+\begin{equation}
+	E_r = \dfrac{x_v - x_a}{x_v}
+\end{equation}
+
+Y muchas otras veces se utiliza el \textbf{error relativo porcentual} (3):
+
+\begin{equation}
+	E_r = \dfrac{x_v - x_a}{x_v} 100%
+\end{equation}
+
+Muchos de los metodos son iterativos (Mejoran los resultados en cada iteracion). 
+En la practica el valor \textbf{verdadero} no se conoce, por lo que se suele
+trabajar con \textbf{errores aproximados} o aproximacion de errores.
+
+\begin{equation}
+	E_a = x_{actual} - x_{previo}
+\end{equation}
+
+\begin{equation}
+	E_{ra} = \dfrac{x_{actual} - x_{previo}}{x_{actual}}
+\end{equation}
+
+\begin{equation}
+	E_{ra}[\%] = \dfrac{x_{actual} - x_{previo}}{x_{actual}}100
+\end{equation}
+
+Si dichos errores aumentan con cada iteracion decimos que el metodo 
+\textbf{diverge} a la solucion (El metodo no sirve para el problema elegido).
+Sino, decimos que el metodo \textbf{converge} en la solucion
+
+\pagebreak
+
+\section{Raices de ecuaciones lineales}
+
+\subsection{Presentacion del problema}
+
+Para diversos problemas (Ej: amortiguacion de un auto) es muy utiliza
+averiguar raices de ecuaciones.
+
+\subsection{Metodo de la biseccion}
+
+Este metodo sirve para todas las funciones excepto aquellas que tengan
+\textbf{raices multiples de orden par}. Este metodo consiste en elegir 
+\textbf{dos puntos} en una funcion continua y multiplicarlos Si hay un 
+cambio de signo entonces en el intervalo entre ambos puntos 
+\textbf{hay una raiz} (o mas de una).
+
+\begin{equation}
+	f(a)f(b) \leq 0
+\end{equation}
+
+\includegraphics[width = 300px]{./img/biseccion.png}
+
+Este metodo \textbf{no es util} cuando hay \textbf{muchas raices} 
+en \textbf{intervalos muy pequeños}, ya que no nos dice la 
+cantidad exacta de raices en el intervalo elegido.
+
+\includegraphics[width = 300px]{./img/sismo.png}
+
+Para \textbf{calcular} la raiz de una funcion, se eligen los puntos
+$a$ y $b$ y se aplica el metodo. Si hay una raiz, entonces se vuelve
+a realizar el metodo pero en el intervalo $a$ y $c$ o $c$ y $a$ en 
+donde c es:
+
+\begin{equation}
+	c = \dfrac{a+b}{2}
+\end{equation}
+
+\includegraphics[width = 300px]{./img/biseccion_calcular.png}
+
+Si $f(a)f(c) \leq 0$ entonces la raiz esta en el intervalo $a$ y 
+$c$. sino, esta en el intervalo $c$ y $b$ 
 
 \end{document}

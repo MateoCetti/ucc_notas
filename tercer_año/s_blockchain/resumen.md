@@ -226,4 +226,4 @@ Una transaccion esta formada por:
 - input: referencias de una transaccion pasada que no ha sido empleada en ninguna otra transaccion
 - output: Direccion a la cual se realiza la transferencia y la direccion de cambio o retorno
 - identificador(TXid): Direccion de hash que se genera a partir de las entradas y las salidas.
-- tarifa de comicion(fee): Pequeño pago que reciben los mienros por procesar una transaccion.
+- tarifa de comicion(fee): Pequeño pago que reciben los mienros por procesar una transaccion.<>
