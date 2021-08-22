@@ -139,4 +139,59 @@ donde c es:
 Si $f(a)f(c) \leq 0$ entonces la raiz esta en el intervalo $a$ y 
 $c$. sino, esta en el intervalo $c$ y $b$ 
 
+\textbf{Ventajas de este metodo}
+
+\begin{itemize}
+	\item Alto grado de convergencia
+	\item Confiable
+	\item Facil programacion
+\end{itemize}
+
+\textbf{Desventajas}
+
+\begin{itemize}
+	\item No es apto para raices multiples de orden par
+	\item convergencia \textbf{lenta}
+\end{itemize}
+
+\subsection{Metodo de punto fijo}
+
+Este metodo coinciste en generar una funcion $g(x)$ a partir de la
+funcion $f(x)$ original que intersecte a la funcion identidad.
+De ser ese el caso, llamamos al punto interseccion punto fijo,
+y en su dominio encontraremos la raiz de la funcion original.
+
+\includegraphics[width = 300px]{./img/punto_fijo.png}
+
+\begin{equation}
+	x_v = g(x_v)
+\end{equation}
+
+\includegraphics[width = 300px]{./img/punto_fijo_2.png}
+
+Estas funciones $g(x)$ se obtienen de la funcion $f(x)$ original
+de varias formas:
+
+\begin{itemize}
+	\item Por simple despeje
+	\item Sumando o restando a ambos lados $x$ 
+	\item Utilizando algun otro metodo matematico
+	\item Proponiendo una $g(x)$ (Solo si se esta muy canchero)
+\end{itemize}
+
+No todas las funciones $g(x)$ funcionan, cuando no funcionan decimos
+que son funciones \textbf{divergentes}. Para asegurarnos que la funcion
+se comporte de manera \textbf{convergente}, esta debe cumplir con con 2 coindiciones:
+
+\begin{enumerate}
+	\item $g(x) \in [a, b]$ (amarillo)
+	\item $|g'(\varepsilon)| \leq 1$ y $\varepsilon$ maximice la derivada
+\end{enumerate}
+
+Empezamos con $\varepsilon$ y aplicamos la formula:
+
+\begin{equation}
+	x_{i+1} = g(x_i)
+\end{equation}
+
 \end{document}
