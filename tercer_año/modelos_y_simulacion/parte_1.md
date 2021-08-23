@@ -100,4 +100,49 @@ En los modelos de programacion lineal se deben cumplir los siguientes **supuesto
 * **Certidumbre**
 * **No negatividad** de las variables
 
-Interpretacion de los resultados y analisis de sensibilidad.
+**Interpretacion de los resultados y analisis de sensibilidad.**
+
+* Se analizan cambios en el coeficiente de la funcion objetivo
+
+![](./img/cambios_coeficientes.png)
+
+* Cambio en la parte derecha de las restricciones: Se amplian las restricciones, el poligono cambia y los resultados tambien
+
+Las restricciones pueden ser limitantes o no limitantes:
+
+![](./img/intervalos.png)
+
+![](./img/ld_restricciones.png)
+
+## Programacion lineal entera
+
+Los valores de las variables pueden ser enteros.
+
+**Variables / restricciones binarias**
+
+Estas variables / restricciones nos permiten representar **condiciones logicas**. Ej:
+
+![](./img/var_logicas.png)
+
+**restricciones tamaño de lote**
+
+![](./img/tam_lote.png)
+
+**Restricciones de costo fijo**
+
+**Transporte y asignacion**
+
+Se ve como otro modelo pero es parte de la PL
+
+![](./img/transporte.png)
+
+En general siempre es un problema de minimizacion. 
+
+Las variables de decision (X_ij) son la cantidad de unidades de producto a enviar desde el origen i al destino j por unidad de tiempo
+
+Como restricciones voy a tener:
+* Restricciones por c/u de los clientes (demanda)
+* Restricciones por c/u de las "fabricas" (capacidad)
+* Condicion de no negatividad y enteras
+
+![](./img/supuestos_ta.png)
