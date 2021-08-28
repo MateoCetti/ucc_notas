@@ -274,4 +274,26 @@ La cache esta distribuida en lineas, referenciadas por tags. cada linea tiene un
 
 ![](./img/mapeo_directo.png)
 
-Para validar si hubo un acierto de cache o un error de cache, entre la linea y el tag hay un bit de validacion. si es 1, hubo un acierto, sino hubo un error.
+Direccion de acceso: tag | verification | index | word offset | byte offset |
+
+![](./img/xd.png)
+
+Aclaraciones:
+- En un bloque (en una linea) hay mas de 1 palabra del procesador.
+- Bloques mas grandes reducen la probabilidad de miss
+- Si los bloques on muy grandes, puede haber polucion (reveer en la clase del 27/08)
+- larger miss penalty
+
+Si el cache falla, demoramos mas ciclos en traer la info del siguiente nivel jerarquico de memoria, por lo que demoramos mas tiempo.
+
+* **Caches asociativas**
+
+* Es imposible de implementarse debido a su alto costo
+* Cualquier bloque puede entrar en cualquier linea de cache
+* Todas las lineas deberan ser vistas en una busqueda
+
+`Nota: En terminos reales, las caches son asociativas por conjuntos de n-ways o n-vias`
+
+![](./img/vias_conjuntos.png)
+
+ojo con el algoritmo de sustitución

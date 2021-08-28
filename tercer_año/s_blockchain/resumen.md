@@ -226,4 +226,87 @@ Una transaccion esta formada por:
 - input: referencias de una transaccion pasada que no ha sido empleada en ninguna otra transaccion
 - output: Direccion a la cual se realiza la transferencia y la direccion de cambio o retorno
 - identificador(TXid): Direccion de hash que se genera a partir de las entradas y las salidas.
-- tarifa de comicion(fee): Pequeño pago que reciben los mienros por procesar una transaccion.<>
+- tarifa de comicion(fee): Pequeño pago que reciben los mienros por procesar una transaccion.
+
+## Mineros / mineria
+
+**Rol**
+
+* Guardan y transmiten bloques en la blockchain
+* validan transacciones nuevas
+* votan sobre el consenso con el poder del hash
+
+`Nota: ASIC de mineria`
+
+**¿Se puede hacer dinero minando?**
+
+Respuesta corta: si
+
+Pasos para minar;
+
+* Unirse a la red y recibir transacciones (validarlas)
+* Recibir nuevos bloques (validarlos)
+* Armar un nuevo bloque
+* Encontrar el nonce que hace tu bloque valido
+* Esperar que todos acepten tu nuevo bloque
+* Disfrutar de las ganancias!
+
+**Opciones de minerias**
+
+* Opcion 1
+    * Bajar un software de minado
+    * Conectarse a internet y correr el software
+* Opcion 2
+    * Comprar un hardware especializado
+    * Conectarlo a internet y hacerlo andar
+* Opcion 3
+    * Unirse a una pool de mining
+
+![](./img/ev_minado.png)
+
+**Consumo de energia del minado**
+
+La energia para manufacturar las PC's deberia disminuir con el tiempo. 
+Sin embargo, la energia para mantener dichas computadoras deberia aumentar con el tiempo (Esta es la gran contra del proof of work).
+
+**Mining pool**
+
+Es como un pool de siembra. En vez de dinero brindamos poder de computo.
+Todos los miembros minan como si fuesen uno. Cuando la pool es recompenzada por enonctar 
+un hash correcto, la recompensa es distribuida por todos los miembros involucrados
+en dicha mineria.
+
+**Ventajas**
+
+* Minado mas predecible
+* Mineros pequeños pueden participar en la red
+* Mas mineros con software actualizado (?)
+
+**Desventajas**
+
+* Centralizacion y menos mineros corriendo nodos completos.
+
+**Proof of work**
+
+El procedimiento consiste en encontrar un NONCE tal que hasheando con los datos del bloque el hash sea menor a cierto numero TARGET que determina la dificultad (inverso a la cantidad de ceros).
+
+Si se encuentran 2 nonce al mismo tiempo para un bloque, entonces se difurca la blockchain y va a ganar la blockchain que mas bloques tenga despues.
+
+![](./img/2_target.png)
+
+A los bloques que no son aceptados en la blockchain (bloques azules) se los denomina bloques huerfanos.
+
+**Proof of stake "Prueba de participacion"**
+
+Tambien referenciado como virtual mining.
+
+Beneficios:
+
+* Menores costos
+    * No hay gasto de recursos
+    * Ahorro redistribuido al ecosistema
+    * No hay daños al medioambiente
+* Los que poseen monedas tienen un incetivo a portarse vien
+* Un ataque del 51% es aun mas dificil
+
+![](./img/pf_vs_ps.png)

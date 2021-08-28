@@ -209,4 +209,39 @@ Empezamos con $\varepsilon$ y aplicamos la formula:
 	\item Puede quedar en un \textbf{lazo anidado}
 \end{enumerate}
 
+\section{noseque}
+
+\section{Ajuste de curvas}
+
+\subsection{Presentacion del problema}
+
+En muchas ocasiones en los problemas prácticos de la ingeniería, trabajamos con
+datos experimentales discretos, es decir que obtenemos, por medición un conjunto de
+puntos aislados que responden a una ley física específica. Por ende necesitaremos ajustar
+curvas para interpolar valores entre los medidos para predecir el comportamiento del
+fenómeno que estamos estudiando.
+En este capítulo veremos varias formas de hacer esto, desde aproximar una simple
+línea recta hasta un complejo polinomio trazador, pasando por la interpolación
+polinomial.
+
+\subsection{Regresion lineal por minimos cuadrados}
+
+Es buscar una linea recta que pase lo mas cerca posible por todos los puntos, 
+o dicho de otra manera que minimize los errores de aproximacion
+
+\begin{equation}
+	y = a_ + a_1x + E
+\end{equation}
+
+Donde $a_0$ y $a_1$ son la ordenada al origen y la pendiente respectivamente de la recta, 
+y E es el error entre el modelo y las observaciones
+
+La idea es minimizar la suma de todos los errores de todos los puntos:
+
+\begin{equation}
+	\sum_{i=1}^n E_i = \sum_{i=1}^n (y_i-a_0 - a_1x_i)
+\end{equation}
+
+
+
 \end{document}

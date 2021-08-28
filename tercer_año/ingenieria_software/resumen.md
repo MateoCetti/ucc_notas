@@ -221,3 +221,89 @@ Ejemplo: **scrum**
 
 ![](./img/hs.png)
 ![](./img/tareas.png)
+
+**Proceso de scrum**
+
+![](./img/scrum.png)
+
+## Ingenieria de requerimientos
+
+Proceso en el que se describen las funcionalidades y limitaciones del sistema en cuestion.
+
+Un requerimiento es una declaracion abstractade un servicio o de una restriccion del sistema a una especifcacion funcional matematica detallada.
+
+Los requisitos pueden ser ambiguos.
+* Debe estar abierto a la interpretacion
+* Debe estar definido con detalle
+* Estas declaraciones pueden ser llamados requerimientos
+
+**Tipos de requerimientos**
+
+* **Requerimientos no funcionales**: Limitaciones de las funcionalidades que ofrece el sistema (restricciones de tiempo, proceso de desarrollo, normas, etc.)
+* **Requerimientos funcionales**: define las funcionalidades que el sistema debe proveer
+    * **Requerimientos del usuario**: Deben ser escritos en lenguaje natural, para que el cliente lo entienda.
+    * **Requerimientos del sistema**: Documento estructurado que establece las descripciones detalladas de las funcionalidades del sisetma. Define todo lo que debe ser implementado asi que puede ser parte de un documento entre el cliente y el desarrollador.
+
+**Ejemplo**:
+![](./img/requerimientos.png)
+
+Los requerimientos no funcionales  pueden tener distintas causas / clasificaciones
+
+**Requerimientos del producto**
+* Ejecucion / velocidad / fiabilidad, etc. Son requerimientos que especifican que el rpoducto entregado debe comportarse de una manera particular
+
+**Requerimientos organizacionales**
+*  Consecuencia de politicas y procedimientos organizacionales, ej: estandares de procesos, requisitos de implementacion (usar un SGBD en especifico), etc.
+
+**Requerimientos externos**
+* Por ejemplo, restricciones legales.
+
+Si alguno de estos requerimientos no se cumplen, el sistema es inutil
+
+![](./img/req_no_func.png)
+
+Los requerimientos no funcionales pueden ser muy dificiles de explicar y requerimientos imprecisos o ambiguos pueden ser muy dificiles de verificar.
+
+Para resolver la hipotetica ambiguedad en estos requerimientos, se suelen aplicar metricas a cada tipo de propiedad.
+
+![](./img/metricas.png)
+
+**Requerimientos del dominio**
+
+Son los requerimientos del dominio sobre el cual se esta trabajando.
+
+Estos requerimientos se expresan en el lenguaje del dominio en cuestion, por lo que puede ser dificil de entender por los programadores.
+
+**Documento de requerimientos de software**
+
+Declaracion oficial de lo que se requiere de los desarrolladores del sistema.
+
+Se definen los requisitos edl usuario y del sistema.
+
+No es un documento tecnico. dice **QUE** debe hacer, pero no **COMO**.
+
+**Usuarios de un documento de requerimientos**
+
+![](./img/req_usuarios.png)
+
+![](./img/requ_doc_estructura.png)
+![](./img/requ_doc_estructura_2.png)
+
+**Especificacion de requerimientos**
+
+Proceso de escribir los requerimientos del sistema del usuairo y en un documento de requisitos.
+
+**Maneras de escibir una especificacion de requerimientos del sistema**:
+
+![](./img/escribir_requerimientos.png)
+
+El lenguaje natural es muy ambiguo y poco claro. Da pie a la confusion y fusion de requerimientos.
+
+Para quitar esta ambiguedad, se suele pasar a un lenguaje tecnico casi pseudocodigo.
+
+Procesos de ingenieria de requerimientos:
+
+* Obtener requerimientos (entrevistas)
+* Analisar requerimientos
+* Validar requerimientos
+* Gestionar requerimientos

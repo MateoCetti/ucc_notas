@@ -53,3 +53,8 @@ en esta situación nos encontramos cuando conociendo el conjunto X y el conjunto
 **Criterios de racionalidad limatada.**
 
 **Criterio MaxiMin** (pesimista, wald)
+
+# Universo aleatoreo
+
+# Teoria de juegos
+
