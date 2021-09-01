@@ -154,7 +154,7 @@ Punto de conexion fisico o virtual donde se puede crear, enviar y recibir toda c
 
 Cadena de bloques, un libro mayor de acontecimientos digitales que esta distribuido o compartido entre muchas partes diferentes. Solo puede ser actualizado a partir del ocnsenso de la mayoria de participantes del sistema y, una vez introducida, la info nunca puede ser borrada.
 
-Los bloques tienen mas o menos 2000 transacciones, que es el equivalente a 1 mega de informacion. Pero gracias a la blockchain, cada bloque tiene indirectamente todas las transacciones porque cada bloque apunta al bloque anterior, que contiene otras 2000 transacciones
+Los bloques tienen mas o menos 2000 transacciones, que es el equivalente a 2 megas de informacion. Pero gracias a la blockchain, cada bloque tiene indirectamente todas las transacciones porque cada bloque apunta al bloque anterior, que contiene otras 2000 transacciones
 
 Pilares de las **blockchains publicas**
 
@@ -182,6 +182,10 @@ Los mineros son imprecindibles para que las transaccines sean incluidas en un bl
 Con este sistema nos aseguramos que ninguna entidad puede manipular o controlar la red.
 
 Cuando se rompe el consenso se generan bifurcaciones (hard fork o soft fork)
+
+* **fork**: difurcación de la blockchain por descubrimiento de bloques simultaneos (gana la cadena mas larga)
+* **soft fork**: Cambian las reglas de consenso, pero todos los nodos se ponen de acuerdo y se sigue la misma cadena.
+* **hard fork**: Cambian las reglas de consenso, generando una pelea entre los nodos y formando 2 cadenas distintas (etherium / etherium classic)
 
 ## Proof of work (Mineria)
 
@@ -310,3 +314,40 @@ Beneficios:
 * Un ataque del 51% es aun mas dificil
 
 ![](./img/pf_vs_ps.png)
+
+**Tamper proof**
+
+Una blockchain esta a prueba de modificaciones ya que al modificar una simple transaccion, se modifica todo el hash, por lo que se modifica toda la blockchain.
+
+## Transacciones
+
+Una transaccion es un mensaje en donde yo le doy a otro el derecho a gastar.
+
+Las transacciones tienen:
+
+* **Inputs**: referencia de una transaccion pasada
+* **Outputs**:
+    * Direccion de destino
+    * Direccion de retorno
+* **TXid**: hash propio (generado por input, output y fee)
+* **fee**: pago a los mineros
+
+## Arbol de Merkle
+
+Dentro de un bloque en bitcoin tenemos un arbol de merkle.
+
+Estructura de datos dividida en varias capas que tiene como finalidad relacionar cada nodo con una raiz unica asociada a los hijos.
+
+![](./img/merkle.png)
+
+La raiz de este arboles un hash con el resumen de todas las transacciones de un bloque. cada nodo tiene el hash de x cantidad de transacciones, excepto los nodos raiz que solo tienen el hash de 1 transaccion.
+
+Etapas del minado:
+* **Transaccion** (se crean las transacciones)
+* **Compilacion** (agarrar todas las transacciones y agruparlas en un bloque)
+* **Formacion** (formar el merkle y agregar mas datos al bloque)
+* **Prueba de trabajo** (encontrar un nonce)
+* **Transmision** (mandar el bloque con el nonce y el hash a la red para q sea aceptado)
+* **Verificacion** (se verifica la legitimidad del bloque)
+* **Confirmación** (Cuando se añade un nuevo bloque al bloque en cuestion)
+

@@ -209,7 +209,173 @@ Empezamos con $\varepsilon$ y aplicamos la formula:
 	\item Puede quedar en un \textbf{lazo anidado}
 \end{enumerate}
 
-\section{noseque}
+\subsection{Metodo de newton - raphson}
+
+Este metodo se demuestra mediante procedimientos teoricos 
+(\textbf{polinomio de Taylor}) y mediante procedimientos graficos.
+
+\begin{equation}
+	f(x_{i+1}) = f(x_i) + f'(x_i)(x_{i+1}-x_i) + \dfrac{f''(x_{i+1})}{2!}(x_{i+1}-x_i)^2 + \dots + \dfrac{f^n (x_{i+1})}{n!}(x_{i+1}-x_i)^n
+\end{equation}
+
+Lo que nosotros queremos es encontrar la raiz. por lo que queremos buscar
+un $x$ tal que el polinomio de taylor de la funcion en cuestion de $0$.
+Por lo que solo nos interesan los polinomios de taylor de orden 1 
+(Generamos un \textbf{error de truncamiento}).
+
+\begin{equation}
+	f(x_{i+1}) = f(x_i) + f'(x_i)(x_{i+1} -x_i) = 0
+\end{equation}
+
+Despejando $x_{i+1}$ como nuestra supuesta raiz nos queda:
+
+\begin{equation}
+	x_{i+1} = x_i - \dfrac{f(x_i)}{f'(x_i)}
+\end{equation}
+
+Esto eso conoce como \textbf{formula recurrente del metodo Newton-Raphson}.
+
+La interpretacion grafica consiste en ver la funcion (enfocandose en un punto) y su recta tangente, 
+y mediante el triangulo rectangulo q se forma formulamos una ecuacion de la derivada de la funcion, 
+en donde despejando $x_{i+1}$ nos quedaria $(13)$
+
+Para llegar a la raiz, se aplica este función recursivamente
+
+Este metodo es en realidad un subset del metodo de punto fijo, en donde:
+
+\begin{equation}
+	g(x_i) = x_i \dfrac{f(x_i)}{f'(x_i)}
+\end{equation}
+
+\textbf{Ventajas}
+\begin{itemize}
+	\item Alto grado de convergencia
+	\item Metodo rapido y mas usado en la ingenieria
+\end{itemize}
+
+\textbf{Inconvenientes}
+\begin{itemize}
+	\item Problemas de convergencia en curvas planas (logaritmicas)
+	\item En funciones complejas, encontrar la derivada puede ser muy dificil.
+\end{itemize}
+
+\subsection{Metodo de le secante}
+
+Para cuando obtener la derivada se transforma en una tarea tediosa,
+podemos mediante el teorema del \textbf{valor medio} sustituirla por
+su aproximación (obteniendo un pequeño error)
+
+\begin{equation}
+	f'(x_i) = \dfrac{f(x_{i-1})-f(x_i)}{x_{i-1}-x_i}
+\end{equation}
+
+Reemplazando en Newton-Raphson:
+
+\begin{equation}
+	x_{i+1} = x_i - \dfrac{f(x_i)(x_{i-1}-x_i)}{f(x_{i-1})-f(x_i)}
+\end{equation}
+
+Usamos 2 puntos de partida, pero como es un metodo abierto, 
+no importa si la raiz no esta entre esos 2 puntos.
+
+La diferencia con el metodo anterior, es que en vez de utilizar
+la recta tangente utilizamos la secante.
+
+\pagebreak
+
+\section{Sistemas de ecuaciones lineales}
+
+\subsection{Presentación del problema}
+
+Muchos problemas de la ingenieria en general se resuelven
+al plantear y resolver un sitema de ecuaciones lineales.
+En este capitulo vemos \textbf{solo} 3 metodos (hay muchos mas)
+
+\subsection{Metodo de eliminación Gaussiana}
+
+Dada una \textbf{matriz cuadrada} A, el metodo consiste en 2 pasos,
+primero reducir esta matriz a una \textbf{triangular superior} mediante
+operaciones elementales de filas, luego se realiza una \textbf{sustitución 
+hacia atras} (despeje de los valores del vector X)
+
+Nuestro problema consiste en resolver:
+
+\begin{equation}
+	A\overrightarrow{x} = \overrightarrow{b}
+\end{equation}
+
+No podes tener elementos nulos ni muy pequeños en la diagonal principal,
+por lo que previamente tenemos que hacerla \textbf{diagonal principal dominante}
+mediante operacion elemental tipo 3, o $E_{(ab)}$ 
+
+Despeje de incognitas:
+
+\includegraphics[width = 200px]{./img/secante_despeje.png}
+
+La matriz puede estar bien o mal condicionada (lo vemos mas adelante)
+
+\subsection{Metodo de Gauss - Seidel}
+
+Metodo derivado de  Gauss Jacobi, pero mejorando la velocidad de convergencia.
+Se basa en el principio del punto fijo.
+
+De cada ecuación despejamos 1 incognita distinta, quedando ecuaciones de este tipo:
+
+\begin{equation}
+	x_1 = \dfrac{b_1 - a_{12}x_2 + a_{13}x_3 + \dots + a_{1n}x_n}{a_{11}}
+\end{equation}
+
+o
+
+\begin{equation}
+	x_i = \dfrac{b_i- \sum_{j=1}^n a_{ij}x_j}{a_{ii}}
+\end{equation}
+
+Donde $j \neq i$
+
+\textbf{Nota}: no puede haber elementos nulos en la diagonal principal y
+la matriz debe ser diagonal principal dominante.
+
+Luego ed obtener estas funciónes, aplicamos el procedimiento del \textbf{punto fijo}
+y obtenemos los valores para cada variable (al encontar un error permitido).
+
+Este metodo produce mucha \textbf{Perdida de significancia}
+
+\subsection{metodo de la LU}
+
+Metodo muy utilizado en la ingenieria. Este metodo coinsiste en reemplazar
+
+\begin{equation}
+	[A][x] = [b]
+\end{equation}
+
+mediante propiedades algebraicas de matrices por:
+
+\begin{equation}
+	[LU][x] = [b]
+\end{equation}
+
+Donde L es una matriz triangular \textbf{inferior} (donde todos 
+los elementos de la diagonal principal valen 1) y U \textbf{superior}.
+
+o reemplazando:
+
+\begin{equation}
+	[L][y] = [b]
+\end{equation}
+
+Donde:
+
+\begin{equation}
+	[y] = [U][x]
+\end{equation}
+
+Para obtener las matrices L y U, aplicamos en metodo de eliminación Gaussiana,
+en donde los elementos de L son los modificadores, y la matriz
+U es la matriz triangulada por los mismos modificadores.
+
+
+\pagebreak
 
 \section{Ajuste de curvas}
 
@@ -241,6 +407,26 @@ La idea es minimizar la suma de todos los errores de todos los puntos:
 \begin{equation}
 	\sum_{i=1}^n E_i = \sum_{i=1}^n (y_i-a_0 - a_1x_i)
 \end{equation}
+
+\subsection{Polinomio de Newton}
+
+\subsection{Polinomio de Lagrange}
+
+Reformulación del polinomio de Newton para no calcular 
+las diferencias divididas. Este metodo tambien deriva del polinomio de Taylor,
+obteniendose la siguiente expresión:
+
+\begin{equation}
+	f_n(x) = \sum_{i=0}^n L_i(x)f(x_i)
+\end{equation}
+
+Donde $L_i(x)$ son polinomios que cumplen con ciertas condiciones:
+
+\begin{equation}
+	L_i(x) = \Pi_{g=0}^n \dfrac{x-x_j}{x_i-x_j}
+\end{equation}
+
+Donde $j \neq i$
 
 
 

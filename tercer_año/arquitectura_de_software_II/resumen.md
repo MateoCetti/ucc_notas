@@ -53,3 +53,14 @@ Hay algunos headers que son **generales**:
 
 Los headers que empiezan con **X** son **custom**.
 
+
+## MVC
+
+Capas:
+
+* Modelos
+* Servicios
+* Controladores
+
+![](./img/capas.png)
+

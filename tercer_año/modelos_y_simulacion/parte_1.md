@@ -146,3 +146,38 @@ Como restricciones voy a tener:
 * Condicion de no negatividad y enteras
 
 ![](./img/supuestos_ta.png)
+
+El problema de la asignación es similar al de transporte, se pueden resolver mediante la PL (A lo mejor no es la mejor solución). 
+
+![](./img/asignacion.png)
+
+Tiene que haber tantos operarios como puestos de trabajo.
+
+Este modelo utiliza variables binarias (se asigna o no el operario I al puesto J).
+
+En general el problema de asignación suele ser de minimización de costos.
+
+## Inventarios
+
+![](./img/abc.png)
+
+Principio de pareto para inventarios (20% de productos generan el 80% de los gastos, producto A, 30% generan un 15% de costos, y un 50% generan un 5% de costos)
+
+Los costos a la hora de analizar stocks son:
+
+* Costo de mantener el stock
+* Costo de pedido
+* Costo por agotamiento o ruptura
+* Costo de adquisición
+
+Ejercicio tipo: cuantos productos tipo C se necesita reabasteser 1 vez por año.
+
+Politica de periodo de tiempo fijo
+
+![](./img/t_fijo.png)
+
+Politica de cantidad fija de pedido
+
+![](./img/cant_fija.png)
+
+![](./img/cep_ruptura.png)
