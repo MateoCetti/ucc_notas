@@ -68,3 +68,96 @@ Ventajas:
 * Aumentan la performance y respuesta general
 
 ![](./img/proc_alm.png)
+
+## Marco teorico previo a HEFESTO
+
+Los **datos** son parte fundamental que **conforma** la **información**.
+
+**Inteligencia de negocios** responde a preguntas ¿que sucede? ¿que sucedió? ¿que sucederá? ¿por qué? (estas ultimas 2 mediante **data mining**). Otorga toda la informacion y conocimiento oportuni, relevante, util y adecuado al contexto a una empresa / gerente de una empresa para que este pueda tomar decisiones que resulten en un beneficio para la misma.
+
+**Proceso de BL**
+
+![](./img/proceso_bi.png)
+
+**Data Warehousing**
+
+Conceptos clave
+
+* Extraccion, transformacion, integracion y centralizacion de datos
+* Analisis y exploracion
+* Informacion
+* Soporte a la toma de decisiones
+
+Requiere:
+* Almacenar los datos en una bd centralizada con **estructura multidimencional** (data warehouse)
+
+**Data warehouse**
+
+Es una coleccion de datos para el soporte del proceso de la toma de decisiones, que posee estas 4 caracteristicas principales.
+
+* **Orientada al negocio**: **Solo** puede **tener** info que va a ser utilizada para la toma de decisiones
+* **Integrada**: Toma datos internos, externos, de diferentes fuentes y compatibilizados.
+* **Variante en el tiempo**: Cada porcion relevante en el DW debe tener un CELLO en el timepo de manera obligatoria.
+* **No volatil**: Es de "solo lectura/consulta". La informacion no es modificable.
+
+![](./img/dw_estructura.png)
+
+Los datos se guardan ya resumidos para mejorar la velocidad de las consultas
+
+**Arquitectura del DWH**
+
+![](./img/arq_dwh.png)
+
+1. **OLTP**: Sistemas de almacenamiento transaccional comun y corriente. Puede ser de fuentes internas y externas. Ejemplos: Archivos de texto, hojas de calculo, informes, BD transaccional.
+2. **Load manager**: ETL (Extraccion, transformacion y carga)
+    * Extraccion: 
+        * Datos relevantes
+        * Almacenamiento intermedio
+    * Transformacion
+        * Integracion
+        * Limpieza de los datos
+    * Carga
+        * Carga y actualizacion del DW
+        * Mantenimiento de la estructura del DW
+3. **DW Manager**: Capa de software agregada a un SGBD comun para dar mas funcionalidades. Es un sistema de almacenamiento multidimencional (Tablas de hechos y dimensiones). Da soportes a cubos, BM, etc. y da lugar a 3 tipos de modelados:
+    * Esquema estrella
+    * Esquema copo de nieve
+    * Esquema constelacion
+Y al momento de la implementacion fisica tenemos estos 3 tipos:
+    * ROLAP (relacional)
+    * MOLAP (noseque)
+    * HOLAP (hibrido)
+
+**Tablas de dimensiones**: 
+
+Son los aspectos de interes, o criterios de analisis en los que vamos a querer analizar los datos. (el tiempo esta si o si). 
+
+La tabla de dimension tiempo es obligatoria, permite ver diferentes versiones de una misma info, y mantinene niveles jerarquicos especiales.
+
+**Tablas de hechos**
+
+Contienen los hechos que se quieren analizar, estos son datos instantaneos en el tiempo que son filtrados, agrupados y explorados a traves de condiciones definidas en tablas de dimensiones.
+
+**Cubo multidimensional**
+
+Forma de representacion multidimencional. Los datos se encuentran en las filas y las columnas, y los indicadores se encuentran en las intersecciones
+
+![](./img/cubo.png)
+
+Se agrupa sobre los ejes y se hace una sumatoria del indicador requerido.
+
+Los cubos tienen indicadores y atributos
+
+**Indicadores**
+
+Son la aplicación de una funcion de agregación sobre algún hecho, o una expresion basada en alguna funcion de agregación, condicionadas por agrupos/jerarquias.
+
+**Atributos**
+
+(Dimensiones) Criterios de analisis en los que se van a basar los indicadores.
+
+**Jerarquias**
+
+Una dimension puede tener jerarquias, la jerarquia padre debe tener en su totalidad a los hijos.
+
+
