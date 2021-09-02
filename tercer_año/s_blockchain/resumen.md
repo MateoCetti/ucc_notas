@@ -351,3 +351,34 @@ Etapas del minado:
 * **Verificacion** (se verifica la legitimidad del bloque)
 * **Confirmación** (Cuando se añade un nuevo bloque al bloque en cuestion)
 
+## Forks
+
+Un fork hace referencia al despliegue de cambios en el codigo de una crypto o token. Es una bifurcación que ocurre cuando los desarrolladores implementan cambios en la version actual del codigo.Tomando en cuenta que la blockchain es una estuctura de datos descentralizada y que hay diferentes copias alojadas en los nodos que no son consistentes, lo que ocurre es que estas acaban teniendo versiones diferentes en momentos distintos.
+
+* Se utiliza cuando se **clona** un codigo fuente de una cripto. Las nuevas criptomonedas que se crean por un fork o bifurcacion son **altcoins**
+* Surge como actualizacion del codigo fuente de una blockchain. puede ser intencional a **no intencional**.
+* **Hard/ soft fork**: En este caso se refiere a cuando se introduce conscientemente cambios o implementaciones en el codigo Bitcoin de manera **consciente** (no accidental) Hard y soft fork se diferencian por el nivel de compatibilidad con las versiones anteriores.
+    * **Hard fork**: Hay una division filosofica. La mayoria de los bloques son generados por un conjunto de nodos utiliando nuevas reglas de consenso (termina habiendo 2 monedas distintas) 
+    * **soft fork**: Se hacen cambios sobre las reglas de consenso de tal manera que todos los nodos estan de acuerdo. pero en el caso de que hayan nodos q no esten de acuerdo, pueden seguir perteneciendo a la misma blockchain sin problema.
+
+**DAO** (organizacion autonoma descentralizada autonoma, se gobierna a si misma.)
+
+## Problemas de bitcoin y las cryptos
+
+**Escalabilidad**
+
+La cantidad de transacciones por segundo es muy baja. (bitcoin soporta hasta 7 transacciones por segundo)
+
+La capacidad de un sistema para crecer y asi acomodar una demanda creciente.
+
+![](./img/trilema.png)
+
+**Soluciones on-chain**: soft-forks
+
+**Soluciones off-chain**: realizar las transacciones por fuera de la blockchain (?) 
+
+**Canales de pago**: Lightning network (?)
+
+**Interoperabilidad**
+
+No se puede realizar transacciones entre blockchains distintas. Para una blockchain, la otra no existe
