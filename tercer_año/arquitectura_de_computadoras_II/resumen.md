@@ -296,4 +296,71 @@ Si el cache falla, demoramos mas ciclos en traer la info del siguiente nivel jer
 
 ![](./img/vias_conjuntos.png)
 
-ojo con el algoritmo de sustitución
+ojo con el algoritmo de sustitución, este puede ser una entrada con bit valido en 0, metodo LRU (last recently used), MRU (most recently used), random, etc.
+
+**Cache multinivel**: Orden jerarquico dentro de las caches ordenados por la cercania o lejania de del procesador. Mientras el nivel sea mas alto, mas caro, performante y chico. Suelen tener 2 niveles. L1 (parte del CPU) y L2
+
+## Sistemas de entrada salida (E/S)
+
+Uno de los 3 subsistemas que conforman una gran parte de los sistemas computacionales.
+
+Es el que me permite traer datos de la realidad o exponerlos hacia la misma.
+
+`Nota: Perifericos no es lo mismo a modulo de E/S`
+
+En arquitecturas viejas, los perifericos se conectaban a la PC mediante un sistema de puertos (canales de datos).
+
+![](./img/puertos.png)
+
+Hoy en dia se utilizan arreglos basados en **buses**. El periferico manda los datos al bus de datos o bus de E/S y el bus se encarga de mandarlo a la memoria
+
+![](./img/bus.png)
+
+![](./img/tipos_de_bus.png)
+
+O se utlizan registros en la memoria principal para acceder a los perifericos (memory-mapped I/O, ARM) o se utiliza un mapa de memoria adicional (Standard I/O, intel)
+
+**Ventajas y desventajas de C/U**
+
+![](./img/bus_ventajas.png)
+
+**Metodos de operacion de E/S**
+
+![](./img/polling.png)
+
+Hay 3 metodos para acceder a los recursos involucrados en un sistema computacional:
+
+* **E/S programada** (Polling-driven): 
+
+Todos los procedimentos del manejo de dispositivos E/S se manejan mediante programas especificos (instrucciones) escritos para dicho objetivo.
+
+La principal desventaja es que se desperdician muchos ciclos en revisar el estado de modulo E/S (las instrucciones del programa estan en memoria, y el acceso a memoria es mas lento que la generacion de datos por parte del modulo E/S)
+
+![](./img/estado.png)
+
+* **Interrupcion**
+
+Una interrupcion es un **recurso fisico** (interrupt request). Cuando al CPU le llega un IR, este interrumpe la ejecucion normal de un codigo para leer el dato introducido en el modulo de E/S
+
+Al finalizar **cada** ciclo de **instruccion**, el CPU verifica si hay IR pendientes (**No se consume ciclos de instruccion**).
+
+Si hay IR, se corta el programa ejecutado por el CPU y se salta a una posicion especifica de memoria llamada **vector de interrupciones**. Dicho vector contiene las referencias a los codigos respectivos a cada modulo de E/S que garantizan el correcto funcionamiento del mismo. Este codigo se denomina **ISR** (interrupt service routine)
+
+![](./img/interrupcion.png)
+
+El vector de ISR se aloja en memoria. ¿donde?
+
+* **Direccion fija**:
+
+Direccion establecida en la propia logica de la CPU, y no es modificable (util cuando el sistema es pequeño y la cantidad de perifericos a utilizar es poca).
+
+* **Direccion vectorizada**
+
+El periferico provee la direccion al CPU por medio del bus de datos. Por lo que ahora existe una señal INTERRUPTION ACKNOWLEDGE que es mandada por el bus de datos desde el cpu al periferico que indica que dicha interrupcion ha sido tomada. Una vez el modulo de E/S recibio el INT ACK, se manda al CPU la direccion del ISR para ejecutar el programa de manejo de datos de perifericos.
+
+¿Como se procesa una interrupcion?
+
+![](./img/proceso_int.png)
+
+* **DMA** (Direct memory access)
+
