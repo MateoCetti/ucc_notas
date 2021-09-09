@@ -181,3 +181,4 @@ Politica de cantidad fija de pedido
 ![](./img/cant_fija.png)
 
 ![](./img/cep_ruptura.png)
+

@@ -274,17 +274,21 @@ Son los requerimientos del dominio sobre el cual se esta trabajando.
 
 Estos requerimientos se expresan en el lenguaje del dominio en cuestion, por lo que puede ser dificil de entender por los programadores.
 
-**Documento de requerimientos de software**
+### Documento de requerimientos de software
 
-Declaracion oficial de lo que se requiere de los desarrolladores del sistema.
+Declaración oficial de lo que se requiere de los desarrolladores del sistema. Este debe incluir tanto una de finicion de los requisistos del usuario y una especificación de los requisitos del sistema.
 
-Se definen los requisitos edl usuario y del sistema.
+Este documento **NO** es un documento de //. Se establece QUE es lo que el sistema debe hacer y NO COMO es que debe hacerlo,
 
-No es un documento tecnico. dice **QUE** debe hacer, pero no **COMO**.
+En las metodologias planificadas, este documento es muy importante. Sin embargo, en los metodos agiles se argumenta que la elaboración de este documento es una perdida de tiempo, ya que los requerimientos cambian constantemente.
+
+En metodos agiles, se suelen usar requisitos express como "historias de usuario"
 
 **Usuarios de un documento de requerimientos**
 
 ![](./img/req_usuarios.png)
+
+La info dentro de un documento de requerimientos depende del sistema elaborado. Sin embargo, su estructura puede seguir un estandar definido por la IEEE. Una estructura tipo es la siguiente:
 
 ![](./img/requ_doc_estructura.png)
 ![](./img/requ_doc_estructura_2.png)
@@ -307,3 +311,59 @@ Procesos de ingenieria de requerimientos:
 * Analisar requerimientos
 * Validar requerimientos
 * Gestionar requerimientos
+
+Estos procesos se realizan de manera iterativa:
+
+![](./img/iterativo.png)
+
+Estos procesos involucran tanto al personal tecnico como a usuarios finales, gerentes, ingenieros, expertos del dominio, etc. Estos se llaman **partes interesadas**.
+
+Algunos de los problemas con el analisis de requerimientos:
+* Los interesados no saben expresar lo que quieren
+* Las partes interesadas expresan los requisitos en sus propios terminos
+* Las diferentes partes interesadas pueden tener requisitos contradictorios
+* Factores organizativos y politicos pueden  influir en requisitos del sistema
+* Los requisitos cambian durante el proceso de analisis
+
+**Descubrimiento de los requerimientos**
+
+Una de las principales tecnicas es el proceso de **entrevistas**. Hay que hacer preguntas, o por lo menos tener en cuenta a todas las personas involucradas en el sistema a realizar.
+
+Las entrevistas son encontrarse con los interesados y hablar con ellos para determinar sus necesidades. Estas pueden ser **formales** o **informales**, **abiertas** (el cliente explica lo que necesita a los ingenieros) o **cerradas** (los ingenieros hacen preguntas que los clientes responden)
+
+Hay que tener en cuenta que los tecnicos / ingenieros no son expertos en el dominio en el que el sistema se va a desenvolver.
+
+Para hacer las entrevistas mas llevaderas, en ellas se desarrollan **escenarios** que son un relato o un caso hipotetico en el que el sistema se utilizara.
+
+**Casos de uso**
+
+Tecnica basada en escenarios en UML que permiten identificar a los actores en una misma interaccion y que describen la interaccion misma.
+
+![](./img/caso_uso.png)
+
+**Etnografia**
+
+Tecnica de observación que se usa para entender los procesos operacionales y ayudar a derivar requierimientos de apoyo para dichos procesos
+
+Consiste en ver como se realiza el proceso en el cual el sistema se va a basar para verificar requerimientos
+
+**Validación de los requerimientos**
+
+Proceso de verificar que los requerimientos definan realmente el sistema que requiere el cliente. Los requerimientos deben pasar las siguientes comprobaciónes:
+
+![](./img/comprobacion.png)
+![](./img/mas.png)
+Tecnicas de validación de requerimientos
+
+* **Criticas de requerimientos**: Analisis manual sistematico de los requerimientos. Se hacen revisiones periodicas
+* **Prototipado**: Utilizando un modelo ejecutable del sistema para comprobar requerimientos (Mockup)
+* **Generación de test**: Desarrollo de las prubebas de requerimientos para comprobar la capacidad de prueba.
+
+**Gestion de requerimientos**
+
+TODO
+
+**Planificacion de la gestion de requerimientos**
+
+TODO
+

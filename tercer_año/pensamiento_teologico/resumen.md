@@ -136,3 +136,64 @@ En este caso vamos a ver a **Jesus Historico**
 **¿Existio Jesus?**
 
 La biblia esta escrita de tal forma que no se puede contar sin asumir que jesus existio en carne y huseo
+
+## Parciales de Jesus
+
+### Tarea de jesus
+
+Contexto: 
+
+* Ofertas religiosas por parte de saduceos, fariseos, esenios y zelotas
+* Jesus no se alineo con ninguno de ellos
+* Jesus tiene como objetivo el bien del hombre
+
+Lo primero que hizo jesus:
+
+* Formar una comunidad
+* Eran alrededor de 72 discipulos
+
+Una comunidad para que
+
+* No para conseguir la vida eterna
+* Para servirse los unos a los otros
+* Hay 3 puntos claves.
+  * Condicion de admision
+  * Programa de la vida y de accion que se le plantea al grupo
+  * La actitud basica y funamental que debe reinar en la comunidad
+
+**Condicion de admision**
+
+* Renunciar al capital
+* Misiones sin este como objetivo
+* Compartir lo que se tiene
+* Renunciar a toda atadura humana
+* Querer cambiar las bases de la sociedad
+
+**Programa de la vida y de accion que se le plantea al grupo**
+
+* Jesus presenta un programa de vida y accion (bienaventuranzas)
+* Jesus acepta como suyos a quienes no reconocen como absolutos a el poder, e prestigio o al dinero, sino a Dios
+* Esto trae consecuencias positivas
+* Los que viven perseguidos por su fidelidad
+
+**La actitud basica y funamental que debe reinar en la comunidad**
+
+* Actitud fundamental: el servicio
+* Oponerse a la dominacion politica y a la religiosa
+* Es condicion fundamental ponerse al ultimo
+
+**La comunidad como alternativa**
+
+* Alternativa al modelo de convivencia en el que vivimos
+* Despojarse de atadura de material y tener una vida de servicio
+* Solo cuando los hombres se ponen a hacer comunidad, reproduciendo el modelo de comunidad de jesus, se puede decir que se esta construyendo el reino de dios
+
+**La denuncia**
+
+* Califica y ataca a los judios dirigentes, fariseos y sacerdotes
+* Nos pone a reflexionar acerca de los evangelios y a la imagen de jesus en el nuevo testamento
+* Jesus fue el mas radical de todos los profetas
+
+**¿Que fue de la tarea de jesus?**
+
+* Hoy en dia hay ordenes mendicantes.

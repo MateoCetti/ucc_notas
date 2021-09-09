@@ -395,6 +395,8 @@ polinomial.
 Es buscar una linea recta que pase lo mas cerca posible por todos los puntos, 
 o dicho de otra manera que minimize los errores de aproximacion
 
+
+
 \begin{equation}
 	y = a_ + a_1x + E
 \end{equation}
@@ -408,7 +410,88 @@ La idea es minimizar la suma de todos los errores de todos los puntos:
 	\sum_{i=1}^n E_i = \sum_{i=1}^n (y_i-a_0 - a_1x_i)
 \end{equation}
 
+Para que no haya ningun problema, se minimiza el cuadrado del error.
+
+\begin{equation}
+	S_r = \sum E_i^2
+\end{equation}
+
+Para encontrar las incognitas (terminos $a_0$ y $a_1$) derivamos respecto a esas incognitas:
+
+\begin{equation}
+	\dfrac{\partial S_r}{\partial a_0} =-2\sum (y_i-a_0-a_1x_i)
+\end{equation}
+
+\begin{equation}
+	\dfrac{\partial S_r}{\partial a_1} =-2\sum [(y_i-a_0-a_1x_i)x_i]
+\end{equation}
+
+Que reescribiendo, formando un sistema de ecuaciones lineales, resolviendo y reordenando nos queda:
+
+\begin{equation}
+	a_1 = \dfrac{\sum x_i-y_1 - \sum x_i \sum y_i}{n\sum x_i^2 - (\sum x_i)^2}
+\end{equation}
+
+\begin{equation}
+	a_0 = \overline{y} - a_i \overline{x}
+\end{equation}
+
+Este modelo es \textbf{lineal}. Pero no todas las curvas son rectas. Sin embargo, si son linealizables, se pueden resolver con este metodo aplicando 
+algunos modelos no lineales. Algunos de estos son:
+
+\textbf{Modelo exponencial}
+
+Estas funciones son de la forma $ y = Ae^{Bx}$. Por lo que linearizando:
+
+\begin{equation}
+	a_0 = ln A
+\end{equation}
+	
+\begin{equation}
+	a_1 = B
+\end{equation}
+
+Por lo que cargariamos $(x_i, Ln (y_i))$
+
+\textbf{Modelo potencial}
+
+$Y = Ax^B$
+
+cargariamos $(log x_i, Log y_1)$
+
+
+Y deslinearizamos con:
+
+\begin{equation}
+	a_0 = Log A
+\end{equation}
+
+\begin{equation}
+	a_1 = B
+\end{equation}
+
+\textbf{Modelo de crecimiento}
+
+$y = A \dfrac{x}{b+x}$
+
+cargariamos
+
+Y deslinearizamos con:
+
+\begin{equation}
+	a_0 = \dfrac{1}{A}
+\end{equation}
+
+\begin{equation}
+	a_1 = \dfrac{B}{A}
+\end{equation}
+
+\textbf{OJO QUE ALGUNAS FORMULAS ESTAN MAL, EDITAR!!!}
+
 \subsection{Polinomio de Newton}
+
+Antes, en la regrsion lineal, formabamos curvas que pasaran cerca de los puntos. Mediante Esta
+interpolación, crearemos curvas que pasen por los puntos.
 
 \subsection{Polinomio de Lagrange}
 
