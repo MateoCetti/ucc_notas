@@ -42,7 +42,7 @@ Arbol de decision
 ![](./img/parte_2/arboles.png)
 
 
-# Universo incierto
+## Universo incierto
 
 [](https://www.oocities.org/tcaspon/invop/indust/te_deci.htm)
 
@@ -54,7 +54,11 @@ en esta situación nos encontramos cuando conociendo el conjunto X y el conjunto
 
 **Criterio MaxiMin** (pesimista, wald)
 
-# Universo aleatoreo
+## Universo aleatoreo
 
-# Teoria de juegos
+## Teoria de juegos
+
+## Bayes
+
+Se usa para predecir cosas con mayor exactitud. (Se suele usar para predecir los mails spam?)
 

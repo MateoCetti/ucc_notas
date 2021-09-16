@@ -318,7 +318,7 @@ Hoy en dia se utilizan arreglos basados en **buses**. El periferico manda los da
 
 ![](./img/tipos_de_bus.png)
 
-O se utlizan registros en la memoria principal para acceder a los perifericos (memory-mapped I/O, ARM) o se utiliza un mapa de memoria adicional (Standard I/O, intel)
+O se utlizan registros en la memoria principal para acceder a los perifericos (memory-mapped I/O, ARM) o se utiliza un mapa de memoria adicional (Standard I/O, intel) con instrucciones de acceso especiales.
 
 **Ventajas y desventajas de C/U**
 
@@ -362,5 +362,34 @@ El periferico provee la direccion al CPU por medio del bus de datos. Por lo que 
 
 ![](./img/proceso_int.png)
 
-* **DMA** (Direct memory access)
+Consideraciones adicionales
 
+**Interrupciones enmascarables vs. no enmascarables**
+
+**Enmascaralble**: El programador puede modificar un bit que causa que el procesador ignore una solicitud de interrupcion (GEI)
+
+**No enmascarable**: Una señal que no puede ser ignorada (internas al CPU, ej: interrupción de RESET de una PC)
+
+**Multiples perifericos: Arbitraje**
+
+Cuando muchos perifericos mandan interrupciones al CPU, tiene que haber un sistema de arbitraje que decida cual interrupcion atender primero o en que orden atender todas las soluciónes. Estos sistemas pueden ser:
+
+**Software polling**:
+se revisa 1*1 las ISR en el vector. La prioridad esta dada por el orden de las ISR en el vector. 
+
+**Arbitro de prioridades**: Modulo que decide que interrupcion proveniente de los modulos de E/s se va a mandar al CPU. 
+![](./img/arbitro.png)
+
+**Conexion en cadena/cascada**: Las interrupciones pasan por todos los perifericos antes de llegar al CPU o al periferico en cuestion segun corresponda. La prioridad la tiene el periferico con mas cercania al CPU.
+
+![](./img/ccadena.png)
+
+**Arbitraje de bus**: Hay como subbuses que determinan que interrupcion se va a mandar al CPU
+
+**Excepciones**
+
+Las interrupciones no solamente pueden venir de perifiercos. Tambien existen **excepciones** en las que una ejecucion normal de un programa se corta por la interrupcion de un evento inesperado. Estos eventos pueden venir de dispositivos e/s o del sistema mismo.
+
+**Direct Memory Access (DMA)**
+
+Es como un CPU aparte que administra las interacciones entre el CPU y los modulos de e/s

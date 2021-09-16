@@ -182,3 +182,42 @@ Politica de cantidad fija de pedido
 
 ![](./img/cep_ruptura.png)
 
+**TODO**
+
+## Redes
+
+Grafos:
+
+![](./img/red.png)
+
+### Principio de optimidad
+
+Todo subcamino de un camino (secuencia de nodos y arcos que llevan de un nodo inicial a uno final) de valuacion optima es tambien de valuacion optima, comparado con todos los otros caminos que unen sus mismos vertices extremos
+
+### Arbol de expancion minima
+
+Es una red con n nodos **conexa** sin ciclos
+
+![](./img/arbol_exp_min.png)
+
+### Notacion
+
+**Arbol**: Subred conexa sin ciclo y no dirigida
+
+**Arbol de expansion**: Subred conexa que no contiene ciclos no dirigidos y llega a todos los nodos de la red
+
+Usamos un algoritmo parecido al de Dijkstra, que se puede implementar usando PL
+
+### Ruta mas corta
+
+El problema es encontrar el camino de valor minimo que une un nodo con otro.
+
+Es una red conexa y no dirigida con 2 nodos especiales (origen y destino)
+
+A cada ligadura de la red (arco no dirigido) se asocia una distancia no negativa
+
+Aca si usamos el algoritmo de Dijkstra
+
+### Redes de flujo maximo
+
+Si o si son redes orientadas.

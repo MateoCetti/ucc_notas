@@ -511,6 +511,50 @@ Donde $L_i(x)$ son polinomios que cumplen con ciertas condiciones:
 
 Donde $j \neq i$
 
+\subsection{Trazadoras cubicas}
+Las curvas trazadoras consisten en pasar polinomios de 
+grado n (en este caso 3) entre un punto y otro
 
+\includegraphics[width = 300px]{./img/trazadoras_cubicas_1.png}
+
+Estos polinomios reunen ciertas caracteristicas. La forma general de estos polinomios es:
+
+\begin{equation}
+	s_i(x) = a_i + b_i \cdot (x-x_i) + c_j \cdot (x-x_i)^2 + d_i \cdot (x-x_i)^3
+\end{equation}
+
+Si comparamos con Taylor, entonces $a_i = f(x_i)$
+
+Diferenciamos los puntos interiores de los frontera. Los puntos interiores deben cumplir con:
+
+1
+\begin{equation}
+	s_i(x_{i+1}) = s_{i+1}(x_{i+1})
+\end{equation}
+
+2
+\begin{equation}
+	s'_i(x_{i+1}) = s'_{i+1}(x_{i+1})
+\end{equation}
+
+3
+\begin{equation}
+	s''_i(x_{i+1}) = s''_{i+1}(x_{i+1})
+\end{equation}
+
+Para los puntos borde se debe cumplir:
+
+1 \textbf{trazadora cubica natural o libre}
+\begin{equation}
+	s''_0(x_0) = s''_{n-1}(x_n) = 0	
+\end{equation}
+
+2 \textbf{trazadora cubica condicionada}
+\begin{equation}
+	s0_0(x_0) = valor dado
+\end{equation}
+\begin{equation}
+	s'_{n-1}(x_n) = valor dado
+\end{equation}
 
 \end{document}

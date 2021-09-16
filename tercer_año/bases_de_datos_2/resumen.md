@@ -161,3 +161,12 @@ Son la aplicación de una funcion de agregación sobre algún hecho, o una expre
 Una dimension puede tener jerarquias, la jerarquia padre debe tener en su totalidad a los hijos.
 
 
+**Creacion de un cubo multidimencional**
+
+![](./img/cubo2.png)
+
+Vamos a usar un load manager especifico:
+
+![](./img/hop.png)
+
+[Apache Hop](https://hop.apache.org)

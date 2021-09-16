@@ -382,3 +382,108 @@ La capacidad de un sistema para crecer y asi acomodar una demanda creciente.
 **Interoperabilidad**
 
 No se puede realizar transacciones entre blockchains distintas. Para una blockchain, la otra no existe
+
+## Guardar y usar criptomonedas
+
+El metodo mas simple es usar un celular o una PC mediante una app. 
+
+Siempre lo tenemos con nosotros, pero si se pierde o rompe la app, se pierde la clave y por lo tanto el derecho a usar las monedas (la posesion de las mismas)
+
+La seguridad va a ser la que vos le brindes a tu dispositivo.
+
+No deberias de tener todos tus ahorros siempre a mano.
+
+Hot storage: internet / online
+
+Cold storage: sin internet / offline (acceso mas dificil, pero mas seguro)
+
+![](./img/hd.png)
+
+Algunos dispositivos para guardar cold info son:
+
+* Brain wallet
+* Ledger
+* Dispositivos especiales (tamperproof)
+
+**Mas seguridad**
+
+Las secret key se pueden dividir y compartir / separar para q al hacer una operacion se necesite el consenso de la mayoria de las partes.
+
+**Online wallets**
+
+Funcionan desde browsers o apps, administran las keys por nosotros.
+
+**Exchanges**
+
+Servicios que aceptan depositos de criptos y fiat money y implementan algun tipo de wallets.
+Estos son muy similares a los bancos tradicionales pero con cryptos.
+
+**Unidad minima de un bitcoin**
+
+Un **satoshi** es la unidad mínima de medida que se puede utilizar en el sistema Bitcoin. Es la fracción más pequeña en la que puedes dividir un bitcoin. De igual forma que un euro es divisible en 100 céntimos, un bitcoin es divisible en 100,000,000 de “céntimos” llamados satoshis.
+
+1 satoshi = 0,00000001 bitcoins
+
+1 bitcoin = 100,000,000 satoshis
+
+**Wallet**
+
+Monedero virtual (llavero virtual) con el que podemos gestionar activos criptograficos, almacenando las claves publicas y privadas.
+
+**Lightweight wallets**
+
+Monederos que funcionan usando una conexion con una serie de servidores (nodos completos) que le permiten obtener toda la informacion que necesitan sobre los pagos en criptomonedas que hacen. Es una forma simplificada de un monedero que hace innecesario ejecutar un **full node**, mientras mantiene un buen equilibrio entre seguridad y usabilidad.
+
+Nos permiten gestionar todos los activos con rapidez y seguridad sin necesidad de descargar toda la blockchain.
+
+**Caracteristicas**:
+
+1. Dispones del control de claves privadas
+2. No necesitan descargar toda la blockchain
+3. Se reduce el tiempo de sincronizacion
+4. son gratuitas
+5. etc.
+
+**Simplified Payment verification**
+
+Sistema implementado en la red para verificar pagos.
+
+![](./img/spv_3.png)
+
+![](./img/spv.png)
+
+![](./img/sov2.png)
+
+
+**Herarchical Deterministic wallets**
+
+Monedero que ofrece una interfaz grafica y se encarga de **crear direcciones**. Estas tienen asociada una clave privada.
+
+Emplean una unica semilla de 12, 18 o 24 palabras claves. con la que pueden generar un numero ilimitado de direcciones. Esto se realiza de forma automatica, jerarquica y secuencial.
+
+Esto se genero en la BIP 32.
+
+![](./img/hd_carac.png)
+
+**Tipos de wallets**
+
+Segun quien maneja las claves:
+* Sin custodia: El usuario se encarga de manejar sus claves privadas
+* Con custodia: El usuario delega en un tercero el manejo de sus claves privadas. (Exchangex centralizados, CEX)
+
+Segun conectividad (?)
+* Hot wallet: Estan conectadas a internet. Ofrecen un rapido y comodo acceso a los fondos. Pueden estar en smartphones, online o en desktops.
+* Cold wallet: No estan conectadas a internet
+
+**Exchange**
+
+Casa de cambio de criptomonedas y/o moneda fiat. Han sido fundamentales para la introduccion de las personas al mundo de las criptos. Son estructuras muy centralizadas. (Binance)
+
+Los exchange operan off-chain y funcionan como market maker (?)
+
+**DEX exchange descentralizado**
+
+Evolucion de los exchanges tradicionales. Sin custodia conecto mi wallet y hago la transaccion P2P
+
+No existen intermediarios y la plataforma se autosustenta por su programacion. Ademas de que roveen altos niveles de privacidad y anonimato.
+

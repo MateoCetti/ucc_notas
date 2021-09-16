@@ -170,7 +170,7 @@ Para reducir los costos de estos cambios, se pueden tomar las siguientes alterna
 
 Version inicial de un sistema que se utiliza para demonstrar conceptos y probar opciones de diseño (Mockup). Esto acerca al cliente al producto a desarrollar y podemos obtener requisitos de manera mucho mas precisa.
 
-# Desarrollo Agil de software
+## Desarrollo Agil de software
 
 `Nota: Manifiesto agil, documento con el que se empezo a pensar procedimiento de desarrollo agiles`
 
@@ -359,11 +359,124 @@ Tecnicas de validación de requerimientos
 * **Prototipado**: Utilizando un modelo ejecutable del sistema para comprobar requerimientos (Mockup)
 * **Generación de test**: Desarrollo de las prubebas de requerimientos para comprobar la capacidad de prueba.
 
-**Gestion de requerimientos**
+## Usabilidad
 
-TODO
+Facilidad con la que las personas pueden usar una herramienta particular fabricado por personas con el fin de alcanzar un objetivo.
 
-**Planificacion de la gestion de requerimientos**
+En general, la usabilidad es la cualidad que tiene un sistema por la cual permite a sus usuarios alcanzar objetivos con **efectividad, eficiencia y satisfacción**.
 
-TODO
+Es muy dificil medir la usabilididad (es muy relativo). Por lo que se puede medir a partir de pruebas **empiricas** y **relativas**
+
+### Principios de la usabilidad:
+
+* **Facilidad de aprendizaje** (predicibilidad, sintetizacion, familiaridad, consistencia)
+* **Facilidad de uso** (Eficacia, eficiencia)
+* **Flexibilidad** (Variedad de posibilidades con las que el usuario y el sistema pueden intercambiar info, ctrl+z)
+* **Robustez** (Nivel de apoyo al usuario que facilita el cumplimiento de sus objetivos)
+
+La usabilidad es un atributo de **calidad** de producto, dependiendo de los usuarios, tareas y contexto, mide:
+
+* Facilidad de aprendizaje
+* Eficiencia motriz y cognitiva
+* Capacidad de recordad lo aprendido
+* Manejo de errores
+* Satisfacción subjetiva
+
+### Diseño centrado en el usuario
+
+![](./img/dcu.png)
+
+**Objetivos**
+
+* Satisfacer las necesidades de todos los usuarios potenciales
+* Adaptar la tecnologia usada a las expectativas de los usuarios
+* Crear interfaces que faciliten la consecución de los objetivos de los usuarios.
+
+**Fases**
+* **Entender y especificar el contexto de uso**: Identificar a las personas a las que se dirige el producto, para que lo usaran y en que condiciones.
+* **Especificar requisitos**: Identificar los objetivos del usuairo y del proveedor del producto a satisfacer.
+* **Producir soluciones de diseño**:  Producir soluciones conceptuales, usando tecnicas y herramientas de prototupado
+* **Evaluar**
+
+![](./img/dcui.png)
+
+**Beneficios**
+
+* **Aumento de la productividad**
+* **Reduccion de errores**
+* **Menor capacitacion y entrenamiento**
+* **Aceptacion** (IMPORTANTE)
+
+**Principios basicos de la DCU (?)**
+
+* **Participacion activa de los usuarios**
+* **Iteracion en el diseño** (Recibir retroalimentacion)
+* **Utilizar un equipo multidiciplinario**
+
+### Identificacion de los usuarios
+
+* **usuarios primarios**: Van a usar el producto diariamente
+* **usuarios secundarios**: Lo usan eventualmente o a travez de un intermediario
+* **usuarios terciarios**: Se ven afectados por el uso del mismo
+
+Para que un producto sea exitoso, se deben tener en cuenta a todos los tipos usuarios
+
+**Prototipado**
+
+Deben ser rapidamente elaborados y desechados. (dibujos en papel y lapiz --> mockups)
+
+### Proceso de evaluacion
+
+A medida que se avanza en el proceso de diseño, los prototipos pueden ser probados por los usuarios ya que ayudan a medir:
+
+* **Eficacia**
+* **Facilidad de aprendizaje**
+* **Eficiencia**
+* **Cualidad de ser recordado** (las operaciones del sistema)
+* **Tasa de errores de usuario**
+* **Satisfaccion subjetivo**
+
+Para realizar esta evaluacion se realizan pruebas de usabilidad
+
+**pruebas de usabilidad**
+
+Se utilizan metodologias que requieren la participacion de usuarios reales. Los tipos de pruebas son:
+
+* **Investigación etnografica**: Se observa a los usuarios en el lugar donde se utiliza el sistema para recopilar datos.
+* **Diseño participativo**
+* **Grupos focales**
+* **Entrevistas**
+* **Card sorting**
+
+![](./img/wtf.png)
+
+## Ocho reglas de oro de Shneiderman
+
+1. **Consistencia**: Es importante el uso de iconos, colores, botones, etc. que sean familiares.
+2. **Permitir que lo usuarios frecuentes usen atajos**: Permitir formas mas rapidas de hacer tareas.
+3. **Retroalimentacion informativa**: Los usuarios deben saber donde estan y que es lo que estan hacviendo todo el tiempo. Cada accion debe tener una retroalimentacion legible y razonable
+4. **Diseñar textos de dialogo para cerrar procesos**: Los usuarios deben saber cual ha sido el resultado de sus acciones.
+5. **Manejo de errores**: Ofrecer una forma sencilla de corregir errores.
+6. **Permitir deshacer operaciones**: Ofrecer formas de retroceder o revertir acciones
+7. **Fomentar la sensacion de control**: Permitir que el usuario sea el que inicia las cosas.
+8. **Reducir la carga de memoria a corto plazo**: Interfaz sencilla y con una jerarquia de informacion evidente.
+
+## Los diez principios
+
+1. **Visibilidad del estado del sistema**: Mantener a los usuarios informados sobre lo que ocurre.
+2. **Consistencia entre el sistema y mundo real**: El sistema debe hablar el mismo lenguaje que el usuario.
+3. **Control y libertad del usuario**: Ofrecer soporte para deshacer y rehacer acciones.
+4. **Consistencia y estandares**: Se deben usar los mismos terminos/colores/iconos para indicar las mismas cosas
+5. **Prevencion de errores**
+6. **Reconocer es mejor que recordar**
+7. **Flexibilidad y eficiencia de uso**: Atajos
+8. **Diseño estetico y minimalista**: Solo contener la informacion importante, disminuyendo la visibilidad relativa
+9. **Ayudar a reconocer, diagnosticar y recuperarse de errores**: Mensajes de error simples
+10. **Ayuda y documentacion**: Proveer al usuario de ayuda y documentacion.
+
+**Agregados PIEROTTI**
+
+11. **Habilidades**: Incentivar las habilidades y experiencia del usuario
+12. **Interaccion placentera respetuosa**: Favorecer la calidad del vida del usuario mediante una interaccion con un diseño estetico
+13. **Privacidad**: Proteger la informacion privada del usuario.
 
