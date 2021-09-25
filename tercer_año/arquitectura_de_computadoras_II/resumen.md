@@ -393,3 +393,42 @@ Las interrupciones no solamente pueden venir de perifiercos. Tambien existen **e
 **Direct Memory Access (DMA)**
 
 Es como un CPU aparte que administra las interacciones entre el CPU y los modulos de e/s
+
+## Pipelining
+
+El procesador deja de ser de 1 ciclo y pasa a ser multiciclo.
+
+Mientras una instruccion se ejecuta, hay varias partes del cpu que no se utilizan debido a que necesita el resultado de la otra.
+
+El pipeline permite que una parte ejecute algo de una instruccion, mientras otra parte ejecuta otra de otro registro.
+
+Hay 5 etapas que el procesador tiene al ejecutar una instruccion promedio:
+
+![](./img/pipeline.png)
+
+Estas etapas tardan lo siguiente para este tipo de instrucciones:
+
+![](./img/pipeline_2.png)
+
+Aqui poedmos ver el tiempo empleado en ejecutar una seria de instrucciones con y sin pipelining.
+
+![](./img/pipeline_3.png)
+
+Como podemos ver, siempre estamos limitados por la etapa mas lenta, y nunca hay 2 mismas etapas ejecutandose simultaneamente para distintas instrucciones.
+
+La performance usando pipeline sera maxima cuando todas las etapas esten **balanceadas** (Usen el mismo tiempo ?)
+
+**Hazards**
+
+Situaciones que se dan en el micro con pipeline que hacen que sea imposible levantar una instruccion en el proximo ciclo. Hay 3 tipos de hazards:
+* Structure hazard
+* Data hazard
+* Control hazard
+
+**Hazard estructural**
+
+Supone un conflicto en el uso de recursos por parte de 2 instrucciones distintas. (Ej)
+
+**Hazards de datos**
+
+Dependencias de datos que generan un conflicto en el procesador.

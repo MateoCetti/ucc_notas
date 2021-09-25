@@ -480,3 +480,151 @@ Se utilizan metodologias que requieren la participacion de usuarios reales. Los 
 12. **Interaccion placentera respetuosa**: Favorecer la calidad del vida del usuario mediante una interaccion con un diseño estetico
 13. **Privacidad**: Proteger la informacion privada del usuario.
 
+## Modelado de sistemas
+
+Proceso de elaboracion de modelos abstractos de un sistema, con cada modelo que presenta una vista o perspectiva diferente de ese sistema.
+
+Se representa mediante algún tipo de notación gráfica, casi siempre basada en UML
+
+Este proceso esta complementado por 4 perspectivas que nos permiten ver el sistema de distintas formas:
+
+* **Perspectiva externa**: se modela el contexto o entorno del sistema
+* **Perspectiva de interaccion**: Se modelan las interacciones entre un sistema y su entorno
+* **Perspectiva estructural**: Se modela la organizacion de un sistema o la estructura de los datos procesados por el mismo.
+* **Perspectiva conductal**: se modela el comportamiento dinamico del sistema y la forma en que responde a los eventos.
+
+**Tipos de diagramas UML**
+
+Hay muchos tipos de subestandandares UML, en este caso solo vamos a ver los mas usados:
+
+* **Diagrama de actividad**: Muestran las actividades involucradas en un proceso.
+* **Diagrama de casos de uso**: Muestran interacciones entre un sistema y su entorno.
+* **Diagramas de secuencia**: muestran las interacciones entre los actores, el sistema y entre los componentes del sistema
+* **Diagramas de clases**: Muestran las clases de objetos en el sistema y las asociaciones entre estas clases.
+* **Diagramas de estado**: Muestran como el sistema reacciona a los acontecimientos internos y externos
+
+El modelado se hace usando modelos graficos ya que es muy facil, simple, y ya que son modelos estandarizados todos entienden lo que se esta plantando.
+
+
+### Modelos de contexto
+
+Muestran el entorno o donde se va a usar el sistema. Estos modelos definen los **limites** del sistema
+
+![](./img/modelo_contexto.png)
+
+### Modelos de proceso
+
+Como un workflow
+
+![](./img/modelo_proceso.png)
+
+### Modelos de interaccion
+
+Diagrama de caso de uso
+
+![](./img/caso_de_uso.png)
+
+Diagrama de secuencia
+
+![](./img/secuencias.png)
+
+### Modelos estructurales
+
+Muestran la organizacion de un sistema en fucnion de los componentes que conforman este sistema y sus relaciones. Estos modelos son estaticos.
+
+**Diagramas de clases**
+
+Se utilizan en el desarrollo de un modelo de sistema orientado a objetos.
+
+Tenemos atributos, metodos y relaciones.
+
+### Modelos de comportamiento
+
+Modelos del comportamiento dinamico (Muestra las situaciones del sistema a medida que determinadas cosas van sucediendo) de un sistema, cuando se esta ejecutando.
+
+Los estimulos pueden ser datos o eventos
+
+![](./img/modelo_actividad.png)
+
+**Diagrama de estados**
+
+![](./img/modelo_datos.png)
+
+### Ingenieria dirigida por modelos
+
+El modelado es un proceso imprescindible del desarrollo de buenos sistemas informaticos.
+
+## Diseño arquitectonico
+
+Es un proceso de diseño que permite la **identificación** de los **sub-sistemas** que componen un sistema y su comunicación.
+
+El resultado de este proceso de diseño es una **descripción** de la arquitectura de software.
+
+### Ventajas
+
+* **Comunicación entre los stakeholders**: La arquitectura puede ser utilizada como un foco de discusión del sistema por los stakeholders
+* **Analisis del sistema**: Analisis de si el sistema puede hacer frente a sus requerimientos no funcionales 
+* **Reutilizacion a gran escala**: La arquitectura puede ser **reutilizable** a traves de una variedad de sistemas.
+
+### Caracteristicas de un sistema / arquitectura (requerimientos no funcionales)
+
+* **Rendimiento**: Se puede reducir al minimo las operaciones de comunicaciones (**grano grueso**).
+* **Seguridad**: Una arquitectura con los procesos criticos en las capas mas interiores y protegidas.
+* **disponibilidad**: Incluir componentes redundantes y mecanismos de tolerancia a fallos
+* **Mantenibilidad**: Uso de grano fino, componentes reemplazables (Grano fino).
+
+### Modelo - Vista - Controlador
+
+* 3 Ejes ortogonales
+* Mantenible
+* Reutilizable
+* Muy utilizado por los sistemas web
+
+### Modelo de repositorio
+
+![](./img/modelo_repositorio.png)
+
+Son sub-sistemas que intercambian datos, pero todos pertenecen y funcionan en base al mismo repositorio.
+
+**Ventajas**
+
+* Facil de compartir grandes cantidades de datos
+* Reutilizable
+* Modularidad
+* Resistente a fallos
+
+**Desventajas**
+
+* Si el repositorio falla, fallan todos los subsistemas (menos rendimiento)
+* Evolución de datos dificil y costosa
+* Dificil de distribuir de manera eficiente
+
+### Modelo cliente servidor
+
+Sistema distribuido que muestra como el modelo de datos y porcesamiento se distribute a traves de una gama de componentes.
+
+![](./img/modelo_cliente_servidor.png)
+
+**Ventajas**
+
+* Distribución de datos sencilla
+* Uso eficaz de los sistemas en red. (hardware barato)
+* Facil de añadir nuevos servidores
+
+**Desventajas**
+
+* Dependemos totalmente de la red
+
+### Modelo de capas
+
+Modelar la interaccion de subsistemas (Modelo OSI). Se puede organizar el sistema en capas, donde una capa puede comunicarse con la capa superior y con la inferior.
+
+![](./img/modelo_capas.png)
+
+* Si modificamos una capa, probablemente debamos modificar todas las restantes
+
+### Modelos de tuberia y filtro (pipeline)
+
+Estructura en la cual los datos fluyen de un componente a otro para su procesamiento.
+
+![](./img/modelo_tuberia.png)

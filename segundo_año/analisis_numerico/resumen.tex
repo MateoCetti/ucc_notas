@@ -557,4 +557,41 @@ Para los puntos borde se debe cumplir:
 	s'_{n-1}(x_n) = valor dado
 \end{equation}
 
+\section{Diferenciación numerica}
+
+\subsection{Diferenciación numerica}
+
+El problema consiste en calcular la derivada o una aproximación
+de la derivada mediante instrucciones computacionales
+
+Repasemos el concepto de derivada:
+
+\begin{equation}
+	f'/'(x) = \lim_{h\rightarrow 0} \dfrac{f(x_0 +x)-f(x_0)}{h}
+\end{equation}
+
+Para valores pequeños de h, podemos suponer que:
+
+\begin{equation}
+	f'(x)~ \dfrac{f(x_0+h)-f(x_0)}{h}
+\end{equation}
+
+Tambien se puede llegar a esta formula mediante el polinomio de Taylor
+
+\begin{equation}
+	f(x) = f(x_0) + f'(x_0)(x-x_0) + \frac{f''(e)}{2}(x-x_0)^2
+\end{equation}
+
+Si tomamos $x = x_0+h$ tal que $h = x-x_0$ entonces:
+
+\begin{equation}
+	f(x_0+h) = f(x_0)+f'(x_0)(h)+\frac{f''(e)}{2}(h)^2
+\end{equation}
+
+Siguiendo un procedimiento, llegamos a $(47)$
+
+\subsection{Formula de 3 puntos}
+
+
+
 \end{document}
