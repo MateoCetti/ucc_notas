@@ -628,3 +628,32 @@ Modelar la interaccion de subsistemas (Modelo OSI). Se puede organizar el sistem
 Estructura en la cual los datos fluyen de un componente a otro para su procesamiento.
 
 ![](./img/modelo_tuberia.png)
+
+## Diseño e implementación
+
+Es una etapa que nos da como resultado el proyecto ejecutable
+
+El diseño de implementacion son subetapas que se desarrollan de manera entrelazada o paralela.
+
+**Diseño**: Actividad creativa en la que se identifica los componentes de software y sus relaciones sobre la base de los requisitos del cliente
+
+**Implementación**: Proceso de realizacion del diseño como un programa
+
+Una vez destacados los requerimientos del cliente, podemos desarrollar un **nuevo proyecto**, o **comprar otro existente**, dependiendo de las necesidades del cliente, las aptitudes del hipotetico software a comprar, y las capacidades economicas manejadas.
+
+Generalmente se implementa un proceso de diseño orientado a objetos, ya que esto nos da una mayor capacidad de reutilización. Este proceso de diseño consta las siguientes etapas:
+
+* Definir el **contexto** y los modos de uso del sistema (modelo de contexto, modelo de casos de uso).
+* Diseñar la **arquitectura** del sistema.
+* Identificar los **principales objetos** del sistema ().
+* Desarrollar **modelos** de **diseño**.
+* Especificar las **interfaces** de objetos.
+
+### Patrones de diseño
+
+Forma de reutilizar el conocimiento abstracto sobre un problema y su solución (patron MVC, patrones estructurales, de comportamiento y creacionales)
+
+## Pruebas de software
+
+Validamos si lo que esta hecho funciona correctamente y hace lo que el cliente requiere.
+
