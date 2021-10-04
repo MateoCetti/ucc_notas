@@ -221,3 +221,7 @@ Aca si usamos el algoritmo de Dijkstra
 ### Redes de flujo maximo
 
 Si o si son redes orientadas.
+
+## Programación dinamica
+
+Se utiliza para resolver problemas de optimización (maximizar beneficios o minimizar costos, en forma generica). Se usa para resolver problemas grandes.
