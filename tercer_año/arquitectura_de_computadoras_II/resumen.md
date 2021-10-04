@@ -400,11 +400,17 @@ El procesador deja de ser de 1 ciclo y pasa a ser multiciclo.
 
 Mientras una instruccion se ejecuta, hay varias partes del cpu que no se utilizan debido a que necesita el resultado de la otra.
 
-El pipeline permite que una parte ejecute algo de una instruccion, mientras otra parte ejecuta otra de otro registro.
+El pipeline permite que una parte ejecute algo de una instruccion, mientras otra parte ejecuta otra de otra instruccion.
 
 Hay 5 etapas que el procesador tiene al ejecutar una instruccion promedio:
 
 ![](./img/pipeline.png)
+
+Estas etapas corresponden a ciertos elementos del microprocesador que van a ser utilizados para realizar lo pedido en la instrucción. Por ejemplo, una instruccion tipo branch utiliza los siguientes elementos del micro:
+
+![](./img/cbz_instruccion.png)
+
+Como podemos ver en esta y en todo tipo de instrucciones hay elementos o etapas del micro que no son utilizadas y por lo tanto "estan al vicio" al momento de ejecutar una instruccion especifica.
 
 Estas etapas tardan lo siguiente para este tipo de instrucciones:
 
@@ -416,7 +422,9 @@ Aqui poedmos ver el tiempo empleado en ejecutar una seria de instrucciones con y
 
 Como podemos ver, siempre estamos limitados por la etapa mas lenta, y nunca hay 2 mismas etapas ejecutandose simultaneamente para distintas instrucciones.
 
-La performance usando pipeline sera maxima cuando todas las etapas esten **balanceadas** (Usen el mismo tiempo ?)
+(izq reg write, derecha reg read)
+
+La performance usando pipeline sera maxima cuando todas las etapas esten **balanceadas** (Usen el mismo tiempo, no quedan espacios en blanco)
 
 **Hazards**
 
@@ -429,6 +437,22 @@ Situaciones que se dan en el micro con pipeline que hacen que sea imposible leva
 
 Supone un conflicto en el uso de recursos por parte de 2 instrucciones distintas. (Ej)
 
+Por ejemplo, las instrucciones se encuentran en el mismo banco de memoria que los accesos normales, por lo que siempre que se quiera leer o escribir algo, el instruction fetch tendira que esperar o permanecer en "stall" (burbuja)
+
 **Hazards de datos**
 
 Dependencias de datos que generan un conflicto en el procesador.
+
+![](./img/data_hazard.png)
+
+Como en el SUB necesito el valor de x19 para operar, debo de esperar a que se guarde dicho valor en la etapa Write Back del ADD para poder hacer el Instruction Decode del SUB y asi traer exitosamente el nuevo valor del X19. Como podemos ver en la imagen se generan 2 stalls o burbujas.
+
+Una forma de evitar este hazard generado por dependencia de datos sin la necesida de generar stalls es mediante el "Forwarding" en donde el valor nuevo de X19 es "inyectado" a la etapa de execute del SUB justo despues de haber sido obtenido en la etapa execute del add. La etapa Instruction Decode del SUB decodea un valor incorrecto de X19 pero esto se corrige mediante el forwarding (Esto se logra mediante conexiones extras en el datapath).
+
+![](./img/forwarding.png)
+
+Otra forma es reordenar las instrucciones del codigo para evitar dichos stalls
+
+![](./img/code_reorder.png)
+
+**Hazard de control**
