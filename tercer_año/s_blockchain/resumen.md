@@ -487,3 +487,7 @@ Evolucion de los exchanges tradicionales. Sin custodia conecto mi wallet y hago 
 
 No existen intermediarios y la plataforma se autosustenta por su programacion. Ademas de que roveen altos niveles de privacidad y anonimato.
 
+## Economia del token / Smart contracts
+
+![](./img/web_1_2_3.png)
+

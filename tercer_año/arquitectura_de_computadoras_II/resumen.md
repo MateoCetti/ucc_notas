@@ -439,6 +439,8 @@ Supone un conflicto en el uso de recursos por parte de 2 instrucciones distintas
 
 Por ejemplo, las instrucciones se encuentran en el mismo banco de memoria que los accesos normales, por lo que siempre que se quiera leer o escribir algo, el instruction fetch tendira que esperar o permanecer en "stall" (burbuja)
 
+Si hay un hazard estructural es porque hay una superpocision en la utilizacion de recursos por parte de una instruccion, y por lo tanto un mal diseño del microprocesador.
+
 **Hazards de datos**
 
 Dependencias de datos que generan un conflicto en el procesador.
@@ -456,3 +458,28 @@ Otra forma es reordenar las instrucciones del codigo para evitar dichos stalls
 ![](./img/code_reorder.png)
 
 **Hazard de control**
+
+Cuando un micro implementa pipelining, siempre que haya un branch ya sea condicional o incondicional, se nos pueden llegar a generar problmeas o hazards.
+
+El micro se da cuenta que tiene que hacer un salto recien en la etapa de memory. Por lo que todo lo que se fetcheo y ejecuto mientras (gracias al pipelining) es erroneo (spoiler: flusheado)
+
+
+### Implementacion del pipelining
+
+El pipelining se implementa mediante "bancos de registros" entre las distintas fases que retienen la información hasta que se de el siguiente ciclo de clock. Momento en el cual la info pasa al siguiente banco (previamente pasado por el respectivo proceso segun la fase implicada). 
+
+![](./img/bank.png)
+
+`Nota: La instruccion que utiliza TODAS las etapas del micro es el LOAD`
+
+Ojo con el write register, cuyo dato debe ser enviado correctamente mediante el siguiente datapath:
+
+![](./img/write_reg.png)
+
+**Implementación de forwarding**
+
+![](./img/forwarding_imp.png)
+
+![](./img/datapath_forwarding.png)
+
+Cuando tenemos las instrucciones NOP o las "burbujas", en realidad el hazard detection unit hace que los registros de control no permitan que se guarde nada en los data banks de las distintas fases, por lo que todo se calcula, pero nada es guardado en ningun lado.
