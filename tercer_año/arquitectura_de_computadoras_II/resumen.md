@@ -457,12 +457,23 @@ Otra forma es reordenar las instrucciones del codigo para evitar dichos stalls
 
 ![](./img/code_reorder.png)
 
+**Doble hazard de datos**
+
+Cuando tenemos una situación en donde tanto en la etapa de execute como en la de memory se detecta un hazard, siempre se debe de realizar el forwarding (en un micro con forwarding) utilizando la etapa mas vieja (execute, ya que esta corresponde a la instruccion mas nueva) porque es el dato mas nuevo el que nos interesa utilizar en la ultima instrucion.
+
+![](./img/doble_hazard.png)
+
 **Hazard de control**
 
 Cuando un micro implementa pipelining, siempre que haya un branch ya sea condicional o incondicional, se nos pueden llegar a generar problmeas o hazards.
 
 El micro se da cuenta que tiene que hacer un salto recien en la etapa de memory. Por lo que todo lo que se fetcheo y ejecuto mientras (gracias al pipelining) es erroneo (spoiler: flusheado)
 
+### prediccion dianmica de branch
+
+Hay metodos que nos permiten decidir en base a ciertos datos si el salto se va a tomar o no se va a tomar (taken / not taken). Algunos de estos metodos son el predictor de 1 bit o de 2 bits . 
+
+![](./img/4_bits.png)
 
 ### Implementacion del pipelining
 
@@ -483,3 +494,14 @@ Ojo con el write register, cuyo dato debe ser enviado correctamente mediante el 
 ![](./img/datapath_forwarding.png)
 
 Cuando tenemos las instrucciones NOP o las "burbujas", en realidad el hazard detection unit hace que los registros de control no permitan que se guarde nada en los data banks de las distintas fases, por lo que todo se calcula, pero nada es guardado en ningun lado.
+
+
+### Niveles de paralelismo
+
+Para aumentar la cantidad de instrucciones ejecutadas de manera paralela en un microprocesador tenemos distintos metodos (obviando el multicore). Estos metodos depende del trabajo a realizar y su capacidad de ser paralelizable.
+En terminos generales hay paralelismo a nivel de datos y a nivel de instrucciones. Podemos aumentar la cantidad de fases para reducir el tiempo por fase (hasta cierto punto) o podemos empezar a **captar mas de una instruccion por clock**
+
+Esto se puede lograr sin duplicar los recursos. Simplemente dividimos los recursos que no suelen ser utilizados por cierta cantidad de instrucciones (y aumentamos algun q otro canal de acceso).
+
+En esta implementacion dividimos la alu en 2. Una que ejecuta instrucciones tipo R y salto y otra que ejecuta instrucciones de acceso a memoria. El unico punto malo de esto es que el compilador debe de armar una secuencia de instrucciones de tal manera que no generen hazards de datos entre las instrucciones ejecutadas de manera paralela. (Con esta implementacion el CPI se reduce a la mitad). 
+Esta implementacion se llama Static Dual Issue y el "static" se debe a que  el encargado de planear la secuencia optima de instrucciones es el compilador del lenguaje de programacion y no el procesador en si.
