@@ -496,12 +496,57 @@ Ojo con el write register, cuyo dato debe ser enviado correctamente mediante el 
 Cuando tenemos las instrucciones NOP o las "burbujas", en realidad el hazard detection unit hace que los registros de control no permitan que se guarde nada en los data banks de las distintas fases, por lo que todo se calcula, pero nada es guardado en ningun lado.
 
 
-### Niveles de paralelismo
+# Niveles de paralelismo
 
 Para aumentar la cantidad de instrucciones ejecutadas de manera paralela en un microprocesador tenemos distintos metodos (obviando el multicore). Estos metodos depende del trabajo a realizar y su capacidad de ser paralelizable.
 En terminos generales hay paralelismo a nivel de datos y a nivel de instrucciones. Podemos aumentar la cantidad de fases para reducir el tiempo por fase (hasta cierto punto) o podemos empezar a **captar mas de una instruccion por clock**
 
 Esto se puede lograr sin duplicar los recursos. Simplemente dividimos los recursos que no suelen ser utilizados por cierta cantidad de instrucciones (y aumentamos algun q otro canal de acceso).
 
-En esta implementacion dividimos la alu en 2. Una que ejecuta instrucciones tipo R y salto y otra que ejecuta instrucciones de acceso a memoria. El unico punto malo de esto es que el compilador debe de armar una secuencia de instrucciones de tal manera que no generen hazards de datos entre las instrucciones ejecutadas de manera paralela. (Con esta implementacion el CPI se reduce a la mitad). 
+### Paralelismo a nivel de instruccion
+
+`Nota: Pipelining != ejecutar varias instrucciones en **1 ciclo** de clock`
+
+El ILP (Instruction level parallelism) es ejecutar mas instrucciones al mismo tiempo (en simultaneo) en el mismo hardware.
+
+`Nota: Agregar mas etapas al pipelining aumenta la performance hasta cierto punto ya que al agregar bancos de registros entre etapas aumenta la latencia.`
+
+Debido a esta restriccion del pipeline, se elaboraron los procesadores "multiple issue" en donde se tienen multiples pipelines para ejecutar multiples instrucciones por ciclo de clock. El CPI queda <1 por lo que se empieza a usar el IPC, si CPI = 1/4 entonces IPC = 4 (Aunq hay ciertas limiatciones que casi nunca permiten que se ejecuten la totalidad de las instrucciones del IPC).
+
+#### Static Dual issue
+
+![](./img/dual_issue.png)
+
+En esta implementacion dividimos la alu en 2. Una que ejecuta instrucciones tipo R y salto y otra que ejecuta instrucciones de acceso a memoria. El unico punto malo de esto es que el compilador debe de armar una secuenciaW de instrucciones de tal manera que no generen hazards de datos entre las instrucciones ejecutadas de manera paralela. (Con esta implementacion el CPI se reduce a la mitad). 
 Esta implementacion se llama Static Dual Issue y el "static" se debe a que  el encargado de planear la secuencia optima de instrucciones es el compilador del lenguaje de programacion y no el procesador en si.
+
+Este prcesador dual issue solo puede tener una instruccion tipo alu/branch y otra tipo load/store al mismo tiempo, por lo que las instrucciones ahora son de 64 bits (?).
+
+![](./img/sec_dual_issue.png)
+
+Como dijimos previamente, el compilador debe ser el encargado de corregir la mayoria (por no decir todos) de los data hazards ya que si no el microprocesador no puede ejecutar el paquete porque si o si daria un dato incorrecto (En estos casos los compiladores suelen insertar instrucciones nops).
+
+![](./img/dual_issue_2.png)
+
+Este procesador permite ejecutar 2 paquetes al mismo tiempo (Trae 3 instrucciones) y las restricciones que le plantea al compilador son mucho menos "restrictivas" gracias a las divisiones de la alu / branch / memory access.
+
+Cuando implementamos un procesador multiple issue, se nos generan otro tipo de dependencias de datos que nos generan problemas (principalmente al ejecutar 2 o mas instrucciones **al mismo tiempo**).
+
+Las dependencias pueden ser a nivel de:
+* **registros** (las que estabamos viendo hasta ahora), 
+* **memoria** (no son tan faciles de ver, se dan cuando 2 instrucciones que acceden a memoria hacen referencia a la misma posicion)
+* **Dependencia de control** (se da cuando una dependencia condicional determina el ordenamiento de una instruccion respecto a otra de salto.)
+* **dependencias reales de datos** (La instruccion i es dependiente en datos con la instruccion j cuando la instruccion i produce un resultado que debe ser utilizado por la instruccion j)
+* **Dependencia de nombre** (La que nos compete con multiple issue): Estas dependencias se dan cuando dos instrucciones usan el mismo registro o posicion de memoria, pero no hay flujo real de datos.
+    - Dependencia de salida: Ocurre cuando las instrucciones i y j escriben la misma posicion de memoria (en dual issue, siempre que i y j esten en el mismo paquete, el micro no sabria con cual resultado escribir el registro ya que las 2 instrucciones se ejecutan al mismo tiempo).
+
+`Nota: Register renaming es un metodo que cambia los nombres de los registros para que no se den dependencias de nombre.`
+
+`Nota: Procesadores Multiple Issue no saben que instruccion de un paquete se ejecuta primero con respecto a la semantica del codigo.`
+
+Cuando estas dependencias se combierten en Hazards, se pueden clasificar en 2 tipos de hazards:
+
+* **RAW** (read after write): j intenta leer un dato antes de que i lo escriba, j obtiene el valor desactualizado 
+* **WAW** (write after write): j intenta escribir un operando antes de que lo escriba i.
+
+![](./img/raw_waw.png)
