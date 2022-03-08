@@ -1,8 +1,8 @@
 # UCC_resumenes
 
-En este repositorio guardo la **mayoria** de los **resumenes** (o seguimientos de clase) que he desarrollado y utilizado para estudiar las distintas materias de la carrera **Ingenieria en sistemas** de la Universidad **Catolica de Cordoba**.
+## Descripción
 
-Cabe destacar que primer año no esta en el repositorio ya que no lo curse debido al reconocimiento que tiene la facultad por los contenidos cursados en mi colegio secundario. Sin embargo, en la carpeta de **segundo año** se pueden llegar a encontrar algunos contenidos de las materias **Algebra**, **Analisis Matematico 1** y **Fisica 1**.
+En este repositorio guardo la **mayoria** de los **seguimientos de las distintas clases**  que he desarrollado y utilizado para estudiar las distintas materias de la carrera **Ingenieria en sistemas** de la Universidad **Catolica de Cordoba**.
 
 ## Indice
 
@@ -30,3 +30,14 @@ Cabe destacar que primer año no esta en el repositorio ya que no lo curse debid
   - [Pensamiento teologico](tercer_año/pensamiento_teologico/resumen.md)
   - [Seminario de Blockchain](tercer_año/s_blockchain/resumen.md)
   - [Sistemas de informacion](./tercer_año/sistemas_de_informacion/Resumen.md)
+- [Cuarto año](./cuarto_año/)
+  - [Ingenieria de software II](./cuarto_año/Ingenieria_software_II/notas.md)
+  - [Pensamiento social cristiano](./cuarto_año/Pensamiento_social_cristiano/notas.md)
+  - [Redes teleinformaticas](./cuarto_año/Redes_teleinformaticas_I/notas.md)
+  - [Seguridad y auditoria informatica](./cuarto_año/Seguridad_auditoria_informatica/notas.md)
+  - [Sistemas operativos](./cuarto_año/Sistemas_operativos/notas.md)
+
+## A tener en cuenta
+
+* El primer año no lo curse debido al reconocimiento que tiene la facultad por los contenidos cursados en mi colegio secundario. 
+* En la carpeta de **segundo año** se pueden llegar a encontrar notas de las materias **Algebra**, **Analisis Matematico 1** y **Fisica 1/2**.
