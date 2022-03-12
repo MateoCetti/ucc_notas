@@ -11,6 +11,9 @@
   - [Diversidad religiosa](#diversidad-religiosa)
   - [Metodo para leer la biblia](#metodo-para-leer-la-biblia)
   - [Genesis](#genesis)
+  - [Video de Jesus (Jesus Historico, Antonio Piñero ?)](#video-de-jesus-jesus-historico-antonio-piñero-)
+  - [Parciales de Jesus](#parciales-de-jesus)
+    - [Tarea de jesus](#tarea-de-jesus)
 
 ## Email profe
 

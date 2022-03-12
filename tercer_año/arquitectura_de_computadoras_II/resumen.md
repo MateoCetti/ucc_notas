@@ -1,5 +1,19 @@
 # Arquitectura de computadoras II
 
+- [Arquitectura de computadoras II](#arquitectura-de-computadoras-ii)
+  - [Notas](#notas)
+  - [Introduccion](#introduccion)
+  - [Libro patterson](#libro-patterson)
+  - [Semiconductores y acceso / organizacion de memoria.](#semiconductores-y-acceso--organizacion-de-memoria)
+  - [Memoria en sistemas computacionales](#memoria-en-sistemas-computacionales)
+  - [Sistemas de entrada salida (E/S)](#sistemas-de-entrada-salida-es)
+  - [Pipelining](#pipelining)
+    - [prediccion dianmica de branch](#prediccion-dianmica-de-branch)
+    - [Implementacion del pipelining](#implementacion-del-pipelining)
+- [Niveles de paralelismo](#niveles-de-paralelismo)
+    - [Paralelismo a nivel de instruccion](#paralelismo-a-nivel-de-instruccion)
+      - [Static Dual issue](#static-dual-issue)
+
 ## Notas
 
 * Profesora practico: Delfina Velez Ibarra (0703883@ucc.edu.ar)

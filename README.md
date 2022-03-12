@@ -34,7 +34,8 @@ En este repositorio guardo la **mayoria** de los **seguimientos de las distintas
   - [Ingenieria de software II](./cuarto_año/Ingenieria_software_II/notas.md)
   - [Pensamiento social cristiano](./cuarto_año/Pensamiento_social_cristiano/notas.md)
   - [Redes teleinformaticas](./cuarto_año/Redes_teleinformaticas_I/notas.md)
-  - [Seguridad y auditoria informatica](./cuarto_año/Seguridad_auditoria_informatica/notas.md)
+  - [Seguridad informatica](./cuarto_año/Seguridad_auditoria_informatica/notas_seguridad.md)
+  - [auditoria informatica](./cuarto_año/Seguridad_auditoria_informatica/notas_auditoria.md)
   - [Sistemas operativos](./cuarto_año/Sistemas_operativos/notas.md)
 
 ## A tener en cuenta

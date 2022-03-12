@@ -1,5 +1,12 @@
 # Modelos y simulación parte 2
 
+- [Modelos y simulación parte 2](#modelos-y-simulación-parte-2)
+  - [Teoria y proceso de la decision](#teoria-y-proceso-de-la-decision)
+  - [Universo incierto](#universo-incierto)
+  - [Universo aleatoreo](#universo-aleatoreo)
+  - [Teoria de juegos](#teoria-de-juegos)
+  - [Bayes](#bayes)
+
 ## Teoria y proceso de la decision
 
 Las tomas de decisiones se suelen hacer con emociones

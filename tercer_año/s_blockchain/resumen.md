@@ -1,5 +1,27 @@
 # Seminario de Blockchain
 
+- [Seminario de Blockchain](#seminario-de-blockchain)
+  - [Notas:](#notas)
+  - [Introduccion](#introduccion)
+  - [Bitcoin](#bitcoin)
+  - [Blockchain](#blockchain)
+  - [Doble gasto](#doble-gasto)
+  - [Generales bizantinos](#generales-bizantinos)
+  - [Nodo](#nodo)
+  - [Blockchain](#blockchain-1)
+  - [Reglas de concenso](#reglas-de-concenso)
+  - [Proof of work (Mineria)](#proof-of-work-mineria)
+  - [Clase practica N°2](#clase-practica-n2)
+    - [Dash](#dash)
+  - [Transacciones](#transacciones)
+  - [Mineros / mineria](#mineros--mineria)
+  - [Transacciones](#transacciones-1)
+  - [Arbol de Merkle](#arbol-de-merkle)
+  - [Forks](#forks)
+  - [Problemas de bitcoin y las cryptos](#problemas-de-bitcoin-y-las-cryptos)
+  - [Guardar y usar criptomonedas](#guardar-y-usar-criptomonedas)
+  - [Economia del token / Smart contracts](#economia-del-token--smart-contracts)
+
 ## Notas:
 
 * Libro: Andreas M. Antonopoulos

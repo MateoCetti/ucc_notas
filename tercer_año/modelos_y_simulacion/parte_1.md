@@ -1,5 +1,18 @@
 # Modelos y simulación parte 1
 
+- [Modelos y simulación parte 1](#modelos-y-simulación-parte-1)
+  - [Introduccion](#introduccion)
+  - [Unidad 1: Programacion lineal](#unidad-1-programacion-lineal)
+  - [Programacion lineal entera](#programacion-lineal-entera)
+  - [Inventarios](#inventarios)
+  - [Redes](#redes)
+    - [Principio de optimidad](#principio-de-optimidad)
+    - [Arbol de expancion minima](#arbol-de-expancion-minima)
+    - [Notacion](#notacion)
+    - [Ruta mas corta](#ruta-mas-corta)
+    - [Redes de flujo maximo](#redes-de-flujo-maximo)
+  - [Programación dinamica](#programación-dinamica)
+
 Notas:
 
 * Hay 3 parciales.

@@ -1,7 +1,18 @@
-**Profe practico**: Pablo Córdoba
-**Profe teorico**: 
+# Ingenieria de Software 2
 
-# [07/03/22] - Modelado y Diagrama de casos de uso
+- [Ingenieria de Software 2](#ingenieria-de-software-2)
+- [[07-03-22] - Modelado y Diagrama de casos de uso](#07-03-22---modelado-y-diagrama-de-casos-de-uso)
+  - [Modelo](#modelo)
+    - [Herramientas de modelado](#herramientas-de-modelado)
+    - [Diagramas de casos de uso](#diagramas-de-casos-de-uso)
+- [[08-03-22] Repaso Ing. Soft. 1](#08-03-22-repaso-ing-soft-1)
+  - [Calidad](#calidad)
+
+**Profe practico**: Pablo Córdoba
+
+**Profe teorico**: Natalia Mira (ncmira@gmail.com) 
+
+# [07-03-22] - Modelado y Diagrama de casos de uso
 
 Siempre nos vamos a encontrar con **requerimientos**, cualquier sea la rama que nos especifiquemos. Es muy importante aprender a **identificarlos** y **procesarlos**
 
@@ -41,3 +52,28 @@ Especifica requerimientos funcionales. Se trata de identificar:
 * **include**: Si se da un caso de uso, el otro tambien se tiene que dar
 * **Extend**: Agrega funcionalidad a otro caso de uso, que puede ejecutarse o no, es decir es **optativo**.
 * **Generalizacion**: Herencia / Como POO.
+
+# [08-03-22] Repaso Ing. Soft. 1
+
+* En el transcurso de la materia se hara un especial enfasis en el analisis de los requerimientos de un sistema, en el modelado y diseño del mismo.
+* Se utilizara mediante trabajos practicos un proceso de desarrollo especifico utilizado por la profesora
+* Se aplicaran conceptos y tecnicas para lograr diseños de calidad
+
+
+## Calidad
+* Modularidad
+* Usabilidad
+* Confiabilidad
+* Robustez
+* Complejidad
+* Arquitectura
+* Reusabilidad
+* Portabilidad
+* Mantenibilidad
+
+El proceso de desarrollo consta (en terminos generales) de:
+* Definir un objetivo
+* Definir el alcance
+* Definir los modulos o subsistemas (Quizas listar primero las funcionalidades)
+* Realizar modelos de casos de uso
+* Realizar diagramas de objetos de dominio (?)
