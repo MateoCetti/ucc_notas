@@ -19,6 +19,7 @@
   - [Regla del proceso de tres etapas](#regla-del-proceso-de-tres-etapas)
   - [Regla de la acción preventiva](#regla-de-la-acción-preventiva)
   - [Regla de la respuesta inmediata y adecuada](#regla-de-la-respuesta-inmediata-y-adecuada)
+- [[17-03-22]](#17-03-22)
 
 # [10-03-22] Introducción
 
@@ -123,3 +124,23 @@ La seguridad sólo puede ser exitosa si se enfrenta con un enfoque proactivo.
 ## Regla de la respuesta inmediata y adecuada
 
 Se debe contar con un **plan organizado** de cómo responder a un ataque, analizar los riesgos pendientes y planificar los pasos futuros.
+
+# [17-03-22]
+
+**Interfaz de Comandos en Lınea**: Una **interfaz** de **comandos** en
+lınea (CLI) es un mecanismo para **interactuar** con un **Sistema Operativo** de computadora o software escribiendo **comandos** para realizar tareas especıficas.
+
+**Shell**(o Command-line Interpreter): **programa** encargado de **recibir**, **analizar** y **ejecutar** el **comando** solicitado. Luego de completar el comando, muestra al usuario la salida correspondiente en forma de texto.
+
+Shells de **windows**:
+* COMMAND.COM: utilizado en MS-DOS y hasta Windows 9.x
+* cmd.exe: Windows NT en adelante
+* PowerShell: int ́erprete de comandos y lenguaje de scripting basado en .NET. Fue liberado en 2006 y hecho open source y multiplataforma en 2016.
+
+Shells de **linux**:
+* sh: Bourne shell. Introducido en 1979 implementa las funciones minimas comunes a cualquier shell Unix.
+* bash: Bourne-Again Shell. Implementaci ́on GNU mas completa que sh y la mas utilizada en distribuciones Linux.
+* dash: subconjunto de bash utilizado por Debian.
+* ksh: Korn shell
+* csh: C shell
+* zsh: Z shell

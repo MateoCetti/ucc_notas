@@ -32,3 +32,5 @@ JPEG: Divide una imagen en cuadraditos de 8x8 bits. Usa una "transformada". Usa 
 PNG: Guarda la imagen en la calidad original y permite guardar el factor ALPHA para transparencias.
 
 Nota: DCT JPEG COMPRESSION
+
+#
