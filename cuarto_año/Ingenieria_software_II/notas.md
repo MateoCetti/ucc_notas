@@ -15,6 +15,9 @@
   - [Procesos de desarrollo](#procesos-de-desarrollo)
   - [proceso unificado de desarrollo de software](#proceso-unificado-de-desarrollo-de-software)
     - [El cliclo de vida del proceso unificado](#el-cliclo-de-vida-del-proceso-unificado)
+- [[21-03-22] Casos de uso con trazo fino y grueso](#21-03-22-casos-de-uso-con-trazo-fino-y-grueso)
+  - [Trazo fino](#trazo-fino)
+  - [Trazo grueso](#trazo-grueso)
 
 **Profe practico**: Gerardo Fernando Córdoba.
 
@@ -247,3 +250,18 @@ Cada **ciclo** constas de **cuatro fases**: **inicio**, **elaboración**, **cons
 ![](img/fases.png)
 
 El **producto** generado a partir de un PU no es sólo **código** ejecutable, sino que son los **modelos** o **representación** del software.
+
+# [21-03-22] Casos de uso con trazo fino y grueso
+
+## Trazo fino
+Descripcion **detallada** de la funcionalidad de uno o varios casos de uso
+
+* **Brinda** un **contexto** del caso de uso en cuestion, 
+* **Define precondiciones** para que se de un caso de uso, 
+* **Define** que **acciones** realiza un actor y el sistema como un **flujo continuo** de **pasos**.
+* Describe el **camino feliz** y **flujos alternatiavos** de la interaccion actor-sistema.
+* Define las post condiciones que un caso de uso realiza al finalizar.
+* Ayuda a ver las **relaciones** entre los diferentes **casos de uso** que definen una **funcionalidad**.
+
+## Trazo grueso
+SOLO da una **descripcion detallada** de al funcionalidad de un caso de uso, nada mas.
