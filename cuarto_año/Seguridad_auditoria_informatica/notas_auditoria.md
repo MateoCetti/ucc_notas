@@ -14,6 +14,25 @@
   - [Amenazas](#amenazas)
   - [Evaluación de riesgos](#evaluación-de-riesgos)
 - [Proceso de auditoria](#proceso-de-auditoria)
+- [[22-03-22] Auditorias de DB's](#22-03-22-auditorias-de-dbs)
+  - [**Etapas**:](#etapas)
+    - [Estudio Previo y plan de trabajo:](#estudio-previo-y-plan-de-trabajo)
+    - [Concepcion de la base de datos y seleccion de motor](#concepcion-de-la-base-de-datos-y-seleccion-de-motor)
+    - [Diseño y carga](#diseño-y-carga)
+    - [Uso y mantenimiento](#uso-y-mantenimiento)
+    - [Revision post-implementación](#revision-post-implementación)
+    - [Hay otros procesos auxiliares](#hay-otros-procesos-auxiliares)
+  - [Auditoria de DB's](#auditoria-de-dbs)
+    - [Tecnicas para control de DB's en entornos complejos](#tecnicas-para-control-de-dbs-en-entornos-complejos)
+      - [Matrices de control](#matrices-de-control)
+      - [analisis de los camimos de acceso](#analisis-de-los-camimos-de-acceso)
+  - [consejos para la auditoria y evaluacion de DB's](#consejos-para-la-auditoria-y-evaluacion-de-dbs)
+    - [No alejarse del objetivo](#no-alejarse-del-objetivo)
+    - [Planificar en consecuencia](#planificar-en-consecuencia)
+    - [Suyomsyixst lo wur dr purfs](#suyomsyixst-lo-wur-dr-purfs)
+    - [Ir mas alla de la auditoria tradicional](#ir-mas-alla-de-la-auditoria-tradicional)
+    - [Informar metricas significativas](#informar-metricas-significativas)
+  - [Auditoria de MySql](#auditoria-de-mysql)
 
 # [08-03-22]
 
@@ -211,3 +230,76 @@ Tipos de evaluaciónes (Ambos identifican fallas):
 4. Preparación del Reporte
 5. Conferencia de Salida (No ser prepotente)
 6. Informe a la Gerencia
+
+# [22-03-22] Auditorias de DB's
+
+**Metodologia tradicional**:
+
+Metodologia de **evaluacion** de **riesgos**: 
+
+__TODO__ Objetivos de control en el ciclo de vida de una DB
+
+## **Etapas**:
+
+### Estudio Previo y plan de trabajo:
+
+* Analizar los motores (costo beneficio) y ver cuales cumplen con los objetivos.
+* Direccion aprueba si seguir con el proyecto.
+* Objetivos de control __TODO__:
+  * Administrador de datos
+  * Administrador de base de datos
+
+### Concepcion de la base de datos y seleccion de motor
+
+* Se diseña la base de datos
+* Objetivos de control (4, __TODO__)
+
+### Diseño y carga
+
+* Diseño logico y fisico de la DB
+* Diseño aprobado por direccion
+* Carga de los datos
+* Planificar migraciones
+* Controles para la entrada manual de datos
+* Tratamiento cuidadoso de ingreso de datos erroneos
+
+### Uso y mantenimiento
+* Poner el sistema en marcha siguiendo los procedimientos establecidos
+* Comprobar que los datos se cargan de forma exacta
+* Auditar el rendimento de la DB (disponibilidad y performance)
+
+### Revision post-implementación
+* Se evalua si los resultados son los esperados, satisfacen al usuario y estan dentro del coste estipulado.
+
+### Hay otros procesos auxiliares
+
+## Auditoria de DB's
+
+* Se usan softwares especificos, 
+* sistemas de Tuning (que configuraciones ajustar para mejorar la performance)
+* Se audita la DB en el SO en el que corre
+* Auditar los sistemas distribuidos (cifrado, disponivilidad)
+
+### Tecnicas para control de DB's en entornos complejos
+
+#### Matrices de control
+
+Identifican datos con los controles implementados sobre los mismos
+
+Controles detectivos, preventivos y correctivos
+
+#### analisis de los camimos de acceso
+
+## consejos para la auditoria y evaluacion de DB's
+
+### No alejarse del objetivo
+
+### Planificar en consecuencia
+
+### Suyomsyixst lo wur dr purfs
+
+### Ir mas alla de la auditoria tradicional
+
+### Informar metricas significativas
+
+## Auditoria de MySql
