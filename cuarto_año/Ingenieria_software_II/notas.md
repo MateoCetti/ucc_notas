@@ -18,6 +18,7 @@
 - [[21-03-22] Casos de uso con trazo fino y grueso](#21-03-22-casos-de-uso-con-trazo-fino-y-grueso)
   - [Trazo fino](#trazo-fino)
   - [Trazo grueso](#trazo-grueso)
+  - [Diagrama de clases de dominio](#diagrama-de-clases-de-dominio)
 
 **Profe practico**: Gerardo Fernando Córdoba.
 
@@ -265,3 +266,50 @@ Descripcion **detallada** de la funcionalidad de uno o varios casos de uso
 
 ## Trazo grueso
 SOLO da una **descripcion detallada** de al funcionalidad de un caso de uso, nada mas.
+
+## Diagrama de clases de dominio
+
+¿Que es? Es un:
+* Vista general de los conceptos de negocio de mas alto nivel.
+* Representacion visual de las clases conceptuales del mundo real en un dominio de interes
+* Diccionario visual de abstracciones 
+
+En un diagrama de clases de dominio graficamos **clases**, **asociaciones** y **atributos**.
+
+Una **clase** es una idea, cosa u objeto, es un **concepto** dentro del sistema que estamos modelando.
+
+Las **asociaciones** representan **relaciones** entre las instancias de las clases. Las relaciones pueden ser:
+* 1 a 1
+* 1 a M
+* M a M
+
+Las asociaciones tambien pueden tener **nombres**.
+
+Las asociaciones tambien tienen **clases**, es decir, aquello que se forma a partir de la llevada a cabo de una relacion.
+
+![](img/clase_asociacion.png)
+
+Los **atributos** son:
+* Valor de datos logico de un objeto
+* Es donde se modela o representa el dato para luego producir la informacion que nuestros sistemas bajo estudio gestionan
+* Es esa informacion que necesito registrar dado ciertos requisitos y teniendo en cuenta siempre el DOMINIO que se esta analizando.
+
+`NOTA: Para las asociaciones, no plasmamos las foreign keys como atributos de las clases.`
+
+![](img/solo_la%20asociacion.png)
+
+`NOTA: Los atributos multiples no se modelan como otras clases.`
+
+![](img/attr_multiples.png)
+
+`NOTA: Los atributos derivables se modelan de esta forma:`
+
+![](img/attr_derivable.png)
+
+Clase asociativa:
+
+![](img/clase_asociativa.png)
+
+Asociacion derivable:
+
+![](img/asociacion_derivable.png)
