@@ -15,23 +15,18 @@
   - [Evaluación de riesgos](#evaluación-de-riesgos)
 - [Proceso de auditoria](#proceso-de-auditoria)
 - [[22-03-22] Auditorias de DB's](#22-03-22-auditorias-de-dbs)
-  - [**Etapas**:](#etapas)
+  - [Objetivos de control en el ciclo de vida de una DB:](#objetivos-de-control-en-el-ciclo-de-vida-de-una-db)
     - [Estudio Previo y plan de trabajo:](#estudio-previo-y-plan-de-trabajo)
     - [Concepcion de la base de datos y seleccion de motor](#concepcion-de-la-base-de-datos-y-seleccion-de-motor)
     - [Diseño y carga](#diseño-y-carga)
     - [Uso y mantenimiento](#uso-y-mantenimiento)
     - [Revision post-implementación](#revision-post-implementación)
     - [Hay otros procesos auxiliares](#hay-otros-procesos-auxiliares)
-  - [Auditoria de DB's](#auditoria-de-dbs)
-    - [Tecnicas para control de DB's en entornos complejos](#tecnicas-para-control-de-dbs-en-entornos-complejos)
-      - [Matrices de control](#matrices-de-control)
-      - [analisis de los camimos de acceso](#analisis-de-los-camimos-de-acceso)
+  - [Auditoria de DB's y sus entornos](#auditoria-de-dbs-y-sus-entornos)
+  - [Tecnicas para control de DB's en entornos complejos](#tecnicas-para-control-de-dbs-en-entornos-complejos)
+    - [Matrices de control](#matrices-de-control)
+    - [analisis de los camimos de acceso](#analisis-de-los-camimos-de-acceso)
   - [consejos para la auditoria y evaluacion de DB's](#consejos-para-la-auditoria-y-evaluacion-de-dbs)
-    - [No alejarse del objetivo](#no-alejarse-del-objetivo)
-    - [Planificar en consecuencia](#planificar-en-consecuencia)
-    - [Suyomsyixst lo wur dr purfs](#suyomsyixst-lo-wur-dr-purfs)
-    - [Ir mas alla de la auditoria tradicional](#ir-mas-alla-de-la-auditoria-tradicional)
-    - [Informar metricas significativas](#informar-metricas-significativas)
   - [Auditoria de MySql](#auditoria-de-mysql)
 
 # [08-03-22]
@@ -233,34 +228,44 @@ Tipos de evaluaciónes (Ambos identifican fallas):
 
 # [22-03-22] Auditorias de DB's
 
-**Metodologia tradicional**:
+**Metodologia tradicional**: En este tipo de metodología el auditor **revisa** el entorno con la ayuda de una lista de control (**checklist**), que consta de una serie de cuestiones a verificar.
 
 Metodologia de **evaluacion** de **riesgos**: 
 
-__TODO__ Objetivos de control en el ciclo de vida de una DB
+Esta metodología empieza fijando los **objetivos** de **control** que **minimizan** los **riesgos** potenciales a los que está sometido el entorno.
+Una vez establecidos los objetivos de control, se especifican las **técnicas** específicas correspondientes a dichos objetivos. Estas técnicas pueden ser **preventivas**, **detectivas** y **correctivas**.
+En caso de que los controles existan, se diseñan **pruebas** (denominadas pruebas de cumplimiento) que permiten **verificar** la **consistencia** de los mismos.
 
-## **Etapas**:
+## Objetivos de control en el ciclo de vida de una DB:
 
 ### Estudio Previo y plan de trabajo:
 
-* Analizar los motores (costo beneficio) y ver cuales cumplen con los objetivos.
+* Analisis de viabilidad (si conviene seguir el proyecto o no, si combiene desarrollar o comprar)
 * Direccion aprueba si seguir con el proyecto.
-* Objetivos de control __TODO__:
-  * Administrador de datos
-  * Administrador de base de datos
+* Objetivos de control:
+  * Responsabilidades para la planificación, organización, plantillas y control de los activos de datos de la organización -> Administrador de Datos
+  * Responsabilidad de la administración del entorno de la base de datos Administrador de Base de Datos
+  * Posicionamiento en el organigrama lo suficientemente alto para asegurar su independencia
 
 ### Concepcion de la base de datos y seleccion de motor
 
 * Se diseña la base de datos
-* Objetivos de control (4, __TODO__)
+* Objetivos de control:
+  * Modelo de arquitectura de información y su actualización
+  * Datos y diccionario de datos corporativo
+  * Esquema de clasificación de datos en cuanto a seguridad
+  * Niveles de seguridad para cada anterior clasificación de datos
+* La selección del motor deberá realizarse utilizando un procedimiento riguroso en el que se consideren:
+  * Las necesidades de la empresa.
+  * Las prestaciones que ofrecen los distintos SGBD candidatos.
 
 ### Diseño y carga
 
-* Diseño logico y fisico de la DB
+* Se lleva a cabo el diseño logico y fisico de la DB
 * Diseño aprobado por direccion
 * Carga de los datos
 * Planificar migraciones
-* Controles para la entrada manual de datos
+* Controles para la entrada manual de datos (asegurar su integridad)
 * Tratamiento cuidadoso de ingreso de datos erroneos
 
 ### Uso y mantenimiento
@@ -273,33 +278,54 @@ __TODO__ Objetivos de control en el ciclo de vida de una DB
 
 ### Hay otros procesos auxiliares
 
-## Auditoria de DB's
+* Instruir a los usuarios poco formados
+* Controlar el acceso a la informacion
+* Controlar la documentacion
+* Controlar la calidad de los diseños
 
-* Se usan softwares especificos, 
-* sistemas de Tuning (que configuraciones ajustar para mejorar la performance)
-* Se audita la DB en el SO en el que corre
-* Auditar los sistemas distribuidos (cifrado, disponivilidad)
+## Auditoria de DB's y sus entornos
 
-### Tecnicas para control de DB's en entornos complejos
+Cuando el auditor encuentra el sistema en uso, deberá estudiar el **SGBD** y su **entorno**. En el desarrollo y mantenimiento de sistemas informáticos en entornos de BD, deberían considerarse el control, la integridad y la seguridad de los datos compartidos por **múltiples usuarios**. Esto debe abarcar a todos los componentes del **entorno** de BD. El gran problema de las bases de datos es que su entorno es cada vez más **complejo** y no puede limitarse sólo al propio SGBD.
 
-#### Matrices de control
+Para poder auditar las DB's se suelen utilizar softwares especificos para facilitar la labor del auditor, en cuanto a la extracción de datos de la base, el seguimiento de las transacciones, datos de prueba, etc
+
+Tambien se utilizan sistemas de Tuning que ofrecen información para optimizar el sistema, llegando a ser en determinadas ocasiones verdaderos sistemas expertos que proporcionan la estructura óptima de la base de datos y de ciertos parámetros del SGBD y del SO.
+
+`NOTA: El SO es una pieza clave del entorno, puesto que el SGBD se apoyará en los servicios que ofrezca el SO en cuanto a control de memoria, gestión de áreas de almacenamiento intermedio (buffers), manejo de errores, control de confidencialidad, mecanismos de interbloqueo, etc.`
+
+* Cada vez más se está accediendo a las bases de datos a través de redes (sistemas distribuidos), con lo que el riesgo de violación de la confidencialidad e integridad se acentúa. También las bases de datos
+distribuidas pueden presentar graves riesgos de seguridad, por lo que para estos casos se establecen mas objetivos de control a la hora de realizar auditorias.
+
+(?) Existen en el mercado varios productos que permiten la implementación efectiva de una política de seguridad, puesto que centralizan el control de accesos, la definición de privilegios, perfiles de usuario, etc.
+
+## Tecnicas para control de DB's en entornos complejos
+Existen muchos elementos del entorno del SGBD que influyen en la
+confidencialidad e integridad de los datos, algunos de ellos
+interdependientes.
+
+Se deben fijar claramente las responsabilidades sobre los diferentes
+componentes de Seguridad, utilizar informes de excepción efectivos que
+permitan monitorear los controles, establecer procedimientos adecuados,
+implementar una gestión rigurosa de la configuración del sistema, etc.
+
+Algunas tecnicas de control para DB's en entornos complejos son las siguientes:
+
+### Matrices de control
 
 Identifican datos con los controles implementados sobre los mismos
 
 Controles detectivos, preventivos y correctivos
 
-#### analisis de los camimos de acceso
+### analisis de los camimos de acceso
+
+se documentan el flujo, almacenamiento y procesamiento de los datos, identificando los componentes del sistema que atraviesan y los controles asociados.
 
 ## consejos para la auditoria y evaluacion de DB's
 
-### No alejarse del objetivo
-
-### Planificar en consecuencia
-
-### Suyomsyixst lo wur dr purfs
-
-### Ir mas alla de la auditoria tradicional
-
-### Informar metricas significativas
+* No alejarse del objetivo
+* Planificar en consecuencia
+* Suyomsyixst lo wur dr purfs
+* Ir mas alla de la auditoria tradicional
+* Informar metricas significativas
 
 ## Auditoria de MySql
