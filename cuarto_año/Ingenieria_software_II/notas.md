@@ -19,6 +19,7 @@
   - [Trazo fino](#trazo-fino)
   - [Trazo grueso](#trazo-grueso)
   - [Diagrama de clases de dominio](#diagrama-de-clases-de-dominio)
+- [[28-03-22] Repaso de modelado de clases de dominio](#28-03-22-repaso-de-modelado-de-clases-de-dominio)
 
 **Profe practico**: Gerardo Fernando Córdoba.
 
@@ -278,7 +279,7 @@ En un diagrama de clases de dominio graficamos **clases**, **asociaciones** y **
 
 Una **clase** es una idea, cosa u objeto, es un **concepto** dentro del sistema que estamos modelando.
 
-Las **asociaciones** representan **relaciones** entre las instancias de las clases. Las relaciones pueden ser:
+Las **asociaciones** representan **relaciones** entre las instancias de las clases. Las relaciones pueden ser (**cardinalidad**):
 * 1 a 1
 * 1 a M
 * M a M
@@ -313,3 +314,9 @@ Clase asociativa:
 Asociacion derivable:
 
 ![](img/asociacion_derivable.png)
+
+# [28-03-22] Repaso de modelado de clases de dominio
+
+* En UML (Diagramas de clases de dominio) no tenemos en cuenta los **ID's**, ni los primarios ni los secundarios (las **relaciones** ya **generan** estos atributos en sus respectivas clases de dominio.
+* No se tiene en cuenta el **tiempo**, es decir no se tienen en cuenta las **instancias** de las clases
+
