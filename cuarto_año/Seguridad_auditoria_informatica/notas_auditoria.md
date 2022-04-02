@@ -27,7 +27,10 @@
     - [Matrices de control](#matrices-de-control)
     - [analisis de los camimos de acceso](#analisis-de-los-camimos-de-acceso)
   - [consejos para la auditoria y evaluacion de DB's](#consejos-para-la-auditoria-y-evaluacion-de-dbs)
-  - [Auditoria de MySql](#auditoria-de-mysql)
+- [[29-03-22] Auditoria de sistemas UNIX](#29-03-22-auditoria-de-sistemas-unix)
+  - [Scripting](#scripting)
+  - [Auditando en unix](#auditando-en-unix)
+    - [Objetivos y actividades de una auditoria UNIX](#objetivos-y-actividades-de-una-auditoria-unix)
 
 # [08-03-22]
 
@@ -328,4 +331,47 @@ se documentan el flujo, almacenamiento y procesamiento de los datos, identifican
 * Ir mas alla de la auditoria tradicional
 * Informar metricas significativas
 
-## Auditoria de MySql
+# [29-03-22] Auditoria de sistemas UNIX
+
+Buenos **Controles** de Configuración significan
+* Sistemas Seguros
+* Facilidad para Auditar
+
+Los sistemas basados en UNIX son "**copos de nieve**", es decir son unicos ya que generalmente son utilizados para implementar **servidores** y su **gestion** y **administración** suele estar **poco descentralizada** (su configuración es llevada a cabo por el administrador quien lo configura a su gusto).
+
+## Scripting
+
+El scripting de tipo "**Batch**" se puede realizar con lenguajes como bash y python y nos ayudan a **simplificar** las **tareas** de auditoria / **automatizar** los procesos.
+
+`NOTA: Investigar test en bash scripting`
+
+`NOTA: Investigar implementación de regexp en bash scripting`
+
+## Auditando en unix
+
+Cuando evaluamos un sistema unix estamos evaluando practicamente un sistema **desconocido** ya que su configuración depende del **administrador** que implemento dicho sistema. Las **herramientas** que proveen los sistemas y repositorios (y que procederiamos a usar en un proceso de auditoria) pueden llegar a haber sido **modificadas** de manera intencional o no por dicho administrador. A esto se lo suele llamar **Rootkit**.
+
+Por este motivo ¿Como verificamos qe las herramientas de un sistema a auditar no estan alteradas? es decir ¿Como **examinamos** un sistema **no confiable**?
+
+Una de las soluciones implementadas en las auditorias es crear un **USB** con herramientas y scripts **confiables** y utilizar dichas herramientas en los procesos de auditoria (ya sea en sistemas UNIX como en WINDOWS)
+
+### Objetivos y actividades de una auditoria UNIX
+
+1. Información del sistema
+   * Identificar el tipo de sistema
+   * Identificar nivel de actualización
+   * Otra informacion general de importancia especifica
+2. Perfil operativo
+   * Identificar servicios de red
+   * Identificar servicios locales
+   * Identificar comportamiento de red
+3. Acceso no autorizado
+   * Examinar control de accesos a nivel de red para equipos
+4. Administración / acceso de usuarios
+   * Asegurar cuentas de usuario unicas
+   * Identificar usuarios autorizados
+   * Examinar configuraciones de contraseñas
+5. Acceso no autorizado
+   * Asegurar que los archivos tienen el acceso justo y necesario
+   * Identificar archivos modificados recientemente
+6. 

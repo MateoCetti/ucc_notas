@@ -20,6 +20,7 @@
   - [Regla de la acción preventiva](#regla-de-la-acción-preventiva)
   - [Regla de la respuesta inmediata y adecuada](#regla-de-la-respuesta-inmediata-y-adecuada)
 - [[17-03-22]](#17-03-22)
+- [[31-03-22] Red](#31-03-22-red)
 
 # [10-03-22] Introducción
 
@@ -144,3 +145,27 @@ Shells de **linux**:
 * ksh: Korn shell
 * csh: C shell
 * zsh: Z shell
+
+# [31-03-22] Red
+
+Vemos de nuevo la suite TCP/IP.
+
+![](img/tcp.png)
+
+A medida que un mensaje hacia otro equipo viaja de la capa superior hasta la inferior, se le agrega un encabezado con informacion perteneciente a dicha capa, que cada capa tendra que traducir para procesar la informacion que le llega y mandarla a la capa siguiente.
+
+![](img/encapsulamiento_tcp.png)
+
+Estos son algunos de los protocolos mas usados en la suite TCP
+
+![](img/protocolos_tcp.png)
+
+La unidad de información logica mas pequeña que existe en los sistemas de telecomunicaciones es la **trama**
+
+![](img/trama.png)
+
+**Protocolo ARP**: Protocolo de nivel de red responsable de encontrar la dirección hardware (Ethernet **MAC**) que corresponde a una determinada dirección IP.
+
+TCP (**Transmission Control Protocol**): provee una **entrega ordenada** y **confiable** de un flujo de **bytes** desde un programa en una computadora hacia otro programa en un equipo remoto (cliente-servidor).
+
+UDP (**User Datagram Protocol**): permite a las aplicaciones enviar mensajes (datagramas) a otros equipos en una red IP **sin requerir** el establecimiento de **canales especiales** de **comunicación**.
