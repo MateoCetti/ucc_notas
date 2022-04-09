@@ -20,6 +20,10 @@
   - [Trazo grueso](#trazo-grueso)
   - [Diagrama de clases de dominio](#diagrama-de-clases-de-dominio)
 - [[28-03-22] Repaso de modelado de clases de dominio](#28-03-22-repaso-de-modelado-de-clases-de-dominio)
+- [[05-04-22] Proceso de ingenieria de requerimientos](#05-04-22-proceso-de-ingenieria-de-requerimientos)
+  - [Proceso de ingenieria de requerimientos](#proceso-de-ingenieria-de-requerimientos)
+  - [Calidad de requerimientos](#calidad-de-requerimientos)
+  - [Productos del proceso de la ingenieria de requerimientos](#productos-del-proceso-de-la-ingenieria-de-requerimientos)
 
 **Profe practico**: Gerardo Fernando Córdoba.
 
@@ -320,3 +324,78 @@ Asociacion derivable:
 * En UML (Diagramas de clases de dominio) no tenemos en cuenta los **ID's**, ni los primarios ni los secundarios (las **relaciones** ya **generan** estos atributos en sus respectivas clases de dominio.
 * No se tiene en cuenta el **tiempo**, es decir no se tienen en cuenta las **instancias** de las clases
 
+# [05-04-22] Proceso de ingenieria de requerimientos
+
+La redaccion de los requerimientos es vital en el proceso de desarrollo de software. Todos los requerimientos deben tener el mismo estilo de redacción.
+
+Algunos ejemplos de buenas redacciónes son:
+
+“El sistema en el modulo de ventas debe ofrecer una opción mediante la cual el usuario pueda ver una comparación de lo presupuestado versus la venta real en un rango de fechas” 
+
+“Cuando el tiempo de conexión exceda el valor predeterminado como máximo, el sistema debe cancelar la selección informándole a el usuario que el tiempo se agoto y por lo tanto será desconectado”
+
+Algunos consejos para una buena redacción de requerimientos son:
+
+* Mantenga sentencias y párrafos cortos.
+* Apropiada gramática, ortografía y puntuación.
+* Haga un glosario
+* Utilice términos consistentes definidos en el glosario.
+* El sistema debe, deberá... Seguidas de una acción.
+* Para evitar ambigüedades no use: amigable, fácil, simple, rápido, fuerte, superior, aceptable, robusto.
+* Si encuentra “y”, “o”, “etc.”, esto puede representar varios requerimientos.
+
+El proceso de requerimientos no es facil, algunos de los problemas que nos pueden surgir son:
+
+* Requerimientos sin priorizacion
+* Requerimientos incompletos
+* Requerimientos contradictorios
+* Requerimientos ambiguos
+* Requerimientos del desarrollador (presunciones de diseño)
+
+## Proceso de ingenieria de requerimientos
+
+La ingenieria de requerimientos es el proceso para establecer los servicios que el sistema deberá proveer y las restricciones bajo las cuales deberá operar y ser desarrollado
+
+Un requerimiento es una característica del sistema o una descripción de algo que el sistema es capaz de hacer con el objeto de satisfacer el propósito del sistema, lo que ha sido apropiadamente documentado y validado por el solicitante
+
+No es lo mismo un pedido o deseo de un usuario o cliente que un requerimiento.
+
+Para que un pedido o deseo de un usuario o cliente se convierta en requerimiento, este debe ser documentado apropiadamente y el solicitante debe validarlo.
+
+Los ingenieros de software NO originan los requerimientos; su función es convertir pedidos de los usuarios o clientes en requerimientos. Luego deben proveer un sistema que los implemente.
+
+Un **requerimiento funcional** describe una interacción entre el sistema y su ambiente.
+
+Un **requerimiento no funcional** es una restricción sobre el sistema o su proceso de producción 
+
+La calidad de los requerimientos tiene una influencia enorme sobre el éxito o fracaso del proyecto
+
+![](img/requerimientos_cascada.png)
+
+En el modelo cascada, solo se puede avanzar con la fase 3 (diseño) cuando la aparicion de requerimientos baje con respecto al tiempo como se muestra en la figura.
+
+El proceso de ing de requerimientos es el siguiente
+
+![](img/proceso_req.png)
+
+**Obtención de requerimientos**. En esta etapa se obtienen los requerimientos del sistema a través de la observación de sistemas existentes y del entorno donde se instalara el sistema mediante reuniones, prototipos, escenarios, etc.
+
+**Validación de requerimientos**. Los requerimientos solo pueden ser validados por el cliente. Por lo tanto, una vez que se ha obtenido un requerimiento (preguntando al cliente) se le debe preguntar si ese es el requerimiento que expreso.
+
+**Definicion de requerimientos**. En esta etapa la información colectada en la etapa anterior se vuelca en un documento consolidado, organizado y estructurado.
+
+**Especificación de requerimientos**. en esta etapa la Lista consolidada de requerimientos se escribe desde la perspectiva del desarrollador
+
+## Calidad de requerimientos
+
+La calidad de un requerimiento se refiere en general a que tan perdurable en el tiempo sera tal y como esta descripto en este momento.
+
+![](img/calidad_requerimientos.png)
+
+## Productos del proceso de la ingenieria de requerimientos
+
+**Prototipos**:
+
+**Escenarios**:
+
+**Lista consolidada de requerimientos**:
