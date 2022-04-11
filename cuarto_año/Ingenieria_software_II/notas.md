@@ -24,6 +24,7 @@
   - [Proceso de ingenieria de requerimientos](#proceso-de-ingenieria-de-requerimientos)
   - [Calidad de requerimientos](#calidad-de-requerimientos)
   - [Productos del proceso de la ingenieria de requerimientos](#productos-del-proceso-de-la-ingenieria-de-requerimientos)
+- [[11-04-22] Metodologias agiles - Historias de usuario](#11-04-22-metodologias-agiles---historias-de-usuario)
 
 **Profe practico**: Gerardo Fernando Córdoba.
 
@@ -394,8 +395,28 @@ La calidad de un requerimiento se refiere en general a que tan perdurable en el 
 
 ## Productos del proceso de la ingenieria de requerimientos
 
-**Prototipos**:
+**Prototipos**
 
-**Escenarios**:
+**Escenarios**
 
-**Lista consolidada de requerimientos**:
+**Lista consolidada de requerimientos**
+
+# [11-04-22] Metodologias agiles - Historias de usuario
+
+`Nota: en metodologias agiles, la documentación es muy reducida pero no nula`
+
+`Nota: Las historias de usuario son muy comunes en metodologias agiles, pero no son obligatorias para documentar requerimientos`
+
+Las historias de usuario son pequeñas descripciones de los requerimientos del cliente. Se suele utilizar el lenguaje natural. Esta compuesto por.
+* Rol
+* Funcionalidad
+* Resultado esperado
+* Requisitos de aceptación
+
+**COMO [...] QUIERO [...] PARA [...]**
+
+`Nota: El para es muy importante para priorizar requerimientos.`
+
+`Nota: Las historias de usuario estan centradas en el usuario, no en el producto o en la organización.`
+
+Los **criterios de aceptación** **clarifican el contexto** en el que ocurre la historia de usuario y **facilitan** saber cuando estan **realmente terminadas**.
