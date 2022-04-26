@@ -25,6 +25,9 @@
   - [Calidad de requerimientos](#calidad-de-requerimientos)
   - [Productos del proceso de la ingenieria de requerimientos](#productos-del-proceso-de-la-ingenieria-de-requerimientos)
 - [[11-04-22] Metodologias agiles - Historias de usuario](#11-04-22-metodologias-agiles---historias-de-usuario)
+- [[26-04-22]](#26-04-22)
+  - [Validación de requerimientos](#validación-de-requerimientos)
+  - [Administración de requerimientos](#administración-de-requerimientos)
 
 **Profe practico**: Gerardo Fernando Córdoba.
 
@@ -420,3 +423,106 @@ Las historias de usuario son pequeñas descripciones de los requerimientos del c
 `Nota: Las historias de usuario estan centradas en el usuario, no en el producto o en la organización.`
 
 Los **criterios de aceptación** **clarifican el contexto** en el que ocurre la historia de usuario y **facilitan** saber cuando estan **realmente terminadas**.
+
+# [26-04-22]
+
+## Validación de requerimientos
+
+Que hacemos cuando **validamos requerimientos**?
+
+* Verifica que los requerimientos realmente **definen** el **sistema** que el cliente **desea**.
+* La importancia de esta etapa radica en **evitar costos** descubriendo **errores** en los **requerimientos** y no durante el desarrollo o después de que el sistema este en uso.
+
+Proceso de validación de requerimientos:
+
+* Verificaciones de **validez**: Aquí surgen funciones adicionales o diferentes a las planteadas.
+* Verificaciones de **consistencia**: En el documento de requerimiento no debe haber restricciones o descripciones **contradictorias** de la misma función del sistema.
+* Verificaciones de **completitud**: El documento de requerimiento debe incluir requerimientos que definan **todas** las **funciones** y **restricciones** propuestas por el usuario.
+* Verificaciones de **realismo**: De acuerdo a la tecnología existente, los requerimientos deben verificarse para asegurar que se **pueden implementar**, también se debe tener en  cuenta el **presupuesto** y la **agenda**.
+* **Verificabilidad**: Esto se logra si por cada requerimiento se puede escribir un conjunto de **pruebas** que **demuestren** que el **sistema** a entregar **cumple** con los **requerimientos** especificados.
+
+**Tecnicas** de **validación** de requerimientos
+
+* **Revisión** de **Requerimientos**: Los requerimientos son **analizados** **sistemáticamente** por un conjunto de **revisores**.
+* **Construcción** de **prototipos**: Los usuarios pueden experimentar con este modelo para ver si cumple con las necesidades reales
+* **Generación** de **casos** de **prueba**: Los requerimientos deben poder probarse. Se diseñan las **pruebas** **antes** de la codificación de los requerimientos
+
+**Proceso** de **revisión** de requerimientos:
+
+* Proceso manual que involucra a varios lectores, tanto del cliente como del contratista. 
+* Puede ser formal o informal. 
+* En la revisión formal el equipo de desarrollo "conduce" al cliente a través de los requerimientos, explicándole las implicaciones de cada uno. 
+* Los conflictos, contradicciones, errores y omisiones deben señalarse durante la revisión y registrarse formalmente 
+
+Preguntas para realizar las revisiones:
+
+* **Entendimiento**: Se **entiende** el requerimiento? Este es el atributo mas importante de del documento de requerimientos ya que si no se puede entender no puede ser validado.
+* **Redundancia**: Hay informacion **repetida** innecesariamente en el doc. de requerimientos? A veces repetir informacion aclara la compremsion del requerimiento pero a veces por el contrario hace la  comprension mas dificil.
+* **Completitud**: La personas que valida percibe que **falta informacion** en el requerimiento o falta informacion en la descripcion del mismo?
+* **Ambiguedad**: Existen en la descripcion de requerimientos terminos que no se entienden? Todos los lectores **interpretan lo mismo** sobre el requerimiento o existen diferentes interpretaciones.
+* **Consistencia**: Algunos requerimentos son **contradictorios** entre si? Se contradicen con la idea general del sistema, o de las reglas del negocio?
+* **Organizacion**: EStan los requerimientos agrupados segun funcionalidad? respetan alguna estructura?
+* **EStandar**: Respetan los estandares adoptados?
+* **Trazabilidad**: Los requerimeintos incluyen links con otros requerimientos relacionados? Son **trazables** con casos de uso, modelos o diagramas? Son trazables  con la fuente de informacion
+
+## Administración de requerimientos
+
+Es importante mantener una **trazabilidad** de los requerimientos ya que estos **cambian** a lo largo del tiempo de vida del proyecto, ademas de que la **comprensión** del problema por parte de los stakeholders va **cambiando** a medida que el proyecto se va llevando a cabo.
+
+La gestión o administración de requerimientos es el proceso de **comprender** y **controlar** los **cambios** en los **requerimientos**.
+Hay que establecer un **proceso formal** para implementar las **propuestas** de **cambios** y vincular estos a los requerimientos del sistema.
+El proceso de gestión de requerimiento debería empezar en cuanto este disponible una **versión preliminar** del documento de requerimientos. 
+
+Desde una perspectiva evolutiva, los requerimientos se dividen en 2 clases:
+* **Duraderos**: relativamente estables que se derivan de la actividad principal de la organización
+* **Volatiles**: probablemente cambien durante el proceso de desarrollo del sistema o después de que este se haya puesto en funcionamiento. 
+  * **cambiantes**: los requerimientos cambian debido a los **cambios** en el **entorno** en el que opera la organización.
+  * **emergentes**: los requerimientos que emergen al **incrementarse** la **comprensión** del cliente en el desarrollo del sistema. El proceso de diseño puede revelar requerimientos emergentes nuevos.
+  * **consecuentes**: los requerimientos que son el resultado de la introducción del sistema informático, esto puede cambiar los procesos de negocio, las formas de trabajo que generan nuevos requerimientos.
+  * **de compatibilidad**: estos requerimientos dependen de sistemas particulares o procesos de negocios dentro de la organización.
+
+Es importante distinguir entre estos 2 tipos de requerimientos.
+
+Para mantener la trazabilidad de los cambios de los requerimientos, se establecen politicas de rastreo:
+
+* Relaciones entre requerimientos
+* Relaciones entre los requerimientos y el diseño del sistema que se debe registrar Y de que manera estos registros se deben mantener.
+
+Existen tres tipos de **información** de **rastreo** que pueden ser mantenidas. 
+* Información de rastreo de la **fuente**:
+  * Vincula los **requerimientos** con los **stakeholders** que propusieron los requerimientos y la **razón** de éstos. Cuando se propone un cambio, esta información se utiliza para encontrar y consultar a los stakeholders sobre el cambio.
+* Información de rastreo de los **requerimientos**:
+  * Vincula los **requerimientos dependientes** en el documento de requerimientos. Esta informacion se utiliza para evaluar cómo es probable que muchos requerimientos se vean afectados por un cambio propuesto y la magnitud de los cambios consecuentes en los requerimientos.
+* Información de rastreo del **diseño**
+  * vincula los **requerimientos** a los **módulos del diseño** en los cuales son implementados. Esta información se utiliza para evaluar el impacto de los cambios de los requerimientos propuestos en el diseño e implementación del sistema.
+
+**Matriz de rastreo**
+
+A menudo, la información de rastreo se representa utilizando matrices de rastreo, las cuales relacionan los requerimientos con los stakeholders, con los módulos del diseño los requerimientos entre ellos. En una matriz de rastreo de requerimientos, cada requerimiento se representa en una fila y en una columna de la matriz. Cuando existen dependencias entre diferentes requerimientos, éstas se registran en la celda en la  intersección fila/columna.
+
+Las matrices de rastreo son utiles cuando la cantidad de requerimientos es baja. Para estos casos hay herramientas automatizadas como las siguientes.
+
+![](img/matriz_rastreo.png)
+
+**Herramientas CASE**
+
+* **Almacenar requerimientos**. Los requerimientos deben mantenerse en un almacén de datos seguro y administrado que sea accesible a todos los que estén implicados en el proceso de ingeniería de requerimientos.
+* Gestionar el **cambio**. Este proceso se simplifica si está disponible una herramienta de ayuda.
+* Gestionar el **rastreo**. Como se indicó anteriormente, las herramientas de ayuda para el rastreo permiten que se descubran requerimientos relacionados. Algunas herramientas utilizan técnicas de procesamiento del lenguaje natural para ayudarle a descubrir posibles relaciones entre los requerimientos.
+
+Existen **tres etapas** principales en un proceso de gestión de cambio:
+
+**Análisis** del **problema** y **especificación** del **cambio**. 
+
+El proceso empieza con la identificación de un **problema** en los **requerimientos** 0, algunas veces, con una **propuesta** de **cambio** específica. Durante esta etapa, el problema o la propuesta de cambio se analiza para **verificar** que ésta es **válida**. Los resultados del análisis se pasan al solicitante del cambio, y algunas veces se hace una propuesta de cambio de requerimientos más específica.
+
+**Análisis** del **cambio** y **cálculo** de **costes**. 
+
+El efecto de un cambio propuesto se **valora** utilizando la **información** de **rastreo** y el conocimiento general de los requerimientos del sistema. El coste de hacer un cambio se estima en términos de **modificaciones** al **documento** de requerimientos y, si es apropiado, al **diseño** e **implementación** del sistema. Una vez que este análisis se completa, se toma una decisión sobre si se continúa con el cambio de requerimientos.
+
+**Implementación** del **cambio**. 
+
+Se **modifica** el **documento** de requerimientos y, en su caso, el **diseño** e **implementación** del sistema. Debe organizar el documento de requerimientos de modo que pueda hacer cambios en él sin tener que hacer grandes reorganizaciones o redactar nuevamente gran cantidad del mismo. Como sucede con los programas, los cambios en los documentos se llevan a cabo minimizando las referencias externas y haciendo las secciones del documento tan modulares como sea posible. De esta manera, se pueden cambiar y reemplazar secciones individuales sin afectar a otras partes del documento.
+
+
+Los procesos de **desarrollo iterativo**, como la programación extrema, se han diseñado para **hacer frente** a los **requerimientos** que **cambian** durante el proceso de desarrollo. En estos procesos, cuando un usuario propone un cambio en los requerimientos, no se hace a través de un proceso formal de gestión del cambio. Más bien, el usuario tiene que establecer la prioridad del cambio y, si es de alta prioridad, decidir qué característica del sistema que fue planificada para la siguiente iteración debería abandonarse.
