@@ -21,6 +21,8 @@
   - [Regla de la respuesta inmediata y adecuada](#regla-de-la-respuesta-inmediata-y-adecuada)
 - [[17-03-22]](#17-03-22)
 - [[31-03-22] Red](#31-03-22-red)
+- [[07-04-2022] Criptografia](#07-04-2022-criptografia)
+- [[21-04-2022] Firma y certificados digitales](#21-04-2022-firma-y-certificados-digitales)
 
 # [10-03-22] Introducción
 
@@ -169,3 +171,90 @@ La unidad de información logica mas pequeña que existe en los sistemas de tele
 TCP (**Transmission Control Protocol**): provee una **entrega ordenada** y **confiable** de un flujo de **bytes** desde un programa en una computadora hacia otro programa en un equipo remoto (cliente-servidor).
 
 UDP (**User Datagram Protocol**): permite a las aplicaciones enviar mensajes (datagramas) a otros equipos en una red IP **sin requerir** el establecimiento de **canales especiales** de **comunicación**.
+
+# [07-04-2022] Criptografia
+
+Criptografia es la ciencia que utiliza técnicas para **ocultar** (cifrar) **información** de modo que sólo pueda leerse (descifrarse) mediante la utilización de una **llave** o clave. Algunos de los valores de la criptografia son:
+
+* **Confidencialidad**: al convertir un mensaje en otro cuyo contenido de información sólo puede ser accedido por las personas o sistemas autorizados. 
+* **Integridad**: permite detectar si el mensaje ha sido modificado en su totalidad o en parte.
+* **Autenticidad** y no repudio: permite establecer en forma fehaciente la identidad del emisor.
+
+**Criptosistema**: lo definimos como una quíntupla (M, C, K, E, D) donde:
+
+* **M**: representa el conjunto de todos los mensajes sin cifrar que pueden ser enviados.
+* **C**: representa el conjunto de todos los posibles mensajes cifrados.
+* **K**: representa el conjunto de claves.
+* **E**: es el conjunto de transformaciones de cifrado o familia de funciones que se aplica a cada elemento de M para obtener un elemento de C. Existe una transformación diferente Ek para cada valor posible de la clave k.
+* **D**: es el conjunto de transformaciones de descifrado, análogo a E.
+
+![](img/xd.png)
+
+Las **clasificaciónes** de la criptografia se pueden dar según:
+
+* Tecnicas empleadas en los algoritmos (E y D)
+  * **Clasicas**: Basadas solamente en sustitucíon y transformación de caracteres
+  * **Modernas**: Se basa en las teorías de la información y grandes números, la matemática discreta y la complejidad de los algoritmos
+* Tipo de llaves usadas
+  * **Simetrica**: misma llave para cifrar y descifrar (DES, AES, Blowfish, ChaCha20)
+  * **Asimetrica**: se utiliza una llave para descifrar distinta de la empleada para cifrar. Ambas llaves se encuentran relacionadas matemáticamente, pero es computacionalmente imposible obtener una a partir de la otra
+* Procesamiento del mensaje
+  * **Cifradores** de **bloque**: aplicamos la operación de cifrar (o descifrar) sobre bloques de tamaño fijo del mensaje (Por ejemplo bloques de 32, de 64 o de 128 bits).
+  * **Cifradores** de **flujo**: aplicamos la operación de cifrar (o descifrar) sobre cada elemento o caracter del mensaje. Normalmente por cada bit.
+
+
+Los algoritmos simetricos si bien son mas **rapidos**, no garantizan la **autenticidad** ni el **intercambio** de **llaves** de manera segura, al contrario del metodo asimetrico que si bien si garantiza estas dos cuestiones, son mucho mas **lentos** y el mensaje cifrado es mucho mas **pesado** que utilizando un algoritmo simetrico.
+
+**Funciones de hash**: procedimiento determinístico que toma un bloque arbitrario de datos y devuelve una cadena de longitud fija (en bits), llamada valor hash, de modo tal que cualquier modificación a los datos hará que el valor hash cambie.
+
+![](img/hash.png)
+
+**Propiedades**:
+* **Unidireccionalidad** (indecifrable)
+* **Compresión** (longitud fija)
+* **Facilidad** de **calculo**
+* **Difusión**: el resumen H(mi ) debe ser una función compleja de todos los bits del mensaje mi: si se modifica un solo bit del mensaje mi, el hash H(mi ) debería cambiar la mitad de sus bits aproximadamente (?)
+
+**Codificación Base64**: es un esquema de codificación para datos binarios que puede ser representado usando **únicamente** los caracteres imprimibles de **ASCII**.
+
+![](img/base64.png)
+
+**OpenSSL**: es un esfuerzo colaborativo para desarrollar un **kit** Open Source de **herramientas** robusto, completo y de calidad empresarial que implemente los **protocolos** **SSL** (Secure Socket Layer) y **TLS** (Transport Layer Security) y un conjunto de **librerías** **criptográficas** de propósito general
+
+# [21-04-2022] Firma y certificados digitales
+
+**Firma digital**: es un **esquema matemático** que sirve para **demostrar** la **autenticidad** de un mensaje digital o documento electrónico. Ej(DSA)
+
+* Asegura la **integridad** del documento.
+* Asegura la **identidad** del emisor.
+* Garantiza el **no-repudio**
+
+![](img/firma_digital.png)
+
+**Firmar digitalmente NO es cifrar**
+
+* Un documento puede estar firmado digitalmente y cifrado.
+* Puede estar firmado y no cifrado.
+* Puede estar cifrado y no firmado
+
+La **criptografia asimetrica** es suceptible a ataques del tipo "**man in the middle**"
+
+![](img/man_middle.png)
+
+**Certificados digitales**: es un **documento electrónico** que usa una **firma digital** para **vincular** una **llave pública** con una **identidad** (el nombre de una persona, una organización, etc.). El certificado puede utilizarse para verificar que una llave pública pertenece a un individuo.
+
+**Autoridad de certificación** (CA): es una **entidad** u organización que **emite certificados** **digitales** de acuerdo a determinadas políticas, procedimientos y algoritmos criptográficos, **certificando** así la **autenticidad** y **validez** de las llaves públicas.
+
+* La CA es un **tercero** en el que **confían** tanto el sujeto (dueño) del certificado como quien lo utiliza luego.
+* La confianza en la CA se basa en **contar** con su **llave pública**, la cual debe ser **obtenida** de manera **segura**.
+* La llave pública de la CA se suele **distribuir** como un **certificado digital autofirmado** o mediante estructuras jerárquicas de autoridades de certificación.
+
+![](img/cert_ver.png)
+
+Autenticación y confidencialidad: por ejemplo, mediante la instalación de un certificado digital en un servidor web, los clientes que acceden al sitio pueden verificar su autenticidad y cifrar la conexión.
+
+![](img/https.png)
+
+**PGP**: programa diseñado para proteger la información enviada a través de una red pública mediante el uso de criptografía simétrica y asimétrica.
+
+**GnuPG**: reemplazo libre de PGP que puede ser utilizado sin restricciones y cumple con el estándar OpenPGP (RFC 2440).
