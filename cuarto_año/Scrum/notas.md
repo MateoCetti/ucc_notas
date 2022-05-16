@@ -12,6 +12,14 @@
     - [Equipos](#equipos)
     - [Ceremonias](#ceremonias)
     - [Artefactos](#artefactos)
+- [[19-04-22] Modulo 3 - Prácticas, valores y habilidades ágiles](#19-04-22-modulo-3---prácticas-valores-y-habilidades-ágiles)
+  - [Habilidades y competencias para la agilidad](#habilidades-y-competencias-para-la-agilidad)
+    - [Competencias técnicas y disciplinares](#competencias-técnicas-y-disciplinares)
+    - [Competencias personales](#competencias-personales)
+    - [Competencias interpersonales](#competencias-interpersonales)
+  - [Valores y practicas agiles](#valores-y-practicas-agiles)
+  - [Equipos agiles](#equipos-agiles)
+  - [Practicas agiles](#practicas-agiles)
 
 # [22-03-22] Modulo 1 - Métodos de gestión de proyectos
 
@@ -291,3 +299,88 @@ resultado entregable del Sprint que aporta el valor proyectado en el objetivo de
 El incremento es “potencialmente entregable”, es decir, debe funcionar correctamente, haber sido probado y estar listo para ser puesto en marcha, independientemente de si así será hecho por el cliente. 
 
 ![](img/incremento.png)
+
+# [19-04-22] Modulo 3 - Prácticas, valores y habilidades ágiles
+
+## Habilidades y competencias para la agilidad
+
+El trabajo en entornos ágiles requiere de la **adquisición** de competencias y habilidades que resultan indispensables para alcanzar y asegurar una correcta **comunicación** y **coordinación** de acciones de manera **flexible**, **dinámica** y **ágil**. Estas habilidades pueden agruparse en **tres niveles**: competencias **técnicas** y disciplinares, competencias **personales** y competencias **interpersonales**. Veamos de qué se trata cada una de ellas.
+
+### Competencias técnicas y disciplinares
+
+Cuando trabajamos con proyectos es necesario desarrollar un conjunto de **habilidades** y **conocimientos** **técnicos** y disciplinares esenciales para una correcta gestión y dirección de acciones que nos permitan alcanzar los objetivos planteados.
+
+Todos los que participan de un proyecto y, más aún, quienes ocupan un rol relevante en la toma de decisiones que lo afectan, deben tener o adquirir ciertas bases fundamentales sobre la **disciplina** de **gestión** de **proyectos**. Esto implica:
+* reconocer y diferenciar las características de los ciclos de vida de los proyectos
+* Determinar la implicancia, alcance e impacto del proyecto dentro de la estrategia de la organización.
+* Reconocer la incidencia de la cultura organizacional en el proyecto
+* Conocer las propuestas de las metodologías de gestión de proyectos, tanto de tipo tradicional como ágil
+* Conocer sobre herramientas de gestión de proyectos
+* Conocimiento técnico específico del rol que ocupa dentro del proyecto, su alcance y responsabilidades
+
+Los proyectos suceden dentro de un **marco** (generalmente, una organización) y como parte de un **entorno** específico (industria, región). Ese contexto del proyecto incide sobre él, determinando ciertas características, tales como procesos o documentación obligatoria, restricciones en el tipo u horario del personal del proyecto, herramientas de gestión, entre otras. La organización en la cual se ejecuta el proyecto tiene una historia y una cultura definida, lo cual también afecta la forma en la cual se ejecuta, documenta y gestiona el proyecto. 
+
+La gestión de proyectos en entornos **multiculturales** y con equipos **remotos** es una realidad que atraviesa de lleno a gran cantidad de proyectos en todo tipo de industrias. Esto también **influye** en las herramientas de comunicación y gestión que se utilizarán en el proyecto, en la coordinación de tareas y reuniones, en los procesos de toma de decisiones, en la cultura global de la organización y en la eficiencia y eficacia ágil general del proyecto.
+
+Por otra parte, los **activos** de los procesos de la organización son todos aquellos recursos, políticas, documentos, procedimientos y bases de conocimiento propios de la organización que pueden ser **insumos** de **utilidad** para el **proyecto**. Ejemplos de activos de los procesos de la organización son: políticas de confidencialidad, lista de proveedores, plantillas de documentos y reportes y archivos de proyectos anteriores (Project Management Institute, 2017).
+
+![](img/proyecto_ambiente.png)
+
+### Competencias personales
+
+El trabajo en el entorno de proyectos demanda el desarrollo de habilidades personales esenciales para la autogestión en un contexto de colaboración, trabajo en equipo y gestión transversal de acciones en búsqueda de un objetivo común. Repasemos algunas de ellas:
+
+* Gestión del tiempo (covey, pomodoro)
+![](img/covey.png)
+* Capacidad de toma de desiciones
+* Manejo de las emociones
+* Asertividad y empatía
+* Creatividad e innovación
+* Ética e integridad profesional
+* Orientación a resultados
+
+### Competencias interpersonales
+
+El trabajo en el marco de un proyecto requiere del desarrollo de un gran número de competencias interpersonales indispensables para garantizar la armonía, integración y coordinación con otros en pos de una meta común.
+* Liderazgo
+* Motivación e influencia
+* Comunicación
+* Gestión de conflictos
+* Negociación
+* Trabajo en equipo
+
+## Valores y practicas agiles
+
+El Manifiesto Ágil propone cuatro valores esenciales para la agilidad: las personas, el resultado como generación de valor, la colaboración y trabajo en equipo, y la flexibilidad ante el cambio. 
+
+Tomando esa base, el marco de trabajo Scrum establece un conjunto de cinco valores para la práctica ágil: el **coraje**, el **compromiso**, el **foco**, la **apertura** y el **respeto**
+
+![](img/valores_scrum.png)
+
+## Equipos agiles
+
+Los equipos de trabajo ágiles:
+* Son **equipos interdisciplinarios**: cada integrante aporta sus conocimientos técnicos y entre todos abordan el desarrollo integral de un producto o servicio.
+* Cada integrante es **responsable** de su **propio rol** y del **rendimiento global** del equipo de trabajo, lo cual genera compromiso, colaboración y cohesión.
+* Son equipos autónomos para realizar su trabajo, **sin jefes** ni **jerarquías** internas.
+* El trabajo se gestiona de manera **colaborativa** y **consensuada**: entre todos definen un objetivo común y un alcance determinado en base a la mejor estimación de sus esfuerzos y capacidades.
+* Son equipos que se **autogestionan** para lograr sus objetivos: identifican las tareas y acciones necesarias y definen la mejor manera de organizarse para realizarlas.
+* Comparten un **único compromiso**, por lo cual asumen una responsabilidad mutua y compartida, toman decisiones en equipo y generan acuerdos a través de la negociación y el consenso.
+
+se recomienda que estos equipos sean estables en el tiempo, ubicados en una misma oficina y teniendo una dedicación completa a un único proyecto.
+
+Albaladejo (2009) explica que un **equipo ágil** debe poseer habilidades que enmarca en **tres tipos** de **inteligencia**: la inteligencia de **negocio**, relacionada con la generación de valor; la inteligencia **emocional**; y la inteligencia **vital**, vinculada al deseo de evolución y mejora continua.
+
+![](img/skills.png)
+
+## Practicas agiles
+
+Para lograr implementar la agilidad en la vida personal, académica y profesional, más allá de la etapa en la que se encuentre “mi equipo de trabajo”, podemos llevar adelante prácticas ágiles que se desprenden del cuerpo conceptual de tales metodologías de gestión y que representan un primer estadio hacia una cultura ágil individual y grupal.
+
+* Reuniones periódicas y asiduas, breves, informales e informativas.
+* Desarrollo iterativo en ciclos cortos de trabajo.
+* Visualización gráfica del estado del trabajo: tener siempre visible nuestro avance.
+* Organización de las prioridades: ¿qué es lo importante? ¿Qué aporta el mayor valor?
+* ¡Comunicación!
+* Trabajo en equipo: colaboración.
+* Evaluación de lo realizado, aprendizaje y mejora continua.
