@@ -25,6 +25,7 @@
   - [Calidad de requerimientos](#calidad-de-requerimientos)
   - [Productos del proceso de la ingenieria de requerimientos](#productos-del-proceso-de-la-ingenieria-de-requerimientos)
 - [[11-04-22] Metodologias agiles - Historias de usuario](#11-04-22-metodologias-agiles---historias-de-usuario)
+- [[12-04-22] Obtención y analisis de requerimientos](#12-04-22-obtención-y-analisis-de-requerimientos)
 
 **Profe practico**: Gerardo Fernando Córdoba.
 
@@ -420,3 +421,52 @@ Las historias de usuario son pequeñas descripciones de los requerimientos del c
 `Nota: Las historias de usuario estan centradas en el usuario, no en el producto o en la organización.`
 
 Los **criterios de aceptación** **clarifican el contexto** en el que ocurre la historia de usuario y **facilitan** saber cuando estan **realmente terminadas**.
+
+# [12-04-22] Obtención y analisis de requerimientos
+
+**Descubrimiento, obtención y analisis de requerimientos**: Es el proceso de recoger información sobre el sistema propuesto y extraer los requerimientos del usuario y del sistema.
+
+`Nota: Tecnicas informales no son buenas`
+
+Tecnicas de requerimientos propuestas:
+* Entrevistas 
+* Observación
+* Escenarios 
+* Prototipos
+
+**Extracción de información**: Extraemos la info del cliente. El cliente no sabe toda la info acerca del sistema que quiere, ni tiene todo el tiempo del mundo disponible, por lo que es nuestro deber elegir las tecnicas de extracción de info mas optimas para obtener la info de manera mas rapida y eficiente.
+
+Problemas comunes:
+* La gente no sabe que es lo que sabe
+* La gente no sabe expresar o explicar lo que sabe
+* La gente usa diferentes terminologias
+* No todos saben todo
+* Las personalidades mas fuertes dominian a las mas debiles.
+* En muchos casos, los procesos de negocio aun no están claramente definidos
+
+Se suelen hacer preguntas previas a responder en una entrevista habiendo investigado acerca del dominio y las alternativas ya desarrolladas.
+
+**Stakeholders**: Cualquier persona o grupo que se vera afectado por el sistema directa o indirectamente.
+
+**Identificar a los usuarios**
+
+Usuario !== Cliente (En la mayoria de los casos)
+
+**Tecnicas de relevamiento**
+
+Entrevistas:
+
+![](img/entrevista.png)
+
+**Escenarios**
+
+Son ejemplos de una situación de la vida real. Agregan detalle a la lista de requerimientos describiendo sesiones de interacción.
+
+**Etnografia**
+
+**Lexico extendido del lenguaje**
+
+
+conjunto de términos provenientes del lenguaje de la aplicación, donde se identifica la semántica de cada término
+
+![](img/lel.png)

@@ -33,4 +33,8 @@ PNG: Guarda la imagen en la calidad original y permite guardar el factor ALPHA p
 
 Nota: DCT JPEG COMPRESSION
 
-#
+# Deprecated
+
+```
+hola que ase
+```
