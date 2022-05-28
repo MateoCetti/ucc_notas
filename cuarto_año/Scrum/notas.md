@@ -20,6 +20,19 @@
   - [Valores y practicas agiles](#valores-y-practicas-agiles)
   - [Equipos agiles](#equipos-agiles)
   - [Practicas agiles](#practicas-agiles)
+- [[10-05-22]](#10-05-22)
+  - [Prácticas adicionales de Scrum](#prácticas-adicionales-de-scrum)
+    - [1.Refinamiento del Backlog](#1refinamiento-del-backlog)
+    - [2.Estimaciones en Scrum](#2estimaciones-en-scrum)
+    - [3.Seguimiento del trabajo en Scrum (Burndown chart)](#3seguimiento-del-trabajo-en-scrum-burndown-chart)
+    - [4.Scrum de Scrums](#4scrum-de-scrums)
+    - [5.Sprint 0](#5sprint-0)
+    - [6.Sprint H](#6sprint-h)
+    - [7.Aterrizaje de Emergencia de Sprint](#7aterrizaje-de-emergencia-de-sprint)
+    - [8.Planificación de Entregas](#8planificación-de-entregas)
+    - [9.User Story Mapping](#9user-story-mapping)
+  - [Comunidades y certificaciones ágiles](#comunidades-y-certificaciones-ágiles)
+  - [Herramientas para la gestión de proyectos ágiles](#herramientas-para-la-gestión-de-proyectos-ágiles)
 
 # [22-03-22] Modulo 1 - Métodos de gestión de proyectos
 
@@ -384,3 +397,120 @@ Para lograr implementar la agilidad en la vida personal, académica y profesiona
 * ¡Comunicación!
 * Trabajo en equipo: colaboración.
 * Evaluación de lo realizado, aprendizaje y mejora continua.
+
+# [10-05-22]
+
+## Prácticas adicionales de Scrum
+
+### 1.Refinamiento del Backlog
+
+La práctica de **Refinamiento del Backlog** se dedica a preparar los elementos del Backlog de Producto para que contengan todas las **precisiones** necesarias para que las Reuniones de Planificaciones de Sprint avancen con mayor **certeza** y **celeridad**. A través de esta práctica, el Equipo Scrum se asegura de que el Backlog de Producto se encuentre debidamente priorizado, estimado y detallado. 
+
+Para que los Desarrolladores puedan proveer estimaciones de esfuerzo de alto nivel acertadas para cada requerimiento, es necesario que el Backlog de Producto contenga toda la claridad e información necesaria. Para ello, el Backlog de Producto debería ser **DEEP**:
+
+* **Detallado apropiadamente**. Los elementos de mayor prioridad están más detallados y especificados que los de menor prioridad, ya que se trabajará antes en los primeros que en los segundos.
+* **Estimado**. Los elementos de que componen la siguiente versión del producto (release) deben estar estimados y, lo que es más, deberían revisarse y re-estimarse cada Sprint conforme vamos obteniendo nueva información.
+* **Emergente**. Debido a la variabilidad y al aprendizaje experimentado, el Backlog de Producto es refinado regularmente.
+* **Priorizado**. Los elementos del Backlog de Producto están priorizados de manera ordenada, de 1 a N.
+
+Bill Wake propone utilizar el acrónimo **INVEST** para asegurar historias de usuario de buena calidad, de modo que cada una de ellas sea:
+• I- **Independiente**: se trata de lograr historias de usuario independientes entre sí para poder construirlas en cualquier orden, según las prioridades de negocio.
+• N- **Negociable**: las historias de usuario deben permitir a los Desarrolladores negociar con el Dueño de Producto el alcance detallado de las mismas para lograr una exploración conjunta de funcionalidad y llegar a un acuerdo.
+• V- **Valiosa**: se debería poder identificar claramente el valor de la historia de usuario para el cliente o usuario.
+• E- **Estimable**: se debería poder estimar con precisión el esfuerzo necesario para construir la historia de
+• S- **Small** / Pequeña: se deben tener historias de usuario lo más pequeñas posibles para facilitar su estimación y minimizar su tiempo de construcción.
+• T- **Testeable** / Comprobable: las historias de usuario deben poder comprobarse para verificar y validar su cumplimiento. (Scrum Manager, 2019)
+
+### 2.Estimaciones en Scrum
+
+Las **estimaciones** en entornos ágiles son **aproximaciones** informadas de la **duración** de una tarea en condiciones de trabajo ideales, se suelen medir a través del concepto de **esfuerzo** **necesario**, y (generalmente) se representan por medio de la unidad de “puntos de historia”. El significado de la escala de puntos de historia es **propio** de cada **Equipo** Scrum o de la misma organización de la cual este Equipo forma parte, según la duración de una tarea ya conocida o el equivalente a un conjunto de horas determinado.
+
+Es importante que la **métrica** empleada, su significado y la forma de aplicación sea **consistente** en todas las mediciones de la organización, y conocida por todas las personas
+
+Las estimaciones en Scrum son responsabilidad de los **Desarrolladores**
+
+La técnica de estimación ágil más utilizada es el **Planning Poker**, la cual utiliza el criterio Delphi de realizar tantas rondas de estimación como sean necesarias hasta llegar a un consenso. Esta técnica utiliza una baraja de cartas que emplea una secuencia numérica para representar el esfuerzo de la tarea o historia de usuario. E
+
+La estimación con Planning Poker sigue 4 pasos básicos:
+1. El Equipo **discute** sobre la **funcionalidad** a estimar, analizando sus diferentes aristas y evacuando todas sus dudas con el Dueño de Producto.
+2. Una vez que los Desarrolladores han logrado cabal comprensión del requerimiento o la tarea, cada integrante **elige** una **carta** que representa su estimación personal de esfuerzo para la funcionalidad y la deja **boca abajo**. Cuando todos ya seleccionaron su carta, al mismo tiempo ponen las cartas **boca arriba** y las presentan al mismo tiempo que los demás (de esta forma se evita que la decisión de un miembro pueda influir en los otros).
+3. Si hubo **consenso** en la representación del esfuerzo, esa unidad de medida se asigna a la tarea o historia de usuario. Si no hay consenso, aquellos integrantes que presentaron las estimaciones más altas y bajas **explican** sus **razones** y se procede a una nueva ronda de estimación.
+4. Este ciclo se realiza hasta arribar a consenso y resolver todas las inquietudes y diferencias
+
+La **velocidad** del Equipo se calcula con el **avance** de los **Sprints** y se asocia al promedio de puntos de historia que desarrolla por iteración (cantidad de trabajo realizado por período de tiempo). Identificar este valor permite **estimar** con mayor **facilidad** si una determinada historia podrá ser cumplida o no en un Sprint, según cuántos puntos represente y cuál sea la capacidad del Equipo
+
+La velocidad del Equipo no se mantiene fija, sino que va **cambiando** y debe ir ajustándose a medida que el Equipo madura y va avanzando los Sprint.
+
+### 3.Seguimiento del trabajo en Scrum (Burndown chart)
+
+Este gráfico es una herramienta útil para el autocontrol de los Desarrolladores, ya que permite **visualizar** de manera simple y rápida el **avance** del **trabajo** **acordado** para un Sprint. El gráfico de burn down (quemar hacia abajo, en inglés) muestra el progreso hacia el incremento de funcionalidad mediante una línea idealmente descendente hacia “cero esfuerzos pendientes”, es decir, esta herramienta muestra el trabajo restante hasta finalizar el Sprint (trabajo futuro).
+
+![](img/burndown.png)
+
+### 4.Scrum de Scrums
+
+El Scrum de Scrums o Meta Scrum es la práctica de **Scrum** escalada a **equipos** de trabajo de gran cantidad de integrantes. Su aplicación consiste en la **coordinación** de los grupos de Desarrolladores (que poseen entre 3 y 9 miembros) a través de una **Reunión** Diaria llamada Scrum de Scrums en donde se busca la **sincronización** de todos los grupos. Cada grupo de Desarrolladores envía a un “embajador” que lo representa en esa reunión global, la cual suele suceder luego de la Reunión Diaria.
+
+A diferencia de la reunión de Sincronización, la Reunión Diaria de un Scrum de Scrums suele celebrarse dos a tres veces por semana y durar hasta 45 minutos, permitiendo así tratar **inconvenientes** y tomar **decisiones** que no se abordan en la Reunión Diaria de los Desarrolladores. Idealmente, el embajador de cada Equipo Scrum irá variando de una reunión a otra, ofreciendo así a todos la posibilidad de participar en ese espacio de coordinación de acciones.
+
+### 5.Sprint 0
+
+El Sprint 0 es la iteración previa al comienzo de los Sprint del proyecto. Esta no es una práctica aceptada ni adoptada por todas las organizaciones, pero sí es recomendable su uso cuando recién se está comenzando con la implementación de este marco de trabajo. El Sprint 0 suele durar una semana, ya que es la iteración que se dedica a **organizar** el **marco** del proyecto
+
+### 6.Sprint H
+
+El Sprint H o **Sprint Hardening** es esa iteración que se dedica a **estabilizar** el producto desarrollado, **robustecerlo** o mejorar algunos de sus aspectos técnicos. En este Sprint no se hace entrega de incremento, sino que se **mejora** lo ya **realizado**, y es por ello que no es una práctica aceptada entre todos los practicantes de Scrum.
+
+Es por esto que muchos autores consideran al Sprint H como una evidencia de **fallas** en el proceso, más que como un espacio para la estabilidad y mejora del producto del proyecto.
+
+### 7.Aterrizaje de Emergencia de Sprint
+
+es un proceso de cuatro pasos introducido por Sutherland para intentar recuperar el normal desarrollo de un Sprint antes de su posible
+fracaso. Este procedimiento se activa cuando al promediar el avance del Sprint se observa que la carga de trabajo no se reduce
+
+En ese caso, Sutherland propone seguir cuatro pasos:
+1. Analizar las causas del retraso y trabajar en equipo para encontrar nuevas formas de abordarlas.
+2. Solicitar ayuda a alguien externo a los Desarrolladores.
+3. Reducir el alcance recortando las funcionalidades de menor prioridad para intentar cumplir el objetivo del Sprint.
+4. Si nada de lo anterior funciona, cancelar el Sprint y comenzar nuevamente. (Leffingwell, 2008). 
+
+### 8.Planificación de Entregas
+
+generar un plan de alto nivel que aborde las diferentes etapas del proyecto a través de entregas o releases. Una entrega del producto incluye un conjunto de incrementos como resultado del trabajo de varios Sprint
+
+### 9.User Story Mapping
+
+El user story mapping es una técnica para planificar el desarrollo global del producto, organizándolo en etapas según entregas o releases previstos al mercado.
+El mapeo de historias, conocido en inglés como Story Mapping, es una técnica para
+
+proporcionar un esquema visual del producto y sus componentes clave. El mapeo de historias, formulado por primera vez por Jeff Patton (2005), se utiliza comúnmente para ilustrar la ruta del producto. Los mapas de historia representan la secuencia de las iteraciones de desarrollo del producto y trazan las características que serán incluidas en el primer, segundo, tercero y subsecuentes lanzamientos
+
+![](img/user_story_mapping.png)
+
+Todo el Equipo Scrum participa de la construcción del user story mapping y su elaboración es incremental, lo mismo que con el Backlog de Producto.
+
+## Comunidades y certificaciones ágiles
+
+* Scrum Alliance®
+* Scrum.org
+* Project Management Institute
+* ICAgile
+* SCRUMstudy
+* CertiProf
+
+## Herramientas para la gestión de proyectos ágiles
+
+Existe un gran número de herramientas para el trabajo colaborativo en proyectos de gestión ágil
+
+* Jira
+* VersionOne
+* TargetProcess
+* PivotalTracker
+* Taiga
+* SwiftKaban
+* Kanbanize
+* Trello
+
+Otras herramientas:
+
+![](img/herramientas.png)
