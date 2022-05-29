@@ -72,6 +72,17 @@
       - [Auditoría de la Fase de Implementación](#auditoría-de-la-fase-de-implementación)
 - [[03-05-22] Auditando Windows](#03-05-22-auditando-windows)
   - [Auditoria de Windows - Objetivos](#auditoria-de-windows---objetivos)
+- [[10-05-22] Auditoria de aplicaciones web](#10-05-22-auditoria-de-aplicaciones-web)
+  - [Buenas practicas](#buenas-practicas)
+    - [1 Validación y desinfección de entrada](#1-validación-y-desinfección-de-entrada)
+    - [2 Control de Errores](#2-control-de-errores)
+    - [3 Administración Robusta de Sesiones](#3-administración-robusta-de-sesiones)
+    - [4 Mediación Completa](#4-mediación-completa)
+    - [5 Solución de Múltiples Capas](#5-solución-de-múltiples-capas)
+  - [Conceptos basicos de aplicaciones web](#conceptos-basicos-de-aplicaciones-web)
+  - [Seguridad de servidores](#seguridad-de-servidores)
+  - [Pruebas de configuración](#pruebas-de-configuración)
+  - [Metodos de autenticación](#metodos-de-autenticación)
 
 # [08-03-22]
 
@@ -908,5 +919,88 @@ Algunas configuraciones que nos muestra son:
 6. Contraseñas Fuertes
    1. net accounts
    2. DumpSec
-7. Requerimientos de Autenticación (El acceso a sistemas debería ser restringido/controlado)
 
+# [10-05-22] Auditoria de aplicaciones web
+
+Actualmente, las aplicaciones web son muy vulnerables, uno de los principales motivos son que los servidores vienen con codigos de ejemplo predeterminados muy poco seguros que los desarrolladores suelen utilizar para basar sus servicios.
+
+Google Hacking Database muestra muchas vulnerabilidades que afectan a estos sistemas.
+
+Algunas de las buenas practicas que se deben de tomar para mejorar la seguridad de nuestras aplicaciones son:
+
+## Buenas practicas
+
+### 1 Validación y desinfección de entrada
+
+**Validación**: **Verificar** todo lo que **ingresa** a la aplicación para comprobar que eso conforma lo que la aplicación está esperando.
+
+**Desinfección**: **descartar** todo lo **no identificado**.
+
+### 2 Control de Errores
+
+Manejar todas las condiciones de error (DB, red, input, etc.)
+
+### 3 Administración Robusta de Sesiones
+
+Generar **IDs de Sesión Fuertes**, **aleatorios**, con una **fuerte asociación** con el **cliente** y considerar que sean **a prueba** de **falsificaciones**.
+
+### 4 Mediación Completa
+
+El principio de mediación completa es que hay **solamente una manera** de **ingresar** y **salir** de una **aplicación**.
+
+### 5 Solución de Múltiples Capas
+
+Para tener seguridad robusta, se recomienda usar tres capas:
+* Presentación 
+* Aplicación (o Negocio) 
+* Persistencia
+
+## Conceptos basicos de aplicaciones web
+
+* HTTP (HyperText Transfer Protocol, solamente texto)
+* Formularios Web
+* GET/POST (get --> URL, post --> body)
+* Métodos HTTP y REST
+* Cookies
+  * Las Cookies son simplemente texto:
+  * El servidor envía un nombre de cookie con un valor arbitrario.
+  * El cliente lo almacena y luego envía la cookie con cada petición.
+  * Es posible enviar más de una cookie.
+* SSL/TLS (ssl --> sifrado, no seguridad)
+* AJAX
+* CSS (Cascading Style Sheets)
+* OWASP (Open Web Application Security Project)
+
+## Seguridad de servidores
+
+* Indexación en directorios
+* Encabezados
+* Robots.txt
+
+## Pruebas de configuración
+
+Analizadores: Nessus
+
+**Fuzzing** es una **táctica antigua** con nuevas herramientas:
+* **Encuentra** todos los **orificios** de entrada que tiene una aplicación.
+* Automáticamente **pega** todo tipo de **basura** en todos ellos al mismo tiempo
+
+## Metodos de autenticación
+
+* Basic HTTP
+  * Es facil de implementar
+  * No tiene cifrado.
+  * Fácil para fuerza bruta.
+* Autenticación Basada en Formularios
+  * Fácil de Implementar.
+  * Balance razonable entre seguridad y conveniencia para los usuarios
+  * Potencial de fuerza bruta
+  * No cifrado por defecto.
+* Certificados del lado del Cliente
+  * Altamente seguro.
+  * Permite el “no repudio”.
+  * Confidencialidad.
+  * Autenticación mutua.
+  * Movilidad e interoperabilidad limitada.
+* Autenticación NTLM
+  * Solamente útil para aplicaciones de Intranet.
