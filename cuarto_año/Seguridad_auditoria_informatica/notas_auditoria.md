@@ -31,6 +31,47 @@
   - [Scripting](#scripting)
   - [Auditando en unix](#auditando-en-unix)
     - [Objetivos y actividades de una auditoria UNIX](#objetivos-y-actividades-de-una-auditoria-unix)
+- [[05-04-22] Auditoria de seguridad y redes](#05-04-22-auditoria-de-seguridad-y-redes)
+  - [Auditoria de seguridad](#auditoria-de-seguridad)
+    - [Evaluación de riesgos](#evaluación-de-riesgos-1)
+    - [Fases de la auditoria de seguridad](#fases-de-la-auditoria-de-seguridad)
+    - [Auditoria de seguridad fisica](#auditoria-de-seguridad-fisica)
+    - [Auditoria de seguridad logica](#auditoria-de-seguridad-logica)
+    - [Tecnicas, metodos y herramientas](#tecnicas-metodos-y-herramientas)
+    - [Informe final](#informe-final)
+    - [Contratación de auditoria externa](#contratación-de-auditoria-externa)
+  - [Auditoria de redes](#auditoria-de-redes)
+    - [Vulnerabilidad en redes](#vulnerabilidad-en-redes)
+    - [Auditando la red fisica](#auditando-la-red-fisica)
+    - [Auditando la red logica](#auditando-la-red-logica)
+- [[12-04-22] Informe de auditoria y auditoria de Windows](#12-04-22-informe-de-auditoria-y-auditoria-de-windows)
+  - [Informe de auditoria](#informe-de-auditoria)
+    - [La evidencia](#la-evidencia)
+    - [Irregularidades](#irregularidades)
+    - [La documentación](#la-documentación)
+    - [El informe de auditoria informatica](#el-informe-de-auditoria-informatica)
+  - [Organización del departamento de auditoria informatica](#organización-del-departamento-de-auditoria-informatica)
+    - [Perfiles profesionales de la función de Auditoría Informática](#perfiles-profesionales-de-la-función-de-auditoría-informática)
+    - [Funciones a Desarrollar por Auditoría Informática](#funciones-a-desarrollar-por-auditoría-informática)
+    - [Organización de la Función de Auditoría Informática](#organización-de-la-función-de-auditoría-informática)
+  - [Deontología del Auditor](#deontología-del-auditor)
+- [[26-04-22] Auditoría de la Dirección de Informática y Área de Desarrollo](#26-04-22-auditoría-de-la-dirección-de-informática-y-área-de-desarrollo)
+  - [Auditoría de la Dirección de Informática](#auditoría-de-la-dirección-de-informática)
+    - [Proceso de Dirección Informática](#proceso-de-dirección-informática)
+      - [Planificar](#planificar)
+      - [Organizar y Dirigir](#organizar-y-dirigir)
+      - [Controlar](#controlar)
+  - [Auditoría del Área de Desarrollo](#auditoría-del-área-de-desarrollo)
+    - [Funciones del Área de Desarrollo](#funciones-del-área-de-desarrollo)
+    - [Auditoría de la Organización y Gestión del Área de Desarrollo](#auditoría-de-la-organización-y-gestión-del-área-de-desarrollo)
+    - [Auditoría de Proyectos de Desarrollo de S.I.](#auditoría-de-proyectos-de-desarrollo-de-si)
+      - [Aprobación, Planificación y Gestión del Proyecto](#aprobación-planificación-y-gestión-del-proyecto)
+      - [Auditoría de la Fase de Análisis](#auditoría-de-la-fase-de-análisis)
+      - [Auditoría de la Fase de Diseño](#auditoría-de-la-fase-de-diseño)
+      - [Auditoría de la Fase de Construcción](#auditoría-de-la-fase-de-construcción)
+      - [Auditoría de la Fase de Implementación](#auditoría-de-la-fase-de-implementación)
+- [[03-05-22] Auditando Windows](#03-05-22-auditando-windows)
+  - [Auditoria de Windows - Objetivos](#auditoria-de-windows---objetivos)
 
 # [08-03-22]
 
@@ -374,4 +415,498 @@ Una de las soluciones implementadas en las auditorias es crear un **USB** con he
 5. Acceso no autorizado
    * Asegurar que los archivos tienen el acceso justo y necesario
    * Identificar archivos modificados recientemente
-6. 
+
+
+# [05-04-22] Auditoria de seguridad y redes
+
+## Auditoria de seguridad
+
+Debe evaluarse en la auditoría si los **modelos** de **seguridad** están en **consonancia** con las nuevas **arquitecturas**, las distintas **plataformas** y las **posibilidades** de las **comunicaciones**.
+
+Los grandes grupos de **controles**, que además de poderlos dividir en manuales y automáticos, o en generales y de aplicación, son los siguientes:
+* Controles **directivos**
+* Controles **preventivos**
+* Controles **detectivos**
+* Controles **correctivos**
+* Controles de **recuperación**
+
+El sistema de **control interno** debe basarse en **políticas**, y se implementa con apoyo de **herramientas**. Cuando existe un sistema de control interno **adecuado**, los procesos de auditoría, especialmente si son periódicos, son revisiones **necesarias** pero más **rápidas**, con informes más breves.
+
+### Evaluación de riesgos
+
+Se trata de **identificar** y **cuantificar** la **probabilidad** e **impacto** de los **riesgos** y analizar **medidas** que **disminuyan** la **probabilidad** de que **ocurran** los hechos o **mitiguen** el **impacto**.
+
+Para **evaluarlos** hay que considerar:
+* El **tipo** de **información** almacenada, procesada y transmitida.
+* La **criticidad** de las **aplicaciones**.
+* La **tecnología usada**, el **marco legal** aplicable, el **sector** de la **entidad**, la entidad misma y el momento.
+
+Es necesario **revisar** si se han **considerado** las **amenazas** y, además, **errores** y **negligencias** en general que pueden traducirse en daños, en algunos casos irreversibles.
+
+Es necesario evaluar las **vulnerabilidades** que existen
+
+El **factor humano** es el principal a considerar.
+
+En la auditoría externa se trata de saber si la entidad ha **evaluado** de forma adecuada los **riesgos**, si los **informes** han **llegado** a los **destinatarios** correspondientes y si se están **tomando** las **medidas pertinentes**, así como si el proceso se realiza con la **frecuencia necesaria** y no ha constituido un hecho aislado.
+
+Al hablar de seguridad siempre se habla de sus tres **dimensiones** clásicas y los controles buscan **garantizar** alguna de estas **características**:
+* **Confidencialidad**
+* **Integridad**
+* **Disponibilidad**
+* **Autenticidad**
+
+### Fases de la auditoria de seguridad
+
+1. **Definición** de los **objetivos**, **alcance** y **profundidad** de la auditoría.
+2. **Análisis** de posibles **fuentes** y **recopilación** de **información**.
+3. **Determinación** del **plan** de **trabajo** y comunicación a la entidad.
+4. Adaptación de **cuestionarios** y consideración de **herramientas** o perfiles de especialistas necesarios, sobre todo en la auditoría externa.
+5. **Realización** de **entrevistas** y **pruebas**.
+6. **Análisis** de **resultados** y valoración de riesgos.
+7. **Presentación** y **discusión** del **informe provisional**.
+8. **Informe definitivo**.
+
+### Auditoria de seguridad fisica
+
+Se evaluarán las **protecciones físicas** de datos, programas, instalaciones, equipos, redes y soportes, y personas.
+
+Las **amenazas** pueden ser muy **diversas**: sabotaje, vandalismo, terrorismo, accidentes de distinto tipo, incendios, inundaciones, averías importantes, derrumbamientos, explosiones, etc.
+
+Desde la perspectiva de las protecciones físicas algunos aspectos a considerar son:
+* **Ubicación** del centro de datos, servidores locales y cualquier **elemento a proteger**.
+* **Protección** de **computadoras portátiles**, incluso fuera de las oficinas: aeropuertos, automóviles, restaurantes, etc.
+* Estructura, diseño, construcción y **distribución** de los **edificios** y de sus **plantas**.
+* **Riesgos** a los que están **expuestos** por **agentes externos** como por accesos físicos no controlados. * Amenazas de **fuego**; riesgos por **agua**; por **accidentes atmosféricos** o por **averías** en las **conducciones**; problemas en el suministro eléctrico, tanto por caídas como por perturbaciones.
+* **Controles** tanto **preventivos** como de **detección** relacionados con los puntos anteriores.
+* Además debe **controlarse** el **contenido** de carteras, **paquetes**, bolsos o cajas, ya que podrían contener explosivos, así como lo que se quiere sacar del edificio, para evitar sustituciones o sustracción de equipos, componentes, soportes magnéticos, documentación u otros activos.
+* **Protección** de **soportes magnéticos** (acceso, almacenamiento y posible transporte).
+* **Protección** de **documentos** impresos y de cualquier tipo de documentación clasificada.
+* Todos los puntos anteriores pueden estar además cubiertos por seguros.
+
+### Auditoria de seguridad logica
+
+Es necesario verificar que **cada usuario** sólo pueda **acceder** a los **recursos** a los que le **autorice** el propietario según su función, y con las posibilidades que el propietario haya fijado: lectura, modificación, borrado, ejecución, etc. lo que representaríamos en una **matriz de accesos** en la que figurarían los **sujetos**, los **objetos** que puedan ser **accedidos** con mayor o menor granularidad y las **posibilidades** que se le otorgan. 
+
+Desde el punto de vista de la auditoría es necesario revisar **cómo se identifican** y sobre todo **autentican** los **usuarios**, **cómo** han sido **autorizados** y **por quién**, y qué ocurre cuando se producen transgresiones o **intentos**: **quién se entera**, **cuándo** y **qué se hace**.
+
+En cuanto a autenticación el método más usado es la **contraseña**, cuyas
+características serán **acordes** con las **normas** y **estándares** de la **entidad**.
+
+Algunos de los aspectos a evaluar respecto a las contraseñas pueden ser:
+* **Quién asigna** la contraseña.
+* **Longitud mínima** y composición de caracteres.
+* **Vigencia**.
+* Control para **no asignar** las “x” **últimas** (Historial).
+* **Número** de **intentos fallidos** que se permiten al usuario.
+* Si las contraseñas están **cifradas**, y bajo qué sistema.
+* Protección o cambio de contraseñas iniciales que llegan en los sistemas, y que a menudo aparecen en los propios manuales.
+* **Controles existentes** para evitar y detectar Troyanos.
+* La no-cesión, y el uso individual y responsable de cada usuario, a partir de la normativa.
+* Promover el uso de **diferentes contraseñas** para diferentes sistemas.
+* La solución más adecuada por ahora puede consistir en utilizar sistemas de identificación únicos (single sign-on).
+* Verificar que el **proceso** de **altas**, **variaciones** y **bajas** de usuarios se realiza **según** la **normativa** en vigor. 
+* Debería estar previsto **bloquear** a un **usuario** que **no accediera** por un **período determinado**.
+* Examinar situaciones de bloqueo por la existencia de un sólo administrador.
+
+### Tecnicas, metodos y herramientas
+
+Como métodos y técnicas podemos considerar los **cuestionarios**, las **entrevistas**, la **observación**, los **muestreos**, las **CAAT** (Técnicas de Auditoría Asistidas por Computadora), las utilidades y **programas**, los paquetes específicos, las **pruebas** y la simulación en paralelo con datos reales.
+
+### Informe final
+
+Se harán **constar** los **antecedentes** y los **objetivos**, qué **metodología** de evaluación de riesgos y **estándares** se ha utilizado, y una breve descripción de los **entornos revisados**.
+
+Debe incluirse un **resumen** para la **Dirección** en términos no técnicos.
+
+En cada punto que se incluya debe **explicarse por qué** es un **incumplimiento** o una **debilidad**, así como alguna **recomendación**.
+
+El informe debe ser necesariamente **revisado** por los **auditados**, así como **discutido** si es necesario antes de emitir el definitivo.
+
+En muchos casos se **recogen** las **respuestas** de los auditados, sobre todo cuando la auditoría es interna.
+
+La entidad decide qué acciones tomar a partir del informe, y en el caso de los auditores internos éstos suelen hacer también un **seguimiento** de las **implementaciones**.
+
+Es necesario diferenciar puntos muy graves, graves, de mediana criticidad, u otra clasificación, en definitiva **establecer** algunas **métricas de seguridad** y **clasificar** los puntos **según** su **importancia** y **prioridad**.
+
+Es **importante** que se **delimiten** las **responsabilidades** y los **entregables** que son **objeto** de **auditoría externa** en el **contrato** o propuesta.
+
+### Contratación de auditoria externa
+
+Algunas consideraciones pueden ser:
+* La **entidad auditora** debe ser **independiente** de la **auditada** en el caso de una auditoría externa.
+* Las **personas** que vayan a realizar el trabajo deben ser **independientes** y **competentes**, según el objetivo.
+* La auditoría debe encargarse a un nivel suficiente alto, normalmente **Dirección General** o Consejero Delegado.
+* Puede ser necesario dar o **mostrar** a los **auditores** todo lo que **necesiten** para **realizar** su **trabajo**, pero **nada más**, e incluso lo que se les muestre o a lo que se les permita acceder puede ser con restricciones.
+
+## Auditoria de redes
+
+### Vulnerabilidad en redes
+
+En las redes de comunicaciones, por **causas propias** de la **tecnología**, pueden producirse básicamente **tres tipos** de **incidencias**:
+
+* **Alteración de bits**. Una trama puede sufrir variación en parte de su contenido. Se agrega un sufijo a la trama con un Código de Redundancia Cíclico (CRC) que detecte cualquier error y permita corregir errores que afecten hasta unos pocos bits.
+* **Ausencia de tramas**. Alguna trama puede desaparecer en el camino del emisor al receptor. Se suele atajar este riesgo dando un número de secuencia a las tramas.
+* **Alteración de secuencia**. El orden en el que se envían y se reciben las tramas o coincide. Unas tramas han adelantado a otras. En el receptor, mediante el número de secuencia, se reconstruye el orden original.
+
+Teniendo en cuenta que es físicamente posible **interceptar** la **información**, los tres mayores **riesgos** a atacar son:
+● **Indagación**: Un mensaje puede ser leído por un tercero, obteniendo la información que contenga.
+● **Suplantación**: Un tercero puede introducir un mensaje adulterado que el receptor cree proveniente del emisor legítimo.
+● **Modificación**: Un tercero puede alterar el contenido de un mensaje. 
+
+Para este tipo de actuaciones, la única medida prácticamente efectiva en redes MAN y WAN (cuando la información sale del edificio) es la **criptografía**.
+
+El cableado que va desde el **armario distribuidor** a cada uno de los potenciales puestos, suele llamarse de **“planta**” suele ser de **cobre** y es propenso a escuchas (**“pinchazos**”) que pueden no dejar rastro.
+
+El **cableado troncal** (conexión entre armarios y salas de equipos) y el **de ruta** (conexión desde sala de equipos hacia los transportistas de datos) se tienden frecuentemente mediante **fibra óptica**, que son muy **difíciles de interceptar**, debido a que no provocan radiación electromagnética y a que la conexión física a una fibra óptica requiere una tecnología delicada y compleja.
+
+En el propio **puesto de trabajo** puede haber **peligros**, como grabar/retransmitir la imagen que se ve en la pantalla, teclados que memorizan el orden en que se han pulsado las teclas, o directamente que las contraseñas estén escritas en papeles a la vista.
+
+Dentro de las **redes locales**, el mayor peligro es que alguien instale una “**escucha**” no autorizada. Al viajar en **texto plano** la información dentro de la **red local**, es imprescindible tener una organización que **controle** estrictamente los equipos de escucha, bien sean estos físicos (“**sniffers**”) o lógicos (**“traceadores”**). 
+
+### Auditando la red fisica
+
+Deben comprobarse que efectivamente los **accesos físicos** provenientes del **exterior** han sido debidamente **registrados** y que desde el **interior** del edificio **no se intercepta** **físicamente** el **cableado** (“pinchazo”).
+
+En caso de desastre, debe comprobarse cuál es la parte del cableado que queda en condiciones de funcionar y qué operatividad puede soportar.
+
+Como objetivos de control, se debe marcar la existencia de:
+* **Áreas controladas** para los equipos de comunicaciones.
+* **Protección** y **tendido adecuado** de cables y líneas de comunicaciones.
+* **Controles** de **utilización** de los **equipos** de pruebas de comunicaciones, usados para monitorear la red y su tráfico.
+* **Atención** específica a la **recuperación** de los **sistemas** de **comunicación** de datos en el plan de recuperación de desastres en sistemas de información.
+* Controles específicos en caso de que se utilicen líneas telefónicas normales con acceso a la red de datos para prevenir accesos no autorizados al sistema o a la red.
+
+### Auditando la red logica
+
+Se debe controlar que un equipo **no pueda** **enviar indiscriminadamente** **mensajes** ya que puede **bloquear** la **red** completa.
+
+Es necesario **monitorear la red**, **revisar** los **errores** o **situaciones anómalas** que se producen y tener establecidos los **procedimientos** para **detectar** y **aislar equipos** en situación **anómala**. 
+
+Una solución totalmente efectiva es el **cifrado** de las comunicaciones.
+
+Como **objetivos de control**, se debe marcar la existencia de:
+
+* **Contraseñas** y otros procedimientos para limitar y detectar cualquier intento de acceso no autorizado a la red de comunicaciones.
+* Facilidades para detectar errores de transmisión y establecer las retransmisiones apropiadas.
+* **Controles** para asegurar que las **transmisiones** van solamente a **usuarios autorizados**.
+* **Registro** de la **actividad** de la **red**.
+* **Técnicas** de **cifrado** de datos donde haya riesgos de accesos impropios a transmisiones sensibles.
+* Controles adecuados que cubran la importación o exportación de datos a otros sistemas informáticos.
+
+# [12-04-22] Informe de auditoria y auditoria de Windows
+
+## Informe de auditoria
+
+### La evidencia
+
+La evidencia es la **base razonable** de la **opinión** del auditor y tiene una serie de calificativos:
+
+* La evidencia **relevante**, que tiene una relación lógica con los objetivos de la auditoría.
+* La evidencia **fiable**, que es válida y objetiva.
+* La evidencia **suficiente**, que es de tipo cuantitativo para soportar la opinión profesional del auditor.
+* La evidencia **adecuada**, que es de tipo cualitativo para afectar a las conclusiones del auditor.
+
+### Irregularidades
+
+En los organismos y las empresas, la **Dirección** tiene la **responsabilidad principal** y **primaria** de la **detección** de **irregularidades**, **fraudes** y **errores**.
+
+Es necesario diseñar **pruebas antifraude**, que lógicamente incrementarán el costo de la auditoría, previo análisis de riesgos (amenazas, importancia relativa, etc.).
+
+En el caso de **detectar fraude** durante el proceso de auditoría procede actuar en consecuencia, con la debida prudencia, sobre todo si afecta a los administradores
+de la organización objeto de auditoría.
+
+### La documentación
+
+**Papeles de trabajo**: los **documentos** preparados o **recibidos** por el **auditor** que **reúnen** la **información utilizada** y **resultados** de las **pruebas** efectuadas en la ejecución de su trabajo, junto con las **decisiones tomadas** para llegar a su **opinión**. El **Informe de Auditoría** tiene que estar **basado** en la documentación o **papeles de trabajo**.
+
+
+**Característica registral del Informe**: tanto en su parte cronológica como en la organizativa, con procedimientos de archivo, búsqueda, custodia y conservación de su documentación, cumpliendo toda la normativa vigente, legal y profesional. 
+
+Además, se **incluirán**: el **contrato** cliente/auditor informático, **declaraciones** de la **Dirección**, **contratos** que afecten al **sistema** de información, **informes** de **asesorías** jurídicas del cliente, **informes** sobre **terceros** vinculados y **conocimiento** de la **actividad** del cliente.
+
+### El informe de auditoria informatica
+
+Es la **comunicación** del **Auditor** Informático al **cliente** tanto del **alcance** de la **auditoría** (objetivos, período de cobertura, naturaleza y extensión del trabajo realizado) como de los **resultados** y las **conclusiones**.
+
+No existe un **formato predeterminado**, pero sí algunas **recomendaciones** sobre estructura y contenido.
+
+El Informe deberá ser **claro**, **adecuado**, **suficiente** y **comprensible**, con la utilización conveniente del lenguaje informático. 
+
+Los puntos esenciales, genéricos y mínimos del Informe de Auditoría Informática son:
+* Identificación del **Informe**
+* Identificación del **Cliente**
+* Identificación de la **Entidad Auditada**
+* **Objetivos** de la Auditoría Informática
+* **Normativa aplicada** y excepciones
+* **Alcance** de la Auditoría
+* **Conclusiones**: 
+  * Opinión **favorable** 
+  * Opinión **con salvedades** (limitaciones del alcance o restricciones / incertidumbres)
+  * Opinión **desfavorable** (Irregularidades / incumplimiento de norma legal)
+  * Opinión **denegada** (Limitaciones del alcance / irregularidades / incertidumbres / incumplimiento de normativa legal)
+* **Resultados**
+* **Informes previos**
+* **Fecha** del Informe
+* Identificación y **firma** del Auditor
+* **Distribución** del Informe
+
+## Organización del departamento de auditoria informatica
+
+### Perfiles profesionales de la función de Auditoría Informática
+
+El auditor informático debe ser una persona con **alto grado** de **calificación técnica** y al mismo tiempo estar **integrado** en las **corrientes organizativas empresariales**. Dentro de la función de auditoría informática, se deben contemplar las siguientes **características** para mantener un perfil profesional adecuado y actualizado:
+
+* Las personas que integren esta función deben contemplar en su formación básica una mezcla de **conocimientos** de **auditoría** y de **informática** general: **Desarrollo informático**, **Gestión** del **Departamento** de **Sistemas**, **Análisis** de **Riesgos** en un **Entorno Informático**, **Sistemas Operativos**, **Telecomunicaciones**, Gestión de **Bases de Datos**, **Redes Locales**, **Seguridad Física**, etc.
+* A estos conocimientos básicos se deben añadir **especializaciones** en función de la **importancia** de los **distintos componentes** en el **entorno empresarial**.
+* En la realidad actual, los sistemas de información requieren cada vez mayor control, se hace necesario para el auditor informático conocer **técnicas de gestión empresarial**, y sobre todo **gestión del cambio**. 
+* El auditor informático debe tener siempre el concepto de **Calidad Total**.
+
+### Funciones a Desarrollar por Auditoría Informática
+
+El auditor informático debe **revisar** la **seguridad**, el **control interno**, la **efectividad**, la **gestión** del **cambio** y la **integridad** de la **información**.
+
+La **función** de Auditoría Informática debe realizar, entre otras actividades:
+
+* **Verificación** del **control interno**, tanto de las aplicaciones como de los sistemas informáticos, centrales y periféricos.
+* **Análisis** de la **gestión** de los **sistemas** de información desde un punto de vista de **riesgo** de **seguridad**, de **gestión** y de **efectividad**.
+* **Análisis** de la **integridad**, **fiabilidad** y **certeza** de la **información** a través del análisis de las aplicaciones.
+* **Auditoría** del **riesgo operativo** de los **circuitos** de **información**.
+* **Análisis** de la **gestión** de los **riesgos** de la información y de la seguridad implícita.
+* **Verificación** del nivel de **continuidad** de las **operaciones**.
+* Análisis del Estado del **Arte tecnológico** de la instalación revisada y de las consecuencias empresariales que un desfase tecnológico pueda acarrear.
+* Diagnóstico sobre el **grado** de **cobertura** que dan las aplicaciones a las necesidades estratégicas y operativas de información de la organización.
+
+### Organización de la Función de Auditoría Informática
+
+La organización típica de auditoría informática, debe contemplar los siguientes principios:
+* Su localización puede estar ligada a la localización de la auditoría interna operativa, pero con independencia de objetivos, de planes de formación y de presupuestos.
+* La organización operativa típica debe ser la de un grupo independiente del de auditoría interna, con **accesibilidad total** a los **sistemas informáticos** y de información, e idealmente dependiendo de la misma persona en la empresa que el de auditoría interna, que debería ser el director general o consejero delegado.
+* Los recursos humanos con los que debe contar el departamento deben contener una mezcla entre personas con formación en auditoría y organización, y personas con perfil informático.
+* Este personal debe contemplar entre su titulación la de CISA (Certified Information Systems Auditor) como un elemento básico para comenzar su carrera como auditor informático.
+* La organización interna de la función podría ser: Jefe del Departamento, Gerente o Supervisor de Auditoría Informática y Auditor Informático.
+* El tamaño del área sólo se puede precisar en función de los objetivos de la organización, pero se debería cubrir con Especialistas en el entorno informático a auditar, gestión de bases de datos, comunicaciones y/o redes, riesgos y aplicaciones, y auditoría de sistemas de información.
+
+## Deontología del Auditor
+
+* Principio de Beneficio del Auditado
+  * El auditor deberá conseguir la máxima eficacia y rentabilidad de los medios informáticos de la empresa auditada.
+  * El auditor deberá conseguir la máxima eficacia y rentabilidad de los medios informáticos de la empresa auditada.
+* Principio de Calidad:
+  * El auditor deberá prestar sus servicios conforme a las posibilidades de la ciencia y medios a su alcance en condiciones técnicas adecuadas para el idóneo cumplimiento de su labor.
+* Principio de Capacidad
+  * El auditor debe estar plenamente capacitado para la realización de la auditoría encomendada, teniendo en cuenta que, dada su especialización, a los auditados en algunos casos les puede ser extremadamente difícil verificar sus recomendaciones y evaluar correctamente la precisión de las mismas.
+* Principio de Cautela
+  * El auditor debe en todo momento ser consciente de que sus recomendaciones deben estar basadas en la experiencia que tiene adquirida, evitando que el auditado se embarque en proyectos de futuro fundamentados en simples intuiciones sobre la posible evolución de las nuevas tecnologías de la información.
+* Principio de Comportamiento Profesional
+  * El auditor deberá actuar conforme a las normas, implícitas o explícitas, de dignidad de la profesión y de corrección en el trato personal.
+* Principio de Concentración en el Trabajo
+  * El auditor deberá evitar que un exceso de trabajo supere sus posibilidades de concentración y precisión en cada una de las tareas encomendadas, ya que la saturación y dispersión de trabajos suele a menudo provocar la conclusión de los mismos sin las debidas medidas de seguridad.
+* Principio de Confianza
+  * El auditor deberá facilitar e incrementar la confianza del auditado en base a una actuación de transparencia en su actividad profesional sin alardes científico-técnicos que puedan restar credibilidad a los resultados obtenidos y a las directrices aconsejadas de actuación.
+* Principio de Criterio Propio
+  * El auditor durante la ejecución de la auditoría deberá actuar con criterio propio y no permitir que este esté subordinado al de otros profesionales, aún de reconocido prestigio, que no coincidan con el mismo.
+* Principio de Discreción
+  * El auditor deberá en todo momento mantener cierta discreción en la divulgación de datos, aparentemente inofensivos, que se le hayan puesto de manifiesto durante la ejecución de la auditoría.
+* Principio de Formación Continua
+  * Este principio impone a los auditores el deber y la responsabilidad de mantener una permanente actualización de sus conocimientos y métodos a fin de adecuarlos a las necesidades de la demanda y a las exigencias de la competencia de la oferta.
+* Principio de Fortalecimiento y Respeto a la Profesión
+  * La defensa de los auditados pasa por el fortalecimiento de la profesión de los auditores informáticos, lo que exige un respeto por el ejercicio de la actividad desarrollada por los mismos y un comportamiento acorde con los requisitos exigibles para el idóneo cumplimiento de la finalidad de las auditorías.
+* Principio de No Injerencia
+  * El auditor deberá evitar injerencias en los trabajos de otros profesionales, respetar su labor y eludir hacer comentarios que pudieran interpretarse como despreciativos de la misma o provocar un cierto desprestigio de su calificación profesional, a no ser que, por necesidades de la auditoría, tuviera que explicitar determinadas inidoneidades que pudieran afectar a las conclusiones o el resultado de su dictamen. 
+* Principio de Responsabilidad
+  * El auditor deberá responsabilizarse de lo que haga, diga o aconseje, sirviendo esta forma de actuar como limitación de injerencias extraprofesionales.
+* Principio de Secreto Profesional
+  * El auditor tiene la obligación de guardar en secreto los hechos e informaciones que conozca en el ejercicio de su actividad profesional. Solamente por imperativo legal podrá decaer esta obligación.
+
+# [26-04-22] Auditoría de la Dirección de Informática y Área de Desarrollo
+
+## Auditoría de la Dirección de Informática
+
+### Proceso de Dirección Informática
+
+Es necesaria la **evaluación** independiente de la **función** que **gestiona** las **tecnologías** de la **información**. Las actividades básicas del **proceso** de **dirección** son:
+* **Planificar**
+* **Organizar**
+* **Dirigir**
+* **Controlar**
+
+#### Planificar
+
+Tiene como objetivo **prever** la **utilización** de **tecnologías** de **información**.
+
+El plan principal se denomina **Plan Estratégico** de **Sistemas** de **Información**.
+
+* Debe estar **alineado** con los **objetivos** de la **empresa**.
+* No es responsabilidad exclusiva de la Dirección de Informática, aunque ésta debe impulsar una planificación adecuada y a tiempo.
+* El entorno de la empresa define el plazo del plan. Por lo general, es de 3 a 5 años.
+
+#### Organizar y Dirigir
+
+Se organiza para **estructurar** los **recursos**, **flujos** de **información** y **controles** para **alcanzar** los **objetivos** propuestos en la planificación.
+
+Se establece el **Comité de Informática**, impulsado por la Dirección de Informática, como **lugar** de **encuentro** entre los **informáticos** y los **usuarios**.
+* Presidido por el **director** con **mayor experiencia** dentro de la empresa
+* Las grandes áreas usuarias deberían estar **representadas** al nivel de sus **directores**
+* El **director** de **Auditoría Interna** debería ser **miembro** del Comité
+
+**Funciones** del **comite**:
+* **Aprobación** del **Plan Estratégico** de **Sistemas** de **Información**
+* **Aprobación** de las grandes **inversiones** en **tecnología** de la información
+* Fijación de **prioridades** entre los grandes **proyectos** informáticos
+* Vehículo de **discusión** entre el área **informática** y sus **usuarios**
+* Vigila y realiza el **seguimiento** de la **actividad** del **Departamento** de **Informática**
+
+**Departamento de Informática**
+
+su posición dentro de la empresa debe ser lo suficientemente **alto** en la jerarquía y contar con masa crítica suficiente.
+
+Suele **depender** de la **Dirección General**. En grandes organizaciones, el Director de Informática es miembro del Comité de Dirección.
+
+Las funciones de este departamento son
+
+* **Segregación de Funciones**: funciones descritas y sus responsabilidades claramente delimitadas y documentadas. Evita que un individuo pueda trastornar un proceso crítico.
+* **Aseguramiento de la Calidad**: función organizativa de Aseguramiento de la Calidad independiente. Responde directamente a la Dirección de Informática.
+
+
+Deben existir **estándares** de **funcionamiento** y **procedimientos** que gobiernen la **actividad** del **Departamento** de **Informática** y sus relaciones con los departamentos usuarios.
+Deben estar **documentados**, **actualizados** y ser **comunicados adecuadamente** a todos los departamentos afectados.
+
+Deben existir **descripciones documentadas** de los **puestos de trabajo** dentro de Informática.
+
+En cuanto a la organización y gestion economica, se deben tener en cuenta los siguientes 3 puntos:
+
+* **Presupuestación**: El Departamento de Informática debe tener un **presupuesto económico**, normalmente en base anual.
+* **Adquisición** de **bienes** y **servicios**: Los procedimientos que el Departamento de Informática siga para adquirir los bienes y servicios deben estar **documentados** y **alineados** con los **procedimientos** de **compras** del resto de la **empresa**.
+* **Medida** y **reparto** de **costos**: La Dirección de Informática debe en todo momento **gestionar** los **costos** asociados con la **utilización** de los **recursos** informáticos: **humanos** y **tecnológicos**.
+
+#### Controlar
+
+**Control** y **Seguimiento**: La Dirección tiene la obligación de **controlar** y efectuar un **seguimiento** permanente de las distintas **actividades** del **Departamento**.
+**Cumplimiento** de la **normativa legal**: La Dirección de Informática debe **controlar** que la realización de sus actividades se lleva a cabo **dentro** del **respeto** a la **normativa legal aplicable**. 
+
+## Auditoría del Área de Desarrollo
+
+### Funciones del Área de Desarrollo
+
+* **Planificación** del **área** y **participación** en la **elaboración** del **plan estratégico** de **informática**.
+* **Desarrollo** de **nuevos sistemas**.
+* **Estudio** de **nuevos lenguajes**, **técnicas**, **metodologías**, **estándares**, herramientas, etc. **relacionados** con el **desarrollo** y adopción de los mismos.
+* **Establecimiento** de un **plan** de **formación** para el **personal** asignado al área.
+* **Establecimiento** de **normas** y **controles** para todas las **actividades** que se realizan en el **área** y **comprobación** de su **cumplimiento**.
+
+Se abordará la **auditoría** del área en **dos** grandes **apartados**:
+
+* **Auditoría** de la **organización** y gestión del área de desarrollo.
+* **Auditoría** de **proyectos** de desarrollo de sistemas de información.
+
+Se aplicará la **metodología** propuesta por **ISACA** basada en la **evaluación** de **riesgos**.
+
+### Auditoría de la Organización y Gestión del Área de Desarrollo
+
+Objetivos de Control:
+
+1. El **área** de **desarrollo** debe tener **funciones asignadas** dentro del departamento y una **organización** que le **permita** el **cumplimiento** de las **mismas**.
+2. El **personal** del área de desarrollo debe contar con la **formación adecuada** y estar **motivado** para la **realización** de su **trabajo**.
+3. Si existe un **plan** de **sistemas**, los **proyectos** que se lleven a cabo se **basarán** en **dicho plan** y lo mantendrán actualizado.
+4. La **propuesta** y **aprobación** de **nuevos proyectos** debe realizarse siguiendo **reglas** preestablecidas
+5. La **asignación** de **recursos** a los **proyectos** debe basarse en **reglas** preestablecidas.
+6. El **desarrollo** de **sistemas** de información debe hacerse aplicando **principios** de **ingeniería** del software ampliamente **aceptados**.
+7. Las relaciones con el exterior del departamento tienen que producirse de acuerdo a un procedimiento.
+8. La organización del área debe estar siempre adaptada a las necesidades de cada momento.
+
+
+### Auditoría de Proyectos de Desarrollo de S.I.
+
+La auditoría de un proyecto de desarrollo se puede hacer en dos momentos distintos: a medida que avanza el proyecto y una vez concluido.
+
+Las fases a auditar serán:
+* **Aprobación**, **Planificación** y **Gestión del Proyecto**
+* Auditoría de la Fase de **Análisis**
+* Auditoría de la Fase de **Diseño**
+* Auditoría de la Fase de **Construcción**
+* Auditoría de la Fase de **Implementación**
+
+#### Aprobación, Planificación y Gestión del Proyecto
+
+**Objetivos** de **Control**:
+1. El **proyecto** de **desarrollo** deberá estar **aprobado**, **definido** y **planificado** formalmente.
+2. El **proyecto** se debe **gestionar** de forma que se consigan los **mejores resultados** posibles teniendo en cuenta las restricciones de tiempo y recursos.
+
+#### Auditoría de la Fase de Análisis
+
+La fase de análisis pretende **obtener** un conjunto de **especificaciones** formales que **describan** las **necesidades** de información que deben ser **cubiertas** por el **nuevo sistema** de forma independiente del entorno técnico. Esta fase se divide en dos módulos.
+
+* **Análisis de Requisitos del Sistema** (ARS): En este módulo se **identificarán** los **requisitos** del nuevo sistema, tanto los **funcionales** como los **no funcionales**, se determinarán las posibles soluciones y se elegirá la más adecuada.
+  1. Los **usuarios** y responsables de las unidades a las que afecta el nuevo sistema **establecerán** de forma clara los **requisitos** del mismo.
+  2. En el **proyecto** de desarrollo se utilizará la **alternativa** más **favorable** para conseguir que el sistema cumpla los requisitos establecidos.
+* **Especificación Funcional del Sistema** (EFS): Se elaborará una **especificación funcional detallada** del sistema que sea coherente con lo que se espera de él
+  1. El nuevo sistema debe especificarse de forma completa desde el punto de vista funcional, contando esta **especificación** con la **aprobación** de los **usuarios**.
+
+#### Auditoría de la Fase de Diseño
+
+En la fase de diseño se **elaborará** el conjunto de **especificaciones físicas** del nuevo sistema que servirán de **base** para la **construcción** del mismo. Hay un único módulo.
+* **Diseño Técnico del Sistema** (DTS)
+  1. Se debe definir una **arquitectura física** para el sistema **coherente** con la **especificación funcional** que se tenga y con el entorno tecnológico elegido.
+
+#### Auditoría de la Fase de Construcción
+
+En esta fase se **desarrollarán** y probarán los distintos **componentes** y se pondrán en marcha todos los procedimientos necesarios para que los usuarios puedan trabajar con el nuevo sistema. Estará **basado** en las especificaciones** físicas obtenidas** en la fase de **diseño**. Tiene **dos módulos**:
+* **Desarrollo** de **Componentes** del **Sistema** (DCS)
+  1. Los componentes o módulos deben desarrollarse usando técnicas de programación correctas.
+* **Desarrollo** de **Procedimientos** de **Usuario** (DPU)
+  1. Al término del proyecto, los futuros usuarios deben estar capacitados y disponer de todos los medios para hacer uso del sistema.
+
+#### Auditoría de la Fase de Implementación
+
+En esta fase se realizará la **aceptación** del **sistema** por parte de los **usuarios**, además de las actividades necesarias para la puesta en marcha. Hay un único módulo.
+* **Pruebas, Implementación y Aceptación del Sistema** (PIA)
+  1. El sistema debe ser **aceptado formalmente** por los **usuarios** antes de ser puesto en funcionamiento.
+  2. El sistema se pondrá en **funcionamiento** formalmente y pasará a estar en mantenimiento sólo cuando **haya sido aceptado** y esté preparado todo el entorno en el que se ejecutará.
+
+
+# [03-05-22] Auditando Windows
+
+Muchas organizaciones tienen entornos de dominios de distintos tamaños. Por suerte, hay numerosas herramientas que nos permiten auditar tanto dominios "standalone" como dominios de 10.000 equipos. Sin embargo, auditar un dominio muy grande puede ser desalentador
+
+Equipos "Standalone":
+* Toda la **información** está en el **propio equipo**
+* Es más **simple** para obtener la **información** sobre el **sistema individual**
+* Es más **difícil** **obtener información** sobre un **gran número** de **sistemas individuales**
+
+En un "entorno de dominio":
+* La **seguridad** de **un equipo** está **integrada** con la seguridad del **dominio**.
+* Mucha **información** está ahora **centralizada** a nivel de **dominio**.
+* **Seguridad** aplicada en "**capas**" pueden **complicar** la **auditoría** (y la solución de problemas)
+
+**WMIC** (Windows Management Instrumentation Command-Line): Herramienta desde la CLI que nos permite exponer casi cualquier configuración con el fin de solucionar problemas y automatizar
+
+Algunas configuraciones que nos muestra son:
+
+* Configuración de Red (NIC)
+* Configuraciones de Escritorio
+* Usuarios y Grupos
+* Estado de bloqueo de Contraseñas
+* Información de Configuración del Sistema
+* Logs de Eventos
+
+## Auditoria de Windows - Objetivos
+
+1. Identificar el sistema (SO, tipo, version, HW, particiones)
+   1. systeminfo (CLI)
+   2. winver (UI) 
+2. Parches/Actualizaciones del Sistema Operativo
+   1. Microsoft Baseline Security Analyzer (MBSA, UI) 
+3. Componentes/Servicios Innecesarios
+   1.  nmap
+   2.  openports
+4. Problemas con Usuarios y Grupos
+   1. Net user
+   2. Addusers
+5. Grupos Apropiados
+   1. dsquery
+   2. DumpSec (Somarsoft)
+6. Contraseñas Fuertes
+   1. net accounts
+   2. DumpSec
+7. Requerimientos de Autenticación (El acceso a sistemas debería ser restringido/controlado)
+
