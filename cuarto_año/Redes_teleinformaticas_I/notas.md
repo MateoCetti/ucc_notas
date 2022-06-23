@@ -18,6 +18,16 @@
       - [Binario multinivel](#binario-multinivel)
       - [Bifase](#bifase)
     - [Modulación - Codificación analogica](#modulación---codificación-analogica)
+- [Medios de comunicación](#medios-de-comunicación)
+  - [Medios guiados](#medios-guiados)
+    - [Cable de par trenzado](#cable-de-par-trenzado)
+    - [Cable coaxial](#cable-coaxial)
+    - [Fibra optica](#fibra-optica)
+  - [Medios no guiados](#medios-no-guiados)
+    - [Microondas terrestres](#microondas-terrestres)
+    - [Microondas por satelite](#microondas-por-satelite)
+    - [Ondas de radios](#ondas-de-radios)
+    - [Infrarrojos](#infrarrojos)
 
 # Modelo de comunicaciones
 
@@ -66,6 +76,8 @@ La transmisión de datos se puede clasificar según si es:
 * **Duplex**: permite canales de envío y recepción simultáneos.
 
 El espectro electromagnetico de una señal es el conjunto de frecuencias de la misma. El ancho de banda absoluto es la anchura de dicho espectro. El ancho de banda efectivo (o simplemente **ancho de banda**) es la **banda de frecuencias** que contiene la **mayor parte** de la **energia** de una señal.
+
+![](img/bw.png)
 
 ![](img/espectro_e.png)
 
@@ -184,3 +196,104 @@ La modulación involucra uno o mas parametros de la señal portadora, por lo que
 * **PSK** (phase key shifting)
 
 ![](img/psk.webp)
+
+# Medios de comunicación
+
+En los sistemas de transmisión, el medio de transmision es el **camino fisico** entre el **transmisor** y el **receptor**. Los medios de transmision se clasifican en medios **guiados** y **no guiados**. En ambos casos, la comunicación se lleva a cabo con **ondas electromagneticas**. 
+
+En los medios **guiados**, las ondas se confinan en un medio **solido**, mientras que en los no guiados, las ondas se generan y reciben mediante **antenas**, que reciben y envian dichas ondas a traves de la **atmosfera**.
+
+![](img/medios.png)
+
+## Medios guiados
+
+[ 1 GHz ]
+
+En los medios guiados, la capacidad de transmisión depende drasticamente de la distancia y del tipo de red (punto a punto o multipunto). La calidad de la transmisión dependera tanto de la señal como de las caracteristicas del medio.
+
+### Cable de par trenzado
+
+Este es el medio **mas economico** y usado para las redes de **area local** y comunicación de info digital. Este medio esta compuesto por** pares de cobre** embutidos y **entrecruzados** en forma de **espiral** para **reducir las interferencias** entre los **pares adyacentes** de una **misma envolutura**.
+
+Algunas caracteristicas de este medio son que este es el mas **economico**, y debido a sus distintas categorias (que se logran aumentando la cantidad de trenzas) proporciona **altas velocidades**/capacidades de transferencia de datos. Ademas, su **instalación** es muy **sencilla**.
+
+* **CAT 3**: 10 Mbps - 16 MHz
+* **CAT 5**: 100 Mbps - 100 MHz
+* **CAT 7**: 10 Gbps - 600 MHz
+* **CAT 8**: 40 Gbps - 1200 MHz
+
+Sin embargo, la distancia maxima es **100 metros**, su ancho de banda es muy **limitado** y es muy **suceptible** a las **interferencias**. Para reducir esta suceptibilidad a las interferencias se pueden utilizar los cables **apantallados** o **STP** en donde se reviste al cable con una **malla metalica** que lo proteje de dichas interferencias.
+
+### Cable coaxial
+
+El cable coaxial opera sobre un **rango mayor** de **frecuencias** que el UTP (GHz). Esta compuesto por **dos conductores**, uno exterior y otro interior, ambos regularmente **espaciados** y bien **protegidos**. Debido a esto, este medio es mucho **menos suceptible** a **interferencias** y diafonias que el UTP.
+
+### Fibra optica
+
+La fibra optica es un medio **flexible** y **fino** capaz de confinar un haz de naturaleza **optica**. Este medio tiene una serie de ventajas:
+
+* **Mayor capacidad** (Mayor ancho de banda y velocidades de transmición)
+* **Menor tamaño** y **peso**
+* **Atenuación menor**
+* **Inafectados** por **interferencias**
+
+La fibra optica propaga el haz de luz internamente de acuedo con el principio de la **reflexión total**, este fenomento se produce cuando un rayo de luz atravieza un medio de **indice** de **refracción menor** que el indice de refracción en el que se encuentra, por lo cual se refracta de tal modo que no es capaz de atravezar la supericie entre ambos medios, **reflejandose completamente**. Este fenomeno solo se produce para **angulos** de **incidencia** superiores a un cierto valor critico.
+
+En la fibra optica la luz proveniente de la fuente **penetra** en el **nucleo** **cilindrico**. Los rayos que inciden con angulos **superficiales** se **reflejan** y **propagan** dentro edl nucleo, mientras que para otros angulos los rayos son **absorbidos** por el revestimiento. 
+
+A este tipo de FO se la denomina **multimodal** ya que hay **muchos angulos** para los que se da la **reflexión total**. En este tipo de transmisión existen **multiples caminos** para los haces de luz, cada uno con **diferentes longitudes** y **tiempos de propagación**. Esto **limita** la **velocidad** a la que los datos pueden ser correctamente recibidos y la **distancia** (distancias cortas).
+
+Cuando el redio del nucleo se reduce, la reflexión total se da en un numero menor de angulos. Al **reducir** el **radio** del nucleo a dimensiones del orden de la magnitud de onda, **solo un rayo** puede **pasar** (el rayo axial). Esta propagación **monomodo** proporciona **prestaciones superiores** ya que la distorción multimodal no puede darse y se usa en aplicaciones a **larga distancias**.
+
+![](img/multimodo.png)
+
+## Medios no guiados
+
+En estos medios, la transmisión y recepción se lleva a cabo mediante **antenas** que **radian** y **captan** **energia electromagnetica** al **aire**.
+
+En las transmisiones inalambricas hay 2 configuraciones:
+
+* **Direccional**: La antena emite la energia concentrandola en un haz. El emisor y receptor deben estar perfectamente alineados. (Frecuencias altas, **Microondas**: 2-40 Ghz)
+* **Omnidireccional**: Se emite energia en todas las direcciones, pudiendo la señal ser recibida por varias antenas (frecuencas bajas, ondas de radio: 30 MHz - 1Ghz)
+
+### Microondas terrestres
+
+Se usan antenas parabolicas (3m de diametro) **perfectamente alineadas** a una **altura** considerable del nivel del suelo para conseguir **mayores distancias** entre ellas y eliminar obstaculos en la transisión.
+
+La distancia maxima se calcula mediante la siguiente formula
+
+![](img/d_max_micro.gif)
+
+Donde d es la distancia en [ Km ], h la altura en [ m ] y k un factor de corrección que generalmente vale 4/3
+
+Estos medios sustituyen a la fibra optica ya que **recorren mayores distancias** y necesitan menos repetidores
+
+En las microondas (2 y 40 Ghz) cuanto mayor sea la frecuencia, mayor ancho de banda y por lo tanto mayores velocidades de transmisión.
+
+Para este tipo de transmisiones, tambien hay **atenuación** y esta se mide mediante la sig formula:
+
+![](img/at_micro.gif)
+
+Donde d es la distancia y lamda la longitud de onda, ambas en la misma magnitud. Cabe destacar que en las microondas, la atenuación aumenta con las **lluvias**.
+
+### Microondas por satelite
+
+Un **satelite** de comunicaciones es una **estación** que **retransmite** **microondas**. Se usa como **enlace** entre **dos** o **mas** **receptores** y **transmisores terrestres**. el satelite recibe la señal en una banda de frecuencia (**banda ascendente**) la amplifica o repite y retransmite en otra banda de frecuencia (**canal descendente**).
+
+Para que un satelite funcione con eficacia su **posición** debe de tener una **orbita geoestacionaria** para mantener su posición con respecto a la tierra y **mantenerse alineado** con las **estaciones**.
+
+Si dos satelites usan la misma banda de frecuencias, estos deben estar lo suficientemente separados como para no interferirse entre si.
+
+Debido a las grandes distancias involucradas, hay un **retardo de propagación** que genera problemas a la hora de controlar errores y flujos de transmisión de datos.
+
+### Ondas de radios
+
+Estas son ondas **omnidireccionales**, por lo que no se necesitan antenas parabolicas. Estan ubicadas entre las frecuencias **30 MHz y 1GHz** y son muy usadas para las FM. Este rango de frecuencias es muy adecuado para la difusión simultanea a varios destinos.
+
+Estas ondas son menos sensibles a la atenuación por la lluvia.
+
+La distancia maxima y atenuación se calcula de igual manera que se calculan en las microondas, solo que debido a las logitudes de onda mayores, las ondas de radio sufren **menos atenuación**.
+
+### Infrarrojos
+
+Estas comunicaciones se llevan a cabo mediante transmisores y receptores que **modulan luz infrarroja**. Estos transmisores y receptores deben estar **alineados directamente** o mediante **reflexiones** en determinadas superficies (esta transmisión no puede atravesar paredes).
