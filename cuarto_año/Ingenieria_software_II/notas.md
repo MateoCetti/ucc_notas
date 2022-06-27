@@ -29,6 +29,13 @@
   - [Validación de requerimientos](#validación-de-requerimientos)
   - [Administración de requerimientos](#administración-de-requerimientos)
 - [Diseño](#diseño)
+- [Arquitectura de software](#arquitectura-de-software)
+  - [Que se entiende por arquitectura de software.](#que-se-entiende-por-arquitectura-de-software)
+  - [La importancia de la arquitectura](#la-importancia-de-la-arquitectura)
+  - [Documentacion de la arquitectura](#documentacion-de-la-arquitectura)
+  - [Estilos arquitectonicos](#estilos-arquitectonicos)
+  - [Vistas de la Arquitectura](#vistas-de-la-arquitectura)
+  - [Diseño arquitectonico](#diseño-arquitectonico)
 
 **Profe practico**: Gerardo Fernando Córdoba.
 
@@ -578,3 +585,63 @@ A través del proceso de diseño se evalúa la **calidad**. Se sugiere tres cara
 Tambien existen algunos factores de calidad **externos** e **internos**
 * Factores de calidad **externos**: son esas propiedades del software que pueden ser observadas fácilmente por los **usuarios** (por ejemplo, velocidad, fiabilidad, grado de corrección, usabilidad).
 * Factores de calidad **internos**: tienen importancia para los **ingenieros** del software. Desde una perspectiva técnica conducen a un diseño de calidad alta. Para lograr los factores de calidad internos, el diseñador deberá comprender los conceptos de diseño básicos (Abstracción, Refinamiento, Modularidad, Ocultamiento de la informacion, Independencia funcional, etc.).
+
+# Arquitectura de software
+
+## Que se entiende por arquitectura de software.
+
+La arquitectura no es el software operativo. Es una **representación** que permite 
+* **analizar** la **efectividad** del **diseño** para cumplir los requerimientos establecidos, 
+* **considerar alternativas arquitectónicas** en una etapa en la que hacer cambios al diseño todavía es relativamente fácil y 
+* **reducir** los **riesgos** asociados con la construcción del software. 
+
+La arquitectura de software es la **organización** fundamental de un **sistema** encarnada en sus **componentes**, las **relaciones** entre ellos y el **ambiente** y los **principios** o **restricciones** que orientan su diseño y evolución.
+
+## La importancia de la arquitectura
+
+La arquitectura de software es de especial importancia ya que la manera en que se estructura un sistema tiene un impacto directo sobre la capacidad de este para satisfacer lo que se conoce como los atributos de calidad del sistema.
+
+Además de los atributos de calidad, la arquitectura de software juega un papel fundamental para guiar el desarrollo y sirve como un medio principal de comunicación entre los stakeholders.
+
+Finalmente, los diseños arquitectónicos que se crean en una organización pueden ser reutilizados para crear sistemas distintos. Esto permite reducir costos y aumentar la calidad, sobre todo si dichos diseños han resultado previamente en sistemas exitosos.
+
+## Documentacion de la arquitectura
+
+Hay algunos aspectos a tener en cuenta al momento de documentar la arquitectura:
+
+* No documentar demasiado ya que a veces es inneceseario
+* A veces se trata con incognitas, por lo que es conveniente seguir con otras cuestiones y volver luego
+* La documentación se debe mantener actualizada en todo momento
+* La documentación de la arquitectura se suele llevar a cabo mediante diagramas informales, explicaciones escritas y notas
+
+## Estilos arquitectonicos
+
+Un estilo arquitectonico nos provee de un mecanismo rapido de visualización de una arquitectura o estilo de arquitectura.
+
+## Vistas de la Arquitectura
+
+Una vista es una representación de un conjunto de elementos del sistema y las relaciones asociadas con ellos.
+
+Las diferentes vistas exponen diferentes atributos de calidad en diferentes grados.
+
+Un buen modelo para describir la arquitectura basado en vistas es el modelo 4+1 de Kruchten.
+
+![](img/vistas_arq.png)
+
+Las vistas suelen describir el sistema desde el punto de vista de diferentes interesados, tales como usuarios finales, desarrolladores o directores de proyecto. Las cuatro vistas del modelo son: 
+* **vista lógica**: La vista lógica está enfocada en describir la **estructura** y **funcionalidad** del sistema. Los diagramas UML que se utilizan para representar esta vista son los Diagrama de **Clase**, Diagrama de Comunicación.
+* **vista de desarrollo**: La vista de desarrollo ilustra el sistema de la perspectiva del **programador** y está enfocado en la administración de los **artefactos** de **software**. Esta vista también se conoce como vista de **implementación**. Utiliza el **Diagrama** de **Componentes** UML para describir los componentes de sistema. 
+* **vista de proceso**: La vista de proceso trata los aspectos **dinámicos** del sistema, explica los **procesos** de sistema y cómo se **comunican**. Se enfoca en el **comportamiento** del sistema en **tiempo** de **ejecución**. La vista considera aspectos de concurrencia, distribución, rendimiento, escalabilidad, etc. En UML se utiliza el Diagrama de Actividad o Diagrama de Secuencia para representar esta vista.
+* **vista física**: La vista física describe el sistema desde el punto de vista de un **ingeniero** de **sistemas**. Está relacionada con la topología de **componentes** de **software** en la capa **física**, así como las conexiones físicas entre estos componentes. Esta vista también se conoce como vista de **despliegue**. En UML se utiliza el **Diagrama** de **Despliegue** para representar esta vista.
+
+## Diseño arquitectonico
+
+Cuando comienza el diseño arquitectónico, el software que se va a desarrollar debe **situarse en contexto**, es decir, el diseño debe definir las **entidades externas** (otros sistemas, dispositivos, personas, etc.) con las que **interactúa** el software y la naturaleza de dicha interacción. Esta información por lo general se adquiere a partir del modelo de los requerimientos y de toda la que se reunió durante la ingeniería de éstos. 
+
+Una vez que se ha modelado el contexto y descrito todas las **interfaces externas** del software, se identifica un conjunto de **arquetipos** de arquitectura. Un arquetipo es una abstracción (similar a una clase) que representa un **elemento de comportamiento** del sistema. El conjunto de arquetipos provee una colección de abstracciones que deben modelarse en cuanto a la arquitectura si el sistema ha de construirse, pero los arquetipos por sí mismos no dan suficientes detalles para la implementación.
+
+Por tanto, el diseñador especifica la estructura del sistema, definiendo y **refinando los componentes** del software que implementan cada arquetipo. 
+
+Este proceso sigue en forma **iterativa** hasta que se obtiene una estructura arquitectónica **completa**.
+
+![](img/diseño_arq.png)
