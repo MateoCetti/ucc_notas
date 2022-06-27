@@ -534,4 +534,3 @@ Se **modifica** el **documento** de requerimientos y, en su caso, el **diseño**
 
 
 Los procesos de **desarrollo iterativo**, como la programación extrema, se han diseñado para **hacer frente** a los **requerimientos** que **cambian** durante el proceso de desarrollo. En estos procesos, cuando un usuario propone un cambio en los requerimientos, no se hace a través de un proceso formal de gestión del cambio. Más bien, el usuario tiene que establecer la prioridad del cambio y, si es de alta prioridad, decidir qué característica del sistema que fue planificada para la siguiente iteración debería abandonarse.
->>>>>>> 886d6a99a815e0f2e567bb34cc9de1d339422601

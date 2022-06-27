@@ -28,6 +28,20 @@
     - [Microondas por satelite](#microondas-por-satelite)
     - [Ondas de radios](#ondas-de-radios)
     - [Infrarrojos](#infrarrojos)
+- [Capa 2 OSI - Capa de enlace de datos](#capa-2-osi---capa-de-enlace-de-datos)
+  - [1 - Sincronización](#1---sincronización)
+  - [2 - Control de flujo de datos](#2---control-de-flujo-de-datos)
+    - [Stop and wait](#stop-and-wait)
+    - [Ventana deslizante](#ventana-deslizante)
+  - [3 - Detección de errores](#3---detección-de-errores)
+    - [Control de paridad](#control-de-paridad)
+    - [Cyclick Redundancy Check (CRC):](#cyclick-redundancy-check-crc)
+  - [4 - Control de errores](#4---control-de-errores)
+  - [5 - Direccionamiento](#5---direccionamiento)
+- [Redes lan](#redes-lan)
+  - [Elementos de las lan](#elementos-de-las-lan)
+- [Redes Wlan](#redes-wlan)
+  - [Elementos de las WLan](#elementos-de-las-wlan)
 
 # Modelo de comunicaciones
 
@@ -297,3 +311,110 @@ La distancia maxima y atenuación se calcula de igual manera que se calculan en 
 ### Infrarrojos
 
 Estas comunicaciones se llevan a cabo mediante transmisores y receptores que **modulan luz infrarroja**. Estos transmisores y receptores deben estar **alineados directamente** o mediante **reflexiones** en determinadas superficies (esta transmisión no puede atravesar paredes).
+
+# Capa 2 OSI - Capa de enlace de datos
+
+Esta capa cumple cinco funciones para que una vez que se han vinculado dos o mas equipos mediante la utilización de un medio fisico, podamos dar forma la información tomando un molde que se llama trama o frame y con el establecer la comunicación mas eficientemente posible y libre de errores.
+
+Las funciones que realiza esta capa son las siguientes:
+
+## 1 - Sincronización
+
+Para indicar donde esta el comienzo y fin de cada bloque de datos, cada bloque comienza con un patron de bits especifico y termina con otro.
+
+## 2 - Control de flujo de datos
+
+Si se comienza a transmitir con una velocidad mayor a la que el receptor puede recibir datos, se va a producir overflow en el receptor y se perdera información. Para evitar esto, existen (o conocemos) dos tecnicas de control de datos.
+
+### Stop and wait
+
+El emisor manda un mensaje, el receptor lo confirma y una vez el emisor recibe dicha confirmación, se envia el nuevo mensaje
+
+### Ventana deslizante
+
+El receptor reserva espacio para almacenar W tramas, por lo que el emisor envia W tramas. Estas tramas se etiquetan con un numero de secuencia. El receptor confirma una trama enviando una señal de confirmación en donde se pide el numero de la siguiente trama a recibir, por lo que el emisor emite las siguientes W tramas a partir de la trama pedida.
+
+Este metodo es mejor que el Stop and wait debido a que un mensaje suele estar compuesto por varias tramas.
+
+## 3 - Detección de errores
+
+Otra función es detectar cuando una trama llega con errores al receptor. Para lograr esto se asigna un campo en la trama formado por el resultado obtenido al aplicar un algoritmo entre la trama a enviar y un codigo que poseen los emisores y receptores. Este campo se denomina Frame Check Secuence.
+
+Hay (o conocemos) dos metodos para la detección de errores:
+
+### Control de paridad
+
+Se alade un bit de tal forma que el bloque de datos tenga un numero par o impar de unos (paridad par o impar)
+
+### Cyclick Redundancy Check (CRC): 
+
+El transmisor agrega a una secuencia de n bits otra de k bits de tal forma que n + k sea divisible por algun numero establecido. Luego el receptor realiza esa división y si esta no da resto entonces significa que no hubo error en la transferencia.
+
+El CRC es mejor que el control de paridad ya que en este ultimo en el caso en el que ocurran dos errores en 2 bits distintos de la trama, no se podria detectar que ha ocurrido un error en la transmisión.
+
+## 4 - Control de errores
+
+Las tecnicas empleadas para controlar los errores en el caso que estos se den son las siguientes:
+
+* ARQ (Automatic Repet reQuest) Stop and wait: ANalogo al control de flujo de datos.
+* ARQ Go back to N: Analogo a ventana deslizante
+* ARQ Selective reject: El emisor envia una serie de W tramas y si hay error, el receptor avisa especificamente las tramas con error al transmisor, guardando las demas. El transmisor luego envia solo las tramas que fueron rechazadas.
+
+En una primera instancia, se podria pensar que el Selective reject es mejor que el Go back to N. Sin embargo esto no es asi ya el Selective reject necesita mas memoria para alojar todas aquellas tramas correctas o sin errores, ademas que necesita que el receptor posea una logica adicional para ordenar las tramas, hecho que lo hace menos eficiente.
+
+## 5 - Direccionamiento
+
+Para saber quien envia la trama y hacia donde se dirige se reserva un campo en la trama para escribir las direcciones de origen y destino.
+
+# Redes lan
+
+Las reeds lan a diferencia de las wan son privadas y tienen mayores capacidades. El estandar mas usado es el 802.3
+
+![](img/mac.jpg)
+
+Las velocidades de las lan (entre los dispositivos dentro de dicha red) puede ir desde los 10 Mbps hasta los 1Gbps
+
+Una colision es cuando 2 o mas estaciones comienzan a retransmitir tramas simultaneamente generando interferencias
+
+## Elementos de las lan
+
+Un repetidor prolonga la potencia de la señal para que esta llegue correctamente al receptor (capa 1 OSI)
+
+Un bridge es un dispositivo de interconexion de redes de computadoras que opera en la capa 2 del modelo OSI (reconoce las tramas)
+
+Un switch es un dispositivo que opera en la capa 2 e interconecta 2 o mas dispositivos sin que estos ocupen todo el espacio de la red
+
+# Redes Wlan
+
+Las redes WLan son redes de comunicación de distancias cortas que como medio de comunicación usan radiofrecuencia. El estandar de estas redes es 802.11.
+
+## Elementos de las WLan
+
+**Access point**: Provee a los clientes / dispositivos acceso a las redes wireless
+
+**WNIC**: tarjeta adaptadora de red inalambrica que permite a los dispositivos conectarse a una red inalambrica mediante los AP
+
+**Antenas**: Hilo de material conductor que permite enviar o recibir ondas electromagneticas. La dimension de estas esta directamente relacionada con la longitud de onda de las frecuencias para las que han sido diseñadas. Las antenas se pueden clasificar segun su:
+* Diagrama de radiacióm
+  * Isotropica
+  * Omnidireccional
+  * Direccional
+  * Sectorial
+* Ganancia
+* BW
+* Eficiencia
+
+Modelos de operación de las WLan:
+* Ad-Hoc
+* Infraestructura
+
+Metodos de autenticación:
+* Open system
+* PSK
+* AES
+* Filtro mac
+
+Tipos de cifrado:
+* WEP
+* WPA
+* WPA2
