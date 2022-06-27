@@ -1,7 +1,6 @@
 # Ingenieria de Software 2
 
 - [Ingenieria de Software 2](#ingenieria-de-software-2)
-- [- [[12-04-22] Obtención y analisis de requerimientos](#12-04-22-obtención-y-analisis-de-requerimientos)](#--12-04-22-obtención-y-analisis-de-requerimientos)
 - [[07-03-22] - Modelado y Diagrama de casos de uso](#07-03-22---modelado-y-diagrama-de-casos-de-uso)
   - [Modelo](#modelo)
     - [Herramientas de modelado](#herramientas-de-modelado)
@@ -29,13 +28,7 @@
 - [[26-04-22]](#26-04-22)
   - [Validación de requerimientos](#validación-de-requerimientos)
   - [Administración de requerimientos](#administración-de-requerimientos)
-<<<<<<< HEAD
-- [[12-04-22] Obtención y analisis de requerimientos](#12-04-22-obtención-y-analisis-de-requerimientos)
-=======
-- [[26-04-22]](#26-04-22)
-  - [Validación de requerimientos](#validación-de-requerimientos)
-  - [Administración de requerimientos](#administración-de-requerimientos)
->>>>>>> 886d6a99a815e0f2e567bb34cc9de1d339422601
+- [Diseño](#diseño)
 
 **Profe practico**: Gerardo Fernando Córdoba.
 
@@ -534,3 +527,54 @@ Se **modifica** el **documento** de requerimientos y, en su caso, el **diseño**
 
 
 Los procesos de **desarrollo iterativo**, como la programación extrema, se han diseñado para **hacer frente** a los **requerimientos** que **cambian** durante el proceso de desarrollo. En estos procesos, cuando un usuario propone un cambio en los requerimientos, no se hace a través de un proceso formal de gestión del cambio. Más bien, el usuario tiene que establecer la prioridad del cambio y, si es de alta prioridad, decidir qué característica del sistema que fue planificada para la siguiente iteración debería abandonarse.
+
+# Diseño
+
+El diseño de software agrupa el conjunto de **principios**, **conceptos** y **prácticas** que llevan al desarrollo de un sistema o producto de **alta calidad**. El **objetivo** del diseño es producir un modelo o representación que tenga **resistencia**, **funcionalidad** y **belleza**. 
+
+El diseño del software comienza cuando termina la **primera iteración** de la ingeniería de **requerimientos**. 
+
+La meta del diseño es crear un **modelo** de software que **implantará** correctamente **todos** los **requerimientos** del usuario y causará **placer** a quienes lo **utilicen**.
+
+Los diseñadores del software deben **elegir** entre muchas **alternativas** de diseño y llegar a la solución que mejor se adapte a las necesidades de los participantes en el proyecto.
+
+El proceso de diseño va de una **visión “panorámica**” del software a otra más **cercana** que define el detalle requerido para implementar un sistema.
+
+
+El  diseño se centra en **cuatro áreas** importantes:
+
+* **Datos**: El diseño de datos transforma el **modelo** del **dominio** de información que se crea durante el análisis en las estructuras de datos que se necesitarán para implementar el software. 
+* **Arquitectura**: El diseño arquitectónico **define** la **relación** entre los **elementos estructurales principales** del software, los **patrones** de **diseño** que se pueden utilizar para lograr los requisitos que se han definido para el sistema, y las **restricciones** que afectan a la manera en que se pueden aplicar los patrones de diseño arquitectónicos. 
+* **Interfaces**: El diseño de la interfaz describe la **manera** de **comunicarse** el software dentro de sí mismo, con **sistemas** que **interoperan** dentro de él y con las **personas** que lo **utilizan**.
+* **Componentes**: El diseño a nivel de componentes **transforma** los **elementos estructurales** de la **arquitectura** del software en una **descripción procedimental** de los componentes del software.
+
+El diseño se realiza para obtener una **alta calidad** en el software desarrollado.
+
+Se produce una **especificación** del **diseño** que se compone de los **modelos** del **diseño** que describen, los **datos**, la **arquitectura**, **interfaces** y **componentes**.
+
+En cada etapa se **revisan** los productos del diseño del software, en cuanto a **calidad**, corrección, finalización  y consistencia.
+
+**Ventajas** de realizar diseños de software:
+
+* **Comunicación** con los **stakeholders**. La arquitectura constituye una presentación de alto nivel del sistema que puede usarse como punto de discusión por varios stakeholders.
+* **Análisis** del **sistema**. Hacer explícita la arquitectura del sistema en una etapa temprana del desarrollo del sistema requiere realizar algún análisis. Rendimiento, fiabilidad y mantenibilidad.
+* **Reutilización** a **gran escala**. Un modelo de arquitectura del sistema es una descripción compacta y manejable de cómo se organiza un sistema y cómo interoperan sus componentes.
+
+El **estilo** y estructura particulares elegidos para una aplicación puede, por lo tanto, **depender** de los requerimientos **no funcionales** del sistema:
+
+1. Rendimiento --> Subsistemas
+2. Protección --> Capas  
+3. Seguridad --> Único Subsistema 
+4. Disponibilidad --> Componentes Redundantes
+5. Mantenibilidad --> Componentes Independientes
+
+
+A través del proceso de diseño se evalúa la **calidad**. Se sugiere tres características que funcionan como **guía** para evaluar un **buen diseño**:
+
+* Debe **implementar** **todos los requerimientos** explícitos contenidos en el modelo de requerimientos y dar cabida a todos los requerimientos implícitos que desean los participantes.
+* Debe ser una **guía** legible y comprensible para quienes **generan** el **código** y para los que lo **prueban** y dan el apoyo posterior.
+* Debe proporcionar el **panorama completo** del **software**, y abordar los dominios de los datos, las funciones y el comportamiento desde el punto de vista de la implementación.
+
+Tambien existen algunos factores de calidad **externos** e **internos**
+* Factores de calidad **externos**: son esas propiedades del software que pueden ser observadas fácilmente por los **usuarios** (por ejemplo, velocidad, fiabilidad, grado de corrección, usabilidad).
+* Factores de calidad **internos**: tienen importancia para los **ingenieros** del software. Desde una perspectiva técnica conducen a un diseño de calidad alta. Para lograr los factores de calidad internos, el diseñador deberá comprender los conceptos de diseño básicos (Abstracción, Refinamiento, Modularidad, Ocultamiento de la informacion, Independencia funcional, etc.).
