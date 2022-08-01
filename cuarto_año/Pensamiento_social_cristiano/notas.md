@@ -2,6 +2,7 @@
 
 - [Pensamiento social cristiano](#pensamiento-social-cristiano)
 - [[09-03-22] Introducción](#09-03-22-introducción)
+- [DEPRECATED](#deprecated)
 
 # [09-03-22] Introducción
 
@@ -14,3 +15,5 @@
 * Metodo **Ver**-**Juzgar**-**Actuar**
 
 Es muy comun ver como la iglesia en ciertos casos haciendo uso de esta doctrina social se mete en ciertos aspectos de la vida como la politica que "no le corresponden". Sin embargo, tal como lo hicieron los profetas y jesus en su momento. la iglesia tiene el deber moral de denunciar y actuar al momento de encontrarse con situaciones sociales que atenten contra el proyecto llamado "el reino de Dios" para no volver a repetir la historia como lo hicieron los egipcios en su momento al exclavizar al pueblo Judio.
+
+# DEPRECATED
