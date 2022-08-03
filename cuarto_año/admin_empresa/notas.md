@@ -14,6 +14,9 @@
     - [Teoria general de la administración](#teoria-general-de-la-administración)
   - [Enfoque cuantitativo](#enfoque-cuantitativo)
   - [Enfoque conductal](#enfoque-conductal)
+  - [Enfoque contemporaneo](#enfoque-contemporaneo)
+    - [teoria de sistemas](#teoria-de-sistemas)
+    - [Enfoque de contingencias](#enfoque-de-contingencias)
 
 # Unidad 1 - Administración y Organización
 
@@ -150,4 +153,29 @@ Aunque los tropiezos de los pasajeros que intentan encontrar sus asientos en un 
 
 ## Enfoque conductal
 
-Como sabemos, los gerenles logran que las cosas se hagan, trabajando con personas. Esto explica por qué algunos autores han elegido analizar la administración enfocándose en la gente de una organización. Al campo de estudio que investiga las **acciones** (comportamiento) de la gente en el trabajo se le conoce como **comportamiento organizacional** (CO). Mucho de lo que hacen los gerentes hoy en día cuando manejan personas (motivar, ordenar, dar confianza, trabajar con u n equipo, manej o de conflictos, etcétera), ha surgido de la investigación del CO. 
+Como sabemos, los gerenles logran que las cosas se hagan, trabajando con personas. Esto explica por qué algunos autores han elegido analizar la administración enfocándose en la gente de una organización. Al campo de estudio que investiga las **acciones** (comportamiento) de la gente en el trabajo se le conoce como **comportamiento organizacional** (CO). Mucho de lo que hacen los gerentes hoy en día cuando manejan personas (motivar, ordenar, dar confianza, trabajar con u n equipo, manej o de conflictos, etcétera), ha surgido de la investigación del CO.
+
+![](img/co_pp.png)
+
+Algunos de los **primeros partidarios** de la CO fueron los mostrados en la anterior imagen y concluyeron en las ideas plasmadas en sus respectivos cuadros de texto.
+
+Sin embargo, la contribución más importante al campo del CO provino de los estudios de **Hawthorne**, una serie de estudios llevados a cabo en Western Electric Company Works, en Cicero, illinois. Estos estudios **estimularon** el **interés** de las organizaciones en el **comportamiento humano**.
+
+## Enfoque contemporaneo
+
+Los investigadores en administración comenzaron a analizar lo que ocurría en el entorno que estaba **fuera** de los límites de la organización y no en el interior de la misma. Dos perspectivas contemporáneas de administración forman parte de este enfoque: la de **sistemas** y la de **contingencias**
+
+### teoria de sistemas
+
+Un sistema es un **conjunto** de partes **interrelacionadas** e **interdependientes** dispuestas de tal forma que se produce un **todo unificado**. Los dos tipos básicos de sistemas son cerrados y **abiertos**.
+
+una organización toma elementos (**recursos**) de su entorno y los transforma o procesa como productos que se **distribuyen** nuevamente en el entorno. La organización está "**abierta**" al entorno e interactúa con él.
+
+![](img/sistema.png)
+
+### Enfoque de contingencias
+
+El enfoque de contingencias (algunas veces llamado enfoque de situaciones o situacional) plantea que las organizaciones no son iguales, enfrentan situaciones distintas (contingencias) y requieren diferentes formas de dirección. 
+
+La administración no se basa (y no puede hacerlo) en principios simplistas que puedan aplicarse en todas las situaciones. Situaciones cambiantes y diferentes requieren que los gerentes utilicen enfoques y técnicas distintas.
+
