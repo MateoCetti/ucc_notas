@@ -8,6 +8,12 @@
     - [Funciones gerenciales](#funciones-gerenciales)
     - [Roles gerenciales](#roles-gerenciales)
     - [Habilidades de los gerentes](#habilidades-de-los-gerentes)
+- [Unidad 2 - Historia de la administración](#unidad-2---historia-de-la-administración)
+  - [Enfoque clasico](#enfoque-clasico)
+    - [Administración cientifica](#administración-cientifica)
+    - [Teoria general de la administración](#teoria-general-de-la-administración)
+  - [Enfoque cuantitativo](#enfoque-cuantitativo)
+  - [Enfoque conductal](#enfoque-conductal)
 
 # Unidad 1 - Administración y Organización
 
@@ -99,3 +105,49 @@ Las habilidades **técnicas** son el **conocimiento** específico del **trabajo*
 Las habilidades **humanas** involucran la capacidad de **trabajar bien** con **otras personas**, tanto de manera **individual** como en **grupo**. Debido a que todos los gerentes tienen que ver con personas, estas habilidades son **igualmente importanes** en **todos** los **niveles** de la **administración**. Los gerentes con buenas habilidades humanas obtienen lo mejor de su gente. Ellos saben cómo comunicarse, motivar dirigir e inspirar emusiasmo y confianza.
 
 Por último, las habilidades **conceptuales** son las habilidades que los gerentes utilizan para **pensar** y **conceptualizar** situaciones abstractas y complejas. A través de estas habilidades, los gerentes ven la organización como un todo, comprenden la relación entre diversas subunidades y visualizan cómo encaja la organización en su entorno general. Estas habilidades son las más importames para gerenles de **alto nivel**.
+
+# Unidad 2 - Historia de la administración
+
+En la antiguedad ya se practicaba la administración, por ejemplo al construir la muralla China, las piramides de Egipto, o la ciudad de Venecia. Si bien todos estos antecedentes historicos son importantes para la historia de la administración, hay 2 hechos fundamentales que son considerados parteaguas en dicha historia.
+
+El primero fue la **publicación** de **Adam Smith** llamado "La riqueza de las naciones" donde se planteo las ventajas economicas que las organizaciones y la sociedad obtendrian a partir de la division del trabajo o la especialización laboral
+
+El segundo hecho imponante es la **revolución industrial**. Estas grandes y eficientes fábricas necesitaban a alguien que previera la demanda, que garantizara que los materiales necesarios para la fabricación de productos estuvieran disponibles, que se asignaran tareas a la gente, que dirigiera actividades diarias, etcétera. Ese "alguien " era un **gerente**, y ese gerente necesitaria teorias formales para poder dirigir estas grandes organizaciones. 
+
+A continuación se analizaran los cuatro enfoques principales de la teoría de la administración: clásico, cuantitativo, conductual y contemporáneo
+
+![](img/enfoques_admin.png)
+
+## Enfoque clasico
+
+Las dos teorias principales de este enfoque son: administración cientifica y administración general.
+
+### Administración cientifica
+
+Esta teoria describe el uso de **métodos científicos** para definir "la **mejor forma**" de realizar un **trabajo**. Cuando los gerentes analizan las tareas básicas que deben realizarse, utilizan un estudio de tiempos y movimientos para eliminar movimientos inútiles, contratan a los empleados más calificados para un trabajo, o diseñan sistemas de incentivos basados en resultados, están empleando los principios de la administración científica.
+
+### Teoria general de la administración
+
+Un grupo de escritores analizaron el tema de la administración desde la perspectiva de la **organización** como un **todo**. Este enfoque, conocido como **teoría general de la administración**, se centra más en lo que **hacen** los **gerentes** y en lo que constituye una **buena práctica** de **administración**. Los dos individuos más prominentes detrás de la teoría general de la administración fueron **Henri Fayol** y **Max Weber**. 
+
+Henri Fayol desarrollo los **14 principios** de la administración:
+
+![](img/14_prin.png)
+
+Max Weber desarrolló una teoría de **estructuras** de **autoridad** y **relaciones** basadas en un tipo ideal de **organización** a la cual llamó **burocracia**; una forma de organización caracterizada por la división del trabajo, una jerarquía claramente definida, normas y reglamentos detallados y relaciones impersonales.
+
+![](img/burocracia.png)
+
+## Enfoque cuantitativo
+
+Este enfoque (que también se conoce como ciencia de la administración) hace uso de técnicas cuantitativas para mejorar la toma de decisiones. Por ejemplo:
+
+```
+Aunque los tropiezos de los pasajeros que intentan encontrar sus asientos en un avión pueden ser un motivo de enfado para ellos, éste resulta un problema mayor para las aerolíneas ya que los pasillos se congestionan, y esto hace que el avión tarde más en volver al aire. Basándose en investigaciones sobre geometría del espacio-tiempo, American West Airlines innovó con un proceso único de abordaje llamado "pirámide invertida" que ha ahorrado al menos dos minutos en tiempo de abordaje.
+```
+
+Éste consiste en la aplicación de la **estadística**, de modelos de **optimización** y de **información**, de **simulación** por computadoras y de otras **técnicas** cuantitativas a actividades de **administración**. Por ejemplo, la programación lineal
+
+## Enfoque conductal
+
+Como sabemos, los gerenles logran que las cosas se hagan, trabajando con personas. Esto explica por qué algunos autores han elegido analizar la administración enfocándose en la gente de una organización. Al campo de estudio que investiga las **acciones** (comportamiento) de la gente en el trabajo se le conoce como **comportamiento organizacional** (CO). Mucho de lo que hacen los gerentes hoy en día cuando manejan personas (motivar, ordenar, dar confianza, trabajar con u n equipo, manej o de conflictos, etcétera), ha surgido de la investigación del CO. 
