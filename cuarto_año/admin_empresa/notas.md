@@ -44,6 +44,19 @@
   - [Diseños organizacionales comunes](#diseños-organizacionales-comunes)
     - [Diseños organizacionales tradicionales](#diseños-organizacionales-tradicionales)
     - [Diseños organizacionales contemporaneos](#diseños-organizacionales-contemporaneos)
+- [Capitulo 10 - Administración de recursos humanos](#capitulo-10---administración-de-recursos-humanos)
+  - [Factores externos](#factores-externos)
+  - [Actividades de la administración de RRHH](#actividades-de-la-administración-de-rrhh)
+    - [Identificación y selección de empleados competentes](#identificación-y-selección-de-empleados-competentes)
+      - [Planeación de recursos humanos](#planeación-de-recursos-humanos)
+      - [Reclutamiento y reducción de personal](#reclutamiento-y-reducción-de-personal)
+      - [Selección](#selección)
+    - [Actualización de los empleados en cuanto a habilidades y conocimiento](#actualización-de-los-empleados-en-cuanto-a-habilidades-y-conocimiento)
+      - [Orientación](#orientación)
+      - [Capacitación](#capacitación)
+    - [Retención de empleados competentes](#retención-de-empleados-competentes)
+      - [Manejo del desempeño de los empleados](#manejo-del-desempeño-de-los-empleados)
+      - [Compensación y beneficios](#compensación-y-beneficios)
 
 # Capitulo 1  - Administración y Organización
 
@@ -470,3 +483,95 @@ Los gerentes descubren que en ocasiones los diseños tradicionales no son adecua
 
 `Nota: No importa cuál diseño estructural elijan los gerentes para sus organizaciones, éste debe ayudar a los empleados a hacer su trabajo de la mejor forma posible (lo más eficiente y eficaz qu e se pueda). La estructura debe apoyar y ayudar a los miembros de la organización cuando realicen el trabajo de la empresa. Después de lodo, la estructura es simplememe un medio para llegar a un fin.`
 
+# Capitulo 10 - Administración de recursos humanos
+
+La administración de recursos humanos es importante por tres razones. 
+* Puede ser una importante fuente de ventajas competitivas
+* es una parte importante de las estrategias de la organización
+* la manera en que una organización trata a su gente afecta en gran manera su desempeño.
+  
+`Nota:  A las prácticas laborales que llevaron a mejorar tanto el desempeño laboral individual como organizacional se les conoce como prácticas laborales de alto rendimiento`
+
+Incluso si una organización no utiliza prácticas laborales de alto rendimiento, existen **actividades específicas** en la administración de recursos humanos que se deben **llevar a cabo** para **garantizar** que la organización cuente con **personal calificado** para realizar el trabajo que debe hacerse:
+
+![](img/rrhh_act.png)
+
+Antes de analizar detalladamente estas actividades, es necesario revisar los **factores externos** que **afectan** al proceso de la administración de recursos humanos.
+
+## Factores externos
+
+* Un **sindicato** es una organización que **representa** a los **trabajadores** y busca proteger sus intereses a través de la negociación colectiva. En las organizaciones sindicalizadas, muchas **decisiones** de la **administración** de **RH** las dictan las **negociaciones colectivas**, las cuales por lo general definen asuntos como:
+  * Las fuentes de reclutamiento
+  * Los criterios de contratación
+  * Las promociones y despidos
+  * La elegibilidad de capacitación
+  * Las prácticas disciplinarias.
+  * etc.
+* Las prácticas de la administración d e RH de una organización se ven afectadas por las **leyes gubernamentales** de un país.
+* **Tendencias demográficas**: Ej: Tendencias acerca de cuando las personas suelen retirarse / jubilarse.
+
+## Actividades de la administración de RRHH
+
+### Identificación y selección de empleados competentes
+
+#### Planeación de recursos humanos
+
+proceso mediante el cual los gerentes se aseguran de contar con el número **correcto** de **personas** adecuadas, en los lugares apropiados y en los momentos oportunos. A través de la planeación, las organizaciones evitan la **escasez** o **abundancia** repentina de personal.
+
+La planeación de RH supone dos pasos:
+
+* **Evaluación actual**: comienza la planeación de RH con un **inventario** de los **empleados actuales**  y un **analisis** de **puestos** (una evaluación que define el puesto y el comportamiento necesario para realizarlo)
+* **Cumplimiento de necesidades futuras**: Las necesidades futuras de HR se determinan mediante la misión y las estrategias de la organización.
+
+#### Reclutamiento y reducción de personal
+
+Si hay vacantes de empleo, los gerentes deben utilizar la información obtenida durante el **análisis** de **puestos** para que los guíe durante el **reclutamiento**; es decir, localizar, identificar y atraer a los candidatos más capaces. Por otro lado, si la planeación de HR muestra un excedente de empleados, es posible que los gerentes deseen reducir la furza de trabajo de la organización a través de la **reducción** de **personal**.
+
+La mejor forma de identificar a los mejores candidatos para el **reclutamiento** es la **referencia laboral**, ya que los empleados actuales conocen tanto el trabajo como a la persona recomendada, y tienden a dar referencias de los candidatos que están bien calificados. Además, sienten que su propia reputación está en riesgo, por lo que solamente recomiendan a aquellos en quienes confían que no los harán quedar mal. 
+
+#### Selección
+
+Una vez que tenga un grupo de candidatos, el siguiente paso en el proceso de la administración de RH es la **selección**, esto tiene que ver con predecir cuáles candidatos tendrán éxito si son contratados.
+
+Las herramientas de selección más conocidas incluyen los **formatos** de **solicitud**, **pruebas escritas** de simulación del desempeño, **entrevistas**, **investigaciones** de **empleos anteriores** y, en algunos casos, **exámenes físicos**.
+
+`Nota: Para aumentar la satisfacción del empleado y reducir la rotación de personal, los gerentes deben considerar el uso de una sinopsis de trabajo realista (STR), la cual incluye tanto la información positiva como la negativa d el puesto y de la compañía.`
+
+### Actualización de los empleados en cuanto a habilidades y conocimiento
+
+#### Orientación
+
+Una persona que comienza en un nuevo puesto necesita una **introducción** a su **trabajo** y a la **organización**. A esta introducción se le llama **orientación**.
+
+Existen dos tipos de orientación. La orientación sobre la **unidad de trabajo** familiariza al empleado con las metas de la unidad de trabajo, clarifica la manera en que su trabajo contribuye con las metas de la unidad, e incluye una presentación con sus nuevos compañeros. 
+
+La **orientación organizacional** informa a un empleado nuevo respecto de las metas de la compañía, su historia, filosofía, procedimientos, y reglas. Debe incluir tambié n importantes políticas de RH y tal vez incluso un recorrido por las instalaciones.
+
+La orientación exitosa da como resultado u na transición de afuera hacia adentro que hace que el empleado se sienta cómodo e integrado, reduce la posibilidad de un bajo desempeño, así como la probabilidad de una renuncia sorpresiva a solamente una o dos semanas de haber iniciado en el puesto.
+
+#### Capacitación
+
+La capacitación de los empleados es una importante actividad de la administración de
+RH. Los gerentes son responsables de la decisión del tipo de capacitación que requieren los empleados, cuándo lo necesitan, y qué forma debe tomar la capacitación. 
+
+`Nota: Existen distintos tipos y metodos de capacitación aplicables que se amoldan a distintos tipos de organizaciones. (Tipos: generales y especificos)(Metodos: Tradicionales y tecnologicos)`
+
+![](img/metodos_cap.png)
+
+### Retención de empleados competentes
+
+Cuando una organización ha invertido una cantidad de dinero significativa en el reclutamiento, selección, orientación y capacitación de los empleados, los quiere conservar. Las dos actividades administrativas que ayudan con esta tarea son las siguientes:
+
+#### Manejo del desempeño de los empleados
+
+Los gerentes necesitan saber si los empleados realizan su trabajo de modo eficiente y efectivo o si es necesaria una mejora. Para ello se establecen los estándares de desempeño utilizados para evaluar el desempeño del empleado
+
+#### Compensación y beneficios
+
+El desarrollo de un sistema de compensación efectivo y apropiado es una parte importante del proceso de la administración de RH. Puede ayudar a atraer y retener a individuos competentes y talentosos que ayuden a la organización a lograr su misión y sus metas.
+
+La compensación de la organización puede incluir muchos tipos diferentes de incentivos, como sueldos y salarios base, sueldos y salarios adicionales, pagos como incentivos y otros beneficios y servicios
+
+![](img/incentivos.png)
+
+`Nota: El acoso sexual se define como cualquier acción o actividad de naturaleza sexual que afecta explícita o implícitamente el empleo de un individuo, su desempeño o su entorno de trabajo.`
