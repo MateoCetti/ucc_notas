@@ -36,6 +36,14 @@
   - [Tipos de organizaciones internacionales](#tipos-de-organizaciones-internacionales)
   - [Como se internacionalizan las empresas?](#como-se-internacionalizan-las-empresas)
   - [Administración en un entorno global](#administración-en-un-entorno-global)
+- [Capitulo 9 - Estructura y diseño organizacional](#capitulo-9---estructura-y-diseño-organizacional)
+  - [Modelos de diseño organizacional](#modelos-de-diseño-organizacional)
+    - [Organización mecanicista](#organización-mecanicista)
+    - [Organización organica](#organización-organica)
+    - [Factores de contingencia](#factores-de-contingencia)
+  - [Diseños organizacionales comunes](#diseños-organizacionales-comunes)
+    - [Diseños organizacionales tradicionales](#diseños-organizacionales-tradicionales)
+    - [Diseños organizacionales contemporaneos](#diseños-organizacionales-contemporaneos)
 
 # Capitulo 1  - Administración y Organización
 
@@ -52,7 +60,10 @@
 * Con permanente intercambio con el **medio ambiente**:
   * macroambiente y ambiente intermedio
 
+**Organizar**: distribuir y estructurar el trabajo para cumplir con los objetivos de la organización
+
 ![](img/caracteristicas_org.png)
+
 
 Una organización tiene un **propósito definido**. Este propósito generalmente se expresa a través de objetivos que la organización espera cumplir. Segundo, cada organización está **formada** por **personas**. Cuenta con ellas para realizar el trabajo necesario para que la organización logre sus metas. Tercero, todas las organizaciones crean una **estructura deliberada** dentro de la cual los miembros realizan su trabajo. Esa estructura puede
 ser abierta y flexible, sin debe res laborales específicos o un estricto apego a acuerdos de trabjo explícitos.
@@ -386,3 +397,76 @@ Cualquier gerente que se encuentre en un **nuevo país** enfrenta **desafíos**.
   *  **tasas de inflación**: Los gerentes tienen que dar seguimiento a las tendencias de la inflación para que puedan prever posibles cambios en las políticas monetarias de un país y tomar buenas decisiones.
   *  **diversas políticas** de **impuestos**:  Los gerentes necesitan información exacta sobre las reglas fiscales de los países en que operan para minimizar las obligaciones fiscales generales de un negocio. 
 * Entorno **cultural**:  las organizaciones tienen diferentes culturas. La **cultura nacional** es el conjunto de **valores** y **actitudes** que comparten los **individuos** de un **país** específico, el cual define su **comportamiento** y creencias sobre lo que es importante. Para los gerentes es de suma importancia evaluar esta cultura debido a que la cultura nacional tiene mucho mas peso sobre los empleados de un pais que la cultura organizacional de la empresa en la que trabajan. Para evaluar estas culturas al momento de ser gerente en un pais externo, hay distintos esquemas como el de Hofstede, GLOBE, entre otros.
+
+# Capitulo 9 - Estructura y diseño organizacional
+
+La **estructura organizacional** es la distribución formal de los puestos de una organización (**organigrama**). Cuando los gerentes crean o **cambian** la estructura, se involucran en el **diseño organizacional**, un proceso que implica decisiones con respecto a **seis elementos** clave:
+* **especialización** del **trabajo**: **dividir** las actividades laborales en tareas **separadas**. Cada empleado se especializa en hacer una parte de una actividad en lugar de hacerla toda, para aumentar los resultados. (actualmente se divide el trabajo, pero no demasiado como para generar fatiga y/o lesiones)
+* **departamentalización**: Una vez definido qué tareas se llevarán a cabo y quiénes las realizarán, es necesario agrupar las actividades laborales comunes para que el trabajo se realice de manera coordinada e integrada. La **departamentalización** es la forma en que se agrupan los puestos. (Actualmente se "departamentizan" las actividades "por clientes")
+* **cadena** de **mando**: la línea de autoridad que se extiende de los niveles más altos de la organización hacia los más bajos, lo cual especifica quién le reporta a quién (Actualmente se hacer reuniones con personal de distintos niveles organizacionales).
+  * **Autoridad**: La autoridad se refiere a los derechos inherentes a una posición gerencial para decirle a la gente qué hacer y esperar que lo haga.
+  * **responsabilidad**: los empleados asumen una obligación para realizar cualquier tarea asignada.
+  * **unidad de mando**:una persona debe reportarle sólo a un gerente
+* **tramo** de **control**: ¿A cuántos empleados puede dirigir un ge rente de forma eficiente y e ficaz? (Actualmente hay tramos mas grandes, considerando que los empleados son autosuficientes y capacitados para tomar desiciones para la empresa por si solos, haciendo que los gerentes se puedan enfocar mas en el cliente)
+* **centralización** y **descentralización**: (Actualmente las empresas se van del lado de la descentralización, de nuevo por empleados altamente capacitados)
+  * **Centralización**: es el grado en que la toma de decisiones se da en los niveles **superiores** de la organización.
+  * **Descentralización**: cuanta más información proporcionan los empleados de niveles inferiores o de hecho tomen decisiones, más descentralizada está.
+* **formalización**: qué tan estandarizados están los trabajos de una organización y hasta qué grado las reglas y procedimiemos guían el comportamiemo de los empleados. (Actualmente hay menos formalización, dandole cierto grado de libertad al empleado)
+
+![](img/organigrama_1.png)
+
+![](img/des-centralizacion.png)
+
+## Modelos de diseño organizacional
+### Organización mecanicista
+
+estructura **rígida** y muy controlada, que se caracteriza por una gran **especialización**, departamentalización **rígida**, **limitado tramo de control**, **alta formalización**, una red de información limitada (en su mayor parte **comunicación hacia abajo**), y **poca participación** de los **empleados** de niveles **inferiores** en la toma de **decisiones**.
+
+### Organización organica
+
+El otro modelo de diseño organizacional es el de una **organización orgánica**, la cual es una estructura muy **adaptable** y **flexible**. Las organizaciones orgánicas pueden tener trabajos especializados, pero dichos trabajos **no** están **estandarizados** y pueden **cambiar** según se necesite. El trabajo se organiza frecuentemente en torno a **equipos** de **empleados**. El **personal** está muy **capacitado**; cuenta con **autoridad** para manejar varias actividades y problemas; requiere reglas formales mínimas, y poca supervisión directa. 
+
+![](img/modelos_organizacionales.png)
+
+### Factores de contingencia
+
+¿Cuándo es preferible una estructura mecanicista y cuándo es más apropiada una orgánica? Veamos los principales **factores de contingencia** que influyen en esta elección:
+
+* **Estrategia** de la **organización**: la flexibilidad y el libre flujo de información de la estructura orgánica funciona bien cuando una organización busca innovaciones significativas y únicas. La organización mecanicista, con su eficiencia, estabilidad y estrechos controles, funciona mejor para compañías que quieren conu'olar de cerca los costos.
+* **Tamaño**:  Las grandes organizaciones (por lo general las que tienen más de 2,000 empleados) tienden a presentar mayor especialización, departamentalización, centralización y reglas y normas que las organizaciones pequeñas.
+* **Tecnología**: se dividió las empresas en tres categorías distintas de tecnología que tenían niveles crecientes de complejidad y sofisticación. 
+  * **Producción de unidades**, describió la producción de elementos en unidades o pequeños lotes. (organica)
+  *  **Producción masiva**, describió la manufactura de grandes lotes (mecanicista). 
+  *  **Producción por procesos**, incluyó la producción por procesos continuos (organica). 
+* **Grado** de **incertidumbre** del **entorno**: En entornos sencillos y estables, los diseños mecanicistas pueden ser más efectivos. Por otra parte, a mayor in certidumbre, la organización necesita más la flexibilidad de un diseño orgánico.
+
+## Diseños organizacionales comunes
+
+Para tomar decisiones esU"ucturales, los geren tes tienen algunos diseños comunes de dónde elegir: los tradicionales y otros más contemporáneos. 
+
+### Diseños organizacionales tradicionales
+
+Estos son mas mecanicistas que los contemporaneos:
+
+* Estructura **simple**: diseño organizacional con una departamentalización baja, amplios tramos de control, autoridad centralizada en una sola persona y poca fonnalización.
+* Estructura **funcional**:agrupa especialidades ocupacionales similares o relacionadas. Podemos considerar esta estructura como una departamentalización funcional aplicada a toda una organización.
+* Estructura **divisional**: es una estructura organizacional formada por unidades o divisiones de negocios separadas. En esta estructura cada división tiene autonomía limitada, con un gerente divisional que tiene autoridad sobre su unidad y es responsable de su desempeño.
+
+![](img/estructuras_org.png)
+
+### Diseños organizacionales contemporaneos
+
+Los gerentes descubren que en ocasiones los diseños tradicionales no son adecuados para el entorno actual, cada vez más dinámico y complejo , En su lugar, las organizaciones necesitan ser delgadas, flexibles e innovadoras; es decir, necesitan ser más orgánicas, entonces, los gerentes están encontrando formas creativas para estructurar y organizar el trabajo:
+
+* Estructuras de **equipo**:  toda la organización está formada por **equipos** de trabajo que hacen el trabajo de la empresa. En esta estructura, el otorgamiento de **facultades** de **decisión** a los empleados es crucial, ya que **no existe** una **línea** de **autoridad gerencial** de arriba hacia abajo. En su lugar, los equipos de empleados diseñan y hacen el trabajo de la forma en que creen que es mejor, pero también son responsables de los resultados del desempeño laboral en sus respectivas áreas (Ej: Google).
+* Estructuras **matricial** y de **proyectos**:
+  * Estructura **matricial**:  las especialidades de los distintos departamentos funcionales trabajan en proyectos que son dirigidos por un gerente de proyecto. En este diseño los empleados tienen dos gerentes. 
+    * El **gerente** de **proyecto** tiene la autoridad sobre los miembros funcionales que forman parte de su equipo de proyecto en áreas relacionadas con los objetivos del proyecto.
+    * Las decisiones sobre ascensos, recomendaciones de salarios y revisiones anuales son responsabilidad del **gerente funcional**. 
+  * Estructura de **proyectos**:  los empleados trabajan continuamente en proyectos. No hay departamentalización o una jerarquía organizacional rígida que re trase la toma de decisiones o el inicio de actividades.
+* La organización **sin límites**: organización cuyo diseño no está definido o restringido por límites horizontales, verticales o externos
+
+![](img/estructuras_cont.png)
+
+`Nota: No importa cuál diseño estructural elijan los gerentes para sus organizaciones, éste debe ayudar a los empleados a hacer su trabajo de la mejor forma posible (lo más eficiente y eficaz qu e se pueda). La estructura debe apoyar y ayudar a los miembros de la organización cuando realicen el trabajo de la empresa. Después de lodo, la estructura es simplememe un medio para llegar a un fin.`
+
