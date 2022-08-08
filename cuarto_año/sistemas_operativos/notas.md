@@ -11,6 +11,14 @@
   - [Jerarquia de memoria](#jerarquia-de-memoria)
   - [Memoria cache](#memoria-cache)
   - [Tecnicas de comunicación de E/S](#tecnicas-de-comunicación-de-es)
+- [Capitulo 2 - Introducción a los SO](#capitulo-2---introducción-a-los-so)
+  - [Objetivos y funciones de los SO](#objetivos-y-funciones-de-los-so)
+  - [Evolución de un SO __TODO__](#evolución-de-un-so-todo)
+    - [Procesamiento serie](#procesamiento-serie)
+    - [Sistemas en lotes sencillos](#sistemas-en-lotes-sencillos)
+      - [Monoprogramación](#monoprogramación)
+      - [Multiprogramación](#multiprogramación)
+    - [Entornos compartidos](#entornos-compartidos)
 
 # Introducción
 
@@ -169,3 +177,65 @@ Hay tres técnicas para llevar a cabo las operaciones de E/S:
 • **Acceso directo a memoria** (DMA). Cuando el procesador desea leer o escribir un bloque de datos, genera un mandato al módulo de **DMA**. A continuación, el procesador continúa con otro trabajo. Ha delegado esta operación de E/S al módulo de DMA, que se ocupará de la misma. El módulo de DMA **transferirá** el bloque completo de datos, palabra a palabra, hacia la **memoria** o desde ella **sin pasar** a través del **procesador**. Por tanto, el procesador solamente está involucrado al **principio** y al **final** de la transferencia
 
 ![](img/tecnicas_es.png)
+
+# Capitulo 2 - Introducción a los SO 
+
+## Objetivos y funciones de los SO
+
+Un **sistema operativo** es un **programa** que:
+* **Controla** la **ejecución** de **aplicaciones** y **programas** 
+* Actua como **interfaz** entre las **aplicaciones** y el **hardware** del computador.
+* "Lo primero que arranca cuando arranca la PC (BIOS)"
+
+Se puede considerar que un sistema operativo tiene los siguientes tres objetivos:
+
+*  **Facilidad de uso**: Un sistema operativo **facilita** el **uso** de un computador.
+* **Eficiencia**: Un sistema operativo permite que los **recursos** de un sistema de computación se puedan **utilizar** de una manera **eficiente**.
+* Capacidad para **evolucionar**: Un sistema operativo se debe construir de tal forma que se puedan desarrollar, probar e **introducir nuevas funciones** en el sistema sin interferir con su servicio.
+
+![](img/niveles_SI.png)
+
+Algunos de los servicios que ofrece el SO son:
+
+* **Desarrollo** de programas
+* **Ejecución** de programas
+* Acceso a dispositivos de **E/S**.
+* Acceso controlado a los **ficheros**.
+* Acceso al **sistema**.
+* **Detección** y **respuesta** a **errores**
+  * Errores de HW
+    * Internos
+    * Externos
+  * Errores de SW
+    * Division por cero
+    * Acceso prohibido a memoria
+* **Contabilidad** (estadistica)
+  * Recoger estadisticas
+  * Supervisar su rendimiento
+  * Utilizado para anticiparse a las mejoras futuras
+  * Utilizando a los usuarios de cuotas
+
+¿Se puede decir que es el sistema operativo quien controla el transporte, almacenamiento y procesamiento de los datos? Desde un punto de vista, la respuesta es afirmativa. **Gestionando** los **recursos** del **computador**, el sistema operativo tiene el control de las **funciones básicas** del mismo.
+ 
+El sistema operativo deja el control para que el procesador pueda realizar trabajo «útil» y de nuevo retoma el control para permitir al procesador que realice la siguiente pieza de trabajo.
+
+![](img/so_recursos.png)
+
+**Nucleo** / **kernel**: Una porción del sistema operativo se encuentra en la **memoria principal**. Contiene las funciones del sistema operativo más frecuentemente utilizadas y, en cierto momento, otras porciones del sistema operativo actualmente en uso. El resto de la memoria principal contiene programas y datos de usuario.
+
+Un sistema operativo importante debe evolucionar en el tiempo por las siguientes razones:
+* Actualizaciones de hardware más nuevos tipos de hardware.
+* Nuevos servicios
+* Resolución de fallos
+
+## Evolución de un SO __TODO__
+
+### Procesamiento serie
+
+### Sistemas en lotes sencillos
+
+#### Monoprogramación
+
+#### Multiprogramación
+
+### Entornos compartidos

@@ -2,7 +2,8 @@
 
 - [Economia](#economia)
 - [Introducción](#introducción)
-- [Unidad 1 - Introducción a la economia](#unidad-1---introducción-a-la-economia)
+- [TODO: Unidad 1 - Introducción a la economia](#todo-unidad-1---introducción-a-la-economia)
+- [Unidad 2 - Teoria de la produccion y costos](#unidad-2---teoria-de-la-produccion-y-costos)
 
 # Introducción
 
@@ -11,7 +12,7 @@
 * Lic. Andres Rabinovich (1945525@ucc.edu.ar) -> practico
 * John Henry Martinez (9305558@ucc.edu.ar) -> practico
 
-# Unidad 1 - Introducción a la economia
+# TODO: Unidad 1 - Introducción a la economia
 
 Los ingenieros somos parte del aparato productivo de un pais
 
@@ -32,4 +33,24 @@ factores de prodiucción:
 * Capital
 * Recursos naturales
 
+
+economia
+
 microeconomia (unidad 1, 2 y 3) vs macroeconomia
+
+costo de oportunidad
+
+escasez
+
+incentivos
+
+flujo circular
+
+conflictos
+
+Frontera de posibilidades de producción
+
+modelo
+
+# Unidad 2 - Teoria de la produccion y costos
+
