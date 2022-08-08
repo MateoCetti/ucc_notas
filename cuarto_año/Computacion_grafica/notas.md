@@ -2,6 +2,7 @@
 
 - [Notas - Computación grafica](#notas---computación-grafica)
 - [[11/3/22] - Introduccion](#11322---introduccion)
+- [Deprecated](#deprecated)
 
 # [11/3/22] - Introduccion
 
@@ -34,7 +35,3 @@ PNG: Guarda la imagen en la calidad original y permite guardar el factor ALPHA p
 Nota: DCT JPEG COMPRESSION
 
 # Deprecated
-
-```
-hola que ase
-```
