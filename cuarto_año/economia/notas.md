@@ -25,6 +25,10 @@
   - [Costos - Isocostos](#costos---isocostos)
     - [Eficiencia economica](#eficiencia-economica)
     - [Sendero de expanción](#sendero-de-expanción)
+  - [Costos](#costos)
+    - [Corto plazo](#corto-plazo)
+    - [Largo plazo](#largo-plazo)
+  - [Función de oferta](#función-de-oferta)
 
 # Introducción
 
@@ -271,3 +275,73 @@ La condición para minimizar los costos se alcanza cuando la razón entre los pr
 ### Sendero de expanción
 
 ![](img/sendero_exp.png)
+
+## Costos
+
+### Corto plazo
+
+EL **COSTO** viene determinado por el **valor** de los **factores** utilizados por la empresa para producir el bien. Costo: sacrificio de recurso productivo
+
+El **costo económico** considera el **costo de oportunidad** de todos los recursos utilizados, esto es, lo que todos los recursos podrían obtener en su mejor uso alternativo. (incluye tanto los costos explícitos como los implícitos)
+
+* Los **costos fijos** (CF), son los costos de los **factores fijos** de la empresa y, por lo tanto, a corto plazo son **independientes** del nivel de **producción**. 
+* Los **costos variables** (CV), dependen de la **cantidad** empleada de los **factores variables** y, por lo tanto, del nivel de **producción**.
+* Los **costos totales** (CT) son iguales a los costos **fijos** mas los costos **variables** C T = C F + C V
+
+![](img/costos.png)
+
+LOS **COSTOS MEDIOS** son los costos por unidad de producción.
+
+* El costo **fijo** medio (CFMe), es el cociente entre el **costo fijo** (CF) y el nivel de **producción** CFMe=CF/Q. La curva del costo fijo medio (CFMe) muestra como este costo disminuye conforme aumenta la producción.
+* El costo **variable** medio (CVMe), es el **costo variable** (CV) dividido por el nivel de **producción** CVMe=CV/Q.
+* El costo **total** medio (CTMe), es el **costo total** (CT = CF + CV) dividido por el numero de **unidades producidas**: CTMe=CT/Q=CFMe+CVMe. Nos dice lo que cuesta en promedio cada unidad de producto.
+
+Las curvas CTMe y CVMe tienen forma de “U”, lo que se explica, por la existencia de rendimientos **crecientes** en una **primera fase** y **decrecientes** en una **segunda** fase. Lo contrario de lo que ocurre con la curva de producto medio
+
+![](img/costos_medios.png)
+
+EL **COSTO MARGINAL** (CMg) es el **costo adicional** ligado a la **producción** de **una unidad adicional** de un bien. CMg=DCT/DQ.
+
+![](img/costo_marginal.png)
+
+La curva de costos marginales ha de cortar la curva de costos medios en su **mínimo**. 
+
+Si la producción de una unidad adicional hace disminuir el costo medio, el costo marginal será inferior al costo medio 
+
+si la producción de una unidad adicional hace que aumenten los costos medios, el costo de esa unidad adicional (costo marginal) será mayor que el costo medio
+
+### Largo plazo
+
+A largo plazo, la empresa tiene tiempo suficiente, dados unos precios concretos de los factores, paraajustar la cantidad empleada de la totalidad de los factores de producción, de modo que no existes factores fijos.
+
+La **curva de costos totales de largo plazo** (CTL), es la envolvente de las curvas de costos totales a corto plazo, en el mínimo nivel de costo para cada nivel de producción
+
+![](img/ctl.png)
+
+La **curva de costo medio de largo plazo** (CMeL) muestra el **costo medio mínimo** de producción cuando **todos** los **factores productivos** son totalmente **variables**. (el costo medio mínimo de producir cada cantidad).
+
+A cada tamaño de la planta le corresponde una curva de costo total medio de corto plazo, que muestra los costos medios de producción, utilizando un tamaño dado de la planta y variando las cantidades de factor variable. Debido a que en el largo plazo la empresa tiene mas flexibilidad, los costos medios de corto plazo están por encima de los costos medios de largo plazo. (curva **envolvente**)
+
+![](img/cmel.png)
+
+Al hablar de **Economía de escala**, se hace referencia a propiedad según la cual el **costo medio** a **largo plazo** **disminuye** conforme se **incrementa la producción**. Sin embargo, no debe olvidarse que al hablar de Economía de escala nos estamos refiriendo a la función de producción de la empresa. La curva de costos medios está relacionada con los costos de producción, que dependen de la función de producción:
+
+* Si un **aumento** en las **cantidades producidas**, requiere un incremento **menos que proporcional** en los factores de producción, producirá una **disminución** en los **costos medios** y se dice que existen **rendimientos crecientes** o economía de escala. (a mayor Q, menor CMeL);
+* Si un aumento en las cantidades producidas, requiere un incremento **mas que proporcional** en los factores de producción, producirá un **aumento** en los **costos medios** y existen rendimientos decrecientes o **deseconomías de escala** (a mayor Q, mayor CMeL)
+* Si un aumento en las cantidades producidas, requiere un incremento se la **misma proporción** en los factores de producción, **no producirá cambios** en los costos medios y existen rendimientos de escala (a mayor Q, igual CMeL)
+
+![](img/costos_escala.png)
+
+La **curva de costo marginal de largo plazo** (CMgL) muestra el **costo adicional** necesario para obtener **una unidad más de producción** cuando a todos los factores son totalmente variables, de forma que estos se pueden modificar óptimamente a fin de minimizar costos
+
+La curva de CMgL corta en su **mínimo** la curva de CMeL, coincidiendo, obviamente, con un determinado mínimo de las curvas de corto plazo
+
+![](img/CMgL.png)
+
+La curva de CMgL tiene la misma relación con la CMeL, que la curva de costo marginal de corto plazo con la curva de costo total medio de corto plazo. Así, cuando la curva CMgL se encuentra por **debajo** de CMeL, esta es **descendente**, mientras que si se encuentra por **encima**, la curva CMeL es **ascendente**.
+
+## Función de oferta
+
+![](img/oferta.png)
+
+![](img/oferta_desplazo.png)
