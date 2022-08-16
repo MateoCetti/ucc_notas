@@ -21,6 +21,8 @@
     - [Sistemas en lotes sencillos](#sistemas-en-lotes-sencillos)
     - [Sistemas en lotes multiprogramados](#sistemas-en-lotes-multiprogramados)
     - [Sistemas de tiempo compartido](#sistemas-de-tiempo-compartido)
+  - [Principales logros](#principales-logros)
+    - [Procesos](#procesos)
 
 # Introducción
 
@@ -299,3 +301,53 @@ Ambos tipos de procesamiento, en lotes y tiempo compartido, utilizan **multiprog
 
 La compartición de tiempo y la multiprogramación implican nuevos problemas para el sistema operativo. Si existen múltiples trabajos en memoria, éstos deben protegerse para evitar que interfieran entre sí, por ejemplo, a través de la modificación de los datos de los mismos. Con múltiples usuarios interactivos, el sistema de ficheros debe ser protegido, de forma que sólo usuarios autorizados tengan acceso a un fichero particular. También debe gestionarse los conflictos entre los recursos, tal como impresoras y dispositivos de almacenamiento masivo. 
 
+## Principales logros
+
+Se proponen propone cinco principales **avances teóricos** en el desarrollo de los sistemas operativos:
+* Procesos.
+* Gestión de memoria.
+* Protección y seguridad de la información.
+* Planificación y gestión de los recursos.
+* Estructura del sistema.
+
+### Procesos
+
+Es un término un poco más general que el de trabajo. Se han dado muchas definiciones del término proceso, incluyendo:
+
+* Un programa en **ejecución**.
+* Una instancia de un programa **ejecutándose** en un computador.
+* La **entidad** que se **puede** asignar o **ejecutar** en un procesador.
+* Una unidad de actividad caracterizada por un solo hilo secuencial de ejecución, un estado actual, y un conjunto de recursos del sistema asociados.
+
+Tres líneas principales de desarrollo del sistema de computación crearon problemas de temporización y sincronización que contribuyeron al desarrollo del concepto de proceso:
+* **operación en lotes multiprogramados**: la multiprogramación se diseñó para permitir el uso simultáneo del procesador y los dispositivos de E/S, incluyendo los dispositivos de almacenamiento, para alcanzar la máxima eficiencia.
+* **tiempo compartido**:el objetivo clave de diseño es responder a las necesidades del usuario y, debido a razones económicas, ser capaz de soportar muchos usuarios simultáneamente. 
+* **sistemas de transacciones de tiempo real**:un cierto número de usuarios realizan consultas o actualizaciones sobre una base de datos. 
+
+El diseño del software del sistema para **coordinar** estas diversas actividades resultó ser notablemente **difícil**. Con la progresión simultánea de muchos trabajos, cada uno de los cuales suponía la realización de numerosos pasos para su ejecución secuencial, era **imposible** analizar **todas** las posibles **combinaciones** de secuencias de eventos.
+
+Con la ausencia de algún **método** sistemático de **coordinación** y **cooperación** entre las actividades, los programadores acudían a métodos «ad hoc» basados en la comprensión del entorno que el sistema operativo tenía que controlar. Estos esfuerzos eran vulnerables frente a **errores** de programación sutiles, cuyos efectos sólo podían observarse cuando ciertas extrañas secuencias de acciones ocurrían.
+
+Estos errores eran difíciles de diagnosticar, porque necesitaban distinguirse de los errores software y hardware de las aplicaciones. Incluso cuando se detectaba el error, era difícil determinar la **causa**, porque las condiciones precisas bajo las cuales el error aparecía, eran difíciles de reproducir. En términos generales, existen cuatro causas principales de dichos
+errores [DEBB80a]:
+
+* **Inapropiada sincronización**.
+* **Violación de la exclusión mutua**.
+* **Operación no determinista de un programa**.
+* **Interbloqueos**.
+
+Lo que se necesita para enfrentarse a estos problemas es una **forma sistemática** de **monitorizar** y **controlar** la **ejecución** de **varios programas** en el procesador. El concepto de **proceso** proporciona los fundamentos. Se puede considerar que un proceso está formado por los siguientes **tres componentes**:
+
+* Un **programa ejecutable**.
+* Los **datos asociados** que necesita el programa (variables, espacio de trabajo, buffers, etc.).
+* El **contexto** de **ejecución** del programa.
+
+Este último elemento es esencial. El **contexto** de **ejecución**, o estado del proceso, es el conjunto de **datos** interno por el cual el sistema operativo es capaz de supervisar y controlar el proceso. El contexto incluye el contenido de diversos registros del procesador, tales como el contador de programa y los registros de datos. También incluye información de uso del sistema operativo, como la prioridad del proceso y si un proceso está esperando por la finalización de un evento de E/S particular.
+
+![](img/proceso.png)
+
+Esta figura indica una forma en la cual los procesos pueden gestionarse. Dos procesos, A y B, se encuentran en una porción de memoria principal. Es decir, se ha asignado un bloque de memoria a cada proceso, que contiene el programa, datos e información de contexto. Se incluye a cada proceso en una lista de procesos que construye y mantiene el sistema operativo. La lista de procesos contiene una entrada por cada proceso, e incluye un puntero a la ubicación del bloque de memoria que contiene el proceso.
+
+el proceso puede verse como una estructura de datos. Un proceso puede estar en ejecución o esperando ejecutarse. El estado completo del proceso en un instante dado se contiene en su contexto. 
+
+Esta estructura permite el desarrollo de técnicas potentes que aseguran la coordinación y la cooperación entre los procesos. Se pueden diseñar e incorporar nuevas características en el sistema operativo (por ejemplo, la prioridad), expandiendo el contexto para incluir cualquier información nueva que se utilice para dar soporte a dicha característica.
