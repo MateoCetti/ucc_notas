@@ -13,12 +13,14 @@
   - [Tecnicas de comunicación de E/S](#tecnicas-de-comunicación-de-es)
 - [Capitulo 2 - Introducción a los SO](#capitulo-2---introducción-a-los-so)
   - [Objetivos y funciones de los SO](#objetivos-y-funciones-de-los-so)
-  - [Evolución de un SO __TODO__](#evolución-de-un-so-todo)
+    - [Facilidad de uso](#facilidad-de-uso)
+    - [Eficiencia](#eficiencia)
+    - [Capacidad de evolución](#capacidad-de-evolución)
+  - [Evolución de un SO](#evolución-de-un-so)
     - [Procesamiento serie](#procesamiento-serie)
     - [Sistemas en lotes sencillos](#sistemas-en-lotes-sencillos)
-      - [Monoprogramación](#monoprogramación)
-      - [Multiprogramación](#multiprogramación)
-    - [Entornos compartidos](#entornos-compartidos)
+    - [Sistemas en lotes multiprogramados](#sistemas-en-lotes-multiprogramados)
+    - [Sistemas de tiempo compartido](#sistemas-de-tiempo-compartido)
 
 # Introducción
 
@@ -195,14 +197,16 @@ Se puede considerar que un sistema operativo tiene los siguientes tres objetivos
 
 ![](img/niveles_SI.png)
 
-Algunos de los servicios que ofrece el SO son:
+### Facilidad de uso
 
-* **Desarrollo** de programas
-* **Ejecución** de programas
-* Acceso a dispositivos de **E/S**.
-* Acceso controlado a los **ficheros**.
-* Acceso al **sistema**.
-* **Detección** y **respuesta** a **errores**
+Algunos de los **servicios** que ofrece el SO son:
+
+* **Desarrollo de programas**: El sistema operativo proporciona una variedad de utilidades y servicios, tales como **editores** y **depuradores**, para asistir al programador en la creación de los programas
+* **Ejecución** **de programas**: Se necesita realizar una serie de pasos para ejecutar un programa. Las instrucciones y los datos se deben cargar en memoria principal. Los dispositivos de E/S y los ficheros se deben inicializar, y otros recursos deben prepararse. Los sistemas operativos realizan estas labores de planificación en nombre del usuario
+* **Acceso a dispositivos de** **E/S**: Cada dispositivo de E/S requiere su propio conjunto peculiar de instrucciones o señales de control para cada operación. El sistema operativo proporciona una interfaz uniforme que esconde esos detalles de forma que los programadores puedan acceder a dichos dispositivos utilizando lecturas y escrituras sencillas.
+* **Acceso controlado a los** **ficheros**: Para el acceso a los ficheros, el sistema operativo debe reflejar una comprensión detallada no sólo de la naturaleza del dispositivo de E/S (disco, cinta), sino también de la estructura de los datos contenidos en los ficheros del sistema de almacenamiento. Adicionalmente, en el caso de un sistema con múltiples usuarios, el sistema operativo puede proporcionar mecanismos de protección para controlar el acceso a los ficheros.
+* **Acceso al** **sistema**: Para sistemas compartidos o públicos, el sistema operativo controla el acceso al sistema completo y a recursos del sistema específicos.
+* **Detección** y **respuesta** a **errores**: El sistema operativo debe proporcionar una respuesta que elimine la condición de error, suponiendo el menor impacto en las aplicaciones que están en ejecución.
   * Errores de HW
     * Internos
     * Externos
@@ -215,27 +219,83 @@ Algunos de los servicios que ofrece el SO son:
   * Utilizado para anticiparse a las mejoras futuras
   * Utilizando a los usuarios de cuotas
 
+### Eficiencia
+
 ¿Se puede decir que es el sistema operativo quien controla el transporte, almacenamiento y procesamiento de los datos? Desde un punto de vista, la respuesta es afirmativa. **Gestionando** los **recursos** del **computador**, el sistema operativo tiene el control de las **funciones básicas** del mismo.
- 
+
+El sistema operativo dirige al procesador en el uso de los otros recursos del sistema y en la temporización de la ejecución de otros programas. No obstante, para que el procesador pueda realizar esto, el sistema operativo debe dejar paso a la ejecución de otros programas. Por tanto, 
 El sistema operativo deja el control para que el procesador pueda realizar trabajo «útil» y de nuevo retoma el control para permitir al procesador que realice la siguiente pieza de trabajo.
 
 ![](img/so_recursos.png)
 
 **Nucleo** / **kernel**: Una porción del sistema operativo se encuentra en la **memoria principal**. Contiene las funciones del sistema operativo más frecuentemente utilizadas y, en cierto momento, otras porciones del sistema operativo actualmente en uso. El resto de la memoria principal contiene programas y datos de usuario.
 
+El sistema operativo decide cuándo un programa en ejecución puede utilizar un dispositivo de E/S y controla el acceso y uso de los ficheros. El procesador es también un recurso, y el sistema operativo debe determinar cuánto tiempo de procesador debe asignarse a la ejecución de un programa de usuario particular.
+
+### Capacidad de evolución
+
 Un sistema operativo importante debe evolucionar en el tiempo por las siguientes razones:
 * Actualizaciones de hardware más nuevos tipos de hardware.
 * Nuevos servicios
 * Resolución de fallos
 
-## Evolución de un SO __TODO__
+## Evolución de un SO
+
+Para comprender los requisitos claves de un sistema operativo y el significado de las principales características de un sistema operativo contemporáneo, es útil considerar la evolución de los sistemas operativos a lo largo de los años.
 
 ### Procesamiento serie
 
+Con los primeros computadores, desde finales de los años 40 hasta mediados de los años 50, el programador interaccionaba **directamente** con el **hardware** del computador; no existía ningún sistema operativo.
+
+Estas máquinas eran utilizadas desde una consola que contenía luces, interruptores, algún dispositivo de entrada y una impresora. 
+
+Los programas en **código máquina** se cargaban a través del dispositivo de entrada (por ejemplo, un lector de **tarjetas**). Si un error provocaba la parada del programa, las **luces** indicaban la condición de **error**. 
+
+El programador podía entonces **examinar** los **registros** del procesador y la memoria principal para determinar la causa de error. Si el programa terminaba de forma normal, la salida aparecía en la impresora.
+
+Estos sistemas iniciales presentaban dos problemas principales:
+
+* **Planificación**. La mayoría de las instalaciones utilizaban una **plantilla impresa** para **reservar tiempo de máquina**. Típicamente, un usuario podía solicitar un bloque de tiempo en múltiplos de **media hora** aproximadamente. Un usuario podía obtener una hora y terminar en 45 minutos; esto implicaba **malgastar tiempo** de procesamiento del computador.
+* **Tiempo de configuración**. Un único programa, denominado trabajo, podía implicar la **carga en memoria** del **compilador** y del **programa** en lenguaje de alto nivel (programa en código fuente) y a continuación la carga y el enlace del programa objeto y las funciones comunes. Cada uno de estos pasos podían suponer **montar** y **desmontar** cintas o configurar **tarjetas**. Si ocurría un error, el desgraciado usuario normalmente tenía que **volver al comienzo** de la secuencia de configuración. Por tanto, se utilizaba una cantidad considerable de tiempo en configurar el programa que se iba a ejecutar.
+
+Este modo de operación puede denominarse procesamiento serie, para reflejar el hecho de que los usuarios acceden al computador en serie.
+
 ### Sistemas en lotes sencillos
 
-#### Monoprogramación
+La idea central bajo el esquema de procesamiento en lotes sencillo es el uso de una pieza de **software** denomina **monitor**. Con este tipo de sistema operativo, el usuario no tiene que acceder directamente a la máquina. En su lugar, el usuario **envía** un **trabajo** a través de una **tarjeta** o cinta al operador del computador, que crea un **sistema por lotes** con todos los trabajos enviados y coloca la **secuencia de trabajos** en el dispositivo de **entrada**, para que lo utilice el **monitor**. Cuando un programa finaliza su procesamiento, devuelve el control al monitor, punto en el cual dicho monitor comienza la carga del siguiente programa.
 
-#### Multiprogramación
+El monitor realiza una función de **planificación**: en una **cola** se sitúa un **lote de trabajos**, y los trabajos se ejecutan lo más rápidamente posible, sin ninguna clase de tiempo ocioso entre medias. Además, el monitor mejora el **tiempo de configuración** de los trabajos. Con cada uno de los trabajos, se incluye un conjunto de **instrucciones** en algún formato primitivo de **lenguaje de control de trabajos** (Job Control Language, JCL).
 
-### Entornos compartidos
+El monitor, o sistema operativo en lotes, es simplemente un programa. Éste **confía** en la habilidad del procesador para **cargar instrucciones** de diferentes porciones de la memoria principal que de forma alternativa le permiten tomar y abandonar el control. Otras características hardware son también deseables:
+
+* **Protección de memoria**. Durante la ejecución del programa de usuario, éste no debe alterar el área de memoria que contiene el monitor. Si esto ocurriera, el hardware del procesador debe detectar un error y transferir el control al monitor. El monitor entonces abortará el trabajo, imprimirá un mensaje de error y cargará el siguiente trabajo.
+* **Temporizador**. Se utiliza un temporizador para evitar que un único trabajo monopolice el sistema. 
+* **Instrucciones privilegiadas**. Ciertas instrucciones a nivel de máquina se denominan privilegiadas y sólo las puede ejecutar el monitor.
+* **Interrupciones**. Los modelos de computadores iniciales no tenían esta capacidad. Esta característica proporciona al sistema operativo más flexibilidad para dejar y retomar el control desde los programas de usuario.
+
+Ciertas consideraciones sobre la protección de memoria y las instrucciones privilegiadas llevan al concepto de **modos de operación**. Un programa de usuario ejecuta en **modo usuario**, en el cual los usuarios no pueden acceder a ciertas áreas de memoria y no puede ejecutar ciertas instrucciones. El monitor ejecuta en **modo sistema**, o lo que se denomina modo núcleo, en el cual se pueden ejecutar instrucciones privilegiadas y se puede acceder a áreas de memoria protegidas.
+
+### Sistemas en lotes multiprogramados
+
+El procesador se encuentra frecuentemente ocioso, incluso con el secuenciamiento de trabajos automático que proporciona un sistema operativo en lotes simple. El problema consiste en que los dispositivos de E/S son lentos comparados con el procesador. El procesador ejecuta instrucciones durante cierto tiempo hasta que alcanza una instrucción de E/S. Entonces debe esperar que la instrucción de E/S concluya antes de continuar (**Monoprogramación**).
+
+![](img/monoprog.png)
+
+Esta ineficiencia puede evitarse. Se sabe que existe suficiente memoria para contener al sistema operativo (monitor residente) y un programa de usuario. Supóngase que hay espacio para el sistema operativo y dos programas de usuario. Cuando un trabajo necesita **esperar** por la E/S, se puede **asignar** el procesador al **otro trabajo**, que probablemente no esté esperando por una operación de E/S. Más aún, se puede expandir la memoria para que albergue tres, cuatro o más programas y pueda haber **multiplexación** entre todos ellos. Este enfoque se conoce como **multiprogramación** o multitarea. Es el tema central de los sistemas operativos modernos.
+
+![](img/multiprogramacion.png)
+
+Del mismo modo que un sistema en lotes simple, un sistema en lotes multiprogramado también debe basarse en ciertas características hardware del computador. La característica adicional más notable que es útil para la multiprogramación es el hardware que soporta las **interrupciones** de E/S y **DMA** (Direct Memory Access: acceso directo a memoria). Con la E/S gestionada a través de interrupciones o DMA, el procesador puede solicitar un mandato de E/S para un trabajo y continuar con la ejecución de otro trabajo mientras el controlador del dispositivo gestiona dicha operación de E/S. Cuando esta última operación finaliza, el procesador **es interrumpido** y se pasa el control a un programa de tratamiento de interrupciones del sistema operativo. Entonces, el sistema operativo pasará el control a otro trabajo.
+
+Los sistemas operativos multiprogramados son bastante **sofisticados**, comparados con los sistemas monoprogramados. Para tener varios trabajos listos para ejecutar, éstos deben guardarse en memoria principal, requiriendo alguna forma de **gestión de memoria**. Adicionalmente, si varios trabajos están listos para su ejecución, el procesador debe decidir **cuál** de ellos **ejecutar**; esta decisión requiere un **algoritmo** para **planificación**.
+
+### Sistemas de tiempo compartido
+
+la técnica se denomina **tiempo compartido** porque se **comparte** el **tiempo** de **procesador** entre **múltiples usuarios**. En un sistema de tiempo compartido, múltiples usuarios acceden **simultáneamente** al **sistema** a través de **terminales**, siendo el sistema operativo el encargado de entrelazar la ejecución de cada programa de usuario en pequeños intervalos de tiempo o cuantos de computación.
+
+Ambos tipos de procesamiento, en lotes y tiempo compartido, utilizan **multiprogramación**.
+
+![](img/tiempo_compartido.png)
+
+La compartición de tiempo y la multiprogramación implican nuevos problemas para el sistema operativo. Si existen múltiples trabajos en memoria, éstos deben protegerse para evitar que interfieran entre sí, por ejemplo, a través de la modificación de los datos de los mismos. Con múltiples usuarios interactivos, el sistema de ficheros debe ser protegido, de forma que sólo usuarios autorizados tengan acceso a un fichero particular. También debe gestionarse los conflictos entre los recursos, tal como impresoras y dispositivos de almacenamiento masivo. 
+
