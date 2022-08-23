@@ -29,6 +29,9 @@
     - [Corto plazo](#corto-plazo)
     - [Largo plazo](#largo-plazo)
   - [Función de oferta](#función-de-oferta)
+- [Unidad 3 - Demanda y mercados](#unidad-3---demanda-y-mercados)
+  - [Mercado](#mercado)
+    - [Tipos de mercado](#tipos-de-mercado)
 
 # Introducción
 
@@ -345,3 +348,24 @@ La curva de CMgL tiene la misma relación con la CMeL, que la curva de costo mar
 ![](img/oferta.png)
 
 ![](img/oferta_desplazo.png)
+
+# Unidad 3 - Demanda y mercados
+
+Durante los meses de verano, el precio de los deparamentos ubicados en la costa se eleva. Cuando llegan las fiestas de Navidad, el de algunos alimentos sube de manera rápida; sin embargo, a mediados del verano el precio del melón suele alcanzar sus niveles más bajos.
+
+Estos hechos, y otros parecidos que podríamos citar, se hacen evidentes en el funcionamiento de los mercados y tienen en común una serie de factores que actúan a través de la oferta y la demanda. El juego de compradores y vendedores (es decir, de las fuerzas que actúan en los mercados) establece las cantidades y los precios de los distintos bienes y servicios.
+
+## Mercado
+
+**Oferta** y **demanda** son las fuerzas que, al interactuar, hacen que las economías de mercado o capitalistas funcionen. Esa interacción determina la **cantidad** que se produce de cada bien y servicio, como así también el **precio** al que debe venderse
+
+Un **mercado** es toda institución social en la que cual los bienes y servicios, así como los factores productivos, se intercambian libremente. E1 **mercado** de un producto está formado por todos los **compradores** y **vendedores** de ese producto.
+
+Los compradores y vendedores se ponen de acuerdo sobre el **precio** de un bien o un servicio, de forma tal que se produce un intercambio de cantidades determinadas de dicho bien o servicio por una cantidad de dinero, también determinada.
+
+El **precio absoluto** de un bien es su relación de cambio por **dinero**, esto es, el número de unidades monetarias que se necesitan para obtener a cambio una unidad del bien. El **precio relativo** de un bien es su precio en unidades de **otro bien**.
+
+Los precios **coordinan** las **decisiones** de los **productores** y los **consumidores** en el mercado. Precios **bajos** estimulan el **consumo** y desaniman la producción, mientras que precios **altos** tienden a reducir el consumo y estimulan la **producción**. Los precios actúan como el **mecanismo equilibrador** del mercado.
+
+### Tipos de mercado
+

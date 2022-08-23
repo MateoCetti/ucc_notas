@@ -26,6 +26,13 @@
     - [Gestion de memoria](#gestion-de-memoria)
     - [Planificación y gestión de los recursos.](#planificación-y-gestión-de-los-recursos)
     - [Estructura del sistema.](#estructura-del-sistema)
+- [Software libre](#software-libre)
+  - [Categorias del software](#categorias-del-software)
+  - [Linux](#linux)
+    - [Introducción](#introducción-1)
+    - [Caracteristicas](#caracteristicas)
+    - [El kernel](#el-kernel)
+  - [Arranque](#arranque)
 
 # Introducción
 
@@ -404,3 +411,196 @@ Un proceso puede invocar específicamente un servicio del sistema operativo, tal
 
 ### Estructura del sistema.
 
+El tamaño de un sistema operativo con un conjunto completo de características, y la dificultad del problema que afronta dicho sistema, ha llevado a esta disciplina a **cuatro** desafortunados, aunque demasiado comunes, **problemas**. 
+* Los sistemas operativos se entregan tarde de forma crónica. 
+* Los sistemas tienen fallos latentes que deben ser planteados y resueltos. 
+* El rendimiento no es frecuentemente el esperado. 
+* Se ha comprobado que es imposible construir un sistema operativo complejo que no sea vulnerable a una gran cantidad de ataques de seguridad, incluyendo virus, gusanos y accesos no autorizados.
+
+Para gestionar la complejidad de los sistemas operativos y eliminar estos problemas, se ha puesto mucho énfasis en la estructura software del sistema operativo a lo largo de los años. Ciertos puntos parecen obvios. El software debe ser **modular**. Esto ayudará a organizar el proceso de desarrollo de software y limitará el esfuerzo de diagnosticar y corregir errores. Los módulos deben tener **interfaces bien definidas**, y estas interfaces deben ser tan **sencillas** como sea posible. De nuevo, esto facilita la programación. También facilita la evolución del sistema. Con mínimas interfaces entre los módulos, se puede modificar un módulo con un mínimo impacto en otros módulos.
+
+Para sistemas operativos grandes no es suficiente la programación modular. La **estructura jerárquica** de un sistema operativo moderno separa sus **funciones** de acuerdo a las características de su escala de **tiempo** y su **nivel de abstracción**. Se puede ver el sistema como una serie de **niveles**. Cada nivel realiza un subconjunto relacionado de funciones requeridas por el sistema operativo. Dicho nivel confía en los niveles inmediatamente **inferiores** para realizar funciones más **primitivas** y **ocultar** los **detalles** de esas funciones. Cada nivel proporciona servicios a la capa inmediatamente **superior**. Idealmente, estos niveles deben definirse de tal forma que los cambios en un nivel no requieran cambios en otros niveles. Por tanto, de esta forma se ha descompuesto un problema en un número de subproblemas más manejables.
+
+En general, las capas **inferiores** tratan con una escala de **tiempo menor**. Algunas partes del sistema operativo deben interaccionar directamente con el **hardware** del computador, donde los eventos pueden tener una escala de tiempo tan ínfima como unas pocas mil millonésimas de segundo. En el otro extremo del espectro, algunas partes del sistema operativo se comunican con el **usuario**, que invoca mandatos en una escala de tiempo mucho más larga, tal vez unos pocos **segundos**. El uso de un conjunto de niveles se adapta adecuadamente a este entorno.
+
+* **Nivel 1**. Está formado por **circuitos electrónicos**, donde los objetos tratados son **registros**, **celdas** de **memoria**, y **puertas lógicas**. Las operaciones definidas en estos objetos son acciones,
+como poner a cero un registro o leer una posición de memoria.
+* **Nivel 2**. El conjunto de **instrucciones** del **procesador**. Las operaciones a este nivel son aquéllas permitidas en el conjunto de instrucciones de lenguaje máquina, como adición, resta, carga o almacenamiento.
+* **Nivel 3**. Añade el concepto de **procedimiento** o **subrutina**, más las operaciones de llamada y retorno (call/return).
+* **Nivel 4**. Introduce las **interrupciones**, que permiten al procesador guardar el contexto actual e invocar una rutina de tratamiento de interrupciones.
+
+Estos cuatros primeros niveles no son parte del sistema operativo, sino que constituyen el **hardware** del **procesador**.
+
+* **Nivel 5**. En este nivel se introduce la noción de un **proceso** como un **programa en ejecución**. Los requisitos fundamentales de los sistemas operativos para dar soporte a múltiples procesos incluyen la habilidad de **suspender** y **continuar** los **procesos**.
+* **Nivel 6**. Trata los dispositivos de **almacenamiento secundario** del computador. En este nivel, se dan las funciones para posicionar las cabezas de lectura/escritura y la transferencia real de bloques. El Nivel 6 delega al Nivel 5 la planificación de la operación y la notificación al proceso solicitante de la finalización de la misma. Niveles más altos se preocupan de la dirección en el disco de los datos requeridos y proporcionan una petición del bloque de datos apropiado a un controlador de dispositivo del Nivel 5.
+* **Nivel 7**. Crea un espacio de **direcciones lógicas** para los **procesos**. Este nivel organiza el espacio de **direcciones virtuales** en bloques que pueden moverse entre memoria principal y memoria secundaria.
+
+Hasta este punto, el sistema operativo trata con los recursos de un **único procesador**. Comenzando con el Nivel 8, el sistema operativo trata con **objetos externos**, como dispositivos periféricos y posiblemente redes y computadores conectados a la red.
+
+* **Nivel 8**. Trata con la comunicación de información y **mensajes entre** los **procesos**. Una de las herramientas más potentes para este propósito es la **tubería** o **pipe**, que es un canal lógico para el flujo de datos entre los procesos. Una tubería se define por su salida de un proceso y su entrada en otro proceso.
+* **Nivel 9**. Da soporte al **almacenamiento** a **largo plazo** en **ficheros** con nombre. En este nivel, los datos en el almacenamiento secundario se ven en términos de entidades **abstractas** y con **longitud variable**.
+* **Nivel 10**. Proporciona acceso a los **dispositivos externos** utilizando **interfaces estándar**.
+* **Nivel 11**. Es el nivel responsable para mantener la asociación entre los **identificadores externos** e internos de los recursos y objetos del sistema. El identificador externo es un nombre que puede utilizar una aplicación o usuario. El identificador interno es una dirección de otro identificador que puede utilizarse por parte de los niveles inferiores del sistema operativo para localizar y controlar un objeto. 
+* **Nivel 12**. Proporciona una utilidad completa para dar **soporte** a los **procesos**. Se da soporte a toda la información necesaria para la gestión ordenada de los procesos. Esto incluye el espacio de direcciones virtuales de los procesos, una lista de objetos y procesos con la cual puede interactuar y las restricciones de esta interacción, parámetros pasados al proceso en la creación.
+* **Nivel 13**. Proporciona una **interfaz** del sistema operativo al **usuario**. Se denomina **shell** (caparazón), porque separa al usuario de los detalles de los sistemas operativos y presenta el sistema operativo simplemente como una **colección** de **servicios**. El shell acepta mandatos de usuario o sentencias de control de trabajos, los interpreta y crea y controla los procesos que necesita para su ejecución.
+
+# Software libre
+
+El termino software libre se refiere a que un usuario goza de las siguientes libertades:
+* La libertad de **usar** el programa, con cualquier propósito.
+* La libertad de estudiar cómo funciona el programa y adaptarlo a sus necesidades. El **acceso al código fuente** es una condición previa para esto.
+* La libertad de **distribuir copias**.
+* La libertad de **mejorar** el programa y hacer **públicas** las **mejoras** a los demás, de modo que toda la comunidad se beneficie.
+
+## Categorias del software
+
+![](img/software_libre.png)
+
+**Software Libre**
+
+El software libre es software que viene con autorización para que cualquiera pueda **usarlo**, **copiarlo** y **distribuirlo**, ya sea literalmente o con modificaciones, gratis mediante una gratificación. En particular, esto significa que **código fuente** debe estar **disponible**.
+
+**Software de Dominio Público**
+
+El software de **dominio público** software que no está protegido con copyright, ósea no tiene derechos de autor. Un programa ejecutable puede ser de dominio público pero no disponer libremente del código fuente. En ese caso no es software libre, porque el software libre requiere **accesibilidad al código fuente**. Por otro lado, la mayoría del software libre no está en el dominio público sino bajo los derechos de autor, y los titulares de esos derechos han dado el permiso legal para que todos puedan utilizarlo en libertad, usando una licencia de software libre.
+
+**Software protegido con Copyleft**
+
+El software protegido con copyleft es software libre cuyos términos de distribución no** permiten** a los redistribuidores agregar ninguna **restricción adicional** cuando éstos **redistribuyen** o modifican el software. Copyleft es un concepto general: para poner un programa bajo copyleft, es necesario adoptar un conjunto específico de **cláusulas** para la **distribución**. Existen varias maneras de redactar las cláusulas de copyleft, por lo que en principio pueden existir muchas licencias libres con copyleft. Sin embargo, en la práctica, para casi todo el software con copyleft se usa la Licencia Pública General de **GNU** (GNU General Public License).
+
+**Software abarcado por GPL**
+
+La GPL(General Public License/Licencia Pública General) de GNU es un conjunto específico de **términos de distribución** para publicar programas con copyleft.
+
+**Software GNU**
+
+Es software que es liberado bajo el auspicio del Proyecto GNU. La mayoría del software GNU está protegido con copyleft. Todo el software GNU debe ser software libre.
+
+**Software Semilibre**
+
+El software semilibre es software que no es libre, pero viene con **autorización** para particulares de **usar**, **copiar**, **distribuir** y **modificar**(incluyendo la distribución de versiones modificadas) **sin fines de lucro**.
+
+**Software Propietario**
+
+El software propietario es software que no es libre ni semilibre. Su uso, redistribución o modificación está **prohibida**, o requiere que usted solicite **autorización** o está tan restringida que no pueda hacerla libre de un modo efectivo.
+
+**Freeware**
+
+El término “freeware” es usado comúnmente para paquetes que permiten la **redistribución** pero no la **modificación**(y su código fuente no está disponible). Estos paquetes no son software libre.
+
+**Shareware**
+
+El término “shareware” es software que viene con autorización para la gente de **redistribuir** copias, pero dice que quien continúe haciendo uso de una copia deberá **pagar** un **cargo** por **licencia**.
+
+**Software Comercial**
+
+El software comercial es software que está siendo desarrollado por una entidad que tiene la intención de hacer dinero del uso del software. “Comercial” y “Propietario” no son la misma cosa. La mayoría del software comercial es propietario, pero hay **software libre comercial** y hay software no libre no comercial.
+
+**Freemium**
+
+El modelo freemium es un modelo de negocio en el que la mayor parte de los servicios se ofrecen de manera **gratuita** (freemium), aunque existe un pequeño paquete de servicios de pago (**premium**) para algunos clientes que lo deseen.
+
+## Linux
+
+### Introducción
+
+Linux es un **sistema operativo multitarea** y **multiusuario** que corre en diversas plataformas de hardware: Intel, Alpha, SPARC, MIPS, PowerPC y que se distribuye libremente bajo los términos de la licencia **GPL** de **GNU**. Fue creado por **Linus Torvalds** a comienzos de los ’90 y actualmente es desarrollado y mantenido por una **multitud** de **desarrolladores** distribuidos por todo el mundo. Su objetivo principal es propulsar el software de libre distribución junto con su código fuente para que pueda ser modificado por cualquier persona, dando rienda suelta a la creatividad.
+
+### Caracteristicas
+
+**Software Libre**
+
+Linux se distribuye bajo los términos de la **Licencia Pública General** de **GNU**, lo cual garantiza que puede ser usado, estudiado, copiado y modificado sin restricciones de ningún tipo, salvo aquellas que impiden que esto deje de ser así(copyleft).
+
+**Multitarea**
+
+Se pueden llevar a cabo **múltiples tareas**(o procesos) en forma simultánea y se pueden acceder múltiples
+dispositivos al mismo tiempo.
+
+**Multiusuario**
+
+**Varios usuarios** pueden acceder a las aplicaciones y recursos del sistema Linux al **mismo tiempo**. Y, por supuesto, cada uno de ellos puede ejecutar varios programas a la vez(multitarea).
+
+**Multiplataforma**
+
+Linux puede correr en casi **cualquier plataforma** Actualmente se ejecuta en plataformas Intel, Sparc, Alpha, MIPS, PowerPC, ARM y hasta en Mainframes de IBM (S/390).
+
+**Protección de memoria entre procesos**
+
+De manera que ninguno de ellos pueda colgar el sistema.
+
+**Carga de ejecutables por demanda**
+
+Linux sólo lee de disco aquellas partes de un programa que están siendo usadas actualmente.
+
+**Memoria virtual con paginación por demanda**
+
+Linux utiliza una porción del disco como memoria virtual, incrementando así la eficiencia del sistema al mantener los procesos activos en memoria RAM y ubicando los procesos que son utilizados menos frecuentemente o porciones inactivas de memoria en el disco.
+
+**Librerías compartidas**
+
+Cada aplicación comparte una librería común de subrutinas que puede llamar en tiempo de ejecución.
+Compatible POSIX.1 y UNIX.
+
+### El kernel
+
+El kernel o núcleo de Linux se podría definir como el corazón de este sistema operativo y cuando hablamos de Linux, en realidad nos deberíamos referir al Kernel. Es el encargado de que el software y el hardware puedan trabajar juntos.
+
+Sus funciones más importantes, aunque no las únicas, son:
+* Administración del **sistema**.
+* Administración de la **memoria** física y virtual para los procesos en ejecución.
+* Manejo de **periféricos** y dispositivos de nuestro ordenador.
+
+Las versiones del kernel se numeran con 3 números, de la siguiente forma: XX.YY.ZZ, donde:
+* **XX**: Indica la **serie principal** del kernel. Hasta el momento sólo existen la 1 y 2 (existe hasta la 5 - 23-08-22). Este número cambia cuando la manera de funcionamiento del kernel ha sufrido un cambio muy importante.
+* **YY**: Indica si la versión es de **desarrollo** o de **producción**. Un numero **impar**, significa que es de desarrollo, uno **par**, que es de producción.
+* **ZZ**: Indica nuevas **versiones** dentro de una versión, en las que lo único que se ha modificado, son fallos de programación o bugs.
+
+## Arranque
+
+Una de las características más importantes y poderosas de Linux es el método abierto y configurable para el inicio y cierre del sistema operativo. Los usuarios son libres de configurar muchos aspectos del proceso de arranque, incluyendo qué programas se lanzarán al momento de arranque.
+
+El proceso de arranque en un sistema Linux ocurre de la siguiente manera:
+
+1. La **BIOS** del sistema comprueba y lanza la **primera etapa** del gestor de arranque del **MBR**(por Mater Boot Record) del disco duro primario (GPT ?).
+2. La primera etapa del gestor de arranque se **autocarga** en memoria y lanza la **segunda etapa** del gestor de arranque desde la partición **/boot/**.
+3. La segunda etapa del gestor de arranque **carga el kernel** en memoria, el cual en su momento carga los **módulos** necesarios y monta la **partición root** para sólo-lectura.
+4. El kernel transfiere programa **/sbin/init**.
+5. El programa /sbin/init carga todos los **servicios** y **herramientas** de espacio del usuario y monta todas las **particiones** listadas en **/etc/fstab**.
+6. Se presenta al usuario un prompt de **login** de comandos para el sistema Linux apenas arrancado.
+
+En el momento de arranque de una máquina x86, el procesador busca al final de la memoria del sistema el programa de la **BIOS** y lo ejecuta. La BIOS controla no sólo el primer paso del proceso de arranque, sino que también proporciona una interfaz de bajo nivel para dispositivos periféricos. 
+
+Una vez que se haya cargado, la BIOS chequea los **periféricos** y localiza un dispositivo con el que **arrancar** el sistema desde el que carga en memoria cualquier programa que resida en el primer sector de este dispositivo, llamado Master Boot Record o **MBR** (ahora existe **GPT**). La MBR sólo tiene 512 bytes de tamaño y contiene las **instrucciones** de código de máquina para el arranque del equipo, llama un **gestor de arranque** (Grub) así como también la **tabla de particiones**. Una vez que la BIOS haya encontrado y cargado el gestor de arranque en memoria, le deja el control del proceso de arranque a éste.
+
+Los **gestores de arranque** de Linux (Grub) para la plataforma x86 se dividen en dos etapas:
+
+La primera es un **código binario** de máquina pequeña en el MBR. Su única función es la de localizar el gestor de arranque de la **segunda etapa** y cargar la primera parte de éste en memoria. 
+
+La segunda etapa del gestor de arranque es usar la información del MBR para determinar las **opciones** de **arranque** disponibles para el usuario. Esto significa que cada vez que se produzca un cambio en la configuración o se actualice el kernel de forma manual, se debe ejecutar un comando para escribir la información apropiada al MBR (actualizar el Grub ?). 
+
+Una vez que el gestor de arranque de la segunda etapa está en memoria, presenta al usuario la **pantalla inicial** mostrando los diferentes sistemas operativos o kernels que se han configurado para arrancar.
+
+Una vez que el gestor de arranque de la segunda etapa haya determinado qué kernel arrancar, localizará el **binario** del **kernel correspondiente** en el directorio /boot/. El kernel binario es llamado usando el siguiente formato: /boot/vmlinuz-kernel-version 
+
+Cuando el **kernel** se carga, inmediatamente se inicializa y configura la **memoria** del ordenador y los diferentes dispositivos de hardware conectados al sistema, incluyendo procesadores, subsistemas de entrada/salida y dispositivos de almacenamiento.
+
+A continuación buscará la imagen **initrd** en una ubicación predeterminada en memoria, la descomprimirá, la montará y cargará todos los controladores necesarios.
+
+El kernel luego crea un dispositivo root, monta la partición root como sólo lectura y libera cualquier memoria no utilizada.
+
+El programa **/sbin/init**(también llamado **init**) coordina el resto del proceso de **arranque** y configura el ambiente del usuario. Cuando el comando init arranca, se vuelve el **padre** de todos los **procesos** que comienzan automáticamente en el sistema Linux.
+
+Primero, ejecuta el script **/etc/rc.d/rc.sysinit**, que establece la **ruta** a **otros programas**, activa el swap, controla los sistemas de archivo y se encarga de todo lo que el sistema necesita tener hecho al momento de la inicialización.
+
+El comando init lee su configuración de **/etc/inittab**, que describe cómo el sistema debería configurarse en cada nivel de ejecución del init. 
+
+A continuación, el comando init configura la librería de funciones base
+**/etc/rc.d/init.d/functions**. Esto indica el modo en el que se debe empezar o matar un programa y cómo
+determinar el PID del programa.
+
+El programa init inicia todos los procesos de fondo buscando en el directorio apropiado rc por el nivel de
+ejecución especificado por defecto en **/etc/inittab**.
+
+Los directorios rc están numerados para corresponder al nivel de ejecución que represente. Por ejemplo,
+**/etc/rc.d/rc5.d/** es el directorio para el nivel de ejecución 5. Cuando se arranca el nivel de ejecución 5, el programa init consulta el directorio **/etc/rc.d/rc5.d/** para determinar qué procesos iniciar o parar.
