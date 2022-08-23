@@ -23,6 +23,9 @@
     - [Sistemas de tiempo compartido](#sistemas-de-tiempo-compartido)
   - [Principales logros](#principales-logros)
     - [Procesos](#procesos)
+    - [Gestion de memoria](#gestion-de-memoria)
+    - [Planificación y gestión de los recursos.](#planificación-y-gestión-de-los-recursos)
+    - [Estructura del sistema.](#estructura-del-sistema)
 
 # Introducción
 
@@ -322,19 +325,18 @@ Es un término un poco más general que el de trabajo. Se han dado muchas defini
 Tres líneas principales de desarrollo del sistema de computación crearon problemas de temporización y sincronización que contribuyeron al desarrollo del concepto de proceso:
 * **operación en lotes multiprogramados**: la multiprogramación se diseñó para permitir el uso simultáneo del procesador y los dispositivos de E/S, incluyendo los dispositivos de almacenamiento, para alcanzar la máxima eficiencia.
 * **tiempo compartido**:el objetivo clave de diseño es responder a las necesidades del usuario y, debido a razones económicas, ser capaz de soportar muchos usuarios simultáneamente. 
-* **sistemas de transacciones de tiempo real**:un cierto número de usuarios realizan consultas o actualizaciones sobre una base de datos. 
+* **sistemas de transacciones de tiempo real**: un cierto número de usuarios realizan consultas o actualizaciones sobre una base de datos. 
 
 El diseño del software del sistema para **coordinar** estas diversas actividades resultó ser notablemente **difícil**. Con la progresión simultánea de muchos trabajos, cada uno de los cuales suponía la realización de numerosos pasos para su ejecución secuencial, era **imposible** analizar **todas** las posibles **combinaciones** de secuencias de eventos.
 
 Con la ausencia de algún **método** sistemático de **coordinación** y **cooperación** entre las actividades, los programadores acudían a métodos «ad hoc» basados en la comprensión del entorno que el sistema operativo tenía que controlar. Estos esfuerzos eran vulnerables frente a **errores** de programación sutiles, cuyos efectos sólo podían observarse cuando ciertas extrañas secuencias de acciones ocurrían.
 
-Estos errores eran difíciles de diagnosticar, porque necesitaban distinguirse de los errores software y hardware de las aplicaciones. Incluso cuando se detectaba el error, era difícil determinar la **causa**, porque las condiciones precisas bajo las cuales el error aparecía, eran difíciles de reproducir. En términos generales, existen cuatro causas principales de dichos
-errores [DEBB80a]:
+Estos errores eran difíciles de diagnosticar, porque necesitaban distinguirse de los errores software y hardware de las aplicaciones. Incluso cuando se detectaba el error, era difícil determinar la **causa**, porque las condiciones precisas bajo las cuales el error aparecía, eran difíciles de reproducir. En términos generales, existen cuatro causas principales de dichos errores:
 
-* **Inapropiada sincronización**.
-* **Violación de la exclusión mutua**.
-* **Operación no determinista de un programa**.
-* **Interbloqueos**.
+* **Inapropiada sincronización**: Es frecuente el hecho de que una rutina se suspenda esperando por algún evento en el sistema. Por ejemplo, un programa que inicia una lectura de E/S debe esperar hasta que los datos estén disponibles en un buffer antes de proceder. En este caso, se necesita una señal procedente de otra rutina. El diseño inapropiado del mecanismo de señalización puede provocar que las señales se pierdan o se reciban señales duplicadas.
+* **Violación de la exclusión mutua**: Frecuentemente, más de un programa o usuario intentan hacer uso de recursos compartidos simultáneamente. Por ejemplo, dos usuarios podrían intentar editar el mismo fichero a la vez. Si estos accesos no se controlan, podría ocurrir un error.
+* **Operación no determinista de un programa**: Los resultados de un programa particular normalmente dependen sólo de la entrada a dicho programa y no de las actividades de otro programa en un sistema compartido. Pero cuando los programas comparten memoria, y sus ejecuciones son entrelazadas por el procesador, podrían interferir entre ellos, sobreescribiendo zonas de memoria comunes de una forma impredecible. Por tanto, el orden en el que diversos programas se planifican puede afectar a la salida de cualquier programa particular.
+* **Interbloqueos**: Es posible que dos o más programas se queden bloqueados esperándose entre sí. Por ejemplo, dos programas podrían requerir dos dispositivos de E/S para llevar a cabo una determinada operación (por ejemplo, una copia de un disco o una cinta). Uno de los programas ha tomado control de uno de los dispositivos y el otro programa tiene control del otro dispositivo. Cada uno de ellos está esperando a que el otro programa libere el recurso que no poseen. Dicho interbloqueo puede depender de la temporización de la asignación y liberación de recursos.
 
 Lo que se necesita para enfrentarse a estos problemas es una **forma sistemática** de **monitorizar** y **controlar** la **ejecución** de **varios programas** en el procesador. El concepto de **proceso** proporciona los fundamentos. Se puede considerar que un proceso está formado por los siguientes **tres componentes**:
 
@@ -351,3 +353,54 @@ Esta figura indica una forma en la cual los procesos pueden gestionarse. Dos pro
 el proceso puede verse como una estructura de datos. Un proceso puede estar en ejecución o esperando ejecutarse. El estado completo del proceso en un instante dado se contiene en su contexto. 
 
 Esta estructura permite el desarrollo de técnicas potentes que aseguran la coordinación y la cooperación entre los procesos. Se pueden diseñar e incorporar nuevas características en el sistema operativo (por ejemplo, la prioridad), expandiendo el contexto para incluir cualquier información nueva que se utilice para dar soporte a dicha característica.
+
+### Gestion de memoria
+
+Un entorno de computación que permita **programación modular** y el uso **flexible** de los **datos** puede ayudar a resolver mejor las necesidades de los usuarios. Los gestores de sistema necesitan un **control eficiente** y **ordenado** de la asignación de los recursos. Para satisfacer estos requisitos, el sistema operativo tiene **cinco responsabilidades** principales de **gestión de almacenamiento**:
+
+* **Aislamiento de procesos**. El sistema operativo debe evitar que los procesos independientes **interfieran** en la **memoria** de **otro proceso**, tanto datos como instrucciones.
+* **Asignación y gestión automática**. Los programas deben tener una **asignación** dinámica de **memoria** por demanda, en cualquier nivel de la jerarquía de memoria. La asignación debe ser **transparente** al programador. Por tanto, el programador no debe preocuparse de aspectos relacionados con limitaciones de memoria, y el sistema operativo puede lograr incrementar la eficiencia, asignando memoria a los trabajos sólo cuando se necesiten.
+* **Soporte a la programación modular**. Los programadores deben ser capaces de definir **módulos** de programación y crear, destruir, y alterar el tamaño de los módulos dinámicamente.
+* **Protección y control de acceso**. La **compartición de memoria**, en cualquier nivel de la jerarquía de memoria, permite que un programa direccione un espacio de memoria de otro proceso. Esto es deseable cuando se necesita la compartición por parte de determinadas aplicaciones. Otras veces, esta característica amenaza la integridad de los programas e incluso del propio sistema operativo. El sistema operativo debe permitir que varios usuarios puedan **acceder** de **distintas formas a porciones** de memoria.
+* **Almacenamiento a largo plazo**. Muchas aplicaciones requieren formas de almacenar la información durante largos periodos de tiempo, después de que el computador se haya apagado.
+
+El sistema operativo implementa un almacenamiento a **largo plazo**, con la información almacenada en objetos denominados **ficheros**. El fichero es un **concepto lógico**, conveniente para el programador y es una unidad útil de control de acceso y protección para los sistemas operativos.
+
+La **memoria** virtual es una utilidad que permite a los programas direccionar la memoria desde un punto de vista **lógico**, sin importar la **cantidad** de memoria principal **física disponible**. La memoria virtual fue concebida como un método para tener **múltiples trabajos** de usuario residiendo en memoria principal de forma **concurrente**, de forma que no exista un intervalo de tiempo de espera entre la ejecución de procesos sucesivos, es decir, mientras un proceso se escribe en almacenamiento secundario y se lee el proceso sucesor.
+
+Debido a que los procesos **varían** de **tamaño**, si el procesador planifica un determinado número de procesos, es **difícil almacenarlos** compactamente en **memoria principal**. Se introdujeron los sistemas de **paginación**, que permiten que los procesos se **compriman** en un número determinado de bloques de **tamaño fijo**, denominados **páginas**.
+
+Un programa referencia una palabra por medio de una **dirección virtual**, que consiste en un **número de página** y un **desplazamiento** dentro de la página. Cada página de un proceso se puede localizar en **cualquier sitio** de **memoria principal**. El sistema de paginación proporciona una **proyección dinámica** entre las **direcciones virtuales** utilizadas en el programa y una dirección real, o **dirección física**, de memoria principal.
+
+**Todas** las **páginas** de un proceso se mantienen en **disco**. Cuando un proceso está en **ejecución**, algunas de sus páginas se encuentran en **memoria principal**. Si se referencia una página que no está en memoria principal, el hardware de gestión de memoria lo detecta y permite que la página que falta se **cargue**.
+
+![](img/paginas_memoria.png)
+
+![](img/memoria_virtual_dir.png)
+
+### Planificación y gestión de los recursos.
+
+Una responsabilidad clave de los sistemas operativos es la **gestión** de varios **recursos disponibles** para ellos (espacio de memoria principal, dispositivos de E/S, procesadores) y para **planificar** su **uso** por parte de los distintos **procesos activos**. Cualquier asignación de recursos y política de planificación debe tener en cuenta **tres factores**:
+
+* **Equitatividad**. Normalmente, se desea que todos los procesos que compiten por un determinado recurso, se les conceda un **acceso equitativo** a dicho recurso. Esto es especialmente cierto para trabajos de la misma categoría, es decir, trabajos con demandas similares.
+* **Respuesta diferencial**. Por otro lado, el sistema operativo puede necesitar **discriminar** entre diferentes clases de trabajos con **diferentes requisitos** de servicio. El sistema operativo debe tomar las decisiones de **asignación** y **planificación** con el objetivo de **satisfacer** el **conjunto total** de **requisitos**. Además, debe tomar las decisiones de forma dinámica. Por ejemplo, si un proceso está esperando por el uso de un dispositivo de E/S, el sistema operativo puede intentar planificar este proceso para su ejecución tan pronto como sea posible a fin de liberar el dispositivo para posteriores demandas de otros procesos.
+* **Eficiencia**. El sistema operativo debe intentar **maximizar** la **productividad**, **minimizar** el **tiempo** de **respuesta**, y, en caso de sistemas de tiempo compartido, acomodar tantos usuarios como sea posible.
+
+La siguiente figura sugiere los principales elementos del sistema operativo relacionados con la planificación de procesos y la asignación de recursos en un entorno de multiprogramación.
+
+El sistema operativo mantiene un número de **colas**, cada una de las cuales es simplemente una **lista de procesos** esperando por algunos recursos.
+
+La cola a **corto plazo** está compuesta por procesos que se encuentran en memoria principal y están **listos** para **ejecutar**, siempre que el procesador esté disponible. Cualquiera de estos procesos podría usar el procesador a continuación. Es responsabilidad del planificador a corto plazo, o **dispatcher**, elegir uno de ellos. Una estrategia común es asignar en orden a cada proceso de la cola un **intervalo de tiempo**; esta técnica se conoce como **round-robin** o turno rotatorio. En efecto, la técnica de turno rotatorio emplea una cola circular.
+
+La cola a **largo plazo** es una lista de nuevos trabajos esperando a utilizar el procesador. El sistema operativo añade trabajos al sistema transfiriendo un proceso **desde** la cola a largo plazo **hasta** la cola a corto plazo. En este punto, se debe asignar una **porción** de **memoria principal** al **proceso entrante**. Por tanto, el sistema operativo debe estar seguro de que **no sobrecarga** la **memoria** o el tiempo de procesador admitiendo demasiados procesos en el sistema. 
+
+Hay una **cola de E/S** por cada **dispositivo** de E/S. Más de un proceso puede solicitar el uso del mismo dispositivo de E/S. Todos los **procesos** que esperan **utilizar dicho dispositivo**, se encuentran alineados en la **cola** del dispositivo. De nuevo, el sistema operativo debe determinar a qué proceso le asigna un dispositivo de E/S disponible.
+
+Si ocurre una **interrupción**, el sistema operativo recibe el control del procesador a través de un **manejador de interrupciones**.
+
+Un proceso puede invocar específicamente un servicio del sistema operativo, tal como un manejador de un dispositivo de E/S, mediante una **llamada a sistema**. Una vez que se maneja la interrupción o la llamada a sistema, se invoca al planificador a corto plazo para que seleccione un proceso para su ejecución.
+
+![](img/elementos_planif_so.png)
+
+### Estructura del sistema.
+
