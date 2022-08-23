@@ -26,13 +26,16 @@
     - [Gestion de memoria](#gestion-de-memoria)
     - [Planificación y gestión de los recursos.](#planificación-y-gestión-de-los-recursos)
     - [Estructura del sistema.](#estructura-del-sistema)
-- [Software libre](#software-libre)
+- [Software libre y linux](#software-libre-y-linux)
   - [Categorias del software](#categorias-del-software)
   - [Linux](#linux)
     - [Introducción](#introducción-1)
     - [Caracteristicas](#caracteristicas)
     - [El kernel](#el-kernel)
   - [Arranque](#arranque)
+  - [Estructura del sistema de archivos](#estructura-del-sistema-de-archivos)
+    - [Implementación de un sistema de archivos](#implementación-de-un-sistema-de-archivos)
+  - [Sistemas de archivos soportados por linux](#sistemas-de-archivos-soportados-por-linux)
 
 # Introducción
 
@@ -444,7 +447,7 @@ Hasta este punto, el sistema operativo trata con los recursos de un **único pro
 * **Nivel 12**. Proporciona una utilidad completa para dar **soporte** a los **procesos**. Se da soporte a toda la información necesaria para la gestión ordenada de los procesos. Esto incluye el espacio de direcciones virtuales de los procesos, una lista de objetos y procesos con la cual puede interactuar y las restricciones de esta interacción, parámetros pasados al proceso en la creación.
 * **Nivel 13**. Proporciona una **interfaz** del sistema operativo al **usuario**. Se denomina **shell** (caparazón), porque separa al usuario de los detalles de los sistemas operativos y presenta el sistema operativo simplemente como una **colección** de **servicios**. El shell acepta mandatos de usuario o sentencias de control de trabajos, los interpreta y crea y controla los procesos que necesita para su ejecución.
 
-# Software libre
+# Software libre y linux
 
 El termino software libre se refiere a que un usuario goza de las siguientes libertades:
 * La libertad de **usar** el programa, con cualquier propósito.
@@ -604,3 +607,47 @@ ejecución especificado por defecto en **/etc/inittab**.
 
 Los directorios rc están numerados para corresponder al nivel de ejecución que represente. Por ejemplo,
 **/etc/rc.d/rc5.d/** es el directorio para el nivel de ejecución 5. Cuando se arranca el nivel de ejecución 5, el programa init consulta el directorio **/etc/rc.d/rc5.d/** para determinar qué procesos iniciar o parar.
+
+## Estructura del sistema de archivos
+
+Un **sistema de archivos** son los **métodos** y **estructuras de datos** que un sistema operativo utiliza para seguir la **pista** de los **archivos** de un **disco** o **partición**; es decir, es la manera en la que se **organizan** los **archivos** en el **disco**.
+
+Un sistema de archivos se podría resumir en términos de dos categorías diferentes de archivos:
+* Archivos compartibles vs. no compartibles
+* Archivos variables vs. Estáticos
+
+Los archivos **compartibles** son aquéllos a los que se puede acceder desde varios hosts; mientras que los archivos **no compartibles** no están disponibles a todos los hosts.
+
+Los archivos **variables** pueden cambiar en cualquier momento sin una intervención del gestor de sistemas; 
+
+los archivos **estáticos**, tales como documentación, librerías y binarios, no cambian sin una actuación por parte del administrador de sistemas o de una agente que el administrador de sistemas haya escogido para realizar esta tarea.
+
+![](img/directorios_tipos.png)
+
+El Estándar de Jerarquía del Sistema de Archivos (más comúnmente llamado [FHS](https://www.pathname.com/fhs/), del inglés Filesystem Hierarchy Standard), el cual es un documento que detalla el propósito de los **directorios** en un sistema **Linux** moderno.
+
+Este estándar consiste en un conjunto de requerimientos y guías para la **ubicación** de **archivos** y **directorios** en sistemas operativos tipo-UNIX. Las guías provistas por FHS buscan tanto garantizar la **interoperabilidad** de las aplicaciones, herramientas de administración, herramientas de desarrollo y scripts como dar una mayor **uniformidad** a la documentación de estos sistemas.
+
+El sistema de archivos raíz se simboliza con un slash (/) y como su nombre lo indica, es la raíz de la cual penden todos los otros sistemas de archivos o directorios. Este sistema de archivos debe contener todo lo necesario para el arranque, la restauración y/o la reparación del sistema. El estándar FHS establece que los siguientes directorios o enlaces simbólicos a directorios deben estar presentes en /:
+
+
+![](img/fhs.png)
+
+El directorio /usr es uno de los directorios más importantes del sistema puesto que contiene los programas de uso común para todos los usuarios.
+
+### Implementación de un sistema de archivos
+
+Antes de que una partición o disco sea utilizada como un sistema de archivos, necesita ser iniciada, y las estructura de datos necesitan escribirse al disco. Este proceso se denomina construir un sistema de archivos. La mayoría de los sistema de archivos UNIX tienen una estructura general parecida, aunque los detalles exactos pueden variar un poco. Los conceptos centrales son:
+* **Superbloque**: tiene información del sistema de archivos en conjunto, como su tamaño
+* **Nodo-i**: tiene toda la información de un archivo, salvo su nombre. El nombre se almacena en el directorio, junto con el número de nodo-i. 
+* **Bloque de datos**: El nodo-i contiene los números de varios bloques de datos, que se utilizan para almacenar los datos en el archivo. 
+* **Entrada de directorio**: consiste en un nombre de archivo y el número de nodo-i que representa al archivo.
+* **Bloque indirecto**: Sólo hay espacio para unos pocos números de bloques de datos en el nodo-i; en cualquier caso, si se necesitan más, más espacio para punteros a los bloques de datos son colocados de forma dinámica.
+
+## Sistemas de archivos soportados por linux
+
+* **EXT4**: el NTFS de Linux
+* **XFS**: diseñado para sistemas que realizan muchas lecturas y escrituras de datos en los discos.
+* **F2FS**: creado para trabajar con unidades basadas en NAND, como memorias USB o, sobre todo, unidades SSD
+* **BtrFS**:  fue diseñado por Oracle con la intención de suceder a EXT. Sin embargo, aún no lo ha conseguido.
+* **OpenZFS**:  diseñado para funcionar en sistemas RAID
