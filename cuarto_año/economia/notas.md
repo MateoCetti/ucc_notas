@@ -32,6 +32,10 @@
 - [Unidad 3 - Demanda y mercados](#unidad-3---demanda-y-mercados)
   - [Mercado](#mercado)
     - [Tipos de mercado](#tipos-de-mercado)
+  - [La demanda](#la-demanda)
+    - [La tabla y curva de la demanda](#la-tabla-y-curva-de-la-demanda)
+  - [Teoria de la utilidad](#teoria-de-la-utilidad)
+    - [La isoutilidad](#la-isoutilidad)
 
 # Introducción
 
@@ -369,3 +373,125 @@ Los precios **coordinan** las **decisiones** de los **productores** y los **cons
 
 ### Tipos de mercado
 
+Al analizar los mercados, se suele establecer la siguiente tipología: 
+* **mercados transparentes**: cuando hay un solo punto de equilibrio
+* **mercados opacos**: cuando, debido a la existencia de información incompleta entre los agentes, hay más de una situación de equilibrio. 
+* **mercados libres**: sometidos al libre juego de las fuerzas de oferta y demanda
+* **mercados intervenidos**: cuando agentes extemos como, por ejemplo, las autoridades económicas, fijan los precios.
+* **mercado competitivo**: Si existen muchos vendedores y muchos compradores, es muy probable que nadie, por sus propios medios, tenga capacidad para imponer y manipular el precio.
+* **competencia imperfecta**: hay muy pocos vendedores o incluso uno solo, existirán grandes posibilidades de que éstos o éste pongan un precio a su conveniencia.
+
+## La demanda
+
+A las **cantidades** de un bien que los consumidores **deseen** y puedan **comprar** las denominamos **demanda** de dicho bien.
+
+**Demandar** significa estar **dispuesto a comprar**, mientras que **comprar** es efectuar realmente la **adquisición**.
+
+
+Así, la **demanda** refleja una **intención**, y la **compra** constituye una **acción**.
+
+### La tabla y curva de la demanda
+
+Hay una serie de **factores** determinantes de las cantidades que los consumidores desean adquirir de cada bien por unidad de tiempo, tales como sus **preferencias**, sus **ingresos** en ese período, los precios de los **demás bienes** y, sobre todo, el **precio** del propio bien en cuestión.
+
+Si consideramos constantes todos los factores, excepto el precio del bien, esto es, si aplicamos la condición ceteris paribus, podemos hablar, por ejemplo, de la **tabla** de **demanda** de un **producto** por un **consumidor determinado** cuando consideremos la relación que existe entre la cantidad demandada y el precio del producto, es decir, la tabla de demanda muestra la relación entre el precio de un bien y la cantidad demandada.
+
+![](img/tabla_demanda.png)
+
+Bajo la condición ceteris paribus, y para un precio determinado de los discos compactos, la **suma** de las **demandas individuales** nos dará la **demanda** global o **del mercado** de dicho bien.
+
+La **ley de la demanda** se refiere a la **relación inversa** existente entre el **precio** de un bien y la **cantidad demandada**, en el sentido de que al aumentar el precio disminuye la cantidad demandada, y lo contrario ocurre cuando se reduce el precio.
+
+Hay dos razones por las cuales la cantidad demandada por todos los consumidores disminuye cuando el precio de un bien aumenta. Por un lado, al aumentar el precio de un bien, algunos consumidores que previamente lo adquirían dejarán de hacerlo o lo comprarán en menor cantidad, y buscarán otros bienes que lo sustituyan (**Efecto sustitución**). Por otro lado, cuando un bien se encarece los consumidores demandarán menos unidades porque la elevación del precio ha reducido la capacidad adquisitiva de los ingresos, y esto hará que puedan comprar menos de todos los bienes y, en particular, del que estamos considerando (**Efecto ingreso**).
+
+Podemos representar gráficamente la demanda mediante una **curva decreciente** que relaciona la **cantidad demandada** de un bien con el **precio**. A  reducirse el precio, aumenta la cantidad demandada. A cada precio P le corresponde una cantidad Q que los demandantes están dispuestos a adquirir. Al trazar la curva de demanda, suponemos que se mantienen constantes a los demás factores, excepto el precio, que puedan afectar la cantidad demandada
+
+![](img/curva_demanda.png)
+
+La **función de demanda** expresa la relación entre la **cantidad** demandada de un bien, su **precio** y otras variables
+
+![](img/funcion_demanda.png)
+
+* cantidad demandada de un bien (Qa) 
+* precio del bien (P_A)
+* los ingresos (Y)
+* precios de otros bienes (P_B)
+* los gustos de los consumidores (G)
+* el tamaño del mercado (N)
+
+Para representar la curva de la Figura 2.1, hemos supuesto que, en la expresión anterior, esto es, en la función de demanda, los valores de todas las variables, salvo la cantidad demandada del bien A y su precio, permanecen constantes. Es decir, hemos aplicado la condición ceteris paribus.
+
+En este sentido, cabe preguntarse qué sucederá cuando, aun permaneciendo invariable el precio del bien, se altere alguno de los factores que, bajo la condición ceteris paribus, hemos considerado constantes. En estos casos, la curva de la demanda se **desplaza**
+
+![](img/despl_demanda.png)
+
+las alteraciones de estos factores, distintos del precio, originan desplazamientos de la curva de demanda. cuando la curva de demanda se aleja en su desplazamiento del origen de ordenadas, decimos que se ha producido un **incremento** en la demanda. Cuando se desplaza hacia el origen de ordenadas decimos que se ha producido una **disminución** de la demanda
+
+
+**Ingreso de los consumidores**
+
+Si el ingreso de los consumidores aumenta, se produce un incremento o disminución de la demanda dependiendo de si el producto es:
+* **Bien normal**: al aumentar el ingreso de los consumidores, la cantidad demandada a cada uno de los precios se incrementa.(Celulares, autos)
+* **Bien inferior**: al aumentar el ingreso de los consumidores, la cantidad demandada a cada uno de los precios disminuye (alimentos de mala calidad).
+
+**Los precios de los bienes relacionados**
+
+La curva tambien puede incrementarse o disminuirse dependiendo del tipo de bien relacionado cuyo precio cambie:
+
+* **Bienes complementarios**: al aumentar el precio de uno de ellos, se reduce la cantidad demandada del otro, cualquiera sea el precio.
+* **Bienes sustitutivos**: al aumentar el precio de uno de ellos, la cantidad demandada del otro se incrementa, cualquiera sea el precio.
+* **Bienes independientes**: no guardan ninguna relación entre sí, de modo que la variación del precio de uno de ellos no afecta la cantidad demandada del otro. 
+
+**Los gustos o preferencias de los consumidores**
+
+Si, como consecuencia de la alteración de los gustos los consumidores demandan una mayor cantidad de un bien, la curva de demanda de dicho bien se desplazará hacia la derecha; mientras que, si las preferencias cambian en sentido contrario, la curva de demanda se desplazará hacia la izquierda.
+
+**El tamaño del mercado y otros factores**
+
+la demanda de un determinado bien en un país que tiene el doble de población que otro será significativamente mayor.
+
+## Teoria de la utilidad
+
+Para explicar el comportamiento de los consumidores, podemos aceptar como punto de partida que éstos tienden a elegir aquellos **bienes** y **servicios** que valoran mas, es decir, los que les reportan **mayor utilidad** o **satisfacción**. En otras palabras, vamos a suponer que los individuos **maximizan su utilidad**, lo que implica que eligen el conjunto de bienes de consumo que prefieren.
+
+La **utilidad** es el sentimiento subjetivo de **placer** o **satisfacción** que una persona experimenta como consecuencia de **consumir** un **bien** o un **servicio**.
+
+Para analizar las decisiones del consumidor, empecemos por describir la relación que existe entre las **cantidades consumidas** de un bien y la **utilidad** que éstas proporcionan. Parece lógico suponer (y la experiencia así lo sugiere) que, a medida que **aumenta** la **cantidad consumida** de un bien, digamos helado, **aumenta** la **satisfacción** o **utilidad total** proporcionada por dicha cantidad.
+
+Cuando aumenta la cantidad consumida de, por ejemplo, helado en un kilo, obtenemos un aumento de utilidad total que denominamos **utiiidad marginal**.
+
+![](img/utilidad_t_y_m.png)
+
+![](img/utilidad_cuadro.png)
+
+### La isoutilidad
+
+Una **CURVA DE ISOUTILIDAD** O CURVA DE INDIFERENCIA muestra el conjunto de combinaciones ante las cuales el consumidor es indiferente debido a que cada una de ellas le reporta el mismo nivel de utilidad.
+
+![](img/isoutilidad.png)
+
+La **RELACIÓN MARGINAL DE SUSTITUCIÓN** entre un bien y otro, se define como la cantidad máxima del segundo a que esta dispuesto a renunciar un consumidor, sin reducir con ello su utilidad, para aumentar el consumo del primer bien en una unidad. Tasa a la cual un consumidor está dispuesto a intercambiar un bien por otro.
+
+La **RESTRICCIÓN PRESUPUESTARIA** establece que la suma de las cantidades gastadas en cada bien (precio por cantidad de cada bien) es igual al ingreso.
+
+La **RECTA DE BALANCE** muestra las combinaciones máximas de bienes que el consumidor puede comprar, dados los precios que tiene que pagar y sus ingresos (R = Px*Qx + Py*Qy)
+
+![](img/recta_balance.png)
+
+El **equilibrio del consumidor** se alcanza cuando la relación marginal de sustitución del consumidor (la pendiente en un punto de la curva de indiferencia), es igual a la pendiente de la recta de balance, esto es, a la relación entre el precio de los dos bienes.
+
+![](img/eq_con.png)
+
+![](eq_img/eq_con_2.png)
+
+EL **PRINCIPIO DE LA IGUALDAD DE LAS UTILIDADES MARGINALES** establece que el consumidor que cuenta con un ingreso monetario dado y se enfrenta a unos precios para los distintos bienes, solo maximizara su utilidad, si cada bien se demanda hasta el punto en el que la utilidad marginal del ultimo peso gastado en él, sea exactamente igual a la utilidad marginal del ultimo peso gastado en cualquier otro bien.
+
+En el óptimo, la utilidad marginal por cada unidad monetaria que se gasta en el bien X es igual a la utilidad marginal por cada unidad monetaria que se gasta en el bien Y.
+
+El valor es lo que se recibe del producto y se relaciona con Ume= UnidadesTotales / Unidades consumidas
+
+El precio, es la disposición a pagar y se relaciona con Utilidad Marginal y no con U Media.
+
+![](img/valor_precio.png)
+
+![](img/variacion_utilidad.png)
