@@ -36,6 +36,11 @@
     - [La tabla y curva de la demanda](#la-tabla-y-curva-de-la-demanda)
   - [Teoria de la utilidad](#teoria-de-la-utilidad)
     - [La isoutilidad](#la-isoutilidad)
+  - [Elasticidad](#elasticidad)
+    - [Elasticidad de la demanda](#elasticidad-de-la-demanda)
+      - [Elasticidad - precio de la demanda](#elasticidad---precio-de-la-demanda)
+      - [Elasticidad-cruzada de la demanda](#elasticidad-cruzada-de-la-demanda)
+      - [Elasticidad-ingreso de la demanda](#elasticidad-ingreso-de-la-demanda)
 
 # Introducción
 
@@ -495,3 +500,93 @@ El precio, es la disposición a pagar y se relaciona con Utilidad Marginal y no 
 ![](img/valor_precio.png)
 
 ![](img/variacion_utilidad.png)
+
+## Elasticidad
+
+**Nota**: El análisis de la Microeconomía se divide en **tres bloques**.
+* En el primero, la atención se centra en la **conducta** de los **mercados** de **productos**, esto es, los mercados de todos los bienes y servicios producidos por las empresas. Analizamos de **dónde procede** la **demanda** de los consumidores, **cómo toman** las **decisiones** de producción las empresas y de qué modo los precios y los beneficios (o pérdidas) orientan una eficiente asignación de los recursos en los distintos mercados. 
+* En el segundo bloque se estudian los **mercados** de **factores de producción**, como el trabajo, el capital y la tierra. Los precios que se forman en estos mercados contribuyen a determinar el ingreso que perciben los trabajadores, los : inversores y los terratenientes.
+* Un tercer bloque se ocupa de estudiar en qué circunstancias **fallan** los mercados y el papel del **Estado** ante tales situaciones.
+
+Con el fin de utilizar la oferta y la demanda como instrumentos verdaderamente útiles, necesitamos saber **cuánto responden** éstas a las **variaciones** de los **precios**.
+
+Así, por ejemplo, el gasto en viajes de turismo o en barcos de vela resulta bastante afectado por las variaciones de los precios, mientras que los gastos en otros bienes considerados necesarios son muy poco sensibles a dichas variaciones. 
+
+Para conocer las razones que explican la distinta sensibilidad de las cantidades demandadas ante cambios en los precios, suele utilizarse un concepto fundamental en Economía: la **elasticidad**, que es una forma de **cuantificar** la **sensibilidad** de la oferta y la demanda a las **variaciones** de los **precios**.
+
+### Elasticidad de la demanda
+
+La **elasticidad** es una medida de la **sensibilidad** de la **cantidad demandada** o de la cantidad ofrecida ante un **cambio** en alguno de sus **factores determinantes**.
+
+#### Elasticidad - precio de la demanda
+
+podemos decir que el coeficiente de **elasticidad-precio** de la demanda, E_p, es la **razón** entre la **variación porcentual** de la **cantidad demandada** de un bien y la **variación porcentual** de su **precio**, manteniéndose constantes todos los demás factores que afectan la cantidad demandada.
+
+La elasticidad-precio de la demanda mide el grado en que la **cantidad demandada responde** a las **variaciones** del **precio** de mercado.
+
+![](img/elasticidad_precio_1.png)
+![](img/elasticidad_precio_2.png)
+![](img/elasticidad_precio_3.png)
+
+![](img/tipo_elasticidad_precio.png)
+
+Algunos de los factores determinantes de la elasticidad-precio de la demanda son los siguientes:
+* Tipo de **necesidad** que satisface el bien: Si el bien satisface una necesidad primaria (comida, medicamentos) es de esperar valores de elasticidad reducidos, caso contrario de los bienes de lujo (smartphones, etc.)
+* **Disponibilidad** de **bienes sustitutivos**: Los bienes con muchos bienes sustitutos son mas suceptibles a ser elasticos a diferencia de aquellos bienes sin sustitutos directos (cuya elasticidad es practicamente nula).
+* **Proporción** de **ingreso** gastada en el bien: Los bienes que tienen una importancia considerable en el presupuesto de gastos suelen tener una demanda más elástica que aquellos que cuentan con una participación reducida.
+* **Período considerado**: En general, cuanto mayor es el período, más elástica será la demanda para la mayoría de los bienes.
+
+* La demanda es **elástica** si la elasticidad-precio de la demanda es **mayor que 1** 
+* es **inelástica** si es **menor que 1**
+* es de elasticidad **unitaria** si es **igual a 1** .
+
+Otros casos singulares de curva de demanda según el valor de la elasticidad-precio de la demanda son: 1 la demanda **perfectamente elástica** y la demanda **perfectamente inelástica** (como en la imagen de arriba)
+
+`Nota: En el caso de la elasticidad-precio de la demanda, el signo no importa.`
+
+La definición de elasticidad que hemos ofrecido solo es correcta cuando mide las consecuencias de **cambios muy pequeños** en los precios. Para evidenciar esta indeterminación, pensemos que en la Figura anterior (a) se trata de medir la elasticidad de la curva cuando tiene lugar un movimiento del punto A al punto B. Si tomamos como punto inicial el punto A, el valor de la elasticidad será 0.8/0.4 = 2, mientras que si se toma el punto B, el valor de la elasticidad será 0.44/0.67=0.66.
+
+Para paliar esta indeterminación, es decir, para que la elasticidad sea distinta según comencemos en A o en B, se puede calcular una **elasticidad promedio** para el **arco** comprendido entre dichos puntos.
+
+![](img/elasticidad_arco.png)
+
+Todos los empresarios saben que, dada una curva de demanda, la cantidad demandada será mayor si baja el precio, mientras que si éste aumenta, la cantidad que los consumidores demandan se reducirá. Sin embargo, una información de mayor interés para ellos es saber cómo se verá afectado ei **ingreso totai** que la empresa obtiene como consecuencia del **cambio en el precio**. El sentido del cambio del ingreso total cuando varía el precio depende de la “sensibilidad” de la cantidad demandada, y esto se expresa mediante el concepto de elasticidad-precio de la demanda.
+
+En general, cuando el **precio** se **reduce**, el ingreso total:
+* **Aumenta** si la **demanda** es **elástica** (a bajos cambios de precio hay grandes cambios de la demanda)
+* Se **reduce** si la **demanda** es **inelástica** (recien a altos cambios de precio hay bajos cambios en la demanda).
+* **No se altera** si la **demanda** es **unitaria** (a cambios de precio hay cambios proporcionales de demanda).
+
+Así, pues, el ingreso total de los vendedores o, lo que es lo mismo, el gasto total de los consumidores se **maximiza** en el punto en que la **demanda** tiene **elasticidad unitaria**.
+
+
+**Caso companias de vuelos**
+
+Algunos viajarán por razones de **trabajo** y otros lo harán como **turistas**. Centrándonos simplemente en estas dos categorías, las compañías aéreas tratarán de cargar el **máximo precio** posible a los que viajan por **negocios**, que se caracterizarán por ser poco sensibles al precio, esto es, por tener una **elasticidad-precio bastante baja**; en cambio a los turistas, que tienen una **elasticidad-precio elevada**, procurarán fijarles un precio lo suficientemente **bajo** como para que los vuelos lleven el mínimo número de asientos vacíos. Así, pues, la clave está en identificar a los clientes que tienen una elasticidad-precio distinta y fijar precios diferentes para cada tipo de cliente, esto es, seguir una política de **discriminación de precios**.
+
+#### Elasticidad-cruzada de la demanda
+
+Como se desprende de la **función de demanda**, la cantidad demandada de un bien no solo cambia cuando se altera el precio de éste, sino que también depende de variables tales como los **precios** de los **bienes relacionados** y el **ingreso**. 
+
+al analizar los desplazamientos de la curva de demanda, se señaló este hecho y se habló de dos tipos de bienes: **complementarios** y **sustitutivos**. Así, es de esperar que la cantidad demandada de automóviles dependa del precio del combustible, Cuanto más caro sea el combustible, es lógico pensar que la cantidad demandada de automóviles, a un precio dado, se reducirá.
+
+Dada la existencia de la anterior relación, se necesita una medida de la **sensibilidad** de la **cantidad demandada** de un bien ante las **variaciones** de los **precios** de los **bienes relacionados** con éste. Esta medida es la **elasticidad cruzada** de la **demanda**, que se define de la siguiente forma:
+
+![](img/elasticidad_cruzada.png)
+
+* Dos bienes son **sustitutivos** cuando sus elasticidades cruzadas de la demanda son **positivas**;
+* son **complementarios** cuando las elasticidades cruzadas son **negativas**; 
+* son **independientes** entre sí cuando sus elasticidades cruzadas son **nulas**
+
+#### Elasticidad-ingreso de la demanda
+
+La **respuesta** de la **demanda** a los **cambias** del **ingreso** se mide por la **elasticidad-ingreso** de la demanda, que se define como el cambio porcentual de la cantidad demandada dividido por el cambio porcentual del ingreso.
+
+![](img/elasticidad_ingreso_1.png)
+
+* Un **bien normal** es aquel cuya **elasticidad-ingreso** de la demanda es **positiva**.
+  * Un **bien de lujo** tiene una elasticidad-ingreso de la demanda **mayor que 1**.
+  * Un **bien necesario**, o no de lujo, tiene una elasticidad-ingreso de la demanda **menor que 1** .
+* Un **bien inferior** es aquel cuya **elasticidad-ingreso** de la demanda es **negativa**.
+
+![](img/elasticidad_ingreso_2.png)
