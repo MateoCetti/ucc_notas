@@ -30,8 +30,6 @@
     - [Largo plazo](#largo-plazo)
   - [Función de oferta](#función-de-oferta)
 - [Unidad 3 - Demanda y mercados](#unidad-3---demanda-y-mercados)
-  - [Mercado](#mercado)
-    - [Tipos de mercado](#tipos-de-mercado)
   - [La demanda](#la-demanda)
     - [La tabla y curva de la demanda](#la-tabla-y-curva-de-la-demanda)
   - [Teoria de la utilidad](#teoria-de-la-utilidad)
@@ -41,6 +39,11 @@
       - [Elasticidad - precio de la demanda](#elasticidad---precio-de-la-demanda)
       - [Elasticidad-cruzada de la demanda](#elasticidad-cruzada-de-la-demanda)
       - [Elasticidad-ingreso de la demanda](#elasticidad-ingreso-de-la-demanda)
+  - [Mercado](#mercado)
+    - [Tipos de mercado](#tipos-de-mercado)
+    - [Equilibrio del mercado](#equilibrio-del-mercado)
+    - [Politica: los controles de precios](#politica-los-controles-de-precios)
+    - [Las empresas en mercados de competencia perfecta](#las-empresas-en-mercados-de-competencia-perfecta)
 
 # Introducción
 
@@ -364,28 +367,6 @@ Durante los meses de verano, el precio de los deparamentos ubicados en la costa 
 
 Estos hechos, y otros parecidos que podríamos citar, se hacen evidentes en el funcionamiento de los mercados y tienen en común una serie de factores que actúan a través de la oferta y la demanda. El juego de compradores y vendedores (es decir, de las fuerzas que actúan en los mercados) establece las cantidades y los precios de los distintos bienes y servicios.
 
-## Mercado
-
-**Oferta** y **demanda** son las fuerzas que, al interactuar, hacen que las economías de mercado o capitalistas funcionen. Esa interacción determina la **cantidad** que se produce de cada bien y servicio, como así también el **precio** al que debe venderse
-
-Un **mercado** es toda institución social en la que cual los bienes y servicios, así como los factores productivos, se intercambian libremente. E1 **mercado** de un producto está formado por todos los **compradores** y **vendedores** de ese producto.
-
-Los compradores y vendedores se ponen de acuerdo sobre el **precio** de un bien o un servicio, de forma tal que se produce un intercambio de cantidades determinadas de dicho bien o servicio por una cantidad de dinero, también determinada.
-
-El **precio absoluto** de un bien es su relación de cambio por **dinero**, esto es, el número de unidades monetarias que se necesitan para obtener a cambio una unidad del bien. El **precio relativo** de un bien es su precio en unidades de **otro bien**.
-
-Los precios **coordinan** las **decisiones** de los **productores** y los **consumidores** en el mercado. Precios **bajos** estimulan el **consumo** y desaniman la producción, mientras que precios **altos** tienden a reducir el consumo y estimulan la **producción**. Los precios actúan como el **mecanismo equilibrador** del mercado.
-
-### Tipos de mercado
-
-Al analizar los mercados, se suele establecer la siguiente tipología: 
-* **mercados transparentes**: cuando hay un solo punto de equilibrio
-* **mercados opacos**: cuando, debido a la existencia de información incompleta entre los agentes, hay más de una situación de equilibrio. 
-* **mercados libres**: sometidos al libre juego de las fuerzas de oferta y demanda
-* **mercados intervenidos**: cuando agentes extemos como, por ejemplo, las autoridades económicas, fijan los precios.
-* **mercado competitivo**: Si existen muchos vendedores y muchos compradores, es muy probable que nadie, por sus propios medios, tenga capacidad para imponer y manipular el precio.
-* **competencia imperfecta**: hay muy pocos vendedores o incluso uno solo, existirán grandes posibilidades de que éstos o éste pongan un precio a su conveniencia.
-
 ## La demanda
 
 A las **cantidades** de un bien que los consumidores **deseen** y puedan **comprar** las denominamos **demanda** de dicho bien.
@@ -590,3 +571,120 @@ La **respuesta** de la **demanda** a los **cambias** del **ingreso** se mide por
 * Un **bien inferior** es aquel cuya **elasticidad-ingreso** de la demanda es **negativa**.
 
 ![](img/elasticidad_ingreso_2.png)
+
+## Mercado
+
+**Oferta** y **demanda** son las fuerzas que, al interactuar, hacen que las economías de mercado o capitalistas funcionen. Esa interacción determina la **cantidad** que se produce de cada bien y servicio, como así también el **precio** al que debe venderse
+
+Un **mercado** es toda institución social en la que cual los bienes y servicios, así como los factores productivos, se intercambian libremente. E1 **mercado** de un producto está formado por todos los **compradores** y **vendedores** de ese producto.
+
+Los compradores y vendedores se ponen de acuerdo sobre el **precio** de un bien o un servicio, de forma tal que se produce un intercambio de cantidades determinadas de dicho bien o servicio por una cantidad de dinero, también determinada.
+
+El **precio absoluto** de un bien es su relación de cambio por **dinero**, esto es, el número de unidades monetarias que se necesitan para obtener a cambio una unidad del bien. El **precio relativo** de un bien es su precio en unidades de **otro bien**.
+
+Los precios **coordinan** las **decisiones** de los **productores** y los **consumidores** en el mercado. Precios **bajos** estimulan el **consumo** y desaniman la producción, mientras que precios **altos** tienden a reducir el consumo y estimulan la **producción**. Los precios actúan como el **mecanismo equilibrador** del mercado.
+
+![](img/mercado.png)
+
+### Tipos de mercado
+
+Al analizar los mercados, se suele establecer la siguiente tipología: 
+* **mercados transparentes**: cuando hay un solo punto de equilibrio
+* **mercados opacos**: cuando, debido a la existencia de información incompleta entre los agentes, hay más de una situación de equilibrio. 
+* **mercados libres**: sometidos al libre juego de las fuerzas de oferta y demanda
+* **mercados intervenidos**: cuando agentes extemos como, por ejemplo, las autoridades económicas, fijan los precios.
+* **mercado competitivo**: Si existen muchos vendedores y muchos compradores, es muy probable que nadie, por sus propios medios, tenga capacidad para imponer y manipular el precio.
+* **competencia imperfecta**: hay muy pocos vendedores o incluso uno solo, existirán grandes posibilidades de que éstos o éste pongan un precio a su conveniencia.
+
+### Equilibrio del mercado
+
+El **precio de equilibrio**, o precio que vacía el mercado, es aquel para el cual la **cantidad demandada** es **igual** a la **ofrecida**. Esta cantidad es la **cantidad de equilibrio**. El equilibrio se encuentra en la **intersección** de las **curvas** de **oferta** y **demanda**. En ese punto no hay ni **escasez** ni **excedente**.
+
+Un exceso de oferta o **excedente** es la situación en la cual la cantidad ofrecida es mayor que la demandada.
+
+Un exceso de demanda o **escasez** es la situación en la cual la cantidad demandada es mayor que la ofrecida
+
+![](img/equilibrio.png)
+
+La **ley de la oferta y la demanda** establece que el **precio** de un bien se **ajusta** para **equilibrar** su **oferta** y su **demanda**.
+
+Cuando se alteran los factores que subyacen a las curvas de demanda o de oferta, éstas experimentan **desplazamientos** y tienen lugar cambios en el precio y en la cantidad de equilibrio. 
+
+Conviene, pues, distinguir entre un **aumento** en la **demanda** o en la **oferta**, que tiene lugar cuando se produce un **desplazamiento** de la **curva** de demanda o de oferta, y un **aumento** en la **cantidad** demandada u ofrecida; en este último caso lo que tiene lugar es un movimiento **a lo largo** de la curva de demanda o de oferta.
+
+![](img/desplazamiento_o_d.png)
+
+`Nota: En una economía de mercado los recursos se asignan por medio de las decisiones descentralizadas de muchas empresas y hogares conforme interactúan en los mercados de bienes y servicios.`
+
+**Flujo circular del ingreso y la mano invisible**
+
+Si se desea algo y se tiene suficiente dinero, se compra; y si hay un número suficiente de personas que hacen lo mismo, las ventas totales de ese producto aumentarán, y probablemente también su precio. Paralelamente, los productores, al ver que aumentan las ventas y los precios, procurarán incrementar la producción de ese bien y emplearán más recursos (capital y trabajo).
+
+Esta forma de funcionar del sistema de economía de mercado fue denominada por Adam Smith el principio de la “ mano invisible” . En esencia, este principio establece que cada individuo, al actuar egoístamente persiguiendo su propio interés personal, de hecho se comporta como si estuviera guiado por una mano invisible, de modo que se alcanza lo mejor para todos.
+
+![](img/flujo_circular.png)
+
+### Politica: los controles de precios
+
+el Gobierno interviene fijando, en unos casos, precios máximos y, en otros, precios mínimos. En ambos casos, lo relevante es que el Gobierno intenta mantener los precios de determinados bienes en unos niveles que no son los de equilibrio.
+
+* Un precio **máximo** es el precio legal más **alto** al que puede venderse un bien.
+* Un precio **mínimo** es el precio legal más **bajo** al que puede venderse un bien.
+
+Este tipo de intervenciones gubernamentales genera excesos de demanda o de oferta, ya no transitorios.
+
+Para que un precio **máximo** sea relevante, debe ser **inferior** al precio de equilibrio. Cuando el Gobierno establece un **precio máximo** que supone una **restricción efectiva** en un mercado, aparecerá una **escasez** del bien; por lo tanto, los vendedores deberán racionar el bien escaso entre los compradores.
+
+![](img/escasez.png)
+
+En el caso de precios **minimos**, para que estos sean relevantes deben ser **superiores** al precio de equilibrio (Ej: vuelos low-cost), en estos casos, ya que el precio no se puede reacomodar y bajar hasta el punto de equilibrio, se genera un **excedente** constante.
+
+### Las empresas en mercados de competencia perfecta
+
+cuando tiene lugar una alteración del precio de mercado, los efectos sobre la empresa que decide modificar los precios serán muy distintos según se trate de un mercado competitivo, como el del trigo, o monopolístico, como el del gas domiciliario.
+
+![](img/tipos_mercados.png)
+
+El funcionamiento de este mercado puede esquematizarse como sigue: la **oferta** y la **demanda** **determinan** el **precio de equilibrio** y, a dicho precio, las empresas deciden libremente **qué cantidad producir**. En términos de la siguiente figura, el mercado determina el precio de equilibrio, P E, y cada empresa de las muchas que lo integran acepta dicho precio como un dato fijo sobre el que no puede influir.
+
+A este precio, una empresa concreta puede vender la cantidad que decida, pues individualmente su peso en el conjunto del mercado no es significativo y no influirá en el precio. Por ello, la **curva de demanda** de la empresa individual es **horizontal**. Si decidiera vender su producto a un precio algo superior a P E perdería todos los clientes.
+
+![](img/mercado_competitivo.png)
+
+La horizontalidad de la curva de demanda se debe a que la empresa puede vender toda la cantidad que produzca a **precio vigente** en el **mercado**, esto es, a P_E o a un precio más bajo. A un precio algo superior la cantidad demandada será cero, ya que perderá todos los clientes. El precio P_E está **dado** y no se ve afectado** por** la **cantidad vendida** por la **empresa individual**, al ser esta una **parte diminuta** del mercado. 
+
+El **ingreso medio** o unitario es igual al **ingreso total** dividido por el número de **unidades vendidas**. Dada la definición de ingreso total (I_T = P • q), el ingreso medio es el precio del bien, de modo que podemos escribir:
+
+![](img/ingreso_medio.png)
+
+la empresa competitiva no puede influir en el precio, pues se enfrenta a una curva de demanda totalmente horizontal, de forma que el ingreso adicional o **ingreso marginal** derivado de cada unidad adicional vendida es el **precio de mercado**. el precio de mercado no se ve afectado por las variaciones en la producción de la empresa. Para vender unidades adicionales de producto no es preciso bajar el precio, por lo que cada unidad adicional vendida añade al I_T exactamente el valor del precio.
+
+![](img/ingreso_marginal.png)
+
+La empresa competitiva **maximiza los beneficios** cuando produce en un nivel en el cual el **ingreso marginal** se iguala al **costo marginal** (Principio de maximización de beneficios), ya que en estos puntos, la distancia entre la curva de ingresos y costos sera maxima.
+
+![](img/maximizacion_beneficios.png)
+
+Como en el mercado competitivo el ingreso marginal es igual al precio, la grafica quedaria tal que asi:
+
+![](img/max_beneficios.png)
+
+Al ser siempre P = CM_g el punto en el que la empresa maximiza sus beneficios independientemente de las fluctuaciones del mercado, podemos decir que la curva de CM_g es la **curva de oferta** de la empresa. Sin embargo, aunque sigamos esta curva, la empresa todavia podria estar perdiendo dinero.
+
+En consecuencia, para decidir a corto plazo si producir o no, la empresa debe comparar el nivel de producción en que maximiza el beneficio (P = CM), el precio y el costo variable medio (CVMe) Si ei **precio** es **igual o superior** al **costo variable medio** a la empresa le convendrá **producir**; en cambio, si dicho precio es **menor** deberá **cerrar**, ya que mejorará su situación dejando totalmente de producir.
+
+Decir que la condición para producir exige que el precio sea igual o mayor que el costo variable medio equivale a afirmar que a la empresa que incurre en **pérdidas** solo le convendrá producir si éstas son **iguales o menores** que los **costos fijos**. Esta afirmación nos lleva al concepto de costo fijo o irrecuperable, o **costo hundido** (son irrelevantes, pueden dejarse de lado).
+
+si el precio de mercado es P_2, esta línea corta la curva de costo marginal en el punto de nivelación N, en el cual el CT_Me e alcanza su mínimo. Por lo tanto, para el nivel de producción óptimo (aquel para el que P = CM_g), la empresa no obtiene ni beneficios extraordinarios ni pérdidas, ya que justamente cubre los costos totales medios (**beneficio nulo**).
+
+![](img/beneficio_nulo.png)
+
+En el **punto de cierre** la empresa cubre estrictamente los **costos variables**; en consecuencia, para cualquier precio superior a P_c le convendrá **producir**, ya que al menos **parcialmente** cubre los **costos fijos**. Pero sí el precio está por **debajo** de este nivel, la empresa no podrá cubrir sus costos variables y se verá obligada a **cerrar** (decisión a **corto plazo** de no producir nada durante un periodo específico).
+
+En el **largo plazo**, la empresa sale del mercado si el ingreso que obtendría de producir es menor que sus costos totales, es decir, si el precio/demanda se encuentra por **encima** del **costo total promedio**.
+
+Notas:
+
+* Solo el innovador obtiene beneficios superiores a los normales (por un tiempo, hasta que actúa la imitación)
+* Si alguna empresa decide cobrar un precio superior al determinado por el mercado, no vendería, ya que otraempresa obtendría los favores de los consumidores.
+* Cada empresa puede vender tanto o tan poco como lo permitan sus costos, al precio determinado en elmercado
