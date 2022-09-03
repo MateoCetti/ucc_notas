@@ -44,6 +44,8 @@
     - [Equilibrio del mercado](#equilibrio-del-mercado)
     - [Politica: los controles de precios](#politica-los-controles-de-precios)
     - [Las empresas en mercados de competencia perfecta](#las-empresas-en-mercados-de-competencia-perfecta)
+    - [Las empresas en monopolio](#las-empresas-en-monopolio)
+    - [Indice de lerner](#indice-de-lerner)
 
 # Introducción
 
@@ -688,3 +690,89 @@ Notas:
 * Solo el innovador obtiene beneficios superiores a los normales (por un tiempo, hasta que actúa la imitación)
 * Si alguna empresa decide cobrar un precio superior al determinado por el mercado, no vendería, ya que otraempresa obtendría los favores de los consumidores.
 * Cada empresa puede vender tanto o tan poco como lo permitan sus costos, al precio determinado en elmercado
+
+### Las empresas en monopolio
+
+Tal vez no sorprenda a nadie que las empresas eléctricas fijen precios superiores a sus costos marginales, puesto que los clientes no tienen muchas alternativas. En cualquier caso, esto no quiere decir que puedan también determinar la **cantidad** que sus clientes **demandarán**.
+
+Si el precio de la energía eléctrica es muy elevado, los clientes ajustarán lo máximo posible su consumo, procurarán introducir sistemas de ahorro energético e incluso pensarán en recurrir a fuentes de energía alternativas. Así, pues, si los **precios** de la energía son muy **altos**, los clientes **reducirán** la **cantidad demandada**, tal como nos dice la ley de la demanda. Esto sugiere que, si bien los monopolios pueden **controlar los precios**, no pueden obtener el nivel de **beneficios** que **deseen**, pues si sus precios son muy elevados, se reducirá la cantidad que sus clientes les comprarán. Por lo tanto, que los monopolios tengan poder de mercado para fijar los precios no quiere decir que sus beneficios sean ilimitados.
+
+Antes de hablar de monopolios describimos un poco los mercados de **competencia imperfecta**.
+
+En un mercado de **competencia imperfecta** las empresas que lo integran tienen la capacidad de **influir en el precio** de su producto actuando individualmente.
+
+Gráficamente, la **diferencia** básica entre la competencia **imperfecta** y la competencia **perfecta** se observa en la siguiente figura. En el caso de la competencia perfecta, la empresa se enfrenta a una **demanda individual** que es **completamente elástica**, e indica que puede vender todo lo que desee al precio de mercado. En el caso de la empresa no competitiva, la demanda a la que se enfrenta tiene **pendiente negativa** (elasticidad finita), de forma que para poder incrementar sus ventas, tendrá necesariamente que reducir el precio de su producto.
+
+![](img/comp_vs_nocomp.png)
+
+Los distintos tipos de competencias imperfectas son:
+
+* El **monopolio**: es el caso extremo de la competencia imperfecta y se caracteriza por tener un único vendedor que controla la industria.
+* El **oligopolio**: este mercado se caracteriza por tener pocos vendedores, de forma que cada empresa puede influir en el precio de mercado y en la conducta de sus competidores.
+* La **competencia monopolística**: ocurre cuando un gran número de vendedores produce bienes diferenciados, en el sentido de que sus características importantes varían. Esta estructura de mercado se parece a la competencia perfecta en que hay muchos vendedores, ninguno de los cuales posee una gran cuota de mercado; pero se diferencia de ella en que los productos que ofrecen las distintas empresas no son idénticos.
+
+El caso **extremo** de un mercado imperfectamente competitivo es el **monopolio**, ya que hay un **único oferente** en la industria. De hecho, podemos afirmar que una empresa es un monopolio si es la única que ofrece un producto y si éste **no tiene bienes sustitutivos cercanos**. La causa principal del monopolio son las barreras a la entrada.
+
+Las causas que explican la aparición del monopolio son: 
+* **Propiedad exclusiva** de un ciertos **recursos** (poco común)
+* **Monopolios Naturales**: La existencia de **costos decrecientes** o **economías de escala**: una sola empresa produce a un costo menor que un gran numero de productores (por ejemplo la distribución de servicios)
+* **Regulaciones del gobierno**: concesión a una sola empresa el derecho de fabricar un producto o prestar un servicio. (las patentes, derechos de propiedad intelectual, etc)
+
+El empresario monopolista cumple un papel determinante en el proceso de **fijación del precio** de su mercado, pues tiene capacidad para **decidir su cuantía**. Ello se debe a que la curva de demanda del monopolista es la curva de demanda del mercado. 
+
+**¿cuánto producir y qué precio fijar?**
+
+Todas las empresas que operan en mercados de competencia imperfecta se enfrentan a una **curva de demanda** que tiene **pendiente negativa**; ello supone una diferencia fundamental respecto de la empresa competitiva, la cual se enfrenta a una curva de demanda que es una iínea recta horizontal al nivel del precio de mercado. A **ese precio** la empresa **competitiva** puede vender **todo** lo que **desee**. 
+
+El **monopolista** se puede **mover** a lo largo de su **curva de demanda**. Aunque puede subir el precio de su producto, si lo hace los consumidores comprarán menos. Si opta por reducir la cantidad que produce, el precio de su producto aumentará.
+
+Aquí cabe preguntarse qué punto de su curva de demanda elegirá. La respuesta es aquella cantidad que **maximice su beneficio**, lo cual implica que debemos tener en cuenta los **ingresos** y los **costos** y, mas concretamente, el ingreso **marginal** y el costo **marginal**.
+
+Cuando la empresa se enfrenta a una curva de **demanda** con **inclinación negativa** resulta que **P > IM**
+
+Para explicar intuitivamente este hecho, debe tenerse en cuenta que el ingreso marginal de la empresa monopolista es diferente del ingreso marginal de la empresa competitiva. Cuando un monopolio aumenta la cantidad que vende, origina **dos efectos** sobre el ingreso total (IT = P . Q):
+
+• El **efecto producción**: se vende una cantidad mayor del producto; por lo tanto, Q es mayor.
+• El **efecto precio**: al aumentar la cantidad, el precio baja; por lo tanto, P es menor.
+
+En el caso de la empresa competitiva, dado que puede vender todo lo que desee al precio de mercado, **no se produce el efecto precio**. Cuando produce una unidad más, recibe por ella el precio de mercado y no recibe menos por la cantidad que ya vendía. En consecuencia, su ingreso marginal es igual al precio de su bien (IM = P).
+
+Por el contrario, cuando la empresa monopolista **produce una unidad más**, **debe bajar el precio** que cobra por cada una de las unidades que vende, y esta reducción del precio **disminuye el ingreso** generado por las unidades que ya estaba vendiendo. Por esta razón, el **ingreso marginal** del monopolista es **menor** que su **precio** (IM < P).
+
+![](img/ingresos_mono.png)
+
+La curva de IM corta el eje de abscisas, esto es, resulta ser igual a cero, en el punto donde el ingreso total es máximo.
+
+**Maximización de beneficios**
+
+La empresa monopolista estará en equilibrio cuando, al **incrementar la producción** en una unidad, la **variación** de los **ingresos** y los **costos** sea **igual** (**IM = CM**).
+
+Volviendo al caso de la compañía que abastece de electricidad a un pueblo en régimen de monopolio, resulta que si la producción de un kilovatio más de electricidad aumenta más el ingreso que el costo, la empresa debe incrementar su producción. Por el contrario, si cuando se reduce la producción disminuyen los costos más que los ingresos, a la empresa le convendrá reducir la producción. En otras palabras, como toda empresa, para determinar su equilibrio la compañía de electricidad compara el **costo marginal** y el **ingreso marginal**.
+
+![](img/max_beneficios_mono.png)
+
+Si bien en lo que se refiere a la regla de maximización de los beneficios las empresas competitivas y monopolistas son iguales, existe una importante diferencia: el ingreso marginal de una empresa competitiva es igual a su precio, mientras que el de la empresa monopolista es menor que su precio. Es decir:
+
+![](img/regla_max.png)
+
+El monopolista, cuando selecciona su nivel de producción de acuerdo con la fórmula IM = CM, puede estar obteniendo tanto **beneficios** como **pérdidas**. Al igual que en el caso de ía empresa competitiva, la regla IM = CM solo nos asegura que si obtenemos beneficios, estos serán **máximos** y, si obtenemos pérdidas, estas serán **mínimas**. Para saber qué ocurre con los resultados económicos, necesitamos conocer la función de **costos totales medios**.
+
+un monopolista solo puede obtener beneficios monopolísticos si, al nivel de producción de equilibrio, la curva de demanda de su producto se encuentra por encima de su curva de costo total medio.
+
+![](img/mono_benef_perd.png)
+
+En un mercado monopolizado por un solo productor y, en general, en un mercado que no sea de competencia perfecta, el **precio** será **superior** al **ingreso marginal**; en el **equilibrio** tendremos que **P** es **mayor** que **CM**. Esto indica que el consumidor está forzado a pagar un **precio superior** al que tendría que abonar en competencia perfecta. Pero dado que la **combinación precio-cantidad** de **equilibrio** ha de estar sobre la **función de demanda**, un **mayor precio** supone una **menor cantidad** producida y vendida.
+
+![](img/mono_malo.png)
+
+El monopolio, en comparación con la competencia perfecta, **reduce la producción** y **eleva el precio**.
+
+**Discriminación de precios**
+
+El monopolista tratará de **diferenciar** dentro de los potenciales compradores distintos **subgrupos** en función del posible **valor** que puedan darle al bien. De este modo, tratará de venderlo **más caro** a aquellos consumidores que **valoren más** el bien y que por tanto está **dispuesto** a **pagar** un **precio más elevado**. Y por el contrario, venderlo más barato a aquellos otros que lo valoren menos o que tengan menos recursos y que están dispuestos a pagar menos por el bien.
+
+![](img/discriminacion.png)
+
+### Indice de lerner
+
+![](img/lerner.png)
