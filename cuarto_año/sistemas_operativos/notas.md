@@ -39,6 +39,30 @@
 - [Capitulo 3 - descripción y control de procesos](#capitulo-3---descripción-y-control-de-procesos)
   - [Qué es un proceso?](#qué-es-un-proceso)
   - [Estados de los procesos](#estados-de-los-procesos)
+    - [2 estados](#2-estados)
+    - [5 estados](#5-estados)
+    - [Procesos suspendidos](#procesos-suspendidos)
+  - [Descripción de procesos](#descripción-de-procesos)
+    - [Estructuras de control del SO](#estructuras-de-control-del-so)
+    - [Estructuras de control de proceso](#estructuras-de-control-de-proceso)
+  - [Control de procesos](#control-de-procesos)
+    - [Creación de procesos](#creación-de-procesos)
+- [Hilos, SMP y micronúcleos](#hilos-smp-y-micronúcleos)
+  - [Multihilo](#multihilo)
+  - [Funcionalidad de los hilos](#funcionalidad-de-los-hilos)
+    - [Estados de los hilos](#estados-de-los-hilos)
+    - [Sincronización de hilos](#sincronización-de-hilos)
+  - [Hilos de nivel de usuario y nucleo](#hilos-de-nivel-de-usuario-y-nucleo)
+    - [Hilos de nivel de usuario](#hilos-de-nivel-de-usuario)
+    - [Hilos a nivel de núcleo](#hilos-a-nivel-de-núcleo)
+    - [Enfoques combinados](#enfoques-combinados)
+  - [Otras configuraciones](#otras-configuraciones)
+  - [Multiprocesamiento simetrico (SMP)](#multiprocesamiento-simetrico-smp)
+    - [Arquitectura SMP](#arquitectura-smp)
+    - [Consideraciones de diseño de SMPs](#consideraciones-de-diseño-de-smps)
+  - [Micronucleos](#micronucleos)
+    - [Beneficios de una arquitectura micronucleo](#beneficios-de-una-arquitectura-micronucleo)
+    - [Diseño de un micronucleo](#diseño-de-un-micronucleo)
 
 # Introducción
 
@@ -697,4 +721,336 @@ De esta forma, se puede decir que un proceso está compuesto del código de prog
 ##  Estados de los procesos
 
 Se puede **caracterizar** el **comportamiento** de un determinado proceso, **listando** la **secuencia** de **instrucciones** que se **ejecutan** para dicho proceso. A esta lista se la denomina **traza** del proceso. Se puede caracterizar el comportamiento de un procesador mostrando cómo las trazas de varios procesos se entrelazan.
+
+![](img/traza.png)
+
+### 2 estados
+
+Se puede construir el modelo más simple posible observando que, en un instante dado, un proceso está siendo ejecutando por el procesador o no. En este modelo, un proceso puede estar en dos estados: **Ejecutando** o **No Ejecutando**. Cuando el sistema operativo crea un nuevo proceso, crea el bloque de control de proceso (BCP) para el nuevo proceso e inserta dicho proceso en el sistema en estado No Ejecutando. El proceso existe, es conocido por el sistema operativo, y está esperando su oportunidad de ejecutar. De cuando en cuando, el proceso actualmente en ejecución se interrumpirá y una parte del sistema operativo, **el activador**, seleccionará otro proceso a ejecutar. El proceso saliente pasará del estado Ejecutando a No Ejecutando y pasará a Ejecutando un nuevo proceso. Los procesos que no están ejecutando deben estar en una especie de **cola**, (cuyas entradas son punteros al BCP de un proceso en particular) esperando su turno de ejecución.
+
+![](img/2_estados.png)
+
+**Creación de un proceso**
+
+Cuando se va a añadir un nuevo proceso a aquellos que se están gestionando en un determinado momento, el sistema operativo **construye** las **estructuras de datos** que se usan para manejar el proceso y **reserva** el **espacio** de direcciones en **memoria** principal para el proceso. Estas acciones constituyen la creación de un nuevo proceso.
+
+Existen cuatro eventos comunes que llevan a la creación de un proceso:
+
+* **Nuevo proceso de lotes**: El sistema operativo dispone de un flujo de control de lotes de trabajos, habitualmente una cinta un disco. Cuando el sistema operativo está listo para procesar un nuevo trabajo, leerá la siguiente secuencia de mandatos de control de trabajos.
+* **Sesión interactiva**: Un usuario desde un terminal entra en el sistema.
+* **Creado por el sistema operativo para proporcionar un servicio**: El sistema operativo puede crear un proceso para realizar una función en representación de un programa de usuario, sin que el  usuario tenga que esperar (por ejemplo, un proceso para controlar la impresión).
+* **Creado por un proceso existente**: Por motivos de modularidad o para explotar el paralelismo, un programa de usuario puede ordenar la creación de un número de procesos.
+
+Cuando un proceso lanza otro, al primero se le denomina **proceso padre**, y al proceso creado se le denomina **proceso hijo**. Habitualmente, la relación entre procesos necesita comunicación y cooperación entre ellos.
+
+**Terminación de procesos**
+
+Todo sistema debe proporcionar los mecanismos mediante los cuales un proceso indica su finalización, o que ha completado su tarea. Adicionalmente, un número de error o una condición de fallo puede llevar a la finalización de un proceso. Las causas de finalización de procesos mas frecuentes son las siguientes:
+
+![](img/terminacion_proceso.png)
+
+### 5 estados
+
+algunos procesos que están en el estado de No Ejecutando están **listos para ejecutar**, mientras que otros están **bloqueados**, esperando a que se complete una operación de E/S. Por tanto, utilizando una única cola, el activador no puede seleccionar únicamente los procesos que lleven más tiempo en la cola. En su lugar, debería recorrer la lista buscando los procesos que no estén bloqueados y que lleven en la cola más tiempo.
+
+Una forma más natural para manejar esta situación es dividir el estado de No Ejecutando en dos
+estados, Listo y Bloqueado. Los estados resultantes serian los siguientes:
+
+* **Ejecutando**. El proceso está actualmente en ejecución.
+* **Listo**. Un proceso que se prepara para ejecutar cuando tenga oportunidad.
+* **Bloqueado**. Un proceso que no puede ejecutar hasta que se cumpla un evento determinado o se complete una operación E/S.
+* **Nuevo**. Un proceso que se acaba de crear y que aún no ha sido admitido en el grupo de procesos ejecutables por el sistema operativo. Típicamente, se trata de un nuevo proceso que no ha
+sido cargado en memoria principal, aunque su bloque de control de proceso (BCP) si ha sido creado.
+* **Saliente**. Un proceso que ha sido liberado del grupo de procesos ejecutables por el sistema operativo, debido a que ha sido detenido o que ha sido abortado por alguna razón.
+
+![](img/5_estados_1.png)
+
+* **Null --> Nuevo**. Se crea un nuevo proceso para ejecutar un programa.
+* **Nuevo --> Listo**. El sistema operativo mueve a un proceso del estado nuevo al estado listo cuando éste se encuentre preparado para ejecutar un nuevo proceso. La mayoría de sistemas fijan un límite basado en el número de procesos existentes o la cantidad de memoria virtual que se podrá utilizar por parte de los procesos existentes. Este límite asegura que no haya demasiados procesos activos y que se degrade el rendimiento sistema.
+* **Listo --> Ejecutando**. Cuando llega el momento de seleccionar un nuevo proceso para ejecutar, el sistema operativo selecciona uno los procesos que se encuentre en el estado Listo. Esta es una tarea la lleva acabo el planificador.
+* **Ejecutando --> Saliente**. el proceso actual en ejecución se finaliza por parte del sistema operativo tanto si el proceso indica que ha completado su ejecución como si éste se aborta. 
+* **Ejecutando --> Listo**. La razón más habitual para esta transición es que el proceso en ejecución haya alcanzado el máximo tiempo posible de ejecución de forma ininterrumpida; Adicionalmente, un proceso puede voluntariamente dejar de utilizar el procesador.
+* **Ejecutando --> Bloqueado**. Un proceso se pone en el estado Bloqueado si solicita algo por lo cual debe esperar. Una solicitud al sistema operativo se realiza habitualmente por medio de una llamada al sistema; esto es, una llamada del proceso en ejecución a un procedimiento que es parte del código del sistema operativo. 
+* **Bloqueado --> Listo**. Un proceso en estado Bloqueado se mueve al estado Listo cuando sucede el evento por el cual estaba esperando.
+* **Listo --> Saliente**. Por claridad, esta transición no se muestra en el diagrama de estados. En
+algunos sistemas, un padre puede terminar la ejecución de un proceso hijo en cualquier momento. También, si el padre termina, todos los procesos hijos asociados con dicho padre pueden finalizarse.
+• **Bloqueado --> Saliente**. Se aplican los comentarios indicados en el caso anterior.
+
+![](img/5_estados_2.png)
+
+### Procesos suspendidos
+
+Cada proceso que se ejecuta debe cargarse completamente en memoria principal. Esto genera un problema debido a que la diferencia de velocidad entre el procesador y la E/S es tal que sería muy habitual que todos los procesos en memoria se encontrasen a esperas de dichas operaciones (E/S). Por tanto, incluso en un sistema multiprogramado, el procesador puede estar ocioso la mayor parte del tiempo.
+
+Una solución a esto es el **swapping** (memoria de intercambio), que implica mover parte o todo el proceso de memoria principal al disco. Cuando ninguno de los procesos en memoria principal se encuentra en estado Listo, el sistema operativo intercambia uno de los procesos bloqueados a **disco**, en la **cola de Suspendidos**. Esta es una lista de procesos existentes que han sido temporalmente **expulsados** de la **memoria principal**, o **suspendidos**. El sistema operativo trae otro proceso de la cola de Suspendidos o responde a una solicitud de un nuevo proceso. La ejecución continúa con los nuevos procesos que han llegado.
+
+El swapping, sin embargo, es una operación de E/S, y por tanto existe el riesgo potencial de hacer que el problema empeore. Pero debido a que la E/S en disco es habitualmente más rápida que la E/S sobre otros sistemas, el swapping habitualmente mejora el rendimiento del sistema.
+
+Con el uso de swapping tal y como se ha escrito, debe añadirse un nuevo estado a nuestro modelo de comportamiento de procesos (Figura 3.9a): el **estado Suspendido**.
+
+Pero, esta línea de razonamiento presenta una dificultad: todos los procesos que fueron suspendidos se encontraban previamente en el estado de Bloqueado en el momento de su suspensión. Claramente no sería bueno traer un proceso bloqueado de nuevo a memoria porque podría no encontrarse todavía listo para la ejecución. Se debe reconocer, sin embargo, que todos los procesos en estado Suspendido estaban originalmente en estado Bloqueado, en espera de un evento en particular. Cuando el evento sucede, el proceso no está Bloqueado y está potencialmente disponible para su ejecución.
+
+De esta forma, necesitamos replantear este aspecto del diseño. Hay dos conceptos independientes
+aquí: si un proceso está esperando a un evento (Bloqueado o no) y si un proceso está transferido de
+memoria a disco (suspendido o no):
+
+* **Listo**. El proceso está en memoria principal disponible para su ejecución.
+* **Bloqueado**. El proceso está en memoria principal y esperando un evento.
+* **Bloqueado/Suspendido**. El proceso está en almacenamiento secundario y esperando un evento.
+* **Listo/Suspendido**. El proceso está en almacenamiento secundario pero está disponible para su ejecución tan pronto como sea cargado en memoria principal.
+
+![](img/suspencion.png)
+
+**proceso suspendido**:  el proceso que no se encuentra en memoria principal. 
+
+**Otros usos para la suspención de prosesos**:
+
+* **Swapping**: El sistema operativo necesita liberar suficiente memoria principal para traer un proceso en estado Listo de ejecución.
+* **Otras razones del sistema operativo**: El sistema operativo puede suspender un proceso en segundo plano o de utilidad o un proceso que se sospecha puede causar algún problema.
+* **Solicitud interactiva del usuario**: Un usuario puede desear suspender la ejecución de un programa con motivo de su depuración o porque está utilizando un recurso.
+* **Temporización**: Un proceso puede ejecutarse periódicamente (por ejemplo, un proceso monitor de estadísticas sobre el sistema) y puede suspenderse mientras espera el siguiente intervalo de ejecución.
+* **Solicitud del proceso padre**: Un proceso padre puede querer suspender la ejecución de un descendiente para examinar o modificar dicho proceso suspendido, o para coordinar la actividad de varios procesos descendientes.
+
+## Descripción de procesos
+
+El sistema operativo **controla** los eventos dentro del computador, **planifica** y **activa** los **procesos** para su ejecución por el procesador, **reserva recursos** para los mismos y responde a las solicitudes de servicios básicos de los procesos de usuario. Fundamentalmente, se piensa en el sistema operativo como en la entidad que **gestiona** el **uso de recursos** del sistema por parte de los procesos.
+
+### Estructuras de control del SO
+
+Si el sistema operativo se encarga de la gestión de procesos y recursos, debe disponer de información sobre el **estado** actual de cada **proceso** y cada **recurso**. El mecanismo universal para proporcionar esta información es el siguiente: el sistema operativo construye y mantiene **tablas** de **información** sobre cada entidad que gestiona.
+
+Las **tablas de memoria** se usan para mantener un registro tanto de la memoria **principal** (real) como de la secundaria (**virtual**). Parte de la memoria principal está reservada para el uso del sistema operativo; el resto está disponible para el uso de los procesos. Los procesos se mantienen en memoria secundaria utilizando algún tipo de memoria virtual o técnicas de swapping. Las tablas de memoria deben incluir la siguiente información:
+* Las reservas de **memoria principal** por parte de los procesos.
+* Las reservas de **memoria secundaria** por parte de los procesos.
+* Todos los **atributos de protección** que restringe el uso de la memoria principal y virtual, de forma que los procesos puedan acceder a ciertas áreas de memoria compartida.
+* La información necesaria para manejar la memoria virtual.
+
+El sistema operativo debe utilizar las **tablas de E/S** para gestionar los dispositivos de E/S y los canales del computador. Pero, en un instante determinado, un dispositivo E/S puede estar disponible o asignado a un proceso en particular. Si la operación de E/S se está realizando, el sistema operativo necesita conocer el **estado de la operación** y la **dirección de memoria** principal del área usada como fuente o destino de la transferencia de E/S.
+
+El sistema operativo también puede mantener las **tablas de ficheros**. Estas tablas proporcionan
+información sobre la existencia de ficheros, su posición en almacenamiento secundario, su estado actual, y otros atributos.
+
+En último lugar, el sistema operativo debe mantener **tablas de procesos** para gestionar los procesos
+
+![](img/tablas_control.png)
+
+### Estructuras de control de proceso
+
+Se considerará qué información debe conocer el sistema operativo si quiere manejar y controlar los procesos. Primero, debe conocer **dónde** están localizados los procesos, y segundo, debe conocer los **atributos** de los procesos que quiere gestionar
+
+Nos podemos referir al conjunto de programa, datos, pila, y atributos, como la **imagen del proceso**.
+
+La **posición** de la imagen del proceso dependerá del esquema de gestión de memoria que se utilice. En el caso más simple, la imagen del proceso se mantiene como un bloque de memoria contiguo, o continuo. Este bloque se mantiene en memoria secundaria, habitualmente disco. Para que el sistema operativo pueda gestionar el proceso, al menos una pequeña porción de su imagen se debe mantener en memoria principal. Para ejecutar el proceso, la imagen del proceso completa se debe cargar en memoria principal o al menos en memoria virtual.
+
+
+**Atributos de proceso**. Cualquier sistema operativo multiprogramado de la actualidad requiere una gran cantidad de información para manejar cada proceso. Como quedó explicado, esta información se puede considerar que reside en el bloque de control del proceso (**BCP**).
+
+![](img/tablota_1.png)
+![](img/tablota_2.png)
+
+## Control de procesos
+
+Muchos procesadores proporcionan al menos dos modos de ejecución. Ciertas instrucciones se pueden ejecutar en modos privilegiados únicamente. El modo menos privilegiado a menudo se denomina modo usuario, porque los programas de usuario típicamente se ejecutan en este modo. El modo más privilegiado se denomina modo sistema, modo control o modo núcleo. Este último término se refiere al núcleo del sistema operativo, que es la parte del sistema operativo que engloba las funciones más importantes del sistema.
+
+: ¿cómo conoce el procesador en que modo está ejecutando y cómo este
+modo puede modificarse? En lo referente la primera cuestión, existe típicamente un bit en la palabra
+de estado de programa (PSW) que indica el modo de ejecución. Este bit se cambia como respuesta a
+determinados eventos.
+
+### Creación de procesos
+
+Una vez que el sistema operativo decide, por cualquier motivo (Tabla 3.1), crear un proceso procederá de la siguiente manera:
+
+1. Asignar un **identificador** de proceso único al proceso. En este instante, se añade una **nueva entrada** a la **tabla primaria de procesos**, que contiene una entrada por proceso.
+2. **Reservar espacio para proceso**. Esto incluye todos los elementos de la **imagen del proceso**.
+3. **Inicialización del bloque de control de proceso**.
+4. **Establecer los enlaces apropiados**. Por ejemplo, si el sistema operativo mantiene cada cola del planificador como una lista enlazada, el nuevo proceso debe situarse en la cola de Listos o en la cola de Listos/Suspendidos.
+5. **Creación o expansión de otras estructuras de datos**. Por ejemplo, el sistema operativo puede mantener un registro de auditoría por cada proceso que se puede utilizar posteriormente a efectos de facturación y/o de análisis de rendimiento del sistema.
+
+# Hilos, SMP y micronúcleos
+
+Hasta este momento se ha presentado el concepto de un proceso como poseedor de dos características:
+
+* **Propiedad de recursos**. Un proceso incluye un espacio de direcciones virtuales para el manejo de la **imagen del proceso**; De vez en cuando a un proceso se le puede asignar control o propiedad de recursos tales como la memoria principal, canales E/S, dispositivos E/S y archivos. El sistema operativo realiza la función de protección para evitar interferencias no deseadas entre procesos en relación con los recursos.
+* **Planificación/ejecución**. La ejecución de un proceso sigue una ruta de ejecución (**traza**) a través de uno o más programas. Esta ejecución puede estar intercalada con ese u otros procesos. De esta manera, un proceso tiene un estado de ejecución (Ejecutando, Listo, etc.) y una prioridad de activación y ésta es la entidad que se planifica y activa por el sistema operativo.
+
+En la mayor parte de los sistemas operativos tradicionales, estas dos características son, realmente, la esencia de un proceso. Sin embargo, debe quedar muy claro que estas dos características son **independientes** y podrían ser tratadas como tales por el sistema operativo.
+
+Así se hace en diversos sistemas operativos, sobre todo en los desarrollados recientemente. Para distinguir estas dos características, la unidad que se activa se suele denominar **hilo** (thread), o proceso ligero, mientras que la unidad de propiedad de recursos se suele denominar **proceso**.
+
+## Multihilo
+
+**Multihilo** se refiere a la capacidad de un sistema operativo de dar soporte a **múltiples hilos** de ejecución en un solo proceso.
+
+![](img/hilos.png)
+
+El enfoque tradicional de un solo hilo de ejecución por proceso, en el que no se identifica con el concepto de hilo, se conoce como estrategia **monohilo**.
+
+En un entorno multihilo, un proceso se define como la unidad de asignación de recursos y una
+unidad de protección. Se asocian con procesos los siguientes:
+
+* Un espacio de direcciones virtuales que soporta la imagen del proceso.
+* Acceso protegido a procesadores, otros procesos (para comunicación entre procesos), archivos y recursos de E/S (dispositivos y canales). 
+
+Dentro de un proceso puede haber uno o más hilos, cada uno con:
+
+* Un estado de ejecución por hilo (Ejecutando, Listo, etc.).
+* Un contexto de hilo que se almacena cuando no está en ejecución; una forma de ver a un hilo
+es como un contador de programa independiente dentro de un proceso.
+* Una pila de ejecución.
+* Por cada hilo, espacio de almacenamiento para variables locales. 
+* Acceso a la memoria y recursos de su proceso, compartido con todos los hilos de su mismo
+proceso.
+
+En un modelo de proceso **monohilo** (es decir, no existe el concepto de hilo), la representación de un proceso incluye su **bloque de control de proceso** y el **espacio** de **direcciones** de **usuario**, además de las **pilas** de **usuario** y **núcleo** para gestionar el comportamiento de las llamadas/retornos en la ejecución de los procesos. Mientras el proceso está ejecutando, los registros del procesador se controlan por ese proceso y, cuando el proceso no se está ejecutando, se almacena el contenido de estos registros.
+
+En un entorno multihilo, sigue habiendo un único bloque de control del proceso y un espacio de direcciones de usuario asociado al proceso, pero ahora hay **varias pilas** separadas para **cada hilo**, así como un **bloque de control para cada hilo** que contiene los valores de los registros, la prioridad, y otra información relativa al estado del hilo.
+
+De esta forma, todos los hilos de un proceso comparten el estado y los recursos de ese proceso, residen en el mismo espacio de direcciones y tienen acceso a los mismos datos. Cuando un hilo cambia determinados datos en memoria, otros hilos ven los resultados cuando acceden a estos datos. Si un hilo abre un archivo con permisos de lectura, los demás hilos del mismo proceso pueden también leer ese archivo. 
+
+Los mayores **beneficios** de los hilos provienen de las consecuencias del rendimiento:
+
+1. Lleva mucho menos tiempo crear un nuevo hilo en un proceso existente que crear un proceso totalmente nuevo.
+2. Lleva menos tiempo finalizar un hilo que un proceso.
+3. Lleva menos tiempo cambiar entre dos hilos dentro del mismo proceso.
+4. Los hilos mejoran la eficiencia de la comunicación entre diferentes programas que están ejecutando.
+
+![](img/modelos_procesos.png)
+
+
+Listamos cuatro ejemplos de uso de hilos en un sistema de multiprocesamiento de un solo usuario:
+
+* Trabajo en primer plano y en segundo plano.
+* Procesamiento asíncrono.
+* Velocidad de ejecución.
+* Estructura modular de programas.
+
+## Funcionalidad de los hilos
+
+Los hilos, al igual que los procesos, tienen estados de ejecución y se pueden sincronizar entre ellos. A continuación se analizan estos dos aspectos de las funcionalidades de los hilos.
+
+### Estados de los hilos
+
+Igual que con los procesos, los principales estados de los hilos son: Ejecutando, Listo y Bloqueado. Un aspecto importante es si el bloqueo de un hilo implica el bloqueo del proceso completo
+
+La siguiente figura muestra un programa que realiza dos llamadas a procedimiento remoto (RPC) a dos máquinas diferentes para poder combinar los resultados. En un programa de un solo hilo, los resultados se obtienen en secuencia, por lo que el programa tiene que esperar a la respuesta de cada servidor por turnos.
+
+Reescribir el programa para utilizar un hilo diferente para cada RPC, mejora sustancialmente la velocidad. Observar que si el programa ejecuta en un uniprocesador, las peticiones se deben generar en secuencia y los resultados se deben procesar
+en secuencia; sin embargo, el programa espera concurrentemente las dos respuestas.
+En un uniprocesador, la multiprogramación permite el intercalado de múltiples hilos con múltiples procesos.
+
+![](img/hilos_en_exec.png)
+
+### Sincronización de hilos
+
+Todos los hilos de un proceso comparten el mismo espacio de direcciones y otros recursos, como por ejemplo, los archivos abiertos. Cualquier alteración de un recurso por cualquiera de los hilos, afecta al entorno del resto de los hilos del mismo proceso. Por tanto, es necesario sincronizar las actividades de los hilos para que no interfieran entre ellos o corrompan estructuras de datos.
+
+## Hilos de nivel de usuario y nucleo
+
+### Hilos de nivel de usuario
+
+la aplicación gestiona todo el trabajo de los hilos y el núcleo no es consciente de la existencia de los mismos. Cualquier aplicación puede programarse para ser multihilo a través del uso de una biblioteca de hilos, que es un paquete de rutinas para la gestión de ULT. La biblioteca de hilos contiene código para la creación y destrucción de hilos, para paso de mensajes y datos entre los hilos, para planificar la ejecución de los hilos, y para guardar y restaurar el contexto de los hilos. 
+
+### Hilos a nivel de núcleo
+
+el núcleo gestiona todo el trabajo de gestión de hilos. El núcleo mantiene la información de contexto del proceso y de los hilos. • La planificación se realiza en función de los hilos.
+
+### Enfoques combinados
+
+En un sistema combinado, la creación de hilos se realiza por completo en el espacio de usuario, como la mayor parte de la planificación y sincronización de hilos dentro de una aplicación. Los múltiples ULT de una aplicación se asocian en un número (menor o igual) de KLT. El programador debe ajustar el número de KLT para una máquina y aplicación en particular para lograr los mejores resultados posibles.
+
+![](img/thread_levels.png)
+
+## Otras configuraciones
+
+Como hemos comentado, los conceptos de asignación de recursos y unidades de activación han sido tradicionalmente relacionados con el concepto de proceso; esto es, como una **relación 1:1 entre hilos y procesos**. Recientemente, ha habido mucho interés en proporcionar múltiples hilos dentro de un solo proceso, lo que es una relación **muchos-a-uno**. 
+
+Sin embargo, como muestra la siguiente tabla, las otras dos combinaciones han sido también investigadas, y se denominan relación **muchos-a-muchos** y relación **uno-a-muchos**.
+
+![](img/hilos_procesos.png)
+
+## Multiprocesamiento simetrico (SMP)
+
+A medida que ha evolucionado la tecnología de los computadores y el coste del hardware ha descendido, los diseñadores han visto cada vez más oportunidades para el paralelismo, normalmente para mejorar el rendimiento y, en algunos casos, para mejorar la fiabilidad.
+
+### Arquitectura SMP
+
+Es útil ver donde encaja la arquitectura SMP dentro de las categorías de procesamiento paralelo. La
+forma más común de categorizar estos sistemas es la taxonomía de sistemas de procesamiento paralelo introducida por Flynn. Flynn propone las siguientes **categorías** de sistemas de computadores:
+
+* **Única instrucción, único flujo de datos** – Single instruction single data (SISD) stream. Un
+solo procesador ejecuta una única instrucción que opera sobre datos almacenados en una sola
+memoria.
+• **Única instrucción, múltiples flujos de datos** – Single instruction multiple data (SIMD)
+stream. Una única instrucción de máquina controla la ejecución simultánea de un número
+de elementos de proceso. Cada elemento de proceso tiene una memoria de datos asociada,
+de forma que cada instrucción se ejecuta en un conjunto de datos diferente a través de los
+diferentes procesadores. Los procesadores vectoriales y matriciales entran dentro de esta
+categoría.
+• **Múltiples instrucciones, único flujo de datos** – Multiple instruction single data (MISD)
+stream. Se transmite una secuencia de datos a un conjunto de procesadores, cada uno de
+los cuales ejecuta una secuencia de instrucciones diferente. Esta estructura nunca se ha implementado.
+• **Múltiples instrucciones, múltiples flujos de datos** – Multiple instruction multiple data
+(MIMD) stream. Un conjunto de procesadores ejecuta simultáneamente diferentes secuencias
+de instrucciones en diferentes conjuntos de datos.
+
+Con la organización MIMD, los procesadores son de propósito general, porque deben ser capaces
+de procesar todas las instrucciones necesarias para realizar las transformaciones de datos apropiadas.
+
+MIMD se puede subdividir por la forma en que se comunican los procesadores. Si cada
+procesador tiene una **memoria dedicada**, cada elemento de proceso es en sí un computador. La comunicación entre los computadores se puede realizar a través de rutas prefijadas o bien a través de redes. Este sistema es conocido como un **cluster**, o multicomputador. 
+
+Si los procesadores comparten una memoria común, entonces cada procesador accede a los programas y datos almacenados en la memoria compartida, y los procesadores se comunican entre sí a través de dicha memoria; este sistema se conoce como **multiprocesador de memoria compartida**.
+
+Una clasificación general de los multiprocesadores de memoria compartida se basa en la forma
+de asignar procesos a los procesadores. Los dos enfoques fundamentales son **maestro/esclavo** y **simétrico**. 
+
+Con la arquitectura **maestro/esclavo**, el núcleo del sistema operativo siempre ejecuta en un determinado procesador. El resto de los procesadores sólo podrán ejecutar programas de usuario y, a lo mejor, utilidades del sistema operativo. El maestro es responsable de la planificación de procesos e hilos. Una vez que un proceso/hilo está activado, si el esclavo necesita servicios (por ejemplo, una llamada de E/S), debe enviar una petición al maestro y esperar a que se realice el servicio. Este enfoque es bastante sencillo y requiere pocas mejoras respecto a un sistema operativo multiprogramado uniprocesador. La resolución de conflictos se simplifica porque un procesador tiene el control de toda la memoria y recursos de E/S. Las desventajas de este enfoque son las siguientes:
+*  Un fallo en el maestro echa abajo todo el sistema.
+* El maestro puede convertirse en un cuello de botella desde el punto de vista del rendimiento, ya que es el único responsable de hacer toda la planificación y gestión de procesos.
+
+En un **multiprocesador simétrico** (Symmetric Multiprocessor, SMP), el núcleo puede ejecutar
+en cualquier procesador, y normalmente cada procesador realiza su propia planificación del conjunto disponible de procesos e hilos. El núcleo puede construirse como múltiples procesos o múltiples hilos, permitiéndose la ejecución de partes del núcleo en paralelo. El enfoque SMP complica al sistema operativo, ya que debe asegurar que dos procesadores no seleccionan un mismo proceso y que no se pierde ningún proceso de la cola. Se deben emplear técnicas para resolver y sincronizar el uso de los recursos
+
+![](img/smp.png)
+
+![](img/clasif_paralelismo.png)
+
+### Consideraciones de diseño de SMPs
+
+Un sistema operativo SMP gestiona los procesadores y otros recursos del computador, de manera que
+el usuario puede ver al sistema de la misma forma que si fuera un sistema uniprocesador multiprogramado. Un usuario puede desarrollar aplicaciones que utilicen múltiples procesos o múltiples hilos dentro de procesos sin preocuparse de si estará disponible un único procesador o múltiples procesadores. De esta forma, un sistema operativo multiprocesador debe proporcionar toda la funcionalidad de un sistema multiprogramado, además de características adicionales para adecuarse a múltiples procesadores. Las principales claves de diseño incluyen las siguientes características:
+
+* **Procesos o hilos simultáneos concurrentes**. Debido a que múltiples procesadores pueden ejecutar la misma o diferentes partes del código del núcleo, las tablas y la gestión de las estructuras del núcleo deben ser gestionas apropiadamente para impedir interbloqueos u operaciones inválidas.
+* **Planificación**. La planificación se puede realizar por cualquier procesador, por lo que se deben evitar los conflictos. Si se utiliza multihilo a nivel de núcleo, existe la posibilidad de planificar múltiples hilos del mismo proceso simultáneamente en múltiples procesadores.
+* **Sincronización**. Con múltiples procesos activos, que pueden acceder a espacios de direcciones compartidas o recursos compartidos de E/S, se debe tener cuidado en proporcionar una
+sincronización eficaz. La sincronización es un servicio que **fuerza la exclusión mutua** y el **orden** de los **eventos**. Un mecanismo común de sincronización que se utiliza en los sistemas operativos multiprocesador son los cerrojos, descritos en el Capítulo 5.
+* **Gestión de memoria**. La gestión de memoria en un multiprocesador debe tratar con todos los aspectos encontrados en las máquinas uniprocesador. Además, el sistema operativo necesita explotar el paralelismo hardware existente, como las memorias multipuerto, para lograr el mejor rendimiento. 
+* **Fiabilidad y tolerancia a fallos**. El sistema operativo no se debe degradar en caso de fallo de un procesador. El planificador y otras partes del sistema operativo deben darse cuenta de la pérdida de un procesador y reestructurar las tablas de gestión apropiadamente.
+
+## Micronucleos
+
+Un micronúcleo es la pequeña parte central de un sistema operativo que proporciona las bases para extensiones modulares.
+
+La filosofía existente en el micronúcleo es que solamente las funciones absolutamente esenciales del sistema operativo estén en el núcleo. Los servicios y aplicaciones menos esenciales se construyen sobre el micronúcleo y se ejecutan en modo usuario
+
+![](img/capas_vs_micronucleo.png)
+
+### Beneficios de una arquitectura micronucleo
+
+* Interfaces uniformes
+* Extensibilidad
+* Flexibilidad
+* Portabilidad
+* Fiabilidad
+* Soporte de sistemas distribuidos
+* Soporte de sistemas operativos orientados a objetos
+
+### Diseño de un micronucleo
+
+En esta sección, presentamos un conjunto mínimo de funciones y servicios del micronúcleo, para dar una perspectiva del diseño de los mismos. El micronúcleo debe incluir aquellas funciones que dependen directamente del hardware y aquellas funciones necesarias para mantener a los servidores y aplicaciones operando en modo usuario. Estas funciones entran dentro de las categorías generales de gestión de memoria a bajo nivel, intercomunicación de procesos (IPC), y E/S y manejo de interrupciones. 
+
+* Gestion de memoria de bajo nivel
+* Comunicación entre procesos
+* Gestión de E/S e interrupciones
 
