@@ -36,6 +36,9 @@
   - [Estructura del sistema de archivos](#estructura-del-sistema-de-archivos)
     - [Implementación de un sistema de archivos](#implementación-de-un-sistema-de-archivos)
   - [Sistemas de archivos soportados por linux](#sistemas-de-archivos-soportados-por-linux)
+- [Capitulo 3 - descripción y control de procesos](#capitulo-3---descripción-y-control-de-procesos)
+  - [Qué es un proceso?](#qué-es-un-proceso)
+  - [Estados de los procesos](#estados-de-los-procesos)
 
 # Introducción
 
@@ -651,3 +654,47 @@ Antes de que una partición o disco sea utilizada como un sistema de archivos, n
 * **F2FS**: creado para trabajar con unidades basadas en NAND, como memorias USB o, sobre todo, unidades SSD
 * **BtrFS**:  fue diseñado por Oracle con la intención de suceder a EXT. Sin embargo, aún no lo ha conseguido.
 * **OpenZFS**:  diseñado para funcionar en sistemas RAID
+
+# Capitulo 3 - descripción y control de procesos
+
+La mayoría de los requisitos que un sistema operativo debe cumplir se pueden expresar con referencia a los procesos:
+
+* El sistema operativo debe **intercalar** la **ejecución** de **múltiples procesos**, para maximizar la utilización del procesador mientras se proporciona un tiempo de respuesta razonable.
+* El sistema operativo debe **reservar recursos** para los **procesos** conforme a una política específica (por ejemplo, ciertas funciones o aplicaciones son de mayor prioridad) mientras que al mismo tiempo evita interbloqueos.
+* Un sistema operativo puede requerir **dar soporte** a la **comunicación entre procesos** y la creación de procesos, mediante las cuales ayuda a la estructuración de las aplicaciones.
+
+Un sistema operativo puede, de forma ordenada, **gestionar** la **ejecución** de **aplicaciones** de forma que:
+* Los **recursos** estén **disponibles** para múltiples aplicaciones.
+* El procesador físico se **conmute** entre múltiples aplicaciones, de forma que todas lleguen a procesarse.
+* El procesador y los dispositivos de E/S se puedan usar de forma **eficiente**.
+
+El enfoque adoptado por todos los sistemas operativos modernos recae en un modelo bajo el cual la **ejecución** de una **aplicación** se **corresponde** con la existencia de uno o más **procesos**.
+
+##  Qué es un proceso?
+
+Un proceso tiene distintas acepciones:
+* Una **instancia** de un programa **ejecutado** en un computador.
+* La entidad que se puede asignar y ejecutar en un procesador.
+* Una unidad de actividad que se caracteriza por la ejecución de una **secuencia de instrucciones**, un **estado** actual, y un conjunto de **recursos** del sistema asociados.
+
+También se puede pensar en un proceso como en una **entidad** que consiste en un número de **elementos**. Los dos elementos esenciales serían el **código** de programa y un conjunto de **datos** asociados a dicho código. Supongamos que el procesador comienza a ejecutar este código de programa, y que nos referiremos a esta entidad en ejecución como un proceso. En cualquier instante puntual del tiempo, mientras el proceso está en ejecución, este proceso se puede caracterizar por una serie de elementos, incluyendo los siguientes:
+
+* **Identificador**. Un identificador único asociado a este proceso, para distinguirlo del resto de procesos.
+* **Estado**. Si el proceso está actualmente corriendo, está en el estado en ejecución.
+* **Prioridad**: Nivel de prioridad relativo al resto de procesos.
+* **Contador de programa**. La dirección de la siguiente instrucción del programa que se ejecutará.
+* **Punteros a memoria**. Incluye los punteros al código de programa y los datos asociados a dicho proceso, además de cualquier bloque de memoria compartido con otros procesos.
+* **Datos de contexto**. Estos son datos que están presenten en los registros del procesador cuando el proceso está corriendo.
+* **Información de estado de E/S**. Incluye las peticiones de E/S pendientes, dispositivos de E/S (por ejemplo, una unidad de cinta) asignados a dicho proceso, una lista de los ficheros en uso por el mismo, etc.
+* **Información de auditoría**. Puede incluir la cantidad de tiempo de procesador y de tiempo de reloj utilizados, así como los límites de tiempo, registros contables, etc.
+
+La información de la lista anterior se almacena en una **estructura de datos**, que se suele llamar **bloque de control de proceso** (process control block), que el sistema operativo crea y gestiona.
+
+![](img/bcp.png)
+
+De esta forma, se puede decir que un proceso está compuesto del código de programa y los datos asociados, además del bloque de control de proceso o BCP
+
+##  Estados de los procesos
+
+Se puede **caracterizar** el **comportamiento** de un determinado proceso, **listando** la **secuencia** de **instrucciones** que se **ejecutan** para dicho proceso. A esta lista se la denomina **traza** del proceso. Se puede caracterizar el comportamiento de un procesador mostrando cómo las trazas de varios procesos se entrelazan.
+
