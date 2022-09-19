@@ -63,6 +63,14 @@
   - [Micronucleos](#micronucleos)
     - [Beneficios de una arquitectura micronucleo](#beneficios-de-una-arquitectura-micronucleo)
     - [Diseño de un micronucleo](#diseño-de-un-micronucleo)
+- [Concurrencia](#concurrencia)
+  - [Principios de la concurrencia](#principios-de-la-concurrencia)
+  - [Exclusión mutua: Soporte de hardware](#exclusión-mutua-soporte-de-hardware)
+  - [Semaforos](#semaforos)
+  - [Monitores](#monitores)
+  - [Paso de mensajes](#paso-de-mensajes)
+    - [Sincronización](#sincronización)
+    - [Direccionamiento](#direccionamiento)
 
 # Introducción
 
@@ -1053,4 +1061,173 @@ En esta sección, presentamos un conjunto mínimo de funciones y servicios del m
 * Gestion de memoria de bajo nivel
 * Comunicación entre procesos
 * Gestión de E/S e interrupciones
+
+
+# Concurrencia
+
+La concurrencia es fundamental en el diseño del sistema operativo. La concurrencia abarca varios aspectos, entre los cuales están la **comunicación entre procesos** y la **compartición** de, o **competencia** por, **recursos**, la **sincronización de actividades** de múltiples procesos y la **reserva de tiempo de procesador** para los procesos.
+
+La concurrencia aparece en tres contextos diferentes:
+
+* **Múltiples aplicaciones**. La **multiprogramación** fue ideada para permitir compartir dinámicamente el tiempo de procesamiento entre varias aplicaciones activas.
+* **Aplicaciones estructuradas**. Como extensión de los principios del diseño modular y de la programación estructurada, algunas aplicaciones pueden ser programadas eficazmente como un conjunto de procesos concurrentes.
+* **Estructura del sistema operativo**. Las mismas ventajas constructivas son aplicables a la programación de sistemas y, de hecho, los sistemas operativos son a menudo implementados en sí
+mismos como un conjunto de procesos o hilos.
+
+![](img/terminos_concurrentes.png)
+
+Se plantean las siguientes dificultades:
+
+1. La **compartición** de **recursos globales** está cargada de **peligros**. Por ejemplo, si dos procesos utilizan ambos la misma variable global y ambos realizan lecturas y escrituras sobre esa variable, entonces el **orden** en que se ejecuten las lecturas y escrituras es crítico.
+2. Para el sistema operativo es complicado gestionar la asignación de recursos de manera óptima. Por ejemplo, el proceso A puede solicitar el uso de un canal concreto de E/S, y serle concedido el control, y luego ser suspendido justo antes de utilizar ese canal. Puede no ser deseable que el sistema operativo simplemente bloquee el canal e impida su utilización por otros procesos; de hecho esto puede conducir a una condición de interbloqueo.
+3. Llega a ser muy complicado localizar errores de programación porque los resultados son típicamente no deterministas y no reproducibles.
+
+## Principios de la concurrencia
+
+**Mutex**
+
+Es necesario proteger las variables globales compartidas (así como otros recursos globales compartidos) y que la única manera de hacerlo es controlar el código que accede a la variable.
+
+![](./img/eco.png)
+
+**Condición de carrera**
+
+Una condición de carrera sucede cuando múltiples procesos o hilos leen y escriben datos de manera que el resultado final depende del orden de ejecución de las instrucciones en los múltiples procesos.
+
+**Preocupaciones del SO**
+
+1. El sistema operativo debe ser capaz de seguir la pista de varios procesos.
+2. El sistema operativo debe ubicar y desubicar varios recursos para cada proceso activo.
+3. El sistema operativo debe proteger los datos y recursos físicos de cada proceso frente a interferencias involuntarias de otros procesos.
+4. El funcionamiento de un proceso y el resultado que produzca, debe ser independiente de la velocidad a la que suceda su ejecución en relación con la velocidad de otros procesos concurrentes.
+
+**Interacción de los procesos**
+
+Podemos clasificar las formas en que los procesos interaccionan en base al grado en que perciben la
+existencia de cada uno de los otros. La Tabla 5.2 enumera tres posibles grados de percepción más las
+consecuencias de cada uno:
+
+![](img/interacción_procesos.png)
+
+**Competencia entre procesos por recursos**
+
+Los procesos concurrentes entran en conflicto entre ellos cuando compiten por el uso del mismo recurso.
+
+**No hay intercambio de información** entre los procesos en competencia. No obstante, la ejecución de un proceso puede afectar al comportamiento de los procesos en competencia. En concreto, si dos procesos desean ambos acceder al mismo recurso único, entonces, el sistema operativo reservará el recurso para uno de ellos, y el otro tendrá que esperar. Por tanto, el proceso al que se le deniega el acceso será ralentizado. En un caso extremo, el proceso bloqueado puede no conseguir nunca el recurso y por tanto no terminar nunca satisfactoriamente.
+
+En el caso de procesos en competencia, deben afrontarse tres problemas de control.
+
+1. Primero está la necesidad de **exclusión mutua**. Supóngase que dos o más procesos requieren acceso a un recurso único no compartible, como una impresora. Durante el curso de la ejecución, cada proceso estará enviando mandatos al dispositivo de E/S, recibiendo información de estado, enviando datos o recibiendo datos. Nos referiremos a tal recurso como un **recurso crítico**, y a la porción del programa que lo utiliza como la **sección crítica** del programa. Es importante que **sólo** se permita **un programa** al tiempo en su sección crítica.
+2. La aplicación de la exclusión mutua crea dos problemas de control adicionales. Uno es el del **interbloqueo**. Por ejemplo, considere dos procesos, P1 y P2, y dos recursos, R1 y R2. Suponga que cada proceso necesita acceder a ambos recursos para realizar parte de su función. Entonces es posible encontrarse la siguiente situación: el sistema operativo asigna R1 a P2, y R2 a P1. Cada proceso está esperando por uno de los dos recursos. Ninguno liberará el recurso que ya posee hasta haber conseguido el otro recurso y realizado la función que requiere ambos recursos. Los dos procesos están interbloqueados.
+3. Un último problema de control es la **inanición**. Suponga que tres procesos (P1, P2, P3) requieren todos accesos periódicos al recurso R. Considere la situación en la cual P1 está en posesión del recurso y P2 y P3 están ambos retenidos, esperando por ese recurso. Cuando P1 termine su sección crítica, debería permitírsele acceso a R a P2 o P3. Asúmase que el sistema operativo le concede acceso a P3 y que P1 solicita acceso otra vez antes de completar su sección crítica. Si el sistema operativo le concede acceso a P1 después de que P3 haya terminado, y posteriormente concede alternativamente acceso a P1 y a P3, entonces a P2 puede denegársele indefinidamente el acceso al recurso, aunque no suceda un interbloqueo.
+
+**Cooperación entre procesos via compartición**
+
+El caso de cooperación vía compartición cubre procesos que interaccionan con otros procesos sin tener conocimiento explícito de ellos.
+
+los procesos deben cooperar para asegurar que los datos que comparten son manipulados adecuadamente. Los mecanismos de control deben asegurar la integridad de los datos compartidos. Dado que los datos están contenidos en recursos (dispositivos, memoria), los problemas de control de exclusión mutua, interbloqueo e inanición están presentes de nuevo. La única diferencia es que los datos individuales pueden ser accedidos de dos maneras diferentes, **lectura** y **escritura**, y sólo las operaciones de **escritura** deben ser **mutuamente exclusivas**.
+
+**Cooperación entre procesos via comunicación**
+
+Cuando los procesos cooperan vía comunicación los diversos procesos involucrados participan en un esfuerzo común que los vincula a todos ellos. La comunicación proporciona una manera de sincronizar o coordinar actividades varias.
+
+Típicamente, la comunicación se fundamenta en **mensajes** de algún tipo. Las primitivas de envío y recepción de mensajes deben ser proporcionadas como parte del **lenguaje** de programación o por el **núcleo** del sistema operativo.
+
+**Requisitos para una exclusión mutua**
+
+Cualquier mecanismo o **técnica** que vaya a proporcionar **exclusión mutua** debería cumplimentar los
+siguientes **requisitos**:
+
+1. La exclusión mutua debe **hacerse cumplir**: sólo se permite un proceso al tiempo dentro de su
+sección crítica, de entre todos los procesos que tienen secciones críticas para el mismo recurso
+u objeto compartido.
+2. Un proceso que se pare en su sección no crítica debe hacerlo sin interferir con otros procesos.
+3. No debe ser posible que un proceso que solicite acceso a una **sección crítica** sea **postergado** indefinidamente: ni interbloqueo ni inanición.
+4. Cuando ningún proceso esté en una sección crítica, a cualquier proceso que solicite entrar en
+su sección crítica debe permitírsele entrar sin demora.
+5. No se hacen suposiciones sobre las velocidades relativas de los procesos ni sobre el número de
+procesadores.
+6. Un proceso permanece dentro de su sección crítica sólo por un **tiempo finito**.
+
+## Exclusión mutua: Soporte de hardware
+
+**Deshabilitar interrupciones**
+
+En una máquina monoprocesador, los procesos concurrentes no pueden solaparse, sólo pueden entrelazarse. Es más, un proceso continuará ejecutando hasta que invoque un servicio del sistema operativo o hasta que sea interrumpido. Por tanto, para garantizar la exclusión mutua, basta con impedir que un proceso sea interrumpido. Esta técnica puede proporcionarse en forma de primitivas definidas por el núcleo del sistema para deshabilitar y habilitar las interrupciones.
+
+**Instrucciones de maquina especiales**
+
+A un nivel hardware, como se mencionó, el acceso a una posición de memoria excluye cualquier otro acceso a la misma posición. Con este fundamento, los diseñadores de procesadores han propuesto varias instrucciones máquina que llevan a cabo dos acciones atómicamente2 , como leer y escribir o leer y comprobar, sobre una única posición de memoria con un único ciclo de búsqueda de instrucción. Durante la ejecución de la instrucción, el acceso a la posición de memoria se le bloquea a toda otra instrucción que referencie esa posición. Típicamente, estas acciones se realizan en un único ciclo de instrucción
+
+__ TODO __
+## Semaforos
+
+Pasamos ahora a mecanismos del sistema operativo y del lenguaje de programación que se utilizan para proporcionar concurrencia. Comenzando, en esta sección, con los semáforos.
+
+El principio fundamental es éste: dos o más procesos pueden cooperar por medio de simples **señales**, tales que un proceso pueda ser obligado a parar en un lugar específico hasta que haya recibido una señal específica. Cualquier requisito complejo de coordinación puede ser satisfecho con la estructura de señales apropiada.
+
+Para la señalización, se utilizan unas **variables** especiales llamadas **semáforos**. Para **transmitir** una señal vía el semáforo s, el proceso ejecutará la **primitiva semSignal(s)**. Para **recibir** una señal vía el semáforo s, el proceso ejecutará la **primitiva semWait(s)**; si la correspondiente señal no se ha transmitido todavía, el proceso se suspenderá hasta que la transmisión tenga lugar.
+
+Para conseguir el efecto deseado, el semáforo puede ser visto como una variable que contiene un valor entero sobre el cual sólo están definidas tres operaciones:
+1. Un semáforo puede ser inicializado a un valor no negativo.
+2. La operación semWait decrementa el valor del semáforo. Si el valor pasa a ser negativo, entonces el proceso que está ejecutando semWait se bloquea. En otro caso, el proceso continúa su ejecución.
+3. La operación semSignal incrementa el valor del semáforo. Si el valor es menor o igual que cero, entonces se desbloquea uno de los procesos bloqueados en la operación semWait.
+
+Una versión más restringida, conocida como semáforo binario o mutex. Un semáforo binario sólo puede tomar los valores 0 y 1 y se puede definir por las siguientes tres operaciones:
+1. Un semáforo binario puede ser inicializado a 0 o 1.
+2. La operación semWaitB comprueba el valor del semáforo. Si el valor es cero, entonces el proceso que está ejecutando semWaitB se bloquea. Si el valor es uno, entonces se cambia el valor a cero y el proceso continúa su ejecución.
+3. La operación semSignalB comprueba si hay algún proceso bloqueado en el semáforo. Si lo hay, entonces se desbloquea uno de los procesos bloqueados en la operación semWaitB. Si no hay procesos bloqueados, entonces el valor del semáforo se pone a uno.
+
+Para ambos, semáforos con contador y semáforos binarios, se utiliza una cola para mantener los procesos esperando por el semáforo.
+
+![](img/semaforo.png)
+
+![](img/semaforo2.png)
+
+## Monitores
+
+El monitor es una construcción del lenguaje de programación que proporciona una funcionalidad equivalente a la de los semáforos pero es más fácil de controlar.
+
+Un monitor es un módulo software consistente en uno o más procedimientos, una secuencia de inicialización y datos locales. Las principales características de un monitor son las siguientes:
+
+1. Las variables locales de datos son sólo accesibles por los procedimientos del monitor y no por
+ningún procedimiento externo.
+2. Un proceso entra en el monitor invocando uno de sus procedimientos
+3. Sólo un proceso puede estar ejecutando dentro del monitor al tiempo; cualquier otro proceso
+que haya invocado al monitor se bloquea, en espera de que el monitor quede disponible.
+
+Para ser útil para la programación concurrente, el monitor debe incluir herramientas de sincronización. Por ejemplo, suponga un proceso que invoca a un monitor y mientras está en él, deba bloquearse hasta que se satisfaga cierta condición. Se precisa una funcionalidad mediante la cual el proceso no sólo se bloquee, sino que libere el monitor para que algún otro proceso pueda entrar en él. Más tarde, cuando la condición se haya satisfecho y el monitor esté disponible nuevamente, el proceso debe poder ser retomado y permitida su entrada en el monitor en el mismo punto en que se suspendió.
+
+Un monitor soporta la sincronización mediante el uso de variables condición que están contenidas dentro del monitor y son accesibles sólo desde el monitor. Las variables condición son un tipo de datos especial en los monitores que se manipula mediante dos funciones:
+
+* cwait(c): Suspende la ejecución del proceso llamante en la condición c. El monitor queda disponible para ser usado por otro proceso.
+* csignal(c): Retoma la ejecución de algún proceso bloqueado por un cwait en la misma condición. Si hay varios procesos, elige uno de ellos; si no hay ninguno, no hace nada.
+
+Nótese que las operaciones wait y signal de los monitores son diferentes de las de los semáforos. Si un proceso en un monitor señala y no hay ningún proceso esperando en la variable condición, la señal se pierde.
+
+![](img/monitor.png)
+
+## Paso de mensajes
+
+Los sistemas de paso de mensajes se presentan en varias modalidades. En esta sección, presentamos una introducción general que trata las características típicas encontradas en tales sistemas. La funcionalidad real del paso de mensajes se proporciona normalmente en forma de un par de primitivas:
+
+* send(destino, mensaje)
+* receive(origen, mensaje)
+
+Este es el conjunto mínimo de operaciones necesarias para que los procesos puedan entablar
+paso de mensajes. El proceso envía información en forma de un mensaje a otro proceso designado
+por destino. El proceso recibe información ejecutando la primitiva receive, indicando la fuente y el
+mensaje
+
+### Sincronización
+
+* **Envío bloqueante, recepción bloqueante**. Ambos emisor y receptor se bloquean hasta que el mensaje se entrega; a esto también se le conoce normalmente como rendezvous.
+* **Envío no bloqueante, recepción bloqueante**. Aunque el emisor puede continuar, el receptor se bloqueará hasta que el mensaje solicitado llegue. Esta es probablemente la combinación más útil.
+* **Envío no bloqueante, recepción no bloqueante**. Ninguna de las partes tiene que esperar.
+
+### Direccionamiento
+
+Los diferentes esquemas para especificar procesos en las primitivas send y receive caben dentro de dos categorías: direccionamiento directo y direccionamiento indirecto. Con el direccionamiento directo, la primitiva send incluye un identificador específico del proceso destinatario. La primitiva receive puede ser manipulada de dos maneras. Una posibilidad es que el proceso deba designar explícitamente un proceso emisor. Así, el proceso debe conocer con anticipación de qué proceso espera el mensaje. Esto suele ser lo más eficaz para procesos concurrentes cooperantes. En otros casos, sin embargo, es imposible especificar con anticipación el proceso de origen.
+
+El otro esquema general es el direccionamiento indirecto. En este caso, los mensajes no se envían directamente por un emisor a un receptor sino que son enviados a una estructura de datos compartida que consiste en colas que pueden contener mensajes temporalmente. Tales colas se conocen generalmente como buzones (mailboxes). Así, para que dos procesos se comuniquen, un proceso envía un mensaje al buzón apropiado y otro proceso toma el mensaje del buzón.
 
