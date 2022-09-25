@@ -57,6 +57,22 @@
     - [Retención de empleados competentes](#retención-de-empleados-competentes)
       - [Manejo del desempeño de los empleados](#manejo-del-desempeño-de-los-empleados)
       - [Compensación y beneficios](#compensación-y-beneficios)
+- [Unidad 4 - Tableros de comando](#unidad-4---tableros-de-comando)
+  - [Indicadores](#indicadores)
+  - [Tableros de comando](#tableros-de-comando)
+    - [Conceptos claves](#conceptos-claves)
+    - [Funcionamiento](#funcionamiento)
+    - [Beneficios](#beneficios)
+    - [Relaciones causa-efecto](#relaciones-causa-efecto)
+    - [Perspectivas](#perspectivas)
+      - [Perspectiva financiera](#perspectiva-financiera)
+      - [Perspectiva del cliente](#perspectiva-del-cliente)
+      - [Perspectiva del proceso interno](#perspectiva-del-proceso-interno)
+      - [Perspectiva de formación y crecimiento](#perspectiva-de-formación-y-crecimiento)
+    - [Estructuración del CMI](#estructuración-del-cmi)
+    - [implementación](#implementación)
+    - [Mapa estrategico](#mapa-estrategico)
+    - [Cuadro de indicadores](#cuadro-de-indicadores)
 
 # Capitulo 1  - Administración y Organización
 
@@ -575,3 +591,286 @@ La compensación de la organización puede incluir muchos tipos diferentes de in
 ![](img/incentivos.png)
 
 `Nota: El acoso sexual se define como cualquier acción o actividad de naturaleza sexual que afecta explícita o implícitamente el empleo de un individuo, su desempeño o su entorno de trabajo.`
+
+# Unidad 4 - Tableros de comando
+
+## Indicadores
+****
+Información:
+
+La información son datos procesados en forma significativa para el receptor, con valor real y perceptible para decisiones presentes y futuras. Esta debe ser:
+
+* RELEVANTE (útil). 
+* OPORTUNA (a tiempo). 
+* CONFIABLE. 
+* INTEGRADA A UN SISTEMA DE INFORMACIÓN. 
+* HABILITANTE PARA LA TOMA DE DECISIÓN. 
+* SINTÁCTICA. 
+* SELECTIVA. 
+* CLARA. 
+* RETROALIMENTABLE. 
+* ESTANDARIZADA.
+
+Los **indicadores** son expresiones generalmente cuantitativas que relacionan variables relevantes según criterios previos definidos. 
+
+Hay 4 **tipos** de indicadores:
+
+* **RATIO** o COEFICIENTE: es el cociente de los números o de cantidades comparables. o Liquidez Cte = (DI+CR+BC)/Deudas. 
+* **ÍNDICE**: es un parámetro estadístico. 
+  * Ventas mensuales (serie) en relación a un mes dado (base=100). 
+* **EVALUACIÓN**: Valoración de escalas cualitativas. 
+  * SI: 2 ptos / A MEDIAS: 1 pto / NO: 0 ptos. 
+* **DATO DIRECTO** (sin relación!!). 
+  * Unidades vendidas, facturación.
+
+Los indicadores deben ser **absolutos**, **objetivos** y **derivados** de una realidad o modelo.
+
+Los indicadores se **clasifican** en:
+
+* Según el tipo de **medida**: 
+  * **Cuantitativo**. Ej.: % de Reducción de costos en relación a un periodo. 
+  * **Cualitativo**. Ej.: Liderazgo – Grado en el que se fomenta la pasión en los  empleados. 
+* Según el **ámbito** de aplicación: 
+  * **Administrativos**. Ej.: Endeudamiento. 
+  * **Comerciales**. Ej.: % de nuevos clientes. 
+  * **Producción**. Ej.: % de desperdicio producido. 
+  * Etc. 
+* Según el **lugar** de **obtención**: 
+  * **Internos**. Ej: Ausentismo. 
+  * **Externos**. Ej: % de cuota de mercado abarcado. 
+  * **Cruzados**. Ej.: Ventas de unidades / área geográfica. 
+* Según la **etapa** del proceso: 
+  * **Input**. Ej: Cumplimiento de entregas de proveedores. 
+  * **Output**. Ej: Cumplimiento de entregas. 
+  * **Proceso**. Ej: Cumplimiento de plan de producción. 
+* Según los **factores** analizados 
+  * **Equipo**. Ej.: Tiempo para la finalización de proyectos. 
+  * **Personas**. Ej.: Ausentismo. 
+  * **Tecnología**. Ej: % de líneas de producción automatizadas. 
+
+Los indicadores deben contener los siguientes **componentes** **mínimamente**: 
+
+* Periodicidad de medición. 
+  * Mensual, trimestral, semestral, anual. 
+* Base comparativa. 
+  * 1 período, 1 ejercicio, 1 empresa respecto a otra.
+* Unidad de medida. 
+
+Optimamente, deberian de tener los siguientes componentes:
+
+![](img/indicador.png)
+
+1. **Objetivo**: Nombre del objetivo estratégico al cual pertenece el indicador. 
+2. **Indicador**: Nombre del indicador a medir. 
+3. **Nivel**: Corresponde al nivel del indicador, donde el nivel 1 es un indicador principal y el  nivel 2 es usado para calcular el indicador del nivel 1. 
+4. **Descripción**: Explicación breve de la importancia de medir el indicador. 
+5. **Justificación**: Es la razón por la cual fue incluido el indicador en el estudio:
+   * Resultado de la Investigación: El indicador aparece en la revisión de los casos de estudio  que se usaron para conformar el tablero de control. 
+   * Reconocido en la Industria: Si el indicador aparece en la revisión de fuentes de  información que permitan establecer indicadores típicos de medición. 
+   * Opinión de Expertos: Se selecciona cuando el indicador no apareció en la investigación y  tampoco en la revisión de fuentes de información, por lo tanto, un experto externo o el  autor por su experiencia recomiendan incluirlo, porque es importante medirlo. 
+6. Formula: Es la forma como se obtiene o calcula el indicador.  
+7. **Unidad**: Es la presentación de formato obtenido del cálculo del indicador, el cual puede  ser numérico, porcentaje o moneda. 
+8. **Frecuencia**: Es la periodicidad con la cual se sugiere calcular el indicador, la cual puede  ser mensual, trimestral, semestral o anual. En la mayoría de los casos se calcula de forma  mensual. 
+9. **Responsable**: Son los cargos de las personas responsables de generar la data necesaria  para el cálculo del indicador. 
+10.  **Fuente**: Corresponde a la fuente de donde se extraen los datos para calcular el indicador,  las cuales pueden ser aplicaciones de sistemas o fuentes externas como entrevistas,  encuestas, registros, entre otras. 
+11.  **Desempeño**: Es un compendio de casillas en las cuales se relaciona la meta que debe  alcanzar el indicador, así como la fuente de donde se obtuvo la meta y su descripción. 
+  * **Expertos**: Cuando algún experto de mercado externo sugiere la meta del indicador. 
+  * **Investigación**: La meta del indicador surgió de la caracterización de los casos de estudio  usados para conformar el tablero de control. 
+  * **Industria**: La meta es conocida en todos los sectores de la industria. 
+  * **Plan de Negocio**: La meta será definida a criterio del gestor que aplique el modelo y de  acuerdo a las características propias del negocio. En la casilla de meta aparece un valor  sugerido. 
+12.  **Representación**: Corresponde a la forma sugerida de representar gráficamente el  indicador, la cual facilita la lectura de su comportamiento. 
+
+## Tableros de comando
+
+El TdC es la **exposición** dinámica del **diagnóstico** de una organización. 
+
+Es el producto final de un sistema informatico integrado orientado al Control de Gestión 
+
+El TdC busca **informar** a la dirección superior por medio de **sensores** (ratios, índices, evaluaciones) la **marcha** de la **gestión** y el **grado** de **cumplimiento** de los **objetivos** estratégicos. Suelen tambien destacar inteligentemente cuándo el estado y evolución de dichos sensores constituyen  una FUERZA o una DEBILIDAD. 
+
+Los objetivos de un TdC son:
+
+* Permitir un análisis de la gestión empresarial. 
+* Permitir un control de dicha gestión. 
+* Permitir una toma de medidas correctivas a partir del mencionado control. 
+
+El **Cuadro de mando integral** (CMI, o Balanced Scoreboard, BSC) es una herramienta que traduce la **misión** y la **estrategia** de una organización en un amplio conjunto de **medidas** de la actuación, que proporcionan la estructura necesaria para un **sistema** de **gestión** y **medición** estratégica.
+
+### Conceptos claves
+
+**Perspectivas**  
+
+Corresponden a los diferentes **grupos** que configuran el **análisis** de los **resultados** en toda  organización. Las Perspectivas del Negocio enmarcan los objetivos estratégicos, sus indicadores y  metas, así como los Proyectos Estratégicos. 
+
+La metodología distingue dos grandes tipos de perspectivas: **externas** e **internas**. En las  perspectivas externas se engloban los resultados de la actuación de la organización. Los  ejemplos más habituales son la perspectiva financiera y la perspectiva de los clientes. 
+
+**Objetivos Estratégicos**
+
+Un objetivo estratégico es un **fin** deseado, clave para la organización y para la consecución de su Visión. Su cumplimiento es un elemento de máxima prioridad para llevar a cabo la Estrategia de  la organización. 
+
+**Tipo de indicadores**  
+
+En general, existen dos tipos de indicadores: 
+* **inductores**, que miden las acciones que se realizan  para conseguir el objetivo (por ejemplo, inversión en tecnología); 
+* y **resultado**, que mide  precisamente el grado de obtención de resultados (por ejemplo, número de fallos de los  sistemas de información).
+
+El proceso de selección de indicadores es complejo, ya que un indicador mal seleccionado implica un comportamiento NO deseado, que puede hacer que la  organización se desvíe del cumplimiento de su Estrategia. 
+
+A los indicadores de gestión se los suele denominar **KPI**, que es un acrónimo formado por las  iniciales de los términos: **Key Performance Indicator**. 
+
+**Metas**  
+
+Es el **valor objetivo** que se **desea obtener** para un **indicador** en un **período de tiempo**  determinado. En general, las metas deben ser retadoras pero realizables, y deben establecerse  con la periodicidad adecuada para poder corregir desviaciones antes de que sea demasiado  tarde. 
+
+### Funcionamiento
+
+El CMI posee los **indicadores** financieros **tradicionales** que una empresa pueda tener. Pero estos indicadores solo cuentan la historia y el **pasado**.
+
+Es por eso que el CMI los complementa con medidas de los **inductores** de **actuación futura**.
+
+Así es posible que el CMI defina **cuatro perspectivas**:
+
+* Financiera.
+* Cliente.
+* Procesos internos.
+* Formación y crecimiento.
+
+![](img/cmi_funcionamiento.png)
+
+### Beneficios
+
+De esta manera el CMI ayuda a las organizaciones a poder **medir** de qué manera sus unidades de negocio crean **valor** para sus clientes presentes y futuros.
+
+El CMI enfatiza que los **indicadores** de las cuatro perspectivas deben formar parte de un **sistema** de información para los empleados en todos los niveles de ella.
+
+El CMI permite:
+
+* **Aclarar** y traducir o transformar la **visión** y la **estrategia**.
+* **Comunicar** y vincular los **objetivos** e **indicadores** estratégicos.
+* **Planificar**, establecer objetivos y alinear las iniciativas estratégicas.
+* **Aumentar** el **feedback** y formación estratégica.
+
+![](img/cmi_beneficios.png)
+
+La vinculación entre los objetivos y los individuos, evidenciada por los indicadores, permite que cada uno **comprenda** cómo debe **actuar** para **contribuir** a la **obtención** de los **objetivos** definidos, y advierte acerca de la necesidad de **modificaciones** si los esfuerzos conducen a direcciones no deseadas.
+
+### Relaciones causa-efecto
+
+El CMI se vincula con la **estrategia** de la organización mediante las relaciones causa-efecto:
+
+Ejemplo: ¿cuáles son las causas que le permiten a la organización tener una excelente satisfacción al cliente?
+
+* Se vincula con la perspectiva del cliente.
+* Tiene relación con una excelente atención de los empleados, rápida atención, etc. (procesos internos).
+* Tiene relación con la entrega puntual de pedidos (formación y crecimiento).
+* Tiene relación con el costo de capacitación de empleados (financiera).
+
+Los indicadores deben definir los **objetivos** estratégicos a **largo plazo** y las estrategias utilizadas para alcanzarlos, estableciendo las vinculaciones causa-efecto para que pocos indicadores informes sobre amplios temas estratégicos.
+
+### Perspectivas
+
+#### Perspectiva financiera
+
+Los objetivos financieros sirven de enfoque para todos los demás objetivos e indicadores del CMI, así como también definen la actuación financiera que se espera de la estrategia.
+
+#### Perspectiva del cliente
+
+En esta perspectiva, las organizaciones identifican los **segmentos** de los **clientes** y del mercado en el que estarán operando. 
+
+Permite que la organización equipare sus indicadores claves de clientes (satisfacción, fidelidad, retención, adquisición y rentabilidad), con los segmentos de los clientes y mercado seleccionado.
+
+#### Perspectiva del proceso interno
+
+Los objetivos de esta perspectiva parten de los objetivos que buscan los clientes y accionistas.
+
+Esto tiene una razón lógica: primero se han de delinear los objetivos e indicadores que establecen la razón última de la existencia de una organización, que es establecida por sus accionistas, que determina a su vez hacia qué mercados y segmento de clientes se deberá dirigir para obtener sus ingresos.
+
+Para la búsqueda de mejoras en procesos internos que ofrezcan ventajas competitivas sostenibles en el tiempo, se comenzó a incursionar en asuntos como:
+* Recepción de pedidos.
+* Comprobación de estados de cuentas corrientes.
+* Comprobación de existencia de stock.
+* Etc.
+
+El enfoque de la perspectiva de procesos internos radica en la **identificación** de cuáles son los **procesos internos** en los que la organización debe ser **excelente**. Estos procesos excelentes, le permitirán a la organización:
+
+* Obtener **ventajas competitivas** sostenibles.
+* Obtener **propuestas** de **valor** para los clientes.
+* **Satisfacer expectativa** de accionistas.
+* Alcanzar una **alta performance**.
+
+Muchos de estos procesos se identifican mediante **actividades de I + D**, tomando como base la
+**cadena de valor** desarrollada por **Porter**. Esta cadena permite realizar un **análisis interno** de la empresa, a través de su **desagregación** en sus principales **actividades** generadoras de valor.
+
+![](img/portert.png)
+
+#### Perspectiva de formación y crecimiento
+
+Los objetivos de esta perspectiva proporcionan la **infraestructura** que permite que se alcancen los **objetivos** ambiciosos en las restasntes perspectivas.
+
+El CMI recalca la importancia de **invertir** para el **futuro**, y no solo en las áreas tradicionales de inversión. Es necesario invertir en infraestructura también además de I + D.
+
+Las **tres principales categorías** de esta perspectiva de formación y crecimiento son:
+
+* Las **capacidades** de los **empleados**. Las ideas para mejorar los procesos y la actuación de cara a los clientes, deben provenir, cada vez más, de los empleados que están más cerca de los procesos internos y de los clientes de la organización.
+* Las **capacidades** de los **sistemas** de **información**. Los empleados necesitan disponer de una información oportuna y fiable sobre los distintos aspectos de la organización.
+* **Motivación**, **delegación de poder** y **coherencia de objetivos**. Es necesario tener en cuenta que incluso los empleados especializados, que disponen de un correcto acceso a la información, dejarán de contribuir al éxito de la organización si no se sienten motivados o si no se les concede la libertad para la toma de decisiones y actuación.
+
+### Estructuración del CMI
+
+Pasos:
+
+Cuadro de mando integral – Estructuración*
+1. Conocer el negocio
+2. Definir áreas de diagnóstico (éxito / riesgo)
+3. Definir factores de éxito (FE) para cada área
+4. Definir indicadores para los FE (evolución)
+5. Definir interrelaciones de datos (RATIOS / INDICES)
+6. Definir cuestionarios para lo cualitativo (EVALUACIONES)
+7. Establecer parámetros para los indicadores
+8. Establecer sentido y destino de los indicadores
+9. Definir gráficos y cuadros ágiles y comprensibles
+10. Establecer medios de validación de la información primaria
+
+### implementación
+
+1. Definir la necesidad de implantar un CMI por la alta dirección.
+2. Designar a un líder que llevará a cabo el proyecto de implantación.
+  * Determinar las funciones del líder del proyecto:
+     * Actuará como guía para la definición de objetivos.
+     * Lograr el compromiso de los participantes del proyecto.
+     * Vigilar que la documentación necesaria esté disponible.
+     * Atender la solución de problemas y conflictos.
+     * Controlar el cronograma y alcance.
+3. Comenzar el proyecto:
+   * Seleccionar la unidad de negocio.
+   * Recabar información:
+     * Entorno.
+     * Políticas de la organización.
+     * Calidad.
+     * Objetivos vigentes de la organización.
+     * Estructura de la organización.
+     * Vinculaciones con otras unidades de negocios.
+
+4. Obtener consenso: Se refiere a la obtención de una clara definición de la visión, misión y estrategia.
+5. Definición de indicadores: Se llevarán a cabo reuniones para definir claramente:
+  * Los objetivos estratégicos de cada perspectiva.
+  * Ubicar los indicadores que mejor los representen.
+  * Señalar cómo obtener la información para cada indicador.
+  * Definir los vínculos entre los indicadores y las perspectivas.
+  * Definir los vínculos entre las perspectivas.
+  * Descubrir los inductores, describiendo cómo influye cada indicador en los restantes. Se trata de encontrar cuáles son las relaciones que permitirán obtener los objetivos claves.
+
+6. Información: Se elabora un comunicado para informar al resto del personal acerca del propósito del CMI.
+7. Implantación
+
+### Mapa estrategico
+
+Un mapa estratégico es una completa representación visual de la estrategia de una organización, describe el proceso de creación de valor mediante una serie de relaciones de causa y efecto
+
+entre los objetivos de las cuatro perspectivas del CMI: financiera, del cliente, de los procesos, y por último, de aprendizaje y crecimiento.
+
+![](img/mapa_estrategia.png)
+
+### Cuadro de indicadores
+
+![](img/cuadro_indicadores.png)
