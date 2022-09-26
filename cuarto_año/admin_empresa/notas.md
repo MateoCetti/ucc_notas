@@ -73,6 +73,7 @@
     - [implementación](#implementación)
     - [Mapa estrategico](#mapa-estrategico)
     - [Cuadro de indicadores](#cuadro-de-indicadores)
+- [Unidad 5 / Capitulo 6 - Toma de decisiones](#unidad-5--capitulo-6---toma-de-decisiones)
 
 # Capitulo 1  - Administración y Organización
 
@@ -874,3 +875,21 @@ entre los objetivos de las cuatro perspectivas del CMI: financiera, del cliente,
 ### Cuadro de indicadores
 
 ![](img/cuadro_indicadores.png)
+
+# Unidad 5 / Capitulo 6 - Toma de decisiones
+
+Los gerentes toman decisiones para controlar, planear, organizar y dirigir.
+
+Los gerentes de todos niveles y de todas las áreas de las empresas toman decisiones. Es decir, **hacen elecciones**. la toma de decisiones es un proceso, no es un simple acto de elegir entre alternativas. La siguiente figura muestra las **ocho etapas** del proceso de toma de decisiones. Este proceso es tan importante en decisiones personales como en decisiones corporativas
+
+![](img/toma_decisiones.png)
+
+Antes, debido al simplismo y tamaño pequeño de los entornos de las empresas, el proceso de toma de decisiones era mas racional y lineal, ahora, debido a la globalización y complejidad del entorno, hay una mayor tolerancia a la incertidumbre, y las decisiones se realizan con mayor intuición.
+
+En la base de la piramide organizacional, en la base la toma de decisiones son mas racionales, mientras que en el tope de la misma las decisiones son mas conceptuales / intuitivas.
+
+![](img/intuitivo_vs_racional.png)
+
+El proceso de toma de decisiones es para un caso en donde el grado y orden de rigurosidad del probema es alto.
+
+![](img/sistemica.png)
