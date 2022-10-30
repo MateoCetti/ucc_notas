@@ -94,6 +94,9 @@
   - [Evaluación de alternativas para la toma de desiciones](#evaluación-de-alternativas-para-la-toma-de-desiciones)
     - [Reemplazo de equipos](#reemplazo-de-equipos)
     - [Fabricar o comprar](#fabricar-o-comprar)
+  - [Decisiones con riesgo e incertidumbre](#decisiones-con-riesgo-e-incertidumbre)
+    - [Desición con riesgo](#desición-con-riesgo)
+    - [Descición con incertidumbre](#descición-con-incertidumbre)
 
 # Introducción
 
@@ -1716,3 +1719,46 @@ El método del **costo anual equivalente** se utiliza para comparar proyectos de
 
 ![](img/fabricar_comprar.png)
 
+## Decisiones con riesgo e incertidumbre
+
+En aquellos casos en que se conocen o es posible asignar **probabilidades** a los **eventos**, decimos que es una **DECISIÓN CON RIESGO** y es posible utilizar métodos probabilísticos. (Valor esperado, arboles de decisión, Montecarlo, etc)
+
+En aquellos casos en que **no se conocen** o no es posible asignar probabilidades a los eventos, decimos que es una **DECISIÓN CON INCERTIDUMBRE** y se aplican métodos con información limitada. (Criterios de Maximax, Maximin, Hurwics, Savage, etc)
+
+![](img/decision.png)
+
+![](img/matriz_decision.png)
+
+### Desición con riesgo
+
+* En el método del **valor monetario esperado**, el valor de cada proyecto representa la “**esperanza**” o el “**valor medio**” de los valores que puede adoptar el proyecto, en el escenario en cuestión y existe una probabilidad asignada a la ocurrencia de dicho escenario y por lo tanto al resultado del proyecto.
+* La varianza de una distribución refleja la dispersión de las observaciones en torno a la media. El **grado de Riesgo** de cada proyecto se ve reflejado en la **magnitud de la varianza** del mismo.
+* El empleo de **arboles de decisión** son efectivos en problemas decisorios en los cuales es importante considerar **decisiones en secuencia** y en las cuales se conocen las probabilidades de los eventos que se van a presentar en el futuro.
+* La **simulación de MonteCarlo** consiste en determinar repetidamente el valor del VAN del proyecto, mediante la asignación aleatoria de un valor a cada variable pertinente del flujo. 
+
+![](img/ve.png)
+
+Los riesgos se analizan por escenarios de situaciones futuras diferentes a las estimadas en el escenario base 
+* **Análisis multidimensional**: se modifican las variables que más sensibilizan el resultado de la evaluación en rangos extremos 
+* **Análisis unidimensional**: encuentra el valor máximo o mínimo de una variable para que el proyecto sea aceptable
+
+**Criterio del Valor Esperado**: Es un promedio de los resultados en cada estado, pesados a través de sus probabilidades Regla de Bayes: Con las mejores estimaciones de probabilidades elegir la alternativa de mayor valor esperado
+
+**Criterio de Aversión al Riego**: Elegir la alternativa que no supere un % techo de riesgo de pérdidas o elegir la alternativa de menor probabilidad de pérdida
+
+![](img/arbol.png)
+
+![](img/riesgo.png)
+
+**Montecarlo**
+
+El modelo de Monte Carlo, es una técnica de **simulación** de **situaciones** inciertas que permite **definir valores esperados** para variables no controlables, mediante la **selección aleatoria de valores**, donde la probabilidad de elegir entre todos los resultados posibles está en estricta relación con sus respectivas distribuciones de probabilidades.
+
+![](img/montecarlo.png)
+
+### Descición con incertidumbre
+
+En aquellos casos en que no se conocen o **no es posible asignar probabilidades a los eventos**, decimos que es una **DECISIÓN CON INCERTIDUMBRE** y se aplican métodos con información limitada. (Criterios de Maximax, Maximin, Hurwics, Savage, etc)
+
+![](img/incertidumbre_1.png)
+![](img/incertidumbre_2.png)
