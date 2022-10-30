@@ -46,6 +46,36 @@
     - [Las empresas en mercados de competencia perfecta](#las-empresas-en-mercados-de-competencia-perfecta)
     - [Las empresas en monopolio](#las-empresas-en-monopolio)
     - [Indice de lerner](#indice-de-lerner)
+- [Macroeconomia](#macroeconomia)
+  - [instrumentos de la politica macroeconomica](#instrumentos-de-la-politica-macroeconomica)
+    - [Politica monetaria](#politica-monetaria)
+    - [Politica fiscal](#politica-fiscal)
+    - [Politica comercial-cambiaria](#politica-comercial-cambiaria)
+    - [Politicas de oferta](#politicas-de-oferta)
+  - [Modelo de oferta y demanda agregada](#modelo-de-oferta-y-demanda-agregada)
+    - [Demanda agregada](#demanda-agregada)
+    - [Oferta agregada](#oferta-agregada)
+    - [Equilibrio macroeconomico](#equilibrio-macroeconomico)
+  - [Medición de la actividad economica](#medición-de-la-actividad-economica)
+    - [PBI](#pbi)
+    - [Impuestos](#impuestos)
+    - [Producto interno y nacional](#producto-interno-y-nacional)
+    - [Nivel de actividad](#nivel-de-actividad)
+    - [Nivel de empleo](#nivel-de-empleo)
+    - [IPC](#ipc)
+    - [Curva de phillips](#curva-de-phillips)
+  - [Teoria de Keynes](#teoria-de-keynes)
+    - [El modelo del multiplicador](#el-modelo-del-multiplicador)
+  - [Flujo circular del ingreso](#flujo-circular-del-ingreso)
+  - [Politica fiscal](#politica-fiscal-1)
+    - [Medidas de política fiscal](#medidas-de-política-fiscal)
+  - [Intermediarios financieros](#intermediarios-financieros)
+  - [Politica monetaria](#politica-monetaria-1)
+    - [Multiplicador monetario](#multiplicador-monetario)
+  - [Comercio internacional](#comercio-internacional)
+    - [La balanza de pagos](#la-balanza-de-pagos)
+  - [Crecimiento economico y desarrollo](#crecimiento-economico-y-desarrollo)
+  - [Nueva economia](#nueva-economia)
 
 # Introducción
 
@@ -776,3 +806,437 @@ El monopolista tratará de **diferenciar** dentro de los potenciales compradores
 ### Indice de lerner
 
 ![](img/lerner.png)
+
+# Macroeconomia
+
+La **macroeconomia** estudia el funcionamiento de la economia en su conjunto, es decir, el **comportamiento global** del sistema economico. Su proposito es obtener una **visión simplificada** de la economia, pero que al mismo tiempo permita conocer y actuar sobre el **nivel** de **actividad economica** de un pais determinado o de un conjunto de paises. 
+
+La macroeconomia se ocupa de los cambios que se producen en las variables globales como la **inflación** la **inversión** nacional, el **desempleo**, el **crecimento**, etc.
+
+Las medidas de **políticas** macroeconómica influyen sobre la marcha de la economía y tienen por objetivo:
+
+* Mantener un **crecimiento sostenible** en el mediano-largo plazo. 
+* Conseguir **estabilidad** de **precios**.
+* **Bajas tasas** de **desempleo**.
+* **Equilibrio** en **cuentas públicas** y en la **balanza de pagos**, etc.
+
+Los economistas **evalúan** el funcionamiento de una economía según el cumplimiento de una serie de **objetivos**: 
+
+* **Actividad economica**.
+  * Elevado nivel de producción y consumo
+  * Contar con abundante cantidad de bienes y servicios
+  *  El indicador más amplio de la producción total de una economía es el **producto interno bruto** (PIB)
+* **Nivel de empleo**.
+  * variable macroeconómica que más directamente afecte a los individuos
+  * la tasa de desempleo, es el porcentaje de la población activa que está desempleada
+  * la población activa está formada por todas las personas ocupadas y todos los desempleados que están buscando trabajo
+* **Nivel de precios**.
+  * Lograr una baja inflación o un nivel general de precios estable es un objetivo macroeconómico clave
+  * El **índice** de **precios al consumidor** (IPC) mide el costo de una canasta fija de bienes generalmente adquiridos por el consumidor medio.
+  * Las variaciones del nivel de precios se conocen como tasa de inflación
+* **Deficit publico**.
+  * Diferencia entre los gastos públicos y los ingresos públicos
+  * Es un indicador del grado de equilibrio o desequilibrio de la actuación del sector público.
+* **Balanza de pagos**.
+  * Las relaciones de un país con el resto del mundo se reflejan en la balanza de pagos.
+  * Existe un déficit en el saldo de la balanza cuando las importaciones son mayores que las exportaciones
+* **Tipo de pago**.
+  * Expresa el precio en unidades monetarias nacionales de una unidad de una moneda extranjera
+  * la cotización se fija según la oferta y la demanda, pero el Banco Central interviene activamente comprando o vendiendo divisas con el fin de morigerar las fluctuaciones.
+
+## instrumentos de la politica macroeconomica
+
+Un **instrumento** de política económica es una **variable** controlada por las autoridades económicas que puede **influir** en uno o en varios **objetivos**.
+
+### Politica monetaria
+
+Los gobiernos suelen recurrir a la política monetaria para tratar de **estabilizar** la **actividad económica** y evitar, o al menos paliar, los inconvenientes derivados de los ciclos económicos. Para ello **controlan** la **evolución** de la **cantidad de dinero**, el **crédito** y, en general, el funcionamiento del sistema financiero.
+
+Mediante el control de la cantidad de dinero, el Banco Central puede **influir** en las **tasas de interés**, en la **inversión** (y, por lo tanto, en el **PIB**), en el **nivel** general de **precios**, en los **tipos de cambio** (por consiguiente, en las exportaciones netas), en los precios de las acciones y en los precios de las viviendas.
+
+Así, si la economía está experimentando una fuerte **presión alcista** sobre los precios, y se lleva a cabo una **política monetaria restrictiva**, la reducción de la oferta monetaria hará que **suban** las **tasas de interés**, se **reduzca** la **inversión** y **disminuyan el PIB** y la **inflación**.
+
+Por el contrario, si la actividad económica ha entrado en una recesión, el Banco Central puede **aumentar** la **oferta monetaria** y **reducir** las **tasas de interés** para **reactivar**
+la **economía**.
+
+La política monetaria, a través del control de la oferta monetaria por parte del Banco Central y su
+capacidad de incidir sobre las tasas de interés y las condiciones crediticias, **afecta el gasto** de los sectores de la economía que son **sensibles** a las **tasas de interés**, como la inversión empresarial, el consumo y las exportaciones netas. De esta forma, la política monetaria influye tanto en el **PIB** efectivo como en el potencial, así como en los precios.
+
+### Politica fiscal
+
+La **política fiscal** se refiere a ia **utilización** del **gasto público** y de los **impuestos** para ayudar a determinar la **distribución** de los **recursos** entre los bienes privados y los públicos. Incide sobre los **ingresos** y el **consumo** de los **individuos** y ofrece **incentivos** a la **inversión** y otras decisiones económicas.
+
+La política fiscal se refiere a las decisiones del Gobierno sobre el nivel del gasto público y los impuestos.
+
+El **gasto público** incluye dos tipos de gasto: las **compras del Estado**, esto es, el gasto en bienes y servicios, como, por ejemplo, la construcción de carreteras, la compra de ferrocarriles, el pago a los funcionarios, etc., y las **transferencias del Estado**. Éstas aumentan los ingresos de determinados grupos de individuos, como los jubilados o los desocupados. Al determinar
+la cuantía y composición del gasto público, se determinan las dimensiones relativas del sector público y del sector privado, esto es, qué parte del PIB se consume colectivamente y no en forma privada. El gasto público es uno de los componentes que integran el nivel global de gasto de la economía y uno de los determinantes del nivel del PIB.
+
+Los **impuestos** constituyen el otro instrumento de la política fiscal e inciden en la economía de dos formas. En primer lugar, **reduciendo** los **ingresos** de los **individuos**, lo que influye tanto en la cantidad que estos gastan en bienes y servicios como en la cantidad de ahorro privado. De esta forma, los impuestos, al condicionar el consumo y el ahorro privados, influyen en la producción y en la inversión tanto a corto como a largo plazo.
+
+En segundo lugar, los impuestos inciden sobre los **precios** de los **bienes** y de los **factores** de producción y, por lo tanto, afectan los incentivos y ia conducta de los individuos.
+
+La política fiscal, debido a su impacto sobre el ahorro, la inversión y los incentivos para trabajar, suele utilizarse para **incidir** en el **crecimiento económico**.
+
+### Politica comercial-cambiaria
+
+Las autoridades económicas se ocupan del **sector exterior** mediante la **política comercial** y la gestión financiera internacional. La política comercial, a través de los **aranceles**, **cuotas** y otros mecanismos, trata de **estimular** las **exportaciones** netas. 
+
+En la gestión financiera internacional, una variable clave es el **tipo de cambio**. Generalmente, los países adoptan, como parte de su política monetaria, diferentes sistemas para regular sus
+mercados de divisas. Las políticas de tipos de cambio son muy distintas:
+* algunos países optan por dejar que los tipos de cambio se determinen libremente por la oferta y la demanda en el mercado de divisas, como sucede con los integrantes de la Unión Monetaria Europea (UME)
+* Mientras que otros establecen un tipo de cambio fijo frente a otras monedas, como ocurrió en la Argentina durante el régimen de convertibilidad.
+
+### Politicas de oferta
+
+Los responsables de ta política económica también se preocupan por las condiciones de **oferta** de la economía. Este tipo de iniciativas se integran en lo que se denomina
+**políticas de oferta**. Su objetivo es propiciar los **incentivos** al **trabajo** y a la **producción**, así como ia incorporación de **mejoras tecnológicas** que eleven la eficiencia y la productividad del trabajo.
+
+Los resultados de las políticas de oferta se concretan en reducciones de la tasa de desempleo, disminuciones de los precios y aumentos en la productividad media del trabajo y en el PIB potencial.
+
+## Modelo de oferta y demanda agregada
+
+En cualquier economía, la **producción**, el **empleo**, los **precios** y el **crecimiento económico** pueden experimentar grandes **oscilaciones** debido a la influencia tanto de
+la **política económica** como de las **perturbaciones externas**. Desde una perspectiva macroeconómica, cabe preguntarse por los mecanismos que explican estas fluctuaciones. Así, resulta interesante conocer cómo los **cambios** en la **cantidad de dinero**, en los **impuestos** o
+en los **precios** de las materias primas se transmiten a la **producción** y a los precios al por menor. También es importante saber qué **medidas** pueden tomar ios gobiernos para **mejorar** los resultados de la economía.
+
+![](img/func_eco.png)
+
+La actividad económica global viene definida por una serie de variables que determinan el nivel de precios, ei nivel de producción y el empleo. Estas variables se pueden agrupar en dos grandes categorías: unas que afectan la demanda agregada y otras que inciden sobre la oferta agregada.
+
+### Demanda agregada
+
+Hay dos tipos de variables que inciden en la demanda agregada: unas lo hacen **directamente**, las **variables no financieras** como el **consumo**, la **inversión**, el **gasto público** y las **exportaciones netas**, y otras, **indirectamente**, las **variables financieras** como el dinero y otros activos financieros;
+
+por ejemplo, alteraciones en la cantidad de dinero incidirán en la tasa de interés y, consecuentemente, en el deseo de gasto de los individuos.
+
+Los **componentes** de la demanda agregada incluyen los **bienes de consumo** que compran los consumidores (tales como los alimentos, la ropa, los automóviles), los **bienes de capital** (como las fábricas, el equipo y 1a maquinaria que compran las empresas), los **bienes** que **compra el Estado** (como los trenes, las computadoras y los muebles) y las exportaciones netas (esto es, las exportaciones menos las importaciones).
+
+La **demanda agregada** se refiere a la **cantidad total** que están dispuestos a **gastar** los diferentes sectores de la economía durante un período de tiempo. Los componentes de ia demanda agregada son el **consumo** (C), la **inversión** (I), el **gasto público** (G) y las **exportaciones netas** (NX).
+
+La curva de demanda agregada muestra la relación entre el nivel general de precios y el gasto agregado de la economía.
+
+![](img/demanda_agregada.png)
+
+### Oferta agregada
+
+La oferta agregada está relacionada con factores tales como los márgenes de beneficios y los costos de producción, la utilización de la capacidad productiva, la cantidad y calidad de los factores productivos empleados, la productividad y la tecnología
+
+Es la cantidad total de bienes y servicios que las empresas de un país están dispuestas a producir y vender en un determinado período, dados los precios, la capacidad productiva, los costos y las condiciones del mercado.
+
+Viene determinado por: 
+* El Producto Bruto Interno a precio de mercado (PBIpm)
+* Importaciones (M)
+
+![](img/oferta_agregada.png)
+
+### Equilibrio macroeconomico
+
+En términos gráficos, el equilibrio macroeconómico, esto es, el **PIB real** y el **nivel general de precios** que **satisfacen** a los **demandantes** y a los **vendedores**, se encuentra en el punto de **intersección** de las curvas de oferta y demanda agregadas. En este punto se alcanza un nivel general de precios en el que las empresas están dispuestas a producir y a vender lo que los consumidores y otros demandantes están dispuestos a comprar. 
+
+El **equilibrio macroeconómico** es aquella **combinación** del **PIB real** y del **nivel general de precios** que es coherente con los costos unitarios de las empresas, y el gasto y la producción están en equilibrio.
+
+![](img/equilibrio_macro.png)
+
+## Medición de la actividad economica
+
+La **CONTABILIDAD NACIONAL** mide la **actividad** de una **economía** a lo largo de un periodo, generalmente un año, registrando las transacciones realizadas entre los diferentes agentes que forman parte de dicha economía.
+
+### PBI
+
+El indicador más amplio de la producción total de una economía es el **PRODUCTO INTERNO BRUTO** (PIB), que mide el **valor de mercado** de todos los **bienes** y **servicios finales** que **produce el país** durante un **período dado de tiempo**, generalmente un año.
+
+El PIB puede expresarse en términos reales o nominales: 
+- el PIB **nominal** se mide a **precios corrientes** de mercado
+- el PIB **real** se calcula a **precios constantes**. Es un índice de la cantidad de bienes y servicios producidos
+
+El **PIB per CÁPITA**: Valor del PBI Real, dividido por la población del país.
+
+El PBI puede ser **calculado** mediante: 
+* El **método del Gasto**, el cual consiste en **sumar** todas las demandas (**gastos**) finales de **bienes** y servicios realizados por cada tipo de usuario final en un periodo dado (gasto de consumo público y privado + inversión interna + las exportaciones –importaciones) 
+* El método del **Ingreso**, el cual consiste en sumar todos los **ingresos** que contribuyen al proceso productivo, es decir, la suma del costo de los factores adquiridos por todas las empresas (sueldos y salarios, comisiones, alquileres, derechos de autor, honorarios, intereses, utilidades, etc.=Ingresos de las familias) 
+* El método del **valor Agregado**, el cual consiste en la suma de los **valores añadidos** en cada **etapa** del **proceso productivo**, utilizando los valores de mercado de los productos e insumos
+
+### Impuestos
+
+Impuesto indirecto: es el impuesto que grava el consumo. No afecta de manera directa los ingresos de un contribuyente, sino que recae sobre el costo de algún producto o mercancía. Ej: IVA
+
+Impuesto directo: es el impuesto que grava directamente las fuentes de riqueza, la propiedad o la renta. Ej.: Impuesto sobre el patrimonio, Impuesto sobre la renta.
+
+### Producto interno y nacional
+
+**PRODUCTO INTERNO**: Es el producto de la actividad que se desarrolla dentro de un país, sin importar si los individuos o empresas que lo hacen son del país o foráneos.
+
+**INGRESO INTERNO**: Es la retribución por los factores de producción que se utilizan dentro de las fronteras de un país, sin importar si los individuos o empresas que lo hacen son del país o foráneos.
+
+**PRODUCTO NACIONAL** : Es el producto de la actividad que desarrollan habitantes de un país, ya sea que residan en el mismo o fuera de las fronteras.
+
+**INGRESO NACIONAL** : Es la retribución por los factores de producción que reciben los residentes de un país , ya sea que residan en el mismo o fuera de las fronteras.
+
+![](img/resumen.png)
+
+### Nivel de actividad
+
+El nivel de actividad o volumen de producción es el grado de uso de la capacidad de producción. Se la suele medir como un porcentaje de uso de dicha capacidad. También se usan magnitudes absolutas, como unidades producidas, horas de servicio insumidas, cantidad de servicios realizados, etc.
+
+![](img/resumen_2.png)
+
+### Nivel de empleo
+
+**POBLACIÓN OCUPADA**: conjunto de personas que tiene por lo menos una ocupación, es decir que en la semana de referencia ha trabajado como mínimo una hora (en una actividad económica).
+
+**POBLACIÓN DESOCUPADA**: se refiere a personas que, no teniendo ocupación, están buscando activamente trabajo. Corresponde a la desocupación abierta. Este concepto no incluye otras formas de precariedad laboral tales como personas que realizan trabajos transitorios
+
+**POBLACIÓN SUBOCUPADA**: se refiere a la subocupación por insuficiencia de horas, visible u horaria y comprende a los ocupados que trabajan menos de 35 horas semanales por causas involuntarias y están dispuestos a trabajar más horas.
+
+**POBLACIÓN SOBREOCUPADA**: población ocupada que trabaja más de 45 horas semanales. 
+
+**POBLACIÓN ECONÓMICAMENTE ACTIVA** (PEA): la integran las personas que tienen una ocupación o que sin tenerla la están buscando activamente. Está compuesta por la población ocupada más la población desocupada.
+
+![](img/nivel_empleo.png)
+
+
+### IPC
+
+Los índices de precios al consumidor miden la **variación** de **precios** de los **bienes** y **servicios** representativos del gasto de **consumo** de los **hogares** residentes en la zona seleccionada en comparación con los precios vigentes en el año base.
+
+
+![](img/ipc.png)
+
+La **inflación**, medida por el IPC, es la tasa de variación porcentual que experimenta este índice en el periodo de tiempo considerado.
+
+![](img/inflacion.png)
+
+### Curva de phillips
+
+Muestra la existencia de una **relación inversa** entre la **tasa de crecimiento** de los **salarios nominales** y la **tasa de desempleo** en el sentido de que cuanto mayor es una (la tasa de crecimiento de los salarios), menor es la otra (la tasa de desempleo).
+
+![](img/phillips.png)
+
+La versión convencional de la curva de Phillips muestra la relación existente entre la **tasa de inflación** y la **tasa de desempleo**, dada la estrecha relación existente entre el crecimiento de los salarios nominales y de los precios (reducciones en la tasa de desempleo se logran a costa de aumentos en la tasa de inflación, y que una disminución en las tensiones alcistas de los precios implicara un agravamiento del desempleo)
+
+![](img/phillips_2.png)
+
+## Teoria de Keynes
+
+Para explicar la teoria de keynes, el modelo de cruz keynesiana o el modelo del multiplicador, primero detallamos la funcion de consumo y la funcion de ahorro.
+
+Para don keynes, las personas al comportarse como consumidores normales dedican una parte de sus ingresos al consumo de productos diaros, y otra parte la dedican al ahorro. Es decir, existe una relación entre el ingreso de un individuo y su consumo, misma relación que se puede expresar en la **función de consumo**:
+
+![](img/keynes_consumo_ahorro.png)
+
+Como se puede ver en el grafico, si nuestra función de consumo se encuentra en la recta a 45° del grafico, se puede decir que el individuo para esa cantidad de ingresos dados no ahorra nada, ya que consume la misma cantidad de dinero (punto de nivelación). Cuando la función se situa en un punto menor a la recta de 45°, se dice que el individuo ahorra una cantidad de dinero igual a la diferencia entre la función de consumo y la recta de 45°. En cambio, si la función se encuentra por encima de esta recta, el individuo desahorra ya que consume mas de lo le recibe de ingresos.
+
+La **función de ahorro** surge de la función de consumo y es nada mas ni nada menos que la diferencia entre la función de consumo y la recta de 45°, es decir:
+
+Ingreso = Consumo + Ahorro
+
+Despejando:
+
+Ahorro = Ingreso - Consumo
+
+LA **PROPENSIÓN MARGINAL A CONSUMIR** (PMC) es la cantidad adicional que consumen los individuos cuando reciben un peso adicional de ingreso disponible (pendiente de la función de consumo).
+
+![](img/pmc.png)
+
+Una de las hipótesis keynesianas básicas sostiene que un aumento en el ingreso genera un aumento -aunque menoren el consumo; esto es, que la PMC es siempre positiva y menor que la unidad (0 < PMC < 1). 
+
+LA **PROPENSIÓN MEDIA A CONSUMIR** (PMeC), se define para cada nivel determinado del ingreso, como la relación entre el consumo total y el ingreso total.
+
+![](img/pmec.png)
+
+**PROPENSION MARGINAL A AHORRAR**(PMS) se mide por el cociente entre la variación correspondiente del ahorro y la variación del ingreso. Analíticamente:
+
+![](img/pms.png)
+
+**PROPENSION MEDIA AL AHORRO** (PMES) se mide como el resultado de dividir al ahorro total por el ingreso total, para un nivel de ingreso dado. Analíticamente:
+
+![](img/pmes.png)
+
+Dado que en el modelo simplificado que estamos analizando, el ingreso se consume o se ahorra, por lo tanto, la suma de las propensiones medias a consumir y a ahorrar tiene que ser igual a la unidad y otro tanto ocurre con las propensiones marginales
+
+### El modelo del multiplicador
+
+Los supuestos básicos del modelo del multiplicador son dos: los precios y los salarios son fijos y hay recursos desempleados (predominación de la demanda agregada). 
+
+Este modelo sostiene que ante un **aumento** de la **demanda** de bienes y servicios se decide **incrementar la inversión**, El incremente de inversión hará que las empresas **aumenten la producción** y el empleo, El aumento del empleo lleva a que las **economías domesticas** dispongan de un **ingreso mayor**, Ese ingreso mayor les permite, a su vez, **incrementar la demanda** de consumo.
+
+En respuesta a este incremento de la demanda, las empresas volverán a aumentar la
+producción, de forma que se pone en marcha un proceso que determina que el **aumento de la producción** sea **superior** al **incremento inicial** de la **demanda**. El problema entonces es saber cuanto aumentará la producción ante un aumento en la inversión
+
+El multiplicador es el número por el cual debe multiplicarse la variación de la inversión para averiguar el cambio resultante de la producción total.
+
+Quienes reciban el dinero de la inversión original, si se comportan como consumidores típicos, su gasto será el resultado de multiplicar el dinero recibido por la PMC. Éste gasto recae en otros individuos que a su vez también gastaran de dicho dinero, un porcentaje igual a la PMC. Así, el dinero gastado originalmente en inversión pone en marcha toda una cadena de gasto de consumo secundario, que, si bien es interminable, es decreciente y acaba generando una cantidad finita de gasto.
+
+Variación de la producción = multiplicador (K) x Variación de la inversión
+
+Podemos expresar el multiplicador como el cociente entre la variación del ingreso o producto de equilibrio y la variación de la inversión que motiva la alteración del ingreso
+
+![](img/multiplicador.png)
+
+
+## Flujo circular del ingreso
+
+EL FLUJO CIRCULAR DEL INGRESO es la corriente de bienes y servicios y de pagos entre las empresas, las economías domesticas, el sector publico y el resto del mundo.
+
+![](img/flujo_circular_2.png)
+
+**entrada** es una **adición** al ingreso de las empresas que no proviene del gasto de los consumidores (la inversión de las empresas, los gastos del sector publico y la demanda de exportaciones realizada por otros países).
+
+**salida** es todo ingreso que no se reintegra al flujo circular (el ahorro, los impuestos establecidos por el sector publico y las importaciones de bienes y servicios)
+
+Desde un punto de vista contable, las **entradas** son **iguales** a las **salidas** y, lo detraído del flujo del ingreso debe ser, por definición, igual a lo que se ha incorporado.
+
+Sin embargo, desde un punto de vista económico, pueden originarse **alteraciones** en el flujo circular debido a **cambios** en las entradas y en las salidas. Las salidas tienden a reducir el flujo circular y las entradas a aumentarlo
+
+Equilibrios:
+
+Sector Privado: I=S
+Sector Externo: X=M
+Sector Público: G=T-S
+
+## Politica fiscal
+
+La POLÍTICA FISCAL se refiere a las **decisiones** del Gobierno sobre el nivel de **gasto publico** y los **impuestos**.
+
+Incide sobre los **ingresos** y el **consumo** de los individuos y ofrece **incentivos** a la **inversión** y otras decisiones económicas.
+
+El **gasto publico**, incluye **compras** de bienes y servicios por parte del **Estado** (construcciones de infraestructurapublica, compra de bienes publicos, etc) **o Transferencias** del Estado (subsidios, jubilaciones, etc). El gasto público también está dirigido a **reducir** el margen de **desigualdad** en la distribución del ingreso.
+
+Mediante los **impuestos**, reduce los ingresos e **influye** en el **gasto privado** y en el **ahorro Privado**. A su vez, al incidir sobre los precios de los bienes y de los factores de producción, influyen sobre los incentivos que las personas tienen para trabajar.
+
+![](img/politica_fiscal.png)
+
+El **Resultado Fiscal Primario** (sea Déficit o Superávit) toma en cuenta específicamente los ingresos y gastos propios del Estado. Es decir, no tiene en cuenta el pago de intereses generados por la deuda contraída. La utilidad de calcular el Resultado Fiscal Primario reside en que recoge los pagos y cobros sobre los que el Gobierno tiene control.
+
+Cuando se tiene en cuenta el pago de intereses generados por la deuda contraída, hablamos de **Resultado Fiscal Total o Resultado Financiero**.
+
+El déficit fiscal se mide en relación al PIB propio de cada país.
+
+### Medidas de política fiscal
+
+![](img/medidas_politica_fiscal.png)
+
+## Intermediarios financieros
+
+El dinero bancario y muchos otros servicios financieros son suministrados por los **intermediarios financieros**, esto es, **instituciones** como los bancos comerciales que **aceptan** depósitos o **fondos** de los hogares y las empresas que los han ahorrado y se los **prestan** a otros hogares y a otras empresas.
+
+Los intermediarios financieros transfieren fondos de los prestamistas a los prestatarios y, de esta forma, crean acdvos financieros, como las cuentas comentes (depósitos a la vista), esto es, el dinero bancario.
+
+
+Los **bancos comerciales** son instituciones financieras que tienen autorización para aceptar depósitos y para conceder créditos. Sus **reservas** son activos disponibles inmediatamente para satisfacer los derechos de los depositantes. El **coeficiente de caja** o de reservas es el cociente entre las **reservas** y los **depósitos**
+
+Las **reservas** son **activos** que poseen los bancos en forma de **efectivo** o de fondos depositados en el **Banco Central**. Los bancos mantienen algunas reservas para hacer frente a las **necesidades financieras diarias**, pero la mayor parte de ellas tiene por objeto cumplir los requisitos legales.
+
+Si los bancos, como cualquier otra empresa, persiguen la obtención de **beneficios**, tratarán de prestar los fondos que reciben de forma tal que la diferencia entre los ingresos que obtienen y los costos en que incurren sea la mayor posible.
+
+Los **ingresos** los obtendrán básicamente de los activos rentables, esto es, de los **intereses** que cobran por los **créditos** y **préstamos** concedidos y por los valores mobiliarios que poseen.
+
+Los **costos** de los bancos se derivan, sobre todo, de los **intereses** pagados por los **fondos recibidos**, es decir, depósitos de clientes y préstamos del Banco Central, y de los **gastos de intermediación** (amortizaciones, sueldos, salarios y demás costos de gestión). La diferencia entre los ingresos y los costos da lugar a los beneficios.
+
+La **tasa activa** es la que te **cobra** el banco por el dinero que te presta el intermediario financiero
+
+La **tasa pasiva** es la que te **paga** el banco por tus depósitos el intermediario financiero
+
+**Spread** = **tasa activa** – **tasa pasiva** (es diferencia entre el precio de compra y el de venta de un activo financiero)
+
+**Banco Central de la República Argentina**: es el **organismo rector del sistema financiero** de la República Argentina, encargado de la **política monetaria** del país.
+
+E1 banco central de un país es la institución encargada de supervisar el sistema bancario y de regular la cantidad de dinero que hay en la economía
+
+## Politica monetaria
+
+LA POLITICA MONETARIA, es el proceso por el cuál la autoridad monetaria de un país **controla** la evolución de la **cantidad de dinero**, el crédito y, en general, el **funcionamiento del sistema financiero**.
+
+A través del control de la oferta monetaria por parte del Banco Central y su capacidad de incidir sobre las **tasas de interés** y las condiciones crediticias, **afecta el gasto** de los sectores de la economía que son sensibles a las tasas de interés, como la **inversión empresarial**, el **consumo** y las **exportaciones netas**.
+
+De esta forma, la política monetaria influye tanto en el **PIB**, así como en los **precios**.
+
+El objetivo fundamental de cualquier banco central es **mantener** la **estabilidad de los precios** y del **tipo de cambio**.
+
+![](img/base_oferta.png)
+
+
+### Multiplicador monetario
+
+El efecto multiplicador del dinero, es un proceso por el cual los bancos multiplican el dinero partiendo de una
+cantidad dada. Esto se debe que los bancos solo están obligados a mantener en sus reservas un nivel mínimo de dinero, el coeficiente de caja, determinado por cada Banco Central.
+
+Por ejemplo: Juan realiza un depósito en un banco de 1000$, si el coeficiente de caja es 10 por ciento. El Banco podrá prestar 900$ de esedinero a María. Si María toma los 900$ y los deposita otra vez en el banco, el banco guarda un 10% de los 900$ depositados y presta los 810$ restantes a Fulano, así sucesivamente en una serie infinita decreciente.
+
+``NOTA: Esto no lo entendi:``
+
+![](img/multiplicador_2.png)
+
+![](img/expansion.png)
+
+![](img/restriccion.png)
+
+## Comercio internacional
+
+El COMERCIO INTERNACIONAL consiste en el **intercambio de bienes**, **servicios** y **capitales** entre los diferentes países.
+
+Razones por las cuales los países participan en el comercio internacional: 
+* Diferencias en las dotaciones de recursos productivos. 
+* Distintas capacidades tecnológicas, 
+* Ventajas comparativas en los costos de producción. 
+* Diferencias en los gustos o preferencias de los consumidores.
+
+Los países tienden a **especializarse** en la **producción** y **exportación** de aquellas mercancías para las que poseen **mayores ventajas comparativas**, es decir, cuando puede producirlo con menor costo de oportunidad que otros países
+
+Cuando cada país se especializa en la producción de aquellos bienes en los que tiene ventaja comparativa, todos se ven beneficiados. Gracias al comercio internacional, el intercambio de bienes entre países permite que la economía mundial produzca y consuma mayor cantidad de bienes utilizando la misma cantidad de recursos.
+
+Las distintas formas en que se **relacionan** los **países** pueden sintetizarse en dos categorías:
+
+* **Globalizadora**, que pretende abarcar a todos las países y fomentar el libre comercio internacional. Ej: el Acuerdo General de Tarifas y Comercio (GATT, por su sigla en ingles) y la Organización Mundial del Comercio (OMC).
+
+* **Regional**, que frecuentemente incluye iniciativas propias del bilateralismo comercial. Ej: Uniones aduaneras (arancel externo comun), áreas de libre comercio (arancel propio ante terceros), Unión económica (Unión monetaria)
+
+Los **instrumentos de protección** están formados por el conjunto de **políticas**, **medidas** y
+**procedimientos** que adoptan los gobiernos con el fin de **obstaculizar** las **transacciones** económicas con el **extranjero**. Razones que justifican el proteccionismo:
+
+* Fomentar las **industrias** relacionadas con la **defensa nacional** y la industrialización del pais sustituyendo las importaciones por productos nacionales.
+* **Desarrollar** las **industrias nacientes**.
+* Combatir el déficit del sector externo
+
+Las intervenciones sobre el comercio internacional, integran la denominada **política comercial**, la cual influye sobre el comercio internacional mediante: 
+
+* **aranceles** o cuotas a la **importación**, 
+* **barreras no arancelarias** 
+* **subvenciones** a la **exportación**.
+
+
+### La balanza de pagos
+
+es el **registro** sistemático de las **transacciones** económicas realizadas durante un tiempo determinado **entre** los residentes de un **país** y los del **resto del mundo**.
+
+Se contabiliza:
+* los **ingresos** (entradas de moneda extranjera) 
+* los **pagos** (salidas de moneda extranjera).
+
+El saldo viene dado por la diferencia entre los ingresos y los pagos.
+
+Las **RESERVAS** son las **posesiones** que un país tiene de **divisas** y otros **activos** que pueden utilizarse para satisfacer las demandas de divisas y que sitúan al país como **acreedor** frente al exterior, ya que estas representan activos frente al resto del mundo.
+
+La balanza de pagos resume las transacciones entre residentes en una economía y no residentes (resto del mundo) durante un período determinado. Comprende la cuenta corriente (bienes y servicios, ingreso primario e ingreso secundario), la cuenta de capital y la cuenta financiera. 
+
+* La **cuenta corriente** muestra los flujos de bienes, servicios, ingreso primario e ingreso secundario entre residentes y no residentes. 
+* En la cuenta de capital se asientan las compras y ventas de activos y pasivos, como acciones, bonos y tierras. 
+* En la balanza financiera se recoge la compra y venta de activos y pasivos financieros por los residentes de un país al resto del mundo
+
+El Banco Central reduce sus reservas de divisas cuando la balanza de pagos tiene un déficit y las incrementa cuando esta presenta un superávit. Es decir, el análisis de las reservas del Banco Central permite determinar la situación de déficit o superávit de la balanza de pagos globalmente considerada. De hecho, la variación neta de reservas es el saldo de la balanza de pagos.
+
+## Crecimiento economico y desarrollo
+
+El **crecimiento económico** supone la **expansión** del **PIB** potencial de un país, lo que en términos de la frontera de posibilidades de producción equivale a un desplazamiento hacia **fuera**.
+
+![](img/crecimiento.png)
+
+Las fuentes de crecimiento económico son los factores que explican el crecimiento de la producción de un país y se concretan en el **aumento** de la **disponibilidad** y la calidad del **trabajo**, el **aumento** de la dotación de **capital físico** y la **mejora** de la **tecnología**.
+
+Los conceptos de desarrollo y subdesarrollo económicos, hacen alusión a la brecha real que separa los niveles de vida que se alcanzan en unos y otros países, y a los procesos que llevan a elevar el nivel de vida. Se puede medir mediante un conjunto amplio de indicadores: nivel de ingresos por habitante, índices de analfabetismo, estructura sanitaria, estructura productiva y tecnológica, tasas de desempleo, distribución interna del ingreso, etc
+
+## Nueva economia
+
+La Economía del Conocimiento son aquellas actividades productivas que se caracterizan por el uso intensivo de tecnología y que requieren capital humano altamente calificado. Algunas de las actividades que incluye: Software, servicios informáticos y digitales.
+
+Estas actividades son las más dinámicas que tienen el potencial de aumentar transversalmente la productividad, la cantidad y calidad de empleo y las exportaciones.
