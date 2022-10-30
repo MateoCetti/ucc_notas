@@ -84,6 +84,16 @@
   - [Contabilidad de costos](#contabilidad-de-costos)
     - [Costeo por absorción](#costeo-por-absorción)
     - [Costeo variable](#costeo-variable)
+- [Ingenieria economica](#ingenieria-economica)
+  - [El valor del dinero en el tiempo](#el-valor-del-dinero-en-el-tiempo)
+    - [Tasas de interes](#tasas-de-interes)
+    - [Factores de equivalencia](#factores-de-equivalencia)
+    - [Sistema de amortización de deuda](#sistema-de-amortización-de-deuda)
+    - [Flujo de fondos](#flujo-de-fondos)
+    - [Indicadores de eficiencia economica](#indicadores-de-eficiencia-economica)
+  - [Evaluación de alternativas para la toma de desiciones](#evaluación-de-alternativas-para-la-toma-de-desiciones)
+    - [Reemplazo de equipos](#reemplazo-de-equipos)
+    - [Fabricar o comprar](#fabricar-o-comprar)
 
 # Introducción
 
@@ -1510,4 +1520,199 @@ Diferentes **tipos** de **conductores de costos**
 ![](img/variable.png)
 
 ![](img/variable_2.png)
+
+# Ingenieria economica
+
+**INGENIERÍA ECONÓMICA**: Son conceptos y técnicas matemáticas aplicadas:
+* en el análisis, comparación y evaluación financiera de alternativas relativas a proyectos
+* para la toma de decisiones monetarias, que permiten llevar a cabo una aproximación racional y significativa
+
+## El valor del dinero en el tiempo
+
+### Tasas de interes
+
+Cuando se habla de una suma de dinero, se debe especificar la fecha, de lo contrario la información es incompleta 
+
+**El dinero cambia de valor a través del tiempo.**
+
+El **INTERÉS** es el **costo** de **usar dinero** durante cierto **tiempo**, por lo que nos referimos a el como: **el valor tiempo del dinero** --> La tasa de interés es el porcentaje que se **paga** por el **alquiler** del **dinero**.
+
+El capital tiene un **costo de oportunidad** en el tiempo y su **remuneración** es el **interés**.
+
+* **Interés simple**: En el caso del interés simple se computa un monto de interés por cada periodo, tomando siempre como **base** el **mismo capital**;
+* **Interés compuesto**: En el caso del interés compuesto el monto del interés en cada periodo se computa sobre el **principal** **mas** todo el **interés acumulado** en **periodos anteriores**.
+
+![](img/interes.png)
+
+**Tasa nominal de interes**:
+
+La tasa de interés nominal se expresa mediante un %, y representa la remuneración a un capital por un tiempo determinado. Es muy importante saber que **se expresa anualmente** aunque puede generar intereses más de una vez al año. Para conocer estos intereses generados, en el caso de que sea más de una vez al año, debemos calcular la tasa efectiva.
+
+**Tasa efectiva**:
+
+La tasa de interés efectiva es la **tasa verdadera** que **pagamos** por un pasivo o **recibimos** por un activo financiero, puede calcularse para cualquier periodo; mes, trimestre, semestre, etc. La tasa de interés efectiva es compuesta y vencida.
+
+Se diferencia de la tasa de interés nominal que hace caso omiso de la capitalización y otra serie de factores. Con el tipo de interés efectivo, podemos representar el efecto de la reinversión de los intereses. Como la capitalización del interés se produce varias veces por año, generalmente de forma mensual, se obtiene un tasa efectiva mayor que la nominal. Asimismo, la tasa efectiva incluye, además del pago de intereses, el efecto que produce sobre el capital los impuestos, comisiones y otros gastos vinculados a la operación financiera.
+
+![](img/nominal_efectivo.png)
+
+**Tasa de capitalización continua** (?)
+
+Si la frecuencia de capitalización aumenta, el monto compuesto resultante también aumenta. Cuando “n” aumenta en forma indefinida (tiende a infinito), el monto compuesto tiende a un valor límite.
+
+![](img/cap_continua.png)
+
+**Inflación e interes**
+
+TIA = Tasa de Inflación Anual
+TRI = Tasa Real de Interés
+
+![](img/interes_real.png)
+
+Si la inflación es de 3%, y la tasa de interés de un préstamo, 2%, el rendimiento que obtiene el prestamista es inferior a cero. En ese caso, decimos que la tasa de interés real —la tasa nominal menos la tasa de inflación— es negativa.
+
+Los bancos centrales modifican esa tasa llamada “**tasa de política monetaria**”. Una tasa de política monetaria más alta **estimula el ahorro**; una tasa más baja promueve el **consumo** y reduce el costo de la inversión empresarial.
+
+Al fijar esa tasa, los bancos centrales se guían por la idea de la **tasa de interés neutral**; o sea, la tasa de interés a largo plazo que es **congruente** con una **inflación estable**. Cuando las tasas de interés son inferiores a la tasa neutral, la **política monetaria** es **expansiva**; si son **superiores**, es **contractiva**.
+
+### Factores de equivalencia
+
+La **CAPITALIZACIÓN** es la operación que nos permite **agregar** a un **valor presente**, un cierto **valor** para obtener un **valor futuro** --> significa **avanzar** en el tiempo, **agregando** el **interés obtenido**.
+
+La **ACTUALIZACIÓN** es determinar que cantidad de dinero **significa hoy**, una **suma de dinero futuro** --> ¿Que suma de dinero debo depositar hoy para obtener en un tiempo determinado un monto específico?
+
+El **VALOR FUTURO** de un monto, es el referido **monto** más todos los **intereses** compuestos **acumulados**, a una **cierta tasa**.
+
+![](img/vf.png)
+
+El **VALOR PRESENTE** de un monto es el **capital futuro** **menos** todo el **interés** compuesto descontado a la fecha presente, a una cierta tasa.
+
+![](img/vp.png)
+
+**Anualidades**:
+
+FACTOR DE RECUPERACIÓN DE CAPITAL (**FRC**)
+
+Se utiliza para encontrar el **valor** de una **serie uniforme de pagos iguales** (Anualidades) que inician en el periodo 1 y que se extienden hasta (n) periodos, a partir de un **valor presente** (P) y dado una **tasa de interés** (i), donde el interés se calcula sobre saldos.
+
+Nos permite obtener el costo anual uniforme equivalente A, durante “n” períodos, de una inversión P cuando la tasa de interés es “i.
+
+![](img/frc.png)
+
+### Sistema de amortización de deuda
+
+* En el **sistema** de **amortización francés** las cuotas (capital + interés) son **iguales** y **consecutivas**, pagando al **principio** mayor proporción de **interés** que de **capital**, invirtiéndose los porcentajes a lo largo de la cancelación de la deuda
+* En el **sistema** de **amortización alemán** las cuotas (capital + Interés) son **decrecientes** y consecutivas **pagando** siempre el **mismo monto de capital** a cancelar y **disminuyendo** el monto de **interés** a lo largo del periodo del crédito.
+
+![](img/francia_alemania.png)
+
+En ambos sistemas, los **intereses** se aplican sobre el saldo del **capital adeudado**, por lo que en el sistema **alemán** se **abona un total de intereses menor** que en el sistema **francés**,
+
+En el sistema francés se pagan **cuotas menores** al **principio**, en comparación con el sistema alemán y desde el punto de vista contable, permite en las primeras cuotas mayores devengamiento de intereses.
+
+![](img/francia_alemania_2.png)
+
+### Flujo de fondos
+
+Es una técnica que permite **ordenar** y **estudiar** un hecho económico para **establecer** anticipadamente los **recursos necesarios** y **evaluar** sus posibles **resultados**. 
+
+El flujo de caja se estructura en **varias columnas** que representan **momentos**, los cuales reflejan los **movimientos de caja** ocurridos durante un **periodo**, y los desembolsos que deben ser realizados para que los eventos del periodo siguiente puedan ocurrir.
+
+Se realiza una **proyección** de **ingresos** y **egresos**, a **valores corrientes**. Luego, se pueden realizar análisis calculando distintas **medidas de rentabilidad**, que tienen en cuenta el valor del dinero en el tiempo y sirven de base para la **comparación de alternativas**.
+
+![](img/flujo_fondo.png)
+
+### Indicadores de eficiencia economica
+
+* **El Valor Actual Neto** (VAN): mide **monetariamente**, expresado en el **momento presente**, en cuánto varía la **riqueza** por hacer la **inversión**. Es decir, cuánto se **gana** por sobre lo que **quiere ganar**, **después de recuperada la inversión**.
+
+![](img/vanj.png)
+
+* **La Tasa Interna de Retorno** (TIR): es aquella **tasa de interés** que hace igual a **cero** el **valor actual neto**. Es conveniente realizar la inversión cuando la tasa exigida es menor que la TIR
+* **El Punto de Equilibrio** (PE): determina la cantidad de **ventas** que deben realizarse para que los **ingresos netos** sean iguales a los **costos totales** en el corto plazo. A mayor PE, mayor riesgo. Cantidad “Q” tal que: PxQ = CF+CVu x Q
+* **La Relación Beneficio-Costo** (RBC): compara el **valor actual** de los **beneficios** del proyecto con los **costos actuales** del mismo y la **inversión inicial**. Si la relación es mayor que uno, el negocio será rentable. Ingresos a valor presente sobre Costos a valor presenta. Conviene si RBC>1
+
+![](img/rbc.png)
+
+* **El Beneficio del Primer Año**: La tasa de ingresos del primer año sobre la inversión, deben ser mayor a la tasa de descuento, sino conviene postergar la inversión (BPA = B1/Io x 100>d)
+* **El Período de Recupero de Capital** (PRC), es el **tiempo** (años) para que los **ingresos netos** **igualen** la **inversión inicial** Io. A mayor tiempo de recupero, mayor es el riego. PRC, períodos “n” tal que: 
+
+![](img/prc.png)
+
+**VAN**
+
+Criterio de decisión: Si el VAN resulta positivo, el proyecto ofrece una rentabilidad mayor que la tasa de descuento adoptada. 
+
+Siempre existe una alternativa para comparar que es la alternativa nula, es decir, el flujo de fondo sin proyecto. Si VAN > 0 equivale al aumento de riqueza por la inversión
+
+el VAN de la alternativa nula = 0
+
+Tiene como ventaja que refleja la incorporación de valor, pero como desventaja, que no mide la tasa de rentabilidad del proyecto.
+
+**TIR**
+
+la TIR representa la rentabilidad del proyecto.
+
+![](img/tir.png)
+
+![](img/tir2.png)
+
+Criterio de decisión: cuando la TIR es mayor que la tasa de descuento, quiere decir que el proyecto es capaz de arrojar una diferencia positiva luego de devolver las inversiones, pagar los intereses de la deuda y pagar los dividendos del capital propio.
+
+
+Tiene la ventaja de representar la verdadera rentabilidad del proyecto, pero la desventaja de no reflejar una contribución económica al valor de la empresa.
+
+## Evaluación de alternativas para la toma de desiciones
+
+Existen diferentes **métodos** para **evaluar alternativas** y elegir la más conveniente, dependiendo de los datos disponible, de su confiabilidad, del objetivo perseguido, etc.
+
+Los **métodos Generales** se clasifican en: 
+* métodos que **no tienen en cuenta** el **valor** del **dinero** en el **tiempo** y cuyas decisiones tienen sustentos en un plan general (analogías, parámetros técnicos, indicadores, etc.)
+* métodos que sí **tienen en cuenta** el **valor** del **dinero** en el **tiempo**, donde el procedimiento es el análisis beneficiocosto con indicadores (VAN, TIR, Relación B-C, Beneficio del Primer Año, Periodo de recupero de capital, Punto de equilibrio)
+
+Los métodos de análisis beneficio-costo tienen indicadores que se clasifican en
+
+* aquellos que expresan valores monetarios (ej: VNA) y
+* aquellos que expresan tasas o relaciones (ej: TIR, relación Beneficio-Costo)
+
+En aquellos casos en que se conocen o es posible asignar probabilidades a los eventos, decimos que es una **decisión con Riesgo** y es posible utilizar **métodos probabilísticos**. (**Valor esperado**, **arboles de decisión**, Montecarlo, etc)
+
+En aquellos casos en que no se conocen o no es posible asignar probabilidades a los eventos, decimos que es una **decisión con Incertidumbre** y se aplican métodos con información limitada. (Criterios de **Maximax**, **Maximin**, **Hurwics**, **Savage**, etc)
+
+### Reemplazo de equipos
+
+Una empresa debe generar políticas eficientes de **reemplazo** de los **activos** que utiliza, ya que de no hacerlo, se encuentra en desventaja frente a la competencia, sufre una **disminución** de su **capital** y se originan **excesivos costos** de **mantenimiento** y **operación**.
+
+Son **motivos** de **reemplazo** de equipos: 
+• el rendimiento disminuido de los equipos existentes debido a un deterioro físico:
+• el incumplimiento de los requerimientos de producción de los equipos existentes, 
+• la obsolescencia de los mismos
+
+El **activo propuesto** (Desafiante) suele tener un **costo de capital alto**, **costos** de **operación bajos** y una **larga vida remanente**, mientras que el activo existente (defensor) suele poseer **costos de capital bajo**, **costos de operación** altos y una **corta vida útil**.
+
+Ante cantidades equivalentes de producción el criterio de decisión se basa en el mayor valor presente neto.
+
+Costo anual equivalente
+
+Costo anual equivalente de operación y mantenimiento
+
+Crece con el paso del tiempo debido al gasto ocasionado por reparaciones y mantenimiento
+
+Costo anual equivalente de la inversión
+
+Decrece en la medida que se prolonga el plazo de reposición, al distribuir el mismo valor actual en un horizonte mayor de tiempo
+
+El **mínimo** costo anual equivalente representa la **vida útil económica óptima** para el activo
+
+Para el análisis de alternativas en donde la **vida útil** del **retador** es **igual** a la vida útil del **defensor** se utiliza cualquiera de los métodos de evaluación de alternativas, es decir, a través del valor presente (VP) o del costoanual equivalente (CAE)
+
+El método del **costo anual equivalente** se utiliza para comparar proyectos de **distinta vida útil** que son replicados a perpetuidad.
+
+![](img/cae.png)
+
+![](img/reemplazo_equipos.png)
+
+### Fabricar o comprar
+
+![](img/fabricar_comprar.png)
 
