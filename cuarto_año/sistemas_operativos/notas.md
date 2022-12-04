@@ -986,21 +986,10 @@ A medida que ha evolucionado la tecnología de los computadores y el coste del h
 Es útil ver donde encaja la arquitectura SMP dentro de las categorías de procesamiento paralelo. La
 forma más común de categorizar estos sistemas es la taxonomía de sistemas de procesamiento paralelo introducida por Flynn. Flynn propone las siguientes **categorías** de sistemas de computadores:
 
-* **Única instrucción, único flujo de datos** – Single instruction single data (SISD) stream. Un
-solo procesador ejecuta una única instrucción que opera sobre datos almacenados en una sola
-memoria.
-• **Única instrucción, múltiples flujos de datos** – Single instruction multiple data (SIMD)
-stream. Una única instrucción de máquina controla la ejecución simultánea de un número
-de elementos de proceso. Cada elemento de proceso tiene una memoria de datos asociada,
-de forma que cada instrucción se ejecuta en un conjunto de datos diferente a través de los
-diferentes procesadores. Los procesadores vectoriales y matriciales entran dentro de esta
-categoría.
-• **Múltiples instrucciones, único flujo de datos** – Multiple instruction single data (MISD)
-stream. Se transmite una secuencia de datos a un conjunto de procesadores, cada uno de
-los cuales ejecuta una secuencia de instrucciones diferente. Esta estructura nunca se ha implementado.
-• **Múltiples instrucciones, múltiples flujos de datos** – Multiple instruction multiple data
-(MIMD) stream. Un conjunto de procesadores ejecuta simultáneamente diferentes secuencias
-de instrucciones en diferentes conjuntos de datos.
+* **Única instrucción, único flujo de datos** – Single instruction single data (SISD) stream. Un solo procesador ejecuta una única instrucción que opera sobre datos almacenados en una sola memoria.
+* **Única instrucción, múltiples flujos de datos** – Single instruction multiple data (SIMD) stream. Una única instrucción de máquina controla la ejecución simultánea de un número de elementos de proceso. Cada elemento de proceso tiene una memoria de datos asociada, de forma que cada instrucción se ejecuta en un conjunto de datos diferente a través de los diferentes procesadores. Los procesadores vectoriales y matriciales entran dentro de esta categoría.
+* **Múltiples instrucciones, único flujo de datos** – Multiple instruction single data (MISD) stream. Se transmite una secuencia de datos a un conjunto de procesadores, cada uno de los cuales ejecuta una secuencia de instrucciones diferente. Esta estructura nunca se ha implementado.
+* **Múltiples instrucciones, múltiples flujos de datos** – Multiple instruction multiple data (MIMD) stream. Un conjunto de procesadores ejecuta simultáneamente diferentes secuencias de instrucciones en diferentes conjuntos de datos.
 
 Con la organización MIMD, los procesadores son de propósito general, porque deben ser capaces
 de procesar todas las instrucciones necesarias para realizar las transformaciones de datos apropiadas.
