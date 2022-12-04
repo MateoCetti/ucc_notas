@@ -76,6 +76,27 @@
     - [La balanza de pagos](#la-balanza-de-pagos)
   - [Crecimiento economico y desarrollo](#crecimiento-economico-y-desarrollo)
   - [Nueva economia](#nueva-economia)
+- [Economia de empresas](#economia-de-empresas)
+  - [Contabilidad general](#contabilidad-general)
+    - [Valuación de activos](#valuación-de-activos)
+  - [Estructura financiera de las empresas](#estructura-financiera-de-las-empresas)
+    - [Indicadores y ratios de performance](#indicadores-y-ratios-de-performance)
+  - [Contabilidad de costos](#contabilidad-de-costos)
+    - [Costeo por absorción](#costeo-por-absorción)
+    - [Costeo variable](#costeo-variable)
+- [Ingenieria economica](#ingenieria-economica)
+  - [El valor del dinero en el tiempo](#el-valor-del-dinero-en-el-tiempo)
+    - [Tasas de interes](#tasas-de-interes)
+    - [Factores de equivalencia](#factores-de-equivalencia)
+    - [Sistema de amortización de deuda](#sistema-de-amortización-de-deuda)
+    - [Flujo de fondos](#flujo-de-fondos)
+    - [Indicadores de eficiencia economica](#indicadores-de-eficiencia-economica)
+  - [Evaluación de alternativas para la toma de desiciones](#evaluación-de-alternativas-para-la-toma-de-desiciones)
+    - [Reemplazo de equipos](#reemplazo-de-equipos)
+    - [Fabricar o comprar](#fabricar-o-comprar)
+  - [Decisiones con riesgo e incertidumbre](#decisiones-con-riesgo-e-incertidumbre)
+    - [Desición con riesgo](#desición-con-riesgo)
+    - [Descición con incertidumbre](#descición-con-incertidumbre)
 
 # Introducción
 
@@ -1240,3 +1261,504 @@ Los conceptos de desarrollo y subdesarrollo económicos, hacen alusión a la bre
 La Economía del Conocimiento son aquellas actividades productivas que se caracterizan por el uso intensivo de tecnología y que requieren capital humano altamente calificado. Algunas de las actividades que incluye: Software, servicios informáticos y digitales.
 
 Estas actividades son las más dinámicas que tienen el potencial de aumentar transversalmente la productividad, la cantidad y calidad de empleo y las exportaciones.
+
+# Economia de empresas
+
+## Contabilidad general
+
+Una **empresa**: Se puede definir como un conjunto de **factores** de **producción coordinados**, cuya función es **producir bienes y servicios**. Objetivo: **maximizar su beneficio**.
+
+![](img/actividades_empresariales.png)
+
+Una **sociedad comercial** existe cuando dos o más personas en forma organizada, conforme a uno de los tiposprevistos en la ley, se obligan a realizar aportes para aplicarlos a la producción o intercambio de bienes o servicios,participando de los beneficios y soportando las pérdidas (SA, SRL, etc.)
+
+**Contabilidad**: proceso de **identificar**, **medir**, **registrar**, **comunicar** los **eventos económicos** de una organización para usuarios interesados en la información.
+
+la **contabilidad financiera** se enfoca en el suministro de información a agentes externos, tales como **inversionistas**, instituciones **gubernamentales**, **bancos** y proveedores. Mide y registra las transacciones del negocio para proporcionar **estados financieros** elaborados con base en los principios de contabilidad generalmente aceptados y/o normas de información financiera (nif).
+
+La **contabilidad administrativa** mide, analiza y reporta información financiera y no financiera para ayudar a los **gerentes** a tomar decisiones encaminadas al logro de los objetivos de una organización.
+
+La **contabilidad de costos** proporciona información para la contabilidad administrativa y para la contabilidad financiera. La contabilidad de costos **mide**, **analiza** y **reporta** información financiera y no financiera relacionada con los costos de adquisición o uso de los recursos dentro de una organización.
+
+![](img/contabilidades.png)
+
+En nuestro país la Ley de Sociedades Comerciales (LSC) ha incorporado prescripciones relativas a la **documentación** y **contabilidad**, con carácter general para todas las sociedades comerciales:
+
+* **Estado de situación patrimonial**: Foto instantánea de la situación financiera de una entidad en un punto dado del tiempo. La **ecuación contable fundamental**: 
+  * ACTIVO = PASIVO + PATRIMONIO NETO
+* **Estado de resultados**: Presenta el desarrollo de las operaciones en un periodo dado de tiempo. La ecuación fundamental es:
+  * BENEFICIO = INGRESOS – COSTOS = P x Q – CU x Q – Otros Costos
+* **Estado de evolución del patrimonio**: Resume las distintas componentes del patrimonio neto y sus cambios. La ecuación fundamental es:
+  * Beneficio Acum al inicio + Beneficio del periodo – Dividendos = Beneficios Acum al final 
+* **Estado de variaciones de capital corriente**: Diseñado para vincular el beneficio contable con los movimientos de entradas y salidas de dinero. La ecuación fundamental es: 
+  * Saldo de Caja al inicio + Fondos Generados (operativos + financieros + inversión) – Fondos Usados (operativos + financieros + inversión) = Saldo de Caja al fin
+
+**ACTIVO**: conjunto de **bienes** y **derechos** que pertenecen a la empresa, con la característica común de que se utilizan en la **generación de ingresos**.
+* **Activo No Corriente**: aquellos bienes y derechos adquiridos con intención de que permanezcan en la empresa durante más de un año. (ACTIVOS FIJOS)
+* **Activo Corriente**: aquellos bienes y derechos adquiridos con intención de que permanezcan menos de un año.
+  
+Activo = Activo Corriente + Activo Fijo
+
+**PASIVO**: está formado por el conjunto de recursos financieros obtenidos por la empresa para el desarrollo de sus funciones. Principalmente formado por las **obligaciones** que la empresa tiene **contraídas con terceros**.
+* **Pasivo No Corriente**: los conforman préstamos con vencimiento a un periodo superior a un año.
+* **Pasivo Corriente**: los conforman préstamos con vencimiento a un periodo menores a un año.
+
+Pasivo = Pasivo Corriente + Pasivo No Corriente
+
+**PATRIMONIO NETO**: está constituido por los **fondos** aportados por los **propietarios** o los **generados** por la **propia empresa**.
+
+`Nota: La adquisición de los bienes que conforman el ACTIVO de la empresa (estructura económica), obliga a disponer de RECURSOS FINANCIEROS, que constituyen la fuente de financiamiento de la empresa (estructura financiera).`
+
+![](img/situacion_patrimonial.png)
+
+![](img/estado_de_resultados.png)
+
+**AUDITORÍA**: Verificación de cumplimiento de procedimientos y criterios contables establecidos por la Federación de Consejos de Ciencias Económicas de Argentina (FCCEA)
+
+Tipos de auditorías:
+
+* Interna (de la empresa)
+* Externa solicitada por la empresa (auditoría independiente de los estados patrimoniales)
+* Externa del gobierno ( inspección de sociedades comerciales)
+
+El auditor debe asegurarse mediante sus procedimientos que un **fraude** o error con efecto significativo sobre losestados financieros no ha ocurrido
+
+### Valuación de activos
+
+**Depreciación funcional**: **disminución** del **valor económico** de un bien de capital por **pérdida** de **capacidad para producir**:
+* Por desgaste físico: debido al uso del activo en el proceso económico
+* Por envejecimiento: debido al desgaste gradual independiente del funcionamiento del mismo
+* Por obsolescencia tecnológica: debido a la existencia de mejoras técnicas o aparición de nuevos procedimientos 
+* Aplicable a construcciones, instalaciones, equipos. El Terreno no se deprecia
+
+**Depreciación contable**: es un **reconocimiento racional** y **sistemático** del costo de los bienes, distribuido durante su vida útil estimada, con el fin de obtener los recursos necesarios para la reposición de los bienes, de manera que se conserve la capacidad operativa o productiva de la empresa. **Es la pérdida de Valor de libros de activos fijos por métodos contables**.
+
+Diferencia entre **Depreciación** y **Amortización**:
+
+**Amortización**: es la **distribución sistemática** del **importe amortizable** de un **activo intangible** durante los años de su vida útil. Es el mismo proceso que la depreciación, con la única diferencia que utilizada sólo para los **activos intangibles** y los activos diferidos (los Activos que tienen valor, pero que no se puede tocar), Por ejemplo, una patente o marca y los gastos pagados por anticipados.
+
+**METODOS CONTABLES PARA DETERMINAR EL VALOR DE LIBRO DE LOS ACTIVOS FIJOS**
+
+En los estados contables, la adquisición de un activo fijo se reflejará positivamente y su pérdida de valor con el paso del tiempo, quedará reflejada en una cuenta negativa que indica lo que vale de menos en forma acumulada, período tras período.
+
+Normalmente para la amortización de un activo intangible se utiliza el método de **línea recta**, no obstante en la depreciación de los activos fijos existe varios métodos.
+
+* Método de la línea recta: Distribuye la base de amortización en partes iguales a cada año de su vida útil
+* Método de Saldo de Declinación: Método acelerado de depreciación en el cual se aplica un porcentaje constante sobre el valor no depreciado del activo 
+* Método del servicio prestado: Método que utiliza unidades ligadas a algún aspecto de producción, independiente del tiempo
+* Métodos específicos
+
+![](img/metodos_depreciacion.png)
+
+## Estructura financiera de las empresas
+
+Toda empresa requiere de **recursos** para realizar sus actividades. El inicio de una empresa o de un nuevo proyecto implica una **inversión**, por lo que se requiere de recursos financieros para que se pueda llevar a cabo.
+
+La adquisición de los bienes que conforman el **ACTIVO** de la empresa (**estructura económica**), obliga a disponer de **RECURSOS FINANCIEROS**, que constituyen la fuente de financiamiento de la empresa (**estructura financiera**).
+
+En otras palabras, la **Estructura financiera** de la empresa se compone de todos los **recursos financieros** empleados por la empresa, para hacer posible inversiones en **activos**. 
+
+Estos recursos financieros pueden clasificarse según su procedencia:
+* inversiones de accionistas (capital accionario)
+* préstamos a largo plazo (Pasivo No Corriente)
+* préstamos a corto plazo (Pasivo Corriente)
+
+Motivo necesidad de financiamiento: 
+* **Falta de liquidez** necesaria para hacer frente a las operaciones diarias
+* Ante la posibilidad de llevar a cabo una nueva inversión (crecimiento-expansión) no se cuenta con **capital propio suficiente** o no se desea comprometer 100% capital propio
+
+Se puede clasificar el financiamiento según su **origen** (si se genera dentro o fuera de la empresa) 
+* **Financiación interna**: reservas, capital accionario, nueva emisión de acciones (PN) 
+* **Financiación externa**: créditos, cuentas a pagar, anticipos, aportes de socios (Pasivo exigible)
+
+Se puede clasificar el financiamiento según la **titularidad** (propios o ajenas)
+* **Financiación Propia**: No hay que devolverlo: Reservas (int) 
+* **Financiación Ajena**: Hay que devolverlo: Prestamos, créditos, etc.
+
+**PERIODO DE MADURACIÓN ECONÓMICO** (también llamado Ciclo Operativo), es el período de tiempo que trascurre desde que la empresa **invierte** en el **proceso productivo**, a través de la compra de existencias (materias primas y mercaderías), hasta que **recupera** esta **inversión** mediante el cobro a los clientes . El período de días que se requieren para cobrar una venta se denomina Periodo de Cuentas por Cobrar (PCC)
+
+**PERIODO DE MADURACIÓN FINANCIERO** (también llamado Ciclo de Efectivo), es el período de tiempo que
+transcurre desde que la empresa **paga** a los **proveedores** hasta que **cobra** de los **clientes**. Es decir, el numero de días que transcurren hasta que ingresa el importe efectivo de una venta, medido desde el momento en que se pagaron estos productos en inventario
+
+![](img/capital_circulante.png)
+
+### Indicadores y ratios de performance
+
+Los **Ratios Financieros** o índices financieros: Miden la **capacidad** de la **empresa** para **hacer frente** a sus **obligaciones**, tanto en el corto como en el largo plazo. Por si mismo, no es mas que un cociente de dos datos extraídos de los estados contables. Toma significado cuando es comparado con normas o rangos encontrados en otros negocios de la misma industria o similar
+
+La **rentabilidad financiera** es la comparación cuantitativa entre la **capacidad** de una empresa para **producir beneficios económicos netos** y la **inversión** en **recursos** propios empleados para obtener esos beneficios.
+
+La **rentabilidad económica** es la comparación cuantitativa entre la **capacidad** de una empresa para **producir beneficios económicos**, respecto al **activo total empleado** para obtener esos beneficios
+
+Los **Ratios de Rentabilidad**, miden como las empresas utilizan eficientemente sus activos, indicando además la eficiencia operativa de la gestión empresarial.
+
+![](img/indicadores.png)
+
+La **liquidez** es la capacidad que una empresa posee para cancelar sus obligaciones en el corto plazo
+
+La solvencia es la capacidad que una empresa tiene para atender el pago de los compromisos adquiridos en el largo plazo
+
+Los **Ratios de Liquidez**, miden la disponibilidad de dinero en efectivo que tiene la empresa para cancelar sus obligaciones en el corto plazo (menos de un año desde la fecha de cierre del ejercicio)
+
+Los **Ratios de Solvencia**, miden la capacidad de pago de una empresa ante sus obligaciones. Puede expresarse en forma agregada (relación entre los activos totales y los pasivos totales) o en forma desagregada (en función de activos y pasivos corriente o no corriente)
+
+![](img/indicadores_2.png)
+
+![](img/tdc1.png)
+
+![](img/tdc2.png)
+
+## Contabilidad de costos
+
+Los **GASTOS** se identifican con intervalos de tiempo y no con los productos elaborados. Se relacionan con las funciones de distribución, administración y financiamiento de la empresa.
+
+Los **COSTOS** se refieren al **valor monetario** de los **recursos asignados** a la **elaboración** de un **producto** o a la prestación de un **servicio**. Es decir, materia prima directa, mano de obra directa y los cargos indirectos.
+
+LA **CONTABILIDAD DE COSTOS** es un sistema que le permite a las empresas **identificar** los **costos** de las tareas ejecutadas. Provee de información que sirva para la toma de decisión, la planificación y la evaluación del desempeño.
+
+LOS **OBJETIVOS** DE LA CONTABILIDAD DE COSTOS
+
+1. Proveer de **información útil** para la asignación de valor monetario a productos o servicios
+2. Proveer información de **uso interno** de los directivos de la empresa, que permita el desarrollo de las tareas de planeación, control y toma de decisiones
+3. Visualizar desviaciones para tomar las **medidas correctivas**. (optimización de los recursos)
+
+**Elementos de costo**
+
+El costo de Producción se compone de:
+
+* Costo de **Materia Prima**
+* Costo de **Mano de obra**
+* **Costos Indirectos de fabricación** CIF: Aquellos costos que intervienen en la transformación, pero que no son ni materiales ni mano de obra y no se pueden asignar a una partida especifica de producción (compuestos por los materiales indirectos, la mano de obra indirecta y otros gastos de producción como las depreciaciones, las primas de seguros, los alquileres, la iluminación general, etc.). Se debe utilizar una base que sea conveniente para la repartición proporcional de los CIF
+
+El costo de Distribución y Desarrollo se compone de:
+* Comercialización
+* Administración
+* Financiación
+* Desarrollo
+
+**METODOS DE COSTEO**
+
+1. COSTEO POR **ABSORCIÓN**
+2. COSTEO **VARIABLE**
+3. 
+La diferencia entre ambos es que en el **costeo variable** los costos **fijos** de manufactura se **excluyen** de los costos **inventariables**; mientras que en el costeo absorbente, los costos fijos de manufactura se incluyen en los costos inventariables.
+
+![](img/metodos_costeo.png)
+
+### Costeo por absorción
+
+Es un método de costeo donde **todos los Costos** del Producto (fijos y variables), se incluyen como **costos inventariables**. Es decir, el inventario “absorbe” todos los costos de manufactura. En el costeo por absorción se considera como costo del producto: 
+
+* el costo de material
+* costo de mano de obra
+* costos indirectos de fábrica tanto fijos como variables.
+
+Los **costos fijos** son costos que se mantienen **constantes** a **cualquier nivel de producción** o venta. Los **costos variables** se consideran aquellos costos que **varían** en la misma proporción que el **nivel de producción** o venta.
+
+El **Costo del producto fabricado** y vendido, se convierte en el **Estado de Resultado**, en gastos con la forma de “costo de venta” o “costo de fabricación de artículos vendidos” 
+
+Todos los costos que no son de manufactura: Comercialización, Administración, Financiación, Desarrollo, etc. Resultan **No inventariables** y se registran como **Gastos del Periodo** (GP):
+
+Se han desarrollado dos sistemas de asignación de costos: 
+
+• Si se producen productos que son bastantes **distintos** entre si, se utiliza entonces el **costeo por ordenes** (los costos se acumulan o se reúnen por cada **pedido del cliente**) 
+• Si se producen grandes cantidades de productos homogéneos, se utiliza el **costeo por procesos** (los costos se acumulan por dichos procesos o por departamentos o secciones durante un período de tiempo dado)
+
+El sistema de **COSTEO POR ORDENES**, es aplicable a aquellas empresas manufactureras que producen de acuerdo a **especificaciones del cliente** (constructoras, publicitarios, imprentas, plásticos, etc) En él, para **cada orden**, se acumulan los **costos** de **material prima**, **mano de obra**, costos **indirectos**, **gastos generales** y **beneficios**. 
+
+Generalmente se acumulan los costos primos, y los CIF y Gastos del Período se incluyen aplicando el concepto de **centro de costo** o bien, se determinan en base a los costos de MP y MOD: Margen Bruto (CIF+GP)=(MP+MOD) x MB
+
+El costo de un trabajo es una base para hacer una comparación con el precio de venta y sirve como referencia para las futuras cotizaciones de precios de trabajos similares.
+
+![](img/ordenes.png)
+
+El sistema de **COSTEO POR PROCESO** es adecuado cuando las operaciones representan producción en **masa** o procesos continuos. (el procesamiento de alimentos, refinerías de petróleo, productos químicos, producción de acero, textiles, etc).
+
+En él, se identifican los costos de manufactura o elaboración, con departamentos individuales en un intervalo dado de tiempo. Los costos unitarios promedio se calculan dividiendo los costos totales de un periodo contable dado, entre las unidades producidas en ese periodo. Este último es el costo unitario promedio que se aplica a cada una de las unidades idénticas o similares elaboradas en ese período.
+
+El costo de los materiales es identificado con los departamentos y por lo tanto con las unidades individuales en un sistema de costos por procesos.
+
+Los costos primos son siempre individualizables
+
+Los CIF se registran en centros de costos (departamentos)
+
+Costo proceso A + Costo proceso B + Costo Proceso C = Costo de producción
+
+Estructura de costos:
+
+Costo unitario desagregado en % MP, % MOD, % CIF
+
+Bases de prorrateo: Cantidad q; Facturación p x q
+
+![](img/procesos.png)
+
+El sistema de distribución de costos POR **PRODUCCIÓN CONJUNTA** se utiliza cuando a partir de la misma materia prima, de un proceso productivo, se dan **más de un producto resultante**. No son un nuevo sistema de costeo. Es una **variante** del costo por **procesos**. En estos procesos se **comparten costos primos** y **CIF** hasta un punto de separación.
+
+![](img/prod_conjunta.png)
+
+En el **COSTEO BASADO EN ACTIVIDADES**, los productos no consumen costos, sino las **actividades consumen recursos** y es la disponibilidad y uso de esos recursos lo que generan costos. Es decir, la imputación al producto o servicio será en función de las actividades que haya producido o consumido. En este sistema, se identifican las **actividades** como los **objetos de costos**. 
+
+Debemos definir: que es una actividad? Una actividad es un evento, una **tarea** o una unidad de trabajo que tiene un **propósito especificado**. De una manera más informal, las actividades son **verbos**: algo que hace una empresa Un conductor de costo causa (o conduce) los costos de una actividad. Es un suceso que afecta al costo de una actividad por tener efecto directo con el consumo de recursos.
+
+Los sistemas ABC :
+1. Se identifican las actividades de todas las funciones de la cadena de valor. Es decir, se descompone la organización en una estructura de actividades
+2. Se identifican conductores de costos asociados a cada actividad
+3. Se calculan los costos de las actividades individuales (costo por unidad de conductor de costo)
+4. Se asignan los costos a los objetos de costos —como los productos y servicios— con base en la mezcla de actividades necesarias para producir cada producto o servicio.
+5. Se asignan costos a los productos multiplicando el costo unitario del conductor de costo por el volumen de unidades consumidas conductoras de costo por el producto
+
+![](img/abc.png)
+
+Diferentes **tipos** de **conductores de costos**
+* De transacción (frecuencia con que se desarrolla una actividad)
+* De duración (tiempo requerido para desarrollar una actividad)
+* De intensidad o imputación directa (imputación de recursos utilizados)
+
+![](img/cond_costos.png)
+
+### Costeo variable
+
+**COSTEO VARIABLE O COSTEO DIRECTO**, separa los **costos fijos** de los **variables**. Los costos **variables** representan los costos de **producir**, mientras que los **fijos** los costos de permanecer o **estar**. Se considera que la producción que no se vende es una variación de los bienes de la empresa, por lo que el estudio se debe solo a la producción vendida. Es un Costeo marginal o variable: una unidad más
+
+![](img/variable.png)
+
+![](img/variable_2.png)
+
+# Ingenieria economica
+
+**INGENIERÍA ECONÓMICA**: Son conceptos y técnicas matemáticas aplicadas:
+* en el análisis, comparación y evaluación financiera de alternativas relativas a proyectos
+* para la toma de decisiones monetarias, que permiten llevar a cabo una aproximación racional y significativa
+
+## El valor del dinero en el tiempo
+
+### Tasas de interes
+
+Cuando se habla de una suma de dinero, se debe especificar la fecha, de lo contrario la información es incompleta 
+
+**El dinero cambia de valor a través del tiempo.**
+
+El **INTERÉS** es el **costo** de **usar dinero** durante cierto **tiempo**, por lo que nos referimos a el como: **el valor tiempo del dinero** --> La tasa de interés es el porcentaje que se **paga** por el **alquiler** del **dinero**.
+
+El capital tiene un **costo de oportunidad** en el tiempo y su **remuneración** es el **interés**.
+
+* **Interés simple**: En el caso del interés simple se computa un monto de interés por cada periodo, tomando siempre como **base** el **mismo capital**;
+* **Interés compuesto**: En el caso del interés compuesto el monto del interés en cada periodo se computa sobre el **principal** **mas** todo el **interés acumulado** en **periodos anteriores**.
+
+![](img/interes.png)
+
+**Tasa nominal de interes**:
+
+La tasa de interés nominal se expresa mediante un %, y representa la remuneración a un capital por un tiempo determinado. Es muy importante saber que **se expresa anualmente** aunque puede generar intereses más de una vez al año. Para conocer estos intereses generados, en el caso de que sea más de una vez al año, debemos calcular la tasa efectiva.
+
+**Tasa efectiva**:
+
+La tasa de interés efectiva es la **tasa verdadera** que **pagamos** por un pasivo o **recibimos** por un activo financiero, puede calcularse para cualquier periodo; mes, trimestre, semestre, etc. La tasa de interés efectiva es compuesta y vencida.
+
+Se diferencia de la tasa de interés nominal que hace caso omiso de la capitalización y otra serie de factores. Con el tipo de interés efectivo, podemos representar el efecto de la reinversión de los intereses. Como la capitalización del interés se produce varias veces por año, generalmente de forma mensual, se obtiene un tasa efectiva mayor que la nominal. Asimismo, la tasa efectiva incluye, además del pago de intereses, el efecto que produce sobre el capital los impuestos, comisiones y otros gastos vinculados a la operación financiera.
+
+![](img/nominal_efectivo.png)
+
+**Tasa de capitalización continua** (?)
+
+Si la frecuencia de capitalización aumenta, el monto compuesto resultante también aumenta. Cuando “n” aumenta en forma indefinida (tiende a infinito), el monto compuesto tiende a un valor límite.
+
+![](img/cap_continua.png)
+
+**Inflación e interes**
+
+TIA = Tasa de Inflación Anual
+TRI = Tasa Real de Interés
+
+![](img/interes_real.png)
+
+Si la inflación es de 3%, y la tasa de interés de un préstamo, 2%, el rendimiento que obtiene el prestamista es inferior a cero. En ese caso, decimos que la tasa de interés real —la tasa nominal menos la tasa de inflación— es negativa.
+
+Los bancos centrales modifican esa tasa llamada “**tasa de política monetaria**”. Una tasa de política monetaria más alta **estimula el ahorro**; una tasa más baja promueve el **consumo** y reduce el costo de la inversión empresarial.
+
+Al fijar esa tasa, los bancos centrales se guían por la idea de la **tasa de interés neutral**; o sea, la tasa de interés a largo plazo que es **congruente** con una **inflación estable**. Cuando las tasas de interés son inferiores a la tasa neutral, la **política monetaria** es **expansiva**; si son **superiores**, es **contractiva**.
+
+### Factores de equivalencia
+
+La **CAPITALIZACIÓN** es la operación que nos permite **agregar** a un **valor presente**, un cierto **valor** para obtener un **valor futuro** --> significa **avanzar** en el tiempo, **agregando** el **interés obtenido**.
+
+La **ACTUALIZACIÓN** es determinar que cantidad de dinero **significa hoy**, una **suma de dinero futuro** --> ¿Que suma de dinero debo depositar hoy para obtener en un tiempo determinado un monto específico?
+
+El **VALOR FUTURO** de un monto, es el referido **monto** más todos los **intereses** compuestos **acumulados**, a una **cierta tasa**.
+
+![](img/vf.png)
+
+El **VALOR PRESENTE** de un monto es el **capital futuro** **menos** todo el **interés** compuesto descontado a la fecha presente, a una cierta tasa.
+
+![](img/vp.png)
+
+**Anualidades**:
+
+FACTOR DE RECUPERACIÓN DE CAPITAL (**FRC**)
+
+Se utiliza para encontrar el **valor** de una **serie uniforme de pagos iguales** (Anualidades) que inician en el periodo 1 y que se extienden hasta (n) periodos, a partir de un **valor presente** (P) y dado una **tasa de interés** (i), donde el interés se calcula sobre saldos.
+
+Nos permite obtener el costo anual uniforme equivalente A, durante “n” períodos, de una inversión P cuando la tasa de interés es “i.
+
+![](img/frc.png)
+
+### Sistema de amortización de deuda
+
+* En el **sistema** de **amortización francés** las cuotas (capital + interés) son **iguales** y **consecutivas**, pagando al **principio** mayor proporción de **interés** que de **capital**, invirtiéndose los porcentajes a lo largo de la cancelación de la deuda
+* En el **sistema** de **amortización alemán** las cuotas (capital + Interés) son **decrecientes** y consecutivas **pagando** siempre el **mismo monto de capital** a cancelar y **disminuyendo** el monto de **interés** a lo largo del periodo del crédito.
+
+![](img/francia_alemania.png)
+
+En ambos sistemas, los **intereses** se aplican sobre el saldo del **capital adeudado**, por lo que en el sistema **alemán** se **abona un total de intereses menor** que en el sistema **francés**,
+
+En el sistema francés se pagan **cuotas menores** al **principio**, en comparación con el sistema alemán y desde el punto de vista contable, permite en las primeras cuotas mayores devengamiento de intereses.
+
+![](img/francia_alemania_2.png)
+
+### Flujo de fondos
+
+Es una técnica que permite **ordenar** y **estudiar** un hecho económico para **establecer** anticipadamente los **recursos necesarios** y **evaluar** sus posibles **resultados**. 
+
+El flujo de caja se estructura en **varias columnas** que representan **momentos**, los cuales reflejan los **movimientos de caja** ocurridos durante un **periodo**, y los desembolsos que deben ser realizados para que los eventos del periodo siguiente puedan ocurrir.
+
+Se realiza una **proyección** de **ingresos** y **egresos**, a **valores corrientes**. Luego, se pueden realizar análisis calculando distintas **medidas de rentabilidad**, que tienen en cuenta el valor del dinero en el tiempo y sirven de base para la **comparación de alternativas**.
+
+![](img/flujo_fondo.png)
+
+### Indicadores de eficiencia economica
+
+* **El Valor Actual Neto** (VAN): mide **monetariamente**, expresado en el **momento presente**, en cuánto varía la **riqueza** por hacer la **inversión**. Es decir, cuánto se **gana** por sobre lo que **quiere ganar**, **después de recuperada la inversión**.
+
+![](img/vanj.png)
+
+* **La Tasa Interna de Retorno** (TIR): es aquella **tasa de interés** que hace igual a **cero** el **valor actual neto**. Es conveniente realizar la inversión cuando la tasa exigida es menor que la TIR
+* **El Punto de Equilibrio** (PE): determina la cantidad de **ventas** que deben realizarse para que los **ingresos netos** sean iguales a los **costos totales** en el corto plazo. A mayor PE, mayor riesgo. Cantidad “Q” tal que: PxQ = CF+CVu x Q
+* **La Relación Beneficio-Costo** (RBC): compara el **valor actual** de los **beneficios** del proyecto con los **costos actuales** del mismo y la **inversión inicial**. Si la relación es mayor que uno, el negocio será rentable. Ingresos a valor presente sobre Costos a valor presenta. Conviene si RBC>1
+
+![](img/rbc.png)
+
+* **El Beneficio del Primer Año**: La tasa de ingresos del primer año sobre la inversión, deben ser mayor a la tasa de descuento, sino conviene postergar la inversión (BPA = B1/Io x 100>d)
+* **El Período de Recupero de Capital** (PRC), es el **tiempo** (años) para que los **ingresos netos** **igualen** la **inversión inicial** Io. A mayor tiempo de recupero, mayor es el riego. PRC, períodos “n” tal que: 
+
+![](img/prc.png)
+
+**VAN**
+
+Criterio de decisión: Si el VAN resulta positivo, el proyecto ofrece una rentabilidad mayor que la tasa de descuento adoptada. 
+
+Siempre existe una alternativa para comparar que es la alternativa nula, es decir, el flujo de fondo sin proyecto. Si VAN > 0 equivale al aumento de riqueza por la inversión
+
+el VAN de la alternativa nula = 0
+
+Tiene como ventaja que refleja la incorporación de valor, pero como desventaja, que no mide la tasa de rentabilidad del proyecto.
+
+**TIR**
+
+la TIR representa la rentabilidad del proyecto.
+
+![](img/tir.png)
+
+![](img/tir2.png)
+
+Criterio de decisión: cuando la TIR es mayor que la tasa de descuento, quiere decir que el proyecto es capaz de arrojar una diferencia positiva luego de devolver las inversiones, pagar los intereses de la deuda y pagar los dividendos del capital propio.
+
+
+Tiene la ventaja de representar la verdadera rentabilidad del proyecto, pero la desventaja de no reflejar una contribución económica al valor de la empresa.
+
+## Evaluación de alternativas para la toma de desiciones
+
+Existen diferentes **métodos** para **evaluar alternativas** y elegir la más conveniente, dependiendo de los datos disponible, de su confiabilidad, del objetivo perseguido, etc.
+
+Los **métodos Generales** se clasifican en: 
+* métodos que **no tienen en cuenta** el **valor** del **dinero** en el **tiempo** y cuyas decisiones tienen sustentos en un plan general (analogías, parámetros técnicos, indicadores, etc.)
+* métodos que sí **tienen en cuenta** el **valor** del **dinero** en el **tiempo**, donde el procedimiento es el análisis beneficiocosto con indicadores (VAN, TIR, Relación B-C, Beneficio del Primer Año, Periodo de recupero de capital, Punto de equilibrio)
+
+Los métodos de análisis beneficio-costo tienen indicadores que se clasifican en
+
+* aquellos que expresan valores monetarios (ej: VNA) y
+* aquellos que expresan tasas o relaciones (ej: TIR, relación Beneficio-Costo)
+
+En aquellos casos en que se conocen o es posible asignar probabilidades a los eventos, decimos que es una **decisión con Riesgo** y es posible utilizar **métodos probabilísticos**. (**Valor esperado**, **arboles de decisión**, Montecarlo, etc)
+
+En aquellos casos en que no se conocen o no es posible asignar probabilidades a los eventos, decimos que es una **decisión con Incertidumbre** y se aplican métodos con información limitada. (Criterios de **Maximax**, **Maximin**, **Hurwics**, **Savage**, etc)
+
+### Reemplazo de equipos
+
+Una empresa debe generar políticas eficientes de **reemplazo** de los **activos** que utiliza, ya que de no hacerlo, se encuentra en desventaja frente a la competencia, sufre una **disminución** de su **capital** y se originan **excesivos costos** de **mantenimiento** y **operación**.
+
+Son **motivos** de **reemplazo** de equipos: 
+• el rendimiento disminuido de los equipos existentes debido a un deterioro físico:
+• el incumplimiento de los requerimientos de producción de los equipos existentes, 
+• la obsolescencia de los mismos
+
+El **activo propuesto** (Desafiante) suele tener un **costo de capital alto**, **costos** de **operación bajos** y una **larga vida remanente**, mientras que el activo existente (defensor) suele poseer **costos de capital bajo**, **costos de operación** altos y una **corta vida útil**.
+
+Ante cantidades equivalentes de producción el criterio de decisión se basa en el mayor valor presente neto.
+
+Costo anual equivalente
+
+Costo anual equivalente de operación y mantenimiento
+
+Crece con el paso del tiempo debido al gasto ocasionado por reparaciones y mantenimiento
+
+Costo anual equivalente de la inversión
+
+Decrece en la medida que se prolonga el plazo de reposición, al distribuir el mismo valor actual en un horizonte mayor de tiempo
+
+El **mínimo** costo anual equivalente representa la **vida útil económica óptima** para el activo
+
+Para el análisis de alternativas en donde la **vida útil** del **retador** es **igual** a la vida útil del **defensor** se utiliza cualquiera de los métodos de evaluación de alternativas, es decir, a través del valor presente (VP) o del costoanual equivalente (CAE)
+
+El método del **costo anual equivalente** se utiliza para comparar proyectos de **distinta vida útil** que son replicados a perpetuidad.
+
+![](img/cae.png)
+
+![](img/reemplazo_equipos.png)
+
+### Fabricar o comprar
+
+![](img/fabricar_comprar.png)
+
+## Decisiones con riesgo e incertidumbre
+
+En aquellos casos en que se conocen o es posible asignar **probabilidades** a los **eventos**, decimos que es una **DECISIÓN CON RIESGO** y es posible utilizar métodos probabilísticos. (Valor esperado, arboles de decisión, Montecarlo, etc)
+
+En aquellos casos en que **no se conocen** o no es posible asignar probabilidades a los eventos, decimos que es una **DECISIÓN CON INCERTIDUMBRE** y se aplican métodos con información limitada. (Criterios de Maximax, Maximin, Hurwics, Savage, etc)
+
+![](img/decision.png)
+
+![](img/matriz_decision.png)
+
+### Desición con riesgo
+
+* En el método del **valor monetario esperado**, el valor de cada proyecto representa la “**esperanza**” o el “**valor medio**” de los valores que puede adoptar el proyecto, en el escenario en cuestión y existe una probabilidad asignada a la ocurrencia de dicho escenario y por lo tanto al resultado del proyecto.
+* La varianza de una distribución refleja la dispersión de las observaciones en torno a la media. El **grado de Riesgo** de cada proyecto se ve reflejado en la **magnitud de la varianza** del mismo.
+* El empleo de **arboles de decisión** son efectivos en problemas decisorios en los cuales es importante considerar **decisiones en secuencia** y en las cuales se conocen las probabilidades de los eventos que se van a presentar en el futuro.
+* La **simulación de MonteCarlo** consiste en determinar repetidamente el valor del VAN del proyecto, mediante la asignación aleatoria de un valor a cada variable pertinente del flujo. 
+
+![](img/ve.png)
+
+Los riesgos se analizan por escenarios de situaciones futuras diferentes a las estimadas en el escenario base 
+* **Análisis multidimensional**: se modifican las variables que más sensibilizan el resultado de la evaluación en rangos extremos 
+* **Análisis unidimensional**: encuentra el valor máximo o mínimo de una variable para que el proyecto sea aceptable
+
+**Criterio del Valor Esperado**: Es un promedio de los resultados en cada estado, pesados a través de sus probabilidades Regla de Bayes: Con las mejores estimaciones de probabilidades elegir la alternativa de mayor valor esperado
+
+**Criterio de Aversión al Riego**: Elegir la alternativa que no supere un % techo de riesgo de pérdidas o elegir la alternativa de menor probabilidad de pérdida
+
+![](img/arbol.png)
+
+![](img/riesgo.png)
+
+**Montecarlo**
+
+El modelo de Monte Carlo, es una técnica de **simulación** de **situaciones** inciertas que permite **definir valores esperados** para variables no controlables, mediante la **selección aleatoria de valores**, donde la probabilidad de elegir entre todos los resultados posibles está en estricta relación con sus respectivas distribuciones de probabilidades.
+
+![](img/montecarlo.png)
+
+### Descición con incertidumbre
+
+En aquellos casos en que no se conocen o **no es posible asignar probabilidades a los eventos**, decimos que es una **DECISIÓN CON INCERTIDUMBRE** y se aplican métodos con información limitada. (Criterios de Maximax, Maximin, Hurwics, Savage, etc)
+
+![](img/incertidumbre_1.png)
+![](img/incertidumbre_2.png)
