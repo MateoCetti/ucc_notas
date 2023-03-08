@@ -42,6 +42,12 @@ En este repositorio guardo la **mayoria** de los **seguimientos de las distintas
   - [Sistemas operativos](./cuarto_año/sistemas_operativos/notas.md)
   - [Administración de empresa](./cuarto_año/admin_empresa/notas.md)
   - [Economia](./cuarto_año/economia/notas.md)
+- [Quinto año](./quinto_año/)
+  - [Administracion de proyectos](./quinto_año/administracion_proyectos/notas.md)
+  - [Etica y deontologia](./quinto_año/etica_deontologia/notas.md)
+  - [Formacion humanistica](./quinto_año/formacion_humanistica/notas.md)
+  - [Ingenieria legal](./quinto_año/ing_legal/notas.md)
+  - [Sistemas inteligentes](./quinto_año/sistemas_inteligentes/notas.md)
 
 ## A tener en cuenta
 
