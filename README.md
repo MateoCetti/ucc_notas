@@ -48,6 +48,7 @@ En este repositorio guardo la **mayoria** de los **seguimientos de las distintas
   - [Formacion humanistica](./quinto_año/formacion_humanistica/notas.md)
   - [Ingenieria legal](./quinto_año/ing_legal/notas.md)
   - [Sistemas inteligentes](./quinto_año/sistemas_inteligentes/notas.md)
+  - [Seminario de robotica](./quinto_año/robotica_seminario/notas.md)
 
 ## A tener en cuenta
 
